@@ -31,6 +31,6 @@ ModuleClosedNodes6=
 ModuleClosedNodes7=
 ModuleClosedNodes8=
 ModuleClosedNodes9=
-NavigationStack=SmartHomeMonitor,GetComfort,653,0,SmartHomeMonitor,MQTT_MessageArrived,310,6,Main,SetDefaults,1212,0,Main,HandleSettings,1218,0,Main,CreatePreferenceScreen,1204,0,Main,RequestAuthToken,1226,0,Main,RefreshCameras,1371,0,Main,ShowAboutMenu,698,1,Main,GetVersionCode,705,0,Main,Process_Globals,23,0
+NavigationStack=Main,btnFrontDoorNewClip_Click,2955,0,Main,btnDrivewayNewClip_Click,2912,0,Visual Designer,blink.bal,-100,6,Main,UpdateItemColor,2531,0,Main,btnDriveway_Click,2160,0,Main,swArmed_ValueChanged,3363,0,Main,btnRefresh_Click,3098,0,Main,DownloadImageFullscreen,3147,0,Main,GetSyncModuleInfo,1862,0,Main,ShowAboutMenu,696,0,Main,GetCameraInfo,1817,2
 SelectedBuild=0
 VisibleModules=5,8,7,10,1,3,2,4,9,6
