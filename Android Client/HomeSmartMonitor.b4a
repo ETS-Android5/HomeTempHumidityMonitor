@@ -777,7 +777,7 @@ Sub ShowAboutMenu
 	Try
 		Dim bd As BitmapDrawable
 		bd.Initialize(LoadBitmapResize(File.DirAssets, "cloyd.png", 32dip, 32dip, True))
-		Msgbox2("Smart Home Monitor v" & GetVersionCode & CRLF & CRLF & "Developed by: Cloyd Nino Catanaoan" & CRLF & "Compiled on: March 27, 2020", "About", "OK", "", "", bd.Bitmap) 'ignore
+		Msgbox2("Smart Home Monitor v" & GetVersionCode & CRLF & CRLF & "Developed by: Cloyd Nino Catanaoan" & CRLF & "Compiled on: March 30, 2020", "About", "OK", "", "", bd.Bitmap) 'ignore
 	Catch
 		Log(LastException)
 	End Try
@@ -1333,6 +1333,7 @@ Sub RequestAuthToken As ResumableSub
 				btnDrivewayRefresh.Enabled = True
 				btnFrontDoorRefresh.Enabled = True
 				btnSideYardRefresh.Enabled = True
+				swArmed.Enabled = True
 				jobLogin.Release
 				Return Null
 			Else
@@ -1371,6 +1372,7 @@ Sub RefreshCameras(FirstRun As Boolean, whatCamera As String) As ResumableSub
 			btnDrivewayRefresh.Enabled = True
 			btnFrontDoorRefresh.Enabled = True
 			btnSideYardRefresh.Enabled = True
+			swArmed.Enabled = True
 			Return Null
 		End If
 		
@@ -1388,6 +1390,7 @@ Sub RefreshCameras(FirstRun As Boolean, whatCamera As String) As ResumableSub
 			btnDrivewayRefresh.Enabled = True
 			btnFrontDoorRefresh.Enabled = True
 			btnSideYardRefresh.Enabled = True
+			swArmed.Enabled = True
 			Return Null
 		End If
 		
@@ -1472,6 +1475,7 @@ Sub RefreshCameras(FirstRun As Boolean, whatCamera As String) As ResumableSub
 					btnDrivewayRefresh.Enabled = True
 					btnFrontDoorRefresh.Enabled = True
 					btnSideYardRefresh.Enabled = True
+					swArmed.Enabled = True
 					Return Null
 				Else
 					Dim rs As ResumableSub = GetCommandID(response)
@@ -1489,6 +1493,7 @@ Sub RefreshCameras(FirstRun As Boolean, whatCamera As String) As ResumableSub
 						btnDrivewayRefresh.Enabled = True
 						btnFrontDoorRefresh.Enabled = True
 						btnSideYardRefresh.Enabled = True
+						swArmed.Enabled = True
 						Return Null
 					Else
 						Dim reChecked As Boolean
@@ -1517,6 +1522,7 @@ Sub RefreshCameras(FirstRun As Boolean, whatCamera As String) As ResumableSub
 									btnDrivewayRefresh.Enabled = True
 									btnFrontDoorRefresh.Enabled = True
 									btnSideYardRefresh.Enabled = True
+									swArmed.Enabled = True
 									Return Null
 								Else
 									i = 1
@@ -1538,6 +1544,7 @@ Sub RefreshCameras(FirstRun As Boolean, whatCamera As String) As ResumableSub
 							btnDrivewayRefresh.Enabled = True
 							btnFrontDoorRefresh.Enabled = True
 							btnSideYardRefresh.Enabled = True
+							swArmed.Enabled = True
 							Return Null
 						else If commandComplete = False Then
 							If camera = "347574" Then
@@ -1567,6 +1574,7 @@ Sub RefreshCameras(FirstRun As Boolean, whatCamera As String) As ResumableSub
 	btnDrivewayRefresh.Enabled = True
 	btnFrontDoorRefresh.Enabled = True
 	btnSideYardRefresh.Enabled = True
+	swArmed.Enabled = True
 	If lblSideYardBatt.Text.Contains("OFFLINE") Then
 		'lblSideYardBatt.Text = sideyardBattStatus
 		BlurIV("SideYard.jpg",ivSideYard)
@@ -2250,6 +2258,7 @@ Sub btnDriveway_Click
 		btnDrivewayRefresh.Enabled = False
 		btnFrontDoorRefresh.Enabled = False
 		btnSideYardRefresh.Enabled = False
+		swArmed.Enabled = False
 		ivDriveway.Enabled = False
 		ivFrontDoor.Enabled = False
 		ivSideYard.Enabled = False
@@ -2279,6 +2288,7 @@ Sub btnDriveway_Click
 		ivDriveway.Enabled = True
 		ivFrontDoor.Enabled = True
 		ivSideYard.Enabled = True
+		swArmed.Enabled = True
 	End If
 End Sub
 
@@ -2941,6 +2951,7 @@ Sub btnDrivewayNewClip_Click
 			btnDrivewayRefresh.Enabled = False
 			btnFrontDoorRefresh.Enabled = False
 			btnSideYardRefresh.Enabled = False
+			swArmed.Enabled = False
 			ivDriveway.Enabled = False
 			ivFrontDoor.Enabled = False
 			ivSideYard.Enabled = False
@@ -2960,6 +2971,7 @@ Sub btnDrivewayNewClip_Click
 				ivDriveway.Enabled = True
 				ivFrontDoor.Enabled = True
 				ivSideYard.Enabled = True
+				swArmed.Enabled = True
 				lblStatus.Text = response
 				Return
 			End If
@@ -3004,6 +3016,7 @@ Sub btnDrivewayNewClip_Click
 		ivDriveway.Enabled = True
 		ivFrontDoor.Enabled = True
 		ivSideYard.Enabled = True
+		swArmed.Enabled = True
 		lblStatus.Text = "Ready"
 	End If
 End Sub
@@ -3028,6 +3041,7 @@ Sub btnFrontDoorNewClip_Click
 			btnDrivewayRefresh.Enabled = False
 			btnFrontDoorRefresh.Enabled = False
 			btnSideYardRefresh.Enabled = False
+			swArmed.Enabled = False
 			ivDriveway.Enabled = False
 			ivFrontDoor.Enabled = False
 			ivSideYard.Enabled = False
@@ -3047,6 +3061,7 @@ Sub btnFrontDoorNewClip_Click
 				ivDriveway.Enabled = True
 				ivFrontDoor.Enabled = True
 				ivSideYard.Enabled = True
+				swArmed.Enabled = True
 				lblStatus.Text = response
 				Return
 			End If
@@ -3090,6 +3105,7 @@ Sub btnFrontDoorNewClip_Click
 		ivDriveway.Enabled = True
 		ivFrontDoor.Enabled = True
 		ivSideYard.Enabled = True
+		swArmed.Enabled = True
 		lblStatus.Text = "Ready"
 	End If
 End Sub
@@ -3113,6 +3129,7 @@ Sub btnSideYardNewClip_Click
 			btnDrivewayRefresh.Enabled = False
 			btnFrontDoorRefresh.Enabled = False
 			btnSideYardRefresh.Enabled = False
+			swArmed.Enabled = False
 			ivDriveway.Enabled = False
 			ivFrontDoor.Enabled = False
 			ivSideYard.Enabled = False
@@ -3132,6 +3149,7 @@ Sub btnSideYardNewClip_Click
 				ivDriveway.Enabled = True
 				ivFrontDoor.Enabled = True
 				ivSideYard.Enabled = True
+				swArmed.Enabled = True
 				lblStatus.Text = response
 				Return
 			End If
@@ -3175,6 +3193,7 @@ Sub btnSideYardNewClip_Click
 		ivDriveway.Enabled = True
 		ivFrontDoor.Enabled = True
 		ivSideYard.Enabled = True
+		swArmed.Enabled = True
 		lblStatus.Text = "Ready"
 	End If
 End Sub
@@ -3188,6 +3207,7 @@ Sub btnRefresh_Click
 	btnDrivewayRefresh.Enabled = False
 	btnFrontDoorRefresh.Enabled = False
 	btnSideYardRefresh.Enabled = False
+	swArmed.Enabled = False
 	ivDriveway.Enabled = False
 	ivFrontDoor.Enabled = False
 	ivSideYard.Enabled = False
@@ -3208,6 +3228,7 @@ Sub btnRefresh_Click
 	ivDriveway.Enabled = True
 	ivFrontDoor.Enabled = True
 	ivSideYard.Enabled = True
+	swArmed.Enabled = True
 End Sub
 
 Sub DownloadImageFullscreen (Link As String, camera As String) As ResumableSub'ignore
@@ -3315,6 +3336,7 @@ Sub btnSideYardRefresh_Click
 	btnDrivewayRefresh.Enabled = False
 	btnFrontDoorRefresh.Enabled = False
 	btnSideYardRefresh.Enabled = False
+	swArmed.Enabled = False
 	ivDriveway.Enabled = False
 	ivFrontDoor.Enabled = False
 	ivSideYard.Enabled = False
@@ -3333,6 +3355,7 @@ Sub btnSideYardRefresh_Click
 	ivDriveway.Enabled = True
 	ivFrontDoor.Enabled = True
 	ivSideYard.Enabled = True
+	swArmed.Enabled = True
 End Sub
 
 Sub btnFrontDoorRefresh_Click
@@ -3344,6 +3367,7 @@ Sub btnFrontDoorRefresh_Click
 	btnDrivewayRefresh.Enabled = False
 	btnFrontDoorRefresh.Enabled = False
 	btnSideYardRefresh.Enabled = False
+	swArmed.Enabled = False
 	ivDriveway.Enabled = False
 	ivFrontDoor.Enabled = False
 	ivSideYard.Enabled = False
@@ -3362,6 +3386,7 @@ Sub btnFrontDoorRefresh_Click
 	ivDriveway.Enabled = True
 	ivFrontDoor.Enabled = True
 	ivSideYard.Enabled = True
+	swArmed.Enabled = True
 End Sub
 
 Sub btnDrivewayRefresh_Click
@@ -3373,6 +3398,7 @@ Sub btnDrivewayRefresh_Click
 	btnDrivewayRefresh.Enabled = False
 	btnFrontDoorRefresh.Enabled = False
 	btnSideYardRefresh.Enabled = False
+	swArmed.Enabled = False
 	ivDriveway.Enabled = False
 	ivFrontDoor.Enabled = False
 	ivSideYard.Enabled = False
@@ -3391,6 +3417,7 @@ Sub btnDrivewayRefresh_Click
 	ivDriveway.Enabled = True
 	ivFrontDoor.Enabled = True
 	ivSideYard.Enabled = True
+	swArmed.Enabled = True
 End Sub
 
 Sub swArmed_ValueChanged (Value As Boolean)
@@ -3431,7 +3458,8 @@ Sub swArmed_ValueChanged (Value As Boolean)
 			ivDriveway.Enabled = True
 			ivFrontDoor.Enabled = True
 			ivSideYard.Enabled = True
-			lblStatus.Text = response
+			lblStatus.Text = GetRESTError(response)
+			swArmed.Value = Not(Value)
 			Return
 		End If
 		Dim rs As ResumableSub = GetCommandID(response)
@@ -3440,7 +3468,7 @@ Sub swArmed_ValueChanged (Value As Boolean)
 		Dim rs As ResumableSub = RESTGet("https://rest-" & userRegion &".immedia-semi.com/network/" & networkID &"/command/" & commandID)
 		wait for (rs) complete (Result As Object)
 		
-		For i = 1 To 30
+		For i = 1 To 10
 			Dim rs As ResumableSub = GetCommandStatus(response)
 			wait for (rs) complete (Result As Object)
 			If commandComplete Then
@@ -3448,9 +3476,9 @@ Sub swArmed_ValueChanged (Value As Boolean)
 				Exit
 			Else
 				If Value Then
-					lblStatus.Text = "Arming the system... " & i & "/30"
+					lblStatus.Text = "Arming the system... " & i & "/10"
 				Else
-					lblStatus.Text = "Disarming the system... " & i & "/30"
+					lblStatus.Text = "Disarming the system... " & i & "/10"
 				End If
 			End If
 			Dim rs As ResumableSub = RESTGet("https://rest-" & userRegion &".immedia-semi.com/network/" & networkID &"/command/" & commandID)
