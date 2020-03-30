@@ -2011,7 +2011,10 @@ Sub GetHomescreen(json As String) As ResumableSub
 '			Dim errors As Int = coldevices.Get("errors")
 			Dim status As String = coldevices.Get("status")
 			
-		
+			' Show system armed/disarmed notification via Tasker intent
+			Dim Intent1 As Intent
+			Dim Phone As Phone
+						
 			If device_id = "347574" Then
 				If active = "armed" Then
 					If enabled = "true" Then
@@ -2161,6 +2164,12 @@ Sub GetHomescreen(json As String) As ResumableSub
 			Dim jo As JavaObject = lblSideYard
 			Dim radius = 4dip, dx = 0dip, dy = 0dip As Float
 			jo.RunMethod("setShadowLayer", Array(radius, dx, dy, Colors.Red))
+			
+			Intent1.Initialize("blink.noti.disarmed", "")
+			Phone.SendBroadcastIntent(Intent1)
+		Else
+			Intent1.Initialize("blink.noti.armed", "")
+			Phone.SendBroadcastIntent(Intent1)
 		End If
 	Catch
 		Log(LastException)
