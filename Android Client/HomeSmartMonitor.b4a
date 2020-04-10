@@ -777,7 +777,7 @@ Sub ShowAboutMenu
 	Try
 		Dim bd As BitmapDrawable
 		bd.Initialize(LoadBitmapResize(File.DirAssets, "cloyd.png", 32dip, 32dip, True))
-		Msgbox2("Smart Home Monitor v" & GetVersionCode & CRLF & CRLF & "Developed by: Cloyd Nino Catanaoan" & CRLF & "Compiled on: March 30, 2020", "About", "OK", "", "", bd.Bitmap) 'ignore
+		Msgbox2("Smart Home Monitor v" & GetVersionCode & CRLF & CRLF & "Developed by: Cloyd Nino Catanaoan" & CRLF & "Compiled on: April 10, 2020", "About", "OK", "", "", bd.Bitmap) 'ignore
 	Catch
 		Log(LastException)
 	End Try
@@ -2028,11 +2028,17 @@ Sub GetHomescreen(json As String) As ResumableSub
 						Dim radius = 4dip, dx = 0dip, dy = 0dip As Float
 						jo.RunMethod("setShadowLayer", Array(radius, dx, dy, Colors.Red))
 					End If
+										
+					Intent1.Initialize("blink.noti.driveway.armed", "")
+					Phone.SendBroadcastIntent(Intent1)
 				Else
 					drivewayArmedStatus = "CAMERA NOT ARMED!"
 					Dim jo As JavaObject = lblDriveway
 					Dim radius = 4dip, dx = 0dip, dy = 0dip As Float
 					jo.RunMethod("setShadowLayer", Array(radius, dx, dy, Colors.Red))
+					
+					Intent1.Initialize("blink.noti.driveway.disarmed", "")
+					Phone.SendBroadcastIntent(Intent1)
 				End If
 				If battery > 1 And battery_state = "ok" Then
 					drivewayBattStatus = "[Level " & battery & " - " & battery_state.ToUpperCase & "]"
@@ -2067,11 +2073,17 @@ Sub GetHomescreen(json As String) As ResumableSub
 						Dim radius = 4dip, dx = 0dip, dy = 0dip As Float
 						jo.RunMethod("setShadowLayer", Array(radius, dx, dy, Colors.Red))
 					End If
+					
+					Intent1.Initialize("blink.noti.frontdoor.armed", "")
+					Phone.SendBroadcastIntent(Intent1)
 				Else
 					frontdoorArmedStatus = "CAMERA NOT ARMED!"
 					Dim jo As JavaObject = lblFrontDoor
 					Dim radius = 4dip, dx = 0dip, dy = 0dip As Float
 					jo.RunMethod("setShadowLayer", Array(radius, dx, dy, Colors.Red))
+					
+					Intent1.Initialize("blink.noti.frontdoor.disarmed", "")
+					Phone.SendBroadcastIntent(Intent1)
 				End If
 				If battery > 1 And battery_state = "ok" Then
 					frontdoorBattStatus = "[Level " & battery & " - " & battery_state.ToUpperCase & "]"
@@ -2106,11 +2118,17 @@ Sub GetHomescreen(json As String) As ResumableSub
 						Dim radius = 4dip, dx = 0dip, dy = 0dip As Float
 						jo.RunMethod("setShadowLayer", Array(radius, dx, dy, Colors.Red))
 					End If
+					
+					Intent1.Initialize("blink.noti.sideyard.armed", "")
+					Phone.SendBroadcastIntent(Intent1)
 				Else
 					sideyardArmedStatus = "CAMERA NOT ARMED!"
 					Dim jo As JavaObject = lblSideYard
 					Dim radius = 4dip, dx = 0dip, dy = 0dip As Float
 					jo.RunMethod("setShadowLayer", Array(radius, dx, dy, Colors.Red))
+					
+					Intent1.Initialize("blink.noti.sideyard.disarmed", "")
+					Phone.SendBroadcastIntent(Intent1)
 				End If
 				If battery > 1 And battery_state = "ok" Then
 					sideyardBattStatus = "[Level " & battery & " - " & battery_state.ToUpperCase & "]"
@@ -3455,7 +3473,7 @@ Sub swArmed_ValueChanged (Value As Boolean)
 		
 		wait for (rs) complete (Result As Object)
 		
-		If response.StartsWith("ERROR: ") Or response.Contains("System is busy, please wait") Then
+		If response.StartsWith("ERROR: ") Or response.Contains("System is busy, please wait") Or response.Contains("Command not found") Then
 			btnDriveway.Enabled = True
 			btnRefresh.Enabled = True
 			btnDrivewayNewClip.Enabled = True
@@ -3493,6 +3511,23 @@ Sub swArmed_ValueChanged (Value As Boolean)
 			Dim rs As ResumableSub = RESTGet("https://rest-" & userRegion &".immedia-semi.com/network/" & networkID &"/command/" & commandID)
 			wait for (rs) complete (Result As Object)
 			Sleep(1000)
+			
+			If response.StartsWith("ERROR: ") Or response.Contains("System is busy, please wait") Or response.Contains("Command not found") Then
+				btnDriveway.Enabled = True
+				btnRefresh.Enabled = True
+				btnDrivewayNewClip.Enabled = True
+				btnFrontDoorNewClip.Enabled = True
+				btnSideYardNewClip.Enabled = True
+				btnDrivewayRefresh.Enabled = True
+				btnFrontDoorRefresh.Enabled = True
+				btnSideYardRefresh.Enabled = True
+				ivDriveway.Enabled = True
+				ivFrontDoor.Enabled = True
+				ivSideYard.Enabled = True
+				lblStatus.Text = GetRESTError(response)
+				swArmed.Value = Not(Value)
+				Return
+			End If
 		Next
 		
 		btnDriveway.Enabled = True
