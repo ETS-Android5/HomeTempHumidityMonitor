@@ -777,7 +777,7 @@ Sub ShowAboutMenu
 	Try
 		Dim bd As BitmapDrawable
 		bd.Initialize(LoadBitmapResize(File.DirAssets, "cloyd.png", 32dip, 32dip, True))
-		Msgbox2("Smart Home Monitor v" & GetVersionCode & CRLF & CRLF & "Developed by: Cloyd Nino Catanaoan" & CRLF & "Compiled on: April 10, 2020", "About", "OK", "", "", bd.Bitmap) 'ignore
+		Msgbox2("Smart Home Monitor v" & GetVersionCode & CRLF & CRLF & "Developed by: Cloyd Nino Catanaoan" & CRLF & "Compiled on: April 13, 2020", "About", "OK", "", "", bd.Bitmap) 'ignore
 	Catch
 		Log(LastException)
 	End Try
@@ -1867,7 +1867,7 @@ Sub GetCameraInfo(json As String, isJustInfoNeeded As Boolean) As ResumableSub
 		Dim updated_at As String = camera_status.Get("updated_at")
 '		Dim light_sensor_ch1 As Int = camera_status.Get("light_sensor_ch1")
 '		Dim time_dhcp_lease As Int = camera_status.Get("time_dhcp_lease")
-'		Dim temperature As Int = camera_status.Get("temperature")
+		Dim temperature As string = camera_status.Get("temperature")
 '		Dim time_first_video As Int = camera_status.Get("time_first_video")
 '		Dim time_dns_resolve As Int = camera_status.Get("time_dns_resolve")
 '		Dim id As Int = camera_status.Get("id")
@@ -1905,27 +1905,27 @@ Sub GetCameraInfo(json As String, isJustInfoNeeded As Boolean) As ResumableSub
 		If isJustInfoNeeded Then Return Null
 
 		If camera_id = "347574" Then
-			lblDrivewayBatt.Text = "Batt: " & NumberFormat2((battery_voltage / 100),0,2,2,False) & "V " & drivewayBattStatus
+			lblDrivewayBatt.Text = NumberFormat2((battery_voltage / 100),0,2,2,False) & "V " & drivewayBattStatus
 			lblDrivewayTimestamp.Text = ConvertDateTime(updated_at)
 			lblDriveway.Text = "Driveway v" & fw_version & " " & drivewayArmedStatus
-			lblDrivewayWifi.Text = " |  " & wifi_strength & "dBm - " & CheckLFRLevel(wifi_strength) & "  | "
+			lblDrivewayWifi.Text = " |  " & temperature & "°F  |  " & wifi_strength & "dBm - " & CheckLFRLevel(wifi_strength) & "  | "
 		Else If camera_id = "236967" Then
-			lblFrontDoorBatt.Text = "Batt: " & NumberFormat2((battery_voltage / 100),0,2,2,False) & "V " & frontdoorBattStatus
+			lblFrontDoorBatt.Text = NumberFormat2((battery_voltage / 100),0,2,2,False) & "V " & frontdoorBattStatus
 			lblFrontDoorTimestamp.Text = ConvertDateTime(updated_at)
 			lblFrontDoor.Text = "Front Door v" & fw_version  & " " & frontdoorArmedStatus
-			lblFrontDoorWiFi.Text = " |  " & wifi_strength & "dBm - " & CheckLFRLevel(wifi_strength) & "  | "
+			lblFrontDoorWiFi.Text = " |  " & temperature & "°F  |  " & wifi_strength & "dBm - " & CheckLFRLevel(wifi_strength) & "  | "
 		Else If camera_id = "458236" Then
-			lblSideYardBatt.Text = "Batt: " & NumberFormat2((battery_voltage / 100),0,2,2,False) & "V " & sideyardBattStatus
+			lblSideYardBatt.Text = NumberFormat2((battery_voltage / 100),0,2,2,False) & "V " & sideyardBattStatus
 			lblSideYardTimestamp.Text = ConvertDateTime(updated_at)
 			lblSideYard.Text = "Side Yard v" & fw_version  & " " & sideyardArmedStatus
-			lblSideYardWiFi.Text = " |  " & wifi_strength & "dBm - " & CheckLFRLevel(wifi_strength) & "  | "
+			lblSideYardWiFi.Text = " |  " & temperature & "°F  |  " & wifi_strength & "dBm - " & CheckLFRLevel(wifi_strength) & "  | "
 		End If
 		If lblSideYardBatt.Text.Contains("OFFLINE") Then
-			lblSideYardBatt.Text = "Batt: " & NumberFormat2((battery_voltage / 100),0,2,2,False) & "V " & sideyardBattStatus
+			lblSideYardBatt.Text = NumberFormat2((battery_voltage / 100),0,2,2,False) & "V " & sideyardBattStatus
 		Else if lblDrivewayBatt.Text.Contains("OFFLINE") Then
-			lblDrivewayBatt.Text = "Batt: " & NumberFormat2((battery_voltage / 100),0,2,2,False) & "V " & drivewayBattStatus
+			lblDrivewayBatt.Text = NumberFormat2((battery_voltage / 100),0,2,2,False) & "V " & drivewayBattStatus
 		Else if lblFrontDoorBatt.Text.Contains("OFFLINE") Then
-			lblFrontDoorBatt.Text = "Batt: " & NumberFormat2((battery_voltage / 100),0,2,2,False) & "V " & frontdoorBattStatus
+			lblFrontDoorBatt.Text = NumberFormat2((battery_voltage / 100),0,2,2,False) & "V " & frontdoorBattStatus
 		End If
 	Catch
 		Log(LastException)
@@ -2245,7 +2245,8 @@ End Sub
 Sub ConvertDateTime(inputTime As String) As String
 	' https://www.b4x.com/android/forum/threads/convert-utc-to-ticks-and-vice-versa.36592/#content
 	Dim ticks As Long = ParseUTCstring(inputTime.Replace("+00:00","+0000"))
-	DateTime.DateFormat = "MMM d, yyyy h:mm:ss a"
+	'DateTime.DateFormat = "MMM d, yyyy h:mm:ss a"
+	DateTime.DateFormat = "yyyy-MM-dd h:mm:ss a"
 	Dim lngTicks As Long = ticks
 	'Dim p As Period = DateUtils.PeriodBetween(lngTicks,DateTime.now)
 	'Log("Time difference: " & p.Days & "d " & p.Hours & "h " & p.Minutes & "m " & p.Seconds & "s")

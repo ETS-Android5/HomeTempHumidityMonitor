@@ -1276,7 +1276,7 @@ _menu.Add((int) (0),(int) (0),BA.ObjectToCharSequence("About"),(android.graphics
  } 
        catch (Exception e10) {
 			processBA.setLastException(e10); //BA.debugLineNum = 726;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("31441802",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("31048586",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 728;BA.debugLine="End Sub";
 return "";
@@ -1910,7 +1910,7 @@ case 71:
 this.state = 72;
 this.catchState = 75;
  //BA.debugLineNum = 685;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("31245265",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("3852049",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -1932,7 +1932,7 @@ case 75:
 this.state = 76;
 this.catchState = 0;
  //BA.debugLineNum = 689;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("31245269",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("3852053",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -1965,18 +1965,18 @@ int _m = 0;
 int _steps = 0;
 int _y = 0;
 int _x = 0;
- //BA.debugLineNum = 2249;BA.debugLine="Private Sub Blur () As B4XBitmap";
- //BA.debugLineNum = 2250;BA.debugLine="Dim bcBitmap As BitmapCreator";
+ //BA.debugLineNum = 2250;BA.debugLine="Private Sub Blur () As B4XBitmap";
+ //BA.debugLineNum = 2251;BA.debugLine="Dim bcBitmap As BitmapCreator";
 _bcbitmap = new b4a.example.bitmapcreator();
- //BA.debugLineNum = 2251;BA.debugLine="Dim ReduceScale As Int = 2";
+ //BA.debugLineNum = 2252;BA.debugLine="Dim ReduceScale As Int = 2";
 _reducescale = (int) (2);
- //BA.debugLineNum = 2252;BA.debugLine="bcBitmap.Initialize(bmp.Width / ReduceScale / bmp";
+ //BA.debugLineNum = 2253;BA.debugLine="bcBitmap.Initialize(bmp.Width / ReduceScale / bmp";
 _bcbitmap._initialize(processBA,(int) (_bmp.getWidth()/(double)_reducescale/(double)_bmp.getScale()),(int) (_bmp.getHeight()/(double)_reducescale/(double)_bmp.getScale()));
- //BA.debugLineNum = 2253;BA.debugLine="bcBitmap.CopyPixelsFromBitmap(bmp)";
+ //BA.debugLineNum = 2254;BA.debugLine="bcBitmap.CopyPixelsFromBitmap(bmp)";
 _bcbitmap._copypixelsfrombitmap(_bmp);
- //BA.debugLineNum = 2254;BA.debugLine="Dim count As Int = 3";
+ //BA.debugLineNum = 2255;BA.debugLine="Dim count As Int = 3";
 _count = (int) (3);
- //BA.debugLineNum = 2255;BA.debugLine="Dim clrs(3) As ARGBColor";
+ //BA.debugLineNum = 2256;BA.debugLine="Dim clrs(3) As ARGBColor";
 _clrs = new b4a.example.bitmapcreator._argbcolor[(int) (3)];
 {
 int d0 = _clrs.length;
@@ -1985,83 +1985,83 @@ _clrs[i0] = new b4a.example.bitmapcreator._argbcolor();
 }
 }
 ;
- //BA.debugLineNum = 2256;BA.debugLine="Dim temp As ARGBColor";
+ //BA.debugLineNum = 2257;BA.debugLine="Dim temp As ARGBColor";
 _temp = new b4a.example.bitmapcreator._argbcolor();
- //BA.debugLineNum = 2257;BA.debugLine="Dim m As Int";
+ //BA.debugLineNum = 2258;BA.debugLine="Dim m As Int";
 _m = 0;
- //BA.debugLineNum = 2258;BA.debugLine="For steps = 1 To count";
+ //BA.debugLineNum = 2259;BA.debugLine="For steps = 1 To count";
 {
 final int step9 = 1;
 final int limit9 = _count;
 _steps = (int) (1) ;
 for (;_steps <= limit9 ;_steps = _steps + step9 ) {
- //BA.debugLineNum = 2259;BA.debugLine="For y = 0 To bcBitmap.mHeight - 1";
+ //BA.debugLineNum = 2260;BA.debugLine="For y = 0 To bcBitmap.mHeight - 1";
 {
 final int step10 = 1;
 final int limit10 = (int) (_bcbitmap._mheight-1);
 _y = (int) (0) ;
 for (;_y <= limit10 ;_y = _y + step10 ) {
- //BA.debugLineNum = 2260;BA.debugLine="For x = 0 To 2";
+ //BA.debugLineNum = 2261;BA.debugLine="For x = 0 To 2";
 {
 final int step11 = 1;
 final int limit11 = (int) (2);
 _x = (int) (0) ;
 for (;_x <= limit11 ;_x = _x + step11 ) {
- //BA.debugLineNum = 2261;BA.debugLine="bcBitmap.GetARGB(x, y, clrs(x))";
+ //BA.debugLineNum = 2262;BA.debugLine="bcBitmap.GetARGB(x, y, clrs(x))";
 _bcbitmap._getargb(_x,_y,_clrs[_x]);
  }
 };
- //BA.debugLineNum = 2263;BA.debugLine="SetAvg(bcBitmap, 1, y, clrs, temp)";
+ //BA.debugLineNum = 2264;BA.debugLine="SetAvg(bcBitmap, 1, y, clrs, temp)";
 _setavg(_bcbitmap,(int) (1),_y,_clrs,_temp);
- //BA.debugLineNum = 2264;BA.debugLine="m = 0";
+ //BA.debugLineNum = 2265;BA.debugLine="m = 0";
 _m = (int) (0);
- //BA.debugLineNum = 2265;BA.debugLine="For x = 2 To bcBitmap.mWidth - 2";
+ //BA.debugLineNum = 2266;BA.debugLine="For x = 2 To bcBitmap.mWidth - 2";
 {
 final int step16 = 1;
 final int limit16 = (int) (_bcbitmap._mwidth-2);
 _x = (int) (2) ;
 for (;_x <= limit16 ;_x = _x + step16 ) {
- //BA.debugLineNum = 2266;BA.debugLine="bcBitmap.GetARGB(x + 1, y, clrs(m))";
+ //BA.debugLineNum = 2267;BA.debugLine="bcBitmap.GetARGB(x + 1, y, clrs(m))";
 _bcbitmap._getargb((int) (_x+1),_y,_clrs[_m]);
- //BA.debugLineNum = 2267;BA.debugLine="m = (m + 1) Mod clrs.Length";
+ //BA.debugLineNum = 2268;BA.debugLine="m = (m + 1) Mod clrs.Length";
 _m = (int) ((_m+1)%_clrs.length);
- //BA.debugLineNum = 2268;BA.debugLine="SetAvg(bcBitmap, x, y, clrs, temp)";
+ //BA.debugLineNum = 2269;BA.debugLine="SetAvg(bcBitmap, x, y, clrs, temp)";
 _setavg(_bcbitmap,_x,_y,_clrs,_temp);
  }
 };
  }
 };
- //BA.debugLineNum = 2271;BA.debugLine="For x = 0 To bcBitmap.mWidth - 1";
+ //BA.debugLineNum = 2272;BA.debugLine="For x = 0 To bcBitmap.mWidth - 1";
 {
 final int step22 = 1;
 final int limit22 = (int) (_bcbitmap._mwidth-1);
 _x = (int) (0) ;
 for (;_x <= limit22 ;_x = _x + step22 ) {
- //BA.debugLineNum = 2272;BA.debugLine="For y = 0 To 2";
+ //BA.debugLineNum = 2273;BA.debugLine="For y = 0 To 2";
 {
 final int step23 = 1;
 final int limit23 = (int) (2);
 _y = (int) (0) ;
 for (;_y <= limit23 ;_y = _y + step23 ) {
- //BA.debugLineNum = 2273;BA.debugLine="bcBitmap.GetARGB(x, y, clrs(y))";
+ //BA.debugLineNum = 2274;BA.debugLine="bcBitmap.GetARGB(x, y, clrs(y))";
 _bcbitmap._getargb(_x,_y,_clrs[_y]);
  }
 };
- //BA.debugLineNum = 2275;BA.debugLine="SetAvg(bcBitmap, x, 1, clrs, temp)";
+ //BA.debugLineNum = 2276;BA.debugLine="SetAvg(bcBitmap, x, 1, clrs, temp)";
 _setavg(_bcbitmap,_x,(int) (1),_clrs,_temp);
- //BA.debugLineNum = 2276;BA.debugLine="m = 0";
+ //BA.debugLineNum = 2277;BA.debugLine="m = 0";
 _m = (int) (0);
- //BA.debugLineNum = 2277;BA.debugLine="For y = 2 To bcBitmap.mHeight - 2";
+ //BA.debugLineNum = 2278;BA.debugLine="For y = 2 To bcBitmap.mHeight - 2";
 {
 final int step28 = 1;
 final int limit28 = (int) (_bcbitmap._mheight-2);
 _y = (int) (2) ;
 for (;_y <= limit28 ;_y = _y + step28 ) {
- //BA.debugLineNum = 2278;BA.debugLine="bcBitmap.GetARGB(x, y + 1, clrs(m))";
+ //BA.debugLineNum = 2279;BA.debugLine="bcBitmap.GetARGB(x, y + 1, clrs(m))";
 _bcbitmap._getargb(_x,(int) (_y+1),_clrs[_m]);
- //BA.debugLineNum = 2279;BA.debugLine="m = (m + 1) Mod clrs.Length";
+ //BA.debugLineNum = 2280;BA.debugLine="m = (m + 1) Mod clrs.Length";
 _m = (int) ((_m+1)%_clrs.length);
- //BA.debugLineNum = 2280;BA.debugLine="SetAvg(bcBitmap, x, y, clrs, temp)";
+ //BA.debugLineNum = 2281;BA.debugLine="SetAvg(bcBitmap, x, y, clrs, temp)";
 _setavg(_bcbitmap,_x,_y,_clrs,_temp);
  }
 };
@@ -2069,24 +2069,24 @@ _setavg(_bcbitmap,_x,_y,_clrs,_temp);
 };
  }
 };
- //BA.debugLineNum = 2284;BA.debugLine="Return bcBitmap.Bitmap";
+ //BA.debugLineNum = 2285;BA.debugLine="Return bcBitmap.Bitmap";
 if (true) return _bcbitmap._getbitmap();
- //BA.debugLineNum = 2285;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2286;BA.debugLine="End Sub";
 return null;
 }
 public static String  _bluriv(String _image,anywheresoftware.b4a.objects.ImageViewWrapper _iv) throws Exception{
- //BA.debugLineNum = 2239;BA.debugLine="Sub BlurIV (image As String,iv As ImageView)";
- //BA.debugLineNum = 2240;BA.debugLine="Try";
-try { //BA.debugLineNum = 2241;BA.debugLine="bmp = xui.LoadBitmapResize(File.DirInternal, ima";
+ //BA.debugLineNum = 2240;BA.debugLine="Sub BlurIV (image As String,iv As ImageView)";
+ //BA.debugLineNum = 2241;BA.debugLine="Try";
+try { //BA.debugLineNum = 2242;BA.debugLine="bmp = xui.LoadBitmapResize(File.DirInternal, ima";
 _bmp = mostCurrent._xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),_image,_iv.getWidth(),_iv.getHeight(),anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2242;BA.debugLine="iv.Bitmap = (Blur)";
+ //BA.debugLineNum = 2243;BA.debugLine="iv.Bitmap = (Blur)";
 _iv.setBitmap((android.graphics.Bitmap)((_blur()).getObject()));
  } 
        catch (Exception e5) {
-			processBA.setLastException(e5); //BA.debugLineNum = 2244;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("33538949",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+			processBA.setLastException(e5); //BA.debugLineNum = 2245;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("33145733",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
- //BA.debugLineNum = 2247;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2248;BA.debugLine="End Sub";
 return "";
 }
 public static void  _btndriveway_click() throws Exception{
@@ -2113,11 +2113,11 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 2193;BA.debugLine="Dim bd As BitmapDrawable";
+ //BA.debugLineNum = 2194;BA.debugLine="Dim bd As BitmapDrawable";
 _bd = new anywheresoftware.b4a.objects.drawable.BitmapDrawable();
- //BA.debugLineNum = 2194;BA.debugLine="bd.Initialize(LoadBitmapResize(File.DirAssets, \"0";
+ //BA.debugLineNum = 2195;BA.debugLine="bd.Initialize(LoadBitmapResize(File.DirAssets, \"0";
 _bd.Initialize((android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"0.png",anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (32)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (32)),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 2195;BA.debugLine="If Msgbox2(\"Capture new camera thumbnails?\", \"Sma";
+ //BA.debugLineNum = 2196;BA.debugLine="If Msgbox2(\"Capture new camera thumbnails?\", \"Sma";
 if (true) break;
 
 case 1:
@@ -2130,42 +2130,42 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
- //BA.debugLineNum = 2196;BA.debugLine="ScrollViewBlink.ScrollToNow(0)";
+ //BA.debugLineNum = 2197;BA.debugLine="ScrollViewBlink.ScrollToNow(0)";
 parent.mostCurrent._scrollviewblink.ScrollToNow((int) (0));
- //BA.debugLineNum = 2197;BA.debugLine="btnDriveway.Enabled = False";
+ //BA.debugLineNum = 2198;BA.debugLine="btnDriveway.Enabled = False";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2198;BA.debugLine="btnRefresh.Enabled = False";
+ //BA.debugLineNum = 2199;BA.debugLine="btnRefresh.Enabled = False";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2199;BA.debugLine="btnDrivewayNewClip.Enabled = False";
+ //BA.debugLineNum = 2200;BA.debugLine="btnDrivewayNewClip.Enabled = False";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2200;BA.debugLine="btnFrontDoorNewClip.Enabled = False";
+ //BA.debugLineNum = 2201;BA.debugLine="btnFrontDoorNewClip.Enabled = False";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2201;BA.debugLine="btnSideYardNewClip.Enabled = False";
+ //BA.debugLineNum = 2202;BA.debugLine="btnSideYardNewClip.Enabled = False";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2202;BA.debugLine="btnDrivewayRefresh.Enabled = False";
+ //BA.debugLineNum = 2203;BA.debugLine="btnDrivewayRefresh.Enabled = False";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2203;BA.debugLine="btnFrontDoorRefresh.Enabled = False";
+ //BA.debugLineNum = 2204;BA.debugLine="btnFrontDoorRefresh.Enabled = False";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2204;BA.debugLine="btnSideYardRefresh.Enabled = False";
+ //BA.debugLineNum = 2205;BA.debugLine="btnSideYardRefresh.Enabled = False";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2205;BA.debugLine="swArmed.Enabled = False";
+ //BA.debugLineNum = 2206;BA.debugLine="swArmed.Enabled = False";
 parent.mostCurrent._swarmed._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2206;BA.debugLine="ivDriveway.Enabled = False";
+ //BA.debugLineNum = 2207;BA.debugLine="ivDriveway.Enabled = False";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2207;BA.debugLine="ivFrontDoor.Enabled = False";
+ //BA.debugLineNum = 2208;BA.debugLine="ivFrontDoor.Enabled = False";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2208;BA.debugLine="ivSideYard.Enabled = False";
+ //BA.debugLineNum = 2209;BA.debugLine="ivSideYard.Enabled = False";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2209;BA.debugLine="BlurIV(\"Driveway.jpg\",ivDriveway)";
+ //BA.debugLineNum = 2210;BA.debugLine="BlurIV(\"Driveway.jpg\",ivDriveway)";
 _bluriv("Driveway.jpg",parent.mostCurrent._ivdriveway);
- //BA.debugLineNum = 2210;BA.debugLine="BlurIV(\"FrontDoor.jpg\",ivFrontDoor)";
+ //BA.debugLineNum = 2211;BA.debugLine="BlurIV(\"FrontDoor.jpg\",ivFrontDoor)";
 _bluriv("FrontDoor.jpg",parent.mostCurrent._ivfrontdoor);
- //BA.debugLineNum = 2211;BA.debugLine="BlurIV(\"SideYard.jpg\",ivSideYard)";
+ //BA.debugLineNum = 2212;BA.debugLine="BlurIV(\"SideYard.jpg\",ivSideYard)";
 _bluriv("SideYard.jpg",parent.mostCurrent._ivsideyard);
- //BA.debugLineNum = 2215;BA.debugLine="Dim rs As ResumableSub = RefreshCameras(False, \"";
+ //BA.debugLineNum = 2216;BA.debugLine="Dim rs As ResumableSub = RefreshCameras(False, \"";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _refreshcameras(anywheresoftware.b4a.keywords.Common.False,"347574");
- //BA.debugLineNum = 2216;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2217;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 5;
 return;
@@ -2174,10 +2174,10 @@ case 5:
 this.state = 4;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2218;BA.debugLine="Dim rs As ResumableSub = RefreshCameras(False, \"";
+ //BA.debugLineNum = 2219;BA.debugLine="Dim rs As ResumableSub = RefreshCameras(False, \"";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _refreshcameras(anywheresoftware.b4a.keywords.Common.False,"236967");
- //BA.debugLineNum = 2219;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2220;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 6;
 return;
@@ -2186,10 +2186,10 @@ case 6:
 this.state = 4;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2221;BA.debugLine="Dim rs As ResumableSub = RefreshCameras(False, \"";
+ //BA.debugLineNum = 2222;BA.debugLine="Dim rs As ResumableSub = RefreshCameras(False, \"";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _refreshcameras(anywheresoftware.b4a.keywords.Common.False,"458236");
- //BA.debugLineNum = 2222;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2223;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 7;
 return;
@@ -2198,29 +2198,29 @@ case 7:
 this.state = 4;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2224;BA.debugLine="btnDriveway.Enabled = True";
+ //BA.debugLineNum = 2225;BA.debugLine="btnDriveway.Enabled = True";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2225;BA.debugLine="btnRefresh.Enabled = True";
+ //BA.debugLineNum = 2226;BA.debugLine="btnRefresh.Enabled = True";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2226;BA.debugLine="btnDrivewayNewClip.Enabled = True";
+ //BA.debugLineNum = 2227;BA.debugLine="btnDrivewayNewClip.Enabled = True";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2227;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
+ //BA.debugLineNum = 2228;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2228;BA.debugLine="btnSideYardNewClip.Enabled = True";
+ //BA.debugLineNum = 2229;BA.debugLine="btnSideYardNewClip.Enabled = True";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2229;BA.debugLine="btnDrivewayRefresh.Enabled = True";
+ //BA.debugLineNum = 2230;BA.debugLine="btnDrivewayRefresh.Enabled = True";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2230;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
+ //BA.debugLineNum = 2231;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2231;BA.debugLine="btnSideYardRefresh.Enabled = True";
+ //BA.debugLineNum = 2232;BA.debugLine="btnSideYardRefresh.Enabled = True";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2232;BA.debugLine="ivDriveway.Enabled = True";
+ //BA.debugLineNum = 2233;BA.debugLine="ivDriveway.Enabled = True";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2233;BA.debugLine="ivFrontDoor.Enabled = True";
+ //BA.debugLineNum = 2234;BA.debugLine="ivFrontDoor.Enabled = True";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2234;BA.debugLine="ivSideYard.Enabled = True";
+ //BA.debugLineNum = 2235;BA.debugLine="ivSideYard.Enabled = True";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2235;BA.debugLine="swArmed.Enabled = True";
+ //BA.debugLineNum = 2236;BA.debugLine="swArmed.Enabled = True";
 parent.mostCurrent._swarmed._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
  if (true) break;
 
@@ -2228,7 +2228,7 @@ case 4:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 2237;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2238;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -2266,11 +2266,11 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 2880;BA.debugLine="Dim bd As BitmapDrawable";
+ //BA.debugLineNum = 2881;BA.debugLine="Dim bd As BitmapDrawable";
 _bd = new anywheresoftware.b4a.objects.drawable.BitmapDrawable();
- //BA.debugLineNum = 2881;BA.debugLine="bd.Initialize(LoadBitmapResize(File.DirAssets, \"0";
+ //BA.debugLineNum = 2882;BA.debugLine="bd.Initialize(LoadBitmapResize(File.DirAssets, \"0";
 _bd.Initialize((android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"0.png",anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (32)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (32)),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 2882;BA.debugLine="If Msgbox2(\"Capture a new video from the Driveway";
+ //BA.debugLineNum = 2883;BA.debugLine="If Msgbox2(\"Capture a new video from the Driveway";
 if (true) break;
 
 case 1:
@@ -2283,7 +2283,7 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
- //BA.debugLineNum = 2883;BA.debugLine="Try";
+ //BA.debugLineNum = 2884;BA.debugLine="Try";
 if (true) break;
 
 case 4:
@@ -2297,44 +2297,44 @@ case 6:
 //C
 this.state = 7;
 this.catchState = 22;
- //BA.debugLineNum = 2885;BA.debugLine="Dim Intent1 As Intent";
+ //BA.debugLineNum = 2886;BA.debugLine="Dim Intent1 As Intent";
 _intent1 = new anywheresoftware.b4a.objects.IntentWrapper();
- //BA.debugLineNum = 2886;BA.debugLine="Intent1.Initialize(\"blink.liveview.driveway\", \"";
+ //BA.debugLineNum = 2887;BA.debugLine="Intent1.Initialize(\"blink.liveview.driveway\", \"";
 _intent1.Initialize("blink.liveview.driveway","");
- //BA.debugLineNum = 2887;BA.debugLine="Dim Phone As Phone";
+ //BA.debugLineNum = 2888;BA.debugLine="Dim Phone As Phone";
 _phone = new anywheresoftware.b4a.phone.Phone();
- //BA.debugLineNum = 2888;BA.debugLine="Phone.SendBroadcastIntent(Intent1)";
+ //BA.debugLineNum = 2889;BA.debugLine="Phone.SendBroadcastIntent(Intent1)";
 _phone.SendBroadcastIntent((android.content.Intent)(_intent1.getObject()));
- //BA.debugLineNum = 2890;BA.debugLine="btnDriveway.Enabled = False";
+ //BA.debugLineNum = 2891;BA.debugLine="btnDriveway.Enabled = False";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2891;BA.debugLine="btnRefresh.Enabled = False";
+ //BA.debugLineNum = 2892;BA.debugLine="btnRefresh.Enabled = False";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2892;BA.debugLine="btnDrivewayNewClip.Enabled = False";
+ //BA.debugLineNum = 2893;BA.debugLine="btnDrivewayNewClip.Enabled = False";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2893;BA.debugLine="btnFrontDoorNewClip.Enabled = False";
+ //BA.debugLineNum = 2894;BA.debugLine="btnFrontDoorNewClip.Enabled = False";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2894;BA.debugLine="btnSideYardNewClip.Enabled = False";
+ //BA.debugLineNum = 2895;BA.debugLine="btnSideYardNewClip.Enabled = False";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2895;BA.debugLine="btnDrivewayRefresh.Enabled = False";
+ //BA.debugLineNum = 2896;BA.debugLine="btnDrivewayRefresh.Enabled = False";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2896;BA.debugLine="btnFrontDoorRefresh.Enabled = False";
+ //BA.debugLineNum = 2897;BA.debugLine="btnFrontDoorRefresh.Enabled = False";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2897;BA.debugLine="btnSideYardRefresh.Enabled = False";
+ //BA.debugLineNum = 2898;BA.debugLine="btnSideYardRefresh.Enabled = False";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2898;BA.debugLine="swArmed.Enabled = False";
+ //BA.debugLineNum = 2899;BA.debugLine="swArmed.Enabled = False";
 parent.mostCurrent._swarmed._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2899;BA.debugLine="ivDriveway.Enabled = False";
+ //BA.debugLineNum = 2900;BA.debugLine="ivDriveway.Enabled = False";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2900;BA.debugLine="ivFrontDoor.Enabled = False";
+ //BA.debugLineNum = 2901;BA.debugLine="ivFrontDoor.Enabled = False";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2901;BA.debugLine="ivSideYard.Enabled = False";
+ //BA.debugLineNum = 2902;BA.debugLine="ivSideYard.Enabled = False";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2902;BA.debugLine="lblStatus.Text = \"Capturing a new Driveway vide";
+ //BA.debugLineNum = 2903;BA.debugLine="lblStatus.Text = \"Capturing a new Driveway vide";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("Capturing a new Driveway video clip..."));
- //BA.debugLineNum = 2904;BA.debugLine="Dim rs As ResumableSub = RESTPost(\"https://rest";
+ //BA.debugLineNum = 2905;BA.debugLine="Dim rs As ResumableSub = RESTPost(\"https://rest";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restpost("https://rest-"+parent._userregion+".immedia-semi.com/network/"+parent._networkid+"/camera/347574/clip");
- //BA.debugLineNum = 2905;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2906;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 25;
 return;
@@ -2343,7 +2343,7 @@ case 25:
 this.state = 7;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2906;BA.debugLine="If response.StartsWith(\"ERROR: \") Or response.C";
+ //BA.debugLineNum = 2907;BA.debugLine="If response.StartsWith(\"ERROR: \") Or response.C";
 if (true) break;
 
 case 7:
@@ -2356,33 +2356,33 @@ this.state = 9;
 case 9:
 //C
 this.state = 10;
- //BA.debugLineNum = 2907;BA.debugLine="btnDriveway.Enabled = True";
+ //BA.debugLineNum = 2908;BA.debugLine="btnDriveway.Enabled = True";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2908;BA.debugLine="btnRefresh.Enabled = True";
+ //BA.debugLineNum = 2909;BA.debugLine="btnRefresh.Enabled = True";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2909;BA.debugLine="btnDrivewayNewClip.Enabled = True";
+ //BA.debugLineNum = 2910;BA.debugLine="btnDrivewayNewClip.Enabled = True";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2910;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
+ //BA.debugLineNum = 2911;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2911;BA.debugLine="btnSideYardNewClip.Enabled = True";
+ //BA.debugLineNum = 2912;BA.debugLine="btnSideYardNewClip.Enabled = True";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2912;BA.debugLine="btnDrivewayRefresh.Enabled = True";
+ //BA.debugLineNum = 2913;BA.debugLine="btnDrivewayRefresh.Enabled = True";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2913;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
+ //BA.debugLineNum = 2914;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2914;BA.debugLine="btnSideYardRefresh.Enabled = True";
+ //BA.debugLineNum = 2915;BA.debugLine="btnSideYardRefresh.Enabled = True";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2915;BA.debugLine="ivDriveway.Enabled = True";
+ //BA.debugLineNum = 2916;BA.debugLine="ivDriveway.Enabled = True";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2916;BA.debugLine="ivFrontDoor.Enabled = True";
+ //BA.debugLineNum = 2917;BA.debugLine="ivFrontDoor.Enabled = True";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2917;BA.debugLine="ivSideYard.Enabled = True";
+ //BA.debugLineNum = 2918;BA.debugLine="ivSideYard.Enabled = True";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2918;BA.debugLine="swArmed.Enabled = True";
+ //BA.debugLineNum = 2919;BA.debugLine="swArmed.Enabled = True";
 parent.mostCurrent._swarmed._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2919;BA.debugLine="lblStatus.Text = response";
+ //BA.debugLineNum = 2920;BA.debugLine="lblStatus.Text = response";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence(parent._response));
- //BA.debugLineNum = 2920;BA.debugLine="Return";
+ //BA.debugLineNum = 2921;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 
@@ -2390,10 +2390,10 @@ case 10:
 //C
 this.state = 11;
 ;
- //BA.debugLineNum = 2923;BA.debugLine="Dim rs As ResumableSub = GetCommandID(response)";
+ //BA.debugLineNum = 2924;BA.debugLine="Dim rs As ResumableSub = GetCommandID(response)";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _getcommandid(parent._response);
- //BA.debugLineNum = 2924;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2925;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 26;
 return;
@@ -2402,10 +2402,10 @@ case 26:
 this.state = 11;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2926;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest-";
+ //BA.debugLineNum = 2927;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest-";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restget("https://rest-"+parent._userregion+".immedia-semi.com/network/"+parent._networkid+"/command/"+parent._commandid);
- //BA.debugLineNum = 2927;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2928;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 27;
 return;
@@ -2414,7 +2414,7 @@ case 27:
 this.state = 11;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2929;BA.debugLine="For i = 1 To 70";
+ //BA.debugLineNum = 2930;BA.debugLine="For i = 1 To 70";
 if (true) break;
 
 case 11:
@@ -2441,10 +2441,10 @@ if (true) break;
 case 13:
 //C
 this.state = 14;
- //BA.debugLineNum = 2931;BA.debugLine="Dim rs As ResumableSub = GetCommandStatus(resp";
+ //BA.debugLineNum = 2932;BA.debugLine="Dim rs As ResumableSub = GetCommandStatus(resp";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _getcommandstatus(parent._response);
- //BA.debugLineNum = 2932;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2933;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 30;
 return;
@@ -2453,7 +2453,7 @@ case 30:
 this.state = 14;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2933;BA.debugLine="If commandComplete Then";
+ //BA.debugLineNum = 2934;BA.debugLine="If commandComplete Then";
 if (true) break;
 
 case 14:
@@ -2468,10 +2468,10 @@ this.state = 18;
 case 16:
 //C
 this.state = 19;
- //BA.debugLineNum = 2938;BA.debugLine="Dim rs As ResumableSub = GetUnwatchedVideos";
+ //BA.debugLineNum = 2939;BA.debugLine="Dim rs As ResumableSub = GetUnwatchedVideos";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _getunwatchedvideos();
- //BA.debugLineNum = 2939;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2940;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 31;
 return;
@@ -2480,7 +2480,7 @@ case 31:
 this.state = 19;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2940;BA.debugLine="Exit";
+ //BA.debugLineNum = 2941;BA.debugLine="Exit";
 this.state = 20;
 if (true) break;
  if (true) break;
@@ -2488,7 +2488,7 @@ if (true) break;
 case 18:
 //C
 this.state = 19;
- //BA.debugLineNum = 2942;BA.debugLine="lblStatus.Text = \"Awaiting for the Driveway v";
+ //BA.debugLineNum = 2943;BA.debugLine="lblStatus.Text = \"Awaiting for the Driveway v";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("Awaiting for the Driveway video clip... "+BA.NumberToString(_i)+"/70"));
  if (true) break;
 
@@ -2496,10 +2496,10 @@ case 19:
 //C
 this.state = 29;
 ;
- //BA.debugLineNum = 2945;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest";
+ //BA.debugLineNum = 2946;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restget("https://rest-"+parent._userregion+".immedia-semi.com/network/"+parent._networkid+"/command/"+parent._commandid);
- //BA.debugLineNum = 2946;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2947;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 32;
 return;
@@ -2508,7 +2508,7 @@ case 32:
 this.state = 29;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2947;BA.debugLine="Sleep(1000)";
+ //BA.debugLineNum = 2948;BA.debugLine="Sleep(1000)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (1000));
 this.state = 33;
 return;
@@ -2529,8 +2529,8 @@ case 22:
 //C
 this.state = 23;
 this.catchState = 0;
- //BA.debugLineNum = 2950;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("34784199",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+ //BA.debugLineNum = 2951;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("34390983",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -2539,31 +2539,31 @@ case 23:
 this.state = 24;
 this.catchState = 0;
 ;
- //BA.debugLineNum = 2952;BA.debugLine="btnDriveway.Enabled = True";
+ //BA.debugLineNum = 2953;BA.debugLine="btnDriveway.Enabled = True";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2953;BA.debugLine="btnRefresh.Enabled = True";
+ //BA.debugLineNum = 2954;BA.debugLine="btnRefresh.Enabled = True";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2954;BA.debugLine="btnDrivewayNewClip.Enabled = True";
+ //BA.debugLineNum = 2955;BA.debugLine="btnDrivewayNewClip.Enabled = True";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2955;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
+ //BA.debugLineNum = 2956;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2956;BA.debugLine="btnSideYardNewClip.Enabled = True";
+ //BA.debugLineNum = 2957;BA.debugLine="btnSideYardNewClip.Enabled = True";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2957;BA.debugLine="btnDrivewayRefresh.Enabled = True";
+ //BA.debugLineNum = 2958;BA.debugLine="btnDrivewayRefresh.Enabled = True";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2958;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
+ //BA.debugLineNum = 2959;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2959;BA.debugLine="btnSideYardRefresh.Enabled = True";
+ //BA.debugLineNum = 2960;BA.debugLine="btnSideYardRefresh.Enabled = True";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2960;BA.debugLine="ivDriveway.Enabled = True";
+ //BA.debugLineNum = 2961;BA.debugLine="ivDriveway.Enabled = True";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2961;BA.debugLine="ivFrontDoor.Enabled = True";
+ //BA.debugLineNum = 2962;BA.debugLine="ivFrontDoor.Enabled = True";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2962;BA.debugLine="ivSideYard.Enabled = True";
+ //BA.debugLineNum = 2963;BA.debugLine="ivSideYard.Enabled = True";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2963;BA.debugLine="swArmed.Enabled = True";
+ //BA.debugLineNum = 2964;BA.debugLine="swArmed.Enabled = True";
 parent.mostCurrent._swarmed._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2964;BA.debugLine="lblStatus.Text = \"Ready\"";
+ //BA.debugLineNum = 2965;BA.debugLine="lblStatus.Text = \"Ready\"";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("Ready"));
  if (true) break;
 
@@ -2571,7 +2571,7 @@ case 24:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 2966;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2967;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -2608,38 +2608,38 @@ return;
 case 0:
 //C
 this.state = -1;
- //BA.debugLineNum = 3337;BA.debugLine="btnDriveway.Enabled = False";
+ //BA.debugLineNum = 3338;BA.debugLine="btnDriveway.Enabled = False";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3338;BA.debugLine="btnRefresh.Enabled = False";
+ //BA.debugLineNum = 3339;BA.debugLine="btnRefresh.Enabled = False";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3339;BA.debugLine="btnDrivewayNewClip.Enabled = False";
+ //BA.debugLineNum = 3340;BA.debugLine="btnDrivewayNewClip.Enabled = False";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3340;BA.debugLine="btnFrontDoorNewClip.Enabled = False";
+ //BA.debugLineNum = 3341;BA.debugLine="btnFrontDoorNewClip.Enabled = False";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3341;BA.debugLine="btnSideYardNewClip.Enabled = False";
+ //BA.debugLineNum = 3342;BA.debugLine="btnSideYardNewClip.Enabled = False";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3342;BA.debugLine="btnDrivewayRefresh.Enabled = False";
+ //BA.debugLineNum = 3343;BA.debugLine="btnDrivewayRefresh.Enabled = False";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3343;BA.debugLine="btnFrontDoorRefresh.Enabled = False";
+ //BA.debugLineNum = 3344;BA.debugLine="btnFrontDoorRefresh.Enabled = False";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3344;BA.debugLine="btnSideYardRefresh.Enabled = False";
+ //BA.debugLineNum = 3345;BA.debugLine="btnSideYardRefresh.Enabled = False";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3345;BA.debugLine="swArmed.Enabled = False";
+ //BA.debugLineNum = 3346;BA.debugLine="swArmed.Enabled = False";
 parent.mostCurrent._swarmed._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3346;BA.debugLine="ivDriveway.Enabled = False";
+ //BA.debugLineNum = 3347;BA.debugLine="ivDriveway.Enabled = False";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3347;BA.debugLine="ivFrontDoor.Enabled = False";
+ //BA.debugLineNum = 3348;BA.debugLine="ivFrontDoor.Enabled = False";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3348;BA.debugLine="ivSideYard.Enabled = False";
+ //BA.debugLineNum = 3349;BA.debugLine="ivSideYard.Enabled = False";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3349;BA.debugLine="ScrollViewBlink.ScrollToNow(0)";
+ //BA.debugLineNum = 3350;BA.debugLine="ScrollViewBlink.ScrollToNow(0)";
 parent.mostCurrent._scrollviewblink.ScrollToNow((int) (0));
- //BA.debugLineNum = 3350;BA.debugLine="BlurIV(\"Driveway.jpg\",ivDriveway)";
+ //BA.debugLineNum = 3351;BA.debugLine="BlurIV(\"Driveway.jpg\",ivDriveway)";
 _bluriv("Driveway.jpg",parent.mostCurrent._ivdriveway);
- //BA.debugLineNum = 3351;BA.debugLine="Dim rs As ResumableSub = RefreshCameras(False, \"3";
+ //BA.debugLineNum = 3352;BA.debugLine="Dim rs As ResumableSub = RefreshCameras(False, \"3";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _refreshcameras(anywheresoftware.b4a.keywords.Common.False,"347574");
- //BA.debugLineNum = 3352;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3353;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 1;
 return;
@@ -2648,31 +2648,31 @@ case 1:
 this.state = -1;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3353;BA.debugLine="btnDriveway.Enabled = True";
+ //BA.debugLineNum = 3354;BA.debugLine="btnDriveway.Enabled = True";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3354;BA.debugLine="btnRefresh.Enabled = True";
+ //BA.debugLineNum = 3355;BA.debugLine="btnRefresh.Enabled = True";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3355;BA.debugLine="btnDrivewayNewClip.Enabled = True";
+ //BA.debugLineNum = 3356;BA.debugLine="btnDrivewayNewClip.Enabled = True";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3356;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
+ //BA.debugLineNum = 3357;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3357;BA.debugLine="btnSideYardNewClip.Enabled = True";
+ //BA.debugLineNum = 3358;BA.debugLine="btnSideYardNewClip.Enabled = True";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3358;BA.debugLine="btnDrivewayRefresh.Enabled = True";
+ //BA.debugLineNum = 3359;BA.debugLine="btnDrivewayRefresh.Enabled = True";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3359;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
+ //BA.debugLineNum = 3360;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3360;BA.debugLine="btnSideYardRefresh.Enabled = True";
+ //BA.debugLineNum = 3361;BA.debugLine="btnSideYardRefresh.Enabled = True";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3361;BA.debugLine="ivDriveway.Enabled = True";
+ //BA.debugLineNum = 3362;BA.debugLine="ivDriveway.Enabled = True";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3362;BA.debugLine="ivFrontDoor.Enabled = True";
+ //BA.debugLineNum = 3363;BA.debugLine="ivFrontDoor.Enabled = True";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3363;BA.debugLine="ivSideYard.Enabled = True";
+ //BA.debugLineNum = 3364;BA.debugLine="ivSideYard.Enabled = True";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3364;BA.debugLine="swArmed.Enabled = True";
+ //BA.debugLineNum = 3365;BA.debugLine="swArmed.Enabled = True";
 parent.mostCurrent._swarmed._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3365;BA.debugLine="End Sub";
+ //BA.debugLineNum = 3366;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -2710,11 +2710,11 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 2969;BA.debugLine="Dim bd As BitmapDrawable";
+ //BA.debugLineNum = 2970;BA.debugLine="Dim bd As BitmapDrawable";
 _bd = new anywheresoftware.b4a.objects.drawable.BitmapDrawable();
- //BA.debugLineNum = 2970;BA.debugLine="bd.Initialize(LoadBitmapResize(File.DirAssets, \"0";
+ //BA.debugLineNum = 2971;BA.debugLine="bd.Initialize(LoadBitmapResize(File.DirAssets, \"0";
 _bd.Initialize((android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"0.png",anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (32)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (32)),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 2971;BA.debugLine="If Msgbox2(\"Capture a new video from the Front Do";
+ //BA.debugLineNum = 2972;BA.debugLine="If Msgbox2(\"Capture a new video from the Front Do";
 if (true) break;
 
 case 1:
@@ -2727,7 +2727,7 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
- //BA.debugLineNum = 2972;BA.debugLine="Try";
+ //BA.debugLineNum = 2973;BA.debugLine="Try";
 if (true) break;
 
 case 4:
@@ -2741,46 +2741,46 @@ case 6:
 //C
 this.state = 7;
 this.catchState = 22;
- //BA.debugLineNum = 2974;BA.debugLine="Dim Intent1 As Intent";
+ //BA.debugLineNum = 2975;BA.debugLine="Dim Intent1 As Intent";
 _intent1 = new anywheresoftware.b4a.objects.IntentWrapper();
- //BA.debugLineNum = 2975;BA.debugLine="Intent1.Initialize(\"blink.liveview.frontdoor\",";
+ //BA.debugLineNum = 2976;BA.debugLine="Intent1.Initialize(\"blink.liveview.frontdoor\",";
 _intent1.Initialize("blink.liveview.frontdoor","");
- //BA.debugLineNum = 2976;BA.debugLine="Dim Phone As Phone";
+ //BA.debugLineNum = 2977;BA.debugLine="Dim Phone As Phone";
 _phone = new anywheresoftware.b4a.phone.Phone();
- //BA.debugLineNum = 2977;BA.debugLine="Phone.SendBroadcastIntent(Intent1)";
+ //BA.debugLineNum = 2978;BA.debugLine="Phone.SendBroadcastIntent(Intent1)";
 _phone.SendBroadcastIntent((android.content.Intent)(_intent1.getObject()));
- //BA.debugLineNum = 2979;BA.debugLine="ScrollViewBlink.ScrollToNow(0)";
+ //BA.debugLineNum = 2980;BA.debugLine="ScrollViewBlink.ScrollToNow(0)";
 parent.mostCurrent._scrollviewblink.ScrollToNow((int) (0));
- //BA.debugLineNum = 2980;BA.debugLine="btnDriveway.Enabled = False";
+ //BA.debugLineNum = 2981;BA.debugLine="btnDriveway.Enabled = False";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2981;BA.debugLine="btnRefresh.Enabled = False";
+ //BA.debugLineNum = 2982;BA.debugLine="btnRefresh.Enabled = False";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2982;BA.debugLine="btnDrivewayNewClip.Enabled = False";
+ //BA.debugLineNum = 2983;BA.debugLine="btnDrivewayNewClip.Enabled = False";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2983;BA.debugLine="btnFrontDoorNewClip.Enabled = False";
+ //BA.debugLineNum = 2984;BA.debugLine="btnFrontDoorNewClip.Enabled = False";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2984;BA.debugLine="btnSideYardNewClip.Enabled = False";
+ //BA.debugLineNum = 2985;BA.debugLine="btnSideYardNewClip.Enabled = False";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2985;BA.debugLine="btnDrivewayRefresh.Enabled = False";
+ //BA.debugLineNum = 2986;BA.debugLine="btnDrivewayRefresh.Enabled = False";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2986;BA.debugLine="btnFrontDoorRefresh.Enabled = False";
+ //BA.debugLineNum = 2987;BA.debugLine="btnFrontDoorRefresh.Enabled = False";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2987;BA.debugLine="btnSideYardRefresh.Enabled = False";
+ //BA.debugLineNum = 2988;BA.debugLine="btnSideYardRefresh.Enabled = False";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2988;BA.debugLine="swArmed.Enabled = False";
+ //BA.debugLineNum = 2989;BA.debugLine="swArmed.Enabled = False";
 parent.mostCurrent._swarmed._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2989;BA.debugLine="ivDriveway.Enabled = False";
+ //BA.debugLineNum = 2990;BA.debugLine="ivDriveway.Enabled = False";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2990;BA.debugLine="ivFrontDoor.Enabled = False";
+ //BA.debugLineNum = 2991;BA.debugLine="ivFrontDoor.Enabled = False";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2991;BA.debugLine="ivSideYard.Enabled = False";
+ //BA.debugLineNum = 2992;BA.debugLine="ivSideYard.Enabled = False";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2992;BA.debugLine="lblStatus.Text = \"Capturing a new Front Door vi";
+ //BA.debugLineNum = 2993;BA.debugLine="lblStatus.Text = \"Capturing a new Front Door vi";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("Capturing a new Front Door video clip..."));
- //BA.debugLineNum = 2994;BA.debugLine="Dim rs As ResumableSub = RESTPost(\"https://rest";
+ //BA.debugLineNum = 2995;BA.debugLine="Dim rs As ResumableSub = RESTPost(\"https://rest";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restpost("https://rest-"+parent._userregion+".immedia-semi.com/network/"+parent._networkid+"/camera/236967/clip");
- //BA.debugLineNum = 2995;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2996;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 25;
 return;
@@ -2789,7 +2789,7 @@ case 25:
 this.state = 7;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2996;BA.debugLine="If response.StartsWith(\"ERROR: \") Or response.C";
+ //BA.debugLineNum = 2997;BA.debugLine="If response.StartsWith(\"ERROR: \") Or response.C";
 if (true) break;
 
 case 7:
@@ -2802,33 +2802,33 @@ this.state = 9;
 case 9:
 //C
 this.state = 10;
- //BA.debugLineNum = 2997;BA.debugLine="btnDriveway.Enabled = True";
+ //BA.debugLineNum = 2998;BA.debugLine="btnDriveway.Enabled = True";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2998;BA.debugLine="btnRefresh.Enabled = True";
+ //BA.debugLineNum = 2999;BA.debugLine="btnRefresh.Enabled = True";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2999;BA.debugLine="btnDrivewayNewClip.Enabled = True";
+ //BA.debugLineNum = 3000;BA.debugLine="btnDrivewayNewClip.Enabled = True";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3000;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
+ //BA.debugLineNum = 3001;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3001;BA.debugLine="btnSideYardNewClip.Enabled = True";
+ //BA.debugLineNum = 3002;BA.debugLine="btnSideYardNewClip.Enabled = True";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3002;BA.debugLine="btnDrivewayRefresh.Enabled = True";
+ //BA.debugLineNum = 3003;BA.debugLine="btnDrivewayRefresh.Enabled = True";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3003;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
+ //BA.debugLineNum = 3004;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3004;BA.debugLine="btnSideYardRefresh.Enabled = True";
+ //BA.debugLineNum = 3005;BA.debugLine="btnSideYardRefresh.Enabled = True";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3005;BA.debugLine="ivDriveway.Enabled = True";
+ //BA.debugLineNum = 3006;BA.debugLine="ivDriveway.Enabled = True";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3006;BA.debugLine="ivFrontDoor.Enabled = True";
+ //BA.debugLineNum = 3007;BA.debugLine="ivFrontDoor.Enabled = True";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3007;BA.debugLine="ivSideYard.Enabled = True";
+ //BA.debugLineNum = 3008;BA.debugLine="ivSideYard.Enabled = True";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3008;BA.debugLine="swArmed.Enabled = True";
+ //BA.debugLineNum = 3009;BA.debugLine="swArmed.Enabled = True";
 parent.mostCurrent._swarmed._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3009;BA.debugLine="lblStatus.Text = response";
+ //BA.debugLineNum = 3010;BA.debugLine="lblStatus.Text = response";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence(parent._response));
- //BA.debugLineNum = 3010;BA.debugLine="Return";
+ //BA.debugLineNum = 3011;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 
@@ -2836,10 +2836,10 @@ case 10:
 //C
 this.state = 11;
 ;
- //BA.debugLineNum = 3013;BA.debugLine="Dim rs As ResumableSub = GetCommandID(response)";
+ //BA.debugLineNum = 3014;BA.debugLine="Dim rs As ResumableSub = GetCommandID(response)";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _getcommandid(parent._response);
- //BA.debugLineNum = 3014;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3015;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 26;
 return;
@@ -2848,10 +2848,10 @@ case 26:
 this.state = 11;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3016;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest-";
+ //BA.debugLineNum = 3017;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest-";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restget("https://rest-"+parent._userregion+".immedia-semi.com/network/"+parent._networkid+"/command/"+parent._commandid);
- //BA.debugLineNum = 3017;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3018;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 27;
 return;
@@ -2860,7 +2860,7 @@ case 27:
 this.state = 11;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3018;BA.debugLine="For i = 1 To 70";
+ //BA.debugLineNum = 3019;BA.debugLine="For i = 1 To 70";
 if (true) break;
 
 case 11:
@@ -2887,10 +2887,10 @@ if (true) break;
 case 13:
 //C
 this.state = 14;
- //BA.debugLineNum = 3020;BA.debugLine="Dim rs As ResumableSub = GetCommandStatus(resp";
+ //BA.debugLineNum = 3021;BA.debugLine="Dim rs As ResumableSub = GetCommandStatus(resp";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _getcommandstatus(parent._response);
- //BA.debugLineNum = 3021;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3022;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 30;
 return;
@@ -2899,7 +2899,7 @@ case 30:
 this.state = 14;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3022;BA.debugLine="If commandComplete Then";
+ //BA.debugLineNum = 3023;BA.debugLine="If commandComplete Then";
 if (true) break;
 
 case 14:
@@ -2914,10 +2914,10 @@ this.state = 18;
 case 16:
 //C
 this.state = 19;
- //BA.debugLineNum = 3027;BA.debugLine="Dim rs As ResumableSub = GetUnwatchedVideos";
+ //BA.debugLineNum = 3028;BA.debugLine="Dim rs As ResumableSub = GetUnwatchedVideos";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _getunwatchedvideos();
- //BA.debugLineNum = 3028;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3029;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 31;
 return;
@@ -2926,7 +2926,7 @@ case 31:
 this.state = 19;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3029;BA.debugLine="Exit";
+ //BA.debugLineNum = 3030;BA.debugLine="Exit";
 this.state = 20;
 if (true) break;
  if (true) break;
@@ -2934,7 +2934,7 @@ if (true) break;
 case 18:
 //C
 this.state = 19;
- //BA.debugLineNum = 3031;BA.debugLine="lblStatus.Text = \"Awaiting for the Front Door";
+ //BA.debugLineNum = 3032;BA.debugLine="lblStatus.Text = \"Awaiting for the Front Door";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("Awaiting for the Front Door video clip... "+BA.NumberToString(_i)+"/70"));
  if (true) break;
 
@@ -2942,10 +2942,10 @@ case 19:
 //C
 this.state = 29;
 ;
- //BA.debugLineNum = 3034;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest";
+ //BA.debugLineNum = 3035;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restget("https://rest-"+parent._userregion+".immedia-semi.com/network/"+parent._networkid+"/command/"+parent._commandid);
- //BA.debugLineNum = 3035;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3036;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 32;
 return;
@@ -2954,7 +2954,7 @@ case 32:
 this.state = 29;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3036;BA.debugLine="Sleep(1000)";
+ //BA.debugLineNum = 3037;BA.debugLine="Sleep(1000)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (1000));
 this.state = 33;
 return;
@@ -2975,8 +2975,8 @@ case 22:
 //C
 this.state = 23;
 this.catchState = 0;
- //BA.debugLineNum = 3039;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("34849735",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+ //BA.debugLineNum = 3040;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("34456519",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -2985,31 +2985,31 @@ case 23:
 this.state = 24;
 this.catchState = 0;
 ;
- //BA.debugLineNum = 3041;BA.debugLine="btnDriveway.Enabled = True";
+ //BA.debugLineNum = 3042;BA.debugLine="btnDriveway.Enabled = True";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3042;BA.debugLine="btnRefresh.Enabled = True";
+ //BA.debugLineNum = 3043;BA.debugLine="btnRefresh.Enabled = True";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3043;BA.debugLine="btnDrivewayNewClip.Enabled = True";
+ //BA.debugLineNum = 3044;BA.debugLine="btnDrivewayNewClip.Enabled = True";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3044;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
+ //BA.debugLineNum = 3045;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3045;BA.debugLine="btnSideYardNewClip.Enabled = True";
+ //BA.debugLineNum = 3046;BA.debugLine="btnSideYardNewClip.Enabled = True";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3046;BA.debugLine="btnDrivewayRefresh.Enabled = True";
+ //BA.debugLineNum = 3047;BA.debugLine="btnDrivewayRefresh.Enabled = True";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3047;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
+ //BA.debugLineNum = 3048;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3048;BA.debugLine="btnSideYardRefresh.Enabled = True";
+ //BA.debugLineNum = 3049;BA.debugLine="btnSideYardRefresh.Enabled = True";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3049;BA.debugLine="ivDriveway.Enabled = True";
+ //BA.debugLineNum = 3050;BA.debugLine="ivDriveway.Enabled = True";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3050;BA.debugLine="ivFrontDoor.Enabled = True";
+ //BA.debugLineNum = 3051;BA.debugLine="ivFrontDoor.Enabled = True";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3051;BA.debugLine="ivSideYard.Enabled = True";
+ //BA.debugLineNum = 3052;BA.debugLine="ivSideYard.Enabled = True";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3052;BA.debugLine="swArmed.Enabled = True";
+ //BA.debugLineNum = 3053;BA.debugLine="swArmed.Enabled = True";
 parent.mostCurrent._swarmed._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3053;BA.debugLine="lblStatus.Text = \"Ready\"";
+ //BA.debugLineNum = 3054;BA.debugLine="lblStatus.Text = \"Ready\"";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("Ready"));
  if (true) break;
 
@@ -3017,7 +3017,7 @@ case 24:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 3055;BA.debugLine="End Sub";
+ //BA.debugLineNum = 3056;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -3054,38 +3054,38 @@ return;
 case 0:
 //C
 this.state = -1;
- //BA.debugLineNum = 3306;BA.debugLine="btnDriveway.Enabled = False";
+ //BA.debugLineNum = 3307;BA.debugLine="btnDriveway.Enabled = False";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3307;BA.debugLine="btnRefresh.Enabled = False";
+ //BA.debugLineNum = 3308;BA.debugLine="btnRefresh.Enabled = False";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3308;BA.debugLine="btnDrivewayNewClip.Enabled = False";
+ //BA.debugLineNum = 3309;BA.debugLine="btnDrivewayNewClip.Enabled = False";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3309;BA.debugLine="btnFrontDoorNewClip.Enabled = False";
+ //BA.debugLineNum = 3310;BA.debugLine="btnFrontDoorNewClip.Enabled = False";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3310;BA.debugLine="btnSideYardNewClip.Enabled = False";
+ //BA.debugLineNum = 3311;BA.debugLine="btnSideYardNewClip.Enabled = False";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3311;BA.debugLine="btnDrivewayRefresh.Enabled = False";
+ //BA.debugLineNum = 3312;BA.debugLine="btnDrivewayRefresh.Enabled = False";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3312;BA.debugLine="btnFrontDoorRefresh.Enabled = False";
+ //BA.debugLineNum = 3313;BA.debugLine="btnFrontDoorRefresh.Enabled = False";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3313;BA.debugLine="btnSideYardRefresh.Enabled = False";
+ //BA.debugLineNum = 3314;BA.debugLine="btnSideYardRefresh.Enabled = False";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3314;BA.debugLine="swArmed.Enabled = False";
+ //BA.debugLineNum = 3315;BA.debugLine="swArmed.Enabled = False";
 parent.mostCurrent._swarmed._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3315;BA.debugLine="ivDriveway.Enabled = False";
+ //BA.debugLineNum = 3316;BA.debugLine="ivDriveway.Enabled = False";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3316;BA.debugLine="ivFrontDoor.Enabled = False";
+ //BA.debugLineNum = 3317;BA.debugLine="ivFrontDoor.Enabled = False";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3317;BA.debugLine="ivSideYard.Enabled = False";
+ //BA.debugLineNum = 3318;BA.debugLine="ivSideYard.Enabled = False";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3318;BA.debugLine="ScrollViewBlink.ScrollToNow(0)";
+ //BA.debugLineNum = 3319;BA.debugLine="ScrollViewBlink.ScrollToNow(0)";
 parent.mostCurrent._scrollviewblink.ScrollToNow((int) (0));
- //BA.debugLineNum = 3319;BA.debugLine="BlurIV(\"FrontDoor.jpg\",ivFrontDoor)";
+ //BA.debugLineNum = 3320;BA.debugLine="BlurIV(\"FrontDoor.jpg\",ivFrontDoor)";
 _bluriv("FrontDoor.jpg",parent.mostCurrent._ivfrontdoor);
- //BA.debugLineNum = 3320;BA.debugLine="Dim rs As ResumableSub = RefreshCameras(False, \"2";
+ //BA.debugLineNum = 3321;BA.debugLine="Dim rs As ResumableSub = RefreshCameras(False, \"2";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _refreshcameras(anywheresoftware.b4a.keywords.Common.False,"236967");
- //BA.debugLineNum = 3321;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3322;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 1;
 return;
@@ -3094,31 +3094,31 @@ case 1:
 this.state = -1;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3322;BA.debugLine="btnDriveway.Enabled = True";
+ //BA.debugLineNum = 3323;BA.debugLine="btnDriveway.Enabled = True";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3323;BA.debugLine="btnRefresh.Enabled = True";
+ //BA.debugLineNum = 3324;BA.debugLine="btnRefresh.Enabled = True";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3324;BA.debugLine="btnDrivewayNewClip.Enabled = True";
+ //BA.debugLineNum = 3325;BA.debugLine="btnDrivewayNewClip.Enabled = True";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3325;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
+ //BA.debugLineNum = 3326;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3326;BA.debugLine="btnSideYardNewClip.Enabled = True";
+ //BA.debugLineNum = 3327;BA.debugLine="btnSideYardNewClip.Enabled = True";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3327;BA.debugLine="btnDrivewayRefresh.Enabled = True";
+ //BA.debugLineNum = 3328;BA.debugLine="btnDrivewayRefresh.Enabled = True";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3328;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
+ //BA.debugLineNum = 3329;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3329;BA.debugLine="btnSideYardRefresh.Enabled = True";
+ //BA.debugLineNum = 3330;BA.debugLine="btnSideYardRefresh.Enabled = True";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3330;BA.debugLine="ivDriveway.Enabled = True";
+ //BA.debugLineNum = 3331;BA.debugLine="ivDriveway.Enabled = True";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3331;BA.debugLine="ivFrontDoor.Enabled = True";
+ //BA.debugLineNum = 3332;BA.debugLine="ivFrontDoor.Enabled = True";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3332;BA.debugLine="ivSideYard.Enabled = True";
+ //BA.debugLineNum = 3333;BA.debugLine="ivSideYard.Enabled = True";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3333;BA.debugLine="swArmed.Enabled = True";
+ //BA.debugLineNum = 3334;BA.debugLine="swArmed.Enabled = True";
 parent.mostCurrent._swarmed._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3334;BA.debugLine="End Sub";
+ //BA.debugLineNum = 3335;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -3148,42 +3148,42 @@ return;
 case 0:
 //C
 this.state = -1;
- //BA.debugLineNum = 3146;BA.debugLine="btnDriveway.Enabled = False";
+ //BA.debugLineNum = 3147;BA.debugLine="btnDriveway.Enabled = False";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3147;BA.debugLine="btnRefresh.Enabled = False";
+ //BA.debugLineNum = 3148;BA.debugLine="btnRefresh.Enabled = False";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3148;BA.debugLine="btnDrivewayNewClip.Enabled = False";
+ //BA.debugLineNum = 3149;BA.debugLine="btnDrivewayNewClip.Enabled = False";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3149;BA.debugLine="btnFrontDoorNewClip.Enabled = False";
+ //BA.debugLineNum = 3150;BA.debugLine="btnFrontDoorNewClip.Enabled = False";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3150;BA.debugLine="btnSideYardNewClip.Enabled = False";
+ //BA.debugLineNum = 3151;BA.debugLine="btnSideYardNewClip.Enabled = False";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3151;BA.debugLine="btnDrivewayRefresh.Enabled = False";
+ //BA.debugLineNum = 3152;BA.debugLine="btnDrivewayRefresh.Enabled = False";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3152;BA.debugLine="btnFrontDoorRefresh.Enabled = False";
+ //BA.debugLineNum = 3153;BA.debugLine="btnFrontDoorRefresh.Enabled = False";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3153;BA.debugLine="btnSideYardRefresh.Enabled = False";
+ //BA.debugLineNum = 3154;BA.debugLine="btnSideYardRefresh.Enabled = False";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3154;BA.debugLine="swArmed.Enabled = False";
+ //BA.debugLineNum = 3155;BA.debugLine="swArmed.Enabled = False";
 parent.mostCurrent._swarmed._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3155;BA.debugLine="ivDriveway.Enabled = False";
+ //BA.debugLineNum = 3156;BA.debugLine="ivDriveway.Enabled = False";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3156;BA.debugLine="ivFrontDoor.Enabled = False";
+ //BA.debugLineNum = 3157;BA.debugLine="ivFrontDoor.Enabled = False";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3157;BA.debugLine="ivSideYard.Enabled = False";
+ //BA.debugLineNum = 3158;BA.debugLine="ivSideYard.Enabled = False";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3158;BA.debugLine="ScrollViewBlink.ScrollToNow(0)";
+ //BA.debugLineNum = 3159;BA.debugLine="ScrollViewBlink.ScrollToNow(0)";
 parent.mostCurrent._scrollviewblink.ScrollToNow((int) (0));
- //BA.debugLineNum = 3159;BA.debugLine="BlurIV(\"Driveway.jpg\",ivDriveway)";
+ //BA.debugLineNum = 3160;BA.debugLine="BlurIV(\"Driveway.jpg\",ivDriveway)";
 _bluriv("Driveway.jpg",parent.mostCurrent._ivdriveway);
- //BA.debugLineNum = 3160;BA.debugLine="BlurIV(\"FrontDoor.jpg\",ivFrontDoor)";
+ //BA.debugLineNum = 3161;BA.debugLine="BlurIV(\"FrontDoor.jpg\",ivFrontDoor)";
 _bluriv("FrontDoor.jpg",parent.mostCurrent._ivfrontdoor);
- //BA.debugLineNum = 3161;BA.debugLine="BlurIV(\"SideYard.jpg\",ivSideYard)";
+ //BA.debugLineNum = 3162;BA.debugLine="BlurIV(\"SideYard.jpg\",ivSideYard)";
 _bluriv("SideYard.jpg",parent.mostCurrent._ivsideyard);
- //BA.debugLineNum = 3162;BA.debugLine="Dim rs As ResumableSub = RefreshCameras(True, \"Al";
+ //BA.debugLineNum = 3163;BA.debugLine="Dim rs As ResumableSub = RefreshCameras(True, \"Al";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _refreshcameras(anywheresoftware.b4a.keywords.Common.True,"All");
- //BA.debugLineNum = 3163;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3164;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 1;
 return;
@@ -3192,31 +3192,31 @@ case 1:
 this.state = -1;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3164;BA.debugLine="btnDriveway.Enabled = True";
+ //BA.debugLineNum = 3165;BA.debugLine="btnDriveway.Enabled = True";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3165;BA.debugLine="btnRefresh.Enabled = True";
+ //BA.debugLineNum = 3166;BA.debugLine="btnRefresh.Enabled = True";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3166;BA.debugLine="btnDrivewayNewClip.Enabled = True";
+ //BA.debugLineNum = 3167;BA.debugLine="btnDrivewayNewClip.Enabled = True";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3167;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
+ //BA.debugLineNum = 3168;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3168;BA.debugLine="btnSideYardNewClip.Enabled = True";
+ //BA.debugLineNum = 3169;BA.debugLine="btnSideYardNewClip.Enabled = True";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3169;BA.debugLine="btnDrivewayRefresh.Enabled = True";
+ //BA.debugLineNum = 3170;BA.debugLine="btnDrivewayRefresh.Enabled = True";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3170;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
+ //BA.debugLineNum = 3171;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3171;BA.debugLine="btnSideYardRefresh.Enabled = True";
+ //BA.debugLineNum = 3172;BA.debugLine="btnSideYardRefresh.Enabled = True";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3172;BA.debugLine="ivDriveway.Enabled = True";
+ //BA.debugLineNum = 3173;BA.debugLine="ivDriveway.Enabled = True";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3173;BA.debugLine="ivFrontDoor.Enabled = True";
+ //BA.debugLineNum = 3174;BA.debugLine="ivFrontDoor.Enabled = True";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3174;BA.debugLine="ivSideYard.Enabled = True";
+ //BA.debugLineNum = 3175;BA.debugLine="ivSideYard.Enabled = True";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3175;BA.debugLine="swArmed.Enabled = True";
+ //BA.debugLineNum = 3176;BA.debugLine="swArmed.Enabled = True";
 parent.mostCurrent._swarmed._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3176;BA.debugLine="End Sub";
+ //BA.debugLineNum = 3177;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -3254,11 +3254,11 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 3058;BA.debugLine="Dim bd As BitmapDrawable";
+ //BA.debugLineNum = 3059;BA.debugLine="Dim bd As BitmapDrawable";
 _bd = new anywheresoftware.b4a.objects.drawable.BitmapDrawable();
- //BA.debugLineNum = 3059;BA.debugLine="bd.Initialize(LoadBitmapResize(File.DirAssets, \"0";
+ //BA.debugLineNum = 3060;BA.debugLine="bd.Initialize(LoadBitmapResize(File.DirAssets, \"0";
 _bd.Initialize((android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"0.png",anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (32)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (32)),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 3060;BA.debugLine="If Msgbox2(\"Capture a new video from the Side Yar";
+ //BA.debugLineNum = 3061;BA.debugLine="If Msgbox2(\"Capture a new video from the Side Yar";
 if (true) break;
 
 case 1:
@@ -3271,7 +3271,7 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
- //BA.debugLineNum = 3061;BA.debugLine="Try";
+ //BA.debugLineNum = 3062;BA.debugLine="Try";
 if (true) break;
 
 case 4:
@@ -3285,44 +3285,44 @@ case 6:
 //C
 this.state = 7;
 this.catchState = 22;
- //BA.debugLineNum = 3063;BA.debugLine="Dim Intent1 As Intent";
+ //BA.debugLineNum = 3064;BA.debugLine="Dim Intent1 As Intent";
 _intent1 = new anywheresoftware.b4a.objects.IntentWrapper();
- //BA.debugLineNum = 3064;BA.debugLine="Intent1.Initialize(\"blink.liveview.sideyard\", \"";
+ //BA.debugLineNum = 3065;BA.debugLine="Intent1.Initialize(\"blink.liveview.sideyard\", \"";
 _intent1.Initialize("blink.liveview.sideyard","");
- //BA.debugLineNum = 3065;BA.debugLine="Dim Phone As Phone";
+ //BA.debugLineNum = 3066;BA.debugLine="Dim Phone As Phone";
 _phone = new anywheresoftware.b4a.phone.Phone();
- //BA.debugLineNum = 3066;BA.debugLine="Phone.SendBroadcastIntent(Intent1)";
+ //BA.debugLineNum = 3067;BA.debugLine="Phone.SendBroadcastIntent(Intent1)";
 _phone.SendBroadcastIntent((android.content.Intent)(_intent1.getObject()));
- //BA.debugLineNum = 3068;BA.debugLine="ScrollViewBlink.ScrollToNow(0)";
+ //BA.debugLineNum = 3069;BA.debugLine="ScrollViewBlink.ScrollToNow(0)";
 parent.mostCurrent._scrollviewblink.ScrollToNow((int) (0));
- //BA.debugLineNum = 3069;BA.debugLine="btnDriveway.Enabled = False";
+ //BA.debugLineNum = 3070;BA.debugLine="btnDriveway.Enabled = False";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3070;BA.debugLine="btnRefresh.Enabled = False";
+ //BA.debugLineNum = 3071;BA.debugLine="btnRefresh.Enabled = False";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3071;BA.debugLine="btnDrivewayNewClip.Enabled = False";
+ //BA.debugLineNum = 3072;BA.debugLine="btnDrivewayNewClip.Enabled = False";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3072;BA.debugLine="btnFrontDoorNewClip.Enabled = False";
+ //BA.debugLineNum = 3073;BA.debugLine="btnFrontDoorNewClip.Enabled = False";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3073;BA.debugLine="btnDrivewayRefresh.Enabled = False";
+ //BA.debugLineNum = 3074;BA.debugLine="btnDrivewayRefresh.Enabled = False";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3074;BA.debugLine="btnFrontDoorRefresh.Enabled = False";
+ //BA.debugLineNum = 3075;BA.debugLine="btnFrontDoorRefresh.Enabled = False";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3075;BA.debugLine="btnSideYardRefresh.Enabled = False";
+ //BA.debugLineNum = 3076;BA.debugLine="btnSideYardRefresh.Enabled = False";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3076;BA.debugLine="swArmed.Enabled = False";
+ //BA.debugLineNum = 3077;BA.debugLine="swArmed.Enabled = False";
 parent.mostCurrent._swarmed._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3077;BA.debugLine="ivDriveway.Enabled = False";
+ //BA.debugLineNum = 3078;BA.debugLine="ivDriveway.Enabled = False";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3078;BA.debugLine="ivFrontDoor.Enabled = False";
+ //BA.debugLineNum = 3079;BA.debugLine="ivFrontDoor.Enabled = False";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3079;BA.debugLine="ivSideYard.Enabled = False";
+ //BA.debugLineNum = 3080;BA.debugLine="ivSideYard.Enabled = False";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3080;BA.debugLine="lblStatus.Text = \"Capturing a new Side Yard vid";
+ //BA.debugLineNum = 3081;BA.debugLine="lblStatus.Text = \"Capturing a new Side Yard vid";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("Capturing a new Side Yard video clip..."));
- //BA.debugLineNum = 3082;BA.debugLine="Dim rs As ResumableSub = RESTPost(\"https://rest";
+ //BA.debugLineNum = 3083;BA.debugLine="Dim rs As ResumableSub = RESTPost(\"https://rest";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restpost("https://rest-"+parent._userregion+".immedia-semi.com/network/"+parent._networkid+"/camera/458236/clip");
- //BA.debugLineNum = 3083;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3084;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 25;
 return;
@@ -3331,7 +3331,7 @@ case 25:
 this.state = 7;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3084;BA.debugLine="If response.StartsWith(\"ERROR: \") Or response.C";
+ //BA.debugLineNum = 3085;BA.debugLine="If response.StartsWith(\"ERROR: \") Or response.C";
 if (true) break;
 
 case 7:
@@ -3344,33 +3344,33 @@ this.state = 9;
 case 9:
 //C
 this.state = 10;
- //BA.debugLineNum = 3085;BA.debugLine="btnDriveway.Enabled = True";
+ //BA.debugLineNum = 3086;BA.debugLine="btnDriveway.Enabled = True";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3086;BA.debugLine="btnRefresh.Enabled = True";
+ //BA.debugLineNum = 3087;BA.debugLine="btnRefresh.Enabled = True";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3087;BA.debugLine="btnDrivewayNewClip.Enabled = True";
+ //BA.debugLineNum = 3088;BA.debugLine="btnDrivewayNewClip.Enabled = True";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3088;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
+ //BA.debugLineNum = 3089;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3089;BA.debugLine="btnSideYardNewClip.Enabled = True";
+ //BA.debugLineNum = 3090;BA.debugLine="btnSideYardNewClip.Enabled = True";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3090;BA.debugLine="btnDrivewayRefresh.Enabled = True";
+ //BA.debugLineNum = 3091;BA.debugLine="btnDrivewayRefresh.Enabled = True";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3091;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
+ //BA.debugLineNum = 3092;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3092;BA.debugLine="btnSideYardRefresh.Enabled = True";
+ //BA.debugLineNum = 3093;BA.debugLine="btnSideYardRefresh.Enabled = True";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3093;BA.debugLine="ivDriveway.Enabled = True";
+ //BA.debugLineNum = 3094;BA.debugLine="ivDriveway.Enabled = True";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3094;BA.debugLine="ivFrontDoor.Enabled = True";
+ //BA.debugLineNum = 3095;BA.debugLine="ivFrontDoor.Enabled = True";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3095;BA.debugLine="ivSideYard.Enabled = True";
+ //BA.debugLineNum = 3096;BA.debugLine="ivSideYard.Enabled = True";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3096;BA.debugLine="swArmed.Enabled = True";
+ //BA.debugLineNum = 3097;BA.debugLine="swArmed.Enabled = True";
 parent.mostCurrent._swarmed._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3097;BA.debugLine="lblStatus.Text = response";
+ //BA.debugLineNum = 3098;BA.debugLine="lblStatus.Text = response";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence(parent._response));
- //BA.debugLineNum = 3098;BA.debugLine="Return";
+ //BA.debugLineNum = 3099;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 
@@ -3378,10 +3378,10 @@ case 10:
 //C
 this.state = 11;
 ;
- //BA.debugLineNum = 3101;BA.debugLine="Dim rs As ResumableSub = GetCommandID(response)";
+ //BA.debugLineNum = 3102;BA.debugLine="Dim rs As ResumableSub = GetCommandID(response)";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _getcommandid(parent._response);
- //BA.debugLineNum = 3102;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3103;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 26;
 return;
@@ -3390,10 +3390,10 @@ case 26:
 this.state = 11;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3104;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest-";
+ //BA.debugLineNum = 3105;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest-";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restget("https://rest-"+parent._userregion+".immedia-semi.com/network/"+parent._networkid+"/command/"+parent._commandid);
- //BA.debugLineNum = 3105;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3106;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 27;
 return;
@@ -3402,7 +3402,7 @@ case 27:
 this.state = 11;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3106;BA.debugLine="For i = 1 To 70";
+ //BA.debugLineNum = 3107;BA.debugLine="For i = 1 To 70";
 if (true) break;
 
 case 11:
@@ -3429,10 +3429,10 @@ if (true) break;
 case 13:
 //C
 this.state = 14;
- //BA.debugLineNum = 3108;BA.debugLine="Dim rs As ResumableSub = GetCommandStatus(resp";
+ //BA.debugLineNum = 3109;BA.debugLine="Dim rs As ResumableSub = GetCommandStatus(resp";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _getcommandstatus(parent._response);
- //BA.debugLineNum = 3109;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3110;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 30;
 return;
@@ -3441,7 +3441,7 @@ case 30:
 this.state = 14;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3110;BA.debugLine="If commandComplete Then";
+ //BA.debugLineNum = 3111;BA.debugLine="If commandComplete Then";
 if (true) break;
 
 case 14:
@@ -3456,10 +3456,10 @@ this.state = 18;
 case 16:
 //C
 this.state = 19;
- //BA.debugLineNum = 3115;BA.debugLine="Dim rs As ResumableSub = GetUnwatchedVideos";
+ //BA.debugLineNum = 3116;BA.debugLine="Dim rs As ResumableSub = GetUnwatchedVideos";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _getunwatchedvideos();
- //BA.debugLineNum = 3116;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3117;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 31;
 return;
@@ -3468,7 +3468,7 @@ case 31:
 this.state = 19;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3117;BA.debugLine="Exit";
+ //BA.debugLineNum = 3118;BA.debugLine="Exit";
 this.state = 20;
 if (true) break;
  if (true) break;
@@ -3476,7 +3476,7 @@ if (true) break;
 case 18:
 //C
 this.state = 19;
- //BA.debugLineNum = 3119;BA.debugLine="lblStatus.Text = \"Awaiting for the Side Yard";
+ //BA.debugLineNum = 3120;BA.debugLine="lblStatus.Text = \"Awaiting for the Side Yard";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("Awaiting for the Side Yard video clip... "+BA.NumberToString(_i)+"/70"));
  if (true) break;
 
@@ -3484,10 +3484,10 @@ case 19:
 //C
 this.state = 29;
 ;
- //BA.debugLineNum = 3122;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest";
+ //BA.debugLineNum = 3123;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restget("https://rest-"+parent._userregion+".immedia-semi.com/network/"+parent._networkid+"/command/"+parent._commandid);
- //BA.debugLineNum = 3123;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3124;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 32;
 return;
@@ -3496,7 +3496,7 @@ case 32:
 this.state = 29;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3124;BA.debugLine="Sleep(1000)";
+ //BA.debugLineNum = 3125;BA.debugLine="Sleep(1000)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (1000));
 this.state = 33;
 return;
@@ -3517,8 +3517,8 @@ case 22:
 //C
 this.state = 23;
 this.catchState = 0;
- //BA.debugLineNum = 3127;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("34915270",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+ //BA.debugLineNum = 3128;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("34522054",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -3527,31 +3527,31 @@ case 23:
 this.state = 24;
 this.catchState = 0;
 ;
- //BA.debugLineNum = 3129;BA.debugLine="btnDriveway.Enabled = True";
+ //BA.debugLineNum = 3130;BA.debugLine="btnDriveway.Enabled = True";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3130;BA.debugLine="btnRefresh.Enabled = True";
+ //BA.debugLineNum = 3131;BA.debugLine="btnRefresh.Enabled = True";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3131;BA.debugLine="btnDrivewayNewClip.Enabled = True";
+ //BA.debugLineNum = 3132;BA.debugLine="btnDrivewayNewClip.Enabled = True";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3132;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
+ //BA.debugLineNum = 3133;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3133;BA.debugLine="btnSideYardNewClip.Enabled = True";
+ //BA.debugLineNum = 3134;BA.debugLine="btnSideYardNewClip.Enabled = True";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3134;BA.debugLine="btnDrivewayRefresh.Enabled = True";
+ //BA.debugLineNum = 3135;BA.debugLine="btnDrivewayRefresh.Enabled = True";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3135;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
+ //BA.debugLineNum = 3136;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3136;BA.debugLine="btnSideYardRefresh.Enabled = True";
+ //BA.debugLineNum = 3137;BA.debugLine="btnSideYardRefresh.Enabled = True";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3137;BA.debugLine="ivDriveway.Enabled = True";
+ //BA.debugLineNum = 3138;BA.debugLine="ivDriveway.Enabled = True";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3138;BA.debugLine="ivFrontDoor.Enabled = True";
+ //BA.debugLineNum = 3139;BA.debugLine="ivFrontDoor.Enabled = True";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3139;BA.debugLine="ivSideYard.Enabled = True";
+ //BA.debugLineNum = 3140;BA.debugLine="ivSideYard.Enabled = True";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3140;BA.debugLine="swArmed.Enabled = True";
+ //BA.debugLineNum = 3141;BA.debugLine="swArmed.Enabled = True";
 parent.mostCurrent._swarmed._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3141;BA.debugLine="lblStatus.Text = \"Ready\"";
+ //BA.debugLineNum = 3142;BA.debugLine="lblStatus.Text = \"Ready\"";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("Ready"));
  if (true) break;
 
@@ -3559,7 +3559,7 @@ case 24:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 3143;BA.debugLine="End Sub";
+ //BA.debugLineNum = 3144;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -3596,38 +3596,38 @@ return;
 case 0:
 //C
 this.state = -1;
- //BA.debugLineNum = 3275;BA.debugLine="btnDriveway.Enabled = False";
+ //BA.debugLineNum = 3276;BA.debugLine="btnDriveway.Enabled = False";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3276;BA.debugLine="btnRefresh.Enabled = False";
+ //BA.debugLineNum = 3277;BA.debugLine="btnRefresh.Enabled = False";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3277;BA.debugLine="btnDrivewayNewClip.Enabled = False";
+ //BA.debugLineNum = 3278;BA.debugLine="btnDrivewayNewClip.Enabled = False";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3278;BA.debugLine="btnFrontDoorNewClip.Enabled = False";
+ //BA.debugLineNum = 3279;BA.debugLine="btnFrontDoorNewClip.Enabled = False";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3279;BA.debugLine="btnSideYardNewClip.Enabled = False";
+ //BA.debugLineNum = 3280;BA.debugLine="btnSideYardNewClip.Enabled = False";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3280;BA.debugLine="btnDrivewayRefresh.Enabled = False";
+ //BA.debugLineNum = 3281;BA.debugLine="btnDrivewayRefresh.Enabled = False";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3281;BA.debugLine="btnFrontDoorRefresh.Enabled = False";
+ //BA.debugLineNum = 3282;BA.debugLine="btnFrontDoorRefresh.Enabled = False";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3282;BA.debugLine="btnSideYardRefresh.Enabled = False";
+ //BA.debugLineNum = 3283;BA.debugLine="btnSideYardRefresh.Enabled = False";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3283;BA.debugLine="swArmed.Enabled = False";
+ //BA.debugLineNum = 3284;BA.debugLine="swArmed.Enabled = False";
 parent.mostCurrent._swarmed._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3284;BA.debugLine="ivDriveway.Enabled = False";
+ //BA.debugLineNum = 3285;BA.debugLine="ivDriveway.Enabled = False";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3285;BA.debugLine="ivFrontDoor.Enabled = False";
+ //BA.debugLineNum = 3286;BA.debugLine="ivFrontDoor.Enabled = False";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3286;BA.debugLine="ivSideYard.Enabled = False";
+ //BA.debugLineNum = 3287;BA.debugLine="ivSideYard.Enabled = False";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3287;BA.debugLine="ScrollViewBlink.ScrollToNow(0)";
+ //BA.debugLineNum = 3288;BA.debugLine="ScrollViewBlink.ScrollToNow(0)";
 parent.mostCurrent._scrollviewblink.ScrollToNow((int) (0));
- //BA.debugLineNum = 3288;BA.debugLine="BlurIV(\"SideYard.jpg\",ivSideYard)";
+ //BA.debugLineNum = 3289;BA.debugLine="BlurIV(\"SideYard.jpg\",ivSideYard)";
 _bluriv("SideYard.jpg",parent.mostCurrent._ivsideyard);
- //BA.debugLineNum = 3289;BA.debugLine="Dim rs As ResumableSub = RefreshCameras(False, \"4";
+ //BA.debugLineNum = 3290;BA.debugLine="Dim rs As ResumableSub = RefreshCameras(False, \"4";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _refreshcameras(anywheresoftware.b4a.keywords.Common.False,"458236");
- //BA.debugLineNum = 3290;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3291;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 1;
 return;
@@ -3636,31 +3636,31 @@ case 1:
 this.state = -1;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3291;BA.debugLine="btnDriveway.Enabled = True";
+ //BA.debugLineNum = 3292;BA.debugLine="btnDriveway.Enabled = True";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3292;BA.debugLine="btnRefresh.Enabled = True";
+ //BA.debugLineNum = 3293;BA.debugLine="btnRefresh.Enabled = True";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3293;BA.debugLine="btnDrivewayNewClip.Enabled = True";
+ //BA.debugLineNum = 3294;BA.debugLine="btnDrivewayNewClip.Enabled = True";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3294;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
+ //BA.debugLineNum = 3295;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3295;BA.debugLine="btnSideYardNewClip.Enabled = True";
+ //BA.debugLineNum = 3296;BA.debugLine="btnSideYardNewClip.Enabled = True";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3296;BA.debugLine="btnDrivewayRefresh.Enabled = True";
+ //BA.debugLineNum = 3297;BA.debugLine="btnDrivewayRefresh.Enabled = True";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3297;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
+ //BA.debugLineNum = 3298;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3298;BA.debugLine="btnSideYardRefresh.Enabled = True";
+ //BA.debugLineNum = 3299;BA.debugLine="btnSideYardRefresh.Enabled = True";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3299;BA.debugLine="ivDriveway.Enabled = True";
+ //BA.debugLineNum = 3300;BA.debugLine="ivDriveway.Enabled = True";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3300;BA.debugLine="ivFrontDoor.Enabled = True";
+ //BA.debugLineNum = 3301;BA.debugLine="ivFrontDoor.Enabled = True";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3301;BA.debugLine="ivSideYard.Enabled = True";
+ //BA.debugLineNum = 3302;BA.debugLine="ivSideYard.Enabled = True";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3302;BA.debugLine="swArmed.Enabled = True";
+ //BA.debugLineNum = 3303;BA.debugLine="swArmed.Enabled = True";
 parent.mostCurrent._swarmed._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3303;BA.debugLine="End Sub";
+ //BA.debugLineNum = 3304;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -3753,7 +3753,7 @@ mostCurrent._lblairqualitylastupdate.setText(BA.ObjectToCharSequence(_cs.Initial
  } 
        catch (Exception e44) {
 			processBA.setLastException(e44); //BA.debugLineNum = 1012;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("31966125",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("31572909",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 1013;BA.debugLine="lblAirQualityLastUpdate.Text = cs.Initialize.Bol";
 mostCurrent._lblairqualitylastupdate.setText(BA.ObjectToCharSequence(_cs.Initialize().Bold().Append(BA.ObjectToCharSequence("Exception: ")).Pop().Color(anywheresoftware.b4a.keywords.Common.Colors.Red).Append(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA).getObject())).PopAll().getObject()));
  };
@@ -3846,7 +3846,7 @@ mostCurrent._lblairqualitylastupdatebasement.setText(BA.ObjectToCharSequence(_cs
  } 
        catch (Exception e44) {
 			processBA.setLastException(e44); //BA.debugLineNum = 1063;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("32031662",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("31638446",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 1064;BA.debugLine="lblAirQualityLastUpdateBasement.Text = cs.Initia";
 mostCurrent._lblairqualitylastupdatebasement.setText(BA.ObjectToCharSequence(_cs.Initialize().Bold().Append(BA.ObjectToCharSequence("Exception: ")).Pop().Color(anywheresoftware.b4a.keywords.Common.Colors.Red).Append(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA).getObject())).PopAll().getObject()));
  };
@@ -3876,7 +3876,7 @@ if (true) return "Unusable";
  } 
        catch (Exception e14) {
 			processBA.setLastException(e14); //BA.debugLineNum = 2156;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("33276815",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32883599",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 2157;BA.debugLine="lblStatus.Text = \"CheckLFRLevel LastException: \"";
 mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("CheckLFRLevel LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA))));
  //BA.debugLineNum = 2158;BA.debugLine="Return \"\"";
@@ -3986,7 +3986,7 @@ mostCurrent._lbllastupdate.setText(BA.ObjectToCharSequence(_cs.Initialize().Bold
  } 
        catch (Exception e52) {
 			processBA.setLastException(e52); //BA.debugLineNum = 1122;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("32097206",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("31703990",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 1123;BA.debugLine="lblLastUpdate.Text = cs.Initialize.Bold.Append(\"";
 mostCurrent._lbllastupdate.setText(BA.ObjectToCharSequence(_cs.Initialize().Bold().Append(BA.ObjectToCharSequence("Exception: ")).Pop().Color(anywheresoftware.b4a.keywords.Common.Colors.Red).Append(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA).getObject())).PopAll().getObject()));
  };
@@ -4094,7 +4094,7 @@ mostCurrent._lbllastupdatebasement.setText(BA.ObjectToCharSequence(_cs.Initializ
  } 
        catch (Exception e52) {
 			processBA.setLastException(e52); //BA.debugLineNum = 1180;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("32162741",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("31769525",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 1181;BA.debugLine="lblLastUpdateBasement.Text = cs.Initialize.Bold.";
 mostCurrent._lbllastupdatebasement.setText(BA.ObjectToCharSequence(_cs.Initialize().Bold().Append(BA.ObjectToCharSequence("Exception: ")).Pop().Color(anywheresoftware.b4a.keywords.Common.Colors.Red).Append(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA).getObject())).PopAll().getObject()));
  };
@@ -4141,7 +4141,7 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 2527;BA.debugLine="Try";
+ //BA.debugLineNum = 2528;BA.debugLine="Try";
 if (true) break;
 
 case 1:
@@ -4155,10 +4155,10 @@ case 3:
 //C
 this.state = 4;
 this.catchState = 17;
- //BA.debugLineNum = 2528;BA.debugLine="Dim p As B4XView = clvActivity.GetPanel(Index)";
+ //BA.debugLineNum = 2529;BA.debugLine="Dim p As B4XView = clvActivity.GetPanel(Index)";
 _p = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _p = parent.mostCurrent._clvactivity._getpanel(_index);
- //BA.debugLineNum = 2529;BA.debugLine="If p.NumberOfViews > 0 Then";
+ //BA.debugLineNum = 2530;BA.debugLine="If p.NumberOfViews > 0 Then";
 if (true) break;
 
 case 4:
@@ -4171,15 +4171,15 @@ this.state = 6;
 case 6:
 //C
 this.state = 7;
- //BA.debugLineNum = 2530;BA.debugLine="Dim ContentLabel As B4XView = p.GetView(0).GetV";
+ //BA.debugLineNum = 2531;BA.debugLine="Dim ContentLabel As B4XView = p.GetView(0).GetV";
 _contentlabel = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _contentlabel = _p.GetView((int) (0)).GetView((int) (6));
- //BA.debugLineNum = 2531;BA.debugLine="ContentLabel.Visible = False";
+ //BA.debugLineNum = 2532;BA.debugLine="ContentLabel.Visible = False";
 _contentlabel.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2533;BA.debugLine="Dim ContentLabel As B4XView = p.GetView(0).GetV";
+ //BA.debugLineNum = 2534;BA.debugLine="Dim ContentLabel As B4XView = p.GetView(0).GetV";
 _contentlabel = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _contentlabel = _p.GetView((int) (0)).GetView((int) (4));
- //BA.debugLineNum = 2534;BA.debugLine="ContentLabel.Visible = False";
+ //BA.debugLineNum = 2535;BA.debugLine="ContentLabel.Visible = False";
 _contentlabel.setVisible(anywheresoftware.b4a.keywords.Common.False);
  if (true) break;
 
@@ -4187,20 +4187,20 @@ case 7:
 //C
 this.state = 8;
 ;
- //BA.debugLineNum = 2537;BA.debugLine="UpdateItemColor(Index)";
+ //BA.debugLineNum = 2538;BA.debugLine="UpdateItemColor(Index)";
 _updateitemcolor(_index);
- //BA.debugLineNum = 2538;BA.debugLine="wvMedia.LoadUrl(\"\")";
+ //BA.debugLineNum = 2539;BA.debugLine="wvMedia.LoadUrl(\"\")";
 parent.mostCurrent._wvmedia.LoadUrl("");
- //BA.debugLineNum = 2540;BA.debugLine="Dim cd As CardData = clvActivity.GetValue(Index)";
+ //BA.debugLineNum = 2541;BA.debugLine="Dim cd As CardData = clvActivity.GetValue(Index)";
 _cd = (cloyd.smart.home.monitor.main._carddata)(parent.mostCurrent._clvactivity._getvalue(_index));
- //BA.debugLineNum = 2541;BA.debugLine="Dim videoURL As String = cd.mediaURL";
+ //BA.debugLineNum = 2542;BA.debugLine="Dim videoURL As String = cd.mediaURL";
 _videourl = _cd.mediaURL /*String*/ ;
- //BA.debugLineNum = 2543;BA.debugLine="B4XLoadingIndicator4.Show";
+ //BA.debugLineNum = 2544;BA.debugLine="B4XLoadingIndicator4.Show";
 parent.mostCurrent._b4xloadingindicator4._show /*String*/ ();
- //BA.debugLineNum = 2545;BA.debugLine="Dim list1 As List = Starter.kvs.ListKeys";
+ //BA.debugLineNum = 2546;BA.debugLine="Dim list1 As List = Starter.kvs.ListKeys";
 _list1 = new anywheresoftware.b4a.objects.collections.List();
 _list1 = parent.mostCurrent._starter._kvs /*cloyd.smart.home.monitor.keyvaluestore*/ ._listkeys /*anywheresoftware.b4a.objects.collections.List*/ ();
- //BA.debugLineNum = 2546;BA.debugLine="For i =  0 To list1.Size-1";
+ //BA.debugLineNum = 2547;BA.debugLine="For i =  0 To list1.Size-1";
 if (true) break;
 
 case 8:
@@ -4227,11 +4227,11 @@ if (true) break;
 case 10:
 //C
 this.state = 11;
- //BA.debugLineNum = 2547;BA.debugLine="Dim mytypes As Object = Starter.kvs.Get(list1.G";
+ //BA.debugLineNum = 2548;BA.debugLine="Dim mytypes As Object = Starter.kvs.Get(list1.G";
 _mytypes = parent.mostCurrent._starter._kvs /*cloyd.smart.home.monitor.keyvaluestore*/ ._get /*Object*/ (BA.ObjectToString(_list1.Get(_i)));
- //BA.debugLineNum = 2548;BA.debugLine="Dim videos = mytypes As VideoInfo";
+ //BA.debugLineNum = 2549;BA.debugLine="Dim videos = mytypes As VideoInfo";
 _videos = (cloyd.smart.home.monitor.main._videoinfo)(_mytypes);
- //BA.debugLineNum = 2549;BA.debugLine="If videoURL.Contains(videos.VideoID) Then";
+ //BA.debugLineNum = 2550;BA.debugLine="If videoURL.Contains(videos.VideoID) Then";
 if (true) break;
 
 case 11:
@@ -4244,7 +4244,7 @@ this.state = 13;
 case 13:
 //C
 this.state = 14;
- //BA.debugLineNum = 2550;BA.debugLine="Starter.kvs.Put(videos.VideoID,CreateCustomTyp";
+ //BA.debugLineNum = 2551;BA.debugLine="Starter.kvs.Put(videos.VideoID,CreateCustomTyp";
 parent.mostCurrent._starter._kvs /*cloyd.smart.home.monitor.keyvaluestore*/ ._put /*String*/ (_videos.VideoID /*String*/ ,(Object)(_createcustomtype(_videos.ThumbnailPath /*String*/ ,_videos.DateCreated /*String*/ ,"true",_videos.DeviceName /*String*/ ,_videos.VideoID /*String*/ ,_videos.ThumbnailBLOB /*byte[]*/ )));
  if (true) break;
 
@@ -4259,12 +4259,12 @@ case 15:
 //C
 this.state = 18;
 ;
- //BA.debugLineNum = 2553;BA.debugLine="lblDuration.Text = \"0:00\"";
+ //BA.debugLineNum = 2554;BA.debugLine="lblDuration.Text = \"0:00\"";
 parent.mostCurrent._lblduration.setText(BA.ObjectToCharSequence("0:00"));
- //BA.debugLineNum = 2555;BA.debugLine="Dim rs As ResumableSub = ShowVideo(videoURL)";
+ //BA.debugLineNum = 2556;BA.debugLine="Dim rs As ResumableSub = ShowVideo(videoURL)";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _showvideo(_videourl);
- //BA.debugLineNum = 2556;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2557;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 21;
 return;
@@ -4273,10 +4273,10 @@ case 21:
 this.state = 18;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2559;BA.debugLine="Dim rs As ResumableSub = GetUnwatchedVideos";
+ //BA.debugLineNum = 2560;BA.debugLine="Dim rs As ResumableSub = GetUnwatchedVideos";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _getunwatchedvideos();
- //BA.debugLineNum = 2560;BA.debugLine="wait for (rs) complete (Results As Object)";
+ //BA.debugLineNum = 2561;BA.debugLine="wait for (rs) complete (Results As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 22;
 return;
@@ -4291,8 +4291,8 @@ case 17:
 //C
 this.state = 18;
 this.catchState = 0;
- //BA.debugLineNum = 2563;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("34194341",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+ //BA.debugLineNum = 2564;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("33801125",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -4301,9 +4301,9 @@ case 18:
 this.state = -1;
 this.catchState = 0;
 ;
- //BA.debugLineNum = 2565;BA.debugLine="B4XLoadingIndicator4.Hide";
+ //BA.debugLineNum = 2566;BA.debugLine="B4XLoadingIndicator4.Hide";
 parent.mostCurrent._b4xloadingindicator4._hide /*String*/ ();
- //BA.debugLineNum = 2566;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2567;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -4326,90 +4326,90 @@ String _dayname = "";
 anywheresoftware.b4a.objects.B4XViewWrapper _backpane = null;
 anywheresoftware.b4a.objects.B4XViewWrapper _contentlabel = null;
 anywheresoftware.b4a.objects.ImageViewWrapper _ivcleanup = null;
- //BA.debugLineNum = 2449;BA.debugLine="Sub clvActivity_VisibleRangeChanged (FirstIndex As";
- //BA.debugLineNum = 2450;BA.debugLine="Dim ExtraSize As Int = 1";
+ //BA.debugLineNum = 2450;BA.debugLine="Sub clvActivity_VisibleRangeChanged (FirstIndex As";
+ //BA.debugLineNum = 2451;BA.debugLine="Dim ExtraSize As Int = 1";
 _extrasize = (int) (1);
- //BA.debugLineNum = 2451;BA.debugLine="For i = 0 To clvActivity.Size - 1";
+ //BA.debugLineNum = 2452;BA.debugLine="For i = 0 To clvActivity.Size - 1";
 {
 final int step2 = 1;
 final int limit2 = (int) (mostCurrent._clvactivity._getsize()-1);
 _i = (int) (0) ;
 for (;_i <= limit2 ;_i = _i + step2 ) {
- //BA.debugLineNum = 2452;BA.debugLine="Dim p As B4XView = clvActivity.GetPanel(i)";
+ //BA.debugLineNum = 2453;BA.debugLine="Dim p As B4XView = clvActivity.GetPanel(i)";
 _p = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _p = mostCurrent._clvactivity._getpanel(_i);
- //BA.debugLineNum = 2453;BA.debugLine="If i > FirstIndex - ExtraSize And i < LastIndex";
+ //BA.debugLineNum = 2454;BA.debugLine="If i > FirstIndex - ExtraSize And i < LastIndex";
 if (_i>_firstindex-_extrasize && _i<_lastindex+_extrasize) { 
- //BA.debugLineNum = 2455;BA.debugLine="If p.NumberOfViews = 0 Then";
+ //BA.debugLineNum = 2456;BA.debugLine="If p.NumberOfViews = 0 Then";
 if (_p.getNumberOfViews()==0) { 
- //BA.debugLineNum = 2456;BA.debugLine="Dim cd As CardData = clvActivity.GetValue(i)";
+ //BA.debugLineNum = 2457;BA.debugLine="Dim cd As CardData = clvActivity.GetValue(i)";
 _cd = (cloyd.smart.home.monitor.main._carddata)(mostCurrent._clvactivity._getvalue(_i));
- //BA.debugLineNum = 2457;BA.debugLine="p.LoadLayout(\"blinkcellitem\")";
+ //BA.debugLineNum = 2458;BA.debugLine="p.LoadLayout(\"blinkcellitem\")";
 _p.LoadLayout("blinkcellitem",mostCurrent.activityBA);
- //BA.debugLineNum = 2458;BA.debugLine="ivScreenshot.Bitmap = cd.screenshot";
+ //BA.debugLineNum = 2459;BA.debugLine="ivScreenshot.Bitmap = cd.screenshot";
 mostCurrent._ivscreenshot.setBitmap((android.graphics.Bitmap)(_cd.screenshot /*anywheresoftware.b4a.objects.B4XViewWrapper.B4XBitmapWrapper*/ .getObject()));
- //BA.debugLineNum = 2460;BA.debugLine="Dim dayname As String";
+ //BA.debugLineNum = 2461;BA.debugLine="Dim dayname As String";
 _dayname = "";
- //BA.debugLineNum = 2461;BA.debugLine="dayname = ConvertDayName(cd.filedate)";
+ //BA.debugLineNum = 2462;BA.debugLine="dayname = ConvertDayName(cd.filedate)";
 _dayname = _convertdayname(_cd.filedate /*String*/ );
- //BA.debugLineNum = 2462;BA.debugLine="If cd.iswatchedvisible Then";
+ //BA.debugLineNum = 2463;BA.debugLine="If cd.iswatchedvisible Then";
 if (_cd.iswatchedvisible /*boolean*/ ) { 
- //BA.debugLineNum = 2463;BA.debugLine="ivWatched.Visible = True";
+ //BA.debugLineNum = 2464;BA.debugLine="ivWatched.Visible = True";
 mostCurrent._ivwatched.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2464;BA.debugLine="lblDate.Text = \"   \" & dayname & \" \" & Conver";
+ //BA.debugLineNum = 2465;BA.debugLine="lblDate.Text = \"   \" & dayname & \" \" & Conver";
 mostCurrent._lbldate.setText(BA.ObjectToCharSequence("   "+_dayname+" "+_convertdatetimeperiod(_cd.filedate /*String*/ ,_dayname)));
  }else {
- //BA.debugLineNum = 2466;BA.debugLine="ivWatched.Visible = False";
+ //BA.debugLineNum = 2467;BA.debugLine="ivWatched.Visible = False";
 mostCurrent._ivwatched.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2467;BA.debugLine="lblDate.Text = \"   \" & dayname";
+ //BA.debugLineNum = 2468;BA.debugLine="lblDate.Text = \"   \" & dayname";
 mostCurrent._lbldate.setText(BA.ObjectToCharSequence("   "+_dayname));
  };
- //BA.debugLineNum = 2469;BA.debugLine="lblFileInfo.Text = \"   \" & ConvertFullDateTime";
+ //BA.debugLineNum = 2470;BA.debugLine="lblFileInfo.Text = \"   \" & ConvertFullDateTime";
 mostCurrent._lblfileinfo.setText(BA.ObjectToCharSequence("   "+_convertfulldatetime(_cd.filedate /*String*/ )));
- //BA.debugLineNum = 2470;BA.debugLine="lblDeviceInfo.Text = \"   \" & cd.deviceinfo";
+ //BA.debugLineNum = 2471;BA.debugLine="lblDeviceInfo.Text = \"   \" & cd.deviceinfo";
 mostCurrent._lbldeviceinfo.setText(BA.ObjectToCharSequence("   "+_cd.deviceinfo /*String*/ ));
- //BA.debugLineNum = 2471;BA.debugLine="lblMediaURL.Text = cd.mediaURL";
+ //BA.debugLineNum = 2472;BA.debugLine="lblMediaURL.Text = cd.mediaURL";
 mostCurrent._lblmediaurl.setText(BA.ObjectToCharSequence(_cd.mediaURL /*String*/ ));
- //BA.debugLineNum = 2473;BA.debugLine="If previousSelectedIndex > (clvActivity.Size-1";
+ //BA.debugLineNum = 2474;BA.debugLine="If previousSelectedIndex > (clvActivity.Size-1";
 if (_previousselectedindex>(mostCurrent._clvactivity._getsize()-1)) { 
- //BA.debugLineNum = 2474;BA.debugLine="previousSelectedIndex = 0";
+ //BA.debugLineNum = 2475;BA.debugLine="previousSelectedIndex = 0";
 _previousselectedindex = (int) (0);
  };
- //BA.debugLineNum = 2476;BA.debugLine="If previousSelectedIndex = i Then";
+ //BA.debugLineNum = 2477;BA.debugLine="If previousSelectedIndex = i Then";
 if (_previousselectedindex==_i) { 
- //BA.debugLineNum = 2477;BA.debugLine="Dim p As B4XView = clvActivity.GetPanel(previ";
+ //BA.debugLineNum = 2478;BA.debugLine="Dim p As B4XView = clvActivity.GetPanel(previ";
 _p = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _p = mostCurrent._clvactivity._getpanel(_previousselectedindex);
- //BA.debugLineNum = 2478;BA.debugLine="If p.NumberOfViews > 0 Then";
+ //BA.debugLineNum = 2479;BA.debugLine="If p.NumberOfViews > 0 Then";
 if (_p.getNumberOfViews()>0) { 
- //BA.debugLineNum = 2479;BA.debugLine="Dim backPane As B4XView = p.getview(0)";
+ //BA.debugLineNum = 2480;BA.debugLine="Dim backPane As B4XView = p.getview(0)";
 _backpane = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _backpane = _p.GetView((int) (0));
- //BA.debugLineNum = 2480;BA.debugLine="backPane.Color = xui.Color_ARGB(255,217,215,";
+ //BA.debugLineNum = 2481;BA.debugLine="backPane.Color = xui.Color_ARGB(255,217,215,";
 _backpane.setColor(mostCurrent._xui.Color_ARGB((int) (255),(int) (217),(int) (215),(int) (222)));
- //BA.debugLineNum = 2482;BA.debugLine="Dim ContentLabel As B4XView = p.GetView(0).G";
+ //BA.debugLineNum = 2483;BA.debugLine="Dim ContentLabel As B4XView = p.GetView(0).G";
 _contentlabel = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _contentlabel = _p.GetView((int) (0)).GetView((int) (6));
- //BA.debugLineNum = 2483;BA.debugLine="ContentLabel.Visible = True";
+ //BA.debugLineNum = 2484;BA.debugLine="ContentLabel.Visible = True";
 _contentlabel.setVisible(anywheresoftware.b4a.keywords.Common.True);
  };
  };
  };
  }else {
- //BA.debugLineNum = 2489;BA.debugLine="If p.NumberOfViews > 0 Then";
+ //BA.debugLineNum = 2490;BA.debugLine="If p.NumberOfViews > 0 Then";
 if (_p.getNumberOfViews()>0) { 
- //BA.debugLineNum = 2490;BA.debugLine="Dim ivCleanUP As ImageView = p.GetView(0).GetV";
+ //BA.debugLineNum = 2491;BA.debugLine="Dim ivCleanUP As ImageView = p.GetView(0).GetV";
 _ivcleanup = new anywheresoftware.b4a.objects.ImageViewWrapper();
 _ivcleanup.setObject((android.widget.ImageView)(_p.GetView((int) (0)).GetView((int) (3)).getObject()));
- //BA.debugLineNum = 2491;BA.debugLine="ivCleanUP.Bitmap = Null";
+ //BA.debugLineNum = 2492;BA.debugLine="ivCleanUP.Bitmap = Null";
 _ivcleanup.setBitmap((android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null));
- //BA.debugLineNum = 2492;BA.debugLine="p.RemoveAllViews";
+ //BA.debugLineNum = 2493;BA.debugLine="p.RemoveAllViews";
 _p.RemoveAllViews();
  };
  };
  }
 };
- //BA.debugLineNum = 2496;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2497;BA.debugLine="End Sub";
 return "";
 }
 public static String  _convertdatetime(String _inputtime) throws Exception{
@@ -4418,88 +4418,88 @@ long _lngticks = 0L;
  //BA.debugLineNum = 2162;BA.debugLine="Sub ConvertDateTime(inputTime As String) As String";
  //BA.debugLineNum = 2164;BA.debugLine="Dim ticks As Long = ParseUTCstring(inputTime.Repl";
 _ticks = _parseutcstring(_inputtime.replace("+00:00","+0000"));
- //BA.debugLineNum = 2165;BA.debugLine="DateTime.DateFormat = \"MMM d, yyyy h:mm:ss a\"";
-anywheresoftware.b4a.keywords.Common.DateTime.setDateFormat("MMM d, yyyy h:mm:ss a");
- //BA.debugLineNum = 2166;BA.debugLine="Dim lngTicks As Long = ticks";
+ //BA.debugLineNum = 2166;BA.debugLine="DateTime.DateFormat = \"yyyy-MM-dd h:mm:ss a\"";
+anywheresoftware.b4a.keywords.Common.DateTime.setDateFormat("yyyy-MM-dd h:mm:ss a");
+ //BA.debugLineNum = 2167;BA.debugLine="Dim lngTicks As Long = ticks";
 _lngticks = _ticks;
- //BA.debugLineNum = 2169;BA.debugLine="Return DateTime.Date(lngTicks)";
+ //BA.debugLineNum = 2170;BA.debugLine="Return DateTime.Date(lngTicks)";
 if (true) return anywheresoftware.b4a.keywords.Common.DateTime.Date(_lngticks);
- //BA.debugLineNum = 2170;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2171;BA.debugLine="End Sub";
 return "";
 }
 public static String  _convertdatetimeperiod(String _inputtime,String _dayname) throws Exception{
 long _ticks = 0L;
 long _lngticks = 0L;
 b4a.example.dateutils._period _p = null;
- //BA.debugLineNum = 2636;BA.debugLine="Sub ConvertDateTimePeriod(inputTime As String, day";
- //BA.debugLineNum = 2638;BA.debugLine="Dim ticks As Long = ParseUTCstring(inputTime.Repl";
+ //BA.debugLineNum = 2637;BA.debugLine="Sub ConvertDateTimePeriod(inputTime As String, day";
+ //BA.debugLineNum = 2639;BA.debugLine="Dim ticks As Long = ParseUTCstring(inputTime.Repl";
 _ticks = _parseutcstring(_inputtime.replace("+00:00","+0000"));
- //BA.debugLineNum = 2639;BA.debugLine="DateTime.DateFormat = \"MMM d, yyyy h:mm:ss a\"";
+ //BA.debugLineNum = 2640;BA.debugLine="DateTime.DateFormat = \"MMM d, yyyy h:mm:ss a\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setDateFormat("MMM d, yyyy h:mm:ss a");
- //BA.debugLineNum = 2640;BA.debugLine="Dim lngTicks As Long = ticks";
+ //BA.debugLineNum = 2641;BA.debugLine="Dim lngTicks As Long = ticks";
 _lngticks = _ticks;
- //BA.debugLineNum = 2641;BA.debugLine="Dim p As Period = DateUtils.PeriodBetween(lngTick";
+ //BA.debugLineNum = 2642;BA.debugLine="Dim p As Period = DateUtils.PeriodBetween(lngTick";
 _p = mostCurrent._dateutils._periodbetween(mostCurrent.activityBA,_lngticks,anywheresoftware.b4a.keywords.Common.DateTime.getNow());
- //BA.debugLineNum = 2643;BA.debugLine="If dayname.Contains(\"Today\") Then";
+ //BA.debugLineNum = 2644;BA.debugLine="If dayname.Contains(\"Today\") Then";
 if (_dayname.contains("Today")) { 
- //BA.debugLineNum = 2644;BA.debugLine="If p.Days = 0 Then";
+ //BA.debugLineNum = 2645;BA.debugLine="If p.Days = 0 Then";
 if (_p.Days==0) { 
- //BA.debugLineNum = 2645;BA.debugLine="If p.Hours = 0 Then";
+ //BA.debugLineNum = 2646;BA.debugLine="If p.Hours = 0 Then";
 if (_p.Hours==0) { 
- //BA.debugLineNum = 2646;BA.debugLine="If p.Minutes = 0 Then";
+ //BA.debugLineNum = 2647;BA.debugLine="If p.Minutes = 0 Then";
 if (_p.Minutes==0) { 
- //BA.debugLineNum = 2647;BA.debugLine="Return p.Seconds & \"s ago\"";
+ //BA.debugLineNum = 2648;BA.debugLine="Return p.Seconds & \"s ago\"";
 if (true) return BA.NumberToString(_p.Seconds)+"s ago";
  }else {
- //BA.debugLineNum = 2649;BA.debugLine="Return p.Minutes & \"m \" & p.Seconds & \"s ago\"";
+ //BA.debugLineNum = 2650;BA.debugLine="Return p.Minutes & \"m \" & p.Seconds & \"s ago\"";
 if (true) return BA.NumberToString(_p.Minutes)+"m "+BA.NumberToString(_p.Seconds)+"s ago";
  };
  }else {
- //BA.debugLineNum = 2652;BA.debugLine="Return p.Hours & \"h \" & p.Minutes & \"m \" & p.S";
+ //BA.debugLineNum = 2653;BA.debugLine="Return p.Hours & \"h \" & p.Minutes & \"m \" & p.S";
 if (true) return BA.NumberToString(_p.Hours)+"h "+BA.NumberToString(_p.Minutes)+"m "+BA.NumberToString(_p.Seconds)+"s ago";
  };
  }else if(_p.Hours==0) { 
- //BA.debugLineNum = 2655;BA.debugLine="If p.Minutes = 0 Then";
+ //BA.debugLineNum = 2656;BA.debugLine="If p.Minutes = 0 Then";
 if (_p.Minutes==0) { 
- //BA.debugLineNum = 2656;BA.debugLine="Return p.Seconds & \"s ago\"";
+ //BA.debugLineNum = 2657;BA.debugLine="Return p.Seconds & \"s ago\"";
 if (true) return BA.NumberToString(_p.Seconds)+"s ago";
  }else {
- //BA.debugLineNum = 2658;BA.debugLine="Return p.Minutes & \"m \" & p.Seconds & \"s ago\"";
+ //BA.debugLineNum = 2659;BA.debugLine="Return p.Minutes & \"m \" & p.Seconds & \"s ago\"";
 if (true) return BA.NumberToString(_p.Minutes)+"m "+BA.NumberToString(_p.Seconds)+"s ago";
  };
  }else if(_p.Minutes==0) { 
- //BA.debugLineNum = 2661;BA.debugLine="Return p.Seconds & \"s ago\"";
+ //BA.debugLineNum = 2662;BA.debugLine="Return p.Seconds & \"s ago\"";
 if (true) return BA.NumberToString(_p.Seconds)+"s ago";
  }else {
- //BA.debugLineNum = 2663;BA.debugLine="Return p.Days & \"d \" & p.Hours & \"h \" & p.Minut";
+ //BA.debugLineNum = 2664;BA.debugLine="Return p.Days & \"d \" & p.Hours & \"h \" & p.Minut";
 if (true) return BA.NumberToString(_p.Days)+"d "+BA.NumberToString(_p.Hours)+"h "+BA.NumberToString(_p.Minutes)+"m "+BA.NumberToString(_p.Seconds)+"s ago";
  };
  }else if(_dayname.contains("Yesterday")) { 
- //BA.debugLineNum = 2666;BA.debugLine="If p.Days = 0 Then";
+ //BA.debugLineNum = 2667;BA.debugLine="If p.Days = 0 Then";
 if (_p.Days==0) { 
- //BA.debugLineNum = 2667;BA.debugLine="If p.Hours = 0 Then";
+ //BA.debugLineNum = 2668;BA.debugLine="If p.Hours = 0 Then";
 if (_p.Hours==0) { 
- //BA.debugLineNum = 2668;BA.debugLine="If p.Minutes = 0 Then";
+ //BA.debugLineNum = 2669;BA.debugLine="If p.Minutes = 0 Then";
 if (_p.Minutes==0) { 
- //BA.debugLineNum = 2669;BA.debugLine="Return p.Seconds & \"s ago\"";
+ //BA.debugLineNum = 2670;BA.debugLine="Return p.Seconds & \"s ago\"";
 if (true) return BA.NumberToString(_p.Seconds)+"s ago";
  }else {
- //BA.debugLineNum = 2671;BA.debugLine="Return p.Minutes & \"m \" & p.Seconds & \"s ago\"";
+ //BA.debugLineNum = 2672;BA.debugLine="Return p.Minutes & \"m \" & p.Seconds & \"s ago\"";
 if (true) return BA.NumberToString(_p.Minutes)+"m "+BA.NumberToString(_p.Seconds)+"s ago";
  };
  }else {
- //BA.debugLineNum = 2674;BA.debugLine="Return p.Hours & \"h \" & p.Minutes & \"m \" & p.S";
+ //BA.debugLineNum = 2675;BA.debugLine="Return p.Hours & \"h \" & p.Minutes & \"m \" & p.S";
 if (true) return BA.NumberToString(_p.Hours)+"h "+BA.NumberToString(_p.Minutes)+"m "+BA.NumberToString(_p.Seconds)+"s ago";
  };
  }else {
- //BA.debugLineNum = 2677;BA.debugLine="Return p.Days & \"d \" & p.Hours & \"h \" & p.Minut";
+ //BA.debugLineNum = 2678;BA.debugLine="Return p.Days & \"d \" & p.Hours & \"h \" & p.Minut";
 if (true) return BA.NumberToString(_p.Days)+"d "+BA.NumberToString(_p.Hours)+"h "+BA.NumberToString(_p.Minutes)+"m "+BA.NumberToString(_p.Seconds)+"s ago";
  };
  }else {
- //BA.debugLineNum = 2680;BA.debugLine="Return p.Days & \"d \" & p.Hours & \"h \" & p.Minute";
+ //BA.debugLineNum = 2681;BA.debugLine="Return p.Days & \"d \" & p.Hours & \"h \" & p.Minute";
 if (true) return BA.NumberToString(_p.Days)+"d "+BA.NumberToString(_p.Hours)+"h "+BA.NumberToString(_p.Minutes)+"m "+BA.NumberToString(_p.Seconds)+"s ago";
  };
- //BA.debugLineNum = 2683;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2684;BA.debugLine="End Sub";
 return "";
 }
 public static String  _convertdayname(String _inputtime) throws Exception{
@@ -4507,37 +4507,37 @@ long _ticks = 0L;
 long _lngticks = 0L;
 long _yesterday = 0L;
 long _timestamp = 0L;
- //BA.debugLineNum = 2685;BA.debugLine="Sub ConvertDayName(inputTime As String) As String";
- //BA.debugLineNum = 2687;BA.debugLine="Dim ticks As Long = ParseUTCstring(inputTime.Repl";
+ //BA.debugLineNum = 2686;BA.debugLine="Sub ConvertDayName(inputTime As String) As String";
+ //BA.debugLineNum = 2688;BA.debugLine="Dim ticks As Long = ParseUTCstring(inputTime.Repl";
 _ticks = _parseutcstring(_inputtime.replace("+00:00","+0000"));
- //BA.debugLineNum = 2688;BA.debugLine="DateTime.DateFormat = \"MMM d, yyyy h:mm:ss a\"";
+ //BA.debugLineNum = 2689;BA.debugLine="DateTime.DateFormat = \"MMM d, yyyy h:mm:ss a\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setDateFormat("MMM d, yyyy h:mm:ss a");
- //BA.debugLineNum = 2689;BA.debugLine="Dim lngTicks As Long = ticks";
+ //BA.debugLineNum = 2690;BA.debugLine="Dim lngTicks As Long = ticks";
 _lngticks = _ticks;
- //BA.debugLineNum = 2691;BA.debugLine="Dim Yesterday As Long";
+ //BA.debugLineNum = 2692;BA.debugLine="Dim Yesterday As Long";
 _yesterday = 0L;
- //BA.debugLineNum = 2692;BA.debugLine="Dim timestamp As Long";
+ //BA.debugLineNum = 2693;BA.debugLine="Dim timestamp As Long";
 _timestamp = 0L;
- //BA.debugLineNum = 2693;BA.debugLine="DateTime.DateFormat = \"yyyyMMdd\"";
+ //BA.debugLineNum = 2694;BA.debugLine="DateTime.DateFormat = \"yyyyMMdd\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setDateFormat("yyyyMMdd");
- //BA.debugLineNum = 2694;BA.debugLine="Yesterday = DateTime.Date(DateTime.add(DateTime.N";
+ //BA.debugLineNum = 2695;BA.debugLine="Yesterday = DateTime.Date(DateTime.add(DateTime.N";
 _yesterday = (long)(Double.parseDouble(anywheresoftware.b4a.keywords.Common.DateTime.Date(anywheresoftware.b4a.keywords.Common.DateTime.Add(anywheresoftware.b4a.keywords.Common.DateTime.getNow(),(int) (0),(int) (0),(int) (-1)))));
- //BA.debugLineNum = 2695;BA.debugLine="timestamp = DateTime.Date(lngTicks)";
+ //BA.debugLineNum = 2696;BA.debugLine="timestamp = DateTime.Date(lngTicks)";
 _timestamp = (long)(Double.parseDouble(anywheresoftware.b4a.keywords.Common.DateTime.Date(_lngticks)));
- //BA.debugLineNum = 2697;BA.debugLine="DateTime.DateFormat = \"h:mm:ss a\"";
+ //BA.debugLineNum = 2698;BA.debugLine="DateTime.DateFormat = \"h:mm:ss a\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setDateFormat("h:mm:ss a");
- //BA.debugLineNum = 2698;BA.debugLine="If DateUtils.IsSameDay(lngTicks,DateTime.now) The";
+ //BA.debugLineNum = 2699;BA.debugLine="If DateUtils.IsSameDay(lngTicks,DateTime.now) The";
 if (mostCurrent._dateutils._issameday(mostCurrent.activityBA,_lngticks,anywheresoftware.b4a.keywords.Common.DateTime.getNow())) { 
- //BA.debugLineNum = 2699;BA.debugLine="Return \"Today\" '& DateTime.Date(lngTicks)";
+ //BA.debugLineNum = 2700;BA.debugLine="Return \"Today\" '& DateTime.Date(lngTicks)";
 if (true) return "Today";
  }else if(_yesterday==_timestamp) { 
- //BA.debugLineNum = 2701;BA.debugLine="Return \"Yesterday\" '& DateTime.Date(lngTicks)";
+ //BA.debugLineNum = 2702;BA.debugLine="Return \"Yesterday\" '& DateTime.Date(lngTicks)";
 if (true) return "Yesterday";
  }else {
- //BA.debugLineNum = 2703;BA.debugLine="Return DateUtils.GetDayOfWeekName(lngTicks) '& \"";
+ //BA.debugLineNum = 2704;BA.debugLine="Return DateUtils.GetDayOfWeekName(lngTicks) '& \"";
 if (true) return mostCurrent._dateutils._getdayofweekname(mostCurrent.activityBA,_lngticks);
  };
- //BA.debugLineNum = 2705;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2706;BA.debugLine="End Sub";
 return "";
 }
 public static String  _convertfulldatetime(String _inputtime) throws Exception{
@@ -4545,81 +4545,81 @@ long _ticks = 0L;
 long _lngticks = 0L;
 long _yesterday = 0L;
 long _timestamp = 0L;
- //BA.debugLineNum = 2707;BA.debugLine="Sub ConvertFullDateTime(inputTime As String) As St";
- //BA.debugLineNum = 2709;BA.debugLine="Dim ticks As Long = ParseUTCstring(inputTime.Repl";
+ //BA.debugLineNum = 2708;BA.debugLine="Sub ConvertFullDateTime(inputTime As String) As St";
+ //BA.debugLineNum = 2710;BA.debugLine="Dim ticks As Long = ParseUTCstring(inputTime.Repl";
 _ticks = _parseutcstring(_inputtime.replace("+00:00","+0000"));
- //BA.debugLineNum = 2710;BA.debugLine="DateTime.DateFormat = \"MMM d, yyyy h:mm:ss a\"";
+ //BA.debugLineNum = 2711;BA.debugLine="DateTime.DateFormat = \"MMM d, yyyy h:mm:ss a\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setDateFormat("MMM d, yyyy h:mm:ss a");
- //BA.debugLineNum = 2711;BA.debugLine="Dim lngTicks As Long = ticks";
+ //BA.debugLineNum = 2712;BA.debugLine="Dim lngTicks As Long = ticks";
 _lngticks = _ticks;
- //BA.debugLineNum = 2713;BA.debugLine="Dim Yesterday As Long";
+ //BA.debugLineNum = 2714;BA.debugLine="Dim Yesterday As Long";
 _yesterday = 0L;
- //BA.debugLineNum = 2714;BA.debugLine="Dim timestamp As Long";
+ //BA.debugLineNum = 2715;BA.debugLine="Dim timestamp As Long";
 _timestamp = 0L;
- //BA.debugLineNum = 2715;BA.debugLine="DateTime.DateFormat = \"yyyyMMdd\"";
+ //BA.debugLineNum = 2716;BA.debugLine="DateTime.DateFormat = \"yyyyMMdd\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setDateFormat("yyyyMMdd");
- //BA.debugLineNum = 2716;BA.debugLine="Yesterday = DateTime.Date(DateTime.add(DateTime.N";
+ //BA.debugLineNum = 2717;BA.debugLine="Yesterday = DateTime.Date(DateTime.add(DateTime.N";
 _yesterday = (long)(Double.parseDouble(anywheresoftware.b4a.keywords.Common.DateTime.Date(anywheresoftware.b4a.keywords.Common.DateTime.Add(anywheresoftware.b4a.keywords.Common.DateTime.getNow(),(int) (0),(int) (0),(int) (-1)))));
- //BA.debugLineNum = 2717;BA.debugLine="timestamp = DateTime.Date(lngTicks)";
+ //BA.debugLineNum = 2718;BA.debugLine="timestamp = DateTime.Date(lngTicks)";
 _timestamp = (long)(Double.parseDouble(anywheresoftware.b4a.keywords.Common.DateTime.Date(_lngticks)));
- //BA.debugLineNum = 2719;BA.debugLine="DateTime.DateFormat = \"h:mm:ss a\"";
+ //BA.debugLineNum = 2720;BA.debugLine="DateTime.DateFormat = \"h:mm:ss a\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setDateFormat("h:mm:ss a");
- //BA.debugLineNum = 2720;BA.debugLine="If DateUtils.IsSameDay(lngTicks,DateTime.now) The";
+ //BA.debugLineNum = 2721;BA.debugLine="If DateUtils.IsSameDay(lngTicks,DateTime.now) The";
 if (mostCurrent._dateutils._issameday(mostCurrent.activityBA,_lngticks,anywheresoftware.b4a.keywords.Common.DateTime.getNow())) { 
- //BA.debugLineNum = 2721;BA.debugLine="Return DateTime.Date(lngTicks)";
+ //BA.debugLineNum = 2722;BA.debugLine="Return DateTime.Date(lngTicks)";
 if (true) return anywheresoftware.b4a.keywords.Common.DateTime.Date(_lngticks);
  }else if(_yesterday==_timestamp) { 
- //BA.debugLineNum = 2723;BA.debugLine="Return DateTime.Date(lngTicks)";
+ //BA.debugLineNum = 2724;BA.debugLine="Return DateTime.Date(lngTicks)";
 if (true) return anywheresoftware.b4a.keywords.Common.DateTime.Date(_lngticks);
  }else {
- //BA.debugLineNum = 2725;BA.debugLine="Return DateTime.Date(lngTicks)";
+ //BA.debugLineNum = 2726;BA.debugLine="Return DateTime.Date(lngTicks)";
 if (true) return anywheresoftware.b4a.keywords.Common.DateTime.Date(_lngticks);
  };
- //BA.debugLineNum = 2727;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2728;BA.debugLine="End Sub";
 return "";
 }
 public static String  _converttickstotimestring(long _t) throws Exception{
 int _hours = 0;
 int _minutes = 0;
 int _seconds = 0;
- //BA.debugLineNum = 2820;BA.debugLine="Sub ConvertTicksToTimeString(t As Long) As String";
- //BA.debugLineNum = 2821;BA.debugLine="Dim  hours, minutes, seconds As Int 'ignore";
+ //BA.debugLineNum = 2821;BA.debugLine="Sub ConvertTicksToTimeString(t As Long) As String";
+ //BA.debugLineNum = 2822;BA.debugLine="Dim  hours, minutes, seconds As Int 'ignore";
 _hours = 0;
 _minutes = 0;
 _seconds = 0;
- //BA.debugLineNum = 2822;BA.debugLine="hours = t / DateTime.TicksPerHour";
+ //BA.debugLineNum = 2823;BA.debugLine="hours = t / DateTime.TicksPerHour";
 _hours = (int) (_t/(double)anywheresoftware.b4a.keywords.Common.DateTime.TicksPerHour);
- //BA.debugLineNum = 2823;BA.debugLine="minutes = (t Mod DateTime.TicksPerHour) / DateTim";
+ //BA.debugLineNum = 2824;BA.debugLine="minutes = (t Mod DateTime.TicksPerHour) / DateTim";
 _minutes = (int) ((_t%anywheresoftware.b4a.keywords.Common.DateTime.TicksPerHour)/(double)anywheresoftware.b4a.keywords.Common.DateTime.TicksPerMinute);
- //BA.debugLineNum = 2824;BA.debugLine="seconds = (t Mod DateTime.TicksPerMinute) / DateT";
+ //BA.debugLineNum = 2825;BA.debugLine="seconds = (t Mod DateTime.TicksPerMinute) / DateT";
 _seconds = (int) ((_t%anywheresoftware.b4a.keywords.Common.DateTime.TicksPerMinute)/(double)anywheresoftware.b4a.keywords.Common.DateTime.TicksPerSecond);
- //BA.debugLineNum = 2825;BA.debugLine="Return NumberFormat(minutes, 1, 0) & \":\" & Number";
+ //BA.debugLineNum = 2826;BA.debugLine="Return NumberFormat(minutes, 1, 0) & \":\" & Number";
 if (true) return anywheresoftware.b4a.keywords.Common.NumberFormat(_minutes,(int) (1),(int) (0))+":"+anywheresoftware.b4a.keywords.Common.NumberFormat(_seconds,(int) (2),(int) (0));
- //BA.debugLineNum = 2826;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2827;BA.debugLine="End Sub";
 return "";
 }
 public static cloyd.smart.home.monitor.main._videoinfo  _createcustomtype(String _thumbnailpath,String _datecreated,String _watched,String _devicename,String _videoid,byte[] _thumbnailblob) throws Exception{
 cloyd.smart.home.monitor.main._videoinfo _ct = null;
- //BA.debugLineNum = 2436;BA.debugLine="Private Sub CreateCustomType(ThumbnailPath As Stri";
- //BA.debugLineNum = 2437;BA.debugLine="Dim ct As VideoInfo";
+ //BA.debugLineNum = 2437;BA.debugLine="Private Sub CreateCustomType(ThumbnailPath As Stri";
+ //BA.debugLineNum = 2438;BA.debugLine="Dim ct As VideoInfo";
 _ct = new cloyd.smart.home.monitor.main._videoinfo();
- //BA.debugLineNum = 2438;BA.debugLine="ct.Initialize";
+ //BA.debugLineNum = 2439;BA.debugLine="ct.Initialize";
 _ct.Initialize();
- //BA.debugLineNum = 2439;BA.debugLine="ct.ThumbnailPath = ThumbnailPath";
+ //BA.debugLineNum = 2440;BA.debugLine="ct.ThumbnailPath = ThumbnailPath";
 _ct.ThumbnailPath /*String*/  = _thumbnailpath;
- //BA.debugLineNum = 2440;BA.debugLine="ct.DateCreated = DateCreated";
+ //BA.debugLineNum = 2441;BA.debugLine="ct.DateCreated = DateCreated";
 _ct.DateCreated /*String*/  = _datecreated;
- //BA.debugLineNum = 2441;BA.debugLine="ct.Watched = Watched";
+ //BA.debugLineNum = 2442;BA.debugLine="ct.Watched = Watched";
 _ct.Watched /*String*/  = _watched;
- //BA.debugLineNum = 2442;BA.debugLine="ct.DeviceName = DeviceName";
+ //BA.debugLineNum = 2443;BA.debugLine="ct.DeviceName = DeviceName";
 _ct.DeviceName /*String*/  = _devicename;
- //BA.debugLineNum = 2443;BA.debugLine="ct.ThumbnailBLOB = ThumbnailBLOB";
+ //BA.debugLineNum = 2444;BA.debugLine="ct.ThumbnailBLOB = ThumbnailBLOB";
 _ct.ThumbnailBLOB /*byte[]*/  = _thumbnailblob;
- //BA.debugLineNum = 2444;BA.debugLine="ct.VideoID = VideoID";
+ //BA.debugLineNum = 2445;BA.debugLine="ct.VideoID = VideoID";
 _ct.VideoID /*String*/  = _videoid;
- //BA.debugLineNum = 2445;BA.debugLine="Return ct";
+ //BA.debugLineNum = 2446;BA.debugLine="Return ct";
 if (true) return _ct;
- //BA.debugLineNum = 2446;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2447;BA.debugLine="End Sub";
 return null;
 }
 public static String  _createpreferencescreen() throws Exception{
@@ -4831,7 +4831,7 @@ case 21:
 this.state = 22;
 this.catchState = 0;
  //BA.debugLineNum = 906;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("31703969",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("31310753",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -5025,7 +5025,7 @@ case 19:
 this.state = 20;
 this.catchState = 0;
  //BA.debugLineNum = 1640;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("32752545",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32359329",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -5085,7 +5085,7 @@ anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,null);return;}
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 3179;BA.debugLine="Try";
+ //BA.debugLineNum = 3180;BA.debugLine="Try";
 if (true) break;
 
 case 1:
@@ -5099,17 +5099,17 @@ case 3:
 //C
 this.state = 4;
 this.catchState = 15;
- //BA.debugLineNum = 3180;BA.debugLine="Dim j As HttpJob";
+ //BA.debugLineNum = 3181;BA.debugLine="Dim j As HttpJob";
 _j = new cloyd.smart.home.monitor.httpjob();
- //BA.debugLineNum = 3181;BA.debugLine="response = \"\"";
+ //BA.debugLineNum = 3182;BA.debugLine="response = \"\"";
 parent._response = "";
- //BA.debugLineNum = 3182;BA.debugLine="j.Initialize(\"\", Me)";
+ //BA.debugLineNum = 3183;BA.debugLine="j.Initialize(\"\", Me)";
 _j._initialize /*String*/ (processBA,"",main.getObject());
- //BA.debugLineNum = 3183;BA.debugLine="j.Download(Link)";
+ //BA.debugLineNum = 3184;BA.debugLine="j.Download(Link)";
 _j._download /*String*/ (_link);
- //BA.debugLineNum = 3184;BA.debugLine="j.GetRequest.SetHeader(\"TOKEN_AUTH\", authToken)";
+ //BA.debugLineNum = 3185;BA.debugLine="j.GetRequest.SetHeader(\"TOKEN_AUTH\", authToken)";
 _j._getrequest /*anywheresoftware.b4h.okhttp.OkHttpClientWrapper.OkHttpRequest*/ ().SetHeader("TOKEN_AUTH",parent._authtoken);
- //BA.debugLineNum = 3185;BA.debugLine="Wait For (j) JobDone(j As HttpJob)";
+ //BA.debugLineNum = 3186;BA.debugLine="Wait For (j) JobDone(j As HttpJob)";
 anywheresoftware.b4a.keywords.Common.WaitFor("jobdone", processBA, this, (Object)(_j));
 this.state = 17;
 return;
@@ -5118,7 +5118,7 @@ case 17:
 this.state = 4;
 _j = (cloyd.smart.home.monitor.httpjob) result[0];
 ;
- //BA.debugLineNum = 3186;BA.debugLine="If j.Success Then";
+ //BA.debugLineNum = 3187;BA.debugLine="If j.Success Then";
 if (true) break;
 
 case 4:
@@ -5133,16 +5133,16 @@ this.state = 12;
 case 6:
 //C
 this.state = 7;
- //BA.debugLineNum = 3188;BA.debugLine="Dim out As OutputStream = File.OpenOutput(File.";
+ //BA.debugLineNum = 3189;BA.debugLine="Dim out As OutputStream = File.OpenOutput(File.";
 _out = new anywheresoftware.b4a.objects.streams.File.OutputStreamWrapper();
 _out = anywheresoftware.b4a.keywords.Common.File.OpenOutput(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"screenshot.jpg",anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3189;BA.debugLine="File.Copy2(j.GetInputStream, out)";
+ //BA.debugLineNum = 3190;BA.debugLine="File.Copy2(j.GetInputStream, out)";
 anywheresoftware.b4a.keywords.Common.File.Copy2((java.io.InputStream)(_j._getinputstream /*anywheresoftware.b4a.objects.streams.File.InputStreamWrapper*/ ().getObject()),(java.io.OutputStream)(_out.getObject()));
- //BA.debugLineNum = 3190;BA.debugLine="out.Close '<------ very important";
+ //BA.debugLineNum = 3191;BA.debugLine="out.Close '<------ very important";
 _out.Close();
- //BA.debugLineNum = 3192;BA.debugLine="Dim FileName As String = \"screenshot.jpg\"";
+ //BA.debugLineNum = 3193;BA.debugLine="Dim FileName As String = \"screenshot.jpg\"";
 _filename = "screenshot.jpg";
- //BA.debugLineNum = 3193;BA.debugLine="If File.Exists(File.DirInternal, FileName) Then";
+ //BA.debugLineNum = 3194;BA.debugLine="If File.Exists(File.DirInternal, FileName) Then";
 if (true) break;
 
 case 7:
@@ -5155,17 +5155,17 @@ this.state = 9;
 case 9:
 //C
 this.state = 10;
- //BA.debugLineNum = 3194;BA.debugLine="File.Copy(File.DirInternal, FileName, Starter.";
+ //BA.debugLineNum = 3195;BA.debugLine="File.Copy(File.DirInternal, FileName, Starter.";
 anywheresoftware.b4a.keywords.Common.File.Copy(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),_filename,parent.mostCurrent._starter._provider /*cloyd.smart.home.monitor.fileprovider*/ ._sharedfolder /*String*/ ,_filename);
- //BA.debugLineNum = 3195;BA.debugLine="Dim in As Intent";
+ //BA.debugLineNum = 3196;BA.debugLine="Dim in As Intent";
 _in = new anywheresoftware.b4a.objects.IntentWrapper();
- //BA.debugLineNum = 3196;BA.debugLine="in.Initialize(in.ACTION_VIEW, \"\")";
+ //BA.debugLineNum = 3197;BA.debugLine="in.Initialize(in.ACTION_VIEW, \"\")";
 _in.Initialize(_in.ACTION_VIEW,"");
- //BA.debugLineNum = 3197;BA.debugLine="Starter.Provider.SetFileUriAsIntentData(in, Fi";
+ //BA.debugLineNum = 3198;BA.debugLine="Starter.Provider.SetFileUriAsIntentData(in, Fi";
 parent.mostCurrent._starter._provider /*cloyd.smart.home.monitor.fileprovider*/ ._setfileuriasintentdata /*String*/ (_in,_filename);
- //BA.debugLineNum = 3199;BA.debugLine="in.SetType(\"image/*\")";
+ //BA.debugLineNum = 3200;BA.debugLine="in.SetType(\"image/*\")";
 _in.SetType("image/*");
- //BA.debugLineNum = 3200;BA.debugLine="StartActivity(in)";
+ //BA.debugLineNum = 3201;BA.debugLine="StartActivity(in)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(_in.getObject()));
  if (true) break;
 
@@ -5178,9 +5178,9 @@ this.state = 13;
 case 12:
 //C
 this.state = 13;
- //BA.debugLineNum = 3203;BA.debugLine="response = \"ERROR: \" & j.ErrorMessage";
+ //BA.debugLineNum = 3204;BA.debugLine="response = \"ERROR: \" & j.ErrorMessage";
 parent._response = "ERROR: "+_j._errormessage /*String*/ ;
- //BA.debugLineNum = 3204;BA.debugLine="lblStatus.Text = GetRESTError(j.ErrorMessage)";
+ //BA.debugLineNum = 3205;BA.debugLine="lblStatus.Text = GetRESTError(j.ErrorMessage)";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence(_getresterror(_j._errormessage /*String*/ )));
  if (true) break;
 
@@ -5188,7 +5188,7 @@ case 13:
 //C
 this.state = 16;
 ;
- //BA.debugLineNum = 3206;BA.debugLine="j.Release";
+ //BA.debugLineNum = 3207;BA.debugLine="j.Release";
 _j._release /*String*/ ();
  if (true) break;
 
@@ -5196,8 +5196,8 @@ case 15:
 //C
 this.state = 16;
 this.catchState = 0;
- //BA.debugLineNum = 3208;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("35046302",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+ //BA.debugLineNum = 3209;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("34653086",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -5206,10 +5206,10 @@ case 16:
 this.state = -1;
 this.catchState = 0;
 ;
- //BA.debugLineNum = 3210;BA.debugLine="Return Null";
+ //BA.debugLineNum = 3211;BA.debugLine="Return Null";
 if (true) {
 anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,anywheresoftware.b4a.keywords.Common.Null);return;};
- //BA.debugLineNum = 3211;BA.debugLine="End Sub";
+ //BA.debugLineNum = 3212;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -5353,12 +5353,12 @@ _authtokenmap.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_ro
  //BA.debugLineNum = 1652;BA.debugLine="authToken = authtokenmap.Get(\"authtoken\")";
 _authtoken = BA.ObjectToString(_authtokenmap.Get((Object)("authtoken")));
  //BA.debugLineNum = 1653;BA.debugLine="Log(\"authToken: \" &  authToken)";
-anywheresoftware.b4a.keywords.Common.LogImpl("32818056","authToken: "+_authtoken,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32424840","authToken: "+_authtoken,0);
  //BA.debugLineNum = 1654;BA.debugLine="Dim networks As Map = root.Get(\"networks\")";
 _networks = new anywheresoftware.b4a.objects.collections.Map();
 _networks.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_root.Get((Object)("networks"))));
  //BA.debugLineNum = 1655;BA.debugLine="Log(\"networkID: \" & networks.GetKeyAt(0))";
-anywheresoftware.b4a.keywords.Common.LogImpl("32818058","networkID: "+BA.ObjectToString(_networks.GetKeyAt((int) (0))),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32424842","networkID: "+BA.ObjectToString(_networks.GetKeyAt((int) (0))),0);
  //BA.debugLineNum = 1656;BA.debugLine="networkID = networks.GetKeyAt(0)";
 _networkid = BA.ObjectToString(_networks.GetKeyAt((int) (0)));
  //BA.debugLineNum = 1657;BA.debugLine="Dim region As Map = root.Get(\"region\")";
@@ -5367,14 +5367,14 @@ _region.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_root.Get
  //BA.debugLineNum = 1658;BA.debugLine="userRegion = region.GetKeyAt(0)";
 _userregion = BA.ObjectToString(_region.GetKeyAt((int) (0)));
  //BA.debugLineNum = 1659;BA.debugLine="Log(\"userRegion: \" &  userRegion)";
-anywheresoftware.b4a.keywords.Common.LogImpl("32818062","userRegion: "+_userregion,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32424846","userRegion: "+_userregion,0);
  //BA.debugLineNum = 1661;BA.debugLine="Dim account As Map = root.Get(\"account\")";
 _account = new anywheresoftware.b4a.objects.collections.Map();
 _account.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_root.Get((Object)("account"))));
  //BA.debugLineNum = 1662;BA.debugLine="Dim id As Int = account.Get(\"id\")";
 _id = (int)(BA.ObjectToNumber(_account.Get((Object)("id"))));
  //BA.debugLineNum = 1663;BA.debugLine="Log(\"accountID: \" & id)";
-anywheresoftware.b4a.keywords.Common.LogImpl("32818066","accountID: "+BA.NumberToString(_id),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32424850","accountID: "+BA.NumberToString(_id),0);
  //BA.debugLineNum = 1664;BA.debugLine="accountID = id";
 _accountid = BA.NumberToString(_id);
  } 
@@ -5384,7 +5384,7 @@ mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("ERROR: GetAuthInfo - "+B
  //BA.debugLineNum = 1667;BA.debugLine="response = \"ERROR: GetAuthInfo - \" & LastExcepti";
 _response = "ERROR: GetAuthInfo - "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA));
  //BA.debugLineNum = 1668;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("32818071",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32424855",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 1671;BA.debugLine="End Sub";
 return "";
@@ -5409,6 +5409,7 @@ anywheresoftware.b4a.objects.collections.Map _camera_status = null;
 int _battery_voltage = 0;
 int _wifi_strength = 0;
 String _updated_at = "";
+String _temperature = "";
 int _camera_id = 0;
 String _fw_version = "";
 
@@ -5455,6 +5456,8 @@ _battery_voltage = (int)(BA.ObjectToNumber(_camera_status.Get((Object)("battery_
 _wifi_strength = (int)(BA.ObjectToNumber(_camera_status.Get((Object)("wifi_strength"))));
  //BA.debugLineNum = 1784;BA.debugLine="Dim updated_at As String = camera_status.Get(\"up";
 _updated_at = BA.ObjectToString(_camera_status.Get((Object)("updated_at")));
+ //BA.debugLineNum = 1787;BA.debugLine="Dim temperature As string = camera_status.Get(\"t";
+_temperature = BA.ObjectToString(_camera_status.Get((Object)("temperature")));
  //BA.debugLineNum = 1794;BA.debugLine="cameraThumbnail = camera_status.Get(\"thumbnail\")";
 parent._camerathumbnail = BA.ObjectToString(_camera_status.Get((Object)("thumbnail")));
  //BA.debugLineNum = 1797;BA.debugLine="Dim camera_id As Int = camera_status.Get(\"camera";
@@ -5499,40 +5502,40 @@ this.state = 16;
 case 12:
 //C
 this.state = 17;
- //BA.debugLineNum = 1825;BA.debugLine="lblDrivewayBatt.Text = \"Batt: \" & NumberFormat2";
-parent.mostCurrent._lbldrivewaybatt.setText(BA.ObjectToCharSequence("Batt: "+anywheresoftware.b4a.keywords.Common.NumberFormat2((_battery_voltage/(double)100),(int) (0),(int) (2),(int) (2),anywheresoftware.b4a.keywords.Common.False)+"V "+parent._drivewaybattstatus));
+ //BA.debugLineNum = 1825;BA.debugLine="lblDrivewayBatt.Text = NumberFormat2((battery_v";
+parent.mostCurrent._lbldrivewaybatt.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.NumberFormat2((_battery_voltage/(double)100),(int) (0),(int) (2),(int) (2),anywheresoftware.b4a.keywords.Common.False)+"V "+parent._drivewaybattstatus));
  //BA.debugLineNum = 1826;BA.debugLine="lblDrivewayTimestamp.Text = ConvertDateTime(upd";
 parent.mostCurrent._lbldrivewaytimestamp.setText(BA.ObjectToCharSequence(_convertdatetime(_updated_at)));
  //BA.debugLineNum = 1827;BA.debugLine="lblDriveway.Text = \"Driveway v\" & fw_version &";
 parent.mostCurrent._lbldriveway.setText(BA.ObjectToCharSequence("Driveway v"+_fw_version+" "+parent._drivewayarmedstatus));
- //BA.debugLineNum = 1828;BA.debugLine="lblDrivewayWifi.Text = \" |  \" & wifi_strength &";
-parent.mostCurrent._lbldrivewaywifi.setText(BA.ObjectToCharSequence(" |  "+BA.NumberToString(_wifi_strength)+"dBm - "+_checklfrlevel(_wifi_strength)+"  | "));
+ //BA.debugLineNum = 1828;BA.debugLine="lblDrivewayWifi.Text = \" |  \" & temperature & \"";
+parent.mostCurrent._lbldrivewaywifi.setText(BA.ObjectToCharSequence(" |  "+_temperature+"°F  |  "+BA.NumberToString(_wifi_strength)+"dBm - "+_checklfrlevel(_wifi_strength)+"  | "));
  if (true) break;
 
 case 14:
 //C
 this.state = 17;
- //BA.debugLineNum = 1830;BA.debugLine="lblFrontDoorBatt.Text = \"Batt: \" & NumberFormat";
-parent.mostCurrent._lblfrontdoorbatt.setText(BA.ObjectToCharSequence("Batt: "+anywheresoftware.b4a.keywords.Common.NumberFormat2((_battery_voltage/(double)100),(int) (0),(int) (2),(int) (2),anywheresoftware.b4a.keywords.Common.False)+"V "+parent._frontdoorbattstatus));
+ //BA.debugLineNum = 1830;BA.debugLine="lblFrontDoorBatt.Text = NumberFormat2((battery_";
+parent.mostCurrent._lblfrontdoorbatt.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.NumberFormat2((_battery_voltage/(double)100),(int) (0),(int) (2),(int) (2),anywheresoftware.b4a.keywords.Common.False)+"V "+parent._frontdoorbattstatus));
  //BA.debugLineNum = 1831;BA.debugLine="lblFrontDoorTimestamp.Text = ConvertDateTime(up";
 parent.mostCurrent._lblfrontdoortimestamp.setText(BA.ObjectToCharSequence(_convertdatetime(_updated_at)));
  //BA.debugLineNum = 1832;BA.debugLine="lblFrontDoor.Text = \"Front Door v\" & fw_version";
 parent.mostCurrent._lblfrontdoor.setText(BA.ObjectToCharSequence("Front Door v"+_fw_version+" "+parent._frontdoorarmedstatus));
- //BA.debugLineNum = 1833;BA.debugLine="lblFrontDoorWiFi.Text = \" |  \" & wifi_strength";
-parent.mostCurrent._lblfrontdoorwifi.setText(BA.ObjectToCharSequence(" |  "+BA.NumberToString(_wifi_strength)+"dBm - "+_checklfrlevel(_wifi_strength)+"  | "));
+ //BA.debugLineNum = 1833;BA.debugLine="lblFrontDoorWiFi.Text = \" |  \" & temperature &";
+parent.mostCurrent._lblfrontdoorwifi.setText(BA.ObjectToCharSequence(" |  "+_temperature+"°F  |  "+BA.NumberToString(_wifi_strength)+"dBm - "+_checklfrlevel(_wifi_strength)+"  | "));
  if (true) break;
 
 case 16:
 //C
 this.state = 17;
- //BA.debugLineNum = 1835;BA.debugLine="lblSideYardBatt.Text = \"Batt: \" & NumberFormat2";
-parent.mostCurrent._lblsideyardbatt.setText(BA.ObjectToCharSequence("Batt: "+anywheresoftware.b4a.keywords.Common.NumberFormat2((_battery_voltage/(double)100),(int) (0),(int) (2),(int) (2),anywheresoftware.b4a.keywords.Common.False)+"V "+parent._sideyardbattstatus));
+ //BA.debugLineNum = 1835;BA.debugLine="lblSideYardBatt.Text = NumberFormat2((battery_v";
+parent.mostCurrent._lblsideyardbatt.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.NumberFormat2((_battery_voltage/(double)100),(int) (0),(int) (2),(int) (2),anywheresoftware.b4a.keywords.Common.False)+"V "+parent._sideyardbattstatus));
  //BA.debugLineNum = 1836;BA.debugLine="lblSideYardTimestamp.Text = ConvertDateTime(upd";
 parent.mostCurrent._lblsideyardtimestamp.setText(BA.ObjectToCharSequence(_convertdatetime(_updated_at)));
  //BA.debugLineNum = 1837;BA.debugLine="lblSideYard.Text = \"Side Yard v\" & fw_version";
 parent.mostCurrent._lblsideyard.setText(BA.ObjectToCharSequence("Side Yard v"+_fw_version+" "+parent._sideyardarmedstatus));
- //BA.debugLineNum = 1838;BA.debugLine="lblSideYardWiFi.Text = \" |  \" & wifi_strength &";
-parent.mostCurrent._lblsideyardwifi.setText(BA.ObjectToCharSequence(" |  "+BA.NumberToString(_wifi_strength)+"dBm - "+_checklfrlevel(_wifi_strength)+"  | "));
+ //BA.debugLineNum = 1838;BA.debugLine="lblSideYardWiFi.Text = \" |  \" & temperature & \"";
+parent.mostCurrent._lblsideyardwifi.setText(BA.ObjectToCharSequence(" |  "+_temperature+"°F  |  "+BA.NumberToString(_wifi_strength)+"dBm - "+_checklfrlevel(_wifi_strength)+"  | "));
  if (true) break;
 ;
  //BA.debugLineNum = 1840;BA.debugLine="If lblSideYardBatt.Text.Contains(\"OFFLINE\") Then";
@@ -5551,22 +5554,22 @@ this.state = 23;
 case 19:
 //C
 this.state = 24;
- //BA.debugLineNum = 1841;BA.debugLine="lblSideYardBatt.Text = \"Batt: \" & NumberFormat2";
-parent.mostCurrent._lblsideyardbatt.setText(BA.ObjectToCharSequence("Batt: "+anywheresoftware.b4a.keywords.Common.NumberFormat2((_battery_voltage/(double)100),(int) (0),(int) (2),(int) (2),anywheresoftware.b4a.keywords.Common.False)+"V "+parent._sideyardbattstatus));
+ //BA.debugLineNum = 1841;BA.debugLine="lblSideYardBatt.Text = NumberFormat2((battery_v";
+parent.mostCurrent._lblsideyardbatt.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.NumberFormat2((_battery_voltage/(double)100),(int) (0),(int) (2),(int) (2),anywheresoftware.b4a.keywords.Common.False)+"V "+parent._sideyardbattstatus));
  if (true) break;
 
 case 21:
 //C
 this.state = 24;
- //BA.debugLineNum = 1843;BA.debugLine="lblDrivewayBatt.Text = \"Batt: \" & NumberFormat2";
-parent.mostCurrent._lbldrivewaybatt.setText(BA.ObjectToCharSequence("Batt: "+anywheresoftware.b4a.keywords.Common.NumberFormat2((_battery_voltage/(double)100),(int) (0),(int) (2),(int) (2),anywheresoftware.b4a.keywords.Common.False)+"V "+parent._drivewaybattstatus));
+ //BA.debugLineNum = 1843;BA.debugLine="lblDrivewayBatt.Text = NumberFormat2((battery_v";
+parent.mostCurrent._lbldrivewaybatt.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.NumberFormat2((_battery_voltage/(double)100),(int) (0),(int) (2),(int) (2),anywheresoftware.b4a.keywords.Common.False)+"V "+parent._drivewaybattstatus));
  if (true) break;
 
 case 23:
 //C
 this.state = 24;
- //BA.debugLineNum = 1845;BA.debugLine="lblFrontDoorBatt.Text = \"Batt: \" & NumberFormat";
-parent.mostCurrent._lblfrontdoorbatt.setText(BA.ObjectToCharSequence("Batt: "+anywheresoftware.b4a.keywords.Common.NumberFormat2((_battery_voltage/(double)100),(int) (0),(int) (2),(int) (2),anywheresoftware.b4a.keywords.Common.False)+"V "+parent._frontdoorbattstatus));
+ //BA.debugLineNum = 1845;BA.debugLine="lblFrontDoorBatt.Text = NumberFormat2((battery_";
+parent.mostCurrent._lblfrontdoorbatt.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.NumberFormat2((_battery_voltage/(double)100),(int) (0),(int) (2),(int) (2),anywheresoftware.b4a.keywords.Common.False)+"V "+parent._frontdoorbattstatus));
  if (true) break;
 
 case 24:
@@ -5580,7 +5583,7 @@ case 26:
 this.state = 27;
 this.catchState = 0;
  //BA.debugLineNum = 1848;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("33080274",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32687058",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -5712,7 +5715,7 @@ _root = _parser.NextObject();
  //BA.debugLineNum = 1693;BA.debugLine="commandID = root.Get(\"id\")";
 parent._commandid = BA.ObjectToString(_root.Get((Object)("id")));
  //BA.debugLineNum = 1694;BA.debugLine="Log(\"commandID: \" & commandID)";
-anywheresoftware.b4a.keywords.Common.LogImpl("32883604","commandID: "+parent._commandid,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32490388","commandID: "+parent._commandid,0);
  if (true) break;
 
 case 5:
@@ -5720,7 +5723,7 @@ case 5:
 this.state = 6;
 this.catchState = 0;
  //BA.debugLineNum = 1716;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("32883626",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32490410",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -5878,7 +5881,7 @@ case 7:
 //C
 this.state = 18;
  //BA.debugLineNum = 1530;BA.debugLine="Log(\"**** ALRIGHT \" & attempts & \"/\" & attemptsA";
-anywheresoftware.b4a.keywords.Common.LogImpl("32555926","**** ALRIGHT "+_attempts+"/"+_attemptsallowed+" *****",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32162710","**** ALRIGHT "+_attempts+"/"+_attemptsallowed+" *****",0);
  //BA.debugLineNum = 1531;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest-\"";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restget("https://rest-"+parent._userregion+".immedia-semi.com/network/"+parent._networkid+"/camera/"+_camera);
@@ -6030,7 +6033,7 @@ _root = _parser.NextObject();
  //BA.debugLineNum = 1727;BA.debugLine="commandComplete = root.Get(\"complete\")";
 parent._commandcomplete = BA.ObjectToBoolean(_root.Get((Object)("complete")));
  //BA.debugLineNum = 1728;BA.debugLine="Log(\"commandComplete: \" & commandComplete)";
-anywheresoftware.b4a.keywords.Common.LogImpl("32949126","commandComplete: "+BA.ObjectToString(parent._commandcomplete),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32555910","commandComplete: "+BA.ObjectToString(parent._commandcomplete),0);
  if (true) break;
 
 case 5:
@@ -6038,7 +6041,7 @@ case 5:
 this.state = 6;
 this.catchState = 0;
  //BA.debugLineNum = 1730;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("32949128",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32555912",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -6902,7 +6905,7 @@ case 99:
 this.state = 100;
 this.catchState = 0;
  //BA.debugLineNum = 2110;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("33211476",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32818260",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -7002,7 +7005,7 @@ _code = (int)(BA.ObjectToNumber(_root.Get((Object)("code"))));
  //BA.debugLineNum = 1752;BA.debugLine="Dim message As String = root.Get(\"message\")";
 _message = BA.ObjectToString(_root.Get((Object)("message")));
  //BA.debugLineNum = 1753;BA.debugLine="Log(\"Code: \" & code & \" Message: \" & message)";
-anywheresoftware.b4a.keywords.Common.LogImpl("33014673","Code: "+BA.NumberToString(_code)+" Message: "+_message,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32621457","Code: "+BA.NumberToString(_code)+" Message: "+_message,0);
  //BA.debugLineNum = 1754;BA.debugLine="Return \"Code: \" & code & \" Message: \" & messag";
 if (true) return "Code: "+BA.NumberToString(_code)+" Message: "+_message;
  }else {
@@ -7013,7 +7016,7 @@ if (true) return _json;
  } 
        catch (Exception e19) {
 			processBA.setLastException(e19); //BA.debugLineNum = 1760;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("33014680",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32621464",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 1762;BA.debugLine="Return json";
 if (true) return _json;
  };
@@ -7129,7 +7132,7 @@ case 11:
 this.state = 12;
 this.catchState = 0;
  //BA.debugLineNum = 1893;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("33145768",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32752552",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -7192,7 +7195,7 @@ anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,null);return;}
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 2829;BA.debugLine="Try";
+ //BA.debugLineNum = 2830;BA.debugLine="Try";
 if (true) break;
 
 case 1:
@@ -7206,10 +7209,10 @@ case 3:
 //C
 this.state = 4;
 this.catchState = 19;
- //BA.debugLineNum = 2834;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest-\"";
+ //BA.debugLineNum = 2835;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest-\"";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restget("https://rest-"+parent._userregion+".immedia-semi.com/api/v1/accounts/88438/media/changed?since=-999999999-01-01T00:00:00+18:00&page=1");
- //BA.debugLineNum = 2835;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2836;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 21;
 return;
@@ -7218,21 +7221,21 @@ case 21:
 this.state = 4;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2837;BA.debugLine="Dim unwatchedVideoCount As Int = 0";
+ //BA.debugLineNum = 2838;BA.debugLine="Dim unwatchedVideoCount As Int = 0";
 _unwatchedvideocount = (int) (0);
- //BA.debugLineNum = 2838;BA.debugLine="Dim parser As JSONParser";
+ //BA.debugLineNum = 2839;BA.debugLine="Dim parser As JSONParser";
 _parser = new anywheresoftware.b4a.objects.collections.JSONParser();
- //BA.debugLineNum = 2839;BA.debugLine="parser.Initialize(response)";
+ //BA.debugLineNum = 2840;BA.debugLine="parser.Initialize(response)";
 _parser.Initialize(parent._response);
- //BA.debugLineNum = 2840;BA.debugLine="Dim root As Map = parser.NextObject";
+ //BA.debugLineNum = 2841;BA.debugLine="Dim root As Map = parser.NextObject";
 _root = new anywheresoftware.b4a.objects.collections.Map();
 _root = _parser.NextObject();
- //BA.debugLineNum = 2841;BA.debugLine="Dim media As List = root.Get(\"media\")";
+ //BA.debugLineNum = 2842;BA.debugLine="Dim media As List = root.Get(\"media\")";
 _media = new anywheresoftware.b4a.objects.collections.List();
 _media.setObject((java.util.List)(_root.Get((Object)("media"))));
- //BA.debugLineNum = 2843;BA.debugLine="Dim n As Long = DateTime.Now";
+ //BA.debugLineNum = 2844;BA.debugLine="Dim n As Long = DateTime.Now";
 _n = anywheresoftware.b4a.keywords.Common.DateTime.getNow();
- //BA.debugLineNum = 2844;BA.debugLine="For Each colmedia As Map In media";
+ //BA.debugLineNum = 2845;BA.debugLine="For Each colmedia As Map In media";
 if (true) break;
 
 case 4:
@@ -7262,9 +7265,9 @@ if (true) break;
 case 6:
 //C
 this.state = 7;
- //BA.debugLineNum = 2845;BA.debugLine="Dim watched As String = colmedia.Get(\"watched\")";
+ //BA.debugLineNum = 2846;BA.debugLine="Dim watched As String = colmedia.Get(\"watched\")";
 _watched = BA.ObjectToString(_colmedia.Get((Object)("watched")));
- //BA.debugLineNum = 2849;BA.debugLine="If watched = False Then";
+ //BA.debugLineNum = 2850;BA.debugLine="If watched = False Then";
 if (true) break;
 
 case 7:
@@ -7277,7 +7280,7 @@ this.state = 9;
 case 9:
 //C
 this.state = 10;
- //BA.debugLineNum = 2850;BA.debugLine="unwatchedVideoCount = unwatchedVideoCount + 1";
+ //BA.debugLineNum = 2851;BA.debugLine="unwatchedVideoCount = unwatchedVideoCount + 1";
 _unwatchedvideocount = (int) (_unwatchedvideocount+1);
  if (true) break;
 
@@ -7292,18 +7295,18 @@ case 11:
 //C
 this.state = 12;
 ;
- //BA.debugLineNum = 2853;BA.debugLine="Log(\"Loading unwatched videos took: \" & (DateTim";
-anywheresoftware.b4a.keywords.Common.LogImpl("34718617","Loading unwatched videos took: "+BA.NumberToString((anywheresoftware.b4a.keywords.Common.DateTime.getNow()-_n))+"ms",0);
- //BA.debugLineNum = 2854;BA.debugLine="Dim lbl As B4XView = GetAllTabLabelsForBadge(Tab";
+ //BA.debugLineNum = 2854;BA.debugLine="Log(\"Loading unwatched videos took: \" & (DateTim";
+anywheresoftware.b4a.keywords.Common.LogImpl("34325401","Loading unwatched videos took: "+BA.NumberToString((anywheresoftware.b4a.keywords.Common.DateTime.getNow()-_n))+"ms",0);
+ //BA.debugLineNum = 2855;BA.debugLine="Dim lbl As B4XView = GetAllTabLabelsForBadge(Tab";
 _lbl = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _lbl.setObject((java.lang.Object)(_getalltablabelsforbadge(parent.mostCurrent._tabstrip1).Get((int) (5))));
- //BA.debugLineNum = 2855;BA.debugLine="badger1.SetBadge(lbl, unwatchedVideoCount)";
+ //BA.debugLineNum = 2856;BA.debugLine="badger1.SetBadge(lbl, unwatchedVideoCount)";
 parent.mostCurrent._badger1._setbadge /*String*/ (_lbl,_unwatchedvideocount);
- //BA.debugLineNum = 2856;BA.debugLine="StateManager.SetSetting(\"UnwatchedVideoClips\",un";
+ //BA.debugLineNum = 2857;BA.debugLine="StateManager.SetSetting(\"UnwatchedVideoClips\",un";
 parent.mostCurrent._statemanager._setsetting /*String*/ (mostCurrent.activityBA,"UnwatchedVideoClips",BA.NumberToString(_unwatchedvideocount));
- //BA.debugLineNum = 2857;BA.debugLine="StateManager.SaveSettings";
+ //BA.debugLineNum = 2858;BA.debugLine="StateManager.SaveSettings";
 parent.mostCurrent._statemanager._savesettings /*String*/ (mostCurrent.activityBA);
- //BA.debugLineNum = 2858;BA.debugLine="If unwatchedVideoCount > 0 Then";
+ //BA.debugLineNum = 2859;BA.debugLine="If unwatchedVideoCount > 0 Then";
 if (true) break;
 
 case 12:
@@ -7318,14 +7321,14 @@ this.state = 16;
 case 14:
 //C
 this.state = 17;
- //BA.debugLineNum = 2859;BA.debugLine="isThereUnwatchedVideo = True";
+ //BA.debugLineNum = 2860;BA.debugLine="isThereUnwatchedVideo = True";
 parent._isthereunwatchedvideo = anywheresoftware.b4a.keywords.Common.True;
  if (true) break;
 
 case 16:
 //C
 this.state = 17;
- //BA.debugLineNum = 2861;BA.debugLine="isThereUnwatchedVideo = False";
+ //BA.debugLineNum = 2862;BA.debugLine="isThereUnwatchedVideo = False";
 parent._isthereunwatchedvideo = anywheresoftware.b4a.keywords.Common.False;
  if (true) break;
 
@@ -7339,8 +7342,8 @@ case 19:
 //C
 this.state = 20;
 this.catchState = 0;
- //BA.debugLineNum = 2864;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("34718628",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+ //BA.debugLineNum = 2865;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("34325412",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -7349,10 +7352,10 @@ case 20:
 this.state = -1;
 this.catchState = 0;
 ;
- //BA.debugLineNum = 2866;BA.debugLine="Return Null";
+ //BA.debugLineNum = 2867;BA.debugLine="Return Null";
 if (true) {
 anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,anywheresoftware.b4a.keywords.Common.Null);return;};
- //BA.debugLineNum = 2867;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2868;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -7385,7 +7388,7 @@ _appversion = _pm.GetVersionName(_packagename);
  } 
        catch (Exception e8) {
 			processBA.setLastException(e8); //BA.debugLineNum = 711;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("31376264",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("3983048",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 713;BA.debugLine="Return AppVersion";
 if (true) return _appversion;
@@ -7444,7 +7447,7 @@ anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,null);return;}
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 2351;BA.debugLine="Try";
+ //BA.debugLineNum = 2352;BA.debugLine="Try";
 if (true) break;
 
 case 1:
@@ -7458,21 +7461,21 @@ case 3:
 //C
 this.state = 4;
 this.catchState = 30;
- //BA.debugLineNum = 2352;BA.debugLine="Dim parser As JSONParser";
+ //BA.debugLineNum = 2353;BA.debugLine="Dim parser As JSONParser";
 _parser = new anywheresoftware.b4a.objects.collections.JSONParser();
- //BA.debugLineNum = 2353;BA.debugLine="parser.Initialize(json)";
+ //BA.debugLineNum = 2354;BA.debugLine="parser.Initialize(json)";
 _parser.Initialize(_json);
- //BA.debugLineNum = 2354;BA.debugLine="Dim root As Map = parser.NextObject";
+ //BA.debugLineNum = 2355;BA.debugLine="Dim root As Map = parser.NextObject";
 _root = new anywheresoftware.b4a.objects.collections.Map();
 _root = _parser.NextObject();
- //BA.debugLineNum = 2355;BA.debugLine="Dim media As List = root.Get(\"media\")";
+ //BA.debugLineNum = 2356;BA.debugLine="Dim media As List = root.Get(\"media\")";
 _media = new anywheresoftware.b4a.objects.collections.List();
 _media.setObject((java.util.List)(_root.Get((Object)("media"))));
- //BA.debugLineNum = 2357;BA.debugLine="clvActivity.Clear";
+ //BA.debugLineNum = 2358;BA.debugLine="clvActivity.Clear";
 parent.mostCurrent._clvactivity._clear();
- //BA.debugLineNum = 2360;BA.debugLine="Pages = Array(False, False, False, False, False,";
+ //BA.debugLineNum = 2361;BA.debugLine="Pages = Array(False, False, False, False, False,";
 parent._pages = anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)(anywheresoftware.b4a.keywords.Common.False),(Object)(anywheresoftware.b4a.keywords.Common.False),(Object)(anywheresoftware.b4a.keywords.Common.False),(Object)(anywheresoftware.b4a.keywords.Common.False),(Object)(anywheresoftware.b4a.keywords.Common.False),(Object)(anywheresoftware.b4a.keywords.Common.True)});
- //BA.debugLineNum = 2361;BA.debugLine="For Each colmedia As Map In media";
+ //BA.debugLineNum = 2362;BA.debugLine="For Each colmedia As Map In media";
 if (true) break;
 
 case 4:
@@ -7502,23 +7505,23 @@ if (true) break;
 case 6:
 //C
 this.state = 7;
- //BA.debugLineNum = 2362;BA.debugLine="Dim thumbnail As String = colmedia.Get(\"thumbna";
+ //BA.debugLineNum = 2363;BA.debugLine="Dim thumbnail As String = colmedia.Get(\"thumbna";
 _thumbnail = BA.ObjectToString(_colmedia.Get((Object)("thumbnail")));
- //BA.debugLineNum = 2363;BA.debugLine="Dim created_at As String = colmedia.Get(\"create";
+ //BA.debugLineNum = 2364;BA.debugLine="Dim created_at As String = colmedia.Get(\"create";
 _created_at = BA.ObjectToString(_colmedia.Get((Object)("created_at")));
- //BA.debugLineNum = 2364;BA.debugLine="Dim device_name As String = colmedia.Get(\"devic";
+ //BA.debugLineNum = 2365;BA.debugLine="Dim device_name As String = colmedia.Get(\"devic";
 _device_name = BA.ObjectToString(_colmedia.Get((Object)("device_name")));
- //BA.debugLineNum = 2365;BA.debugLine="Dim watched As String = colmedia.Get(\"watched\")";
+ //BA.debugLineNum = 2366;BA.debugLine="Dim watched As String = colmedia.Get(\"watched\")";
 _watched = BA.ObjectToString(_colmedia.Get((Object)("watched")));
- //BA.debugLineNum = 2366;BA.debugLine="Dim medianame As String = colmedia.Get(\"media\")";
+ //BA.debugLineNum = 2367;BA.debugLine="Dim medianame As String = colmedia.Get(\"media\")";
 _medianame = BA.ObjectToString(_colmedia.Get((Object)("media")));
- //BA.debugLineNum = 2367;BA.debugLine="Dim VideoID As String = colmedia.Get(\"id\")";
+ //BA.debugLineNum = 2368;BA.debugLine="Dim VideoID As String = colmedia.Get(\"id\")";
 _videoid = BA.ObjectToString(_colmedia.Get((Object)("id")));
- //BA.debugLineNum = 2368;BA.debugLine="Dim mytypes As Object = Starter.kvs.Get(VideoID";
+ //BA.debugLineNum = 2369;BA.debugLine="Dim mytypes As Object = Starter.kvs.Get(VideoID";
 _mytypes = parent.mostCurrent._starter._kvs /*cloyd.smart.home.monitor.keyvaluestore*/ ._get /*Object*/ (_videoid);
- //BA.debugLineNum = 2369;BA.debugLine="Dim videos = mytypes As VideoInfo";
+ //BA.debugLineNum = 2370;BA.debugLine="Dim videos = mytypes As VideoInfo";
 _videos = (cloyd.smart.home.monitor.main._videoinfo)(_mytypes);
- //BA.debugLineNum = 2370;BA.debugLine="If (videos = Null) Or (watched <> videos.Watche";
+ //BA.debugLineNum = 2371;BA.debugLine="If (videos = Null) Or (watched <> videos.Watche";
 if (true) break;
 
 case 7:
@@ -7531,15 +7534,15 @@ this.state = 9;
 case 9:
 //C
 this.state = 10;
- //BA.debugLineNum = 2371;BA.debugLine="Dim j As HttpJob";
+ //BA.debugLineNum = 2372;BA.debugLine="Dim j As HttpJob";
 _j = new cloyd.smart.home.monitor.httpjob();
- //BA.debugLineNum = 2372;BA.debugLine="j.Initialize(\"\", Me)";
+ //BA.debugLineNum = 2373;BA.debugLine="j.Initialize(\"\", Me)";
 _j._initialize /*String*/ (processBA,"",main.getObject());
- //BA.debugLineNum = 2373;BA.debugLine="j.Download(\"https://rest-\" & userRegion &\".imm";
+ //BA.debugLineNum = 2374;BA.debugLine="j.Download(\"https://rest-\" & userRegion &\".imm";
 _j._download /*String*/ ("https://rest-"+parent._userregion+".immedia-semi.com"+_thumbnail+".jpg");
- //BA.debugLineNum = 2374;BA.debugLine="j.GetRequest.SetHeader(\"TOKEN_AUTH\", authToken";
+ //BA.debugLineNum = 2375;BA.debugLine="j.GetRequest.SetHeader(\"TOKEN_AUTH\", authToken";
 _j._getrequest /*anywheresoftware.b4h.okhttp.OkHttpClientWrapper.OkHttpRequest*/ ().SetHeader("TOKEN_AUTH",parent._authtoken);
- //BA.debugLineNum = 2375;BA.debugLine="Wait For (j) JobDone(j As HttpJob)";
+ //BA.debugLineNum = 2376;BA.debugLine="Wait For (j) JobDone(j As HttpJob)";
 anywheresoftware.b4a.keywords.Common.WaitFor("jobdone", processBA, this, (Object)(_j));
 this.state = 34;
 return;
@@ -7548,7 +7551,7 @@ case 34:
 this.state = 10;
 _j = (cloyd.smart.home.monitor.httpjob) result[0];
 ;
- //BA.debugLineNum = 2376;BA.debugLine="If j.Success Then";
+ //BA.debugLineNum = 2377;BA.debugLine="If j.Success Then";
 if (true) break;
 
 case 10:
@@ -7561,25 +7564,25 @@ this.state = 12;
 case 12:
 //C
 this.state = 13;
- //BA.debugLineNum = 2377;BA.debugLine="Dim out As OutputStream = File.OpenOutput(Fil";
+ //BA.debugLineNum = 2378;BA.debugLine="Dim out As OutputStream = File.OpenOutput(Fil";
 _out = new anywheresoftware.b4a.objects.streams.File.OutputStreamWrapper();
 _out = anywheresoftware.b4a.keywords.Common.File.OpenOutput(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"screenshot.jpg",anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2378;BA.debugLine="File.Copy2(j.GetInputStream, out)";
+ //BA.debugLineNum = 2379;BA.debugLine="File.Copy2(j.GetInputStream, out)";
 anywheresoftware.b4a.keywords.Common.File.Copy2((java.io.InputStream)(_j._getinputstream /*anywheresoftware.b4a.objects.streams.File.InputStreamWrapper*/ ().getObject()),(java.io.OutputStream)(_out.getObject()));
- //BA.debugLineNum = 2379;BA.debugLine="out.Close '<------ very important";
+ //BA.debugLineNum = 2380;BA.debugLine="out.Close '<------ very important";
 _out.Close();
- //BA.debugLineNum = 2380;BA.debugLine="Dim image As B4XBitmap = xui.LoadBitmapResize";
+ //BA.debugLineNum = 2381;BA.debugLine="Dim image As B4XBitmap = xui.LoadBitmapResize";
 _image = new anywheresoftware.b4a.objects.B4XViewWrapper.B4XBitmapWrapper();
 _image = parent.mostCurrent._xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"screenshot.jpg",anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (178)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)),anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 2381;BA.debugLine="Dim out As OutputStream";
+ //BA.debugLineNum = 2382;BA.debugLine="Dim out As OutputStream";
 _out = new anywheresoftware.b4a.objects.streams.File.OutputStreamWrapper();
- //BA.debugLineNum = 2382;BA.debugLine="out.InitializeToBytesArray(0)";
+ //BA.debugLineNum = 2383;BA.debugLine="out.InitializeToBytesArray(0)";
 _out.InitializeToBytesArray((int) (0));
- //BA.debugLineNum = 2383;BA.debugLine="image.WriteToStream(out, 100, \"JPEG\")";
+ //BA.debugLineNum = 2384;BA.debugLine="image.WriteToStream(out, 100, \"JPEG\")";
 _image.WriteToStream((java.io.OutputStream)(_out.getObject()),(int) (100),BA.getEnumFromString(android.graphics.Bitmap.CompressFormat.class,"JPEG"));
- //BA.debugLineNum = 2384;BA.debugLine="Starter.kvs.Put(VideoID, CreateCustomType(med";
+ //BA.debugLineNum = 2385;BA.debugLine="Starter.kvs.Put(VideoID, CreateCustomType(med";
 parent.mostCurrent._starter._kvs /*cloyd.smart.home.monitor.keyvaluestore*/ ._put /*String*/ (_videoid,(Object)(_createcustomtype(_medianame,_created_at,_watched,_device_name,_videoid,_out.ToBytesArray())));
- //BA.debugLineNum = 2385;BA.debugLine="out.Close";
+ //BA.debugLineNum = 2386;BA.debugLine="out.Close";
 _out.Close();
  if (true) break;
 
@@ -7587,7 +7590,7 @@ case 13:
 //C
 this.state = 14;
 ;
- //BA.debugLineNum = 2387;BA.debugLine="j.Release";
+ //BA.debugLineNum = 2388;BA.debugLine="j.Release";
 _j._release /*String*/ ();
  if (true) break;
 
@@ -7602,14 +7605,14 @@ case 15:
 //C
 this.state = 16;
 ;
- //BA.debugLineNum = 2391;BA.debugLine="Dim bmp2 As Bitmap";
+ //BA.debugLineNum = 2392;BA.debugLine="Dim bmp2 As Bitmap";
 _bmp2 = new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper();
- //BA.debugLineNum = 2392;BA.debugLine="clvActivity.Clear";
+ //BA.debugLineNum = 2393;BA.debugLine="clvActivity.Clear";
 parent.mostCurrent._clvactivity._clear();
- //BA.debugLineNum = 2393;BA.debugLine="Dim list1 As List = Starter.kvs.ListKeys";
+ //BA.debugLineNum = 2394;BA.debugLine="Dim list1 As List = Starter.kvs.ListKeys";
 _list1 = new anywheresoftware.b4a.objects.collections.List();
 _list1 = parent.mostCurrent._starter._kvs /*cloyd.smart.home.monitor.keyvaluestore*/ ._listkeys /*anywheresoftware.b4a.objects.collections.List*/ ();
- //BA.debugLineNum = 2394;BA.debugLine="For i =  0 To list1.Size-1";
+ //BA.debugLineNum = 2395;BA.debugLine="For i =  0 To list1.Size-1";
 if (true) break;
 
 case 16:
@@ -7636,7 +7639,7 @@ if (true) break;
 case 18:
 //C
 this.state = 19;
- //BA.debugLineNum = 2398;BA.debugLine="If i > 49 Then";
+ //BA.debugLineNum = 2399;BA.debugLine="If i > 49 Then";
 if (true) break;
 
 case 19:
@@ -7651,43 +7654,43 @@ this.state = 23;
 case 21:
 //C
 this.state = 24;
- //BA.debugLineNum = 2399;BA.debugLine="Starter.kvs.Remove(list1.Get(i))";
+ //BA.debugLineNum = 2400;BA.debugLine="Starter.kvs.Remove(list1.Get(i))";
 parent.mostCurrent._starter._kvs /*cloyd.smart.home.monitor.keyvaluestore*/ ._remove /*String*/ (BA.ObjectToString(_list1.Get(_i)));
  if (true) break;
 
 case 23:
 //C
 this.state = 24;
- //BA.debugLineNum = 2401;BA.debugLine="Dim mytypes As Object = Starter.kvs.Get(list1.";
+ //BA.debugLineNum = 2402;BA.debugLine="Dim mytypes As Object = Starter.kvs.Get(list1.";
 _mytypes = parent.mostCurrent._starter._kvs /*cloyd.smart.home.monitor.keyvaluestore*/ ._get /*Object*/ (BA.ObjectToString(_list1.Get(_i)));
- //BA.debugLineNum = 2402;BA.debugLine="Dim videos = mytypes As VideoInfo";
+ //BA.debugLineNum = 2403;BA.debugLine="Dim videos = mytypes As VideoInfo";
 _videos = (cloyd.smart.home.monitor.main._videoinfo)(_mytypes);
- //BA.debugLineNum = 2403;BA.debugLine="Dim In As InputStream";
+ //BA.debugLineNum = 2404;BA.debugLine="Dim In As InputStream";
 _in = new anywheresoftware.b4a.objects.streams.File.InputStreamWrapper();
- //BA.debugLineNum = 2404;BA.debugLine="In.InitializeFromBytesArray(videos.ThumbnailBL";
+ //BA.debugLineNum = 2405;BA.debugLine="In.InitializeFromBytesArray(videos.ThumbnailBL";
 _in.InitializeFromBytesArray(_videos.ThumbnailBLOB /*byte[]*/ ,(int) (0),_videos.ThumbnailBLOB /*byte[]*/ .length);
- //BA.debugLineNum = 2406;BA.debugLine="bmp2.Initialize2(In)";
+ //BA.debugLineNum = 2407;BA.debugLine="bmp2.Initialize2(In)";
 _bmp2.Initialize2((java.io.InputStream)(_in.getObject()));
- //BA.debugLineNum = 2407;BA.debugLine="Dim cd As CardData";
+ //BA.debugLineNum = 2408;BA.debugLine="Dim cd As CardData";
 _cd = new cloyd.smart.home.monitor.main._carddata();
- //BA.debugLineNum = 2408;BA.debugLine="cd.Initialize";
+ //BA.debugLineNum = 2409;BA.debugLine="cd.Initialize";
 _cd.Initialize();
- //BA.debugLineNum = 2409;BA.debugLine="cd.screenshot = bmp2";
+ //BA.debugLineNum = 2410;BA.debugLine="cd.screenshot = bmp2";
 _cd.screenshot /*anywheresoftware.b4a.objects.B4XViewWrapper.B4XBitmapWrapper*/ .setObject((android.graphics.Bitmap)(_bmp2.getObject()));
- //BA.debugLineNum = 2410;BA.debugLine="cd.filedate = videos.DateCreated";
+ //BA.debugLineNum = 2411;BA.debugLine="cd.filedate = videos.DateCreated";
 _cd.filedate /*String*/  = _videos.DateCreated /*String*/ ;
- //BA.debugLineNum = 2411;BA.debugLine="cd.deviceinfo = videos.DeviceName";
+ //BA.debugLineNum = 2412;BA.debugLine="cd.deviceinfo = videos.DeviceName";
 _cd.deviceinfo /*String*/  = _videos.DeviceName /*String*/ ;
- //BA.debugLineNum = 2412;BA.debugLine="cd.iswatchedvisible = Not(videos.Watched)";
+ //BA.debugLineNum = 2413;BA.debugLine="cd.iswatchedvisible = Not(videos.Watched)";
 _cd.iswatchedvisible /*boolean*/  = anywheresoftware.b4a.keywords.Common.Not(BA.ObjectToBoolean(_videos.Watched /*String*/ ));
- //BA.debugLineNum = 2413;BA.debugLine="cd.mediaURL = \"https://rest-\" & userRegion &\".";
+ //BA.debugLineNum = 2414;BA.debugLine="cd.mediaURL = \"https://rest-\" & userRegion &\".";
 _cd.mediaURL /*String*/  = "https://rest-"+parent._userregion+".immedia-semi.com"+_videos.ThumbnailPath /*String*/ ;
- //BA.debugLineNum = 2414;BA.debugLine="Dim p As B4XView = xui.CreatePanel(\"\")";
+ //BA.debugLineNum = 2415;BA.debugLine="Dim p As B4XView = xui.CreatePanel(\"\")";
 _p = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _p = parent.mostCurrent._xui.CreatePanel(processBA,"");
- //BA.debugLineNum = 2415;BA.debugLine="p.SetLayoutAnimated(0, 0, 0, clvActivity.AsVie";
+ //BA.debugLineNum = 2416;BA.debugLine="p.SetLayoutAnimated(0, 0, 0, clvActivity.AsVie";
 _p.SetLayoutAnimated((int) (0),(int) (0),(int) (0),parent.mostCurrent._clvactivity._asview().getWidth(),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)));
- //BA.debugLineNum = 2416;BA.debugLine="clvActivity.Add(p, cd)";
+ //BA.debugLineNum = 2417;BA.debugLine="clvActivity.Add(p, cd)";
 parent.mostCurrent._clvactivity._add(_p,(Object)(_cd));
  if (true) break;
 
@@ -7698,7 +7701,7 @@ this.state = 36;
  if (true) break;
 if (true) break;
 ;
- //BA.debugLineNum = 2422;BA.debugLine="If list1.Size > 0 Then";
+ //BA.debugLineNum = 2423;BA.debugLine="If list1.Size > 0 Then";
 
 case 25:
 //if
@@ -7710,9 +7713,9 @@ this.state = 27;
 case 27:
 //C
 this.state = 28;
- //BA.debugLineNum = 2423;BA.debugLine="clvActivity.JumpToItem(0)";
+ //BA.debugLineNum = 2424;BA.debugLine="clvActivity.JumpToItem(0)";
 parent.mostCurrent._clvactivity._jumptoitem((int) (0));
- //BA.debugLineNum = 2424;BA.debugLine="Sleep(100)";
+ //BA.debugLineNum = 2425;BA.debugLine="Sleep(100)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (100));
 this.state = 37;
 return;
@@ -7720,9 +7723,9 @@ case 37:
 //C
 this.state = 28;
 ;
- //BA.debugLineNum = 2425;BA.debugLine="clvActivity_ItemClick(0,\"\") '\"https://rest-\" &";
+ //BA.debugLineNum = 2426;BA.debugLine="clvActivity_ItemClick(0,\"\") '\"https://rest-\" &";
 _clvactivity_itemclick((int) (0),(Object)(""));
- //BA.debugLineNum = 2426;BA.debugLine="Sleep(100)";
+ //BA.debugLineNum = 2427;BA.debugLine="Sleep(100)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (100));
 this.state = 38;
 return;
@@ -7742,8 +7745,8 @@ case 30:
 //C
 this.state = 31;
 this.catchState = 0;
- //BA.debugLineNum = 2429;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("33997775",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+ //BA.debugLineNum = 2430;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("33604559",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -7752,14 +7755,14 @@ case 31:
 this.state = -1;
 this.catchState = 0;
 ;
- //BA.debugLineNum = 2431;BA.debugLine="B4XLoadingIndicator4.hide";
+ //BA.debugLineNum = 2432;BA.debugLine="B4XLoadingIndicator4.hide";
 parent.mostCurrent._b4xloadingindicator4._hide /*String*/ ();
- //BA.debugLineNum = 2432;BA.debugLine="Pages = Array(True, True, True, True, True, True)";
+ //BA.debugLineNum = 2433;BA.debugLine="Pages = Array(True, True, True, True, True, True)";
 parent._pages = anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)(anywheresoftware.b4a.keywords.Common.True),(Object)(anywheresoftware.b4a.keywords.Common.True),(Object)(anywheresoftware.b4a.keywords.Common.True),(Object)(anywheresoftware.b4a.keywords.Common.True),(Object)(anywheresoftware.b4a.keywords.Common.True),(Object)(anywheresoftware.b4a.keywords.Common.True)});
- //BA.debugLineNum = 2433;BA.debugLine="Return Null";
+ //BA.debugLineNum = 2434;BA.debugLine="Return Null";
 if (true) {
 anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,anywheresoftware.b4a.keywords.Common.Null);return;};
- //BA.debugLineNum = 2434;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2435;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -7978,10 +7981,10 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 2337;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest-\"";
+ //BA.debugLineNum = 2338;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest-\"";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restget("https://rest-"+parent._userregion+".immedia-semi.com/network/"+parent._networkid+"/camera/347574");
- //BA.debugLineNum = 2338;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2339;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 5;
 return;
@@ -7990,10 +7993,10 @@ case 5:
 this.state = 1;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2340;BA.debugLine="Dim rs As ResumableSub = GetCameraInfo(response,F";
+ //BA.debugLineNum = 2341;BA.debugLine="Dim rs As ResumableSub = GetCameraInfo(response,F";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _getcamerainfo(parent._response,anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2341;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2342;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 6;
 return;
@@ -8002,10 +8005,10 @@ case 6:
 this.state = 1;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2343;BA.debugLine="Dim rs As ResumableSub = DownloadImageFullscreen(";
+ //BA.debugLineNum = 2344;BA.debugLine="Dim rs As ResumableSub = DownloadImageFullscreen(";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _downloadimagefullscreen("https://rest-"+parent._userregion+".immedia-semi.com/"+parent._camerathumbnail+".jpg","347574");
- //BA.debugLineNum = 2344;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2345;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 7;
 return;
@@ -8014,7 +8017,7 @@ case 7:
 this.state = 1;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2345;BA.debugLine="If response.StartsWith(\"ERROR: \") = False Then";
+ //BA.debugLineNum = 2346;BA.debugLine="If response.StartsWith(\"ERROR: \") = False Then";
 if (true) break;
 
 case 1:
@@ -8027,7 +8030,7 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
- //BA.debugLineNum = 2346;BA.debugLine="lblStatus.Text = \"Ready\"";
+ //BA.debugLineNum = 2347;BA.debugLine="lblStatus.Text = \"Ready\"";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("Ready"));
  if (true) break;
 
@@ -8035,7 +8038,7 @@ case 4:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 2348;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2349;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -8065,10 +8068,10 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 2323;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest-\"";
+ //BA.debugLineNum = 2324;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest-\"";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restget("https://rest-"+parent._userregion+".immedia-semi.com/network/"+parent._networkid+"/camera/236967");
- //BA.debugLineNum = 2324;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2325;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 5;
 return;
@@ -8077,10 +8080,10 @@ case 5:
 this.state = 1;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2326;BA.debugLine="Dim rs As ResumableSub = GetCameraInfo(response,F";
+ //BA.debugLineNum = 2327;BA.debugLine="Dim rs As ResumableSub = GetCameraInfo(response,F";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _getcamerainfo(parent._response,anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2327;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2328;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 6;
 return;
@@ -8089,10 +8092,10 @@ case 6:
 this.state = 1;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2329;BA.debugLine="Dim rs As ResumableSub = DownloadImageFullscreen(";
+ //BA.debugLineNum = 2330;BA.debugLine="Dim rs As ResumableSub = DownloadImageFullscreen(";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _downloadimagefullscreen("https://rest-"+parent._userregion+".immedia-semi.com/"+parent._camerathumbnail+".jpg","236967");
- //BA.debugLineNum = 2330;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2331;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 7;
 return;
@@ -8101,7 +8104,7 @@ case 7:
 this.state = 1;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2331;BA.debugLine="If response.StartsWith(\"ERROR: \") = False Then";
+ //BA.debugLineNum = 2332;BA.debugLine="If response.StartsWith(\"ERROR: \") = False Then";
 if (true) break;
 
 case 1:
@@ -8114,7 +8117,7 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
- //BA.debugLineNum = 2332;BA.debugLine="lblStatus.Text = \"Ready\"";
+ //BA.debugLineNum = 2333;BA.debugLine="lblStatus.Text = \"Ready\"";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("Ready"));
  if (true) break;
 
@@ -8122,7 +8125,7 @@ case 4:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 2334;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2335;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -8158,7 +8161,7 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 3214;BA.debugLine="Try";
+ //BA.debugLineNum = 3215;BA.debugLine="Try";
 if (true) break;
 
 case 1:
@@ -8172,15 +8175,15 @@ case 3:
 //C
 this.state = 4;
 this.catchState = 13;
- //BA.debugLineNum = 3215;BA.debugLine="Dim p As Phone";
+ //BA.debugLineNum = 3216;BA.debugLine="Dim p As Phone";
 _p = new anywheresoftware.b4a.phone.Phone();
- //BA.debugLineNum = 3216;BA.debugLine="p.SetMute(3,True)";
+ //BA.debugLineNum = 3217;BA.debugLine="p.SetMute(3,True)";
 _p.SetMute((int) (3),anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3218;BA.debugLine="B4XLoadingIndicator4.Show";
+ //BA.debugLineNum = 3219;BA.debugLine="B4XLoadingIndicator4.Show";
 parent.mostCurrent._b4xloadingindicator4._show /*String*/ ();
- //BA.debugLineNum = 3219;BA.debugLine="wvMedia.LoadUrl(\"\")";
+ //BA.debugLineNum = 3220;BA.debugLine="wvMedia.LoadUrl(\"\")";
 parent.mostCurrent._wvmedia.LoadUrl("");
- //BA.debugLineNum = 3221;BA.debugLine="If previousSelectedIndex > (clvActivity.Size-1)";
+ //BA.debugLineNum = 3222;BA.debugLine="If previousSelectedIndex > (clvActivity.Size-1)";
 if (true) break;
 
 case 4:
@@ -8193,7 +8196,7 @@ this.state = 6;
 case 6:
 //C
 this.state = 7;
- //BA.debugLineNum = 3222;BA.debugLine="previousSelectedIndex = 0";
+ //BA.debugLineNum = 3223;BA.debugLine="previousSelectedIndex = 0";
 parent._previousselectedindex = (int) (0);
  if (true) break;
 
@@ -8201,12 +8204,12 @@ case 7:
 //C
 this.state = 8;
 ;
- //BA.debugLineNum = 3225;BA.debugLine="Dim cd As CardData = clvActivity.GetValue(previo";
+ //BA.debugLineNum = 3226;BA.debugLine="Dim cd As CardData = clvActivity.GetValue(previo";
 _cd = (cloyd.smart.home.monitor.main._carddata)(parent.mostCurrent._clvactivity._getvalue(parent._previousselectedindex));
- //BA.debugLineNum = 3226;BA.debugLine="Dim rs As ResumableSub = ShowVideo(cd.mediaURL)";
+ //BA.debugLineNum = 3227;BA.debugLine="Dim rs As ResumableSub = ShowVideo(cd.mediaURL)";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _showvideo(_cd.mediaURL /*String*/ );
- //BA.debugLineNum = 3227;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3228;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 15;
 return;
@@ -8215,9 +8218,9 @@ case 15:
 this.state = 8;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3229;BA.debugLine="Dim FileName As String = \"media.mp4\"";
+ //BA.debugLineNum = 3230;BA.debugLine="Dim FileName As String = \"media.mp4\"";
 _filename = "media.mp4";
- //BA.debugLineNum = 3230;BA.debugLine="If File.Exists(File.DirInternal, FileName) Then";
+ //BA.debugLineNum = 3231;BA.debugLine="If File.Exists(File.DirInternal, FileName) Then";
 if (true) break;
 
 case 8:
@@ -8230,17 +8233,17 @@ this.state = 10;
 case 10:
 //C
 this.state = 11;
- //BA.debugLineNum = 3231;BA.debugLine="File.Copy(File.DirInternal, FileName, Starter.P";
+ //BA.debugLineNum = 3232;BA.debugLine="File.Copy(File.DirInternal, FileName, Starter.P";
 anywheresoftware.b4a.keywords.Common.File.Copy(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),_filename,parent.mostCurrent._starter._provider /*cloyd.smart.home.monitor.fileprovider*/ ._sharedfolder /*String*/ ,_filename);
- //BA.debugLineNum = 3232;BA.debugLine="Dim in As Intent";
+ //BA.debugLineNum = 3233;BA.debugLine="Dim in As Intent";
 _in = new anywheresoftware.b4a.objects.IntentWrapper();
- //BA.debugLineNum = 3233;BA.debugLine="in.Initialize(in.ACTION_VIEW, \"\")";
+ //BA.debugLineNum = 3234;BA.debugLine="in.Initialize(in.ACTION_VIEW, \"\")";
 _in.Initialize(_in.ACTION_VIEW,"");
- //BA.debugLineNum = 3234;BA.debugLine="Starter.Provider.SetFileUriAsIntentData(in, Fil";
+ //BA.debugLineNum = 3235;BA.debugLine="Starter.Provider.SetFileUriAsIntentData(in, Fil";
 parent.mostCurrent._starter._provider /*cloyd.smart.home.monitor.fileprovider*/ ._setfileuriasintentdata /*String*/ (_in,_filename);
- //BA.debugLineNum = 3236;BA.debugLine="in.SetType(\"video/*\")";
+ //BA.debugLineNum = 3237;BA.debugLine="in.SetType(\"video/*\")";
 _in.SetType("video/*");
- //BA.debugLineNum = 3237;BA.debugLine="StartActivity(in)";
+ //BA.debugLineNum = 3238;BA.debugLine="StartActivity(in)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(_in.getObject()));
  if (true) break;
 
@@ -8254,8 +8257,8 @@ case 13:
 //C
 this.state = 14;
 this.catchState = 0;
- //BA.debugLineNum = 3240;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("35111835",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+ //BA.debugLineNum = 3241;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("34718619",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -8264,9 +8267,9 @@ case 14:
 this.state = -1;
 this.catchState = 0;
 ;
- //BA.debugLineNum = 3242;BA.debugLine="B4XLoadingIndicator4.Hide";
+ //BA.debugLineNum = 3243;BA.debugLine="B4XLoadingIndicator4.Hide";
 parent.mostCurrent._b4xloadingindicator4._hide /*String*/ ();
- //BA.debugLineNum = 3243;BA.debugLine="End Sub";
+ //BA.debugLineNum = 3244;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -8303,10 +8306,10 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 2308;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest-\"";
+ //BA.debugLineNum = 2309;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest-\"";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restget("https://rest-"+parent._userregion+".immedia-semi.com/network/"+parent._networkid+"/camera/458236");
- //BA.debugLineNum = 2309;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2310;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 5;
 return;
@@ -8315,10 +8318,10 @@ case 5:
 this.state = 1;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2311;BA.debugLine="Dim rs As ResumableSub = GetCameraInfo(response,F";
+ //BA.debugLineNum = 2312;BA.debugLine="Dim rs As ResumableSub = GetCameraInfo(response,F";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _getcamerainfo(parent._response,anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2312;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2313;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 6;
 return;
@@ -8327,10 +8330,10 @@ case 6:
 this.state = 1;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2315;BA.debugLine="Dim rs As ResumableSub = DownloadImageFullscreen(";
+ //BA.debugLineNum = 2316;BA.debugLine="Dim rs As ResumableSub = DownloadImageFullscreen(";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _downloadimagefullscreen("https://rest-"+parent._userregion+".immedia-semi.com/"+parent._camerathumbnail+".jpg","458236");
- //BA.debugLineNum = 2316;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 2317;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 7;
 return;
@@ -8339,7 +8342,7 @@ case 7:
 this.state = 1;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 2317;BA.debugLine="If response.StartsWith(\"ERROR: \") = False Then";
+ //BA.debugLineNum = 2318;BA.debugLine="If response.StartsWith(\"ERROR: \") = False Then";
 if (true) break;
 
 case 1:
@@ -8352,7 +8355,7 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
- //BA.debugLineNum = 2318;BA.debugLine="lblStatus.Text = \"Ready\"";
+ //BA.debugLineNum = 2319;BA.debugLine="lblStatus.Text = \"Ready\"";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("Ready"));
  if (true) break;
 
@@ -8360,7 +8363,7 @@ case 4:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 2320;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2321;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -8385,7 +8388,7 @@ _mqtt.Connect2((org.eclipse.paho.client.mqttv3.MqttConnectOptions)(_connopt.getO
  } 
        catch (Exception e8) {
 			processBA.setLastException(e8); //BA.debugLineNum = 458;BA.debugLine="Log(\"MQTT_Connect: \" & LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("3720905","MQTT_Connect: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("3327689","MQTT_Connect: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 460;BA.debugLine="End Sub";
 return "";
@@ -8396,12 +8399,12 @@ public static String  _mqtt_connected(boolean _success) throws Exception{
 try { //BA.debugLineNum = 464;BA.debugLine="If Success = False Then";
 if (_success==anywheresoftware.b4a.keywords.Common.False) { 
  //BA.debugLineNum = 465;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("3786435",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("3393219",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 466;BA.debugLine="MQTT_Connect";
 _mqtt_connect();
  }else {
  //BA.debugLineNum = 468;BA.debugLine="Log(\"Connected to MQTT broker\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("3786438","Connected to MQTT broker",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("3393222","Connected to MQTT broker",0);
  //BA.debugLineNum = 469;BA.debugLine="MQTT.Subscribe(\"TempHumid\", 0)";
 _mqtt.Subscribe("TempHumid",(int) (0));
  //BA.debugLineNum = 470;BA.debugLine="MQTT.Subscribe(\"MQ7\", 0)";
@@ -8416,7 +8419,7 @@ _mqtt.Subscribe("HumidityAddValue",(int) (0));
  } 
        catch (Exception e14) {
 			processBA.setLastException(e14); //BA.debugLineNum = 476;BA.debugLine="Log(\"MQTT_Connected: \" & LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("3786446","MQTT_Connected: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("3393230","MQTT_Connected: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 478;BA.debugLine="End Sub";
 return "";
@@ -8437,13 +8440,13 @@ mostCurrent._gblacmenu.Add((int) (0),(int) (0),BA.ObjectToCharSequence("Show fre
  //BA.debugLineNum = 487;BA.debugLine="gblACMenu.Add(0, 0, \"About\",Null)";
 mostCurrent._gblacmenu.Add((int) (0),(int) (0),BA.ObjectToCharSequence("About"),(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null));
  //BA.debugLineNum = 488;BA.debugLine="Log(\"Disconnected from MQTT broker\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("3851976","Disconnected from MQTT broker",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("3458760","Disconnected from MQTT broker",0);
  //BA.debugLineNum = 489;BA.debugLine="MQTT_Connect";
 _mqtt_connect();
  } 
        catch (Exception e11) {
 			processBA.setLastException(e11); //BA.debugLineNum = 491;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("3851979",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("3458763",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 493;BA.debugLine="End Sub";
 return "";
@@ -8476,7 +8479,7 @@ _checktemphumiditysettingbasement();
  } 
        catch (Exception e16) {
 			processBA.setLastException(e16); //BA.debugLineNum = 512;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("3917521",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("3524305",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 514;BA.debugLine="End Sub";
 return "";
@@ -8484,35 +8487,35 @@ return "";
 public static long  _parseutcstring(String _utc) throws Exception{
 String _df = "";
 long _res = 0L;
- //BA.debugLineNum = 2172;BA.debugLine="Sub ParseUTCstring(utc As String) As Long";
- //BA.debugLineNum = 2173;BA.debugLine="Dim df As String = DateTime.DateFormat";
+ //BA.debugLineNum = 2173;BA.debugLine="Sub ParseUTCstring(utc As String) As Long";
+ //BA.debugLineNum = 2174;BA.debugLine="Dim df As String = DateTime.DateFormat";
 _df = anywheresoftware.b4a.keywords.Common.DateTime.getDateFormat();
- //BA.debugLineNum = 2174;BA.debugLine="Dim res As Long";
+ //BA.debugLineNum = 2175;BA.debugLine="Dim res As Long";
 _res = 0L;
- //BA.debugLineNum = 2175;BA.debugLine="If utc.CharAt(10) = \"T\" Then";
+ //BA.debugLineNum = 2176;BA.debugLine="If utc.CharAt(10) = \"T\" Then";
 if (_utc.charAt((int) (10))==BA.ObjectToChar("T")) { 
- //BA.debugLineNum = 2177;BA.debugLine="If utc.CharAt(19) = \".\" Then utc = utc.SubString";
+ //BA.debugLineNum = 2178;BA.debugLine="If utc.CharAt(19) = \".\" Then utc = utc.SubString";
 if (_utc.charAt((int) (19))==BA.ObjectToChar(".")) { 
 _utc = _utc.substring((int) (0),(int) (19))+"+0000";};
- //BA.debugLineNum = 2178;BA.debugLine="DateTime.DateFormat = \"yyyy-MM-dd'T'HH:mm:ssZ\"";
+ //BA.debugLineNum = 2179;BA.debugLine="DateTime.DateFormat = \"yyyy-MM-dd'T'HH:mm:ssZ\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
  }else {
- //BA.debugLineNum = 2181;BA.debugLine="DateTime.DateFormat = \"EEE MMM dd HH:mm:ss Z yyy";
+ //BA.debugLineNum = 2182;BA.debugLine="DateTime.DateFormat = \"EEE MMM dd HH:mm:ss Z yyy";
 anywheresoftware.b4a.keywords.Common.DateTime.setDateFormat("EEE MMM dd HH:mm:ss Z yyyy");
  };
- //BA.debugLineNum = 2183;BA.debugLine="Try";
-try { //BA.debugLineNum = 2184;BA.debugLine="res = DateTime.DateParse(utc)";
+ //BA.debugLineNum = 2184;BA.debugLine="Try";
+try { //BA.debugLineNum = 2185;BA.debugLine="res = DateTime.DateParse(utc)";
 _res = anywheresoftware.b4a.keywords.Common.DateTime.DateParse(_utc);
  } 
        catch (Exception e12) {
-			processBA.setLastException(e12); //BA.debugLineNum = 2186;BA.debugLine="res = 0";
+			processBA.setLastException(e12); //BA.debugLineNum = 2187;BA.debugLine="res = 0";
 _res = (long) (0);
  };
- //BA.debugLineNum = 2188;BA.debugLine="DateTime.DateFormat = df";
+ //BA.debugLineNum = 2189;BA.debugLine="DateTime.DateFormat = df";
 anywheresoftware.b4a.keywords.Common.DateTime.setDateFormat(_df);
- //BA.debugLineNum = 2189;BA.debugLine="Return res";
+ //BA.debugLineNum = 2190;BA.debugLine="Return res";
 if (true) return _res;
- //BA.debugLineNum = 2190;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2191;BA.debugLine="End Sub";
 return 0L;
 }
 
@@ -9301,7 +9304,7 @@ this.state = 66;
  //BA.debugLineNum = 1428;BA.debugLine="reChecked = True";
 _rechecked = anywheresoftware.b4a.keywords.Common.True;
  //BA.debugLineNum = 1429;BA.debugLine="Log(\"*********** HERE *********** i = \" &";
-anywheresoftware.b4a.keywords.Common.LogImpl("32490525","*********** HERE *********** i = "+BA.NumberToString(_i),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32097309","*********** HERE *********** i = "+BA.NumberToString(_i),0);
  //BA.debugLineNum = 1430;BA.debugLine="Dim rs As ResumableSub = RESTPost(\"https:/";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restpost("https://rest-"+parent._userregion+".immedia-semi.com/network/"+parent._networkid+"/camera/"+_camera+"/thumbnail");
@@ -9364,7 +9367,7 @@ case 71:
 this.state = 72;
 ;
  //BA.debugLineNum = 1447;BA.debugLine="Log(\"*********** HERE TWO ***********\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("32490543","*********** HERE TWO ***********",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32097327","*********** HERE TWO ***********",0);
  //BA.debugLineNum = 1448;BA.debugLine="Dim rs As ResumableSub = GetCommandID(resp";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _getcommandid(parent._response);
@@ -9524,7 +9527,7 @@ case 94:
 this.state = 95;
 this.catchState = 0;
  //BA.debugLineNum = 1484;BA.debugLine="Log(\"RefreshCamera LastException: \" & LastExcept";
-anywheresoftware.b4a.keywords.Common.LogImpl("32490580","RefreshCamera LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32097364","RefreshCamera LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -9743,7 +9746,7 @@ this.state = 15;
  //BA.debugLineNum = 1260;BA.debugLine="lblStatus.Text = GetRESTError(jobLogin.ErrorMes";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence(_getresterror(_joblogin._errormessage /*String*/ )));
  //BA.debugLineNum = 1261;BA.debugLine="Log(\"RequestAuthToken error: \" & jobLogin.Error";
-anywheresoftware.b4a.keywords.Common.LogImpl("32424867","RequestAuthToken error: "+_joblogin._errormessage /*String*/ ,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32031651","RequestAuthToken error: "+_joblogin._errormessage /*String*/ ,0);
  //BA.debugLineNum = 1262;BA.debugLine="jobLogin.Release";
 _joblogin._release /*String*/ ();
  //BA.debugLineNum = 1263;BA.debugLine="Return Null";
@@ -9764,7 +9767,7 @@ case 17:
 this.state = 18;
 this.catchState = 0;
  //BA.debugLineNum = 1267;BA.debugLine="Log(\"RequestAuthToken LastException: \" & LastExc";
-anywheresoftware.b4a.keywords.Common.LogImpl("32424873","RequestAuthToken LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32031657","RequestAuthToken LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -9909,7 +9912,7 @@ this.catchState = 0;
  //BA.debugLineNum = 1571;BA.debugLine="response = \"ERROR: \" & LastException";
 parent._response = "ERROR: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA));
  //BA.debugLineNum = 1572;BA.debugLine="Log(\"RESTDownload LastException: \" & LastExcepti";
-anywheresoftware.b4a.keywords.Common.LogImpl("32621460","RESTDownload LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32228244","RESTDownload LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -9919,9 +9922,9 @@ this.state = -1;
 this.catchState = 0;
 ;
  //BA.debugLineNum = 1574;BA.debugLine="Log(\"URL: \" & url)";
-anywheresoftware.b4a.keywords.Common.LogImpl("32621462","URL: "+_url,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32228246","URL: "+_url,0);
  //BA.debugLineNum = 1575;BA.debugLine="Log(\"Response: \" & response)";
-anywheresoftware.b4a.keywords.Common.LogImpl("32621463","Response: "+parent._response,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32228247","Response: "+parent._response,0);
  //BA.debugLineNum = 1576;BA.debugLine="Return(response)";
 if (true) {
 anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,(Object)((parent._response)));return;};
@@ -10060,7 +10063,7 @@ this.catchState = 0;
  //BA.debugLineNum = 1599;BA.debugLine="response = \"ERROR: \" & LastException";
 parent._response = "ERROR: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA));
  //BA.debugLineNum = 1600;BA.debugLine="Log(\"RESTPost LastException: \" & LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("32686997","RESTPost LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32293781","RESTPost LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -10070,9 +10073,9 @@ this.state = -1;
 this.catchState = 0;
 ;
  //BA.debugLineNum = 1602;BA.debugLine="Log(\"URL: \" & url)";
-anywheresoftware.b4a.keywords.Common.LogImpl("32686999","URL: "+_url,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32293783","URL: "+_url,0);
  //BA.debugLineNum = 1603;BA.debugLine="Log(\"Response: \" & response)";
-anywheresoftware.b4a.keywords.Common.LogImpl("32687000","Response: "+parent._response,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32293784","Response: "+parent._response,0);
  //BA.debugLineNum = 1604;BA.debugLine="Return(response)";
 if (true) {
 anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,(Object)((parent._response)));return;};
@@ -10092,10 +10095,10 @@ processBA.setLastException(e0);}
 }
 public static String  _setavg(b4a.example.bitmapcreator _bcbitmap,int _x,int _y,b4a.example.bitmapcreator._argbcolor[] _clrs,b4a.example.bitmapcreator._argbcolor _temp) throws Exception{
 b4a.example.bitmapcreator._argbcolor _c = null;
- //BA.debugLineNum = 2287;BA.debugLine="Private Sub SetAvg(bcBitmap As BitmapCreator, x As";
- //BA.debugLineNum = 2288;BA.debugLine="temp.Initialize";
+ //BA.debugLineNum = 2288;BA.debugLine="Private Sub SetAvg(bcBitmap As BitmapCreator, x As";
+ //BA.debugLineNum = 2289;BA.debugLine="temp.Initialize";
 _temp.Initialize();
- //BA.debugLineNum = 2289;BA.debugLine="For Each c As ARGBColor In clrs";
+ //BA.debugLineNum = 2290;BA.debugLine="For Each c As ARGBColor In clrs";
 {
 final b4a.example.bitmapcreator._argbcolor[] group2 = _clrs;
 final int groupLen2 = group2.length
@@ -10103,25 +10106,25 @@ final int groupLen2 = group2.length
 ;
 for (; index2 < groupLen2;index2++){
 _c = group2[index2];
- //BA.debugLineNum = 2290;BA.debugLine="temp.r = temp.r + c.r";
+ //BA.debugLineNum = 2291;BA.debugLine="temp.r = temp.r + c.r";
 _temp.r = (int) (_temp.r+_c.r);
- //BA.debugLineNum = 2291;BA.debugLine="temp.g = temp.g + c.g";
+ //BA.debugLineNum = 2292;BA.debugLine="temp.g = temp.g + c.g";
 _temp.g = (int) (_temp.g+_c.g);
- //BA.debugLineNum = 2292;BA.debugLine="temp.b = temp.b + c.b";
+ //BA.debugLineNum = 2293;BA.debugLine="temp.b = temp.b + c.b";
 _temp.b = (int) (_temp.b+_c.b);
  }
 };
- //BA.debugLineNum = 2294;BA.debugLine="temp.a = 255";
+ //BA.debugLineNum = 2295;BA.debugLine="temp.a = 255";
 _temp.a = (int) (255);
- //BA.debugLineNum = 2295;BA.debugLine="temp.r = temp.r / clrs.Length";
+ //BA.debugLineNum = 2296;BA.debugLine="temp.r = temp.r / clrs.Length";
 _temp.r = (int) (_temp.r/(double)_clrs.length);
- //BA.debugLineNum = 2296;BA.debugLine="temp.g = temp.g / clrs.Length";
+ //BA.debugLineNum = 2297;BA.debugLine="temp.g = temp.g / clrs.Length";
 _temp.g = (int) (_temp.g/(double)_clrs.length);
- //BA.debugLineNum = 2297;BA.debugLine="temp.b = temp.b / clrs.Length";
+ //BA.debugLineNum = 2298;BA.debugLine="temp.b = temp.b / clrs.Length";
 _temp.b = (int) (_temp.b/(double)_clrs.length);
- //BA.debugLineNum = 2298;BA.debugLine="bcBitmap.SetARGB(x, y, temp)";
+ //BA.debugLineNum = 2299;BA.debugLine="bcBitmap.SetARGB(x, y, temp)";
 _bcbitmap._setargb(_x,_y,_temp);
- //BA.debugLineNum = 2299;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2300;BA.debugLine="End Sub";
 return "";
 }
 public static String  _setdefaults() throws Exception{
@@ -10144,17 +10147,17 @@ anywheresoftware.b4j.object.JavaObject _jo = null;
 float _radius = 0f;
 float _dx = 0f;
 float _dy = 0f;
- //BA.debugLineNum = 2301;BA.debugLine="Sub SetTextShadow(lbl As Label)";
- //BA.debugLineNum = 2302;BA.debugLine="Dim jo As JavaObject = lbl";
+ //BA.debugLineNum = 2302;BA.debugLine="Sub SetTextShadow(lbl As Label)";
+ //BA.debugLineNum = 2303;BA.debugLine="Dim jo As JavaObject = lbl";
 _jo = new anywheresoftware.b4j.object.JavaObject();
 _jo.setObject((java.lang.Object)(_lbl.getObject()));
- //BA.debugLineNum = 2303;BA.debugLine="Dim radius = 2dip, dx = 0dip, dy = 0dip As Float";
+ //BA.debugLineNum = 2304;BA.debugLine="Dim radius = 2dip, dx = 0dip, dy = 0dip As Float";
 _radius = (float) (anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (2)));
 _dx = (float) (anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (0)));
 _dy = (float) (anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (0)));
- //BA.debugLineNum = 2304;BA.debugLine="jo.RunMethod(\"setShadowLayer\", Array(radius, dx,";
+ //BA.debugLineNum = 2305;BA.debugLine="jo.RunMethod(\"setShadowLayer\", Array(radius, dx,";
 _jo.RunMethod("setShadowLayer",new Object[]{(Object)(_radius),(Object)(_dx),(Object)(_dy),(Object)(anywheresoftware.b4a.keywords.Common.Colors.Black)});
- //BA.debugLineNum = 2305;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2306;BA.debugLine="End Sub";
 return "";
 }
 public static String  _showaboutmenu() throws Exception{
@@ -10166,11 +10169,11 @@ _bd = new anywheresoftware.b4a.objects.drawable.BitmapDrawable();
  //BA.debugLineNum = 696;BA.debugLine="bd.Initialize(LoadBitmapResize(File.DirAssets, \"";
 _bd.Initialize((android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"cloyd.png",anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (32)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (32)),anywheresoftware.b4a.keywords.Common.True).getObject()));
  //BA.debugLineNum = 697;BA.debugLine="Msgbox2(\"Smart Home Monitor v\" & GetVersionCode";
-anywheresoftware.b4a.keywords.Common.Msgbox2(BA.ObjectToCharSequence("Smart Home Monitor v"+_getversioncode()+anywheresoftware.b4a.keywords.Common.CRLF+anywheresoftware.b4a.keywords.Common.CRLF+"Developed by: Cloyd Nino Catanaoan"+anywheresoftware.b4a.keywords.Common.CRLF+"Compiled on: April 10, 2020"),BA.ObjectToCharSequence("About"),"OK","","",_bd.getBitmap(),mostCurrent.activityBA);
+anywheresoftware.b4a.keywords.Common.Msgbox2(BA.ObjectToCharSequence("Smart Home Monitor v"+_getversioncode()+anywheresoftware.b4a.keywords.Common.CRLF+anywheresoftware.b4a.keywords.Common.CRLF+"Developed by: Cloyd Nino Catanaoan"+anywheresoftware.b4a.keywords.Common.CRLF+"Compiled on: April 13, 2020"),BA.ObjectToCharSequence("About"),"OK","","",_bd.getBitmap(),mostCurrent.activityBA);
  } 
        catch (Exception e6) {
 			processBA.setLastException(e6); //BA.debugLineNum = 699;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("31310726",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("3917510",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 701;BA.debugLine="End Sub";
 return "";
@@ -10218,7 +10221,7 @@ anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,null);return;}
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 2730;BA.debugLine="Try";
+ //BA.debugLineNum = 2731;BA.debugLine="Try";
 if (true) break;
 
 case 1:
@@ -10232,15 +10235,15 @@ case 3:
 //C
 this.state = 4;
 this.catchState = 22;
- //BA.debugLineNum = 2731;BA.debugLine="Dim j As HttpJob";
+ //BA.debugLineNum = 2732;BA.debugLine="Dim j As HttpJob";
 _j = new cloyd.smart.home.monitor.httpjob();
- //BA.debugLineNum = 2732;BA.debugLine="j.Initialize(\"\", Me)";
+ //BA.debugLineNum = 2733;BA.debugLine="j.Initialize(\"\", Me)";
 _j._initialize /*String*/ (processBA,"",main.getObject());
- //BA.debugLineNum = 2733;BA.debugLine="j.Download(Link)";
+ //BA.debugLineNum = 2734;BA.debugLine="j.Download(Link)";
 _j._download /*String*/ (_link);
- //BA.debugLineNum = 2734;BA.debugLine="j.GetRequest.SetHeader(\"TOKEN_AUTH\", authToken)";
+ //BA.debugLineNum = 2735;BA.debugLine="j.GetRequest.SetHeader(\"TOKEN_AUTH\", authToken)";
 _j._getrequest /*anywheresoftware.b4h.okhttp.OkHttpClientWrapper.OkHttpRequest*/ ().SetHeader("TOKEN_AUTH",parent._authtoken);
- //BA.debugLineNum = 2735;BA.debugLine="Wait For (j) JobDone(j As HttpJob)";
+ //BA.debugLineNum = 2736;BA.debugLine="Wait For (j) JobDone(j As HttpJob)";
 anywheresoftware.b4a.keywords.Common.WaitFor("jobdone", processBA, this, (Object)(_j));
 this.state = 37;
 return;
@@ -10249,9 +10252,9 @@ case 37:
 this.state = 4;
 _j = (cloyd.smart.home.monitor.httpjob) result[0];
 ;
- //BA.debugLineNum = 2736;BA.debugLine="B4XLoadingIndicator4.hide";
+ //BA.debugLineNum = 2737;BA.debugLine="B4XLoadingIndicator4.hide";
 parent.mostCurrent._b4xloadingindicator4._hide /*String*/ ();
- //BA.debugLineNum = 2737;BA.debugLine="If j.Success Then";
+ //BA.debugLineNum = 2738;BA.debugLine="If j.Success Then";
 if (true) break;
 
 case 4:
@@ -10266,46 +10269,46 @@ this.state = 8;
 case 6:
 //C
 this.state = 9;
- //BA.debugLineNum = 2739;BA.debugLine="Dim out As OutputStream = File.OpenOutput(File.";
+ //BA.debugLineNum = 2740;BA.debugLine="Dim out As OutputStream = File.OpenOutput(File.";
 _out = new anywheresoftware.b4a.objects.streams.File.OutputStreamWrapper();
 _out = anywheresoftware.b4a.keywords.Common.File.OpenOutput(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"media.mp4",anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2740;BA.debugLine="File.Copy2(j.GetInputStream, out)";
+ //BA.debugLineNum = 2741;BA.debugLine="File.Copy2(j.GetInputStream, out)";
 anywheresoftware.b4a.keywords.Common.File.Copy2((java.io.InputStream)(_j._getinputstream /*anywheresoftware.b4a.objects.streams.File.InputStreamWrapper*/ ().getObject()),(java.io.OutputStream)(_out.getObject()));
- //BA.debugLineNum = 2741;BA.debugLine="out.Close '<------ very important";
+ //BA.debugLineNum = 2742;BA.debugLine="out.Close '<------ very important";
 _out.Close();
- //BA.debugLineNum = 2743;BA.debugLine="Dim sb As StringBuilder";
+ //BA.debugLineNum = 2744;BA.debugLine="Dim sb As StringBuilder";
 _sb = new anywheresoftware.b4a.keywords.StringBuilderWrapper();
- //BA.debugLineNum = 2744;BA.debugLine="sb.Initialize";
+ //BA.debugLineNum = 2745;BA.debugLine="sb.Initialize";
 _sb.Initialize();
- //BA.debugLineNum = 2745;BA.debugLine="sb.Append(\"<video width='100%' height='100%' co";
+ //BA.debugLineNum = 2746;BA.debugLine="sb.Append(\"<video width='100%' height='100%' co";
 _sb.Append("<video width='100%' height='100%' controls autoplay muted>");
- //BA.debugLineNum = 2746;BA.debugLine="sb.Append(\"<source src='\" & File.Combine(File.D";
+ //BA.debugLineNum = 2747;BA.debugLine="sb.Append(\"<source src='\" & File.Combine(File.D";
 _sb.Append("<source src='"+anywheresoftware.b4a.keywords.Common.File.Combine(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"\\media.mp4")+"' Type='video/mp4'/>");
- //BA.debugLineNum = 2747;BA.debugLine="sb.Append(\"</video>\")";
+ //BA.debugLineNum = 2748;BA.debugLine="sb.Append(\"</video>\")";
 _sb.Append("</video>");
- //BA.debugLineNum = 2748;BA.debugLine="Dim WebViewSettings1 As WebViewSettings";
+ //BA.debugLineNum = 2749;BA.debugLine="Dim WebViewSettings1 As WebViewSettings";
 parent.mostCurrent._webviewsettings1 = new uk.co.martinpearman.b4a.webviewsettings.WebViewSettings();
- //BA.debugLineNum = 2749;BA.debugLine="WebViewSettings1.setMediaPlaybackRequiresUserGe";
+ //BA.debugLineNum = 2750;BA.debugLine="WebViewSettings1.setMediaPlaybackRequiresUserGe";
 parent.mostCurrent._webviewsettings1.setMediaPlaybackRequiresUserGesture((android.webkit.WebView)(parent.mostCurrent._wvmedia.getObject()),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2750;BA.debugLine="wvMedia.LoadHtml(sb.ToString)";
+ //BA.debugLineNum = 2751;BA.debugLine="wvMedia.LoadHtml(sb.ToString)";
 parent.mostCurrent._wvmedia.LoadHtml(_sb.ToString());
- //BA.debugLineNum = 2752;BA.debugLine="Dim r As Reflector";
+ //BA.debugLineNum = 2753;BA.debugLine="Dim r As Reflector";
 _r = new anywheresoftware.b4a.agraham.reflection.Reflection();
- //BA.debugLineNum = 2753;BA.debugLine="r.Target = wvMedia";
+ //BA.debugLineNum = 2754;BA.debugLine="r.Target = wvMedia";
 _r.Target = (Object)(parent.mostCurrent._wvmedia.getObject());
- //BA.debugLineNum = 2754;BA.debugLine="r.Target = r.RunMethod(\"getSettings\")";
+ //BA.debugLineNum = 2755;BA.debugLine="r.Target = r.RunMethod(\"getSettings\")";
 _r.Target = _r.RunMethod("getSettings");
- //BA.debugLineNum = 2755;BA.debugLine="r.RunMethod2(\"setBuiltInZoomControls\", True, \"j";
+ //BA.debugLineNum = 2756;BA.debugLine="r.RunMethod2(\"setBuiltInZoomControls\", True, \"j";
 _r.RunMethod2("setBuiltInZoomControls",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.True),"java.lang.boolean");
- //BA.debugLineNum = 2756;BA.debugLine="r.RunMethod2(\"setDisplayZoomControls\", False, \"";
+ //BA.debugLineNum = 2757;BA.debugLine="r.RunMethod2(\"setDisplayZoomControls\", False, \"";
 _r.RunMethod2("setDisplayZoomControls",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.False),"java.lang.boolean");
- //BA.debugLineNum = 2758;BA.debugLine="mediaMetaData.Initialize";
+ //BA.debugLineNum = 2759;BA.debugLine="mediaMetaData.Initialize";
 parent._mediametadata._initialize /*String*/ (processBA);
- //BA.debugLineNum = 2759;BA.debugLine="mediaMetaData.ProcessMediaFile(File.DirInternal";
+ //BA.debugLineNum = 2760;BA.debugLine="mediaMetaData.ProcessMediaFile(File.DirInternal";
 parent._mediametadata._processmediafile /*boolean*/ (anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"media.mp4");
- //BA.debugLineNum = 2760;BA.debugLine="Dim ticks As Long = (mediaMetaData.GetDuration/";
+ //BA.debugLineNum = 2761;BA.debugLine="Dim ticks As Long = (mediaMetaData.GetDuration/";
 _ticks = (long) (((double)(Double.parseDouble(parent._mediametadata._getduration /*String*/ ()))/(double)1000)*anywheresoftware.b4a.keywords.Common.DateTime.TicksPerSecond);
- //BA.debugLineNum = 2761;BA.debugLine="lblDuration.Text = ConvertTicksToTimeString(tic";
+ //BA.debugLineNum = 2762;BA.debugLine="lblDuration.Text = ConvertTicksToTimeString(tic";
 parent.mostCurrent._lblduration.setText(BA.ObjectToCharSequence(_converttickstotimestring(_ticks)));
  if (true) break;
 
@@ -10314,7 +10317,7 @@ case 8:
 this.state = 9;
  if (true) break;
 ;
- //BA.debugLineNum = 2765;BA.debugLine="If j.ErrorMessage.Contains(\"Media not found\") Th";
+ //BA.debugLineNum = 2766;BA.debugLine="If j.ErrorMessage.Contains(\"Media not found\") Th";
 
 case 9:
 //if
@@ -10326,12 +10329,12 @@ this.state = 11;
 case 11:
 //C
 this.state = 12;
- //BA.debugLineNum = 2766;BA.debugLine="clvActivity.RemoveAt(previousSelectedIndex)";
+ //BA.debugLineNum = 2767;BA.debugLine="clvActivity.RemoveAt(previousSelectedIndex)";
 parent.mostCurrent._clvactivity._removeat(parent._previousselectedindex);
- //BA.debugLineNum = 2767;BA.debugLine="Dim list1 As List = Starter.kvs.ListKeys";
+ //BA.debugLineNum = 2768;BA.debugLine="Dim list1 As List = Starter.kvs.ListKeys";
 _list1 = new anywheresoftware.b4a.objects.collections.List();
 _list1 = parent.mostCurrent._starter._kvs /*cloyd.smart.home.monitor.keyvaluestore*/ ._listkeys /*anywheresoftware.b4a.objects.collections.List*/ ();
- //BA.debugLineNum = 2768;BA.debugLine="For i =  0 To list1.Size-1";
+ //BA.debugLineNum = 2769;BA.debugLine="For i =  0 To list1.Size-1";
 if (true) break;
 
 case 12:
@@ -10358,11 +10361,11 @@ if (true) break;
 case 14:
 //C
 this.state = 15;
- //BA.debugLineNum = 2769;BA.debugLine="Dim mytypes As Object = Starter.kvs.Get(list1.";
+ //BA.debugLineNum = 2770;BA.debugLine="Dim mytypes As Object = Starter.kvs.Get(list1.";
 _mytypes = parent.mostCurrent._starter._kvs /*cloyd.smart.home.monitor.keyvaluestore*/ ._get /*Object*/ (BA.ObjectToString(_list1.Get(_i)));
- //BA.debugLineNum = 2770;BA.debugLine="Dim videos = mytypes As VideoInfo";
+ //BA.debugLineNum = 2771;BA.debugLine="Dim videos = mytypes As VideoInfo";
 _videos = (cloyd.smart.home.monitor.main._videoinfo)(_mytypes);
- //BA.debugLineNum = 2771;BA.debugLine="If Link.Contains(videos.VideoID) Then";
+ //BA.debugLineNum = 2772;BA.debugLine="If Link.Contains(videos.VideoID) Then";
 if (true) break;
 
 case 15:
@@ -10375,9 +10378,9 @@ this.state = 17;
 case 17:
 //C
 this.state = 18;
- //BA.debugLineNum = 2772;BA.debugLine="Starter.kvs.Remove(list1.Get(i))";
+ //BA.debugLineNum = 2773;BA.debugLine="Starter.kvs.Remove(list1.Get(i))";
 parent.mostCurrent._starter._kvs /*cloyd.smart.home.monitor.keyvaluestore*/ ._remove /*String*/ (BA.ObjectToString(_list1.Get(_i)));
- //BA.debugLineNum = 2773;BA.debugLine="Exit";
+ //BA.debugLineNum = 2774;BA.debugLine="Exit";
 this.state = 19;
 if (true) break;
  if (true) break;
@@ -10393,7 +10396,7 @@ case 19:
 //C
 this.state = 20;
 ;
- //BA.debugLineNum = 2776;BA.debugLine="ToastMessageShow(\"Media not found. Removed from";
+ //BA.debugLineNum = 2777;BA.debugLine="ToastMessageShow(\"Media not found. Removed from";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Media not found. Removed from the list."),anywheresoftware.b4a.keywords.Common.True);
  if (true) break;
 
@@ -10401,15 +10404,15 @@ case 20:
 //C
 this.state = 23;
 ;
- //BA.debugLineNum = 2778;BA.debugLine="j.Release";
+ //BA.debugLineNum = 2779;BA.debugLine="j.Release";
 _j._release /*String*/ ();
- //BA.debugLineNum = 2781;BA.debugLine="Dim Intent1 As Intent";
+ //BA.debugLineNum = 2782;BA.debugLine="Dim Intent1 As Intent";
 _intent1 = new anywheresoftware.b4a.objects.IntentWrapper();
- //BA.debugLineNum = 2782;BA.debugLine="Intent1.Initialize(\"blink.noti.clear\", \"\")";
+ //BA.debugLineNum = 2783;BA.debugLine="Intent1.Initialize(\"blink.noti.clear\", \"\")";
 _intent1.Initialize("blink.noti.clear","");
- //BA.debugLineNum = 2783;BA.debugLine="Dim Phone As Phone";
+ //BA.debugLineNum = 2784;BA.debugLine="Dim Phone As Phone";
 _phone = new anywheresoftware.b4a.phone.Phone();
- //BA.debugLineNum = 2784;BA.debugLine="Phone.SendBroadcastIntent(Intent1)";
+ //BA.debugLineNum = 2785;BA.debugLine="Phone.SendBroadcastIntent(Intent1)";
 _phone.SendBroadcastIntent((android.content.Intent)(_intent1.getObject()));
  if (true) break;
 
@@ -10417,12 +10420,12 @@ case 22:
 //C
 this.state = 23;
 this.catchState = 0;
- //BA.debugLineNum = 2786;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("34522041",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+ //BA.debugLineNum = 2787;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("34128825",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 ;
- //BA.debugLineNum = 2789;BA.debugLine="Try";
+ //BA.debugLineNum = 2790;BA.debugLine="Try";
 
 case 23:
 //try
@@ -10436,7 +10439,7 @@ case 25:
 //C
 this.state = 26;
 this.catchState = 35;
- //BA.debugLineNum = 2790;BA.debugLine="If previousSelectedIndex > (clvActivity.Size-1)";
+ //BA.debugLineNum = 2791;BA.debugLine="If previousSelectedIndex > (clvActivity.Size-1)";
 if (true) break;
 
 case 26:
@@ -10449,7 +10452,7 @@ this.state = 28;
 case 28:
 //C
 this.state = 29;
- //BA.debugLineNum = 2791;BA.debugLine="previousSelectedIndex = 0";
+ //BA.debugLineNum = 2792;BA.debugLine="previousSelectedIndex = 0";
 parent._previousselectedindex = (int) (0);
  if (true) break;
 
@@ -10457,10 +10460,10 @@ case 29:
 //C
 this.state = 30;
 ;
- //BA.debugLineNum = 2793;BA.debugLine="Dim p As B4XView = clvActivity.GetPanel(previous";
+ //BA.debugLineNum = 2794;BA.debugLine="Dim p As B4XView = clvActivity.GetPanel(previous";
 _p = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _p = parent.mostCurrent._clvactivity._getpanel(parent._previousselectedindex);
- //BA.debugLineNum = 2794;BA.debugLine="If p.NumberOfViews > 0 Then";
+ //BA.debugLineNum = 2795;BA.debugLine="If p.NumberOfViews > 0 Then";
 if (true) break;
 
 case 30:
@@ -10473,24 +10476,24 @@ this.state = 32;
 case 32:
 //C
 this.state = 33;
- //BA.debugLineNum = 2796;BA.debugLine="Dim ContentLabel As ImageView = p.GetView(0).Ge";
+ //BA.debugLineNum = 2797;BA.debugLine="Dim ContentLabel As ImageView = p.GetView(0).Ge";
 _contentlabel = new anywheresoftware.b4a.objects.ImageViewWrapper();
 _contentlabel.setObject((android.widget.ImageView)(_p.GetView((int) (0)).GetView((int) (4)).getObject()));
- //BA.debugLineNum = 2797;BA.debugLine="ContentLabel.Visible = False";
+ //BA.debugLineNum = 2798;BA.debugLine="ContentLabel.Visible = False";
 _contentlabel.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 2799;BA.debugLine="Dim cd As CardData = clvActivity.GetValue(previ";
+ //BA.debugLineNum = 2800;BA.debugLine="Dim cd As CardData = clvActivity.GetValue(previ";
 _cd = (cloyd.smart.home.monitor.main._carddata)(parent.mostCurrent._clvactivity._getvalue(parent._previousselectedindex));
- //BA.debugLineNum = 2800;BA.debugLine="cd.iswatchedvisible = False";
+ //BA.debugLineNum = 2801;BA.debugLine="cd.iswatchedvisible = False";
 _cd.iswatchedvisible /*boolean*/  = anywheresoftware.b4a.keywords.Common.False;
- //BA.debugLineNum = 2802;BA.debugLine="Dim ContentLabel1 As Label = p.GetView(0).GetVi";
+ //BA.debugLineNum = 2803;BA.debugLine="Dim ContentLabel1 As Label = p.GetView(0).GetVi";
 _contentlabel1 = new anywheresoftware.b4a.objects.LabelWrapper();
 _contentlabel1.setObject((android.widget.TextView)(_p.GetView((int) (0)).GetView((int) (0)).getObject()));
- //BA.debugLineNum = 2803;BA.debugLine="ContentLabel1.Text = \"   \" & ConvertDayName(cd.";
+ //BA.debugLineNum = 2804;BA.debugLine="ContentLabel1.Text = \"   \" & ConvertDayName(cd.";
 _contentlabel1.setText(BA.ObjectToCharSequence("   "+_convertdayname(_cd.filedate /*String*/ )));
- //BA.debugLineNum = 2805;BA.debugLine="Dim ContentLabel As ImageView = p.GetView(0).Ge";
+ //BA.debugLineNum = 2806;BA.debugLine="Dim ContentLabel As ImageView = p.GetView(0).Ge";
 _contentlabel = new anywheresoftware.b4a.objects.ImageViewWrapper();
 _contentlabel.setObject((android.widget.ImageView)(_p.GetView((int) (0)).GetView((int) (6)).getObject()));
- //BA.debugLineNum = 2806;BA.debugLine="ContentLabel.Visible = True";
+ //BA.debugLineNum = 2807;BA.debugLine="ContentLabel.Visible = True";
 _contentlabel.setVisible(anywheresoftware.b4a.keywords.Common.True);
  if (true) break;
 
@@ -10498,7 +10501,7 @@ case 33:
 //C
 this.state = 36;
 ;
- //BA.debugLineNum = 2809;BA.debugLine="GetUnwatchedVideos";
+ //BA.debugLineNum = 2810;BA.debugLine="GetUnwatchedVideos";
 _getunwatchedvideos();
  if (true) break;
 
@@ -10506,8 +10509,8 @@ case 35:
 //C
 this.state = 36;
 this.catchState = 0;
- //BA.debugLineNum = 2811;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("34522066",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+ //BA.debugLineNum = 2812;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("34128850",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -10516,10 +10519,10 @@ case 36:
 this.state = -1;
 this.catchState = 0;
 ;
- //BA.debugLineNum = 2813;BA.debugLine="Return Null";
+ //BA.debugLineNum = 2814;BA.debugLine="Return Null";
 if (true) {
 anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,anywheresoftware.b4a.keywords.Common.Null);return;};
- //BA.debugLineNum = 2814;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2815;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -10563,7 +10566,7 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 3368;BA.debugLine="Try";
+ //BA.debugLineNum = 3369;BA.debugLine="Try";
 if (true) break;
 
 case 1:
@@ -10577,31 +10580,31 @@ case 3:
 //C
 this.state = 4;
 this.catchState = 35;
- //BA.debugLineNum = 3369;BA.debugLine="btnDriveway.Enabled = False";
+ //BA.debugLineNum = 3370;BA.debugLine="btnDriveway.Enabled = False";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3370;BA.debugLine="btnRefresh.Enabled = False";
+ //BA.debugLineNum = 3371;BA.debugLine="btnRefresh.Enabled = False";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3371;BA.debugLine="btnDrivewayNewClip.Enabled = False";
+ //BA.debugLineNum = 3372;BA.debugLine="btnDrivewayNewClip.Enabled = False";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3372;BA.debugLine="btnFrontDoorNewClip.Enabled = False";
+ //BA.debugLineNum = 3373;BA.debugLine="btnFrontDoorNewClip.Enabled = False";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3373;BA.debugLine="btnSideYardNewClip.Enabled = False";
+ //BA.debugLineNum = 3374;BA.debugLine="btnSideYardNewClip.Enabled = False";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3374;BA.debugLine="btnDrivewayRefresh.Enabled = False";
+ //BA.debugLineNum = 3375;BA.debugLine="btnDrivewayRefresh.Enabled = False";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3375;BA.debugLine="btnFrontDoorRefresh.Enabled = False";
+ //BA.debugLineNum = 3376;BA.debugLine="btnFrontDoorRefresh.Enabled = False";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3376;BA.debugLine="btnSideYardRefresh.Enabled = False";
+ //BA.debugLineNum = 3377;BA.debugLine="btnSideYardRefresh.Enabled = False";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3377;BA.debugLine="ivDriveway.Enabled = False";
+ //BA.debugLineNum = 3378;BA.debugLine="ivDriveway.Enabled = False";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3378;BA.debugLine="ivFrontDoor.Enabled = False";
+ //BA.debugLineNum = 3379;BA.debugLine="ivFrontDoor.Enabled = False";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3379;BA.debugLine="ivSideYard.Enabled = False";
+ //BA.debugLineNum = 3380;BA.debugLine="ivSideYard.Enabled = False";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 3381;BA.debugLine="ScrollViewBlink.ScrollToNow(0)";
+ //BA.debugLineNum = 3382;BA.debugLine="ScrollViewBlink.ScrollToNow(0)";
 parent.mostCurrent._scrollviewblink.ScrollToNow((int) (0));
- //BA.debugLineNum = 3383;BA.debugLine="If Value Then";
+ //BA.debugLineNum = 3384;BA.debugLine="If Value Then";
 if (true) break;
 
 case 4:
@@ -10616,9 +10619,9 @@ this.state = 8;
 case 6:
 //C
 this.state = 9;
- //BA.debugLineNum = 3384;BA.debugLine="lblStatus.Text = \"Arming the system...\"";
+ //BA.debugLineNum = 3385;BA.debugLine="lblStatus.Text = \"Arming the system...\"";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("Arming the system..."));
- //BA.debugLineNum = 3385;BA.debugLine="Dim rs As ResumableSub = RESTPost(\"https://rest";
+ //BA.debugLineNum = 3386;BA.debugLine="Dim rs As ResumableSub = RESTPost(\"https://rest";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restpost("https://rest-"+parent._userregion+".immedia-semi.com/network/"+parent._networkid+"/arm");
  if (true) break;
@@ -10626,9 +10629,9 @@ _rs = _restpost("https://rest-"+parent._userregion+".immedia-semi.com/network/"+
 case 8:
 //C
 this.state = 9;
- //BA.debugLineNum = 3387;BA.debugLine="lblStatus.Text = \"Disarming the system...\"";
+ //BA.debugLineNum = 3388;BA.debugLine="lblStatus.Text = \"Disarming the system...\"";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("Disarming the system..."));
- //BA.debugLineNum = 3388;BA.debugLine="Dim rs As ResumableSub = RESTPost(\"https://rest";
+ //BA.debugLineNum = 3389;BA.debugLine="Dim rs As ResumableSub = RESTPost(\"https://rest";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restpost("https://rest-"+parent._userregion+".immedia-semi.com/network/"+parent._networkid+"/disarm");
  if (true) break;
@@ -10637,7 +10640,7 @@ case 9:
 //C
 this.state = 10;
 ;
- //BA.debugLineNum = 3391;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3392;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 37;
 return;
@@ -10646,7 +10649,7 @@ case 37:
 this.state = 10;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3393;BA.debugLine="If response.StartsWith(\"ERROR: \") Or response.Co";
+ //BA.debugLineNum = 3394;BA.debugLine="If response.StartsWith(\"ERROR: \") Or response.Co";
 if (true) break;
 
 case 10:
@@ -10659,33 +10662,33 @@ this.state = 12;
 case 12:
 //C
 this.state = 13;
- //BA.debugLineNum = 3394;BA.debugLine="btnDriveway.Enabled = True";
+ //BA.debugLineNum = 3395;BA.debugLine="btnDriveway.Enabled = True";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3395;BA.debugLine="btnRefresh.Enabled = True";
+ //BA.debugLineNum = 3396;BA.debugLine="btnRefresh.Enabled = True";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3396;BA.debugLine="btnDrivewayNewClip.Enabled = True";
+ //BA.debugLineNum = 3397;BA.debugLine="btnDrivewayNewClip.Enabled = True";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3397;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
+ //BA.debugLineNum = 3398;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3398;BA.debugLine="btnSideYardNewClip.Enabled = True";
+ //BA.debugLineNum = 3399;BA.debugLine="btnSideYardNewClip.Enabled = True";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3399;BA.debugLine="btnDrivewayRefresh.Enabled = True";
+ //BA.debugLineNum = 3400;BA.debugLine="btnDrivewayRefresh.Enabled = True";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3400;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
+ //BA.debugLineNum = 3401;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3401;BA.debugLine="btnSideYardRefresh.Enabled = True";
+ //BA.debugLineNum = 3402;BA.debugLine="btnSideYardRefresh.Enabled = True";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3402;BA.debugLine="ivDriveway.Enabled = True";
+ //BA.debugLineNum = 3403;BA.debugLine="ivDriveway.Enabled = True";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3403;BA.debugLine="ivFrontDoor.Enabled = True";
+ //BA.debugLineNum = 3404;BA.debugLine="ivFrontDoor.Enabled = True";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3404;BA.debugLine="ivSideYard.Enabled = True";
+ //BA.debugLineNum = 3405;BA.debugLine="ivSideYard.Enabled = True";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3405;BA.debugLine="lblStatus.Text = GetRESTError(response)";
+ //BA.debugLineNum = 3406;BA.debugLine="lblStatus.Text = GetRESTError(response)";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence(_getresterror(parent._response)));
- //BA.debugLineNum = 3406;BA.debugLine="swArmed.Value = Not(Value)";
+ //BA.debugLineNum = 3407;BA.debugLine="swArmed.Value = Not(Value)";
 parent.mostCurrent._swarmed._setvalue /*boolean*/ (anywheresoftware.b4a.keywords.Common.Not(_value));
- //BA.debugLineNum = 3407;BA.debugLine="Return";
+ //BA.debugLineNum = 3408;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 
@@ -10693,10 +10696,10 @@ case 13:
 //C
 this.state = 14;
 ;
- //BA.debugLineNum = 3409;BA.debugLine="Dim rs As ResumableSub = GetCommandID(response)";
+ //BA.debugLineNum = 3410;BA.debugLine="Dim rs As ResumableSub = GetCommandID(response)";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _getcommandid(parent._response);
- //BA.debugLineNum = 3410;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3411;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 38;
 return;
@@ -10705,10 +10708,10 @@ case 38:
 this.state = 14;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3412;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest-\"";
+ //BA.debugLineNum = 3413;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest-\"";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restget("https://rest-"+parent._userregion+".immedia-semi.com/network/"+parent._networkid+"/command/"+parent._commandid);
- //BA.debugLineNum = 3413;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3414;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 39;
 return;
@@ -10717,7 +10720,7 @@ case 39:
 this.state = 14;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3415;BA.debugLine="For i = 1 To 10";
+ //BA.debugLineNum = 3416;BA.debugLine="For i = 1 To 10";
 if (true) break;
 
 case 14:
@@ -10744,10 +10747,10 @@ if (true) break;
 case 16:
 //C
 this.state = 17;
- //BA.debugLineNum = 3416;BA.debugLine="Dim rs As ResumableSub = GetCommandStatus(respo";
+ //BA.debugLineNum = 3417;BA.debugLine="Dim rs As ResumableSub = GetCommandStatus(respo";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _getcommandstatus(parent._response);
- //BA.debugLineNum = 3417;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3418;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 42;
 return;
@@ -10756,7 +10759,7 @@ case 42:
 this.state = 17;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3418;BA.debugLine="If commandComplete Then";
+ //BA.debugLineNum = 3419;BA.debugLine="If commandComplete Then";
 if (true) break;
 
 case 17:
@@ -10771,9 +10774,9 @@ this.state = 21;
 case 19:
 //C
 this.state = 28;
- //BA.debugLineNum = 3419;BA.debugLine="btnRefresh_Click";
+ //BA.debugLineNum = 3420;BA.debugLine="btnRefresh_Click";
 _btnrefresh_click();
- //BA.debugLineNum = 3420;BA.debugLine="Exit";
+ //BA.debugLineNum = 3421;BA.debugLine="Exit";
 this.state = 33;
 if (true) break;
  if (true) break;
@@ -10781,7 +10784,7 @@ if (true) break;
 case 21:
 //C
 this.state = 22;
- //BA.debugLineNum = 3422;BA.debugLine="If Value Then";
+ //BA.debugLineNum = 3423;BA.debugLine="If Value Then";
 if (true) break;
 
 case 22:
@@ -10796,14 +10799,14 @@ this.state = 26;
 case 24:
 //C
 this.state = 27;
- //BA.debugLineNum = 3423;BA.debugLine="lblStatus.Text = \"Arming the system... \" & i";
+ //BA.debugLineNum = 3424;BA.debugLine="lblStatus.Text = \"Arming the system... \" & i";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("Arming the system... "+BA.NumberToString(_i)+"/10"));
  if (true) break;
 
 case 26:
 //C
 this.state = 27;
- //BA.debugLineNum = 3425;BA.debugLine="lblStatus.Text = \"Disarming the system... \" &";
+ //BA.debugLineNum = 3426;BA.debugLine="lblStatus.Text = \"Disarming the system... \" &";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("Disarming the system... "+BA.NumberToString(_i)+"/10"));
  if (true) break;
 
@@ -10817,10 +10820,10 @@ case 28:
 //C
 this.state = 29;
 ;
- //BA.debugLineNum = 3428;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest-";
+ //BA.debugLineNum = 3429;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest-";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restget("https://rest-"+parent._userregion+".immedia-semi.com/network/"+parent._networkid+"/command/"+parent._commandid);
- //BA.debugLineNum = 3429;BA.debugLine="wait for (rs) complete (Result As Object)";
+ //BA.debugLineNum = 3430;BA.debugLine="wait for (rs) complete (Result As Object)";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _rs);
 this.state = 43;
 return;
@@ -10829,7 +10832,7 @@ case 43:
 this.state = 29;
 _result = (Object) result[0];
 ;
- //BA.debugLineNum = 3430;BA.debugLine="Sleep(1000)";
+ //BA.debugLineNum = 3431;BA.debugLine="Sleep(1000)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (1000));
 this.state = 44;
 return;
@@ -10837,7 +10840,7 @@ case 44:
 //C
 this.state = 29;
 ;
- //BA.debugLineNum = 3432;BA.debugLine="If response.StartsWith(\"ERROR: \") Or response.C";
+ //BA.debugLineNum = 3433;BA.debugLine="If response.StartsWith(\"ERROR: \") Or response.C";
 if (true) break;
 
 case 29:
@@ -10850,33 +10853,33 @@ this.state = 31;
 case 31:
 //C
 this.state = 32;
- //BA.debugLineNum = 3433;BA.debugLine="btnDriveway.Enabled = True";
+ //BA.debugLineNum = 3434;BA.debugLine="btnDriveway.Enabled = True";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3434;BA.debugLine="btnRefresh.Enabled = True";
+ //BA.debugLineNum = 3435;BA.debugLine="btnRefresh.Enabled = True";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3435;BA.debugLine="btnDrivewayNewClip.Enabled = True";
+ //BA.debugLineNum = 3436;BA.debugLine="btnDrivewayNewClip.Enabled = True";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3436;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
+ //BA.debugLineNum = 3437;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3437;BA.debugLine="btnSideYardNewClip.Enabled = True";
+ //BA.debugLineNum = 3438;BA.debugLine="btnSideYardNewClip.Enabled = True";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3438;BA.debugLine="btnDrivewayRefresh.Enabled = True";
+ //BA.debugLineNum = 3439;BA.debugLine="btnDrivewayRefresh.Enabled = True";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3439;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
+ //BA.debugLineNum = 3440;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3440;BA.debugLine="btnSideYardRefresh.Enabled = True";
+ //BA.debugLineNum = 3441;BA.debugLine="btnSideYardRefresh.Enabled = True";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3441;BA.debugLine="ivDriveway.Enabled = True";
+ //BA.debugLineNum = 3442;BA.debugLine="ivDriveway.Enabled = True";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3442;BA.debugLine="ivFrontDoor.Enabled = True";
+ //BA.debugLineNum = 3443;BA.debugLine="ivFrontDoor.Enabled = True";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3443;BA.debugLine="ivSideYard.Enabled = True";
+ //BA.debugLineNum = 3444;BA.debugLine="ivSideYard.Enabled = True";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3444;BA.debugLine="lblStatus.Text = GetRESTError(response)";
+ //BA.debugLineNum = 3445;BA.debugLine="lblStatus.Text = GetRESTError(response)";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence(_getresterror(parent._response)));
- //BA.debugLineNum = 3445;BA.debugLine="swArmed.Value = Not(Value)";
+ //BA.debugLineNum = 3446;BA.debugLine="swArmed.Value = Not(Value)";
 parent.mostCurrent._swarmed._setvalue /*boolean*/ (anywheresoftware.b4a.keywords.Common.Not(_value));
- //BA.debugLineNum = 3446;BA.debugLine="Return";
+ //BA.debugLineNum = 3447;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 
@@ -10891,29 +10894,29 @@ case 33:
 //C
 this.state = 36;
 ;
- //BA.debugLineNum = 3450;BA.debugLine="btnDriveway.Enabled = True";
+ //BA.debugLineNum = 3451;BA.debugLine="btnDriveway.Enabled = True";
 parent.mostCurrent._btndriveway._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3451;BA.debugLine="btnRefresh.Enabled = True";
+ //BA.debugLineNum = 3452;BA.debugLine="btnRefresh.Enabled = True";
 parent.mostCurrent._btnrefresh._setenabled /*boolean*/ (anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3452;BA.debugLine="btnDrivewayNewClip.Enabled = True";
+ //BA.debugLineNum = 3453;BA.debugLine="btnDrivewayNewClip.Enabled = True";
 parent.mostCurrent._btndrivewaynewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3453;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
+ //BA.debugLineNum = 3454;BA.debugLine="btnFrontDoorNewClip.Enabled = True";
 parent.mostCurrent._btnfrontdoornewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3454;BA.debugLine="btnSideYardNewClip.Enabled = True";
+ //BA.debugLineNum = 3455;BA.debugLine="btnSideYardNewClip.Enabled = True";
 parent.mostCurrent._btnsideyardnewclip.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3455;BA.debugLine="btnDrivewayRefresh.Enabled = True";
+ //BA.debugLineNum = 3456;BA.debugLine="btnDrivewayRefresh.Enabled = True";
 parent.mostCurrent._btndrivewayrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3456;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
+ //BA.debugLineNum = 3457;BA.debugLine="btnFrontDoorRefresh.Enabled = True";
 parent.mostCurrent._btnfrontdoorrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3457;BA.debugLine="btnSideYardRefresh.Enabled = True";
+ //BA.debugLineNum = 3458;BA.debugLine="btnSideYardRefresh.Enabled = True";
 parent.mostCurrent._btnsideyardrefresh.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3458;BA.debugLine="ivDriveway.Enabled = True";
+ //BA.debugLineNum = 3459;BA.debugLine="ivDriveway.Enabled = True";
 parent.mostCurrent._ivdriveway.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3459;BA.debugLine="ivFrontDoor.Enabled = True";
+ //BA.debugLineNum = 3460;BA.debugLine="ivFrontDoor.Enabled = True";
 parent.mostCurrent._ivfrontdoor.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3460;BA.debugLine="ivSideYard.Enabled = True";
+ //BA.debugLineNum = 3461;BA.debugLine="ivSideYard.Enabled = True";
 parent.mostCurrent._ivsideyard.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 3461;BA.debugLine="lblStatus.Text = \"Ready\"";
+ //BA.debugLineNum = 3462;BA.debugLine="lblStatus.Text = \"Ready\"";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("Ready"));
  if (true) break;
 
@@ -10921,8 +10924,8 @@ case 35:
 //C
 this.state = 36;
 this.catchState = 0;
- //BA.debugLineNum = 3464;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("35374049",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+ //BA.debugLineNum = 3465;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("34980833",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -10931,7 +10934,7 @@ case 36:
 this.state = -1;
 this.catchState = 0;
 ;
- //BA.debugLineNum = 3466;BA.debugLine="End Sub";
+ //BA.debugLineNum = 3467;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -11579,7 +11582,7 @@ case 91:
 this.state = 92;
 this.catchState = 0;
  //BA.debugLineNum = 869;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("31638518",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("31245302",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -11606,61 +11609,61 @@ public static String  _updateitemcolor(int _index) throws Exception{
 anywheresoftware.b4a.objects.B4XViewWrapper _p = null;
 anywheresoftware.b4a.objects.B4XViewWrapper _backpane = null;
 anywheresoftware.b4a.objects.B4XViewWrapper _contentlabel = null;
- //BA.debugLineNum = 2568;BA.debugLine="Sub UpdateItemColor (Index As Int)";
- //BA.debugLineNum = 2569;BA.debugLine="Try";
-try { //BA.debugLineNum = 2570;BA.debugLine="If previousSelectedIndex > (clvActivity.Size-1)";
+ //BA.debugLineNum = 2569;BA.debugLine="Sub UpdateItemColor (Index As Int)";
+ //BA.debugLineNum = 2570;BA.debugLine="Try";
+try { //BA.debugLineNum = 2571;BA.debugLine="If previousSelectedIndex > (clvActivity.Size-1)";
 if (_previousselectedindex>(mostCurrent._clvactivity._getsize()-1)) { 
- //BA.debugLineNum = 2571;BA.debugLine="previousSelectedIndex = 0";
+ //BA.debugLineNum = 2572;BA.debugLine="previousSelectedIndex = 0";
 _previousselectedindex = (int) (0);
  };
- //BA.debugLineNum = 2574;BA.debugLine="If previousSelectedIndex <> Index Then";
+ //BA.debugLineNum = 2575;BA.debugLine="If previousSelectedIndex <> Index Then";
 if (_previousselectedindex!=_index) { 
- //BA.debugLineNum = 2575;BA.debugLine="Dim p As B4XView = clvActivity.GetPanel(previou";
+ //BA.debugLineNum = 2576;BA.debugLine="Dim p As B4XView = clvActivity.GetPanel(previou";
 _p = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _p = mostCurrent._clvactivity._getpanel(_previousselectedindex);
- //BA.debugLineNum = 2576;BA.debugLine="If p.NumberOfViews > 0 Then";
+ //BA.debugLineNum = 2577;BA.debugLine="If p.NumberOfViews > 0 Then";
 if (_p.getNumberOfViews()>0) { 
- //BA.debugLineNum = 2577;BA.debugLine="Dim backPane As B4XView = p.getview(0)";
+ //BA.debugLineNum = 2578;BA.debugLine="Dim backPane As B4XView = p.getview(0)";
 _backpane = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _backpane = _p.GetView((int) (0));
- //BA.debugLineNum = 2578;BA.debugLine="backPane.Color = xui.Color_White";
+ //BA.debugLineNum = 2579;BA.debugLine="backPane.Color = xui.Color_White";
 _backpane.setColor(mostCurrent._xui.Color_White);
- //BA.debugLineNum = 2580;BA.debugLine="Dim ContentLabel As B4XView = p.GetView(0).Get";
+ //BA.debugLineNum = 2581;BA.debugLine="Dim ContentLabel As B4XView = p.GetView(0).Get";
 _contentlabel = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _contentlabel = _p.GetView((int) (0)).GetView((int) (6));
- //BA.debugLineNum = 2581;BA.debugLine="ContentLabel.Visible = False";
+ //BA.debugLineNum = 2582;BA.debugLine="ContentLabel.Visible = False";
 _contentlabel.setVisible(anywheresoftware.b4a.keywords.Common.False);
  };
  };
- //BA.debugLineNum = 2585;BA.debugLine="Dim p As B4XView = clvActivity.GetPanel(Index)";
+ //BA.debugLineNum = 2586;BA.debugLine="Dim p As B4XView = clvActivity.GetPanel(Index)";
 _p = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _p = mostCurrent._clvactivity._getpanel(_index);
- //BA.debugLineNum = 2586;BA.debugLine="If p.NumberOfViews > 0 Then";
+ //BA.debugLineNum = 2587;BA.debugLine="If p.NumberOfViews > 0 Then";
 if (_p.getNumberOfViews()>0) { 
- //BA.debugLineNum = 2587;BA.debugLine="Dim backPane As B4XView = p.getview(0)";
+ //BA.debugLineNum = 2588;BA.debugLine="Dim backPane As B4XView = p.getview(0)";
 _backpane = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _backpane = _p.GetView((int) (0));
- //BA.debugLineNum = 2588;BA.debugLine="backPane.Color = xui.Color_ARGB(255,217,215,222";
+ //BA.debugLineNum = 2589;BA.debugLine="backPane.Color = xui.Color_ARGB(255,217,215,222";
 _backpane.setColor(mostCurrent._xui.Color_ARGB((int) (255),(int) (217),(int) (215),(int) (222)));
- //BA.debugLineNum = 2590;BA.debugLine="Dim ContentLabel As B4XView = p.GetView(0).GetV";
+ //BA.debugLineNum = 2591;BA.debugLine="Dim ContentLabel As B4XView = p.GetView(0).GetV";
 _contentlabel = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _contentlabel = _p.GetView((int) (0)).GetView((int) (6));
- //BA.debugLineNum = 2591;BA.debugLine="ContentLabel.Visible = True";
+ //BA.debugLineNum = 2592;BA.debugLine="ContentLabel.Visible = True";
 _contentlabel.setVisible(anywheresoftware.b4a.keywords.Common.True);
  };
- //BA.debugLineNum = 2594;BA.debugLine="previousSelectedIndex = Index";
+ //BA.debugLineNum = 2595;BA.debugLine="previousSelectedIndex = Index";
 _previousselectedindex = _index;
  } 
        catch (Exception e23) {
-			processBA.setLastException(e23); //BA.debugLineNum = 2596;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("34259868",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+			processBA.setLastException(e23); //BA.debugLineNum = 2597;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("33866652",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
- //BA.debugLineNum = 2598;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2599;BA.debugLine="End Sub";
 return "";
 }
 public static String  _wvmedia_pagefinished(String _url) throws Exception{
- //BA.debugLineNum = 2816;BA.debugLine="Sub wvMedia_PageFinished (Url As String)";
- //BA.debugLineNum = 2818;BA.debugLine="End Sub";
+ //BA.debugLineNum = 2817;BA.debugLine="Sub wvMedia_PageFinished (Url As String)";
+ //BA.debugLineNum = 2819;BA.debugLine="End Sub";
 return "";
 }
 
