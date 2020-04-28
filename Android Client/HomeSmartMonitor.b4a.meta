@@ -31,6 +31,6 @@ ModuleClosedNodes6=
 ModuleClosedNodes7=
 ModuleClosedNodes8=
 ModuleClosedNodes9=
-NavigationStack=Main,RefreshCameras,1271,0,Main,GetHomescreen,1930,4,Main,swArmed_ValueChanged,3421,6,Main,ShowAboutMenu,696,1,Visual Designer,TempHumidityBasement.bal,-100,1,Main,ConvertDateTime,2161,2,Main,clvActivity_VisibleRangeChanged,2464,0,Main,GetCameraInfo,1786,2,Visual Designer,blink.bal,-100,6,Main,Process_Globals,19,0
+NavigationStack=Main,swArmed_ValueChanged,3421,6,Main,ShowAboutMenu,696,1,Visual Designer,TempHumidityBasement.bal,-100,1,Main,ConvertDateTime,2161,2,Main,clvActivity_VisibleRangeChanged,2464,0,Main,GetCameraInfo,1786,2,Visual Designer,blink.bal,-100,6,Main,Process_Globals,20,0,Main,MQTT_Connected,473,0,SmartHomeMonitor,MQTT_Connected,73,0,SmartHomeMonitor,MQTT_Connect,66,0
 SelectedBuild=0
 VisibleModules=5,8,7,10,1,3,2,4,9,6
