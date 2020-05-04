@@ -588,3 +588,13 @@ End Sub
 Sub Activity_Click
 	Activity_WindowFocusChanged(True)
 End Sub
+
+Sub Activity_KeyPress (KeyCode As Int) As Boolean 'Return True to consume the event
+	If KeyCode = KeyCodes.KEYCODE_BACK Then
+		Timer1.Enabled = False
+		ExitApplication
+		Return False
+	Else
+		Return True
+	End If
+End Sub
