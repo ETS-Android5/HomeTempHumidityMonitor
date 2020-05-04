@@ -1031,12 +1031,29 @@ _timer1.setEnabled(anywheresoftware.b4a.keywords.Common.True);
  } 
        catch (Exception e377) {
 			processBA.setLastException(e377); //BA.debugLineNum = 473;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("2131486",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("5131486",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 474;BA.debugLine="ToastMessageShow (LastException,True)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA).getObject()),anywheresoftware.b4a.keywords.Common.True);
  };
  //BA.debugLineNum = 477;BA.debugLine="End Sub";
 return "";
+}
+public static boolean  _activity_keypress(int _keycode) throws Exception{
+ //BA.debugLineNum = 711;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
+ //BA.debugLineNum = 712;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
+if (_keycode==anywheresoftware.b4a.keywords.Common.KeyCodes.KEYCODE_BACK) { 
+ //BA.debugLineNum = 713;BA.debugLine="Timer1.Enabled = False";
+_timer1.setEnabled(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 714;BA.debugLine="ExitApplication";
+anywheresoftware.b4a.keywords.Common.ExitApplication();
+ //BA.debugLineNum = 715;BA.debugLine="Return False";
+if (true) return anywheresoftware.b4a.keywords.Common.False;
+ }else {
+ //BA.debugLineNum = 717;BA.debugLine="Return True";
+if (true) return anywheresoftware.b4a.keywords.Common.True;
+ };
+ //BA.debugLineNum = 719;BA.debugLine="End Sub";
+return false;
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
  //BA.debugLineNum = 543;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -1665,7 +1682,7 @@ _textreader1.Close();
  } 
        catch (Exception e114) {
 			processBA.setLastException(e114); //BA.debugLineNum = 668;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("2393337",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("5393337",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 670;BA.debugLine="End Sub";
 return "";
