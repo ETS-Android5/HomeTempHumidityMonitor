@@ -116,6 +116,8 @@ Sub Process_Globals
 	Private userRegion As String = "u006"
 	Private accountID As String = "88438" 'ignore
 	Private networkID As String = "94896"
+	Private TwoClientFAVerificationRequired As String
+	Private TwoFAClientID As String
 	Private commandID As String
 	Private commandComplete As Boolean
 	Private cameraThumbnail As String
@@ -215,6 +217,7 @@ Sub Globals
 	Private btnFrontDoorRefresh As ImageView
 	Private btnDrivewayRefresh As ImageView
 	Private swArmed As B4XSwitch
+	Private dialog As B4XDialog
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -231,6 +234,9 @@ Sub Activity_Create(FirstTime As Boolean)
 			MQTT_Connect
 		End If
 		Activity.LoadLayout("Main")
+		
+		dialog.Initialize(Activity)
+		dialog.Title = "Smart Home Monitor"
 		
 		Dim iCrash As Intent
 		iCrash = Activity.GetStartingIntent
@@ -1316,13 +1322,36 @@ Sub RequestAuthToken As ResumableSub
 		lblStatus.Text = "Authenticating..."
 		Dim jobLogin As HttpJob
 		jobLogin.Initialize("", Me)
-		jobLogin.PostString("https://rest.prod.immedia-semi.com/login","email=" &  emailAddress & "&password=" & password)
+		'jobLogin.PostString("https://rest.prod.immedia-semi.com/login","email=" &  emailAddress & "&password=" & password)
+		jobLogin.PostString("https://rest.prod.immedia-semi.com/api/v4/account/login","email=" &  emailAddress & "&password=" & password)
 		jobLogin.GetRequest.SetContentType("application/x-www-form-urlencoded")
 		Wait For (jobLogin) JobDone(jobLogin As HttpJob)
 		If jobLogin.Success Then
 			lblStatus.Text = "Successfully logged in to the Blink server..."
 			' {"account":{"id":88438},"client":{"id":343747},"authtoken":{"authtoken":"93dThwIjJVPFNsksddH2cA","message":"auth"},"networks":{"94896":{"name":"Home","onboarded":true}},"region":{"u006":"United States"}}
 			GetAuthInfo(jobLogin.GetString)
+			
+			If TwoClientFAVerificationRequired Then
+				Dim input As B4XInputTemplate
+				Dim diagResult As Int
+				input.Initialize
+				input.lblTitle.Text = "Enter verification code:"
+				input.ConfigureForNumbers(False, False) 'AllowDecimals, AllowNegative
+				Wait For (dialog.ShowTemplate(input, "OK", "", "CANCEL")) Complete (diagResult As Int)
+				If diagResult = xui.DialogResponse_Positive Then
+					Dim res As Int = input.Text 'no need to check with IsNumber
+					Log(res)
+					jobLogin.PostString("https://rest-u006.immedia-semi.com/api/v4/account/88438/client/" & TwoFAClientID & "/pin/verify/","pin=" & res)
+					jobLogin.GetRequest.SetContentType("application/x-www-form-urlencoded")
+					Wait For (jobLogin) JobDone(jobLogin As HttpJob)
+					If jobLogin.Success = False Then
+						lblStatus.Text = GetRESTError(jobLogin.ErrorMessage)
+						Log("2FA error: " & jobLogin.ErrorMessage)
+						jobLogin.Release
+						Return Null
+					End If
+				End If
+			End If
 
 			If response.StartsWith("ERROR: ") Or response.Contains("System is busy, please wait") Then
 				btnDriveway.Enabled = True
@@ -1728,23 +1757,42 @@ End Sub
 Sub GetAuthInfo(json As String)
 	Try
 		lblStatus.Text = "Getting authtoken..."
+'		Dim parser As JSONParser
+'		parser.Initialize(json)
+'		Dim root As Map = parser.NextObject
+'		Dim authtokenmap As Map = root.Get("authtoken")
+'		authToken = authtokenmap.Get("authtoken")
+'		Log("authToken: " &  authToken)
+'		Dim networks As Map = root.Get("networks")
+'		Log("networkID: " & networks.GetKeyAt(0))
+'		networkID = networks.GetKeyAt(0)
+'		Dim region As Map = root.Get("region")
+'		userRegion = region.GetKeyAt(0)
+'		Log("userRegion: " &  userRegion)
+'
+'		Dim account As Map = root.Get("account")
+'		Dim id As Int = account.Get("id")
+'		Log("accountID: " & id)
+'		accountID = id
 		Dim parser As JSONParser
 		parser.Initialize(json)
 		Dim root As Map = parser.NextObject
+		Dim force_password_reset As String = root.Get("force_password_reset") 'ignore
+		Dim lockout_time_remaining As Int = root.Get("lockout_time_remaining") 'ignore
 		Dim authtokenmap As Map = root.Get("authtoken")
 		authToken = authtokenmap.Get("authtoken")
-		Log("authToken: " &  authToken)
-		Dim networks As Map = root.Get("networks")
-		Log("networkID: " & networks.GetKeyAt(0))
-		networkID = networks.GetKeyAt(0)
+		Dim message As String = authtokenmap.Get("message") 'ignore
+		Dim client As Map = root.Get("client")
+		TwoClientFAVerificationRequired = client.Get("verification_required")
+		TwoFAClientID = client.Get("id")
+		Dim allow_pin_resend_seconds As Int = root.Get("allow_pin_resend_seconds") 'ignore
 		Dim region As Map = root.Get("region")
-		userRegion = region.GetKeyAt(0)
-		Log("userRegion: " &  userRegion)
-
+		Dim code As String = region.Get("code") 'ignore
+		userRegion = region.Get("tier")
+		Dim description As String = region.Get("description") 'ignore
 		Dim account As Map = root.Get("account")
-		Dim id As Int = account.Get("id")
-		Log("accountID: " & id)
-		accountID = id
+		Dim verification_required As String = account.Get("verification_required") 'ignore
+		Dim id As Int = account.Get("id") 'ignore
 	Catch
 		lblStatus.Text = "ERROR: GetAuthInfo - " & LastException
 		response = "ERROR: GetAuthInfo - " & LastException
