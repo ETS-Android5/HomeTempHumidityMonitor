@@ -67,8 +67,8 @@ Sub Globals
 	Private tempRightNow As String
 	Private zeroRange As Float = 88.88
 	Private tempZeroRange As Float
-	Private tempMaxRange As Float
-	Private tempMinRange As Float
+'	Private tempMaxRange As Float
+'	Private tempMinRange As Float
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -94,7 +94,7 @@ Sub Activity_Create(FirstTime As Boolean)
 		lc1.GraphTitleSkewX = -0.25
 		lc1.GraphTitleUnderline = True
 		lc1.GraphTitleBold = True
-		lc1.GraphTitle = "HUMIDITY DAILY v1.0"	          'put this statement last
+		lc1.GraphTitle = " HUMIDITY DAILY v1.0  "	          'put this statement last
 		
 		lc1.LegendBackgroundColor = Colors.White                          'it will be converted to an Alpha = 100
 		lc1.LegendTextColor = Colors.Black
@@ -528,25 +528,47 @@ Sub CheckTempBoundaries
 	tempList.AddAll(Array As Float (am12, am1, am2, am3, am4, am5, am6, am7, am8, am9,am10, am11, pm12, pm1, pm2, pm3, pm4, pm5, pm6, pm7, pm8, pm9, pm10, pm11))
 	tempList.Sort(True)
 	
-	If tempList.Get(0) < tempMinRange Then
-		tempMinRange = tempList.Get(0)-1.5
-	End If
-	If tempList.Get(tempList.Size-1) >= 88.88 Then
-		If tempMaxRange > tempList.Get(tempList.Size-2) Then
-			lc1.YaxisRange(tempMinRange, (tempMaxRange)+1.5)
-		Else
-			lc1.YaxisRange(tempMinRange, (tempList.Get(tempList.Size-2))+1.5)
-		End If
-		tempMaxRange = tempList.Get(tempList.Size-2)
+'	If tempList.Get(0) < tempMinRange Then
+'		tempMinRange = tempList.Get(0)-1.5
+'	End If
+'	If tempList.Get(tempList.Size-1) >= 88.88 Then
+'		If tempMaxRange > tempList.Get(tempList.Size-2) Then
+'			lc1.YaxisRange(tempMinRange, (tempMaxRange)+1.5)
+'		Else
+'			lc1.YaxisRange(tempMinRange, (tempList.Get(tempList.Size-2))+1.5)
+'		End If
+'		tempMaxRange = tempList.Get(tempList.Size-2)
+'	Else
+'		If tempMaxRange > tempList.Get(tempList.Size-1) Then
+'			lc1.YaxisRange(tempMinRange, (tempMaxRange)+1.5)
+'		Else
+'			lc1.YaxisRange(tempMinRange, (tempList.Get(tempList.Size-1))+1.5)
+'		End If
+'		tempMaxRange = tempList.Get(tempList.Size-1)
+'	End If
+'	tempMinRange = tempList.Get(0)
+
+	Dim minValue=0, maxValue=0 As Float
+	If tempRightNow <= tempList.Get(0) Then
+		minValue = tempRightNow-1.5
 	Else
-		If tempMaxRange > tempList.Get(tempList.Size-1) Then
-			lc1.YaxisRange(tempMinRange, (tempMaxRange)+1.5)
-		Else
-			lc1.YaxisRange(tempMinRange, (tempList.Get(tempList.Size-1))+1.5)
-		End If
-		tempMaxRange = tempList.Get(tempList.Size-1)
+		minValue = tempList.Get(0)-1.5
 	End If
-	tempMinRange = tempList.Get(0)
+	
+	If tempList.Get(tempList.Size-1) >= 88.88 Then
+		If tempRightNow >= (tempList.Get(tempList.Size-2)) Then
+			maxValue = tempRightNow+1.5
+		Else
+			maxValue = (tempList.Get(tempList.Size-2))+1.5
+		End If
+	Else
+		If tempRightNow >= (tempList.Get(tempList.Size-1)) Then
+			maxValue = tempRightNow+1.5
+		Else
+			maxValue = (tempList.Get(tempList.Size-1))+1.5
+		End If
+	End If
+	lc1.YaxisRange(minValue, maxValue)
 	
 End Sub
 
@@ -557,6 +579,9 @@ End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
 	Awake.ReleaseKeepAlive
+	If UserClosed Then
+		lc1.RemoveView
+	End If
 End Sub
 
 Sub ReadTextReader(fileDay As String)
@@ -718,14 +743,19 @@ Sub Activity_WindowFocusChanged(HasFocus As Boolean)
 End Sub
 
 Sub Timer1_Tick
-	'Log("Timer tick")
+	Activity.RequestFocus
 	lc1.RemoveView
 	Activity_Create(False)
+End Sub
+
+Sub Activity_Click
+	Activity_WindowFocusChanged(True)
 End Sub
 
 Sub Activity_KeyPress (KeyCode As Int) As Boolean 'Return True to consume the event
 	If KeyCode = KeyCodes.KEYCODE_BACK Then
 		Timer1.Enabled = False
+		lc1.RemoveView
 		ExitApplication
 		Return False
 	Else

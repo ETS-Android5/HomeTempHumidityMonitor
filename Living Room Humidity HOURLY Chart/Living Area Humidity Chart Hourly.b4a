@@ -95,7 +95,7 @@ Sub Activity_Create(FirstTime As Boolean)
 		lc1.GraphTitleSkewX = -0.25
 		lc1.GraphTitleUnderline = True
 		lc1.GraphTitleBold = True
-		lc1.GraphTitle = "HUMIDITY HOURLY v1.0"	          'put this statement last
+		lc1.GraphTitle = " HUMIDITY HOURLY v1.0  "	          'put this statement last
 		
 		lc1.LegendBackgroundColor = Colors.White                          'it will be converted to an Alpha = 100
 		lc1.LegendTextColor = Colors.Black
@@ -411,6 +411,9 @@ End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
 	Awake.ReleaseKeepAlive
+	If UserClosed Then 
+		lc1.RemoveView
+	End If
 End Sub
 
 Sub ReadTextReader(fileDay As String)
@@ -580,7 +583,7 @@ Sub Activity_WindowFocusChanged(HasFocus As Boolean)
 End Sub
 
 Sub Timer1_Tick
-	'Log("Timer tick")
+	Activity.RequestFocus
 	lc1.RemoveView
 	Activity_Create(False)
 End Sub
@@ -592,6 +595,7 @@ End Sub
 Sub Activity_KeyPress (KeyCode As Int) As Boolean 'Return True to consume the event
 	If KeyCode = KeyCodes.KEYCODE_BACK Then
 		Timer1.Enabled = False
+		lc1.RemoveView
 		ExitApplication
 		Return False
 	Else

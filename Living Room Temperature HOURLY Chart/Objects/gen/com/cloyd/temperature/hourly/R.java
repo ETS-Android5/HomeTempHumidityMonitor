@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.cloyd.humidity.hourly;
+package com.cloyd.temperature.hourly;
 
 public final class R {
     public static final class attr {
