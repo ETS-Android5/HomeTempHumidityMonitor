@@ -397,14 +397,14 @@ mostCurrent._activity.setHeight(_lv.Height);
 mostCurrent._activity.setWidth(_lv.Width);
  //BA.debugLineNum = 71;BA.debugLine="Activity.LoadLayout(\"main\")";
 mostCurrent._activity.LoadLayout("main",mostCurrent.activityBA);
- //BA.debugLineNum = 73;BA.debugLine="lc1.GraphBackgroundColor = Colors.Transparent 'C";
-mostCurrent._lc1.setGraphBackgroundColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
+ //BA.debugLineNum = 73;BA.debugLine="lc1.GraphBackgroundColor = Colors.DarkGray ' Col";
+mostCurrent._lc1.setGraphBackgroundColor(anywheresoftware.b4a.keywords.Common.Colors.DarkGray);
  //BA.debugLineNum = 74;BA.debugLine="lc1.GraphFrameColor = Colors.Blue";
 mostCurrent._lc1.setGraphFrameColor(anywheresoftware.b4a.keywords.Common.Colors.Blue);
  //BA.debugLineNum = 75;BA.debugLine="lc1.GraphFrameWidth = 4.0";
 mostCurrent._lc1.setGraphFrameWidth((float) (4.0));
- //BA.debugLineNum = 76;BA.debugLine="lc1.GraphPlotAreaBackgroundColor = Colors.DarkGr";
-mostCurrent._lc1.setGraphPlotAreaBackgroundColor(anywheresoftware.b4a.keywords.Common.Colors.DarkGray);
+ //BA.debugLineNum = 76;BA.debugLine="lc1.GraphPlotAreaBackgroundColor = Colors.ARGB(5";
+mostCurrent._lc1.setGraphPlotAreaBackgroundColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (50),(int) (0),(int) (0),(int) (255)));
  //BA.debugLineNum = 77;BA.debugLine="lc1.GraphTitleTextSize = 15";
 mostCurrent._lc1.setGraphTitleTextSize((int) (15));
  //BA.debugLineNum = 78;BA.debugLine="lc1.GraphTitleColor = Colors.White";
@@ -1038,7 +1038,7 @@ _timer1.setEnabled(anywheresoftware.b4a.keywords.Common.True);
  } 
        catch (Exception e377) {
 			processBA.setLastException(e377); //BA.debugLineNum = 473;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("5131486",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("0131486",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 474;BA.debugLine="ToastMessageShow (LastException,True)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA).getObject()),anywheresoftware.b4a.keywords.Common.True);
  };
@@ -1743,7 +1743,7 @@ _textreader1.Close();
  } 
        catch (Exception e114) {
 			processBA.setLastException(e114); //BA.debugLineNum = 726;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("5393337",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("0393337",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 728;BA.debugLine="End Sub";
 return "";

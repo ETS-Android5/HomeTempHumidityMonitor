@@ -400,14 +400,14 @@ mostCurrent._activity.setHeight(_lv.Height);
 mostCurrent._activity.setWidth(_lv.Width);
  //BA.debugLineNum = 71;BA.debugLine="Activity.LoadLayout(\"main\")";
 mostCurrent._activity.LoadLayout("main",mostCurrent.activityBA);
- //BA.debugLineNum = 73;BA.debugLine="lc1.GraphBackgroundColor = Colors.Transparent 'C";
-mostCurrent._lc1.setGraphBackgroundColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
+ //BA.debugLineNum = 73;BA.debugLine="lc1.GraphBackgroundColor = Colors.DarkGray ' Col";
+mostCurrent._lc1.setGraphBackgroundColor(anywheresoftware.b4a.keywords.Common.Colors.DarkGray);
  //BA.debugLineNum = 74;BA.debugLine="lc1.GraphFrameColor = Colors.Blue";
 mostCurrent._lc1.setGraphFrameColor(anywheresoftware.b4a.keywords.Common.Colors.Blue);
  //BA.debugLineNum = 75;BA.debugLine="lc1.GraphFrameWidth = 4.0";
 mostCurrent._lc1.setGraphFrameWidth((float) (4.0));
- //BA.debugLineNum = 76;BA.debugLine="lc1.GraphPlotAreaBackgroundColor = Colors.DarkGr";
-mostCurrent._lc1.setGraphPlotAreaBackgroundColor(anywheresoftware.b4a.keywords.Common.Colors.DarkGray);
+ //BA.debugLineNum = 76;BA.debugLine="lc1.GraphPlotAreaBackgroundColor = Colors.ARGB(5";
+mostCurrent._lc1.setGraphPlotAreaBackgroundColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (50),(int) (0),(int) (0),(int) (255)));
  //BA.debugLineNum = 77;BA.debugLine="lc1.GraphTitleTextSize = 15";
 mostCurrent._lc1.setGraphTitleTextSize((int) (15));
  //BA.debugLineNum = 78;BA.debugLine="lc1.GraphTitleColor = Colors.White";
@@ -502,8 +502,8 @@ mostCurrent._lc1.setYaxisTitleUnderline(anywheresoftware.b4a.keywords.Common.Tru
 mostCurrent._lc1.setYaxisTitleTextSkewness((float) (0));
  //BA.debugLineNum = 132;BA.debugLine="lc1.YaxisLabelAndTitleDistance = 60.0";
 mostCurrent._lc1.setYaxisLabelAndTitleDistance((float) (60.0));
- //BA.debugLineNum = 133;BA.debugLine="lc1.YaxisTitle = \"Humidity (%)\"";
-mostCurrent._lc1.setYaxisTitle("Humidity (%)");
+ //BA.debugLineNum = 133;BA.debugLine="lc1.YaxisTitle = \"Humidity (Percentage)\"";
+mostCurrent._lc1.setYaxisTitle("Humidity (Percentage)");
  //BA.debugLineNum = 135;BA.debugLine="lc1.MaxNumberOfEntriesPerLineChart = 24";
 mostCurrent._lc1.setMaxNumberOfEntriesPerLineChart((int) (24));
  //BA.debugLineNum = 136;BA.debugLine="lc1.GraphLegendVisibility = False";
@@ -800,7 +800,7 @@ _timer1.setEnabled(anywheresoftware.b4a.keywords.Common.True);
  } 
        catch (Exception e231) {
 			processBA.setLastException(e231); //BA.debugLineNum = 324;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("0131337",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("2131337",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 325;BA.debugLine="ToastMessageShow (LastException,True)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA).getObject()),anywheresoftware.b4a.keywords.Common.True);
  };
@@ -1393,7 +1393,7 @@ _textreader1.Close();
  } 
        catch (Exception e117) {
 			processBA.setLastException(e117); //BA.debugLineNum = 532;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("0393345",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("2393345",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 534;BA.debugLine="End Sub";
 return "";

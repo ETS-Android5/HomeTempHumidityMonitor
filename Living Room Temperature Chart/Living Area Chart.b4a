@@ -85,10 +85,10 @@ Sub Activity_Create(FirstTime As Boolean)
 		
 		Activity.LoadLayout("main")
 		
-		lc1.GraphBackgroundColor = Colors.Transparent 'Colors.DarkGray
+		lc1.GraphBackgroundColor = Colors.DarkGray ' Colors.Transparent
 		lc1.GraphFrameColor = Colors.Blue
 		lc1.GraphFrameWidth = 4.0
-		lc1.GraphPlotAreaBackgroundColor = Colors.DarkGray 'Colors.ARGB(50, 0, 0, 255)
+		lc1.GraphPlotAreaBackgroundColor = Colors.ARGB(50, 0, 0, 255) ' Colors.DarkGray
 		lc1.GraphTitleTextSize = 15
 		lc1.GraphTitleColor = Colors.White
 		lc1.GraphTitleSkewX = -0.25
