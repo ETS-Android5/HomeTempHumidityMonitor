@@ -549,6 +549,7 @@ Sub CheckTempBoundaries
 '	tempMinRange = tempList.Get(0)
 
 	Dim minValue=0, maxValue=0 As Float
+	
 	If tempRightNow <= tempList.Get(0) Then
 		If tempMinRange <= tempRightNow Then
 			minValue = tempMinRange-1.5
@@ -556,7 +557,11 @@ Sub CheckTempBoundaries
 			minValue = tempRightNow-1.5
 		End If
 	Else
-		minValue = tempList.Get(0)-1.5
+		If tempMinRange > 0 And tempMinRange <= tempList.Get(0) Then
+			minValue = tempMinRange-1.5
+		Else
+			minValue = tempList.Get(0)-1.5
+		End If
 	End If
 	
 	If tempList.Get(tempList.Size-1) >= 88.88 Then
@@ -592,9 +597,9 @@ Sub CheckTempBoundaries
 	If (maxValue-1.5) >= tempMaxRange Then
 		tempMaxRange = maxValue-1.5
 	End If
-	If (minValue+1.5) <= tempMinRange Then
+	'If (minValue+1.5) <= tempMinRange Then
 		tempMinRange = minValue+1.5
-	End If
+	'End If
 	
 	lc1.YaxisRange(minValue, maxValue)
 	
