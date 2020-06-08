@@ -679,6 +679,8 @@ Sub ReadTextReader(fileDay As String)
 			If a.Length = 9 Then
 				Dim timeStamp As String
 				timeStamp = a(0).SubString2(0,2)
+				
+				If IsNumber(a(2)) = False Then Continue
 
 				Select timeStamp
 					Case "00"

@@ -368,10 +368,10 @@ public static boolean isAnyActivityVisible() {
 vis = vis | (main.mostCurrent != null);
 return vis;}
 public static String  _activity_click() throws Exception{
- //BA.debugLineNum = 769;BA.debugLine="Sub Activity_Click";
- //BA.debugLineNum = 770;BA.debugLine="Activity_WindowFocusChanged(True)";
+ //BA.debugLineNum = 771;BA.debugLine="Sub Activity_Click";
+ //BA.debugLineNum = 772;BA.debugLine="Activity_WindowFocusChanged(True)";
 _activity_windowfocuschanged(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 771;BA.debugLine="End Sub";
+ //BA.debugLineNum = 773;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_create(boolean _firsttime) throws Exception{
@@ -1038,7 +1038,7 @@ _timer1.setEnabled(anywheresoftware.b4a.keywords.Common.True);
  } 
        catch (Exception e377) {
 			processBA.setLastException(e377); //BA.debugLineNum = 473;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("3131486",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("0131486",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 474;BA.debugLine="ToastMessageShow (LastException,True)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA).getObject()),anywheresoftware.b4a.keywords.Common.True);
  };
@@ -1046,22 +1046,22 @@ anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(an
 return "";
 }
 public static boolean  _activity_keypress(int _keycode) throws Exception{
- //BA.debugLineNum = 773;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
- //BA.debugLineNum = 774;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
+ //BA.debugLineNum = 775;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
+ //BA.debugLineNum = 776;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
 if (_keycode==anywheresoftware.b4a.keywords.Common.KeyCodes.KEYCODE_BACK) { 
- //BA.debugLineNum = 775;BA.debugLine="Timer1.Enabled = False";
+ //BA.debugLineNum = 777;BA.debugLine="Timer1.Enabled = False";
 _timer1.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 776;BA.debugLine="lc1.RemoveView";
+ //BA.debugLineNum = 778;BA.debugLine="lc1.RemoveView";
 mostCurrent._lc1.RemoveView();
- //BA.debugLineNum = 777;BA.debugLine="ExitApplication";
+ //BA.debugLineNum = 779;BA.debugLine="ExitApplication";
 anywheresoftware.b4a.keywords.Common.ExitApplication();
- //BA.debugLineNum = 778;BA.debugLine="Return False";
+ //BA.debugLineNum = 780;BA.debugLine="Return False";
 if (true) return anywheresoftware.b4a.keywords.Common.False;
  }else {
- //BA.debugLineNum = 780;BA.debugLine="Return True";
+ //BA.debugLineNum = 782;BA.debugLine="Return True";
 if (true) return anywheresoftware.b4a.keywords.Common.True;
  };
- //BA.debugLineNum = 782;BA.debugLine="End Sub";
+ //BA.debugLineNum = 784;BA.debugLine="End Sub";
 return false;
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
@@ -1111,7 +1111,7 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 751;BA.debugLine="If HasFocus Then";
+ //BA.debugLineNum = 753;BA.debugLine="If HasFocus Then";
 if (true) break;
 
 case 1:
@@ -1124,7 +1124,7 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
- //BA.debugLineNum = 752;BA.debugLine="Try";
+ //BA.debugLineNum = 754;BA.debugLine="Try";
 if (true) break;
 
 case 4:
@@ -1138,10 +1138,10 @@ case 6:
 //C
 this.state = 9;
 this.catchState = 8;
- //BA.debugLineNum = 753;BA.debugLine="Dim jo As JavaObject = Activity";
+ //BA.debugLineNum = 755;BA.debugLine="Dim jo As JavaObject = Activity";
 _jo = new anywheresoftware.b4j.object.JavaObject();
 _jo.setObject((java.lang.Object)(parent.mostCurrent._activity.getObject()));
- //BA.debugLineNum = 754;BA.debugLine="Sleep(300)";
+ //BA.debugLineNum = 756;BA.debugLine="Sleep(300)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (300));
 this.state = 11;
 return;
@@ -1149,7 +1149,7 @@ case 11:
 //C
 this.state = 9;
 ;
- //BA.debugLineNum = 755;BA.debugLine="jo.RunMethod(\"setSystemUiVisibility\", Array As";
+ //BA.debugLineNum = 757;BA.debugLine="jo.RunMethod(\"setSystemUiVisibility\", Array As";
 _jo.RunMethod("setSystemUiVisibility",new Object[]{(Object)(5894)});
  if (true) break;
 
@@ -1171,7 +1171,7 @@ case 10:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 761;BA.debugLine="End Sub";
+ //BA.debugLineNum = 763;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -1363,41 +1363,41 @@ anywheresoftware.b4a.phone.Phone _p = null;
 anywheresoftware.b4j.object.JavaObject _ctxt = null;
 anywheresoftware.b4j.object.JavaObject _display = null;
 anywheresoftware.b4j.object.JavaObject _point = null;
- //BA.debugLineNum = 730;BA.debugLine="Sub GetRealSize As LayoutValues";
- //BA.debugLineNum = 731;BA.debugLine="Dim lv As LayoutValues";
+ //BA.debugLineNum = 732;BA.debugLine="Sub GetRealSize As LayoutValues";
+ //BA.debugLineNum = 733;BA.debugLine="Dim lv As LayoutValues";
 _lv = new anywheresoftware.b4a.keywords.LayoutValues();
- //BA.debugLineNum = 732;BA.debugLine="Dim p As Phone";
+ //BA.debugLineNum = 734;BA.debugLine="Dim p As Phone";
 _p = new anywheresoftware.b4a.phone.Phone();
- //BA.debugLineNum = 733;BA.debugLine="If p.SdkVersion >= 17 Then";
+ //BA.debugLineNum = 735;BA.debugLine="If p.SdkVersion >= 17 Then";
 if (_p.getSdkVersion()>=17) { 
- //BA.debugLineNum = 734;BA.debugLine="Dim ctxt As JavaObject";
+ //BA.debugLineNum = 736;BA.debugLine="Dim ctxt As JavaObject";
 _ctxt = new anywheresoftware.b4j.object.JavaObject();
- //BA.debugLineNum = 735;BA.debugLine="ctxt.InitializeContext";
+ //BA.debugLineNum = 737;BA.debugLine="ctxt.InitializeContext";
 _ctxt.InitializeContext(processBA);
- //BA.debugLineNum = 736;BA.debugLine="Dim display As JavaObject = ctxt.RunMethodJO(\"ge";
+ //BA.debugLineNum = 738;BA.debugLine="Dim display As JavaObject = ctxt.RunMethodJO(\"ge";
 _display = new anywheresoftware.b4j.object.JavaObject();
 _display.setObject((java.lang.Object)(_ctxt.RunMethodJO("getSystemService",new Object[]{(Object)("window")}).RunMethod("getDefaultDisplay",(Object[])(anywheresoftware.b4a.keywords.Common.Null))));
- //BA.debugLineNum = 737;BA.debugLine="Dim point As JavaObject";
+ //BA.debugLineNum = 739;BA.debugLine="Dim point As JavaObject";
 _point = new anywheresoftware.b4j.object.JavaObject();
- //BA.debugLineNum = 738;BA.debugLine="point.InitializeNewInstance(\"android.graphics.Po";
+ //BA.debugLineNum = 740;BA.debugLine="point.InitializeNewInstance(\"android.graphics.Po";
 _point.InitializeNewInstance("android.graphics.Point",(Object[])(anywheresoftware.b4a.keywords.Common.Null));
- //BA.debugLineNum = 739;BA.debugLine="display.RunMethod(\"getRealSize\", Array(point))";
+ //BA.debugLineNum = 741;BA.debugLine="display.RunMethod(\"getRealSize\", Array(point))";
 _display.RunMethod("getRealSize",new Object[]{(Object)(_point.getObject())});
- //BA.debugLineNum = 740;BA.debugLine="lv.Width = point.GetField(\"x\")";
+ //BA.debugLineNum = 742;BA.debugLine="lv.Width = point.GetField(\"x\")";
 _lv.Width = (int)(BA.ObjectToNumber(_point.GetField("x")));
- //BA.debugLineNum = 741;BA.debugLine="lv.Height = point.GetField(\"y\")";
+ //BA.debugLineNum = 743;BA.debugLine="lv.Height = point.GetField(\"y\")";
 _lv.Height = (int)(BA.ObjectToNumber(_point.GetField("y")));
  }else {
- //BA.debugLineNum = 743;BA.debugLine="lv.Width = 100%x";
+ //BA.debugLineNum = 745;BA.debugLine="lv.Width = 100%x";
 _lv.Width = anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA);
- //BA.debugLineNum = 744;BA.debugLine="lv.Height = 100%y";
+ //BA.debugLineNum = 746;BA.debugLine="lv.Height = 100%y";
 _lv.Height = anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA);
  };
- //BA.debugLineNum = 746;BA.debugLine="lv.Scale = 100dip / 100";
+ //BA.debugLineNum = 748;BA.debugLine="lv.Scale = 100dip / 100";
 _lv.Scale = (float) (anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100))/(double)100);
- //BA.debugLineNum = 747;BA.debugLine="Return lv";
+ //BA.debugLineNum = 749;BA.debugLine="Return lv";
 if (true) return _lv;
- //BA.debugLineNum = 748;BA.debugLine="End Sub";
+ //BA.debugLineNum = 750;BA.debugLine="End Sub";
 return null;
 }
 public static String  _globals() throws Exception{
@@ -1606,157 +1606,160 @@ if (_a.length==9) {
 _timestamp = "";
  //BA.debugLineNum = 666;BA.debugLine="timeStamp = a(0).SubString2(0,2)";
 _timestamp = _a[(int) (0)].substring((int) (0),(int) (2));
- //BA.debugLineNum = 668;BA.debugLine="Select timeStamp";
+ //BA.debugLineNum = 668;BA.debugLine="If IsNumber(a(2)) = False Then Continue";
+if (anywheresoftware.b4a.keywords.Common.IsNumber(_a[(int) (2)])==anywheresoftware.b4a.keywords.Common.False) { 
+if (true) continue;};
+ //BA.debugLineNum = 670;BA.debugLine="Select timeStamp";
 switch (BA.switchObjectToInt(_timestamp,"00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23")) {
 case 0: {
- //BA.debugLineNum = 670;BA.debugLine="If am12 = zeroRange Or am12 = \"\" Then am12 =";
+ //BA.debugLineNum = 672;BA.debugLine="If am12 = zeroRange Or am12 = \"\" Then am12 =";
 if ((mostCurrent._am12).equals(BA.NumberToString(_zerorange)) || (mostCurrent._am12).equals("")) { 
 mostCurrent._am12 = _a[(int) (2)];};
  break; }
 case 1: {
- //BA.debugLineNum = 672;BA.debugLine="If am1 = zeroRange Or am1 = \"\" Then am1 = a(";
+ //BA.debugLineNum = 674;BA.debugLine="If am1 = zeroRange Or am1 = \"\" Then am1 = a(";
 if ((mostCurrent._am1).equals(BA.NumberToString(_zerorange)) || (mostCurrent._am1).equals("")) { 
 mostCurrent._am1 = _a[(int) (2)];};
  break; }
 case 2: {
- //BA.debugLineNum = 674;BA.debugLine="If am2 = zeroRange Or am2 = \"\" Then am2 = a(";
+ //BA.debugLineNum = 676;BA.debugLine="If am2 = zeroRange Or am2 = \"\" Then am2 = a(";
 if ((mostCurrent._am2).equals(BA.NumberToString(_zerorange)) || (mostCurrent._am2).equals("")) { 
 mostCurrent._am2 = _a[(int) (2)];};
  break; }
 case 3: {
- //BA.debugLineNum = 676;BA.debugLine="If am3 = zeroRange Or am3 = \"\" Then am3 = a(";
+ //BA.debugLineNum = 678;BA.debugLine="If am3 = zeroRange Or am3 = \"\" Then am3 = a(";
 if ((mostCurrent._am3).equals(BA.NumberToString(_zerorange)) || (mostCurrent._am3).equals("")) { 
 mostCurrent._am3 = _a[(int) (2)];};
  break; }
 case 4: {
- //BA.debugLineNum = 678;BA.debugLine="If am4 = zeroRange Or am4 = \"\" Then am4 = a(";
+ //BA.debugLineNum = 680;BA.debugLine="If am4 = zeroRange Or am4 = \"\" Then am4 = a(";
 if ((mostCurrent._am4).equals(BA.NumberToString(_zerorange)) || (mostCurrent._am4).equals("")) { 
 mostCurrent._am4 = _a[(int) (2)];};
  break; }
 case 5: {
- //BA.debugLineNum = 680;BA.debugLine="If am5 = zeroRange Or am5 = \"\" Then am5 = a(";
+ //BA.debugLineNum = 682;BA.debugLine="If am5 = zeroRange Or am5 = \"\" Then am5 = a(";
 if ((mostCurrent._am5).equals(BA.NumberToString(_zerorange)) || (mostCurrent._am5).equals("")) { 
 mostCurrent._am5 = _a[(int) (2)];};
  break; }
 case 6: {
- //BA.debugLineNum = 682;BA.debugLine="If am6 = zeroRange Or am6 = \"\" Then am6 = a(";
+ //BA.debugLineNum = 684;BA.debugLine="If am6 = zeroRange Or am6 = \"\" Then am6 = a(";
 if ((mostCurrent._am6).equals(BA.NumberToString(_zerorange)) || (mostCurrent._am6).equals("")) { 
 mostCurrent._am6 = _a[(int) (2)];};
  break; }
 case 7: {
- //BA.debugLineNum = 684;BA.debugLine="If am7 = zeroRange Or am7 = \"\" Then am7 = a(";
+ //BA.debugLineNum = 686;BA.debugLine="If am7 = zeroRange Or am7 = \"\" Then am7 = a(";
 if ((mostCurrent._am7).equals(BA.NumberToString(_zerorange)) || (mostCurrent._am7).equals("")) { 
 mostCurrent._am7 = _a[(int) (2)];};
  break; }
 case 8: {
- //BA.debugLineNum = 686;BA.debugLine="If am8 = zeroRange Or am8 = \"\" Then am8 = a(";
+ //BA.debugLineNum = 688;BA.debugLine="If am8 = zeroRange Or am8 = \"\" Then am8 = a(";
 if ((mostCurrent._am8).equals(BA.NumberToString(_zerorange)) || (mostCurrent._am8).equals("")) { 
 mostCurrent._am8 = _a[(int) (2)];};
  break; }
 case 9: {
- //BA.debugLineNum = 688;BA.debugLine="If am9 = zeroRange Or am9 = \"\" Then am9 = a(";
+ //BA.debugLineNum = 690;BA.debugLine="If am9 = zeroRange Or am9 = \"\" Then am9 = a(";
 if ((mostCurrent._am9).equals(BA.NumberToString(_zerorange)) || (mostCurrent._am9).equals("")) { 
 mostCurrent._am9 = _a[(int) (2)];};
  break; }
 case 10: {
- //BA.debugLineNum = 690;BA.debugLine="If am10 = zeroRange Or am10 = \"\" Then am10 =";
+ //BA.debugLineNum = 692;BA.debugLine="If am10 = zeroRange Or am10 = \"\" Then am10 =";
 if ((mostCurrent._am10).equals(BA.NumberToString(_zerorange)) || (mostCurrent._am10).equals("")) { 
 mostCurrent._am10 = _a[(int) (2)];};
  break; }
 case 11: {
- //BA.debugLineNum = 692;BA.debugLine="If am11 = zeroRange Or am11 = \"\" Then am11 =";
+ //BA.debugLineNum = 694;BA.debugLine="If am11 = zeroRange Or am11 = \"\" Then am11 =";
 if ((mostCurrent._am11).equals(BA.NumberToString(_zerorange)) || (mostCurrent._am11).equals("")) { 
 mostCurrent._am11 = _a[(int) (2)];};
  break; }
 case 12: {
- //BA.debugLineNum = 694;BA.debugLine="If pm12 = zeroRange Or pm12 = \"\" Then pm12 =";
+ //BA.debugLineNum = 696;BA.debugLine="If pm12 = zeroRange Or pm12 = \"\" Then pm12 =";
 if ((mostCurrent._pm12).equals(BA.NumberToString(_zerorange)) || (mostCurrent._pm12).equals("")) { 
 mostCurrent._pm12 = _a[(int) (2)];};
  break; }
 case 13: {
- //BA.debugLineNum = 696;BA.debugLine="If pm1 = zeroRange Or pm1 = \"\" Then pm1 = a(";
+ //BA.debugLineNum = 698;BA.debugLine="If pm1 = zeroRange Or pm1 = \"\" Then pm1 = a(";
 if ((mostCurrent._pm1).equals(BA.NumberToString(_zerorange)) || (mostCurrent._pm1).equals("")) { 
 mostCurrent._pm1 = _a[(int) (2)];};
  break; }
 case 14: {
- //BA.debugLineNum = 698;BA.debugLine="If pm2 = zeroRange Or pm2 = \"\" Then pm2 = a(";
+ //BA.debugLineNum = 700;BA.debugLine="If pm2 = zeroRange Or pm2 = \"\" Then pm2 = a(";
 if ((mostCurrent._pm2).equals(BA.NumberToString(_zerorange)) || (mostCurrent._pm2).equals("")) { 
 mostCurrent._pm2 = _a[(int) (2)];};
  break; }
 case 15: {
- //BA.debugLineNum = 700;BA.debugLine="If pm3 = zeroRange Or pm3 = \"\" Then pm3 = a(";
+ //BA.debugLineNum = 702;BA.debugLine="If pm3 = zeroRange Or pm3 = \"\" Then pm3 = a(";
 if ((mostCurrent._pm3).equals(BA.NumberToString(_zerorange)) || (mostCurrent._pm3).equals("")) { 
 mostCurrent._pm3 = _a[(int) (2)];};
  break; }
 case 16: {
- //BA.debugLineNum = 702;BA.debugLine="If pm4 = zeroRange Or pm4 = \"\" Then pm4 = a(";
+ //BA.debugLineNum = 704;BA.debugLine="If pm4 = zeroRange Or pm4 = \"\" Then pm4 = a(";
 if ((mostCurrent._pm4).equals(BA.NumberToString(_zerorange)) || (mostCurrent._pm4).equals("")) { 
 mostCurrent._pm4 = _a[(int) (2)];};
  break; }
 case 17: {
- //BA.debugLineNum = 704;BA.debugLine="If pm5 = zeroRange Or pm5 = \"\" Then pm5 = a(";
+ //BA.debugLineNum = 706;BA.debugLine="If pm5 = zeroRange Or pm5 = \"\" Then pm5 = a(";
 if ((mostCurrent._pm5).equals(BA.NumberToString(_zerorange)) || (mostCurrent._pm5).equals("")) { 
 mostCurrent._pm5 = _a[(int) (2)];};
  break; }
 case 18: {
- //BA.debugLineNum = 706;BA.debugLine="If pm6 = zeroRange Or pm6 = \"\" Then pm6 = a(";
+ //BA.debugLineNum = 708;BA.debugLine="If pm6 = zeroRange Or pm6 = \"\" Then pm6 = a(";
 if ((mostCurrent._pm6).equals(BA.NumberToString(_zerorange)) || (mostCurrent._pm6).equals("")) { 
 mostCurrent._pm6 = _a[(int) (2)];};
  break; }
 case 19: {
- //BA.debugLineNum = 708;BA.debugLine="If pm7 = zeroRange Or pm7 = \"\" Then pm7 = a(";
+ //BA.debugLineNum = 710;BA.debugLine="If pm7 = zeroRange Or pm7 = \"\" Then pm7 = a(";
 if ((mostCurrent._pm7).equals(BA.NumberToString(_zerorange)) || (mostCurrent._pm7).equals("")) { 
 mostCurrent._pm7 = _a[(int) (2)];};
  break; }
 case 20: {
- //BA.debugLineNum = 710;BA.debugLine="If pm8 = zeroRange Or pm8 = \"\" Then pm8 = a(";
+ //BA.debugLineNum = 712;BA.debugLine="If pm8 = zeroRange Or pm8 = \"\" Then pm8 = a(";
 if ((mostCurrent._pm8).equals(BA.NumberToString(_zerorange)) || (mostCurrent._pm8).equals("")) { 
 mostCurrent._pm8 = _a[(int) (2)];};
  break; }
 case 21: {
- //BA.debugLineNum = 712;BA.debugLine="If pm9 = zeroRange Or pm9 = \"\" Then pm9 = a(";
+ //BA.debugLineNum = 714;BA.debugLine="If pm9 = zeroRange Or pm9 = \"\" Then pm9 = a(";
 if ((mostCurrent._pm9).equals(BA.NumberToString(_zerorange)) || (mostCurrent._pm9).equals("")) { 
 mostCurrent._pm9 = _a[(int) (2)];};
  break; }
 case 22: {
- //BA.debugLineNum = 714;BA.debugLine="If pm10 = zeroRange Or pm10 = \"\" Then pm10 =";
+ //BA.debugLineNum = 716;BA.debugLine="If pm10 = zeroRange Or pm10 = \"\" Then pm10 =";
 if ((mostCurrent._pm10).equals(BA.NumberToString(_zerorange)) || (mostCurrent._pm10).equals("")) { 
 mostCurrent._pm10 = _a[(int) (2)];};
  break; }
 case 23: {
- //BA.debugLineNum = 716;BA.debugLine="If pm11 = zeroRange Or pm11 = \"\" Then pm11 =";
+ //BA.debugLineNum = 718;BA.debugLine="If pm11 = zeroRange Or pm11 = \"\" Then pm11 =";
 if ((mostCurrent._pm11).equals(BA.NumberToString(_zerorange)) || (mostCurrent._pm11).equals("")) { 
 mostCurrent._pm11 = _a[(int) (2)];};
  break; }
 }
 ;
- //BA.debugLineNum = 718;BA.debugLine="If fileDay = \"Today\" Then";
+ //BA.debugLineNum = 720;BA.debugLine="If fileDay = \"Today\" Then";
 if ((_fileday).equals("Today")) { 
- //BA.debugLineNum = 719;BA.debugLine="tempRightNow = a(2)";
+ //BA.debugLineNum = 721;BA.debugLine="tempRightNow = a(2)";
 mostCurrent._temprightnow = _a[(int) (2)];
  };
  };
  }
 ;
- //BA.debugLineNum = 724;BA.debugLine="TextReader1.Close";
+ //BA.debugLineNum = 726;BA.debugLine="TextReader1.Close";
 _textreader1.Close();
  } 
-       catch (Exception e114) {
-			processBA.setLastException(e114); //BA.debugLineNum = 726;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("3393337",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+       catch (Exception e115) {
+			processBA.setLastException(e115); //BA.debugLineNum = 728;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("0393339",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
- //BA.debugLineNum = 728;BA.debugLine="End Sub";
+ //BA.debugLineNum = 730;BA.debugLine="End Sub";
 return "";
 }
 public static String  _timer1_tick() throws Exception{
- //BA.debugLineNum = 763;BA.debugLine="Sub Timer1_Tick";
- //BA.debugLineNum = 764;BA.debugLine="Activity.RequestFocus";
+ //BA.debugLineNum = 765;BA.debugLine="Sub Timer1_Tick";
+ //BA.debugLineNum = 766;BA.debugLine="Activity.RequestFocus";
 mostCurrent._activity.RequestFocus();
- //BA.debugLineNum = 765;BA.debugLine="lc1.RemoveView";
+ //BA.debugLineNum = 767;BA.debugLine="lc1.RemoveView";
 mostCurrent._lc1.RemoveView();
- //BA.debugLineNum = 766;BA.debugLine="Activity_Create(False)";
+ //BA.debugLineNum = 768;BA.debugLine="Activity_Create(False)";
 _activity_create(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 767;BA.debugLine="End Sub";
+ //BA.debugLineNum = 769;BA.debugLine="End Sub";
 return "";
 }
 }
