@@ -84,14 +84,14 @@ public String  _designercreateview(Object _base,anywheresoftware.b4a.objects.Lab
 anywheresoftware.b4a.objects.B4XViewWrapper _xlbl = null;
  //BA.debugLineNum = 32;BA.debugLine="Public Sub DesignerCreateView (Base As Object, Lbl";
  //BA.debugLineNum = 33;BA.debugLine="mBase = Base";
-_mbase.setObject((java.lang.Object)(_base));
+_mbase = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_base));
  //BA.debugLineNum = 34;BA.debugLine="Tag = mBase.Tag : mBase.Tag = Me";
 _tag = _mbase.getTag();
  //BA.debugLineNum = 34;BA.debugLine="Tag = mBase.Tag : mBase.Tag = Me";
 _mbase.setTag(this);
  //BA.debugLineNum = 35;BA.debugLine="Dim xlbl As B4XView = Lbl";
 _xlbl = new anywheresoftware.b4a.objects.B4XViewWrapper();
-_xlbl.setObject((java.lang.Object)(_lbl.getObject()));
+_xlbl = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_lbl.getObject()));
  //BA.debugLineNum = 42;BA.debugLine="cmbBox.Initialize(\"cmbBox\")";
 _cmbbox.Initialize(ba,"cmbBox");
  //BA.debugLineNum = 43;BA.debugLine="cmbBox.TextSize = xlbl.TextSize";

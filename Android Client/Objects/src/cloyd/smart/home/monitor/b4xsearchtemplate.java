@@ -93,7 +93,7 @@ _cs.Append(BA.ObjectToCharSequence(_item.substring((int) (_x+_full.length()))));
 if (_itemscache.getSize()>0) { 
  //BA.debugLineNum = 143;BA.debugLine="Dim p As B4XView = ItemsCache.Get(ItemsCache.Si";
 _p = new anywheresoftware.b4a.objects.B4XViewWrapper();
-_p.setObject((java.lang.Object)(_itemscache.Get((int) (_itemscache.getSize()-1))));
+_p = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_itemscache.Get((int) (_itemscache.getSize()-1))));
  //BA.debugLineNum = 144;BA.debugLine="ItemsCache.RemoveAt(ItemsCache.Size - 1)";
 _itemscache.RemoveAt((int) (_itemscache.getSize()-1));
  //BA.debugLineNum = 146;BA.debugLine="p.GetView(0).Text = cs";
@@ -225,7 +225,7 @@ _substringlist.Initialize();
 _ime.Initialize("");
  //BA.debugLineNum = 47;BA.debugLine="Dim jo As JavaObject = SearchField.TextField";
 _jo = new anywheresoftware.b4j.object.JavaObject();
-_jo.setObject((java.lang.Object)(_searchfield._gettextfield /*anywheresoftware.b4a.objects.B4XViewWrapper*/ ().getObject()));
+_jo = (anywheresoftware.b4j.object.JavaObject) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.object.JavaObject(), (java.lang.Object)(_searchfield._gettextfield /*anywheresoftware.b4a.objects.B4XViewWrapper*/ ().getObject()));
  //BA.debugLineNum = 48;BA.debugLine="jo.RunMethod(\"setImeOptions\", Array(Bit.Or(335544";
 _jo.RunMethod("setImeOptions",new Object[]{(Object)(__c.Bit.Or((int) (33554432),(int) (6)))});
  //BA.debugLineNum = 50;BA.debugLine="End Sub";
@@ -278,11 +278,12 @@ _obj[i0] = new Object();
  //BA.debugLineNum = 227;BA.debugLine="obj = Index";
 _obj = (Object[])(_index);
  //BA.debugLineNum = 228;BA.debugLine="prefixList = obj(0)";
-_prefixlist.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_obj[(int) (0)]));
+_prefixlist = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (anywheresoftware.b4a.objects.collections.Map.MyMap)(_obj[(int) (0)]));
  //BA.debugLineNum = 229;BA.debugLine="substringList = obj(1)";
-_substringlist.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_obj[(int) (1)]));
- //BA.debugLineNum = 230;BA.debugLine="AllItems = obj(2)";
-_allitems.setObject((java.util.List)(_obj[(int) (2)]));
+_substringlist = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (anywheresoftware.b4a.objects.collections.Map.MyMap)(_obj[(int) (1)]));
+ //BA.debugLineNum = 230;BA.debugLine="Dim AllItems As List = obj(2)";
+_allitems = new anywheresoftware.b4a.objects.collections.List();
+_allitems = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_obj[(int) (2)]));
  //BA.debugLineNum = 231;BA.debugLine="End Sub";
 return "";
 }
@@ -351,7 +352,7 @@ _m = _prefixlist;}
 else {
 _m = _substringlist;};
  //BA.debugLineNum = 208;BA.debugLine="li = m.Get(str)";
-_li.setObject((java.util.List)(_m.Get((Object)(_str))));
+_li = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_m.Get((Object)(_str))));
  //BA.debugLineNum = 209;BA.debugLine="If li.IsInitialized = False Then";
 if (_li.IsInitialized()==__c.False) { 
  //BA.debugLineNum = 210;BA.debugLine="li.Initialize";
@@ -371,7 +372,7 @@ _count = (int) (_count+1);
  }
 };
  //BA.debugLineNum = 219;BA.debugLine="Log(\"Index time: \" & (DateTime.Now - startTime) &";
-__c.LogImpl("926935329","Index time: "+BA.NumberToString((__c.DateTime.getNow()-_starttime))+" ms ("+BA.NumberToString(_items.getSize())+" Items)",0);
+__c.LogImpl("915335457","Index time: "+BA.NumberToString((__c.DateTime.getNow()-_starttime))+" ms ("+BA.NumberToString(_items.getSize())+" Items)",0);
  //BA.debugLineNum = 220;BA.debugLine="AllItems = Items";
 _allitems = _items;
  //BA.debugLineNum = 221;BA.debugLine="Return Array(prefixList, substringList, AllItems)";

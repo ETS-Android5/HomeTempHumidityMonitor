@@ -188,7 +188,7 @@ _setavg(_bc,_x,_y,_clrs,_temp);
  }
 };
  //BA.debugLineNum = 320;BA.debugLine="Log(\"Time: \" & (DateTime.Now - n))";
-__c.LogImpl("920381732","Time: "+BA.NumberToString((__c.DateTime.getNow()-_n)),0);
+__c.LogImpl("98650788","Time: "+BA.NumberToString((__c.DateTime.getNow()-_n)),0);
  //BA.debugLineNum = 321;BA.debugLine="Return bc";
 if (true) return _bc;
  //BA.debugLineNum = 322;BA.debugLine="End Sub";
@@ -199,7 +199,7 @@ anywheresoftware.b4a.objects.B4XViewWrapper _b = null;
  //BA.debugLineNum = 230;BA.debugLine="Private Sub Button_Click";
  //BA.debugLineNum = 231;BA.debugLine="Dim b As B4XView = Sender";
 _b = new anywheresoftware.b4a.objects.B4XViewWrapper();
-_b.setObject((java.lang.Object)(__c.Sender(ba)));
+_b = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(__c.Sender(ba)));
  //BA.debugLineNum = 232;BA.debugLine="If ButtonsState.GetDefault(b.Tag, True) = False T";
 if ((_buttonsstate.GetDefault(_b.getTag(),(Object)(__c.True))).equals((Object)(__c.False))) { 
 if (true) return "";};
@@ -299,7 +299,7 @@ _btn = new anywheresoftware.b4a.objects.LabelWrapper();
 _btn.Initialize(ba,"Button");
  //BA.debugLineNum = 198;BA.debugLine="Dim xbtn As B4XView = btn";
 _xbtn = new anywheresoftware.b4a.objects.B4XViewWrapper();
-_xbtn.setObject((java.lang.Object)(_btn.getObject()));
+_xbtn = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_btn.getObject()));
  //BA.debugLineNum = 199;BA.debugLine="InternalSetTextOrCSBuilderToLabel(xbtn, Text)";
 _internalsettextorcsbuildertolabel(_xbtn,_text);
  //BA.debugLineNum = 200;BA.debugLine="xbtn.Tag = Code";
@@ -333,8 +333,8 @@ final int groupLen1 = group1.getSize()
 ;int index1 = 0;
 ;
 for (; index1 < groupLen1;index1++){
-_b.setObject((java.lang.Object)(group1.Get(index1)));
- //BA.debugLineNum = 214;BA.debugLine="If b.Tag = ResultCode Then Return b";
+_b = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(group1.Get(index1)));
+ //BA.debugLineNum = 214;BA.debugLine="If b.Tag = ResultCode Then Return b 'ignore";
 if ((_b.getTag()).equals((Object)(_resultcode))) { 
 if (true) return _b;};
  }
@@ -542,7 +542,7 @@ _lbl.Initialize(ba,"");
 _lbl.setSingleLine(parent.__c.False);
  //BA.debugLineNum = 84;BA.debugLine="Dim xlbl As B4XView = lbl";
 _xlbl = new anywheresoftware.b4a.objects.B4XViewWrapper();
-_xlbl.setObject((java.lang.Object)(_lbl.getObject()));
+_xlbl = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_lbl.getObject()));
  //BA.debugLineNum = 85;BA.debugLine="p.AddView(xlbl, 5dip, 0, p.Width - 10dip, p.Heigh";
 _p.AddView((android.view.View)(_xlbl.getObject()),parent.__c.DipToCurrent((int) (5)),(int) (0),(int) (_p.getWidth()-parent.__c.DipToCurrent((int) (10))),_p.getHeight());
  //BA.debugLineNum = 86;BA.debugLine="xlbl.TextColor = BodyTextColor";
@@ -647,7 +647,7 @@ case 60:
 this.state = 8;
 if (index1 < groupLen1) {
 this.state = 3;
-_v.setObject((java.lang.Object)(group1.Get(index1)));}
+_v = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(group1.Get(index1)));}
 if (true) break;
 
 case 61:
@@ -717,7 +717,7 @@ _iv = new anywheresoftware.b4a.objects.ImageViewWrapper();
  //BA.debugLineNum = 106;BA.debugLine="iv.Initialize(\"\")";
 _iv.Initialize(ba,"");
  //BA.debugLineNum = 107;BA.debugLine="BlurImageView = iv";
-parent._blurimageview.setObject((java.lang.Object)(_iv.getObject()));
+parent._blurimageview = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_iv.getObject()));
  //BA.debugLineNum = 108;BA.debugLine="Background.AddView(BlurImageView, 0, 0, Backgrou";
 parent._background.AddView((android.view.View)(parent._blurimageview.getObject()),(int) (0),(int) (0),parent._background.getWidth(),parent._background.getHeight());
  //BA.debugLineNum = 109;BA.debugLine="Background.Color = xui.Color_Transparent";
@@ -737,7 +737,7 @@ this.state = 15;
 ;
  //BA.debugLineNum = 114;BA.debugLine="Dim p As Panel = Background";
 _p = new anywheresoftware.b4a.objects.PanelWrapper();
-_p.setObject((android.view.ViewGroup)(parent._background.getObject()));
+_p = (anywheresoftware.b4a.objects.PanelWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.PanelWrapper(), (android.view.ViewGroup)(parent._background.getObject()));
  //BA.debugLineNum = 115;BA.debugLine="p.Elevation = 4dip";
 _p.setElevation((float) (parent.__c.DipToCurrent((int) (4))));
  //BA.debugLineNum = 117;BA.debugLine="mParent.AddView(Background, 0, 0, mParent.Width,";
@@ -958,7 +958,7 @@ _lbl = new anywheresoftware.b4a.objects.LabelWrapper();
 _lbl.Initialize(ba,"");
  //BA.debugLineNum = 161;BA.debugLine="Dim xlbl As B4XView = lbl";
 _xlbl = new anywheresoftware.b4a.objects.B4XViewWrapper();
-_xlbl.setObject((java.lang.Object)(_lbl.getObject()));
+_xlbl = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_lbl.getObject()));
  //BA.debugLineNum = 162;BA.debugLine="InternalSetTextOrCSBuilderToLabel(xlbl, Title)";
 parent._internalsettextorcsbuildertolabel(_xlbl,parent._title);
  //BA.debugLineNum = 163;BA.debugLine="xlbl.TextColor = TitleBarTextColor";
@@ -999,7 +999,7 @@ case 64:
 this.state = 51;
 if (index74 < groupLen74) {
 this.state = 50;
-_v.setObject((java.lang.Object)(group74.Get(index74)));}
+_v = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(group74.Get(index74)));}
 if (true) break;
 
 case 65:
@@ -1047,7 +1047,7 @@ case 67:
 this.state = 55;
 if (index78 < groupLen78) {
 this.state = 54;
-_v.setObject((java.lang.Object)(group78.Get(index78)));}
+_v = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(group78.Get(index78)));}
 if (true) break;
 
 case 68:
@@ -1145,7 +1145,7 @@ case 0:
 this.state = -1;
  //BA.debugLineNum = 63;BA.debugLine="Dim content As B4XView = CallSub2(DialogTemplate,";
 _content = new anywheresoftware.b4a.objects.B4XViewWrapper();
-_content.setObject((java.lang.Object)(parent.__c.CallSubNew2(ba,_dialogtemplate,"GetPanel",parent)));
+_content = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.__c.CallSubNew2(ba,_dialogtemplate,"GetPanel",parent)));
  //BA.debugLineNum = 64;BA.debugLine="CallSub2(DialogTemplate, \"Show\", Me)";
 parent.__c.CallSubNew2(ba,_dialogtemplate,"Show",parent);
  //BA.debugLineNum = 65;BA.debugLine="Wait For (ShowCustom(content , Yes, No, Cancel))";

@@ -101,7 +101,7 @@ public String  _designercreateview(Object _base,anywheresoftware.b4a.objects.Lab
 anywheresoftware.b4a.objects.ImageViewWrapper _imageview1 = null;
  //BA.debugLineNum = 26;BA.debugLine="Public Sub DesignerCreateView (Base As Object, Lbl";
  //BA.debugLineNum = 27;BA.debugLine="mBase = Base";
-_mbase.setObject((java.lang.Object)(_base));
+_mbase = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_base));
  //BA.debugLineNum = 28;BA.debugLine="mBase.BringToFront";
 _mbase.BringToFront();
  //BA.debugLineNum = 29;BA.debugLine="clr = xui.PaintOrColorToColor(Props.Get(\"Color\"))";
@@ -113,7 +113,7 @@ _imageview1 = new anywheresoftware.b4a.objects.ImageViewWrapper();
  //BA.debugLineNum = 32;BA.debugLine="ImageView1.Initialize(\"\")";
 _imageview1.Initialize(ba,"");
  //BA.debugLineNum = 33;BA.debugLine="iv = ImageView1";
-_iv.setObject((java.lang.Object)(_imageview1.getObject()));
+_iv = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_imageview1.getObject()));
  //BA.debugLineNum = 34;BA.debugLine="mBase.AddView(iv, 0, 0, 0, 0)";
 _mbase.AddView((android.view.View)(_iv.getObject()),(int) (0),(int) (0),(int) (0),(int) (0));
  //BA.debugLineNum = 35;BA.debugLine="If mBase.Width > 0 Then";

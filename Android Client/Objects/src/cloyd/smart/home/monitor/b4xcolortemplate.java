@@ -314,7 +314,7 @@ _iv = new anywheresoftware.b4a.objects.ImageViewWrapper();
  //BA.debugLineNum = 41;BA.debugLine="iv.Initialize(\"\")";
 _iv.Initialize(ba,"");
  //BA.debugLineNum = 42;BA.debugLine="cpp.iv = iv";
-_cpp.iv /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setObject((java.lang.Object)(_iv.getObject()));
+_cpp.iv /*anywheresoftware.b4a.objects.B4XViewWrapper*/  = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_iv.getObject()));
  //BA.debugLineNum = 43;BA.debugLine="Dim overlay As B4XView = xui.CreatePanel(EventNam";
 _overlay = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _overlay = _xui.CreatePanel(ba,_eventname);

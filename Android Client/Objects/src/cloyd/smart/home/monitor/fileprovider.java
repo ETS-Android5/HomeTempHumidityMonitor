@@ -97,7 +97,7 @@ _usefileprovider = __c.False;
 _sharedfolder = _rp.GetSafeDirDefaultExternal("shared");
  };
  //BA.debugLineNum = 18;BA.debugLine="Log($\"Using FileProvider? ${UseFileProvider}\"$)";
-__c.LogImpl("29961482",("Using FileProvider? "+__c.SmartStringFormatter("",(Object)(_usefileprovider))+""),0);
+__c.LogImpl("430801930",("Using FileProvider? "+__c.SmartStringFormatter("",(Object)(_usefileprovider))+""),0);
  //BA.debugLineNum = 19;BA.debugLine="End Sub";
 return "";
 }
@@ -106,7 +106,7 @@ anywheresoftware.b4j.object.JavaObject _jo = null;
  //BA.debugLineNum = 40;BA.debugLine="Public Sub SetFileUriAsIntentData (Intent As Inten";
  //BA.debugLineNum = 41;BA.debugLine="Dim jo As JavaObject = Intent";
 _jo = new anywheresoftware.b4j.object.JavaObject();
-_jo.setObject((java.lang.Object)(_intent.getObject()));
+_jo = (anywheresoftware.b4j.object.JavaObject) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.object.JavaObject(), (java.lang.Object)(_intent.getObject()));
  //BA.debugLineNum = 42;BA.debugLine="jo.RunMethod(\"setData\", Array(GetFileUri(FileName";
 _jo.RunMethod("setData",new Object[]{_getfileuri(_filename)});
  //BA.debugLineNum = 43;BA.debugLine="Intent.Flags = Bit.Or(Intent.Flags, 1) 'FLAG_GRAN";

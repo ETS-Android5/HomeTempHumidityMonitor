@@ -78,7 +78,7 @@ Object _result = null;
  //BA.debugLineNum = 22;BA.debugLine="Public Sub Get(Key As String) As Object";
  //BA.debugLineNum = 23;BA.debugLine="Dim rs As ResultSet = sql1.ExecQuery2(\"SELECT val";
 _rs = new anywheresoftware.b4a.sql.SQL.ResultSetWrapper();
-_rs.setObject((android.database.Cursor)(_sql1.ExecQuery2("SELECT value FROM main WHERE key = ?",new String[]{_key})));
+_rs = (anywheresoftware.b4a.sql.SQL.ResultSetWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.sql.SQL.ResultSetWrapper(), (android.database.Cursor)(_sql1.ExecQuery2("SELECT value FROM main WHERE key = ?",new String[]{_key})));
  //BA.debugLineNum = 24;BA.debugLine="Dim result As Object = Null";
 _result = __c.Null;
  //BA.debugLineNum = 25;BA.debugLine="If rs.NextRow Then";
@@ -338,7 +338,7 @@ case 23:
 //C
 this.state = 24;
  //BA.debugLineNum = 60;BA.debugLine="Log(LastException)";
-parent.__c.LogImpl("210878999",BA.ObjectToString(parent.__c.LastException(parent.getActivityBA())),0);
+parent.__c.LogImpl("431719447",BA.ObjectToString(parent.__c.LastException(parent.getActivityBA())),0);
  if (true) break;
 
 case 24:
@@ -378,7 +378,7 @@ anywheresoftware.b4a.objects.collections.List _res = null;
  //BA.debugLineNum = 138;BA.debugLine="Public Sub ListKeys As List";
  //BA.debugLineNum = 139;BA.debugLine="Dim c As ResultSet = sql1.ExecQuery(\"SELECT key F";
 _c = new anywheresoftware.b4a.sql.SQL.ResultSetWrapper();
-_c.setObject((android.database.Cursor)(_sql1.ExecQuery("SELECT key FROM main order by key desc")));
+_c = (anywheresoftware.b4a.sql.SQL.ResultSetWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.sql.SQL.ResultSetWrapper(), (android.database.Cursor)(_sql1.ExecQuery("SELECT key FROM main order by key desc")));
  //BA.debugLineNum = 140;BA.debugLine="Dim res As List";
 _res = new anywheresoftware.b4a.objects.collections.List();
  //BA.debugLineNum = 141;BA.debugLine="res.Initialize";
@@ -527,7 +527,7 @@ case 8:
 //C
 this.state = 9;
  //BA.debugLineNum = 76;BA.debugLine="Log(\"Failed to serialize object: \" & Map.Get(ke";
-parent.__c.LogImpl("210944520","Failed to serialize object: "+BA.ObjectToString(_map.Get((Object)(_key))),0);
+parent.__c.LogImpl("431784968","Failed to serialize object: "+BA.ObjectToString(_map.Get((Object)(_key))),0);
  if (true) break;
 
 case 9:

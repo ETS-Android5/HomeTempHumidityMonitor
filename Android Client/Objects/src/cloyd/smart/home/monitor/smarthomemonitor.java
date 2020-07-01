@@ -206,12 +206,12 @@ _channel.InitializeNewInstance("android.app.NotificationChannel",new Object[]{(O
  //BA.debugLineNum = 580;BA.debugLine="Channel.RunMethod(\"setShowBadge\", Array(ShowBad";
 _channel.RunMethod("setShowBadge",new Object[]{(Object)(_showbadge)});
  //BA.debugLineNum = 581;BA.debugLine="manager = ctxt.RunMethod(\"getSystemService\", Ar";
-_manager.setObject((java.lang.Object)(_ctxt.RunMethod("getSystemService",new Object[]{(Object)("notification")})));
+_manager = (anywheresoftware.b4j.object.JavaObject) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.object.JavaObject(), (java.lang.Object)(_ctxt.RunMethod("getSystemService",new Object[]{(Object)("notification")})));
  //BA.debugLineNum = 582;BA.debugLine="manager.RunMethod(\"createNotificationChannel\",";
 _manager.RunMethod("createNotificationChannel",new Object[]{(Object)(_channel.getObject())});
  //BA.debugLineNum = 583;BA.debugLine="Dim jo As JavaObject = nb";
 _jo = new anywheresoftware.b4j.object.JavaObject();
-_jo.setObject((java.lang.Object)(_nb.getObject()));
+_jo = (anywheresoftware.b4j.object.JavaObject) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.object.JavaObject(), (java.lang.Object)(_nb.getObject()));
  //BA.debugLineNum = 584;BA.debugLine="jo.RunMethod(\"setChannelId\", Array(ChannelName)";
 _jo.RunMethod("setChannelId",new Object[]{(Object)(_channelname)});
  };
@@ -405,7 +405,7 @@ _fw1.Close();
  } 
        catch (Exception e20) {
 			processBA.setLastException(e20); //BA.debugLineNum = 540;BA.debugLine="Log(\"Error in Sub LogEvent: \" & LastException.Me";
-anywheresoftware.b4a.keywords.Common.LogImpl("26619162","Error in Sub LogEvent: "+anywheresoftware.b4a.keywords.Common.LastException(processBA).getMessage(),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("427459610","Error in Sub LogEvent: "+anywheresoftware.b4a.keywords.Common.LastException(processBA).getMessage(),0);
  //BA.debugLineNum = 541;BA.debugLine="ToastMessageShow(LastException,False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(processBA).getObject()),anywheresoftware.b4a.keywords.Common.False);
  };
@@ -430,7 +430,7 @@ _mqtt.Connect2((org.eclipse.paho.client.mqttv3.MqttConnectOptions)(_connopt.getO
  } 
        catch (Exception e8) {
 			processBA.setLastException(e8); //BA.debugLineNum = 67;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("26357001",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("427197449",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  };
  //BA.debugLineNum = 69;BA.debugLine="End Sub";
 return "";
@@ -441,7 +441,7 @@ public static String  _mqtt_connected(boolean _success) throws Exception{
 try { //BA.debugLineNum = 73;BA.debugLine="If Success = False Then";
 if (_success==anywheresoftware.b4a.keywords.Common.False) { 
  //BA.debugLineNum = 74;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("26422531",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("427262979",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  //BA.debugLineNum = 75;BA.debugLine="MQTT_Connect";
 _mqtt_connect();
  }else {
@@ -459,7 +459,7 @@ _mqtt.Subscribe("HumidityAddValue",(int) (0));
  } 
        catch (Exception e13) {
 			processBA.setLastException(e13); //BA.debugLineNum = 84;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("26422541",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("427262989",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  //BA.debugLineNum = 85;BA.debugLine="ToastMessageShow(LastException,False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(processBA).getObject()),anywheresoftware.b4a.keywords.Common.False);
  };
@@ -474,7 +474,7 @@ _mqtt_connect();
  } 
        catch (Exception e4) {
 			processBA.setLastException(e4); //BA.debugLineNum = 94;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("26488068",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("427328516",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  //BA.debugLineNum = 95;BA.debugLine="ToastMessageShow(LastException,False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(processBA).getObject()),anywheresoftware.b4a.keywords.Common.False);
  };
@@ -1123,7 +1123,7 @@ _n.Cancel((int) (732));
  } 
        catch (Exception e345) {
 			processBA.setLastException(e345); //BA.debugLineNum = 486;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("26553987",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("427394435",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  //BA.debugLineNum = 488;BA.debugLine="Select sensorInTrouble";
 switch (BA.switchObjectToInt(_sensorintrouble,"TempHumidityBasement","TempHumidity","AirQuality","AirQualityBasement")) {
 case 0: {

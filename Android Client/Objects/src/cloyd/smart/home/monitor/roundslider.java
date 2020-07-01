@@ -158,7 +158,7 @@ return "";
 public String  _designercreateview(Object _base,anywheresoftware.b4a.objects.LabelWrapper _lbl,anywheresoftware.b4a.objects.collections.Map _props) throws Exception{
  //BA.debugLineNum = 33;BA.debugLine="Public Sub DesignerCreateView (Base As Object, Lbl";
  //BA.debugLineNum = 34;BA.debugLine="mBase = Base";
-_mbase.setObject((java.lang.Object)(_base));
+_mbase = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_base));
  //BA.debugLineNum = 35;BA.debugLine="Tag = mBase.Tag : mBase.Tag = Me";
 _tag = _mbase.getTag();
  //BA.debugLineNum = 35;BA.debugLine="Tag = mBase.Tag : mBase.Tag = Me";
@@ -172,7 +172,7 @@ _mmax = (int)(BA.ObjectToNumber(_props.Get((Object)("Max"))));
  //BA.debugLineNum = 39;BA.debugLine="pnl = xui.CreatePanel(\"pnl\")";
 _pnl = _xui.CreatePanel(ba,"pnl");
  //BA.debugLineNum = 40;BA.debugLine="xlbl = Lbl";
-_xlbl.setObject((java.lang.Object)(_lbl.getObject()));
+_xlbl = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_lbl.getObject()));
  //BA.debugLineNum = 41;BA.debugLine="mBase.AddView(xlbl, 0, 0, 0, 0)";
 _mbase.AddView((android.view.View)(_xlbl.getObject()),(int) (0),(int) (0),(int) (0),(int) (0));
  //BA.debugLineNum = 42;BA.debugLine="mBase.AddView(pnl, 0, 0, 0, 0)";

@@ -61,7 +61,7 @@ final int groupLen1 = group1.getSize()
 ;int index1 = 0;
 ;
 for (; index1 < groupLen1;index1++){
-_v.setObject((java.lang.Object)(group1.Get(index1)));
+_v = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(group1.Get(index1)));
  //BA.debugLineNum = 51;BA.debugLine="v.SetLayoutAnimated(0, 0, 0, Width, Height)";
 _v.SetLayoutAnimated((int) (0),(int) (0),(int) (0),(int) (_width),(int) (_height));
  }
@@ -377,7 +377,7 @@ public String  _designercreateview(Object _base,anywheresoftware.b4a.objects.Lab
 anywheresoftware.b4a.objects.ImageViewWrapper _iv = null;
  //BA.debugLineNum = 32;BA.debugLine="Public Sub DesignerCreateView (Base As Object, lbl";
  //BA.debugLineNum = 33;BA.debugLine="mBase = Base";
-_mbase.setObject((java.lang.Object)(_base));
+_mbase = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_base));
  //BA.debugLineNum = 34;BA.debugLine="Tag = mBase.Tag : mBase.Tag = Me";
 _tag = _mbase.getTag();
  //BA.debugLineNum = 34;BA.debugLine="Tag = mBase.Tag : mBase.Tag = Me";
@@ -387,7 +387,7 @@ _iv = new anywheresoftware.b4a.objects.ImageViewWrapper();
  //BA.debugLineNum = 36;BA.debugLine="iv.Initialize(\"\")";
 _iv.Initialize(ba,"");
  //BA.debugLineNum = 37;BA.debugLine="mIV = iv";
-_miv.setObject((java.lang.Object)(_iv.getObject()));
+_miv = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_iv.getObject()));
  //BA.debugLineNum = 38;BA.debugLine="mIV.Color = xui.Color_Transparent";
 _miv.setColor(_xui.Color_Transparent);
  //BA.debugLineNum = 39;BA.debugLine="setValue(Props.GetDefault(\"Value\", 100))";

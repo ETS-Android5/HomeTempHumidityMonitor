@@ -79,7 +79,7 @@ Module9=Starter
 NumberOfFiles=20
 NumberOfLibraries=25
 NumberOfModules=10
-Version=9.801
+Version=9.9
 @EndOfDesignText@
 #Region  Project Attributes 
 	#ApplicationLabel: Smart Home Monitor
@@ -3596,3 +3596,4 @@ Sub swArmed_ValueChanged (Value As Boolean)
 		Log(LastException)
 	End Try
 End Sub
+

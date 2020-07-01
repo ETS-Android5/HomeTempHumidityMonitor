@@ -31,6 +31,6 @@ ModuleClosedNodes6=
 ModuleClosedNodes7=
 ModuleClosedNodes8=
 ModuleClosedNodes9=
-NavigationStack=Main,GetCameraInfo,1786,2,Visual Designer,blink.bal,-100,6,Main,MQTT_Connected,473,0,SmartHomeMonitor,MQTT_Connected,73,0,SmartHomeMonitor,MQTT_Connect,66,0,Main,Globals,136,0,Main,Activity_Create,155,0,Main,Process_Globals,35,0,Main,RequestAuthToken,1250,0,Main,GetAuthInfo,1703,0
+NavigationStack=Main,Process_Globals,35,0,NotificationService,Process_Globals,14,0,NotificationService,GetAuthInfo,265,0,NotificationService,RequestAuthToken,235,4,Main,swArmed_ValueChanged,3498,0,NotificationService,Listener_NotificationRemoved,114,0,NotificationService,SDTime_tick,146,1,NotificationService,Service_Destroy,135,0,NotificationService,Listener_NotificationPosted,79,6,NotificationService,GetUnwatchedVideosService,183,1
 SelectedBuild=0
 VisibleModules=5,8,7,10,1,3,2,4,9,6

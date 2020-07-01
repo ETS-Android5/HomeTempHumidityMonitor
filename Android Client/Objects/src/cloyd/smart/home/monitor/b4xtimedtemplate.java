@@ -70,7 +70,7 @@ anywheresoftware.b4a.objects.B4XViewWrapper _innerpanel = null;
 if (_mbase.getNumberOfViews()==0) { 
  //BA.debugLineNum = 18;BA.debugLine="Dim InnerPanel As B4XView = CallSub2(mTemplate,";
 _innerpanel = new anywheresoftware.b4a.objects.B4XViewWrapper();
-_innerpanel.setObject((java.lang.Object)(__c.CallSubNew2(ba,_mtemplate,"GetPanel",(Object)(_dialog))));
+_innerpanel = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(__c.CallSubNew2(ba,_mtemplate,"GetPanel",(Object)(_dialog))));
  //BA.debugLineNum = 19;BA.debugLine="If InnerPanel.Parent.IsInitialized Then InnerPan";
 if (_innerpanel.getParent().IsInitialized()) { 
 _innerpanel.RemoveViewFromParent();};

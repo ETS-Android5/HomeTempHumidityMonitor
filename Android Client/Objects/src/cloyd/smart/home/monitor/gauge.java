@@ -236,7 +236,7 @@ _prefixtext = BA.ObjectToString(_props.Get((Object)("PrefixText")));
  //BA.debugLineNum = 53;BA.debugLine="SuffixText = Props.Get(\"SuffixText\")";
 _suffixtext = BA.ObjectToString(_props.Get((Object)("SuffixText")));
  //BA.debugLineNum = 54;BA.debugLine="mBase = Base";
-_mbase.setObject((java.lang.Object)(_base));
+_mbase = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_base));
  //BA.debugLineNum = 55;BA.debugLine="Dim NativeFont As Object";
 _nativefont = new Object();
  //BA.debugLineNum = 61;BA.debugLine="NativeFont = Typeface.LoadFromAssets(\"Crysta.ttf\"";
@@ -254,7 +254,7 @@ _mbase.AddView((android.view.View)(_indicatorpanel.getObject()),(int) (0),(int) 
  //BA.debugLineNum = 71;BA.debugLine="cvsIndicator.Initialize(IndicatorPanel)";
 _cvsindicator.Initialize(_indicatorpanel);
  //BA.debugLineNum = 72;BA.debugLine="mlbl = Lbl";
-_mlbl.setObject((java.lang.Object)(_lbl.getObject()));
+_mlbl = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_lbl.getObject()));
  //BA.debugLineNum = 73;BA.debugLine="mlbl.Font = xui.CreateFont(NativeFont, 30)";
 _mlbl.setFont(_xui.CreateFont((android.graphics.Typeface)(_nativefont),(float) (30)));
  //BA.debugLineNum = 74;BA.debugLine="mlbl.SetTextAlignment(\"CENTER\", \"CENTER\")";
