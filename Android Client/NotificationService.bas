@@ -5,7 +5,7 @@ Type=Service
 Version=8
 @EndOfDesignText@
 #Region  Service Attributes 
-	#StartAtBoot: False
+	#StartAtBoot: true
 	
 #End Region
 
@@ -232,16 +232,16 @@ Sub RequestAuthToken As ResumableSub
 	Try
 		Dim jobLogin As HttpJob
 		jobLogin.Initialize("", Me)
-		'jobLogin.PostString("https://rest.prod.immedia-semi.com/login","email=" &  emailAddress & "&password=" & password)
-		jobLogin.PostString("https://rest.prod.immedia-semi.com/api/v4/account/login","email=" &  emailAddress & "&password=" & password)
+		jobLogin.PostString("https://rest-prod.immedia-semi.com/api/v4/account/login","email=" &  emailAddress & "&password=" & password)
 		jobLogin.GetRequest.SetContentType("application/x-www-form-urlencoded")
+		jobLogin.GetRequest.SetHeader("User-Agent",RandomString(12)) '"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0")
 		Wait For (jobLogin) JobDone(jobLogin As HttpJob)
 		If jobLogin.Success Then
 			GetAuthInfo(jobLogin.GetString)
 			
 			If TwoClientFAVerificationRequired Then
 				response = "ERROR TwoClientFAVerificationRequired"
-				Return Null		
+				Return Null
 			End If
 
 			If response.StartsWith("ERROR: ") Or response.Contains("System is busy, please wait") Then
@@ -260,6 +260,15 @@ Sub RequestAuthToken As ResumableSub
 		Log("RequestAuthToken LastException: " & LastException)
 	End Try
 	Return Null
+End Sub
+
+Sub RandomString(length As Int) As String
+	Dim abc As String = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+	Dim randomstr As String = ""
+	For i = 0 To length - 1
+		randomstr = randomstr & (abc.CharAt(Rnd(0,abc.Length)))
+	Next
+	Return randomstr
 End Sub
 
 Sub GetAuthInfo(json As String)
@@ -288,3 +297,95 @@ Sub GetAuthInfo(json As String)
 	End Try
 
 End Sub
+
+
+
+
+
+'#Region  Service Attributes 
+'	#StartAtBoot: False
+'	
+'#End Region
+'
+'Sub Process_Globals
+'	Private listener As NotificationListener
+'End Sub
+'
+'Sub Service_Create
+'	listener.Initialize("listener")
+'End Sub
+'
+'Sub Service_Start (StartingIntent As Intent)
+'	If listener.HandleIntent(StartingIntent) Then Return
+'End Sub
+'
+'Sub Listener_NotificationPosted (SBN As StatusBarNotification)
+'	Try
+'		'Log("NotificationPosted, package = " & SBN.PackageName & ", id = " & SBN.Id & ", text = " & SBN.TickerText)
+'		Dim p As Phone
+'		If p.SdkVersion >= 19 Then
+'			Dim jno As JavaObject = SBN.Notification
+'			Dim extras As JavaObject = jno.GetField("extras")
+'			extras.RunMethod("size", Null)
+'			If SBN.PackageName = "cloyd.smart.home.monitor" Then
+'				If SBN.Id = 726 Then
+'					SmartHomeMonitor.IsAirQualityNotificationOnGoing = True
+'				else If SBN.Id = 725 Then
+'					SmartHomeMonitor.IsTempHumidityNotificationOnGoing = True
+'				else If SBN.Id = 727 Then
+'					SmartHomeMonitor.IsAirQualityNotificationOnGoingBasement = True
+'				else If SBN.Id = 728 Then
+'					SmartHomeMonitor.IsTempHumidityNotificationOnGoingbasement = True
+'				else if SBN.Id = 730 Then
+'					SmartHomeMonitor.IsOldTempHumidityNotificationOnGoingBasement = True
+'				else if SBN.Id = 729 Then
+'					SmartHomeMonitor.IsOldTempHumidityNotificationOnGoing = True
+'				else if SBN.Id = 731 Then
+'					SmartHomeMonitor.IsOldAirQualityNotificationOnGoing = True
+'				else if SBN.Id = 732 Then
+'					SmartHomeMonitor.IsOldAirQualityNotificationOnGoingBasement = True
+'				End If
+'			End If
+'		End If
+'	Catch
+'		Log(LastException)
+'	End Try
+'
+'End Sub
+'
+'Sub Listener_NotificationRemoved (SBN As StatusBarNotification)
+'	Try
+'		'Log("NotificationRemoved, package = " & SBN.PackageName & ", id = " & SBN.Id & ", text = " & SBN.TickerText)
+'		If SBN.PackageName = "cloyd.smart.home.monitor" Then
+'			If SBN.Id = 726 Then
+'				SmartHomeMonitor.IsAirQualityNotificationOnGoing = False
+'			else If SBN.Id = 725 Then
+'				SmartHomeMonitor.lngTicks = DateTime.now
+'				SmartHomeMonitor.lngTicksTempHumid = DateTime.now
+'				SmartHomeMonitor.IsTempHumidityNotificationOnGoing = False
+'			else If SBN.Id = 727 Then
+'				SmartHomeMonitor.IsAirQualityNotificationOnGoingBasement = False
+'			else If SBN.Id = 728 Then
+'				SmartHomeMonitor.lngTicksTempHumidBasement = DateTime.now
+'				SmartHomeMonitor.IsTempHumidityNotificationOnGoingBasement = False
+'			else If SBN.Id = 730 Then
+'				SmartHomeMonitor.IsOldTempHumidityNotificationOnGoingBasement = False
+'			else If SBN.Id = 729 Then
+'				SmartHomeMonitor.IsOldTempHumidityNotificationOnGoing = False
+'			else If SBN.Id = 731 Then
+'				SmartHomeMonitor.IsOldAirQualityNotificationOnGoing = False
+'			else If SBN.Id = 732 Then
+'				SmartHomeMonitor.IsOldAirQualityNotificationOnGoingBasement = False
+'			End If
+'			'Else If SBN.PackageName = "com.immediasemi.android.blink" Then
+'
+'		End If
+'	Catch
+'		Log(LastException)
+'	End Try
+'
+'End Sub
+'
+'Sub Service_Destroy
+'
+'End Sub

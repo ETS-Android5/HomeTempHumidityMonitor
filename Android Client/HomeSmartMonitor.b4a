@@ -1311,7 +1311,6 @@ Sub HandleSettings
 	StateManager.SaveSettings
 End Sub
 
-
 Sub RequestAuthToken As ResumableSub
 	' https://github.com/MattTW/BlinkMonitorProtocol
 	' http://www.basic4ppc.com:51042/json/index.html
@@ -1322,13 +1321,12 @@ Sub RequestAuthToken As ResumableSub
 		lblStatus.Text = "Authenticating..."
 		Dim jobLogin As HttpJob
 		jobLogin.Initialize("", Me)
-		'jobLogin.PostString("https://rest.prod.immedia-semi.com/login","email=" &  emailAddress & "&password=" & password)
-		jobLogin.PostString("https://rest.prod.immedia-semi.com/api/v4/account/login","email=" &  emailAddress & "&password=" & password)
+		jobLogin.PostString("https://rest-prod.immedia-semi.com/api/v4/account/login","email=" &  emailAddress & "&password=" & password)
 		jobLogin.GetRequest.SetContentType("application/x-www-form-urlencoded")
+		jobLogin.GetRequest.SetHeader("User-Agent",RandomString(12)) '"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36")
 		Wait For (jobLogin) JobDone(jobLogin As HttpJob)
 		If jobLogin.Success Then
 			lblStatus.Text = "Successfully logged in to the Blink server..."
-			' {"account":{"id":88438},"client":{"id":343747},"authtoken":{"authtoken":"93dThwIjJVPFNsksddH2cA","message":"auth"},"networks":{"94896":{"name":"Home","onboarded":true}},"region":{"u006":"United States"}}
 			GetAuthInfo(jobLogin.GetString)
 			
 			If TwoClientFAVerificationRequired Then
@@ -3597,3 +3595,11 @@ Sub swArmed_ValueChanged (Value As Boolean)
 	End Try
 End Sub
 
+Sub RandomString(length As Int) As String
+	Dim abc As String = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+	Dim randomstr As String = ""
+	For i = 0 To length - 1
+		randomstr = randomstr & (abc.CharAt(Rnd(0,abc.Length)))
+	Next
+	Return randomstr
+End Sub

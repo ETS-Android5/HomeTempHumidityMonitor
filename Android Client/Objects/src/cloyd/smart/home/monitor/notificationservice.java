@@ -154,57 +154,57 @@ String _description = "";
 anywheresoftware.b4a.objects.collections.Map _account = null;
 String _verification_required = "";
 int _id = 0;
- //BA.debugLineNum = 259;BA.debugLine="Sub GetAuthInfo(json As String)";
- //BA.debugLineNum = 260;BA.debugLine="Try";
-try { //BA.debugLineNum = 261;BA.debugLine="Dim parser As JSONParser";
+ //BA.debugLineNum = 268;BA.debugLine="Sub GetAuthInfo(json As String)";
+ //BA.debugLineNum = 269;BA.debugLine="Try";
+try { //BA.debugLineNum = 270;BA.debugLine="Dim parser As JSONParser";
 _parser = new anywheresoftware.b4a.objects.collections.JSONParser();
- //BA.debugLineNum = 262;BA.debugLine="parser.Initialize(json)";
+ //BA.debugLineNum = 271;BA.debugLine="parser.Initialize(json)";
 _parser.Initialize(_json);
- //BA.debugLineNum = 263;BA.debugLine="Dim root As Map = parser.NextObject";
+ //BA.debugLineNum = 272;BA.debugLine="Dim root As Map = parser.NextObject";
 _root = new anywheresoftware.b4a.objects.collections.Map();
 _root = _parser.NextObject();
- //BA.debugLineNum = 264;BA.debugLine="Dim force_password_reset As String = root.Get(\"f";
+ //BA.debugLineNum = 273;BA.debugLine="Dim force_password_reset As String = root.Get(\"f";
 _force_password_reset = BA.ObjectToString(_root.Get((Object)("force_password_reset")));
- //BA.debugLineNum = 265;BA.debugLine="Dim lockout_time_remaining As Int = root.Get(\"lo";
+ //BA.debugLineNum = 274;BA.debugLine="Dim lockout_time_remaining As Int = root.Get(\"lo";
 _lockout_time_remaining = (int)(BA.ObjectToNumber(_root.Get((Object)("lockout_time_remaining"))));
- //BA.debugLineNum = 266;BA.debugLine="Dim authtokenmap As Map = root.Get(\"authtoken\")";
+ //BA.debugLineNum = 275;BA.debugLine="Dim authtokenmap As Map = root.Get(\"authtoken\")";
 _authtokenmap = new anywheresoftware.b4a.objects.collections.Map();
 _authtokenmap = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (anywheresoftware.b4a.objects.collections.Map.MyMap)(_root.Get((Object)("authtoken"))));
- //BA.debugLineNum = 267;BA.debugLine="authToken = authtokenmap.Get(\"authtoken\")";
+ //BA.debugLineNum = 276;BA.debugLine="authToken = authtokenmap.Get(\"authtoken\")";
 _authtoken = BA.ObjectToString(_authtokenmap.Get((Object)("authtoken")));
- //BA.debugLineNum = 268;BA.debugLine="Dim message As String = authtokenmap.Get(\"messag";
+ //BA.debugLineNum = 277;BA.debugLine="Dim message As String = authtokenmap.Get(\"messag";
 _message = BA.ObjectToString(_authtokenmap.Get((Object)("message")));
- //BA.debugLineNum = 269;BA.debugLine="Dim client As Map = root.Get(\"client\")";
+ //BA.debugLineNum = 278;BA.debugLine="Dim client As Map = root.Get(\"client\")";
 _client = new anywheresoftware.b4a.objects.collections.Map();
 _client = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (anywheresoftware.b4a.objects.collections.Map.MyMap)(_root.Get((Object)("client"))));
- //BA.debugLineNum = 270;BA.debugLine="TwoClientFAVerificationRequired = client.Get(\"ve";
+ //BA.debugLineNum = 279;BA.debugLine="TwoClientFAVerificationRequired = client.Get(\"ve";
 _twoclientfaverificationrequired = BA.ObjectToString(_client.Get((Object)("verification_required")));
- //BA.debugLineNum = 271;BA.debugLine="Dim allow_pin_resend_seconds As Int = root.Get(\"";
+ //BA.debugLineNum = 280;BA.debugLine="Dim allow_pin_resend_seconds As Int = root.Get(\"";
 _allow_pin_resend_seconds = (int)(BA.ObjectToNumber(_root.Get((Object)("allow_pin_resend_seconds"))));
- //BA.debugLineNum = 272;BA.debugLine="Dim region As Map = root.Get(\"region\")";
+ //BA.debugLineNum = 281;BA.debugLine="Dim region As Map = root.Get(\"region\")";
 _region = new anywheresoftware.b4a.objects.collections.Map();
 _region = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (anywheresoftware.b4a.objects.collections.Map.MyMap)(_root.Get((Object)("region"))));
- //BA.debugLineNum = 273;BA.debugLine="Dim code As String = region.Get(\"code\") 'ignore";
+ //BA.debugLineNum = 282;BA.debugLine="Dim code As String = region.Get(\"code\") 'ignore";
 _code = BA.ObjectToString(_region.Get((Object)("code")));
- //BA.debugLineNum = 274;BA.debugLine="userRegion = region.Get(\"tier\")";
+ //BA.debugLineNum = 283;BA.debugLine="userRegion = region.Get(\"tier\")";
 _userregion = BA.ObjectToString(_region.Get((Object)("tier")));
- //BA.debugLineNum = 275;BA.debugLine="Dim description As String = region.Get(\"descript";
+ //BA.debugLineNum = 284;BA.debugLine="Dim description As String = region.Get(\"descript";
 _description = BA.ObjectToString(_region.Get((Object)("description")));
- //BA.debugLineNum = 276;BA.debugLine="Dim account As Map = root.Get(\"account\")";
+ //BA.debugLineNum = 285;BA.debugLine="Dim account As Map = root.Get(\"account\")";
 _account = new anywheresoftware.b4a.objects.collections.Map();
 _account = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (anywheresoftware.b4a.objects.collections.Map.MyMap)(_root.Get((Object)("account"))));
- //BA.debugLineNum = 277;BA.debugLine="Dim verification_required As String = account.Ge";
+ //BA.debugLineNum = 286;BA.debugLine="Dim verification_required As String = account.Ge";
 _verification_required = BA.ObjectToString(_account.Get((Object)("verification_required")));
- //BA.debugLineNum = 278;BA.debugLine="Dim id As Int = account.Get(\"id\") 'ignore";
+ //BA.debugLineNum = 287;BA.debugLine="Dim id As Int = account.Get(\"id\") 'ignore";
 _id = (int)(BA.ObjectToNumber(_account.Get((Object)("id"))));
  } 
        catch (Exception e21) {
-			processBA.setLastException(e21); //BA.debugLineNum = 280;BA.debugLine="response = \"ERROR: GetAuthInfo - \" & LastExcepti";
+			processBA.setLastException(e21); //BA.debugLineNum = 289;BA.debugLine="response = \"ERROR: GetAuthInfo - \" & LastExcepti";
 _response = "ERROR: GetAuthInfo - "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA));
- //BA.debugLineNum = 281;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("434668566",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+ //BA.debugLineNum = 290;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("632899094",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  };
- //BA.debugLineNum = 284;BA.debugLine="End Sub";
+ //BA.debugLineNum = 293;BA.debugLine="End Sub";
 return "";
 }
 public static anywheresoftware.b4a.keywords.Common.ResumableSubWrapper  _getunwatchedvideosservice() throws Exception{
@@ -367,7 +367,7 @@ case 17:
 this.state = 18;
 ;
  //BA.debugLineNum = 173;BA.debugLine="Log(\"From Service: Loading unwatched videos took";
-anywheresoftware.b4a.keywords.Common.LogImpl("434471960","From Service: Loading unwatched videos took: "+BA.NumberToString((anywheresoftware.b4a.keywords.Common.DateTime.getNow()-_n))+"ms",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("632702488","From Service: Loading unwatched videos took: "+BA.NumberToString((anywheresoftware.b4a.keywords.Common.DateTime.getNow()-_n))+"ms",0);
  //BA.debugLineNum = 174;BA.debugLine="StateManager.SetSetting(\"UnwatchedVideoClips\",un";
 parent.mostCurrent._statemanager._setsetting /*String*/ (processBA,"UnwatchedVideoClips",BA.NumberToString(_unwatchedvideocount));
  //BA.debugLineNum = 175;BA.debugLine="StateManager.SaveSettings";
@@ -415,7 +415,7 @@ case 25:
 this.state = 26;
 this.catchState = 0;
  //BA.debugLineNum = 189;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("434471976",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("632702504",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  if (true) break;
 if (true) break;
 
@@ -882,7 +882,7 @@ case 73:
 this.state = 74;
 this.catchState = 0;
  //BA.debugLineNum = 94;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("428049477",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("67602245",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  if (true) break;
 if (true) break;
 
@@ -959,7 +959,7 @@ _phone.SendBroadcastIntent((android.content.Intent)(_intent1.getObject()));
  } 
        catch (Exception e31) {
 			processBA.setLastException(e31); //BA.debugLineNum = 131;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("428114976",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("67667744",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  };
  //BA.debugLineNum = 134;BA.debugLine="End Sub";
 return "";
@@ -983,6 +983,30 @@ _password = "";
  //BA.debugLineNum = 14;BA.debugLine="Private TwoClientFAVerificationRequired As String";
 _twoclientfaverificationrequired = "";
  //BA.debugLineNum = 15;BA.debugLine="End Sub";
+return "";
+}
+public static String  _randomstring(int _length) throws Exception{
+String _abc = "";
+String _randomstr = "";
+int _i = 0;
+ //BA.debugLineNum = 259;BA.debugLine="Sub RandomString(length As Int) As String";
+ //BA.debugLineNum = 260;BA.debugLine="Dim abc As String = \"0123456789ABCDEFGHIJKLMNOPQR";
+_abc = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+ //BA.debugLineNum = 261;BA.debugLine="Dim randomstr As String = \"\"";
+_randomstr = "";
+ //BA.debugLineNum = 262;BA.debugLine="For i = 0 To length - 1";
+{
+final int step3 = 1;
+final int limit3 = (int) (_length-1);
+_i = (int) (0) ;
+for (;_i <= limit3 ;_i = _i + step3 ) {
+ //BA.debugLineNum = 263;BA.debugLine="randomstr = randomstr & (abc.CharAt(Rnd(0,abc.Le";
+_randomstr = _randomstr+BA.ObjectToString((_abc.charAt(anywheresoftware.b4a.keywords.Common.Rnd((int) (0),_abc.length()))));
+ }
+};
+ //BA.debugLineNum = 265;BA.debugLine="Return randomstr";
+if (true) return _randomstr;
+ //BA.debugLineNum = 266;BA.debugLine="End Sub";
 return "";
 }
 public static anywheresoftware.b4a.keywords.Common.ResumableSubWrapper  _requestauthtoken() throws Exception{
@@ -1028,10 +1052,12 @@ this.catchState = 20;
 _joblogin = new cloyd.smart.home.monitor.httpjob();
  //BA.debugLineNum = 228;BA.debugLine="jobLogin.Initialize(\"\", Me)";
 _joblogin._initialize /*String*/ (processBA,"",notificationservice.getObject());
- //BA.debugLineNum = 230;BA.debugLine="jobLogin.PostString(\"https://rest.prod.immedia-s";
-_joblogin._poststring /*String*/ ("https://rest.prod.immedia-semi.com/api/v4/account/login","email="+parent._emailaddress+"&password="+parent._password);
- //BA.debugLineNum = 231;BA.debugLine="jobLogin.GetRequest.SetContentType(\"application/";
+ //BA.debugLineNum = 229;BA.debugLine="jobLogin.PostString(\"https://rest-prod.immedia-s";
+_joblogin._poststring /*String*/ ("https://rest-prod.immedia-semi.com/api/v4/account/login","email="+parent._emailaddress+"&password="+parent._password);
+ //BA.debugLineNum = 230;BA.debugLine="jobLogin.GetRequest.SetContentType(\"application/";
 _joblogin._getrequest /*anywheresoftware.b4h.okhttp.OkHttpClientWrapper.OkHttpRequest*/ ().SetContentType("application/x-www-form-urlencoded");
+ //BA.debugLineNum = 231;BA.debugLine="jobLogin.GetRequest.SetHeader(\"User-Agent\",Rando";
+_joblogin._getrequest /*anywheresoftware.b4h.okhttp.OkHttpClientWrapper.OkHttpRequest*/ ().SetHeader("User-Agent",_randomstring((int) (12)));
  //BA.debugLineNum = 232;BA.debugLine="Wait For (jobLogin) JobDone(jobLogin As HttpJob)";
 anywheresoftware.b4a.keywords.Common.WaitFor("jobdone", processBA, this, (Object)(_joblogin));
 this.state = 22;
@@ -1114,7 +1140,7 @@ case 17:
 //C
 this.state = 18;
  //BA.debugLineNum = 248;BA.debugLine="Log(\"RequestAuthToken error: \" & jobLogin.Error";
-anywheresoftware.b4a.keywords.Common.LogImpl("434603036","RequestAuthToken error: "+_joblogin._errormessage /*String*/ ,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("632833564","RequestAuthToken error: "+_joblogin._errormessage /*String*/ ,0);
  //BA.debugLineNum = 249;BA.debugLine="jobLogin.Release";
 _joblogin._release /*String*/ ();
  //BA.debugLineNum = 250;BA.debugLine="Return Null";
@@ -1135,7 +1161,7 @@ case 20:
 this.state = 21;
 this.catchState = 0;
  //BA.debugLineNum = 254;BA.debugLine="Log(\"RequestAuthToken LastException: \" & LastExc";
-anywheresoftware.b4a.keywords.Common.LogImpl("434603042","RequestAuthToken LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("632833570","RequestAuthToken LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  if (true) break;
 if (true) break;
 
@@ -1278,7 +1304,7 @@ this.catchState = 0;
  //BA.debugLineNum = 212;BA.debugLine="response = \"ERROR: \" & LastException";
 parent._response = "ERROR: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA));
  //BA.debugLineNum = 213;BA.debugLine="Log(\"RESTDownload LastException: \" & LastExcepti";
-anywheresoftware.b4a.keywords.Common.LogImpl("434537491","RESTDownload LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("632768019","RESTDownload LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  if (true) break;
 if (true) break;
 
@@ -1288,9 +1314,9 @@ this.state = -1;
 this.catchState = 0;
 ;
  //BA.debugLineNum = 215;BA.debugLine="Log(\"URL: \" & url)";
-anywheresoftware.b4a.keywords.Common.LogImpl("434537493","URL: "+_url,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("632768021","URL: "+_url,0);
  //BA.debugLineNum = 216;BA.debugLine="Log(\"Response: \" & response)";
-anywheresoftware.b4a.keywords.Common.LogImpl("434537494","Response: "+parent._response,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("632768022","Response: "+parent._response,0);
  //BA.debugLineNum = 217;BA.debugLine="Return(response)";
 if (true) {
 anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,(Object)((parent._response)));return;};
@@ -1366,7 +1392,7 @@ case 5:
 this.state = 6;
 this.catchState = 0;
  //BA.debugLineNum = 145;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("432571397",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("632636933",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  if (true) break;
 if (true) break;
 
