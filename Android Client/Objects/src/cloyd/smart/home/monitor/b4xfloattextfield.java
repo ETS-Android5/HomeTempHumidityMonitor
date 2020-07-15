@@ -347,7 +347,7 @@ if (_passwordmode && _multiline) {
  //BA.debugLineNum = 89;BA.debugLine="Multiline = False";
 _multiline = __c.False;
  //BA.debugLineNum = 90;BA.debugLine="Log(\"Multiline not supported with password mode.";
-__c.LogImpl("920840472","Multiline not supported with password mode.",0);
+__c.LogImpl("921299224","Multiline not supported with password mode.",0);
  };
  //BA.debugLineNum = 92;BA.debugLine="CreateTextFieldAll(PasswordMode, PassedLabel.Font";
 _createtextfieldall(_passwordmode,_passedlabel.getFont(),_xui.PaintOrColorToColor((Object)(_lbl.getTextColor())));
