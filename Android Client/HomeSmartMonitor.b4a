@@ -783,7 +783,7 @@ Sub ShowAboutMenu
 	Try
 		Dim bd As BitmapDrawable
 		bd.Initialize(LoadBitmapResize(File.DirAssets, "cloyd.png", 32dip, 32dip, True))
-		Msgbox2("Smart Home Monitor v" & GetVersionCode & CRLF & CRLF & "Developed by: Cloyd Nino Catanaoan" & CRLF & "Compiled on: April 13, 2020", "About", "OK", "", "", bd.Bitmap) 'ignore
+		Msgbox2("Smart Home Monitor v" & GetVersionCode & CRLF & CRLF & "Developed by: Cloyd Nino Catanaoan" & CRLF & "Version compiled on: July 30, 2020", "About", "OK", "", "", bd.Bitmap) 'ignore
 	Catch
 		Log(LastException)
 	End Try
@@ -1406,7 +1406,8 @@ Sub RefreshCameras(FirstRun As Boolean, whatCamera As String) As ResumableSub
 		Dim rs As ResumableSub = GetSyncModuleInfo(response)
 		wait for (rs) complete (Result As Object)
 		
-		Dim rs As ResumableSub = RESTGet("https://rest-" & userRegion &".immedia-semi.com/homescreen")
+		'Dim rs As ResumableSub = RESTGet("https://rest-" & userRegion &".immedia-semi.com/homescreen")
+		Dim rs As ResumableSub = RESTGet("https://rest-" & userRegion &".immedia-semi.com/api/v3/accounts/88438/homescreen")
 		wait for (rs) complete (Result As Object)
 		If response.StartsWith("ERROR: ") Or response.Contains("System is busy, please wait") Then
 			btnDriveway.Enabled = True
@@ -1418,7 +1419,9 @@ Sub RefreshCameras(FirstRun As Boolean, whatCamera As String) As ResumableSub
 			btnFrontDoorRefresh.Enabled = True
 			btnSideYardRefresh.Enabled = True
 			swArmed.Enabled = True
+			'If response.Contains("An app update is required") = False Then <-- THIS MEANS THERE IS AN UPDATED ENDPOINT OR WEB CALL
 			Return Null
+			'End If
 		End If
 		
 		Dim rs As ResumableSub = GetHomescreen(response)
@@ -1913,7 +1916,7 @@ Sub GetCameraInfo(json As String, isJustInfoNeeded As Boolean) As ResumableSub
 		Dim updated_at As String = camera_status.Get("updated_at")
 '		Dim light_sensor_ch1 As Int = camera_status.Get("light_sensor_ch1")
 '		Dim time_dhcp_lease As Int = camera_status.Get("time_dhcp_lease")
-		Dim temperature As string = camera_status.Get("temperature")
+		Dim temperature As String = camera_status.Get("temperature")
 '		Dim time_first_video As Int = camera_status.Get("time_first_video")
 '		Dim time_dns_resolve As Int = camera_status.Get("time_dns_resolve")
 '		Dim id As Int = camera_status.Get("id")
@@ -2029,40 +2032,60 @@ Sub GetHomescreen(json As String) As ResumableSub
 		Dim parser As JSONParser
 		parser.Initialize(json)
 		Dim root As Map = parser.NextObject
-		Dim devices As List = root.Get("devices")
-		For Each coldevices As Map In devices
-			Dim battery_state As String = coldevices.Get("battery_state")
-'			Dim thumbnail As String = coldevices.Get("thumbnail")
-'			'Dim temp As Int = coldevices.Get("temp")
-'			Dim error_msg As String = coldevices.Get("error_msg")
-			Dim device_id As Int = coldevices.Get("device_id")
-'			Dim wifi_strength As Int = coldevices.Get("wifi_strength")
-'			Dim lfr_strength As Int = coldevices.Get("lfr_strength")
-			Dim active As String = coldevices.Get("active")
-			
-			Dim device_type As String = coldevices.Get("device_type")
-			If device_type <> "camera" Then
-				Continue
-			End If
-			
-'			Dim Type As String = coldevices.Get("type")
-			Dim battery As Int = coldevices.Get("battery")
-			Dim enabled As String = coldevices.Get("enabled")
-'			Dim updated_at As String = coldevices.Get("updated_at")
-'			Dim usage_rate As String = coldevices.Get("usage_rate")
-'			Dim armed As String = coldevices.Get("armed")
-'			Dim name As String = coldevices.Get("name")
-'			Dim warning As Int = coldevices.Get("warning")
-'			Dim notifications As Int = coldevices.Get("notifications")
-'			Dim errors As Int = coldevices.Get("errors")
-			Dim status As String = coldevices.Get("status")
+		Dim cameras As List = root.Get("cameras")
+'		For Each coldevices As Map In devices
+'			Dim battery_state As String = coldevices.Get("battery_state")
+		''			Dim thumbnail As String = coldevices.Get("thumbnail")
+		''			'Dim temp As Int = coldevices.Get("temp")
+		''			Dim error_msg As String = coldevices.Get("error_msg")
+'			Dim device_id As Int = coldevices.Get("device_id")
+		''			Dim wifi_strength As Int = coldevices.Get("wifi_strength")
+		''			Dim lfr_strength As Int = coldevices.Get("lfr_strength")
+'			Dim active As String = coldevices.Get("active")
+'			
+'			Dim device_type As String = coldevices.Get("device_type")
+'			If device_type <> "camera" Then 
+'				Continue
+'			End If
+'			
+		''			Dim Type As String = coldevices.Get("type")
+'			Dim battery As Int = coldevices.Get("battery")
+'			Dim enabled As String = coldevices.Get("enabled")
+		''			Dim updated_at As String = coldevices.Get("updated_at")
+		''			Dim usage_rate As String = coldevices.Get("usage_rate")
+		''			Dim armed As String = coldevices.Get("armed")
+		''			Dim name As String = coldevices.Get("name")
+		''			Dim warning As Int = coldevices.Get("warning")
+		''			Dim notifications As Int = coldevices.Get("notifications")
+		''			Dim errors As Int = coldevices.Get("errors")
+		''          Dim status As String = coldevices.Get("status")
+		For Each colcameras As Map In cameras
+			'Dim thumbnail As String = colcameras.Get("thumbnail")
+			'Dim created_at As String = colcameras.Get("created_at")
+			'Dim Type As String = colcameras.Get("type")
+			Dim battery_state As String = colcameras.Get("battery")
+			'Dim issues As List = colcameras.Get("issues")
+			Dim enabled As String = colcameras.Get("enabled")
+			'Dim network_id As Int = colcameras.Get("network_id")
+			Dim signals As Map = colcameras.Get("signals")
+			'Dim wifi As Int = signals.Get("wifi")
+			'Dim temp As Int = signals.Get("temp")
+			'Dim lfr As Int = signals.Get("lfr")
+			Dim battery As Int = signals.Get("battery")
+			'Dim updated_at As String = colcameras.Get("updated_at")
+			'Dim serial As String = colcameras.Get("serial")
+			'Dim usage_rate As String = colcameras.Get("usage_rate")
+			Dim name As String = colcameras.Get("name")
+			'Dim id As Int = colcameras.Get("id")
+			'Dim fw_version As String = colcameras.Get("fw_version")
+			Dim status As String = colcameras.Get("status")
 			
 			' Show system armed/disarmed notification via Tasker intent
 			Dim Intent1 As Intent
 			Dim Phone As Phone
 						
-			If device_id = "347574" Then
-				If active = "armed" Then
+			If name = "Driveway" Then
+				If enabled = "true" Then
 					If enabled = "true" Then
 						drivewayArmedStatus = ""
 						Dim jo As JavaObject = lblDriveway
@@ -2106,8 +2129,8 @@ Sub GetHomescreen(json As String) As ResumableSub
 					Dim radius = 4dip, dx = 0dip, dy = 0dip As Float
 					jo.RunMethod("setShadowLayer", Array(radius, dx, dy, Colors.Red))
 				End If
-			Else If device_id = "236967" Then
-				If active = "armed" Then
+			Else If name = "Front Door" Then
+				If enabled = "true" Then
 					If enabled = "true" Then
 						frontdoorArmedStatus = ""
 						Dim jo As JavaObject = lblFrontDoor
@@ -2151,8 +2174,8 @@ Sub GetHomescreen(json As String) As ResumableSub
 					Dim radius = 4dip, dx = 0dip, dy = 0dip As Float
 					jo.RunMethod("setShadowLayer", Array(radius, dx, dy, Colors.Red))
 				End If
-			Else If device_id = "458236" Then
-				If active = "armed" Then
+			Else If name = "Side Yard" Then
+				If enabled = "true" Then
 					If enabled = "true" Then
 						sideyardArmedStatus = ""
 						Dim jo As JavaObject = lblSideYard
@@ -2199,21 +2222,21 @@ Sub GetHomescreen(json As String) As ResumableSub
 			End If
 		Next
 		
-'		Dim account As Map = root.Get("account")
-'		Dim notifications As Int = account.Get("notifications")
-		Dim network As Map = root.Get("network")
-'		Dim enable_temp_alerts As String = network.Get("enable_temp_alerts")
-'		Dim error_msg As String = network.Get("error_msg")
-'		Dim wifi_strength As Int = network.Get("wifi_strength")
-		Dim armedNetwork As String = network.Get("armed")
-'		Dim name As String = network.Get("name")
-'		Dim warning As Int = network.Get("warning")
-'		Dim notifications As Int = network.Get("notifications")
-'		Dim status As String = network.Get("status")
+		Dim networks As List = root.Get("networks")
+		For Each colnetworks As Map In networks
+			'Dim updated_at As String = colnetworks.Get("updated_at")
+			'Dim dst As String = colnetworks.Get("dst")
+			Dim armed As String = colnetworks.Get("armed")
+			'Dim name As String = colnetworks.Get("name")
+			'Dim created_at As String = colnetworks.Get("created_at")
+			'Dim id As Int = colnetworks.Get("id")
+			'Dim time_zone As String = colnetworks.Get("time_zone")
+			'Dim lv_save As String = colnetworks.Get("lv_save")
+		Next
 
-		swArmed.Value = armedNetwork
+		swArmed.Value = armed
 		
-		If armedNetwork <> "true" Then
+		If armed <> "true" Then
 			drivewayArmedStatus = "SYSTEM NOT ARMED!"
 			Dim jo As JavaObject = lblDriveway
 			Dim radius = 4dip, dx = 0dip, dy = 0dip As Float
