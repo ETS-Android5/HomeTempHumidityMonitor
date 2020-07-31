@@ -903,8 +903,8 @@ Sub TabStrip1_PageSelected (Position As Int)
 				End If
 				clvActivity.Clear
 						
-				Dim rs As ResumableSub = GetUnwatchedVideos
-				wait for (rs) complete (Result As Object)
+				'Dim rs As ResumableSub = GetUnwatchedVideos
+				'wait for (rs) complete (Result As Object)
 				
 				' https://www.b4x.com/android/forum/threads/b4x-resumable-subs-that-return-values-resumablesub.82670/
 				Dim rs As ResumableSub = GetVideos(response)
@@ -941,8 +941,8 @@ Sub TabStrip1_PageSelected (Position As Int)
 			Else
 				clvActivity.Clear
 						
-				Dim rs As ResumableSub = GetUnwatchedVideos
-				wait for (rs) complete (Result As Object)
+'				Dim rs As ResumableSub = GetUnwatchedVideos
+'				wait for (rs) complete (Result As Object)
 						
 				' https://www.b4x.com/android/forum/threads/b4x-resumable-subs-that-return-values-resumablesub.82670/
 				Dim rs As ResumableSub = GetVideos(response)
@@ -2996,11 +2996,13 @@ Sub GetUnwatchedVideos() As ResumableSub
 		Dim n As Long = DateTime.Now
 		For Each colmedia As Map In media
 			Dim watched As String = colmedia.Get("watched")
-			'Dim VideoID As String = colmedia.Get("id")
-			'Dim mytypes As Object = Starter.kvs.Get(VideoID)
-			'Dim videos = mytypes As VideoInfo
+			Dim VideoID As String = colmedia.Get("id")
+			Dim mytypes As Object = Starter.kvs.Get(VideoID)
+			Dim videos = mytypes As VideoInfo
 			If watched = False Then
 				unwatchedVideoCount = unwatchedVideoCount + 1
+			Else If videos = Null And unwatchedVideoCount = 0 Then
+				unwatchedVideoCount = 1
 			End If
 		Next
 		Log("Loading unwatched videos took: " & (DateTime.Now - n) & "ms")
