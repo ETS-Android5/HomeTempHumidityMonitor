@@ -31,6 +31,6 @@ ModuleClosedNodes6=
 ModuleClosedNodes7=
 ModuleClosedNodes8=
 ModuleClosedNodes9=
-NavigationStack=Main,GetUnwatchedVideos,2921,4,Main,ACToolBarLight1_MenuItemClick,648,0,Main,TabStrip1_PageSelected,860,0,Main,Process_Globals,30,0,Main,SetTextShadow,2321,0,Main,DownloadImage,1663,2,Main,BlurIV,2316,6,Main,btnDriveway_Click,2305,0
+NavigationStack=Main,Process_Globals,30,0,NotificationService,GetUnwatchedVideosService,167,0,Main,GetUnwatchedVideos,2863,6,Main,Activity_Createmenu,727,0,Main,MQTT_Disconnected,490,0,Main,TabStrip1_PageSelected,831,0,Main,GetVideos,2452,0,Main,clvActivity_ItemClick,2580,0,Main,ShowAboutMenu,713,1,Main,ACToolBarLight1_MenuItemClick,706,1
 SelectedBuild=0
 VisibleModules=5,8,7,10,1,3,2,4,9,6

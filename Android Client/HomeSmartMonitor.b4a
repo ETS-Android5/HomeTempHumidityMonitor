@@ -572,7 +572,7 @@ Private Sub MQTT_Disconnected
 	Try
 		gblACMenu.Clear
 		gblACMenu.Add(0, 0, "Settings",Null)
-		gblACMenu.Add(0, 0, "Delete all local video clips",Null)
+		gblACMenu.Add(0, 0, "Refresh video list",Null)
 		gblACMenu.Add(0, 0, "Restart application",Null)
 		gblACMenu.Add(0, 0, "Show free memory",Null)
 		gblACMenu.Add(0, 0, "About",Null)
@@ -720,12 +720,17 @@ Sub ACToolBarLight1_MenuItemClick (Item As ACMenuItem)
 			info = info & "Available memory: " & NumberFormat2(((r.RunMethod("maxMemory") - r.RunMethod("totalMemory"))/(1024*1024)),0,2,2,False) & " MB" & CRLF
 			info = info & "Free memory: " & NumberFormat2(GetFreeMem/1000,0,2,2,False) & " MB"
 			Msgbox(info,"Smart Home Monitor") 'ignore
-		else if Item.Title = "Delete all local video clips" Then
+		else if Item.Title = "Refresh video list" Then
 			Dim bd As BitmapDrawable
 			bd.Initialize(LoadBitmapResize(File.DirAssets, "0.png", 32dip, 32dip, True))
-			If  Msgbox2("Delete all local video clips?", "Smart Home Monitor", "Yes", "", "No", bd.Bitmap) = DialogResponse.POSITIVE Then 'ignore
+			If  Msgbox2("Refresh video list?", "Smart Home Monitor", "Yes", "", "No", bd.Bitmap) = DialogResponse.POSITIVE Then 'ignore
+				B4XLoadingIndicator4.Show
+				
+				lblDuration.Text = "0:00"
+				wvMedia.LoadUrl("")
 				Starter.kvs.DeleteAll
 				clvActivity.Clear
+				
 				' https://www.b4x.com/android/forum/threads/b4x-resumable-subs-that-return-values-resumablesub.82670/
 				Dim rs As ResumableSub = GetUnwatchedVideos
 				wait for (rs) complete (Results As Object)
@@ -733,6 +738,11 @@ Sub ACToolBarLight1_MenuItemClick (Item As ACMenuItem)
 				' https://www.b4x.com/android/forum/threads/b4x-resumable-subs-that-return-values-resumablesub.82670/
 				Dim rs As ResumableSub = GetVideos(response)
 				wait for (rs) complete (Results As Object)
+				
+				TabStrip1.ScrollTo(5,False)
+				Sleep(100)
+				B4XLoadingIndicator4.Hide
+				Return
 			End If
 		else if Item.Title = "Restart board" Then
 			Try
@@ -785,7 +795,7 @@ Sub ShowAboutMenu
 	Try
 		Dim bd As BitmapDrawable
 		bd.Initialize(LoadBitmapResize(File.DirAssets, "cloyd.png", 32dip, 32dip, True))
-		Msgbox2("Smart Home Monitor v" & GetVersionCode & CRLF & CRLF & "Developed by: Cloyd Nino Catanaoan" & CRLF & "Version compiled on: July 30, 2020", "About", "OK", "", "", bd.Bitmap) 'ignore
+		Msgbox2("Smart Home Monitor v" & GetVersionCode & CRLF & CRLF & "Developed by: Cloyd Nino Catanaoan" & CRLF & "Version compiled on: August 9, 2020", "About", "OK", "", "", bd.Bitmap) 'ignore
 	Catch
 		Log(LastException)
 	End Try
@@ -809,7 +819,7 @@ Sub Activity_Createmenu(Menu As ACMenu)
 		Menu.Clear
 		gblACMenu = Menu
 		Menu.Add(0, 0, "Settings",Null)
-		Menu.Add(0, 0, "Delete all local video clips",Null)
+		Menu.Add(0, 0, "Refresh video list",Null)
 		Menu.Add(0, 0, "Restart Application",Null)
 		Menu.Add(0, 0, "Show free memory",Null)
 		Menu.Add(0, 0, "About",Null)
@@ -2946,13 +2956,11 @@ Sub GetUnwatchedVideos() As ResumableSub
 		Dim n As Long = DateTime.Now
 		For Each colmedia As Map In media
 			Dim watched As String = colmedia.Get("watched")
-			Dim VideoID As String = colmedia.Get("id")
-			Dim mytypes As Object = Starter.kvs.Get(VideoID)
-			Dim videos = mytypes As VideoInfo
+'			Dim VideoID As String = colmedia.Get("id")
+'			Dim mytypes As Object = Starter.kvs.Get(VideoID)
+'			Dim videos = mytypes As VideoInfo
 			If watched = False Then
 				unwatchedVideoCount = unwatchedVideoCount + 1
-			Else If videos = Null And unwatchedVideoCount = 0 Then
-				unwatchedVideoCount = 1
 			End If
 		Next
 		Log("Loading unwatched videos took: " & (DateTime.Now - n) & "ms")

@@ -155,7 +155,7 @@ public static String  _hc_responseerror(anywheresoftware.b4h.okhttp.OkHttpClient
 cloyd.smart.home.monitor.httpjob _job = null;
  //BA.debugLineNum = 90;BA.debugLine="Sub hc_ResponseError (Response As OkHttpResponse,";
  //BA.debugLineNum = 91;BA.debugLine="Log($\"ResponseError. Reason: ${Reason}, Response:";
-anywheresoftware.b4a.keywords.Common.LogImpl("212648449",("ResponseError. Reason: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_reason))+", Response: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_response.getErrorResponse()))+""),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("312517377",("ResponseError. Reason: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_reason))+", Response: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_response.getErrorResponse()))+""),0);
  //BA.debugLineNum = 92;BA.debugLine="Response.Release";
 _response.Release();
  //BA.debugLineNum = 93;BA.debugLine="Dim job As HttpJob = TaskIdToJob.Get(TaskId)";
@@ -227,9 +227,9 @@ anywheresoftware.b4a.keywords.Common.File.Delete(_tempfolder,"~test.test");
  } 
        catch (Exception e6) {
 			processBA.setLastException(e6); //BA.debugLineNum = 30;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("212255239",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("312124167",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  //BA.debugLineNum = 31;BA.debugLine="Log(\"Switching to File.DirInternal\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("212255240","Switching to File.DirInternal",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("312124168","Switching to File.DirInternal",0);
  //BA.debugLineNum = 32;BA.debugLine="TempFolder = File.DirInternal";
 _tempfolder = anywheresoftware.b4a.keywords.Common.File.getDirInternal();
  };
