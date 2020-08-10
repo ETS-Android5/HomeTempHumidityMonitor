@@ -2540,7 +2540,7 @@ Sub GetVideos(json As String) As ResumableSub
 			lblDuration.Text = "0:00"
 			wvMedia.LoadUrl("")
 			
-			ToastMessageShow("Acquiring page 2. Video count is " & clvActivity.Size & ".",False)
+			'ToastMessageShow("Acquiring page 2. Video count is " & clvActivity.Size & ".",False)
 				
 			' https://www.b4x.com/android/forum/threads/b4x-resumable-subs-that-return-values-resumablesub.82670/
 			Dim rs As ResumableSub = GetUnwatchedVideosPage2
