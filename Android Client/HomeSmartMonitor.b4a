@@ -795,7 +795,7 @@ Sub ShowAboutMenu
 	Try
 		Dim bd As BitmapDrawable
 		bd.Initialize(LoadBitmapResize(File.DirAssets, "cloyd.png", 32dip, 32dip, True))
-		Msgbox2("Smart Home Monitor v" & GetVersionCode & CRLF & CRLF & "Developed by: Cloyd Nino Catanaoan" & CRLF & "Version compiled on: August 9, 2020", "About", "OK", "", "", bd.Bitmap) 'ignore
+		Msgbox2("Smart Home Monitor v" & GetVersionCode & CRLF & CRLF & "Developed by: Cloyd Nino Catanaoan" & CRLF & "Version compiled on: August 10, 2020", "About", "OK", "", "", bd.Bitmap) 'ignore
 	Catch
 		Log(LastException)
 	End Try
@@ -2502,6 +2502,7 @@ Sub GetVideos(json As String) As ResumableSub
 		Next
 		
 		Dim bmp2 As Bitmap
+		Dim jumpToThisItem As Int = 0
 		clvActivity.Clear
 		Dim list1 As List = Starter.kvs.ListKeys
 		For i =  0 To list1.Size-1
@@ -2523,6 +2524,9 @@ Sub GetVideos(json As String) As ResumableSub
 				cd.filedate = videos.DateCreated
 				cd.deviceinfo = videos.DeviceName
 				cd.iswatchedvisible = Not(videos.Watched)
+				If videos.Watched = False Then
+					jumpToThisItem = i
+				End If
 				cd.mediaURL = "https://rest-" & userRegion &".immedia-semi.com" & videos.ThumbnailPath
 				Dim p As B4XView = xui.CreatePanel("")
 				p.SetLayoutAnimated(0, 0, 0, clvActivity.AsView.Width, 100dip)
@@ -2530,14 +2534,34 @@ Sub GetVideos(json As String) As ResumableSub
 			End If
 		Next
 			
-		'ProgressDialogHide
+		If clvActivity.Size < 50 Then
+			B4XLoadingIndicator4.Show
+				
+			lblDuration.Text = "0:00"
+			wvMedia.LoadUrl("")
+			
+			ToastMessageShow("Acquiring page 2. Video count is " & clvActivity.Size & ".",False)
+				
+			' https://www.b4x.com/android/forum/threads/b4x-resumable-subs-that-return-values-resumablesub.82670/
+			Dim rs As ResumableSub = GetUnwatchedVideosPage2
+			wait for (rs) complete (Results As Object)
+				
+			' https://www.b4x.com/android/forum/threads/b4x-resumable-subs-that-return-values-resumablesub.82670/
+			Dim rs As ResumableSub = GetVideos(response)
+			wait for (rs) complete (Results As Object)
+				
+			TabStrip1.ScrollTo(5,False)
+			Sleep(100)
+			B4XLoadingIndicator4.Hide
+		End If
 
 		If list1.Size > 0 Then
-			clvActivity.JumpToItem(0)
+			clvActivity.JumpToItem(jumpToThisItem)
 			Sleep(100)
-			clvActivity_ItemClick(0,"") '"https://rest-" & userRegion &".immedia-semi.com" & videos.ThumbnailPath & "|" & videos.DeviceName & " " & ConvertFullDateTime(videos.DateCreated))
+			clvActivity_ItemClick(jumpToThisItem,"") '"https://rest-" & userRegion &".immedia-semi.com" & videos.ThumbnailPath & "|" & videos.DeviceName & " " & ConvertFullDateTime(videos.DateCreated))
 			Sleep(100)
 		End If
+		
 	Catch
 		Log(LastException)
 	End Try
@@ -2919,7 +2943,7 @@ Sub ShowVideo (Link As String) As ResumableSub
 			ContentLabel.Visible = True
 		End If
 		
-		GetUnwatchedVideos
+		'GetUnwatchedVideos
 	Catch
 		Log(LastException)
 	End Try
@@ -2953,7 +2977,7 @@ Sub GetUnwatchedVideos() As ResumableSub
 		Dim root As Map = parser.NextObject
 		Dim media As List = root.Get("media")
 		
-		Dim n As Long = DateTime.Now
+		'Dim n As Long = DateTime.Now
 		For Each colmedia As Map In media
 			Dim watched As String = colmedia.Get("watched")
 '			Dim VideoID As String = colmedia.Get("id")
@@ -2963,7 +2987,48 @@ Sub GetUnwatchedVideos() As ResumableSub
 				unwatchedVideoCount = unwatchedVideoCount + 1
 			End If
 		Next
-		Log("Loading unwatched videos took: " & (DateTime.Now - n) & "ms")
+		'Log("Loading unwatched videos took: " & (DateTime.Now - n) & "ms")
+		Dim lbl As B4XView = GetAllTabLabelsForBadge(TabStrip1).Get(5)
+		badger1.SetBadge(lbl, unwatchedVideoCount)
+		StateManager.SetSetting("UnwatchedVideoClips",unwatchedVideoCount)
+		StateManager.SaveSettings
+		If unwatchedVideoCount > 0 Then
+			isThereUnwatchedVideo = True
+		Else
+			isThereUnwatchedVideo = False
+		End If
+	Catch
+		Log(LastException)
+	End Try
+	Return Null
+End Sub
+
+Sub GetUnwatchedVideosPage2() As ResumableSub
+	Try
+		'************************************************************************************************************************************************************
+		' ***** KEEP android:targetSdkVersion="26" IN THE THE MANIFEST INSTEAD OF 28 ELSE IT WILL CRASH WHEN CALLING THIS SUB FROM ANOTHER TAB OR DURING LAUNCH *****
+		'************************************************************************************************************************************************************
+		
+		Dim rs As ResumableSub = RESTGet("https://rest-" & userRegion &".immedia-semi.com/api/v1/accounts/88438/media/changed?since=-999999999-01-01T00:00:00+18:00&page=2")
+		wait for (rs) complete (Result As Object)
+		
+		Dim unwatchedVideoCount As Int = 0
+		Dim parser As JSONParser
+		parser.Initialize(response)
+		Dim root As Map = parser.NextObject
+		Dim media As List = root.Get("media")
+		
+		'Dim n As Long = DateTime.Now
+		For Each colmedia As Map In media
+			Dim watched As String = colmedia.Get("watched")
+'			Dim VideoID As String = colmedia.Get("id")
+'			Dim mytypes As Object = Starter.kvs.Get(VideoID)
+'			Dim videos = mytypes As VideoInfo
+			If watched = False Then
+				unwatchedVideoCount = unwatchedVideoCount + 1
+			End If
+		Next
+		'Log("Loading unwatched videos took: " & (DateTime.Now - n) & "ms")
 		Dim lbl As B4XView = GetAllTabLabelsForBadge(TabStrip1).Get(5)
 		badger1.SetBadge(lbl, unwatchedVideoCount)
 		StateManager.SetSetting("UnwatchedVideoClips",unwatchedVideoCount)
@@ -3039,7 +3104,7 @@ Sub btnDrivewayNewClip_Click
 			Dim rs As ResumableSub = RESTGet("https://rest-" & userRegion &".immedia-semi.com/network/" & networkID &"/command/" & commandID)
 			wait for (rs) complete (Result As Object)
 
-			For i = 1 To 70
+			For i = 1 To 60
 				
 				Dim rs As ResumableSub = GetCommandStatus(response)
 				wait for (rs) complete (Result As Object)
@@ -3052,7 +3117,7 @@ Sub btnDrivewayNewClip_Click
 					wait for (rs) complete (Result As Object)
 					Exit
 				Else
-					lblStatus.Text = "Awaiting for the Driveway video clip... " & i & "/70"
+					lblStatus.Text = "Awaiting for the Driveway video clip... " & i & "/60"
 				End If
 				
 				Dim rs As ResumableSub = RESTGet("https://rest-" & userRegion &".immedia-semi.com/network/" & networkID &"/command/" & commandID)
@@ -3128,7 +3193,7 @@ Sub btnFrontDoorNewClip_Click
 			
 			Dim rs As ResumableSub = RESTGet("https://rest-" & userRegion &".immedia-semi.com/network/" & networkID &"/command/" & commandID)
 			wait for (rs) complete (Result As Object)
-			For i = 1 To 70
+			For i = 1 To 60
 				
 				Dim rs As ResumableSub = GetCommandStatus(response)
 				wait for (rs) complete (Result As Object)
@@ -3141,7 +3206,7 @@ Sub btnFrontDoorNewClip_Click
 					wait for (rs) complete (Result As Object)
 					Exit
 				Else
-					lblStatus.Text = "Awaiting for the Front Door video clip... " & i & "/70"
+					lblStatus.Text = "Awaiting for the Front Door video clip... " & i & "/60"
 				End If
 				
 				Dim rs As ResumableSub = RESTGet("https://rest-" & userRegion &".immedia-semi.com/network/" & networkID &"/command/" & commandID)
@@ -3216,7 +3281,7 @@ Sub btnSideYardNewClip_Click
 			
 			Dim rs As ResumableSub = RESTGet("https://rest-" & userRegion &".immedia-semi.com/network/" & networkID &"/command/" & commandID)
 			wait for (rs) complete (Result As Object)
-			For i = 1 To 70
+			For i = 1 To 60
 				
 				Dim rs As ResumableSub = GetCommandStatus(response)
 				wait for (rs) complete (Result As Object)
@@ -3229,7 +3294,7 @@ Sub btnSideYardNewClip_Click
 					wait for (rs) complete (Result As Object)
 					Exit
 				Else
-					lblStatus.Text = "Awaiting for the Side Yard video clip... " & i & "/70"
+					lblStatus.Text = "Awaiting for the Side Yard video clip... " & i & "/60"
 				End If
 				
 				Dim rs As ResumableSub = RESTGet("https://rest-" & userRegion &".immedia-semi.com/network/" & networkID &"/command/" & commandID)
