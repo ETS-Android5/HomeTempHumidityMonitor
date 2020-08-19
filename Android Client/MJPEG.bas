@@ -42,6 +42,10 @@ Public Sub Disconnect()
 	CallSub(mCallback, mEventName & "_Disconnected")
 End Sub
 
+Public Sub ForceDisconnect()
+	If Astream.IsInitialized Then Astream.Close
+End Sub
+
 Private Sub Sock_Connected (Successful As Boolean)
 	If Successful Then
 		boundary = ""

@@ -1134,8 +1134,8 @@ End Sub
 Sub mjFrontYardOutdoor_Frame(btmp As Bitmap)
 	Try
 		If btmp.Width > 640 Or mjFrontYardOutdoorCounter > 15 Then
-			mjFrontYardOutdoor.Disconnect
-			'Wait For mjFrontYardOutdoor_Disconnected
+			lblFrontYardOutdoor.Text = ""
+			mjFrontYardOutdoor.ForceDisconnect
 			
 			B4XLoadingIndicatorFrontYard.Hide
 			mjFrontYardOutdoorCounter = 0
@@ -1164,8 +1164,8 @@ End Sub
 Sub mjBackyardOutdoor_Frame(btmp As Bitmap)
 	Try
 		If btmp.Width > 640 Or mjBackyardOutdoorCounter > 15 Then
-			mjBackyardOutdoor.Disconnect
-			'Wait For mjBackyardOutdoor_Disconnected
+			lblBackyardOutdoor.Text = ""
+			mjBackyardOutdoor.ForceDisconnect
 			
 			B4XLoadingIndicatorBackyard.Hide
 			mjBackyardOutdoorCounter = 0
