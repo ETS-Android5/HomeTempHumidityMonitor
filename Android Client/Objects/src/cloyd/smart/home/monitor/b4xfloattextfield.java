@@ -63,6 +63,7 @@ public cloyd.smart.home.monitor.notificationservice _notificationservice = null;
 public cloyd.smart.home.monitor.statemanager _statemanager = null;
 public cloyd.smart.home.monitor.starter _starter = null;
 public cloyd.smart.home.monitor.httputils2service _httputils2service = null;
+public cloyd.smart.home.monitor.b4xcollections _b4xcollections = null;
 public String  _base_resize(double _width,double _height) throws Exception{
 int _firstdistance = 0;
  //BA.debugLineNum = 183;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
@@ -347,7 +348,7 @@ if (_passwordmode && _multiline) {
  //BA.debugLineNum = 89;BA.debugLine="Multiline = False";
 _multiline = __c.False;
  //BA.debugLineNum = 90;BA.debugLine="Log(\"Multiline not supported with password mode.";
-__c.LogImpl("921233688","Multiline not supported with password mode.",0);
+__c.LogImpl("923134232","Multiline not supported with password mode.",0);
  };
  //BA.debugLineNum = 92;BA.debugLine="CreateTextFieldAll(PasswordMode, PassedLabel.Font";
 _createtextfieldall(_passwordmode,_passedlabel.getFont(),_xui.PaintOrColorToColor((Object)(_lbl.getTextColor())));

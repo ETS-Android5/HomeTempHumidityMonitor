@@ -60,6 +60,7 @@ public cloyd.smart.home.monitor.notificationservice _notificationservice = null;
 public cloyd.smart.home.monitor.statemanager _statemanager = null;
 public cloyd.smart.home.monitor.starter _starter = null;
 public cloyd.smart.home.monitor.httputils2service _httputils2service = null;
+public cloyd.smart.home.monitor.b4xcollections _b4xcollections = null;
 public String  _background_click() throws Exception{
  //BA.debugLineNum = 255;BA.debugLine="Private Sub Background_Click";
  //BA.debugLineNum = 257;BA.debugLine="End Sub";
@@ -188,7 +189,7 @@ _setavg(_bc,_x,_y,_clrs,_temp);
  }
 };
  //BA.debugLineNum = 320;BA.debugLine="Log(\"Time: \" & (DateTime.Now - n))";
-__c.LogImpl("920774948","Time: "+BA.NumberToString((__c.DateTime.getNow()-_n)),0);
+__c.LogImpl("922675492","Time: "+BA.NumberToString((__c.DateTime.getNow()-_n)),0);
  //BA.debugLineNum = 321;BA.debugLine="Return bc";
 if (true) return _bc;
  //BA.debugLineNum = 322;BA.debugLine="End Sub";

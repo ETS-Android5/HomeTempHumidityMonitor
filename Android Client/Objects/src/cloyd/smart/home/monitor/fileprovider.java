@@ -34,6 +34,7 @@ public cloyd.smart.home.monitor.notificationservice _notificationservice = null;
 public cloyd.smart.home.monitor.statemanager _statemanager = null;
 public cloyd.smart.home.monitor.starter _starter = null;
 public cloyd.smart.home.monitor.httputils2service _httputils2service = null;
+public cloyd.smart.home.monitor.b4xcollections _b4xcollections = null;
 public String  _class_globals() throws Exception{
  //BA.debugLineNum = 2;BA.debugLine="Sub Class_Globals";
  //BA.debugLineNum = 3;BA.debugLine="Public SharedFolder As String";
@@ -97,7 +98,7 @@ _usefileprovider = __c.False;
 _sharedfolder = _rp.GetSafeDirDefaultExternal("shared");
  };
  //BA.debugLineNum = 18;BA.debugLine="Log($\"Using FileProvider? ${UseFileProvider}\"$)";
-__c.LogImpl("010354698",("Using FileProvider? "+__c.SmartStringFormatter("",(Object)(_usefileprovider))+""),0);
+__c.LogImpl("611534346",("Using FileProvider? "+__c.SmartStringFormatter("",(Object)(_usefileprovider))+""),0);
  //BA.debugLineNum = 19;BA.debugLine="End Sub";
 return "";
 }

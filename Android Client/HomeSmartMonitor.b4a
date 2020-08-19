@@ -5,13 +5,16 @@ File11=camera-icon.png
 File12=cloyd.png
 File13=crysta.ttf
 File14=exo_controls_fullscreen_enter.png
-File15=ic_play.png
-File16=liveviewbuttontranparent.png
-File17=Main.bal
-File18=ScrollViewBasement.bal
-File19=snapshotbutton.png
+File15=ic_loading.png
+File16=ic_play.png
+File17=liveviewbuttontranparent.png
+File18=Main.bal
+File19=ScrollViewBasement.bal
 File2=1.bal
-File20=TempHumidityBasement.bal
+File20=snapshotbutton.png
+File21=TempHumidityBasement.bal
+File22=video-camera.png
+File23=wyzeoutdoor.bal
 File3=1ScrollView.bal
 File4=2.bal
 File5=AirQualityBasement.bal
@@ -32,6 +35,9 @@ FileGroup18=Default Group
 FileGroup19=Default Group
 FileGroup2=Default Group
 FileGroup20=Default Group
+FileGroup21=Default Group
+FileGroup22=Default Group
+FileGroup23=Default Group
 FileGroup3=Default Group
 FileGroup4=Default Group
 FileGroup5=Default Group
@@ -59,7 +65,11 @@ Library23=webviewsettings
 Library24=sql
 Library25=b4xencryption
 Library26=b4xbitmapeffects
+Library27=b4xcollections
+Library28=zoomimageview
+Library29=chromcustomtabs
 Library3=javaobject
+Library30=network
 Library4=xmllayoutbuilder
 Library5=jmqtt
 Library6=callsubutils
@@ -68,18 +78,19 @@ Library8=xui
 Library9=phone
 ManifestCode=AddManifestText(~\n~<uses-sdk android:minSdkVersion="7" android:targetSdkVersion="26"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~~\n~SetApplicationAttribute(android:theme, "@style/MyAppTheme")~\n~CreateResource(values, colors.xml,~\n~<resources>~\n~    <color name="actionbar">#90a4ae</color>~\n~   <color name="statusbar">#62757f</color>~\n~   <color name="textColorPrimary">#000000</color>~\n~   <color name="navigationBar">#90a4ae</color>~\n~</resources>~\n~)~\n~CreateResource(values, theme.xml,~\n~<resources>~\n~    <style name="MyAppTheme" parent="Theme.AppCompat.Light">~\n~        <item name="colorPrimary">@color/actionbar</item>~\n~        <item name="colorPrimaryDark">@color/statusbar</item>~\n~       <item name="android:textColorPrimary">@color/textColorPrimary</item>~\n~       <item name="android:navigationBarColor">@color/navigationBar</item>~\n~       <item name="windowNoTitle">true</item>~\n~       <item name="windowActionBar">false</item>~\n~       <item name="windowActionModeOverlay">true</item>~\n~    </style>~\n~	<style name="ToolbarMenu" parent="Base.ThemeOverlay.AppCompat.ActionBar">~\n~	    <item name="android:textColorPrimary">#000000</item>~\n~	    <item name="android:colorBackground">#B0BEC5</item>~\n~    </style>~\n~</resources>~\n~)~\n~~\n~AddApplicationText(~\n~<service android:name="anywheresoftware.b4a.objects.NotificationListenerWrapper"~\n~   android:label="Smart Home Monitor"~\n~  android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">~\n~  <intent-filter>~\n~  <action android:name="android.service.notification.NotificationListenerService" />~\n~  </intent-filter>~\n~</service>)~\n~~\n~AddApplicationText(~\n~<activity~\n~  android:name="de.amberhome.objects.preferenceactivity"~\n~  android:theme="@android:style/Theme.Material.Light">~\n~</activity>~\n~)~\n~~\n~AddManifestText(~\n~<uses-permission~\n~  android:name="android.permission.WRITE_EXTERNAL_STORAGE"~\n~  android:maxSdkVersion="18" />~\n~)~\n~~\n~AddManifestText(<uses-permission~\n~   android:name="android.permission.WRITE_EXTERNAL_STORAGE"~\n~   android:maxSdkVersion="18" />~\n~)~\n~~\n~AddApplicationText(~\n~  <provider~\n~  android:name="android.support.v4.content.FileProvider"~\n~  android:authorities="$PACKAGE$.provider"~\n~  android:exported="false"~\n~  android:grantUriPermissions="true">~\n~  <meta-data~\n~  android:name="android.support.FILE_PROVIDER_PATHS"~\n~  android:resource="@xml/provider_paths"/>~\n~  </provider>~\n~)~\n~CreateResource(xml, provider_paths,~\n~   <files-path name="name" path="shared" />~\n~)~\n~~\n~SetApplicationAttribute(android:largeHeap, "true")
 Module1=B4XPageIndicator
-Module10=StateManager
+Module10=Starter
+Module11=StateManager
 Module2=Badger
 Module3=cMediaData
 Module4=FileProvider
 Module5=Gauge
 Module6=KeyValueStore
-Module7=NotificationService
-Module8=SmartHomeMonitor
-Module9=Starter
-NumberOfFiles=20
-NumberOfLibraries=26
-NumberOfModules=10
+Module7=MJPEG
+Module8=NotificationService
+Module9=SmartHomeMonitor
+NumberOfFiles=23
+NumberOfLibraries=30
+NumberOfModules=11
 Version=10
 @EndOfDesignText@
 #Region  Project Attributes 
@@ -140,6 +151,10 @@ Sub Process_Globals
 	Private Pages As List
 	Private Awake As PhoneWakeState
 	Private effects As BitmapCreatorEffects
+	Private wyzeFrontYardURL As String 
+	Private wyzeBackyardURL As String 
+	Private mjFrontYardOutdoorCounter As Int
+	Private mjBackyardOutdoorCounter As Int
 End Sub
 
 Sub Globals
@@ -220,6 +235,19 @@ Sub Globals
 	Private btnDrivewayRefresh As ImageView
 	Private swArmed As B4XSwitch
 	Private dialog As B4XDialog
+	Private ivFrontYardOutdoor As ImageView
+	Private ivBackyardOutdoor As ImageView
+	Private mjFrontYardOutdoor As MJPEG
+	Private mjBackyardOutdoor As MJPEG
+	Private B4XLoadingIndicatorBackyard As B4XLoadingIndicator
+	Private B4XLoadingIndicatorFrontYard As B4XLoadingIndicator
+	Private lblBackyardOutdoor As Label
+	Private lblFrontYardOutdoor As Label
+	Private btnNoteWyzeReset As SwiftButton
+	Private btnFrontYardOutdoorRefresh As ImageView
+	Private btnBackyardOutdoorRefresh As ImageView
+	Private btnBackyardOutdoorLive As ImageView
+	Private btnFrontYardOutdoorLive As ImageView
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -256,13 +284,14 @@ Sub Activity_Create(FirstTime As Boolean)
 		PanelTempHumidityBasement.Height = ScrollViewBasement.Height 'PanelTempHumidityBasement.Height + 100dip
 		ScrollViewBasement.Panel.Height = PanelTempHumidityBasement.Height
 		TabStrip1.LoadLayout("AirQualityBasement", "BASEMENT" & CRLF & "Air Quality (CO)  " & Chr(0xF289))
-		TabStrip1.LoadLayout("blinkscrollview", "OUTSIDE" & CRLF & "Security Camera  " & Chr(0xF030))
+		TabStrip1.LoadLayout("blinkscrollview", "BLINK CAMERAS" & CRLF & "Live View  " & Chr(0xF030))
 		ScrollViewBlink.Panel.LoadLayout("blink")
 		'https://www.b4x.com/android/forum/threads/how-to-create-a-scrollable-screen.102755/#post-644462
 		ScrollViewBlink.panel.height = 910dip
 		panelBlink.Height = 910dip
-		TabStrip1.LoadLayout("blinkactivity", "ACTIVITY" & CRLF & "Security Camera  " & Chr(0xF03D))
-
+		TabStrip1.LoadLayout("blinkactivity", "BLINK CAMERAS" & CRLF & "Events  " & Chr(0xF03D))
+		TabStrip1.LoadLayout("wyzeoutdoor", "WYZE CAMERAS" & CRLF & "Live View  " & Chr(0xF030))
+		
 		For Each lbl As Label In GetAllTabLabels(TabStrip1)
 			' Two lines in a tab of TabStripViewPager
 			lbl.SingleLine = False
@@ -398,43 +427,15 @@ Sub Activity_Create(FirstTime As Boolean)
 			p.AddView(lblBadge, 0, 0, Width, Height)
 		Next
 		
-		If File.Exists(File.DirInternal, "account.txt") Then
-			Dim List1 As List
-			List1.Initialize
-			List1 = File.ReadList(File.DirInternal, "account.txt")
-			For i = 0 To List1.Size - 1
-				If i = 0 Then
-					emailAddress = List1.Get(i)
-				Else if i = 1 Then
-					password = List1.Get(i)
-				End If
-			Next
-		Else If File.Exists(File.DirRootExternal,"account.txt") Then
-			File.Copy(File.DirRootExternal,"account.txt",File.DirInternal, "account.txt")
-			If File.Exists(File.DirInternal, "account.txt") Then
-				Dim List1 As List
-				List1.Initialize
-				List1 = File.ReadList(File.DirInternal, "account.txt")
-				For i = 0 To List1.Size - 1
-					If i = 0 Then
-						emailAddress = List1.Get(i)
-					Else if i = 1 Then
-						password = List1.Get(i)
-					End If
-				Next
-			Else
-				Msgbox("account.txt not found","Smart Home Monitor") 'ignore
-				ExitApplication
-			End If
-		Else
-			Msgbox("account.txt not found","Smart Home Monitor") 'ignore
-			ExitApplication
-		End If
-
+		CheckDataFile("account.txt")
+			
 		Dim rs As ResumableSub = RequestAuthToken
 		wait for (rs) complete (Result As Object)
 		
-		Pages = Array(True, True, True, True, True, True) 'True = Enabled
+		Pages = Array(True, True, True, True, True, True, True) 'True = Enabled
+		
+		mjFrontYardOutdoor.Initialize(Me, "mjFrontYardOutdoor")
+		mjBackyardOutdoor.Initialize(Me, "mjBackyardOutdoor")
 
 	Catch
 		ToastMessageShow(LastException,True)
@@ -506,6 +507,8 @@ Sub Activity_Resume
 			TabStrip1_PageSelected(4)
 		else If TabStrip1.CurrentPage = 5 Then
 			TabStrip1_PageSelected(5)
+		else If TabStrip1.CurrentPage = 6 Then
+			TabStrip1_PageSelected(6)
 		End If
 	Catch
 		Log(LastException)
@@ -524,10 +527,18 @@ Sub Activity_Pause (UserClosed As Boolean)
 	Awake.ReleaseKeepAlive
 
 	wvMedia.LoadUrl("")
-
+	
+	If mjFrontYardOutdoor.IsInitialized Then mjFrontYardOutdoor.Disconnect
+	If mjBackyardOutdoor.IsInitialized Then mjBackyardOutdoor.Disconnect
+	
+	mjFrontYardOutdoorCounter = 0
+	mjBackyardOutdoorCounter = 0
+	
 	ivDriveway.Bitmap = Null
 	ivFrontDoor.Bitmap = Null
 	ivSideYard.Bitmap = Null
+	ivBackyardOutdoor.Bitmap = Null
+	ivFrontYardOutdoor.Bitmap = Null
 
 	Dim Obj1 As Reflector
 	Obj1.Target = bmp ' the unwanted Bitmap
@@ -795,7 +806,7 @@ Sub ShowAboutMenu
 	Try
 		Dim bd As BitmapDrawable
 		bd.Initialize(LoadBitmapResize(File.DirAssets, "cloyd.png", 32dip, 32dip, True))
-		Msgbox2("Smart Home Monitor v" & GetVersionCode & CRLF & CRLF & "Developed by: Cloyd Nino Catanaoan" & CRLF & "Version compiled on: August 10, 2020", "About", "OK", "", "", bd.Bitmap) 'ignore
+		Msgbox2("Smart Home Monitor v" & GetVersionCode & CRLF & CRLF & "Developed by: Cloyd Nino Catanaoan" & CRLF & "Version compiled on: August 18, 2020", "About", "OK", "", "", bd.Bitmap) 'ignore
 	Catch
 		Log(LastException)
 	End Try
@@ -867,10 +878,18 @@ Sub TabStrip1_PageSelected (Position As Int)
 			FixedPosition = Position
 		End If
 		CurrentPage = FixedPosition
-		TabStrip1.ScrollTo(FixedPosition, True)
+		TabStrip1.ScrollTo(FixedPosition, False)
 		If CurrentPage <> Position Then Return
 		
 		B4XPageIndicator1.CurrentPage = Position
+		
+		If Position <> 6 Then
+			If mjFrontYardOutdoor.IsInitialized Then mjFrontYardOutdoor.Disconnect
+			If mjBackyardOutdoor.IsInitialized Then mjBackyardOutdoor.Disconnect
+			mjFrontYardOutdoorCounter = 0
+			mjBackyardOutdoorCounter = 0
+		End If
+		
 		If Position = 0 Then
 			If MQTT.IsInitialized And MQTT.Connected  Then
 				MQTT.Publish("TempHumid", bc.StringToBytes("Read weather", "utf8"))
@@ -965,7 +984,213 @@ Sub TabStrip1_PageSelected (Position As Int)
 				wait for (rs) complete (Result As Object)
 			End If
 		End If
+		
+		If Position = 6 Then
+		
+			CheckDataFile("wyzefrontyard.txt")
+			CheckDataFile("wyzebackyard.txt")
+			
+			lblFrontYardOutdoor.Text = ""
+			lblBackyardOutdoor.Text = ""
+			
+			Dim tempBitmap As B4XBitmap
+			If File.Exists(File.DirInternal, "FrontYardOutdoor.jpg") Then
+				tempBitmap = xui.LoadBitmapResize(File.DirInternal, "FrontYardOutdoor.jpg", ivFrontYardOutdoor.Width,ivFrontYardOutdoor.Height, True)
+				ivFrontYardOutdoor.Bitmap = tempBitmap
+			End If
+			
+			If File.Exists(File.DirInternal, "BackyardOutdoor.jpg") Then
+				tempBitmap = xui.LoadBitmapResize(File.DirInternal, "BackyardOutdoor.jpg", ivBackyardOutdoor.Width,ivBackyardOutdoor.Height, True)
+				ivBackyardOutdoor.Bitmap = tempBitmap
+			End If
 
+		End If
+
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub mjFrontYardOutdoor_ConnectionError(error As String)
+	Try
+		If TabStrip1.CurrentPage = 6 Then
+			Log("     Front Yard Outdoor camera connection error")
+			B4XLoadingIndicatorFrontYard.Show
+			lblFrontYardOutdoor.Text = error & " Reconnecting..."
+			mjFrontYardOutdoorCounter = 0
+			mjFrontYardOutdoor.Connect(wyzeFrontYardURL, 8083)
+		End If
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub mjBackyardOutdoor_ConnectionError(error As String)
+	Try
+		If TabStrip1.CurrentPage = 6 Then
+			Log("     Backyard Outdoor camera connection error")
+			B4XLoadingIndicatorBackyard.Show
+			lblBackyardOutdoor.Text = error & " Reconnecting..."
+			mjBackyardOutdoorCounter = 0
+			mjBackyardOutdoor.Connect(wyzeBackyardURL, 8083)
+		End If
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub mjFrontYardOutdoor_StreamError(error As String)
+	Try
+		Log("Front Yard Outdoor stream error")
+		B4XLoadingIndicatorFrontYard.Hide
+		lblFrontYardOutdoor.Text = error
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub mjBackyardOutdoor_StreamError(error As String)
+	Try
+		Log("Backyard Outdoor stream error")
+		B4XLoadingIndicatorBackyard.hide
+		lblBackyardOutdoor.Text = error
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub mjFrontYardOutdoor_Disconnected
+	Try
+		Log("Front Yard Outdoor Disconnected")
+		B4XLoadingIndicatorFrontYard.Hide
+		If LastException.IsInitialized Then
+		If LastException.Message <> "" And LastException.Message.Contains("Object should first be initialized") = False Then
+				lblFrontYardOutdoor.Text = "Disconnected: " & LastException.Message
+			Else
+				lblFrontYardOutdoor.Text = "Disconnected"
+			End If
+		Else
+			lblFrontYardOutdoor.Text = "Disconnected"
+		End If
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub mjBackyardOutdoor_Disconnected
+	Try
+		Log("Backyard Outdoor Disconnected")
+		B4XLoadingIndicatorBackyard.hide
+		If LastException.IsInitialized Then
+			If LastException.Message <> "" And LastException.Message.Contains("Object should first be initialized") = False Then
+				lblBackyardOutdoor.Text = "Disconnected: " & LastException.Message
+			Else
+				lblBackyardOutdoor.Text = "Disconnected"
+			End If
+		Else
+			lblBackyardOutdoor.Text = "Disconnected"
+		End If
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub mjFrontYardOutdoor_Terminated
+	Try
+		Log("Front Yard Outdoor Terminated")
+		B4XLoadingIndicatorFrontYard.Hide
+		If LastException.IsInitialized Then
+			If LastException.Message <> "" And LastException.Message.Contains("Object should first be initialized") = False Then
+				lblFrontYardOutdoor.Text = "Terminated: " & LastException.Message
+			Else
+				lblFrontYardOutdoor.Text = "Terminated"
+			End If
+		Else
+			lblFrontYardOutdoor.Text = "Terminated"
+		End If
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub mjBackyardOutdoor_Terminated
+	Try
+		Log("Backyard Outdoor Terminated")
+		B4XLoadingIndicatorBackyard.hide
+		lblBackyardOutdoor.Text = "Terminated"
+		If LastException.IsInitialized Then
+			If LastException.Message <> "" And LastException.Message.Contains("Object should first be initialized") = False Then
+				lblBackyardOutdoor.Text = "Terminated: " & LastException.Message
+			Else
+				lblBackyardOutdoor.Text = "Terminated"
+			End If
+		Else
+			lblBackyardOutdoor.Text = "Terminated"
+		End If
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub mjFrontYardOutdoor_Frame(btmp As Bitmap)
+	Try
+		If btmp.Width > 640 Or mjFrontYardOutdoorCounter > 15 Then
+			lblFrontYardOutdoor.Text = "Image received. Rendering..."
+			mjFrontYardOutdoor.Disconnect
+			Wait For mjFrontYardOutdoor_Disconnected
+			
+			B4XLoadingIndicatorFrontYard.Hide
+			mjFrontYardOutdoorCounter = 0
+			Dim Out As OutputStream
+			Out = File.OpenOutput(File.DirInternal, "FrontYardOutdoor.jpg", False)
+			btmp.WriteToStream(Out, 100, "JPEG")
+			Out.Close
+			
+			If File.Exists(File.DirInternal, "FrontYardOutdoor.jpg") Then
+				Dim tempBmpt As B4XBitmap
+				tempBmpt = xui.LoadBitmapResize(File.DirInternal, "FrontYardOutdoor.jpg", ivFrontYardOutdoor.Width,ivFrontYardOutdoor.Height, True)
+				ivFrontYardOutdoor.Bitmap = tempBmpt
+			End If
+			
+			lblFrontYardOutdoor.Text = ""
+			Return
+		End If
+
+		mjFrontYardOutdoorCounter = mjFrontYardOutdoorCounter + 1
+		Log("Front Yard frame received")
+		lblFrontYardOutdoor.Text = ""
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub mjBackyardOutdoor_Frame(btmp As Bitmap)
+	Try
+		If btmp.Width > 640 Or mjBackyardOutdoorCounter > 15 Then
+			lblBackyardOutdoor.Text = "Image received. Rendering..."
+			mjBackyardOutdoor.Disconnect
+			Wait For mjBackyardOutdoor_Disconnected
+			
+			B4XLoadingIndicatorBackyard.Hide
+			mjBackyardOutdoorCounter = 0
+			Dim Out As OutputStream
+			Out = File.OpenOutput(File.DirInternal, "BackyardOutdoor.jpg", False)
+			btmp.WriteToStream(Out, 100, "JPEG")
+			Out.Close
+			
+			If File.Exists(File.DirInternal, "BackyardOutdoor.jpg") Then
+				Dim tempBmpt As B4XBitmap
+				tempBmpt = xui.LoadBitmapResize(File.DirInternal, "BackyardOutdoor.jpg", ivBackyardOutdoor.Width,ivBackyardOutdoor.Height, True)
+				ivBackyardOutdoor.Bitmap = tempBmpt
+			End If
+			
+			lblBackyardOutdoor.Text = ""
+			Return
+		End If
+
+		mjBackyardOutdoorCounter = mjBackyardOutdoorCounter + 1
+		Log("Backyard frame received")
+		lblBackyardOutdoor.Text = ""
 	Catch
 		Log(LastException)
 	End Try
@@ -973,7 +1198,7 @@ End Sub
 
 Sub CreateTab4() As ResumableSub
 	Try
-		Pages = Array(False, False, False, False, True, False) 'True = Enabled
+		Pages = Array(False, False, False, False, True, False, False) 'True = Enabled
 		wvMedia.LoadUrl("")
 		If lblDrivewayBatt.Text = "" Or lblFrontDoorBatt.Text = "" Or lblSideYardBatt.Text = "" Or lblStatus.Text.Contains("REST endpoint URL not found") Then
 			'ProgressDialogShow2("Getting new camera information...",False)
@@ -1006,7 +1231,7 @@ Sub CreateTab4() As ResumableSub
 	Catch
 		Log(LastException)
 	End Try
-	Pages = Array(True, True, True, True, True, True) 'True = Enabled
+	Pages = Array(True, True, True, True, True, True, True) 'True = Enabled
 	Return Null
 End Sub
 
@@ -1041,24 +1266,28 @@ End Sub
 Sub Activity_KeyPress (KeyCode As Int) As Boolean 'ignore
 	If KeyCode = KeyCodes.KEYCODE_BACK Then
 		If TabStrip1.CurrentPage = 2 Then
-			TabStrip1.ScrollTo(1,True)
+			TabStrip1.ScrollTo(1,False)
 			TabStrip1_PageSelected(1)
 			Return True
 		Else If TabStrip1.CurrentPage = 1 Then
-			TabStrip1.ScrollTo(0,True)
+			TabStrip1.ScrollTo(0,False)
 			TabStrip1_PageSelected(0)
 			Return True
 		Else If TabStrip1.CurrentPage = 3 Then
-			TabStrip1.ScrollTo(2,True)
+			TabStrip1.ScrollTo(2,False)
 			TabStrip1_PageSelected(2)
 			Return True
 		Else If TabStrip1.CurrentPage = 4 Then
-			TabStrip1.ScrollTo(3,True)
+			TabStrip1.ScrollTo(3,False)
 			TabStrip1_PageSelected(3)
 			Return True
 		Else If TabStrip1.CurrentPage = 5 Then
-			TabStrip1.ScrollTo(4,True)
+			TabStrip1.ScrollTo(4,False)
 			TabStrip1_PageSelected(4)
+			Return True
+		Else If TabStrip1.CurrentPage = 6 Then
+			TabStrip1.ScrollTo(5,False)
+			TabStrip1_PageSelected(5)
 			Return True
 		End If
 	End If
@@ -2470,7 +2699,7 @@ Sub GetVideos(json As String) As ResumableSub
 		clvActivity.Clear
 		
 		'ProgressDialogShow2("Loading video clips...",False)
-		Pages = Array(False, False, False, False, False, True) 'True = Enabled
+		Pages = Array(False, False, False, False, False, True, False) 'True = Enabled
 		For Each colmedia As Map In media
 			Dim thumbnail As String = colmedia.Get("thumbnail")
 			Dim created_at As String = colmedia.Get("created_at")
@@ -2566,7 +2795,7 @@ Sub GetVideos(json As String) As ResumableSub
 		Log(LastException)
 	End Try
 	B4XLoadingIndicator4.hide
-	Pages = Array(True, True, True, True, True, True) 'True = Enabled
+	Pages = Array(True, True, True, True, True, True, True) 'True = Enabled
 	Return Null
 End Sub
 
@@ -3650,4 +3879,166 @@ Sub RandomString(length As Int) As String
 		randomstr = randomstr & (abc.CharAt(Rnd(0,abc.Length)))
 	Next
 	Return randomstr
+End Sub
+
+Sub CheckDataFile(filename As String)
+	If File.Exists(File.DirInternal, filename) Then
+		If filename = "account.txt" Then
+			Dim List1 As List
+			List1.Initialize
+			List1 = File.ReadList(File.DirInternal, filename)
+			For i = 0 To List1.Size - 1
+				If i = 0 Then
+					emailAddress = List1.Get(i)
+				Else if i = 1 Then
+					password = List1.Get(i)
+				End If
+			Next
+		Else If filename = "wyzefrontyard.txt" Then
+'			File.Delete(File.DirInternal, filename)
+'			File.Copy(File.DirRootExternal,filename,File.DirInternal, filename)
+			wyzeFrontYardURL = File.ReadString(File.DirInternal, filename)
+		Else If filename = "wyzebackyard.txt" Then
+'			File.Delete(File.DirInternal, filename)
+'			File.Copy(File.DirRootExternal,filename,File.DirInternal, filename)
+			wyzeBackyardURL = File.ReadString(File.DirInternal, filename)
+		End If
+	Else If File.Exists(File.DirRootExternal,filename) Then
+		File.Copy(File.DirRootExternal,filename,File.DirInternal, filename)
+		If File.Exists(File.DirInternal, filename) Then
+			If filename = "account.txt" Then
+				Dim List1 As List
+				List1.Initialize
+				List1 = File.ReadList(File.DirInternal, filename)
+				For i = 0 To List1.Size - 1
+					If i = 0 Then
+						emailAddress = List1.Get(i)
+					Else if i = 1 Then
+						password = List1.Get(i)
+					End If
+				Next
+			Else If filename = "wyzefrontyard.txt" Then
+				wyzeFrontYardURL = File.ReadString(File.DirInternal, filename)
+			Else If filename = "wyzebackyard.txt" Then
+				wyzeBackyardURL = File.ReadString(File.DirInternal, filename)
+			End If
+		Else
+			Msgbox(filename & " not found","Smart Home Monitor") 'ignore
+			ExitApplication
+		End If
+	Else
+		Msgbox(filename & " not found","Smart Home Monitor") 'ignore
+		ExitApplication
+	End If
+End Sub
+
+
+Sub ivBackyardOutdoor_Click
+	Try
+		Dim FileName As String = "BackyardOutdoor.jpg"
+		If File.Exists(File.DirInternal, FileName) Then
+			File.Copy(File.DirInternal, FileName, Starter.Provider.SharedFolder, FileName)
+			Dim in As Intent
+			in.Initialize(in.ACTION_VIEW, "")
+			Starter.Provider.SetFileUriAsIntentData(in, FileName)
+			'Type must be set after calling SetFileUriAsIntentData
+			in.SetType("image/*")
+			StartActivity(in)
+		End If
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub ivFrontYardOutdoor_Click
+	Try
+		Dim FileName As String = "FrontYardOutdoor.jpg"
+		If File.Exists(File.DirInternal, FileName) Then
+			File.Copy(File.DirInternal, FileName, Starter.Provider.SharedFolder, FileName)
+			Dim in As Intent
+			in.Initialize(in.ACTION_VIEW, "")
+			Starter.Provider.SetFileUriAsIntentData(in, FileName)
+			'Type must be set after calling SetFileUriAsIntentData
+			in.SetType("image/*")
+			StartActivity(in)
+		End If
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub btnNoteWyzeReset_Click
+	Try
+		' Reset Note 8 server via Tasker intent
+		Dim bd As BitmapDrawable
+		bd.Initialize(LoadBitmapResize(File.DirAssets, "0.png", 32dip, 32dip, True))
+		If  Msgbox2("Restart Note 8 server?", "Smart Home Monitor", "Yes", "", "No", bd.Bitmap) = DialogResponse.POSITIVE Then 'ignore
+			Dim Intent1 As Intent
+			Intent1.Initialize("note.wyze.restart", "")
+			Dim Phone As Phone
+			Phone.SendBroadcastIntent(Intent1)
+		End If
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub btnFrontYardOutdoorRefresh_Click
+	Try
+		If File.Exists(File.DirInternal, "FrontYardOutdoor.jpg") Then
+			BlurIV("FrontYardOutdoor.jpg",ivFrontYardOutdoor)
+		End If
+			
+		B4XLoadingIndicatorFrontYard.Show
+		lblFrontYardOutdoor.Text = "Connecting..."
+		mjFrontYardOutdoorCounter = 0
+		mjFrontYardOutdoor.Initialize(Me, "mjFrontYardOutdoor")
+		mjFrontYardOutdoor.Connect(wyzeFrontYardURL, 8083)
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub btnBackyardOutdoorRefresh_Click
+	Try
+		If File.Exists(File.DirInternal, "BackyardOutdoor.jpg") Then
+			BlurIV("BackyardOutdoor.jpg",ivBackyardOutdoor)
+		End If
+	
+		B4XLoadingIndicatorBackyard.Show
+		lblBackyardOutdoor.Text = "Connecting..."
+		mjBackyardOutdoorCounter = 0
+		mjBackyardOutdoor.Initialize(Me, "mjBackyardOutdoor")
+		mjBackyardOutdoor.Connect(wyzeBackyardURL, 8083)
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub btnBackyardOutdoorLive_Click
+	Try
+		Dim bd As BitmapDrawable
+		bd.Initialize(LoadBitmapResize(File.DirAssets, "0.png", 32dip, 32dip, True))
+		If Msgbox2("View live Backyard camera?", "Smart Home Monitor", "Yes", "", "No", bd.Bitmap) = DialogResponse.POSITIVE Then 'ignore
+			Dim chrometab As ChromCustomTabs
+			chrometab.Initialize("chrometab")
+			chrometab.chromeCustomTab("http://" & wyzeBackyardURL.Replace(".com",".com:8083"))
+		End If
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub btnFrontYardOutdoorLive_Click
+	Try
+		Dim bd As BitmapDrawable
+		bd.Initialize(LoadBitmapResize(File.DirAssets, "0.png", 32dip, 32dip, True))
+		If Msgbox2("View live Front Yard camera?", "Smart Home Monitor", "Yes", "", "No", bd.Bitmap) = DialogResponse.POSITIVE Then 'ignore
+			Dim chrometab As ChromCustomTabs
+			chrometab.Initialize("chrometab")
+			chrometab.chromeCustomTab("http://" & wyzeFrontYardURL.Replace(".com",".com:8083"))
+		End If
+	Catch
+		Log(LastException)
+	End Try
 End Sub
