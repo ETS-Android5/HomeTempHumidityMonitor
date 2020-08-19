@@ -1064,13 +1064,13 @@ Sub mjFrontYardOutdoor_Disconnected
 		Log("Front Yard Outdoor Disconnected")
 		B4XLoadingIndicatorFrontYard.Hide
 		If LastException.IsInitialized Then
-		If LastException.Message <> "" And LastException.Message.Contains("Object should first be initialized") = False Then
+			If LastException.Message <> "" And LastException.Message.Contains("Object should first be initialized") = False Then
 				lblFrontYardOutdoor.Text = "Disconnected: " & LastException.Message
 			Else
-				lblFrontYardOutdoor.Text = "Disconnected"
+				lblFrontYardOutdoor.Text = ""
 			End If
 		Else
-			lblFrontYardOutdoor.Text = "Disconnected"
+			lblFrontYardOutdoor.Text = ""
 		End If
 	Catch
 		Log(LastException)
@@ -1085,10 +1085,10 @@ Sub mjBackyardOutdoor_Disconnected
 			If LastException.Message <> "" And LastException.Message.Contains("Object should first be initialized") = False Then
 				lblBackyardOutdoor.Text = "Disconnected: " & LastException.Message
 			Else
-				lblBackyardOutdoor.Text = "Disconnected"
+				lblBackyardOutdoor.Text = ""
 			End If
 		Else
-			lblBackyardOutdoor.Text = "Disconnected"
+			lblBackyardOutdoor.Text = ""
 		End If
 	Catch
 		Log(LastException)
@@ -1117,7 +1117,6 @@ Sub mjBackyardOutdoor_Terminated
 	Try
 		Log("Backyard Outdoor Terminated")
 		B4XLoadingIndicatorBackyard.hide
-		lblBackyardOutdoor.Text = "Terminated"
 		If LastException.IsInitialized Then
 			If LastException.Message <> "" And LastException.Message.Contains("Object should first be initialized") = False Then
 				lblBackyardOutdoor.Text = "Terminated: " & LastException.Message
@@ -1135,9 +1134,8 @@ End Sub
 Sub mjFrontYardOutdoor_Frame(btmp As Bitmap)
 	Try
 		If btmp.Width > 640 Or mjFrontYardOutdoorCounter > 15 Then
-			lblFrontYardOutdoor.Text = "Image received. Rendering..."
 			mjFrontYardOutdoor.Disconnect
-			Wait For mjFrontYardOutdoor_Disconnected
+			'Wait For mjFrontYardOutdoor_Disconnected
 			
 			B4XLoadingIndicatorFrontYard.Hide
 			mjFrontYardOutdoorCounter = 0
@@ -1152,13 +1150,12 @@ Sub mjFrontYardOutdoor_Frame(btmp As Bitmap)
 				ivFrontYardOutdoor.Bitmap = tempBmpt
 			End If
 			
-			lblFrontYardOutdoor.Text = ""
 			Return
 		End If
 
 		mjFrontYardOutdoorCounter = mjFrontYardOutdoorCounter + 1
 		Log("Front Yard frame received")
-		lblFrontYardOutdoor.Text = ""
+		lblFrontYardOutdoor.Text = "Image received. Processing..."
 	Catch
 		Log(LastException)
 	End Try
@@ -1167,9 +1164,8 @@ End Sub
 Sub mjBackyardOutdoor_Frame(btmp As Bitmap)
 	Try
 		If btmp.Width > 640 Or mjBackyardOutdoorCounter > 15 Then
-			lblBackyardOutdoor.Text = "Image received. Rendering..."
 			mjBackyardOutdoor.Disconnect
-			Wait For mjBackyardOutdoor_Disconnected
+			'Wait For mjBackyardOutdoor_Disconnected
 			
 			B4XLoadingIndicatorBackyard.Hide
 			mjBackyardOutdoorCounter = 0
@@ -1184,13 +1180,12 @@ Sub mjBackyardOutdoor_Frame(btmp As Bitmap)
 				ivBackyardOutdoor.Bitmap = tempBmpt
 			End If
 			
-			lblBackyardOutdoor.Text = ""
 			Return
 		End If
 
 		mjBackyardOutdoorCounter = mjBackyardOutdoorCounter + 1
 		Log("Backyard frame received")
-		lblBackyardOutdoor.Text = ""
+		lblBackyardOutdoor.Text = "Image received. Processing..."
 	Catch
 		Log(LastException)
 	End Try

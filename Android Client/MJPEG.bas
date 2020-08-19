@@ -31,7 +31,7 @@ Public Sub Connect(url As String, Port As Int)
 		mPath = url.SubString(i)
 		mHost = url.SubString2(0, i)
 		sock.Initialize("sock")
-		sock.Connect(mHost, Port, 30000)
+		sock.Connect(mHost, Port, 10000)
 	Catch
 		Log(LastException)
 	End Try
