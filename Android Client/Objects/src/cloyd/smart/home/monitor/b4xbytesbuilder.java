@@ -158,7 +158,7 @@ byte[] _afterindex = null;
 if (_index>=_mlength) { 
  //BA.debugLineNum = 38;BA.debugLine="If Index > mLength Then Log(\"Index too large\")";
 if (_index>_mlength) { 
-__c.LogImpl("936962306","Index too large",0);};
+__c.LogImpl("927459586","Index too large",0);};
  //BA.debugLineNum = 39;BA.debugLine="Append(Data)";
 _append(_data);
  }else {
@@ -200,7 +200,7 @@ public String  _set(int _index,byte[] _data) throws Exception{
 if (_index>=_mlength) { 
  //BA.debugLineNum = 51;BA.debugLine="If Index > mLength Then Log(\"Index too large\")";
 if (_index>_mlength) { 
-__c.LogImpl("937027842","Index too large",0);};
+__c.LogImpl("927525122","Index too large",0);};
  //BA.debugLineNum = 52;BA.debugLine="Append(Data)";
 _append(_data);
  }else {

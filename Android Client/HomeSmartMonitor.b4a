@@ -1064,7 +1064,7 @@ Sub mjFrontYardOutdoor_Disconnected
 		Log("Front Yard Outdoor Disconnected")
 		B4XLoadingIndicatorFrontYard.Hide
 		If LastException.IsInitialized Then
-			If LastException.Message <> "" And LastException.Message.Contains("Object should first be initialized") = False Then
+			If LastException.Message <> "" And LastException.Message.Contains("Object should first be initialized") = False And LastException.Message.Contains("EOFException") = False Then
 				lblFrontYardOutdoor.Text = "Disconnected: " & LastException.Message
 			Else
 				lblFrontYardOutdoor.Text = ""
@@ -1082,7 +1082,7 @@ Sub mjBackyardOutdoor_Disconnected
 		Log("Backyard Outdoor Disconnected")
 		B4XLoadingIndicatorBackyard.hide
 		If LastException.IsInitialized Then
-			If LastException.Message <> "" And LastException.Message.Contains("Object should first be initialized") = False Then
+			If LastException.Message <> "" And LastException.Message.Contains("Object should first be initialized") = False And LastException.Message.Contains("EOFException") = False Then
 				lblBackyardOutdoor.Text = "Disconnected: " & LastException.Message
 			Else
 				lblBackyardOutdoor.Text = ""
