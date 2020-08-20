@@ -42,10 +42,6 @@ Public Sub Disconnect()
 	CallSub(mCallback, mEventName & "_Disconnected")
 End Sub
 
-Public Sub ForceDisconnect()
-	If Astream.IsInitialized Then Astream.Close
-End Sub
-
 Private Sub Sock_Connected (Successful As Boolean)
 	If Successful Then
 		boundary = ""
@@ -152,5 +148,18 @@ Private Sub AStream_Error
 End Sub
 
 Private Sub Astream_Terminated
-	CallSub(mCallback, mEventName & "_Terminated")
+	Try
+		Dim errorMessage As String = ""
+		If LastException.IsInitialized Then
+			If errorMessage.Contains("Object should first be initialized") = False Then
+				errorMessage = LastException.Message
+			End If
+		End If
+		If errorMessage.Trim.Length = 0 Then
+			errorMessage = "Terminated."
+		End If
+		CallSub2(mCallback, mEventName & "_Terminated", errorMessage)
+	Catch
+		Log(LastException)
+	End Try
 End Sub

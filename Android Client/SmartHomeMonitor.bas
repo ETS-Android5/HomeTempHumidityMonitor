@@ -109,9 +109,9 @@ Private Sub MQTT_MessageArrived (Topic As String, Payload() As Byte)
 		
 			Dim status As String
 			status = BytesToString(Payload, 0, Payload.Length, "UTF8")
-			'If DateTime.GetSecond(DateTime.Now) Mod 20 = 0 Then
-			LogEvent(status)
-			'End If
+			If DateTime.GetSecond(DateTime.Now) Mod 30 = 0 Then
+				LogEvent(status)
+			End If
 
 			Dim a() As String = Regex.Split("\|",status)
 			If a.Length = 9 Then

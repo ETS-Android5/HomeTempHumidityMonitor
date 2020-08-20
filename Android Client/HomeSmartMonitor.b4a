@@ -1063,15 +1063,7 @@ Sub mjFrontYardOutdoor_Disconnected
 	Try
 		Log("Front Yard Outdoor Disconnected")
 		B4XLoadingIndicatorFrontYard.Hide
-		If LastException.IsInitialized Then
-			If LastException.Message <> "" And LastException.Message.Contains("Object should first be initialized") = False And LastException.Message.Contains("EOFException") = False Then
-				lblFrontYardOutdoor.Text = "Disconnected: " & LastException.Message
-			Else
-				lblFrontYardOutdoor.Text = ""
-			End If
-		Else
-			lblFrontYardOutdoor.Text = ""
-		End If
+		lblFrontYardOutdoor.Text = ""
 	Catch
 		Log(LastException)
 	End Try
@@ -1081,51 +1073,27 @@ Sub mjBackyardOutdoor_Disconnected
 	Try
 		Log("Backyard Outdoor Disconnected")
 		B4XLoadingIndicatorBackyard.hide
-		If LastException.IsInitialized Then
-			If LastException.Message <> "" And LastException.Message.Contains("Object should first be initialized") = False And LastException.Message.Contains("EOFException") = False Then
-				lblBackyardOutdoor.Text = "Disconnected: " & LastException.Message
-			Else
-				lblBackyardOutdoor.Text = ""
-			End If
-		Else
-			lblBackyardOutdoor.Text = ""
-		End If
+		lblBackyardOutdoor.Text = ""
 	Catch
 		Log(LastException)
 	End Try
 End Sub
 
-Sub mjFrontYardOutdoor_Terminated
+Sub mjFrontYardOutdoor_Terminated(error As String)
 	Try
 		Log("Front Yard Outdoor Terminated")
 		B4XLoadingIndicatorFrontYard.Hide
-		If LastException.IsInitialized Then
-			If LastException.Message <> "" And LastException.Message.Contains("Object should first be initialized") = False Then
-				lblFrontYardOutdoor.Text = "Terminated: " & LastException.Message
-			Else
-				lblFrontYardOutdoor.Text = "Terminated"
-			End If
-		Else
-			lblFrontYardOutdoor.Text = "Terminated"
-		End If
+		lblFrontYardOutdoor.Text = error
 	Catch
 		Log(LastException)
 	End Try
 End Sub
 
-Sub mjBackyardOutdoor_Terminated
+Sub mjBackyardOutdoor_Terminated(error As String)
 	Try
 		Log("Backyard Outdoor Terminated")
 		B4XLoadingIndicatorBackyard.hide
-		If LastException.IsInitialized Then
-			If LastException.Message <> "" And LastException.Message.Contains("Object should first be initialized") = False Then
-				lblBackyardOutdoor.Text = "Terminated: " & LastException.Message
-			Else
-				lblBackyardOutdoor.Text = "Terminated"
-			End If
-		Else
-			lblBackyardOutdoor.Text = "Terminated"
-		End If
+		lblBackyardOutdoor.Text = error
 	Catch
 		Log(LastException)
 	End Try
@@ -1135,7 +1103,7 @@ Sub mjFrontYardOutdoor_Frame(btmp As Bitmap)
 	Try
 		If btmp.Width > 640 Or mjFrontYardOutdoorCounter > 15 Then
 			lblFrontYardOutdoor.Text = ""
-			mjFrontYardOutdoor.ForceDisconnect
+			mjFrontYardOutdoor.Disconnect
 			
 			B4XLoadingIndicatorFrontYard.Hide
 			mjFrontYardOutdoorCounter = 0
@@ -1165,7 +1133,7 @@ Sub mjBackyardOutdoor_Frame(btmp As Bitmap)
 	Try
 		If btmp.Width > 640 Or mjBackyardOutdoorCounter > 15 Then
 			lblBackyardOutdoor.Text = ""
-			mjBackyardOutdoor.ForceDisconnect
+			mjBackyardOutdoor.Disconnect
 			
 			B4XLoadingIndicatorBackyard.Hide
 			mjBackyardOutdoorCounter = 0
