@@ -109,7 +109,7 @@ Private Sub MQTT_MessageArrived (Topic As String, Payload() As Byte)
 		
 			Dim status As String
 			status = BytesToString(Payload, 0, Payload.Length, "UTF8")
-			If DateTime.GetSecond(DateTime.Now) Mod 10 = 0 Then
+			If DateTime.GetSecond(DateTime.Now) Mod 5 = 0 Then
 				LogEvent(status)
 			End If
 

@@ -136,10 +136,10 @@ Private Sub AStream_Error
 	Try
 		Dim errorMessage As String = ""
 		If LastException.IsInitialized Then
-			errorMessage = LastException.Message
+			errorMessage = "Connection error: " & LastException.Message
 		End If
 		If errorMessage.Trim.Length = 0 Then
-			errorMessage = "Connection error."
+			errorMessage = "Connection error"
 		End If
 		CallSub2(mCallback, mEventName & "_ConnectionError", errorMessage)
 	Catch
@@ -151,12 +151,12 @@ Private Sub Astream_Terminated
 	Try
 		Dim errorMessage As String = ""
 		If LastException.IsInitialized Then
-			If errorMessage.Contains("Object should first be initialized") = False Then
-				errorMessage = LastException.Message
+			If LastException.Message.Contains("Object should first be initialized") = False Then
+				errorMessage = "Terminated: " & LastException.Message
 			End If
 		End If
 		If errorMessage.Trim.Length = 0 Then
-			errorMessage = "Terminated."
+			errorMessage = "Terminated"
 		End If
 		CallSub2(mCallback, mEventName & "_Terminated", errorMessage)
 	Catch

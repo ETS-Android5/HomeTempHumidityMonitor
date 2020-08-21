@@ -52,20 +52,20 @@ try { //BA.debugLineNum = 131;BA.debugLine="Dim errorMessage As String = \"\"";
 _errormessage = "";
  //BA.debugLineNum = 132;BA.debugLine="If LastException.IsInitialized Then";
 if (__c.LastException(getActivityBA()).IsInitialized()) { 
- //BA.debugLineNum = 133;BA.debugLine="errorMessage = LastException.Message";
-_errormessage = __c.LastException(getActivityBA()).getMessage();
+ //BA.debugLineNum = 133;BA.debugLine="errorMessage = \"Connection error: \" & LastExcep";
+_errormessage = "Connection error: "+__c.LastException(getActivityBA()).getMessage();
  };
  //BA.debugLineNum = 135;BA.debugLine="If errorMessage.Trim.Length = 0 Then";
 if (_errormessage.trim().length()==0) { 
- //BA.debugLineNum = 136;BA.debugLine="errorMessage = \"Connection error.\"";
-_errormessage = "Connection error.";
+ //BA.debugLineNum = 136;BA.debugLine="errorMessage = \"Connection error\"";
+_errormessage = "Connection error";
  };
  //BA.debugLineNum = 138;BA.debugLine="CallSub2(mCallback, mEventName & \"_ConnectionErr";
 __c.CallSubNew2(ba,_mcallback,_meventname+"_ConnectionError",(Object)(_errormessage));
  } 
        catch (Exception e11) {
 			ba.setLastException(e11); //BA.debugLineNum = 140;BA.debugLine="Log(LastException)";
-__c.LogImpl("513893643",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("713893643",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  };
  //BA.debugLineNum = 142;BA.debugLine="End Sub";
 return "";
@@ -168,7 +168,7 @@ _trimarray(_b2);
  } 
        catch (Exception e49) {
 			ba.setLastException(e49); //BA.debugLineNum = 106;BA.debugLine="Log(LastException)";
-__c.LogImpl("513631542",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("713631542",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  };
  //BA.debugLineNum = 108;BA.debugLine="End Sub";
 return "";
@@ -181,23 +181,23 @@ try { //BA.debugLineNum = 146;BA.debugLine="Dim errorMessage As String = \"\"";
 _errormessage = "";
  //BA.debugLineNum = 147;BA.debugLine="If LastException.IsInitialized Then";
 if (__c.LastException(getActivityBA()).IsInitialized()) { 
- //BA.debugLineNum = 148;BA.debugLine="If errorMessage.Contains(\"Object should first b";
-if (_errormessage.contains("Object should first be initialized")==__c.False) { 
- //BA.debugLineNum = 149;BA.debugLine="errorMessage = LastException.Message";
-_errormessage = __c.LastException(getActivityBA()).getMessage();
+ //BA.debugLineNum = 148;BA.debugLine="If LastException.Message.Contains(\"Object shoul";
+if (__c.LastException(getActivityBA()).getMessage().contains("Object should first be initialized")==__c.False) { 
+ //BA.debugLineNum = 149;BA.debugLine="errorMessage = \"Terminated: \" & LastException.";
+_errormessage = "Terminated: "+__c.LastException(getActivityBA()).getMessage();
  };
  };
  //BA.debugLineNum = 152;BA.debugLine="If errorMessage.Trim.Length = 0 Then";
 if (_errormessage.trim().length()==0) { 
- //BA.debugLineNum = 153;BA.debugLine="errorMessage = \"Terminated.\"";
-_errormessage = "Terminated.";
+ //BA.debugLineNum = 153;BA.debugLine="errorMessage = \"Terminated\"";
+_errormessage = "Terminated";
  };
  //BA.debugLineNum = 155;BA.debugLine="CallSub2(mCallback, mEventName & \"_Terminated\",";
 __c.CallSubNew2(ba,_mcallback,_meventname+"_Terminated",(Object)(_errormessage));
  } 
        catch (Exception e13) {
 			ba.setLastException(e13); //BA.debugLineNum = 157;BA.debugLine="Log(LastException)";
-__c.LogImpl("513959181",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("713959181",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  };
  //BA.debugLineNum = 159;BA.debugLine="End Sub";
 return "";
@@ -252,7 +252,7 @@ _sock.Connect(ba,_mhost,_port,(int) (10000));
  } 
        catch (Exception e9) {
 			ba.setLastException(e9); //BA.debugLineNum = 30;BA.debugLine="Log(LastException)";
-__c.LogImpl("513434889",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("713434889",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  };
  //BA.debugLineNum = 32;BA.debugLine="End Sub";
 return "";
