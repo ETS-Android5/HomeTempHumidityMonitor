@@ -65,7 +65,7 @@ __c.CallSubNew2(ba,_mcallback,_meventname+"_ConnectionError",(Object)(_errormess
  } 
        catch (Exception e11) {
 			ba.setLastException(e11); //BA.debugLineNum = 140;BA.debugLine="Log(LastException)";
-__c.LogImpl("713893643",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("013893643",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  };
  //BA.debugLineNum = 142;BA.debugLine="End Sub";
 return "";
@@ -168,7 +168,7 @@ _trimarray(_b2);
  } 
        catch (Exception e49) {
 			ba.setLastException(e49); //BA.debugLineNum = 106;BA.debugLine="Log(LastException)";
-__c.LogImpl("713631542",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("013631542",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  };
  //BA.debugLineNum = 108;BA.debugLine="End Sub";
 return "";
@@ -197,7 +197,7 @@ __c.CallSubNew2(ba,_mcallback,_meventname+"_Terminated",(Object)(_errormessage))
  } 
        catch (Exception e13) {
 			ba.setLastException(e13); //BA.debugLineNum = 157;BA.debugLine="Log(LastException)";
-__c.LogImpl("713959181",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("013959181",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  };
  //BA.debugLineNum = 159;BA.debugLine="End Sub";
 return "";
@@ -252,7 +252,7 @@ _sock.Connect(ba,_mhost,_port,(int) (10000));
  } 
        catch (Exception e9) {
 			ba.setLastException(e9); //BA.debugLineNum = 30;BA.debugLine="Log(LastException)";
-__c.LogImpl("713434889",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("013434889",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  };
  //BA.debugLineNum = 32;BA.debugLine="End Sub";
 return "";
