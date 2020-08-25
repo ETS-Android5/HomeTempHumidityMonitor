@@ -67,9 +67,8 @@ Library25=b4xencryption
 Library26=b4xbitmapeffects
 Library27=b4xcollections
 Library28=zoomimageview
-Library29=chromcustomtabs
+Library29=network
 Library3=javaobject
-Library30=network
 Library4=xmllayoutbuilder
 Library5=jmqtt
 Library6=callsubutils
@@ -89,7 +88,7 @@ Module7=MJPEG
 Module8=NotificationService
 Module9=SmartHomeMonitor
 NumberOfFiles=23
-NumberOfLibraries=30
+NumberOfLibraries=29
 NumberOfModules=11
 Version=10
 @EndOfDesignText@
@@ -3983,9 +3982,10 @@ Sub btnBackyardOutdoorLive_Click
 		Dim bd As BitmapDrawable
 		bd.Initialize(LoadBitmapResize(File.DirAssets, "0.png", 32dip, 32dip, True))
 		If Msgbox2("View live Backyard camera?", "Smart Home Monitor", "Yes", "", "No", bd.Bitmap) = DialogResponse.POSITIVE Then 'ignore
-			Dim chrometab As ChromCustomTabs
-			chrometab.Initialize("chrometab")
-			chrometab.chromeCustomTab("http://" & wyzeBackyardURL.Replace(".com",".com:8083"))
+'			Dim chrometab As ChromCustomTabs
+'			chrometab.Initialize("chrometab")
+'			chrometab.chromeCustomTab("http://" & wyzeBackyardURL.Replace(".com",".com:8083"))
+			startCameraByTag("Backyard Outdoor")
 		End If
 	Catch
 		Log(LastException)
@@ -3997,11 +3997,38 @@ Sub btnFrontYardOutdoorLive_Click
 		Dim bd As BitmapDrawable
 		bd.Initialize(LoadBitmapResize(File.DirAssets, "0.png", 32dip, 32dip, True))
 		If Msgbox2("View live Front Yard camera?", "Smart Home Monitor", "Yes", "", "No", bd.Bitmap) = DialogResponse.POSITIVE Then 'ignore
-			Dim chrometab As ChromCustomTabs
-			chrometab.Initialize("chrometab")
-			chrometab.chromeCustomTab("http://" & wyzeFrontYardURL.Replace(".com",".com:8083"))
+'			Dim chrometab As ChromCustomTabs
+'			chrometab.Initialize("chrometab")
+'			chrometab.chromeCustomTab("http://" & wyzeFrontYardURL.Replace(".com",".com:8083"))
+			startCameraByTag("Front Yard Outdoor")
 		End If
 	Catch
 		Log(LastException)
 	End Try
+End Sub
+
+Sub startCameraByTag(camera As String)
+	'https://www.reddit.com/r/tinycam/comments/ies56t/_/
+
+	Try
+		Dim i As Intent
+		Dim const FLAG_ACTIVITY_CLEAR_TOP As Int = 0x04000000
+		Dim const FLAG_ACTIVITY_CLEAR_TASK As Int = 0x00008000
+		Dim const FLAG_ACTIVITY_NEW_TASK As Int = 0x10000000
+		
+		i.Initialize(i.ACTION_MAIN, "")
+		i.SetComponent("com.alexvas.dvr.pro/com.alexvas.dvr.activity.LiveViewActivity")
+		i.PutExtra("com.alexvas.dvr.intent.extra.shortcut.NAME",camera)
+		
+		' To view cameras for specific Tag. It doesn't work if there is only one camera in the Tag.
+			'i.PutExtra("com.alexvas.dvr.intent.extra.TAG_NAME","Outdoor")
+			'i.PutExtra("com.alexvas.dvr.intent.extra.PAGE",1) ' 1 which is the second parameter should be integer.
+		' To view cameras for specific Tag. It doesn't work if there is only one camera in the Tag.
+		i.Flags = Bit.Or(FLAG_ACTIVITY_CLEAR_TASK, Bit.Or(FLAG_ACTIVITY_CLEAR_TOP, FLAG_ACTIVITY_NEW_TASK))
+		StartActivity(i)
+Catch
+	Log(LastException)
+End Try
+
+
 End Sub
