@@ -33,6 +33,7 @@ public cloyd.smart.home.monitor.notificationservice _notificationservice = null;
 public cloyd.smart.home.monitor.statemanager _statemanager = null;
 public cloyd.smart.home.monitor.starter _starter = null;
 public cloyd.smart.home.monitor.httputils2service _httputils2service = null;
+public cloyd.smart.home.monitor.xuiviewsutils _xuiviewsutils = null;
 public cloyd.smart.home.monitor.b4xcollections _b4xcollections = null;
 public static class _bcepixelgroup{
 public boolean IsInitialized;

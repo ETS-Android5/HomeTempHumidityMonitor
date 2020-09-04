@@ -43,6 +43,7 @@ public cloyd.smart.home.monitor.notificationservice _notificationservice = null;
 public cloyd.smart.home.monitor.statemanager _statemanager = null;
 public cloyd.smart.home.monitor.starter _starter = null;
 public cloyd.smart.home.monitor.httputils2service _httputils2service = null;
+public cloyd.smart.home.monitor.xuiviewsutils _xuiviewsutils = null;
 public cloyd.smart.home.monitor.b4xcollections _b4xcollections = null;
 public String  _astream_error() throws Exception{
 String _errormessage = "";
@@ -65,7 +66,7 @@ __c.CallSubNew2(ba,_mcallback,_meventname+"_ConnectionError",(Object)(_errormess
  } 
        catch (Exception e11) {
 			ba.setLastException(e11); //BA.debugLineNum = 140;BA.debugLine="Log(LastException)";
-__c.LogImpl("213959179",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("313959179",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  };
  //BA.debugLineNum = 142;BA.debugLine="End Sub";
 return "";
@@ -168,7 +169,7 @@ _trimarray(_b2);
  } 
        catch (Exception e49) {
 			ba.setLastException(e49); //BA.debugLineNum = 106;BA.debugLine="Log(LastException)";
-__c.LogImpl("213697078",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("313697078",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  };
  //BA.debugLineNum = 108;BA.debugLine="End Sub";
 return "";
@@ -197,7 +198,7 @@ __c.CallSubNew2(ba,_mcallback,_meventname+"_Terminated",(Object)(_errormessage))
  } 
        catch (Exception e13) {
 			ba.setLastException(e13); //BA.debugLineNum = 157;BA.debugLine="Log(LastException)";
-__c.LogImpl("214024717",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("314024717",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  };
  //BA.debugLineNum = 159;BA.debugLine="End Sub";
 return "";
@@ -252,7 +253,7 @@ _sock.Connect(ba,_mhost,_port,(int) (10000));
  } 
        catch (Exception e9) {
 			ba.setLastException(e9); //BA.debugLineNum = 30;BA.debugLine="Log(LastException)";
-__c.LogImpl("213500425",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("313500425",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  };
  //BA.debugLineNum = 32;BA.debugLine="End Sub";
 return "";

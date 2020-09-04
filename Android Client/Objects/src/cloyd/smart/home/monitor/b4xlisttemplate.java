@@ -41,6 +41,7 @@ public cloyd.smart.home.monitor.notificationservice _notificationservice = null;
 public cloyd.smart.home.monitor.statemanager _statemanager = null;
 public cloyd.smart.home.monitor.starter _starter = null;
 public cloyd.smart.home.monitor.httputils2service _httputils2service = null;
+public cloyd.smart.home.monitor.xuiviewsutils _xuiviewsutils = null;
 public cloyd.smart.home.monitor.b4xcollections _b4xcollections = null;
 public String  _class_globals() throws Exception{
  //BA.debugLineNum = 1;BA.debugLine="Sub Class_Globals";
@@ -306,8 +307,8 @@ case 11:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 54;BA.debugLine="Dialog.InternalAddStubToCLVIfNeeded(CustomListVie";
-_dialog._internaladdstubtoclvifneeded /*String*/ (parent._customlistview1,parent._customlistview1._defaulttextbackgroundcolor);
+ //BA.debugLineNum = 54;BA.debugLine="XUIViewsUtils.AddStubToCLVIfNeeded(CustomListView";
+parent._xuiviewsutils._addstubtoclvifneeded /*String*/ (ba,parent._customlistview1,parent._customlistview1._defaulttextbackgroundcolor);
  //BA.debugLineNum = 55;BA.debugLine="SelectedItem = \"\"";
 parent._selecteditem = "";
  //BA.debugLineNum = 57;BA.debugLine="End Sub";
