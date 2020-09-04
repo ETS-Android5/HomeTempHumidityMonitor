@@ -102,6 +102,10 @@ Version=10.17
 	#BridgeLogger:True
 #End Region
 
+		'**************************************************************************************************************************************************************************
+		' ***** KEEP android:targetSdkVersion="26" IN THE MANIFEST ELSE CALLING THE GetUnwatchedVideos WHEN THERE IS A NEW VIDEO CRASHES THE APP  ********************
+		'**************************************************************************************************************************************************************************	
+
 #Region  Activity Attributes 
 	#FullScreen: False
 	#IncludeTitle: True
