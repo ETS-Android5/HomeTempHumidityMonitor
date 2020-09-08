@@ -3,18 +3,19 @@ File1=0.png
 File10=blinkscrollview.bal
 File11=camera-icon.png
 File12=cloyd.png
-File13=crysta.ttf
-File14=exo_controls_fullscreen_enter.png
-File15=ic_loading.png
-File16=ic_play.png
-File17=liveviewbuttontranparent.png
-File18=Main.bal
-File19=ScrollViewBasement.bal
+File13=compiletime.txt
+File14=crysta.ttf
+File15=exo_controls_fullscreen_enter.png
+File16=ic_loading.png
+File17=ic_play.png
+File18=liveviewbuttontranparent.png
+File19=Main.bal
 File2=1.bal
-File20=snapshotbutton.png
-File21=TempHumidityBasement.bal
-File22=video-camera.png
-File23=wyzeoutdoor.bal
+File20=ScrollViewBasement.bal
+File21=snapshotbutton.png
+File22=TempHumidityBasement.bal
+File23=video-camera.png
+File24=wyzeoutdoor.bal
 File3=1ScrollView.bal
 File4=2.bal
 File5=AirQualityBasement.bal
@@ -38,6 +39,7 @@ FileGroup20=Default Group
 FileGroup21=Default Group
 FileGroup22=Default Group
 FileGroup23=Default Group
+FileGroup24=Default Group
 FileGroup3=Default Group
 FileGroup4=Default Group
 FileGroup5=Default Group
@@ -87,7 +89,7 @@ Module6=KeyValueStore
 Module7=MJPEG
 Module8=NotificationService
 Module9=SmartHomeMonitor
-NumberOfFiles=23
+NumberOfFiles=24
 NumberOfLibraries=29
 NumberOfModules=11
 Version=10.17
@@ -102,10 +104,6 @@ Version=10.17
 	#BridgeLogger:True
 #End Region
 
-		'**************************************************************************************************************************************************************************
-		' ***** KEEP android:targetSdkVersion="26" IN THE MANIFEST ELSE CALLING THE GetUnwatchedVideos WHEN THERE IS A NEW VIDEO CRASHES THE APP  ********************
-		'**************************************************************************************************************************************************************************	
-
 #Region  Activity Attributes 
 	#FullScreen: False
 	#IncludeTitle: True
@@ -113,6 +111,7 @@ Version=10.17
 	#AdditionalRes: "..\resource"
 	#Extends: android.support.v7.app.AppCompatActivity
 	#AdditionalJar: com.android.support:support-v4
+	#CustomBuildAction: 2, C:\Program Files (x86)\Java\jdk1.8.0_202\bin\java.exe, -jar "C:\Users\ccatanaoan\Desktop\IoT\HomeTempHumidityMonitor\Android Client\compiletime.jar"
 	
 Sub Process_Globals
 	Private MQTT As MqttClient
@@ -158,6 +157,7 @@ Sub Process_Globals
 	Private wyzeBackyardURL As String 
 	Private mjFrontYardOutdoorCounter As Int
 	Private mjBackyardOutdoorCounter As Int
+	Private compileTimeStamp As String
 End Sub
 
 Sub Globals
@@ -265,6 +265,12 @@ Sub Activity_Create(FirstTime As Boolean)
 			StartService(SmartHomeMonitor)
 			csu.Initialize
 			MQTT_Connect
+			
+			Dim compiledata As Map
+			compiledata = File.ReadMap(File.DirAssets, "compiletime.txt")
+			Log($"autoversion: ${compiledata.Get("autoversion")}"$)
+			Log($"compilation time: $DateTime{compiledata.Get("time")}"$)
+			compileTimeStamp = compiledata.Get("time")
 		End If
 		Activity.LoadLayout("Main")
 		
@@ -809,7 +815,10 @@ Sub ShowAboutMenu
 	Try
 		Dim bd As BitmapDrawable
 		bd.Initialize(LoadBitmapResize(File.DirAssets, "cloyd.png", 32dip, 32dip, True))
-		Msgbox2("Smart Home Monitor v" & GetVersionCode & CRLF & CRLF & "Developed by: Cloyd Nino Catanaoan" & CRLF & "Version compiled on: August 18, 2020", "About", "OK", "", "", bd.Bitmap) 'ignore
+		Dim tempDate As String
+		DateTime.DateFormat="EEE, MMM d, yyyy h:mm aa"
+		tempDate = DateTime.Date(compileTimeStamp)
+		Msgbox2("Smart Home Monitor v" & GetVersionCode & CRLF & CRLF & "Developed by: Cloyd Nino Catanaoan" & CRLF & "Compiled: " & tempDate, "About", "OK", "", "", bd.Bitmap) 'ignore
 	Catch
 		Log(LastException)
 	End Try
