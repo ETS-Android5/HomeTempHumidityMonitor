@@ -961,6 +961,9 @@ Sub TabStrip1_PageSelected (Position As Int)
 				If previousSelectedIndex > (clvActivity.Size-1) Then
 					previousSelectedIndex = 0
 				End If
+				Sleep(100)
+				clvActivity.JumpToItem(previousSelectedIndex)
+				Sleep(100)
 				clvActivity.JumpToItem(previousSelectedIndex)
 				Sleep(100)
 				Dim p As B4XView = clvActivity.GetPanel(previousSelectedIndex)
@@ -2756,6 +2759,9 @@ Sub GetVideos(json As String) As ResumableSub
 		End If
 
 		If list1.Size > 0 Then
+			Sleep(100)
+			clvActivity.JumpToItem(jumpToThisItem)
+			Sleep(100)
 			clvActivity.JumpToItem(jumpToThisItem)
 			Sleep(100)
 			clvActivity_ItemClick(jumpToThisItem,"") '"https://rest-" & userRegion &".immedia-semi.com" & videos.ThumbnailPath & "|" & videos.DeviceName & " " & ConvertFullDateTime(videos.DateCreated))
