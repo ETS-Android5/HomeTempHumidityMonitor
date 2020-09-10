@@ -722,15 +722,11 @@ Sub ACToolBarLight1_MenuItemClick (Item As ACMenuItem)
 			Dim bd As BitmapDrawable
 			bd.Initialize(LoadBitmapResize(File.DirAssets, "0.png", 32dip, 32dip, True))
 			If  Msgbox2("Restart the application?", "Smart Home Monitor", "Yes", "", "No", bd.Bitmap) = DialogResponse.POSITIVE Then 'ignore
-				Activity.Finish
-				Dim r, r2 As Reflector
-				r.Target = r.GetActivity
-				r.Target = r.RunMethod("getApplicationContext")
-				r2.Target = r.RunMethod("getPackageManager")
-				Dim i As Intent = r2.RunMethod2("getLaunchIntentForPackage", r.RunMethod("getPackageName"), "java.lang.String" )
-				r.Target = i
-				r.RunMethod2("addFlags",  67108864, "java.lang.int")
-				StartActivity(i)
+				' Restart application via Tasker intent
+				Dim Intent1 As Intent
+				Intent1.Initialize("smart.home.restart", "")
+				Dim Phone As Phone
+				Phone.SendBroadcastIntent(Intent1)
 			End If
 		Else If Item.Title = "Show free memory" Then
 			Dim info As String
