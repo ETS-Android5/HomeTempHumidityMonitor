@@ -1134,7 +1134,6 @@ _awake = new anywheresoftware.b4a.phone.Phone.PhoneWakeState();
 return "";
 }
 public static String  _readtextreader(String _fileday) throws Exception{
-int _i = 0;
 anywheresoftware.b4a.objects.streams.File.TextReaderWrapper _textreader1 = null;
 long _now = 0L;
 int _month = 0;
@@ -1146,13 +1145,7 @@ String[] _a = null;
 String _timestamp = "";
  //BA.debugLineNum = 403;BA.debugLine="Sub ReadTextReader(fileDay As String)";
  //BA.debugLineNum = 404;BA.debugLine="Try";
-try { //BA.debugLineNum = 407;BA.debugLine="For i = 0 To timeArray.Length-1";
-{
-final int step2 = 1;
-final int limit2 = (int) (mostCurrent._timearray.length-1);
-_i = (int) (0) ;
-for (;_i <= limit2 ;_i = _i + step2 ) {
- //BA.debugLineNum = 410;BA.debugLine="Dim TextReader1 As TextReader";
+try { //BA.debugLineNum = 410;BA.debugLine="Dim TextReader1 As TextReader";
 _textreader1 = new anywheresoftware.b4a.objects.streams.File.TextReaderWrapper();
  //BA.debugLineNum = 411;BA.debugLine="Dim Now As Long";
 _now = 0L;
@@ -1398,11 +1391,9 @@ anywheresoftware.b4a.keywords.Common.DateTime.setTimeFormat("h:mm a");
 ;
  //BA.debugLineNum = 530;BA.debugLine="TextReader1.Close";
 _textreader1.Close();
- }
-};
  } 
-       catch (Exception e118) {
-			processBA.setLastException(e118); //BA.debugLineNum = 534;BA.debugLine="Log(LastException)";
+       catch (Exception e116) {
+			processBA.setLastException(e116); //BA.debugLineNum = 534;BA.debugLine="Log(LastException)";
 anywheresoftware.b4a.keywords.Common.LogImpl("2393347",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 536;BA.debugLine="End Sub";
