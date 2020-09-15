@@ -390,8 +390,8 @@ public static String  _activity_create(boolean _firsttime) throws Exception{
  //BA.debugLineNum = 69;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
  //BA.debugLineNum = 70;BA.debugLine="Activity.LoadLayout(\"Main\")";
 mostCurrent._activity.LoadLayout("Main",mostCurrent.activityBA);
- //BA.debugLineNum = 72;BA.debugLine="TemperatureHourlyCreate";
-_temperaturehourlycreate();
+ //BA.debugLineNum = 72;BA.debugLine="btnTempHourly_Click";
+_btntemphourly_click();
  //BA.debugLineNum = 73;BA.debugLine="End Sub";
 return "";
 }
@@ -449,50 +449,62 @@ _jo.RunMethod("setSystemUiVisibility",new Object[]{(Object)(5894)});
 return "";
 }
 public static String  _btnhumiditydaily_click() throws Exception{
- //BA.debugLineNum = 117;BA.debugLine="Sub btnHumidityDaily_Click";
- //BA.debugLineNum = 118;BA.debugLine="TemperatureHourlyTimer.Enabled = False";
+ //BA.debugLineNum = 123;BA.debugLine="Sub btnHumidityDaily_Click";
+ //BA.debugLineNum = 124;BA.debugLine="TemperatureHourlyTimer.Enabled = False";
 _temperaturehourlytimer.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 119;BA.debugLine="HumidityHourlyTimer.Enabled = False";
+ //BA.debugLineNum = 125;BA.debugLine="HumidityHourlyTimer.Enabled = False";
 _humidityhourlytimer.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 120;BA.debugLine="TemperatureDailyTimer.Enabled = False";
+ //BA.debugLineNum = 126;BA.debugLine="TemperatureDailyTimer.Enabled = False";
 _temperaturedailytimer.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 121;BA.debugLine="tempMaxRange=0";
+ //BA.debugLineNum = 127;BA.debugLine="tempMaxRange=0";
 _tempmaxrange = (float) (0);
- //BA.debugLineNum = 122;BA.debugLine="tempMinRange=0";
+ //BA.debugLineNum = 128;BA.debugLine="tempMinRange=0";
 _tempminrange = (float) (0);
- //BA.debugLineNum = 123;BA.debugLine="HumidityDailyCreate";
+ //BA.debugLineNum = 129;BA.debugLine="HumidityDailyCreate";
 _humiditydailycreate();
- //BA.debugLineNum = 124;BA.debugLine="End Sub";
+ //BA.debugLineNum = 130;BA.debugLine="HumidityDailyTimer.Initialize(\"HumidityDailyTimer";
+_humiditydailytimer.Initialize(processBA,"HumidityDailyTimer",(long) (1000));
+ //BA.debugLineNum = 131;BA.debugLine="HumidityDailyTimer.Enabled = True 'start timer";
+_humiditydailytimer.setEnabled(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 132;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btnhumidityhourly_click() throws Exception{
- //BA.debugLineNum = 101;BA.debugLine="Sub btnHumidityHourly_Click";
- //BA.debugLineNum = 102;BA.debugLine="TemperatureDailyTimer.Enabled = False";
+ //BA.debugLineNum = 103;BA.debugLine="Sub btnHumidityHourly_Click";
+ //BA.debugLineNum = 104;BA.debugLine="TemperatureDailyTimer.Enabled = False";
 _temperaturedailytimer.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 103;BA.debugLine="TemperatureHourlyTimer.Enabled = False";
+ //BA.debugLineNum = 105;BA.debugLine="TemperatureHourlyTimer.Enabled = False";
 _temperaturehourlytimer.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 104;BA.debugLine="HumidityDailyTimer.Enabled = False";
+ //BA.debugLineNum = 106;BA.debugLine="HumidityDailyTimer.Enabled = False";
 _humiditydailytimer.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 105;BA.debugLine="HumidityHourlyCreate";
+ //BA.debugLineNum = 107;BA.debugLine="HumidityHourlyCreate";
 _humidityhourlycreate();
- //BA.debugLineNum = 106;BA.debugLine="End Sub";
+ //BA.debugLineNum = 108;BA.debugLine="HumidityHourlyTimer.Initialize(\"HumidityHourlyTim";
+_humidityhourlytimer.Initialize(processBA,"HumidityHourlyTimer",(long) (1000));
+ //BA.debugLineNum = 109;BA.debugLine="HumidityHourlyTimer.Enabled = True 'start timer";
+_humidityhourlytimer.setEnabled(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 110;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btntempdaily_click() throws Exception{
- //BA.debugLineNum = 108;BA.debugLine="Sub btnTempDaily_Click";
- //BA.debugLineNum = 109;BA.debugLine="TemperatureHourlyTimer.Enabled = False";
+ //BA.debugLineNum = 112;BA.debugLine="Sub btnTempDaily_Click";
+ //BA.debugLineNum = 113;BA.debugLine="TemperatureHourlyTimer.Enabled = False";
 _temperaturehourlytimer.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 110;BA.debugLine="HumidityHourlyTimer.Enabled = False";
+ //BA.debugLineNum = 114;BA.debugLine="HumidityHourlyTimer.Enabled = False";
 _humidityhourlytimer.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 111;BA.debugLine="HumidityDailyTimer.Enabled = False";
+ //BA.debugLineNum = 115;BA.debugLine="HumidityDailyTimer.Enabled = False";
 _humiditydailytimer.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 112;BA.debugLine="tempMaxRange=0";
+ //BA.debugLineNum = 116;BA.debugLine="tempMaxRange=0";
 _tempmaxrange = (float) (0);
- //BA.debugLineNum = 113;BA.debugLine="tempMinRange=0";
+ //BA.debugLineNum = 117;BA.debugLine="tempMinRange=0";
 _tempminrange = (float) (0);
- //BA.debugLineNum = 114;BA.debugLine="TemperatureDailyCreate";
+ //BA.debugLineNum = 118;BA.debugLine="TemperatureDailyCreate";
 _temperaturedailycreate();
- //BA.debugLineNum = 115;BA.debugLine="End Sub";
+ //BA.debugLineNum = 119;BA.debugLine="TemperatureDailyTimer.Initialize(\"TemperatureDail";
+_temperaturedailytimer.Initialize(processBA,"TemperatureDailyTimer",(long) (1000));
+ //BA.debugLineNum = 120;BA.debugLine="TemperatureDailyTimer.Enabled = True 'start timer";
+_temperaturedailytimer.setEnabled(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 121;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btntemphourly_click() throws Exception{
@@ -505,7 +517,11 @@ _humidityhourlytimer.setEnabled(anywheresoftware.b4a.keywords.Common.False);
 _humiditydailytimer.setEnabled(anywheresoftware.b4a.keywords.Common.False);
  //BA.debugLineNum = 98;BA.debugLine="TemperatureHourlyCreate";
 _temperaturehourlycreate();
- //BA.debugLineNum = 99;BA.debugLine="End Sub";
+ //BA.debugLineNum = 99;BA.debugLine="TemperatureHourlyTimer.Initialize(\"TemperatureHou";
+_temperaturehourlytimer.Initialize(processBA,"TemperatureHourlyTimer",(long) (1000));
+ //BA.debugLineNum = 100;BA.debugLine="TemperatureHourlyTimer.Enabled = True 'start time";
+_temperaturehourlytimer.setEnabled(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 101;BA.debugLine="End Sub";
 return "";
 }
 public static String  _checktempboundaries() throws Exception{
@@ -936,667 +952,663 @@ public static String  _humiditydailycreate() throws Exception{
 anywheresoftware.b4a.keywords.LayoutValues _lv = null;
 anywheresoftware.b4j.object.JavaObject _jo = null;
 long _yesterday = 0L;
- //BA.debugLineNum = 1085;BA.debugLine="Private Sub HumidityDailyCreate()";
- //BA.debugLineNum = 1086;BA.debugLine="Try";
-try { //BA.debugLineNum = 1088;BA.debugLine="Activity_WindowFocusChanged(True)";
+ //BA.debugLineNum = 1087;BA.debugLine="Private Sub HumidityDailyCreate()";
+ //BA.debugLineNum = 1088;BA.debugLine="Try";
+try { //BA.debugLineNum = 1090;BA.debugLine="Activity_WindowFocusChanged(True)";
 _activity_windowfocuschanged(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 1089;BA.debugLine="Dim lv As LayoutValues = GetRealSize";
+ //BA.debugLineNum = 1091;BA.debugLine="Dim lv As LayoutValues = GetRealSize";
 _lv = _getrealsize();
- //BA.debugLineNum = 1090;BA.debugLine="Dim jo As JavaObject = Activity";
+ //BA.debugLineNum = 1092;BA.debugLine="Dim jo As JavaObject = Activity";
 _jo = new anywheresoftware.b4j.object.JavaObject();
 _jo = (anywheresoftware.b4j.object.JavaObject) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.object.JavaObject(), (java.lang.Object)(mostCurrent._activity.getObject()));
- //BA.debugLineNum = 1091;BA.debugLine="jo.RunMethod(\"setBottom\", Array(lv.Height))";
+ //BA.debugLineNum = 1093;BA.debugLine="jo.RunMethod(\"setBottom\", Array(lv.Height))";
 _jo.RunMethod("setBottom",new Object[]{(Object)(_lv.Height)});
- //BA.debugLineNum = 1092;BA.debugLine="jo.RunMethod(\"setRight\", Array(lv.Width))";
+ //BA.debugLineNum = 1094;BA.debugLine="jo.RunMethod(\"setRight\", Array(lv.Width))";
 _jo.RunMethod("setRight",new Object[]{(Object)(_lv.Width)});
- //BA.debugLineNum = 1093;BA.debugLine="Activity.Height = lv.Height";
+ //BA.debugLineNum = 1095;BA.debugLine="Activity.Height = lv.Height";
 mostCurrent._activity.setHeight(_lv.Height);
- //BA.debugLineNum = 1094;BA.debugLine="Activity.Width = lv.Width";
+ //BA.debugLineNum = 1096;BA.debugLine="Activity.Width = lv.Width";
 mostCurrent._activity.setWidth(_lv.Width);
- //BA.debugLineNum = 1097;BA.debugLine="Activity.LoadLayout(\"Main\")";
+ //BA.debugLineNum = 1099;BA.debugLine="Activity.LoadLayout(\"Main\")";
 mostCurrent._activity.LoadLayout("Main",mostCurrent.activityBA);
- //BA.debugLineNum = 1099;BA.debugLine="LineChart.GraphBackgroundColor = Colors.DarkGray";
+ //BA.debugLineNum = 1101;BA.debugLine="LineChart.GraphBackgroundColor = Colors.DarkGray";
 mostCurrent._linechart.setGraphBackgroundColor(anywheresoftware.b4a.keywords.Common.Colors.DarkGray);
- //BA.debugLineNum = 1100;BA.debugLine="LineChart.GraphFrameColor = Colors.Blue";
+ //BA.debugLineNum = 1102;BA.debugLine="LineChart.GraphFrameColor = Colors.Blue";
 mostCurrent._linechart.setGraphFrameColor(anywheresoftware.b4a.keywords.Common.Colors.Blue);
- //BA.debugLineNum = 1101;BA.debugLine="LineChart.GraphFrameWidth = 4.0";
+ //BA.debugLineNum = 1103;BA.debugLine="LineChart.GraphFrameWidth = 4.0";
 mostCurrent._linechart.setGraphFrameWidth((float) (4.0));
- //BA.debugLineNum = 1102;BA.debugLine="LineChart.GraphPlotAreaBackgroundColor = Colors.";
+ //BA.debugLineNum = 1104;BA.debugLine="LineChart.GraphPlotAreaBackgroundColor = Colors.";
 mostCurrent._linechart.setGraphPlotAreaBackgroundColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (50),(int) (0),(int) (0),(int) (255)));
- //BA.debugLineNum = 1103;BA.debugLine="LineChart.GraphTitleTextSize = 15";
+ //BA.debugLineNum = 1105;BA.debugLine="LineChart.GraphTitleTextSize = 15";
 mostCurrent._linechart.setGraphTitleTextSize((int) (15));
- //BA.debugLineNum = 1104;BA.debugLine="LineChart.GraphTitleColor = Colors.White";
+ //BA.debugLineNum = 1106;BA.debugLine="LineChart.GraphTitleColor = Colors.White";
 mostCurrent._linechart.setGraphTitleColor(anywheresoftware.b4a.keywords.Common.Colors.White);
- //BA.debugLineNum = 1105;BA.debugLine="LineChart.GraphTitleSkewX = -0.25";
+ //BA.debugLineNum = 1107;BA.debugLine="LineChart.GraphTitleSkewX = -0.25";
 mostCurrent._linechart.setGraphTitleSkewX((float) (-0.25));
- //BA.debugLineNum = 1106;BA.debugLine="LineChart.GraphTitleUnderline = True";
+ //BA.debugLineNum = 1108;BA.debugLine="LineChart.GraphTitleUnderline = True";
 mostCurrent._linechart.setGraphTitleUnderline(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 1107;BA.debugLine="LineChart.GraphTitleBold = True";
+ //BA.debugLineNum = 1109;BA.debugLine="LineChart.GraphTitleBold = True";
 mostCurrent._linechart.setGraphTitleBold(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 1108;BA.debugLine="LineChart.GraphTitle = \" HUMIDITY DAILY  \"";
+ //BA.debugLineNum = 1110;BA.debugLine="LineChart.GraphTitle = \" HUMIDITY DAILY  \"";
 mostCurrent._linechart.setGraphTitle(" HUMIDITY DAILY  ");
- //BA.debugLineNum = 1110;BA.debugLine="LineChart.LegendBackgroundColor = Colors.White";
+ //BA.debugLineNum = 1112;BA.debugLine="LineChart.LegendBackgroundColor = Colors.White";
 mostCurrent._linechart.setLegendBackgroundColor(anywheresoftware.b4a.keywords.Common.Colors.White);
- //BA.debugLineNum = 1111;BA.debugLine="LineChart.LegendTextColor = Colors.Black";
+ //BA.debugLineNum = 1113;BA.debugLine="LineChart.LegendTextColor = Colors.Black";
 mostCurrent._linechart.setLegendTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
- //BA.debugLineNum = 1112;BA.debugLine="LineChart.LegendTextSize = 18.0";
+ //BA.debugLineNum = 1114;BA.debugLine="LineChart.LegendTextSize = 18.0";
 mostCurrent._linechart.setLegendTextSize((float) (18.0));
- //BA.debugLineNum = 1114;BA.debugLine="DateTime.TimeFormat = \"h:mm a\"";
+ //BA.debugLineNum = 1116;BA.debugLine="DateTime.TimeFormat = \"h:mm a\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setTimeFormat("h:mm a");
- //BA.debugLineNum = 1115;BA.debugLine="LineChart.DomianLabel = \"The time now is: \" & Da";
+ //BA.debugLineNum = 1117;BA.debugLine="LineChart.DomianLabel = \"The time now is: \" & Da";
 mostCurrent._linechart.setDomianLabel("The time now is: "+anywheresoftware.b4a.keywords.Common.DateTime.Time(anywheresoftware.b4a.keywords.Common.DateTime.getNow()));
- //BA.debugLineNum = 1116;BA.debugLine="LineChart.DomainLabelColor = Colors.Green";
+ //BA.debugLineNum = 1118;BA.debugLine="LineChart.DomainLabelColor = Colors.Green";
 mostCurrent._linechart.setDomainLabelColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
- //BA.debugLineNum = 1117;BA.debugLine="LineChart.DomainLabelTextSize = 25.0";
+ //BA.debugLineNum = 1119;BA.debugLine="LineChart.DomainLabelTextSize = 25.0";
 mostCurrent._linechart.setDomainLabelTextSize((float) (25.0));
- //BA.debugLineNum = 1119;BA.debugLine="LineChart.XaxisGridLineColor = Colors.ARGB(100,2";
+ //BA.debugLineNum = 1121;BA.debugLine="LineChart.XaxisGridLineColor = Colors.ARGB(100,2";
 mostCurrent._linechart.setXaxisGridLineColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (100),(int) (255),(int) (255),(int) (255)));
- //BA.debugLineNum = 1120;BA.debugLine="LineChart.XaxisGridLineWidth = 2.0";
+ //BA.debugLineNum = 1122;BA.debugLine="LineChart.XaxisGridLineWidth = 2.0";
 mostCurrent._linechart.setXaxisGridLineWidth((float) (2.0));
- //BA.debugLineNum = 1121;BA.debugLine="LineChart.XaxisLabelTicks = 1";
+ //BA.debugLineNum = 1123;BA.debugLine="LineChart.XaxisLabelTicks = 1";
 mostCurrent._linechart.setXaxisLabelTicks((int) (1));
- //BA.debugLineNum = 1122;BA.debugLine="LineChart.XaxisLabelOrientation = 0";
+ //BA.debugLineNum = 1124;BA.debugLine="LineChart.XaxisLabelOrientation = 0";
 mostCurrent._linechart.setXaxisLabelOrientation((float) (0));
- //BA.debugLineNum = 1123;BA.debugLine="LineChart.XaxisLabelTextColor = Colors.White";
+ //BA.debugLineNum = 1125;BA.debugLine="LineChart.XaxisLabelTextColor = Colors.White";
 mostCurrent._linechart.setXaxisLabelTextColor(anywheresoftware.b4a.keywords.Common.Colors.White);
- //BA.debugLineNum = 1124;BA.debugLine="LineChart.XaxisLabelTextSize = 32.0";
+ //BA.debugLineNum = 1126;BA.debugLine="LineChart.XaxisLabelTextSize = 32.0";
 mostCurrent._linechart.setXaxisLabelTextSize((float) (32.0));
- //BA.debugLineNum = 1125;BA.debugLine="LineChart.XAxisLabels = Array As String(\"12 am\",";
+ //BA.debugLineNum = 1127;BA.debugLine="LineChart.XAxisLabels = Array As String(\"12 am\",";
 mostCurrent._linechart.setXAxisLabels(new String[]{"12 am","1 am","2 am","3 am","4 am","5 am","6 am","7 am","8 am","9 am","10 am","11 am","12 pm","1 pm","2 pm","3 pm","4 pm","5 pm","6 pm","7 pm","8 pm","9 pm","10 pm","11 pm"});
- //BA.debugLineNum = 1127;BA.debugLine="LineChart.YaxisDivisions = 10";
+ //BA.debugLineNum = 1129;BA.debugLine="LineChart.YaxisDivisions = 10";
 mostCurrent._linechart.setYaxisDivisions((int) (10));
- //BA.debugLineNum = 1129;BA.debugLine="LineChart.YaxisValueFormat = LineChart.ValueForm";
+ //BA.debugLineNum = 1131;BA.debugLine="LineChart.YaxisValueFormat = LineChart.ValueForm";
 mostCurrent._linechart.setYaxisValueFormat(mostCurrent._linechart.ValueFormat_2);
- //BA.debugLineNum = 1130;BA.debugLine="LineChart.YaxisGridLineColor = Colors.Black";
+ //BA.debugLineNum = 1132;BA.debugLine="LineChart.YaxisGridLineColor = Colors.Black";
 mostCurrent._linechart.setYaxisGridLineColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
- //BA.debugLineNum = 1131;BA.debugLine="LineChart.YaxisGridLineWidth = 2";
+ //BA.debugLineNum = 1133;BA.debugLine="LineChart.YaxisGridLineWidth = 2";
 mostCurrent._linechart.setYaxisGridLineWidth((float) (2));
- //BA.debugLineNum = 1132;BA.debugLine="LineChart.YaxisLabelTicks = 1";
+ //BA.debugLineNum = 1134;BA.debugLine="LineChart.YaxisLabelTicks = 1";
 mostCurrent._linechart.setYaxisLabelTicks((int) (1));
- //BA.debugLineNum = 1133;BA.debugLine="LineChart.YaxisLabelColor = Colors.Yellow";
+ //BA.debugLineNum = 1135;BA.debugLine="LineChart.YaxisLabelColor = Colors.Yellow";
 mostCurrent._linechart.setYaxisLabelColor(anywheresoftware.b4a.keywords.Common.Colors.Yellow);
- //BA.debugLineNum = 1134;BA.debugLine="LineChart.YaxisLabelOrientation = -30";
+ //BA.debugLineNum = 1136;BA.debugLine="LineChart.YaxisLabelOrientation = -30";
 mostCurrent._linechart.setYaxisLabelOrientation((float) (-30));
- //BA.debugLineNum = 1135;BA.debugLine="LineChart.YaxisLabelTextSize = 25.0";
+ //BA.debugLineNum = 1137;BA.debugLine="LineChart.YaxisLabelTextSize = 25.0";
 mostCurrent._linechart.setYaxisLabelTextSize((float) (25.0));
- //BA.debugLineNum = 1136;BA.debugLine="LineChart.YaxisTitleColor = Colors.Green";
+ //BA.debugLineNum = 1138;BA.debugLine="LineChart.YaxisTitleColor = Colors.Green";
 mostCurrent._linechart.setYaxisTitleColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
- //BA.debugLineNum = 1137;BA.debugLine="LineChart.YaxisTitleFakeBold = False";
+ //BA.debugLineNum = 1139;BA.debugLine="LineChart.YaxisTitleFakeBold = False";
 mostCurrent._linechart.setYaxisTitleFakeBold(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 1138;BA.debugLine="LineChart.YaxisTitleTextSize = 20.0";
+ //BA.debugLineNum = 1140;BA.debugLine="LineChart.YaxisTitleTextSize = 20.0";
 mostCurrent._linechart.setYaxisTitleTextSize((float) (20.0));
- //BA.debugLineNum = 1139;BA.debugLine="LineChart.YaxisTitleUnderline = True";
+ //BA.debugLineNum = 1141;BA.debugLine="LineChart.YaxisTitleUnderline = True";
 mostCurrent._linechart.setYaxisTitleUnderline(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 1140;BA.debugLine="LineChart.YaxisTitleTextSkewness = 0";
+ //BA.debugLineNum = 1142;BA.debugLine="LineChart.YaxisTitleTextSkewness = 0";
 mostCurrent._linechart.setYaxisTitleTextSkewness((float) (0));
- //BA.debugLineNum = 1141;BA.debugLine="LineChart.YaxisLabelAndTitleDistance = 60.0";
+ //BA.debugLineNum = 1143;BA.debugLine="LineChart.YaxisLabelAndTitleDistance = 60.0";
 mostCurrent._linechart.setYaxisLabelAndTitleDistance((float) (60.0));
- //BA.debugLineNum = 1142;BA.debugLine="LineChart.YaxisTitle = \"Humidity (Percentage)\"";
+ //BA.debugLineNum = 1144;BA.debugLine="LineChart.YaxisTitle = \"Humidity (Percentage)\"";
 mostCurrent._linechart.setYaxisTitle("Humidity (Percentage)");
- //BA.debugLineNum = 1144;BA.debugLine="LineChart.MaxNumberOfEntriesPerLineChart = 24";
+ //BA.debugLineNum = 1146;BA.debugLine="LineChart.MaxNumberOfEntriesPerLineChart = 24";
 mostCurrent._linechart.setMaxNumberOfEntriesPerLineChart((int) (24));
- //BA.debugLineNum = 1145;BA.debugLine="LineChart.GraphLegendVisibility = False";
+ //BA.debugLineNum = 1147;BA.debugLine="LineChart.GraphLegendVisibility = False";
 mostCurrent._linechart.setGraphLegendVisibility(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 1149;BA.debugLine="ReadHumidityDaily(\"Today\")";
+ //BA.debugLineNum = 1151;BA.debugLine="ReadHumidityDaily(\"Today\")";
 _readhumiditydaily("Today");
- //BA.debugLineNum = 1151;BA.debugLine="DateTime.DateFormat = \"MMM d, yyyy\"";
+ //BA.debugLineNum = 1153;BA.debugLine="DateTime.DateFormat = \"MMM d, yyyy\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setDateFormat("MMM d, yyyy");
- //BA.debugLineNum = 1152;BA.debugLine="LineChart.Line_1_LegendText = \"Today, \" & DateTi";
+ //BA.debugLineNum = 1154;BA.debugLine="LineChart.Line_1_LegendText = \"Today, \" & DateTi";
 mostCurrent._linechart.setLine_1_LegendText("Today, "+anywheresoftware.b4a.keywords.Common.DateTime.Date(anywheresoftware.b4a.keywords.Common.DateTime.getNow()));
- //BA.debugLineNum = 1154;BA.debugLine="CheckTempBoundaries";
+ //BA.debugLineNum = 1156;BA.debugLine="CheckTempBoundaries";
 _checktempboundaries();
- //BA.debugLineNum = 1156;BA.debugLine="If am12 <> tempZeroRange Then";
+ //BA.debugLineNum = 1158;BA.debugLine="If am12 <> tempZeroRange Then";
 if ((mostCurrent._am12).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1157;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12)";
+ //BA.debugLineNum = 1159;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12)";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12))});
  };
- //BA.debugLineNum = 1159;BA.debugLine="If am1 <> tempZeroRange Then";
+ //BA.debugLineNum = 1161;BA.debugLine="If am1 <> tempZeroRange Then";
 if ((mostCurrent._am1).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1160;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1162;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1))});
  };
- //BA.debugLineNum = 1162;BA.debugLine="If am2 <> tempZeroRange Then";
+ //BA.debugLineNum = 1164;BA.debugLine="If am2 <> tempZeroRange Then";
 if ((mostCurrent._am2).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1163;BA.debugLine="If am1 = tempZeroRange Then";
+ //BA.debugLineNum = 1165;BA.debugLine="If am1 = tempZeroRange Then";
 if ((mostCurrent._am1).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1164;BA.debugLine="am1 = (am12 + am2)/2";
+ //BA.debugLineNum = 1166;BA.debugLine="am1 = (am12 + am2)/2";
 mostCurrent._am1 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am12))+(double)(Double.parseDouble(mostCurrent._am2)))/(double)2);
  };
- //BA.debugLineNum = 1166;BA.debugLine="If am12 = tempZeroRange Then";
+ //BA.debugLineNum = 1168;BA.debugLine="If am12 = tempZeroRange Then";
 if ((mostCurrent._am12).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1167;BA.debugLine="am12 = am1";
+ //BA.debugLineNum = 1169;BA.debugLine="am12 = am1";
 mostCurrent._am12 = mostCurrent._am1;
  };
- //BA.debugLineNum = 1169;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1171;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2))});
  };
- //BA.debugLineNum = 1171;BA.debugLine="If am3 <> tempZeroRange Then";
+ //BA.debugLineNum = 1173;BA.debugLine="If am3 <> tempZeroRange Then";
 if ((mostCurrent._am3).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1172;BA.debugLine="If am2 = tempZeroRange Then";
+ //BA.debugLineNum = 1174;BA.debugLine="If am2 = tempZeroRange Then";
 if ((mostCurrent._am2).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1173;BA.debugLine="am2 = (am1 + am3)/2";
+ //BA.debugLineNum = 1175;BA.debugLine="am2 = (am1 + am3)/2";
 mostCurrent._am2 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am1))+(double)(Double.parseDouble(mostCurrent._am3)))/(double)2);
  };
- //BA.debugLineNum = 1175;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1177;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3))});
  };
- //BA.debugLineNum = 1177;BA.debugLine="If am4 <> tempZeroRange Then";
+ //BA.debugLineNum = 1179;BA.debugLine="If am4 <> tempZeroRange Then";
 if ((mostCurrent._am4).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1178;BA.debugLine="If am3 = tempZeroRange Then";
+ //BA.debugLineNum = 1180;BA.debugLine="If am3 = tempZeroRange Then";
 if ((mostCurrent._am3).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1179;BA.debugLine="am3 = (am2 + am4)/2";
+ //BA.debugLineNum = 1181;BA.debugLine="am3 = (am2 + am4)/2";
 mostCurrent._am3 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am2))+(double)(Double.parseDouble(mostCurrent._am4)))/(double)2);
  };
- //BA.debugLineNum = 1181;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1183;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4))});
  };
- //BA.debugLineNum = 1183;BA.debugLine="If am5 <> tempZeroRange Then";
+ //BA.debugLineNum = 1185;BA.debugLine="If am5 <> tempZeroRange Then";
 if ((mostCurrent._am5).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1184;BA.debugLine="If am4 = tempZeroRange Then";
+ //BA.debugLineNum = 1186;BA.debugLine="If am4 = tempZeroRange Then";
 if ((mostCurrent._am4).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1185;BA.debugLine="am4 = (am3 + am5)/2";
+ //BA.debugLineNum = 1187;BA.debugLine="am4 = (am3 + am5)/2";
 mostCurrent._am4 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am3))+(double)(Double.parseDouble(mostCurrent._am5)))/(double)2);
  };
- //BA.debugLineNum = 1187;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1189;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5))});
  };
- //BA.debugLineNum = 1189;BA.debugLine="If am6 <> tempZeroRange Then";
+ //BA.debugLineNum = 1191;BA.debugLine="If am6 <> tempZeroRange Then";
 if ((mostCurrent._am6).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1190;BA.debugLine="If am5 = tempZeroRange Then";
+ //BA.debugLineNum = 1192;BA.debugLine="If am5 = tempZeroRange Then";
 if ((mostCurrent._am5).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1191;BA.debugLine="am5 = (am4 + am6)/2";
+ //BA.debugLineNum = 1193;BA.debugLine="am5 = (am4 + am6)/2";
 mostCurrent._am5 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am4))+(double)(Double.parseDouble(mostCurrent._am6)))/(double)2);
  };
- //BA.debugLineNum = 1193;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1195;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6))});
  };
- //BA.debugLineNum = 1195;BA.debugLine="If am7 <> tempZeroRange Then";
+ //BA.debugLineNum = 1197;BA.debugLine="If am7 <> tempZeroRange Then";
 if ((mostCurrent._am7).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1196;BA.debugLine="If am6 = tempZeroRange Then";
+ //BA.debugLineNum = 1198;BA.debugLine="If am6 = tempZeroRange Then";
 if ((mostCurrent._am6).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1197;BA.debugLine="am6 = (am5 + am7)/2";
+ //BA.debugLineNum = 1199;BA.debugLine="am6 = (am5 + am7)/2";
 mostCurrent._am6 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am5))+(double)(Double.parseDouble(mostCurrent._am7)))/(double)2);
  };
- //BA.debugLineNum = 1199;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1201;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7))});
  };
- //BA.debugLineNum = 1201;BA.debugLine="If am8 <> tempZeroRange Then";
+ //BA.debugLineNum = 1203;BA.debugLine="If am8 <> tempZeroRange Then";
 if ((mostCurrent._am8).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1202;BA.debugLine="If am7 = tempZeroRange Then";
+ //BA.debugLineNum = 1204;BA.debugLine="If am7 = tempZeroRange Then";
 if ((mostCurrent._am7).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1203;BA.debugLine="am7 = (am6 + am8)/2";
+ //BA.debugLineNum = 1205;BA.debugLine="am7 = (am6 + am8)/2";
 mostCurrent._am7 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am6))+(double)(Double.parseDouble(mostCurrent._am8)))/(double)2);
  };
- //BA.debugLineNum = 1205;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1207;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8))});
  };
- //BA.debugLineNum = 1207;BA.debugLine="If am9 <> tempZeroRange Then";
+ //BA.debugLineNum = 1209;BA.debugLine="If am9 <> tempZeroRange Then";
 if ((mostCurrent._am9).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1208;BA.debugLine="If am8 = tempZeroRange Then";
+ //BA.debugLineNum = 1210;BA.debugLine="If am8 = tempZeroRange Then";
 if ((mostCurrent._am8).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1209;BA.debugLine="am8 = (am7 + am9)/2";
+ //BA.debugLineNum = 1211;BA.debugLine="am8 = (am7 + am9)/2";
 mostCurrent._am8 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am7))+(double)(Double.parseDouble(mostCurrent._am9)))/(double)2);
  };
- //BA.debugLineNum = 1211;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1213;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9))});
  };
- //BA.debugLineNum = 1213;BA.debugLine="If am10 <> tempZeroRange Then";
+ //BA.debugLineNum = 1215;BA.debugLine="If am10 <> tempZeroRange Then";
 if ((mostCurrent._am10).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1214;BA.debugLine="If am9 = tempZeroRange Then";
+ //BA.debugLineNum = 1216;BA.debugLine="If am9 = tempZeroRange Then";
 if ((mostCurrent._am9).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1215;BA.debugLine="am9 = (am8 + am10)/2";
+ //BA.debugLineNum = 1217;BA.debugLine="am9 = (am8 + am10)/2";
 mostCurrent._am9 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am8))+(double)(Double.parseDouble(mostCurrent._am10)))/(double)2);
  };
- //BA.debugLineNum = 1217;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1219;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10))});
  };
- //BA.debugLineNum = 1219;BA.debugLine="If am11 <> tempZeroRange Then";
+ //BA.debugLineNum = 1221;BA.debugLine="If am11 <> tempZeroRange Then";
 if ((mostCurrent._am11).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1220;BA.debugLine="If am10 = tempZeroRange Then";
+ //BA.debugLineNum = 1222;BA.debugLine="If am10 = tempZeroRange Then";
 if ((mostCurrent._am10).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1221;BA.debugLine="am10 = (am9 + am11)/2";
+ //BA.debugLineNum = 1223;BA.debugLine="am10 = (am9 + am11)/2";
 mostCurrent._am10 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am9))+(double)(Double.parseDouble(mostCurrent._am11)))/(double)2);
  };
- //BA.debugLineNum = 1223;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1225;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11))});
  };
- //BA.debugLineNum = 1225;BA.debugLine="If pm12 <> tempZeroRange Then";
+ //BA.debugLineNum = 1227;BA.debugLine="If pm12 <> tempZeroRange Then";
 if ((mostCurrent._pm12).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1226;BA.debugLine="If am11 = tempZeroRange Then";
+ //BA.debugLineNum = 1228;BA.debugLine="If am11 = tempZeroRange Then";
 if ((mostCurrent._am11).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1227;BA.debugLine="am11 = (am10 + pm12)/2";
+ //BA.debugLineNum = 1229;BA.debugLine="am11 = (am10 + pm12)/2";
 mostCurrent._am11 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am10))+(double)(Double.parseDouble(mostCurrent._pm12)))/(double)2);
  };
- //BA.debugLineNum = 1229;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1231;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12))});
  };
- //BA.debugLineNum = 1231;BA.debugLine="If pm1 <> tempZeroRange Then";
+ //BA.debugLineNum = 1233;BA.debugLine="If pm1 <> tempZeroRange Then";
 if ((mostCurrent._pm1).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1232;BA.debugLine="If pm12 = tempZeroRange Then";
+ //BA.debugLineNum = 1234;BA.debugLine="If pm12 = tempZeroRange Then";
 if ((mostCurrent._pm12).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1233;BA.debugLine="pm12 = (am11 + pm1)/2";
+ //BA.debugLineNum = 1235;BA.debugLine="pm12 = (am11 + pm1)/2";
 mostCurrent._pm12 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am11))+(double)(Double.parseDouble(mostCurrent._pm1)))/(double)2);
  };
- //BA.debugLineNum = 1235;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1237;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1))});
  };
- //BA.debugLineNum = 1237;BA.debugLine="If pm2 <> tempZeroRange Then";
+ //BA.debugLineNum = 1239;BA.debugLine="If pm2 <> tempZeroRange Then";
 if ((mostCurrent._pm2).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1238;BA.debugLine="If pm1 = tempZeroRange Then";
+ //BA.debugLineNum = 1240;BA.debugLine="If pm1 = tempZeroRange Then";
 if ((mostCurrent._pm1).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1239;BA.debugLine="pm1 = (pm12 + pm2)/2";
+ //BA.debugLineNum = 1241;BA.debugLine="pm1 = (pm12 + pm2)/2";
 mostCurrent._pm1 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm12))+(double)(Double.parseDouble(mostCurrent._pm2)))/(double)2);
  };
- //BA.debugLineNum = 1241;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1243;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2))});
  };
- //BA.debugLineNum = 1243;BA.debugLine="If pm3 <> tempZeroRange Then";
+ //BA.debugLineNum = 1245;BA.debugLine="If pm3 <> tempZeroRange Then";
 if ((mostCurrent._pm3).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1244;BA.debugLine="If pm2 = tempZeroRange Then";
+ //BA.debugLineNum = 1246;BA.debugLine="If pm2 = tempZeroRange Then";
 if ((mostCurrent._pm2).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1245;BA.debugLine="pm2 = (pm1 + pm3)/2";
+ //BA.debugLineNum = 1247;BA.debugLine="pm2 = (pm1 + pm3)/2";
 mostCurrent._pm2 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm1))+(double)(Double.parseDouble(mostCurrent._pm3)))/(double)2);
  };
- //BA.debugLineNum = 1247;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1249;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3))});
  };
- //BA.debugLineNum = 1249;BA.debugLine="If pm4 <> tempZeroRange Then";
+ //BA.debugLineNum = 1251;BA.debugLine="If pm4 <> tempZeroRange Then";
 if ((mostCurrent._pm4).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1250;BA.debugLine="If pm3 = tempZeroRange Then";
+ //BA.debugLineNum = 1252;BA.debugLine="If pm3 = tempZeroRange Then";
 if ((mostCurrent._pm3).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1251;BA.debugLine="pm3 = (pm2 + pm4)/2";
+ //BA.debugLineNum = 1253;BA.debugLine="pm3 = (pm2 + pm4)/2";
 mostCurrent._pm3 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm2))+(double)(Double.parseDouble(mostCurrent._pm4)))/(double)2);
  };
- //BA.debugLineNum = 1253;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1255;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4))});
  };
- //BA.debugLineNum = 1255;BA.debugLine="If pm5 <> tempZeroRange Then";
+ //BA.debugLineNum = 1257;BA.debugLine="If pm5 <> tempZeroRange Then";
 if ((mostCurrent._pm5).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1256;BA.debugLine="If pm4 = tempZeroRange Then";
+ //BA.debugLineNum = 1258;BA.debugLine="If pm4 = tempZeroRange Then";
 if ((mostCurrent._pm4).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1257;BA.debugLine="pm4 = (pm3 + pm5)/2";
+ //BA.debugLineNum = 1259;BA.debugLine="pm4 = (pm3 + pm5)/2";
 mostCurrent._pm4 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm3))+(double)(Double.parseDouble(mostCurrent._pm5)))/(double)2);
  };
- //BA.debugLineNum = 1259;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1261;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5))});
  };
- //BA.debugLineNum = 1261;BA.debugLine="If pm6 <> tempZeroRange Then";
+ //BA.debugLineNum = 1263;BA.debugLine="If pm6 <> tempZeroRange Then";
 if ((mostCurrent._pm6).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1262;BA.debugLine="If pm5 = tempZeroRange Then";
+ //BA.debugLineNum = 1264;BA.debugLine="If pm5 = tempZeroRange Then";
 if ((mostCurrent._pm5).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1263;BA.debugLine="pm5 = (pm4 + pm6)/2";
+ //BA.debugLineNum = 1265;BA.debugLine="pm5 = (pm4 + pm6)/2";
 mostCurrent._pm5 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm4))+(double)(Double.parseDouble(mostCurrent._pm6)))/(double)2);
  };
- //BA.debugLineNum = 1265;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1267;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6))});
  };
- //BA.debugLineNum = 1267;BA.debugLine="If pm7 <> tempZeroRange Then";
+ //BA.debugLineNum = 1269;BA.debugLine="If pm7 <> tempZeroRange Then";
 if ((mostCurrent._pm7).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1268;BA.debugLine="If pm6 = tempZeroRange Then";
+ //BA.debugLineNum = 1270;BA.debugLine="If pm6 = tempZeroRange Then";
 if ((mostCurrent._pm6).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1269;BA.debugLine="pm6 = (pm5 + pm7)/2";
+ //BA.debugLineNum = 1271;BA.debugLine="pm6 = (pm5 + pm7)/2";
 mostCurrent._pm6 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm5))+(double)(Double.parseDouble(mostCurrent._pm7)))/(double)2);
  };
- //BA.debugLineNum = 1271;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1273;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7))});
  };
- //BA.debugLineNum = 1273;BA.debugLine="If pm8 <> tempZeroRange Then";
+ //BA.debugLineNum = 1275;BA.debugLine="If pm8 <> tempZeroRange Then";
 if ((mostCurrent._pm8).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1274;BA.debugLine="If pm7 = tempZeroRange Then";
+ //BA.debugLineNum = 1276;BA.debugLine="If pm7 = tempZeroRange Then";
 if ((mostCurrent._pm7).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1275;BA.debugLine="pm7 = (pm6 + pm8)/2";
+ //BA.debugLineNum = 1277;BA.debugLine="pm7 = (pm6 + pm8)/2";
 mostCurrent._pm7 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm6))+(double)(Double.parseDouble(mostCurrent._pm8)))/(double)2);
  };
- //BA.debugLineNum = 1277;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1279;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8))});
  };
- //BA.debugLineNum = 1279;BA.debugLine="If pm9 <> tempZeroRange Then";
+ //BA.debugLineNum = 1281;BA.debugLine="If pm9 <> tempZeroRange Then";
 if ((mostCurrent._pm9).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1280;BA.debugLine="If pm8 = tempZeroRange Then";
+ //BA.debugLineNum = 1282;BA.debugLine="If pm8 = tempZeroRange Then";
 if ((mostCurrent._pm8).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1281;BA.debugLine="pm8 = (pm7 + pm9)/2";
+ //BA.debugLineNum = 1283;BA.debugLine="pm8 = (pm7 + pm9)/2";
 mostCurrent._pm8 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm7))+(double)(Double.parseDouble(mostCurrent._pm9)))/(double)2);
  };
- //BA.debugLineNum = 1283;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1285;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8)),(float)(Double.parseDouble(mostCurrent._pm9))});
  };
- //BA.debugLineNum = 1285;BA.debugLine="If pm10 <> tempZeroRange Then";
+ //BA.debugLineNum = 1287;BA.debugLine="If pm10 <> tempZeroRange Then";
 if ((mostCurrent._pm10).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1286;BA.debugLine="If pm9 = tempZeroRange Then";
+ //BA.debugLineNum = 1288;BA.debugLine="If pm9 = tempZeroRange Then";
 if ((mostCurrent._pm9).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1287;BA.debugLine="pm9 = (pm8 + pm10)/2";
+ //BA.debugLineNum = 1289;BA.debugLine="pm9 = (pm8 + pm10)/2";
 mostCurrent._pm9 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm8))+(double)(Double.parseDouble(mostCurrent._pm10)))/(double)2);
  };
- //BA.debugLineNum = 1289;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1291;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8)),(float)(Double.parseDouble(mostCurrent._pm9)),(float)(Double.parseDouble(mostCurrent._pm10))});
  };
- //BA.debugLineNum = 1291;BA.debugLine="If pm11 <> tempZeroRange Then";
+ //BA.debugLineNum = 1293;BA.debugLine="If pm11 <> tempZeroRange Then";
 if ((mostCurrent._pm11).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1292;BA.debugLine="If pm10 = tempZeroRange Then";
+ //BA.debugLineNum = 1294;BA.debugLine="If pm10 = tempZeroRange Then";
 if ((mostCurrent._pm10).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1293;BA.debugLine="pm10 = (pm9 + pm11)/2";
+ //BA.debugLineNum = 1295;BA.debugLine="pm10 = (pm9 + pm11)/2";
 mostCurrent._pm10 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm9))+(double)(Double.parseDouble(mostCurrent._pm11)))/(double)2);
  };
- //BA.debugLineNum = 1295;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1297;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8)),(float)(Double.parseDouble(mostCurrent._pm9)),(float)(Double.parseDouble(mostCurrent._pm10)),(float)(Double.parseDouble(mostCurrent._pm11))});
  };
- //BA.debugLineNum = 1298;BA.debugLine="LineChart.Line_1_PointLabelTextColor = Colors.Ye";
+ //BA.debugLineNum = 1300;BA.debugLine="LineChart.Line_1_PointLabelTextColor = Colors.Ye";
 mostCurrent._linechart.setLine_1_PointLabelTextColor(anywheresoftware.b4a.keywords.Common.Colors.Yellow);
- //BA.debugLineNum = 1299;BA.debugLine="LineChart.Line_1_PointLabelTextSize = 35.0";
+ //BA.debugLineNum = 1301;BA.debugLine="LineChart.Line_1_PointLabelTextSize = 35.0";
 mostCurrent._linechart.setLine_1_PointLabelTextSize((float) (35.0));
- //BA.debugLineNum = 1300;BA.debugLine="LineChart.Line_1_LineColor = Colors.Red";
+ //BA.debugLineNum = 1302;BA.debugLine="LineChart.Line_1_LineColor = Colors.Red";
 mostCurrent._linechart.setLine_1_LineColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
- //BA.debugLineNum = 1301;BA.debugLine="LineChart.Line_1_LineWidth = 11.0";
+ //BA.debugLineNum = 1303;BA.debugLine="LineChart.Line_1_LineWidth = 11.0";
 mostCurrent._linechart.setLine_1_LineWidth((float) (11.0));
- //BA.debugLineNum = 1302;BA.debugLine="LineChart.Line_1_PointColor = Colors.Black";
+ //BA.debugLineNum = 1304;BA.debugLine="LineChart.Line_1_PointColor = Colors.Black";
 mostCurrent._linechart.setLine_1_PointColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
- //BA.debugLineNum = 1303;BA.debugLine="LineChart.Line_1_PointSize = 25.0";
+ //BA.debugLineNum = 1305;BA.debugLine="LineChart.Line_1_PointSize = 25.0";
 mostCurrent._linechart.setLine_1_PointSize((float) (25.0));
- //BA.debugLineNum = 1304;BA.debugLine="LineChart.Line_1_PointShape = LineChart.SHAPE_RO";
+ //BA.debugLineNum = 1306;BA.debugLine="LineChart.Line_1_PointShape = LineChart.SHAPE_RO";
 mostCurrent._linechart.setLine_1_PointShape(mostCurrent._linechart.SHAPE_ROUND);
- //BA.debugLineNum = 1305;BA.debugLine="LineChart.Line_1_DrawDash = False";
+ //BA.debugLineNum = 1307;BA.debugLine="LineChart.Line_1_DrawDash = False";
 mostCurrent._linechart.setLine_1_DrawDash(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 1306;BA.debugLine="LineChart.Line_1_DrawCubic = False";
+ //BA.debugLineNum = 1308;BA.debugLine="LineChart.Line_1_DrawCubic = False";
 mostCurrent._linechart.setLine_1_DrawCubic(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 1312;BA.debugLine="ReadHumidityDaily(\"Yesterday\")";
+ //BA.debugLineNum = 1314;BA.debugLine="ReadHumidityDaily(\"Yesterday\")";
 _readhumiditydaily("Yesterday");
- //BA.debugLineNum = 1314;BA.debugLine="Dim Yesterday As Long";
+ //BA.debugLineNum = 1316;BA.debugLine="Dim Yesterday As Long";
 _yesterday = 0L;
- //BA.debugLineNum = 1315;BA.debugLine="Yesterday = DateTime.add(DateTime.Now, 0, 0, -1)";
+ //BA.debugLineNum = 1317;BA.debugLine="Yesterday = DateTime.add(DateTime.Now, 0, 0, -1)";
 _yesterday = anywheresoftware.b4a.keywords.Common.DateTime.Add(anywheresoftware.b4a.keywords.Common.DateTime.getNow(),(int) (0),(int) (0),(int) (-1));
- //BA.debugLineNum = 1317;BA.debugLine="DateTime.DateFormat = \"MMM d, yyyy\"";
+ //BA.debugLineNum = 1319;BA.debugLine="DateTime.DateFormat = \"MMM d, yyyy\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setDateFormat("MMM d, yyyy");
- //BA.debugLineNum = 1318;BA.debugLine="LineChart.Line_2_LegendText = \"Yesterday, \" & Da";
+ //BA.debugLineNum = 1320;BA.debugLine="LineChart.Line_2_LegendText = \"Yesterday, \" & Da";
 mostCurrent._linechart.setLine_2_LegendText("Yesterday, "+anywheresoftware.b4a.keywords.Common.DateTime.Date(_yesterday));
- //BA.debugLineNum = 1320;BA.debugLine="CheckTempBoundariesDaily";
+ //BA.debugLineNum = 1322;BA.debugLine="CheckTempBoundariesDaily";
 _checktempboundariesdaily();
- //BA.debugLineNum = 1322;BA.debugLine="If am12 <> tempZeroRange Then";
+ //BA.debugLineNum = 1324;BA.debugLine="If am12 <> tempZeroRange Then";
 if ((mostCurrent._am12).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1323;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12)";
+ //BA.debugLineNum = 1325;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12)";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12))});
  };
- //BA.debugLineNum = 1325;BA.debugLine="If am1 <> tempZeroRange Then";
+ //BA.debugLineNum = 1327;BA.debugLine="If am1 <> tempZeroRange Then";
 if ((mostCurrent._am1).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1326;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1328;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1))});
  };
- //BA.debugLineNum = 1328;BA.debugLine="If am2 <> tempZeroRange Then";
+ //BA.debugLineNum = 1330;BA.debugLine="If am2 <> tempZeroRange Then";
 if ((mostCurrent._am2).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1329;BA.debugLine="If am1 = tempZeroRange Then";
+ //BA.debugLineNum = 1331;BA.debugLine="If am1 = tempZeroRange Then";
 if ((mostCurrent._am1).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1330;BA.debugLine="am1 = (am12 + am2)/2";
+ //BA.debugLineNum = 1332;BA.debugLine="am1 = (am12 + am2)/2";
 mostCurrent._am1 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am12))+(double)(Double.parseDouble(mostCurrent._am2)))/(double)2);
  };
- //BA.debugLineNum = 1332;BA.debugLine="If am12 = tempZeroRange Then";
+ //BA.debugLineNum = 1334;BA.debugLine="If am12 = tempZeroRange Then";
 if ((mostCurrent._am12).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1333;BA.debugLine="am12 = am1";
+ //BA.debugLineNum = 1335;BA.debugLine="am12 = am1";
 mostCurrent._am12 = mostCurrent._am1;
  };
- //BA.debugLineNum = 1335;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1337;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2))});
  };
- //BA.debugLineNum = 1337;BA.debugLine="If am3 <> tempZeroRange Then";
+ //BA.debugLineNum = 1339;BA.debugLine="If am3 <> tempZeroRange Then";
 if ((mostCurrent._am3).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1338;BA.debugLine="If am2 = tempZeroRange Then";
+ //BA.debugLineNum = 1340;BA.debugLine="If am2 = tempZeroRange Then";
 if ((mostCurrent._am2).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1339;BA.debugLine="am2 = (am1 + am3)/2";
+ //BA.debugLineNum = 1341;BA.debugLine="am2 = (am1 + am3)/2";
 mostCurrent._am2 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am1))+(double)(Double.parseDouble(mostCurrent._am3)))/(double)2);
  };
- //BA.debugLineNum = 1341;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1343;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3))});
  };
- //BA.debugLineNum = 1343;BA.debugLine="If am4 <> tempZeroRange Then";
+ //BA.debugLineNum = 1345;BA.debugLine="If am4 <> tempZeroRange Then";
 if ((mostCurrent._am4).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1344;BA.debugLine="If am3 = tempZeroRange Then";
+ //BA.debugLineNum = 1346;BA.debugLine="If am3 = tempZeroRange Then";
 if ((mostCurrent._am3).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1345;BA.debugLine="am3 = (am2 + am4)/2";
+ //BA.debugLineNum = 1347;BA.debugLine="am3 = (am2 + am4)/2";
 mostCurrent._am3 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am2))+(double)(Double.parseDouble(mostCurrent._am4)))/(double)2);
  };
- //BA.debugLineNum = 1347;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1349;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4))});
  };
- //BA.debugLineNum = 1349;BA.debugLine="If am5 <> tempZeroRange Then";
+ //BA.debugLineNum = 1351;BA.debugLine="If am5 <> tempZeroRange Then";
 if ((mostCurrent._am5).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1350;BA.debugLine="If am4 = tempZeroRange Then";
+ //BA.debugLineNum = 1352;BA.debugLine="If am4 = tempZeroRange Then";
 if ((mostCurrent._am4).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1351;BA.debugLine="am4 = (am3 + am5)/2";
+ //BA.debugLineNum = 1353;BA.debugLine="am4 = (am3 + am5)/2";
 mostCurrent._am4 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am3))+(double)(Double.parseDouble(mostCurrent._am5)))/(double)2);
  };
- //BA.debugLineNum = 1353;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1355;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5))});
  };
- //BA.debugLineNum = 1355;BA.debugLine="If am6 <> tempZeroRange Then";
+ //BA.debugLineNum = 1357;BA.debugLine="If am6 <> tempZeroRange Then";
 if ((mostCurrent._am6).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1356;BA.debugLine="If am5 = tempZeroRange Then";
+ //BA.debugLineNum = 1358;BA.debugLine="If am5 = tempZeroRange Then";
 if ((mostCurrent._am5).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1357;BA.debugLine="am5 = (am4 + am6)/2";
+ //BA.debugLineNum = 1359;BA.debugLine="am5 = (am4 + am6)/2";
 mostCurrent._am5 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am4))+(double)(Double.parseDouble(mostCurrent._am6)))/(double)2);
  };
- //BA.debugLineNum = 1359;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1361;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6))});
  };
- //BA.debugLineNum = 1361;BA.debugLine="If am7 <> tempZeroRange Then";
+ //BA.debugLineNum = 1363;BA.debugLine="If am7 <> tempZeroRange Then";
 if ((mostCurrent._am7).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1362;BA.debugLine="If am6 = tempZeroRange Then";
+ //BA.debugLineNum = 1364;BA.debugLine="If am6 = tempZeroRange Then";
 if ((mostCurrent._am6).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1363;BA.debugLine="am6 = (am5 + am7)/2";
+ //BA.debugLineNum = 1365;BA.debugLine="am6 = (am5 + am7)/2";
 mostCurrent._am6 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am5))+(double)(Double.parseDouble(mostCurrent._am7)))/(double)2);
  };
- //BA.debugLineNum = 1365;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1367;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7))});
  };
- //BA.debugLineNum = 1367;BA.debugLine="If am8 <> tempZeroRange Then";
+ //BA.debugLineNum = 1369;BA.debugLine="If am8 <> tempZeroRange Then";
 if ((mostCurrent._am8).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1368;BA.debugLine="If am7 = tempZeroRange Then";
+ //BA.debugLineNum = 1370;BA.debugLine="If am7 = tempZeroRange Then";
 if ((mostCurrent._am7).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1369;BA.debugLine="am7 = (am6 + am8)/2";
+ //BA.debugLineNum = 1371;BA.debugLine="am7 = (am6 + am8)/2";
 mostCurrent._am7 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am6))+(double)(Double.parseDouble(mostCurrent._am8)))/(double)2);
  };
- //BA.debugLineNum = 1371;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1373;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8))});
  };
- //BA.debugLineNum = 1373;BA.debugLine="If am9 <> tempZeroRange Then";
+ //BA.debugLineNum = 1375;BA.debugLine="If am9 <> tempZeroRange Then";
 if ((mostCurrent._am9).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1374;BA.debugLine="If am8 = tempZeroRange Then";
+ //BA.debugLineNum = 1376;BA.debugLine="If am8 = tempZeroRange Then";
 if ((mostCurrent._am8).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1375;BA.debugLine="am8 = (am7 + am9)/2";
+ //BA.debugLineNum = 1377;BA.debugLine="am8 = (am7 + am9)/2";
 mostCurrent._am8 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am7))+(double)(Double.parseDouble(mostCurrent._am9)))/(double)2);
  };
- //BA.debugLineNum = 1377;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1379;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9))});
  };
- //BA.debugLineNum = 1379;BA.debugLine="If am10 <> tempZeroRange Then";
+ //BA.debugLineNum = 1381;BA.debugLine="If am10 <> tempZeroRange Then";
 if ((mostCurrent._am10).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1380;BA.debugLine="If am9 = tempZeroRange Then";
+ //BA.debugLineNum = 1382;BA.debugLine="If am9 = tempZeroRange Then";
 if ((mostCurrent._am9).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1381;BA.debugLine="am9 = (am8 + am10)/2";
+ //BA.debugLineNum = 1383;BA.debugLine="am9 = (am8 + am10)/2";
 mostCurrent._am9 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am8))+(double)(Double.parseDouble(mostCurrent._am10)))/(double)2);
  };
- //BA.debugLineNum = 1383;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1385;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10))});
  };
- //BA.debugLineNum = 1385;BA.debugLine="If am11 <> tempZeroRange Then";
+ //BA.debugLineNum = 1387;BA.debugLine="If am11 <> tempZeroRange Then";
 if ((mostCurrent._am11).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1386;BA.debugLine="If am10 = tempZeroRange Then";
+ //BA.debugLineNum = 1388;BA.debugLine="If am10 = tempZeroRange Then";
 if ((mostCurrent._am10).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1387;BA.debugLine="am10 = (am9 + am11)/2";
+ //BA.debugLineNum = 1389;BA.debugLine="am10 = (am9 + am11)/2";
 mostCurrent._am10 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am9))+(double)(Double.parseDouble(mostCurrent._am11)))/(double)2);
  };
- //BA.debugLineNum = 1389;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1391;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11))});
  };
- //BA.debugLineNum = 1391;BA.debugLine="If pm12 <> tempZeroRange Then";
+ //BA.debugLineNum = 1393;BA.debugLine="If pm12 <> tempZeroRange Then";
 if ((mostCurrent._pm12).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1392;BA.debugLine="If am11 = tempZeroRange Then";
+ //BA.debugLineNum = 1394;BA.debugLine="If am11 = tempZeroRange Then";
 if ((mostCurrent._am11).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1393;BA.debugLine="am11 = (am10 + pm12)/2";
+ //BA.debugLineNum = 1395;BA.debugLine="am11 = (am10 + pm12)/2";
 mostCurrent._am11 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am10))+(double)(Double.parseDouble(mostCurrent._pm12)))/(double)2);
  };
- //BA.debugLineNum = 1395;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1397;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12))});
  };
- //BA.debugLineNum = 1397;BA.debugLine="If pm1 <> tempZeroRange Then";
+ //BA.debugLineNum = 1399;BA.debugLine="If pm1 <> tempZeroRange Then";
 if ((mostCurrent._pm1).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1398;BA.debugLine="If pm12 = tempZeroRange Then";
+ //BA.debugLineNum = 1400;BA.debugLine="If pm12 = tempZeroRange Then";
 if ((mostCurrent._pm12).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1399;BA.debugLine="pm12 = (am11 + pm1)/2";
+ //BA.debugLineNum = 1401;BA.debugLine="pm12 = (am11 + pm1)/2";
 mostCurrent._pm12 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am11))+(double)(Double.parseDouble(mostCurrent._pm1)))/(double)2);
  };
- //BA.debugLineNum = 1401;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1403;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1))});
  };
- //BA.debugLineNum = 1403;BA.debugLine="If pm2 <> tempZeroRange Then";
+ //BA.debugLineNum = 1405;BA.debugLine="If pm2 <> tempZeroRange Then";
 if ((mostCurrent._pm2).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1404;BA.debugLine="If pm1 = tempZeroRange Then";
+ //BA.debugLineNum = 1406;BA.debugLine="If pm1 = tempZeroRange Then";
 if ((mostCurrent._pm1).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1405;BA.debugLine="pm1 = (pm12 + pm2)/2";
+ //BA.debugLineNum = 1407;BA.debugLine="pm1 = (pm12 + pm2)/2";
 mostCurrent._pm1 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm12))+(double)(Double.parseDouble(mostCurrent._pm2)))/(double)2);
  };
- //BA.debugLineNum = 1407;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1409;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2))});
  };
- //BA.debugLineNum = 1409;BA.debugLine="If pm3 <> tempZeroRange Then";
+ //BA.debugLineNum = 1411;BA.debugLine="If pm3 <> tempZeroRange Then";
 if ((mostCurrent._pm3).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1410;BA.debugLine="If pm2 = tempZeroRange Then";
+ //BA.debugLineNum = 1412;BA.debugLine="If pm2 = tempZeroRange Then";
 if ((mostCurrent._pm2).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1411;BA.debugLine="pm2 = (pm1 + pm3)/2";
+ //BA.debugLineNum = 1413;BA.debugLine="pm2 = (pm1 + pm3)/2";
 mostCurrent._pm2 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm1))+(double)(Double.parseDouble(mostCurrent._pm3)))/(double)2);
  };
- //BA.debugLineNum = 1413;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1415;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3))});
  };
- //BA.debugLineNum = 1415;BA.debugLine="If pm4 <> tempZeroRange Then";
+ //BA.debugLineNum = 1417;BA.debugLine="If pm4 <> tempZeroRange Then";
 if ((mostCurrent._pm4).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1416;BA.debugLine="If pm3 = tempZeroRange Then";
+ //BA.debugLineNum = 1418;BA.debugLine="If pm3 = tempZeroRange Then";
 if ((mostCurrent._pm3).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1417;BA.debugLine="pm3 = (pm2 + pm4)/2";
+ //BA.debugLineNum = 1419;BA.debugLine="pm3 = (pm2 + pm4)/2";
 mostCurrent._pm3 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm2))+(double)(Double.parseDouble(mostCurrent._pm4)))/(double)2);
  };
- //BA.debugLineNum = 1419;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1421;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4))});
  };
- //BA.debugLineNum = 1421;BA.debugLine="If pm5 <> tempZeroRange Then";
+ //BA.debugLineNum = 1423;BA.debugLine="If pm5 <> tempZeroRange Then";
 if ((mostCurrent._pm5).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1422;BA.debugLine="If pm4 = tempZeroRange Then";
+ //BA.debugLineNum = 1424;BA.debugLine="If pm4 = tempZeroRange Then";
 if ((mostCurrent._pm4).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1423;BA.debugLine="pm4 = (pm3 + pm5)/2";
+ //BA.debugLineNum = 1425;BA.debugLine="pm4 = (pm3 + pm5)/2";
 mostCurrent._pm4 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm3))+(double)(Double.parseDouble(mostCurrent._pm5)))/(double)2);
  };
- //BA.debugLineNum = 1425;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1427;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5))});
  };
- //BA.debugLineNum = 1427;BA.debugLine="If pm6 <> tempZeroRange Then";
+ //BA.debugLineNum = 1429;BA.debugLine="If pm6 <> tempZeroRange Then";
 if ((mostCurrent._pm6).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1428;BA.debugLine="If pm5 = tempZeroRange Then";
+ //BA.debugLineNum = 1430;BA.debugLine="If pm5 = tempZeroRange Then";
 if ((mostCurrent._pm5).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1429;BA.debugLine="pm5 = (pm4 + pm6)/2";
+ //BA.debugLineNum = 1431;BA.debugLine="pm5 = (pm4 + pm6)/2";
 mostCurrent._pm5 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm4))+(double)(Double.parseDouble(mostCurrent._pm6)))/(double)2);
  };
- //BA.debugLineNum = 1431;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1433;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6))});
  };
- //BA.debugLineNum = 1433;BA.debugLine="If pm7 <> tempZeroRange Then";
+ //BA.debugLineNum = 1435;BA.debugLine="If pm7 <> tempZeroRange Then";
 if ((mostCurrent._pm7).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1434;BA.debugLine="If pm6 = tempZeroRange Then";
+ //BA.debugLineNum = 1436;BA.debugLine="If pm6 = tempZeroRange Then";
 if ((mostCurrent._pm6).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1435;BA.debugLine="pm6 = (pm5 + pm7)/2";
+ //BA.debugLineNum = 1437;BA.debugLine="pm6 = (pm5 + pm7)/2";
 mostCurrent._pm6 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm5))+(double)(Double.parseDouble(mostCurrent._pm7)))/(double)2);
  };
- //BA.debugLineNum = 1437;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1439;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7))});
  };
- //BA.debugLineNum = 1439;BA.debugLine="If pm8 <> tempZeroRange Then";
+ //BA.debugLineNum = 1441;BA.debugLine="If pm8 <> tempZeroRange Then";
 if ((mostCurrent._pm8).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1440;BA.debugLine="If pm7 = tempZeroRange Then";
+ //BA.debugLineNum = 1442;BA.debugLine="If pm7 = tempZeroRange Then";
 if ((mostCurrent._pm7).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1441;BA.debugLine="pm7 = (pm6 + pm8)/2";
+ //BA.debugLineNum = 1443;BA.debugLine="pm7 = (pm6 + pm8)/2";
 mostCurrent._pm7 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm6))+(double)(Double.parseDouble(mostCurrent._pm8)))/(double)2);
  };
- //BA.debugLineNum = 1443;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1445;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8))});
  };
- //BA.debugLineNum = 1445;BA.debugLine="If pm9 <> tempZeroRange Then";
+ //BA.debugLineNum = 1447;BA.debugLine="If pm9 <> tempZeroRange Then";
 if ((mostCurrent._pm9).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1446;BA.debugLine="If pm8 = tempZeroRange Then";
+ //BA.debugLineNum = 1448;BA.debugLine="If pm8 = tempZeroRange Then";
 if ((mostCurrent._pm8).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1447;BA.debugLine="pm8 = (pm7 + pm9)/2";
+ //BA.debugLineNum = 1449;BA.debugLine="pm8 = (pm7 + pm9)/2";
 mostCurrent._pm8 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm7))+(double)(Double.parseDouble(mostCurrent._pm9)))/(double)2);
  };
- //BA.debugLineNum = 1449;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1451;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8)),(float)(Double.parseDouble(mostCurrent._pm9))});
  };
- //BA.debugLineNum = 1451;BA.debugLine="If pm10 <> tempZeroRange Then";
+ //BA.debugLineNum = 1453;BA.debugLine="If pm10 <> tempZeroRange Then";
 if ((mostCurrent._pm10).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1452;BA.debugLine="If pm9 = tempZeroRange Then";
+ //BA.debugLineNum = 1454;BA.debugLine="If pm9 = tempZeroRange Then";
 if ((mostCurrent._pm9).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1453;BA.debugLine="pm9 = (pm8 + pm10)/2";
+ //BA.debugLineNum = 1455;BA.debugLine="pm9 = (pm8 + pm10)/2";
 mostCurrent._pm9 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm8))+(double)(Double.parseDouble(mostCurrent._pm10)))/(double)2);
  };
- //BA.debugLineNum = 1455;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1457;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8)),(float)(Double.parseDouble(mostCurrent._pm9)),(float)(Double.parseDouble(mostCurrent._pm10))});
  };
- //BA.debugLineNum = 1457;BA.debugLine="If pm11 <> tempZeroRange Then";
+ //BA.debugLineNum = 1459;BA.debugLine="If pm11 <> tempZeroRange Then";
 if ((mostCurrent._pm11).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1458;BA.debugLine="If pm10 = tempZeroRange Then";
+ //BA.debugLineNum = 1460;BA.debugLine="If pm10 = tempZeroRange Then";
 if ((mostCurrent._pm10).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1459;BA.debugLine="pm10 = (pm9 + pm11)/2";
+ //BA.debugLineNum = 1461;BA.debugLine="pm10 = (pm9 + pm11)/2";
 mostCurrent._pm10 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm9))+(double)(Double.parseDouble(mostCurrent._pm11)))/(double)2);
  };
- //BA.debugLineNum = 1461;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1463;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8)),(float)(Double.parseDouble(mostCurrent._pm9)),(float)(Double.parseDouble(mostCurrent._pm10)),(float)(Double.parseDouble(mostCurrent._pm11))});
  };
- //BA.debugLineNum = 1464;BA.debugLine="LineChart.Line_2_PointLabelTextColor = Colors.Cy";
+ //BA.debugLineNum = 1466;BA.debugLine="LineChart.Line_2_PointLabelTextColor = Colors.Cy";
 mostCurrent._linechart.setLine_2_PointLabelTextColor(anywheresoftware.b4a.keywords.Common.Colors.Cyan);
- //BA.debugLineNum = 1465;BA.debugLine="LineChart.Line_2_PointLabelTextSize = 35.0";
+ //BA.debugLineNum = 1467;BA.debugLine="LineChart.Line_2_PointLabelTextSize = 35.0";
 mostCurrent._linechart.setLine_2_PointLabelTextSize((float) (35.0));
- //BA.debugLineNum = 1466;BA.debugLine="LineChart.Line_2_LineColor = Colors.White";
+ //BA.debugLineNum = 1468;BA.debugLine="LineChart.Line_2_LineColor = Colors.White";
 mostCurrent._linechart.setLine_2_LineColor(anywheresoftware.b4a.keywords.Common.Colors.White);
- //BA.debugLineNum = 1467;BA.debugLine="LineChart.Line_2_LineWidth = 7.0";
+ //BA.debugLineNum = 1469;BA.debugLine="LineChart.Line_2_LineWidth = 7.0";
 mostCurrent._linechart.setLine_2_LineWidth((float) (7.0));
- //BA.debugLineNum = 1468;BA.debugLine="LineChart.Line_2_PointColor = Colors.Cyan";
+ //BA.debugLineNum = 1470;BA.debugLine="LineChart.Line_2_PointColor = Colors.Cyan";
 mostCurrent._linechart.setLine_2_PointColor(anywheresoftware.b4a.keywords.Common.Colors.Cyan);
- //BA.debugLineNum = 1469;BA.debugLine="LineChart.Line_2_PointSize = 10.0";
+ //BA.debugLineNum = 1471;BA.debugLine="LineChart.Line_2_PointSize = 10.0";
 mostCurrent._linechart.setLine_2_PointSize((float) (10.0));
- //BA.debugLineNum = 1470;BA.debugLine="LineChart.Line_2_PointShape = LineChart.SHAPE_RO";
+ //BA.debugLineNum = 1472;BA.debugLine="LineChart.Line_2_PointShape = LineChart.SHAPE_RO";
 mostCurrent._linechart.setLine_2_PointShape(mostCurrent._linechart.SHAPE_ROUND);
- //BA.debugLineNum = 1471;BA.debugLine="LineChart.Line_2_DrawDash = False";
+ //BA.debugLineNum = 1473;BA.debugLine="LineChart.Line_2_DrawDash = False";
 mostCurrent._linechart.setLine_2_DrawDash(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 1472;BA.debugLine="LineChart.Line_2_DrawCubic = False";
+ //BA.debugLineNum = 1474;BA.debugLine="LineChart.Line_2_DrawCubic = False";
 mostCurrent._linechart.setLine_2_DrawCubic(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 1478;BA.debugLine="LineChart.Line_3_LegendText = \"Real time\"";
+ //BA.debugLineNum = 1480;BA.debugLine="LineChart.Line_3_LegendText = \"Real time\"";
 mostCurrent._linechart.setLine_3_LegendText("Real time");
- //BA.debugLineNum = 1479;BA.debugLine="LineChart.Line_3_Data = Array As Float (tempRigh";
+ //BA.debugLineNum = 1481;BA.debugLine="LineChart.Line_3_Data = Array As Float (tempRigh";
 mostCurrent._linechart.setLine_3_Data(new float[]{(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow))});
- //BA.debugLineNum = 1480;BA.debugLine="LineChart.Line_3_PointLabelTextColor = Colors.Gr";
+ //BA.debugLineNum = 1482;BA.debugLine="LineChart.Line_3_PointLabelTextColor = Colors.Gr";
 mostCurrent._linechart.setLine_3_PointLabelTextColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
- //BA.debugLineNum = 1481;BA.debugLine="LineChart.Line_3_PointLabelTextSize = 30.0";
+ //BA.debugLineNum = 1483;BA.debugLine="LineChart.Line_3_PointLabelTextSize = 30.0";
 mostCurrent._linechart.setLine_3_PointLabelTextSize((float) (30.0));
- //BA.debugLineNum = 1482;BA.debugLine="LineChart.Line_3_LineColor = Colors.Green";
+ //BA.debugLineNum = 1484;BA.debugLine="LineChart.Line_3_LineColor = Colors.Green";
 mostCurrent._linechart.setLine_3_LineColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
- //BA.debugLineNum = 1483;BA.debugLine="LineChart.Line_3_LineWidth = 5.0";
+ //BA.debugLineNum = 1485;BA.debugLine="LineChart.Line_3_LineWidth = 5.0";
 mostCurrent._linechart.setLine_3_LineWidth((float) (5.0));
- //BA.debugLineNum = 1484;BA.debugLine="LineChart.Line_3_PointColor = Colors.Green";
+ //BA.debugLineNum = 1486;BA.debugLine="LineChart.Line_3_PointColor = Colors.Green";
 mostCurrent._linechart.setLine_3_PointColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
- //BA.debugLineNum = 1485;BA.debugLine="LineChart.Line_3_PointSize = 1.0";
+ //BA.debugLineNum = 1487;BA.debugLine="LineChart.Line_3_PointSize = 1.0";
 mostCurrent._linechart.setLine_3_PointSize((float) (1.0));
- //BA.debugLineNum = 1486;BA.debugLine="LineChart.Line_3_PointShape = LineChart.SHAPE_RO";
+ //BA.debugLineNum = 1488;BA.debugLine="LineChart.Line_3_PointShape = LineChart.SHAPE_RO";
 mostCurrent._linechart.setLine_3_PointShape(mostCurrent._linechart.SHAPE_ROUND);
- //BA.debugLineNum = 1487;BA.debugLine="LineChart.Line_3_DrawDash = False";
+ //BA.debugLineNum = 1489;BA.debugLine="LineChart.Line_3_DrawDash = False";
 mostCurrent._linechart.setLine_3_DrawDash(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 1488;BA.debugLine="LineChart.Line_3_DrawCubic = False";
+ //BA.debugLineNum = 1490;BA.debugLine="LineChart.Line_3_DrawCubic = False";
 mostCurrent._linechart.setLine_3_DrawCubic(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 1492;BA.debugLine="LineChart.NumberOfLineCharts = 3";
+ //BA.debugLineNum = 1494;BA.debugLine="LineChart.NumberOfLineCharts = 3";
 mostCurrent._linechart.setNumberOfLineCharts((int) (3));
- //BA.debugLineNum = 1494;BA.debugLine="LineChart.DrawTheGraphs";
+ //BA.debugLineNum = 1496;BA.debugLine="LineChart.DrawTheGraphs";
 mostCurrent._linechart.DrawTheGraphs();
- //BA.debugLineNum = 1496;BA.debugLine="HumidityDailyTimer.Initialize(\"HumidityDailyTime";
-_humiditydailytimer.Initialize(processBA,"HumidityDailyTimer",(long) (1000));
- //BA.debugLineNum = 1497;BA.debugLine="HumidityDailyTimer.Enabled = True 'start timer";
-_humiditydailytimer.setEnabled(anywheresoftware.b4a.keywords.Common.True);
  } 
-       catch (Exception e377) {
-			processBA.setLastException(e377); //BA.debugLineNum = 1499;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("74522398",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+       catch (Exception e375) {
+			processBA.setLastException(e375); //BA.debugLineNum = 1499;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("6786844",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 1500;BA.debugLine="ToastMessageShow (LastException,True)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA).getObject()),anywheresoftware.b4a.keywords.Common.True);
  };
@@ -1632,430 +1644,426 @@ anywheresoftware.b4j.object.JavaObject _jo = null;
 int _i = 0;
 b4a.example.dateutils._period _p = null;
 long _nexttime = 0L;
- //BA.debugLineNum = 396;BA.debugLine="Private Sub HumidityHourlyCreate()";
- //BA.debugLineNum = 397;BA.debugLine="Try";
-try { //BA.debugLineNum = 399;BA.debugLine="Activity_WindowFocusChanged(True)";
+ //BA.debugLineNum = 402;BA.debugLine="Private Sub HumidityHourlyCreate()";
+ //BA.debugLineNum = 403;BA.debugLine="Try";
+try { //BA.debugLineNum = 405;BA.debugLine="Activity_WindowFocusChanged(True)";
 _activity_windowfocuschanged(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 400;BA.debugLine="Dim lv As LayoutValues = GetRealSize";
+ //BA.debugLineNum = 406;BA.debugLine="Dim lv As LayoutValues = GetRealSize";
 _lv = _getrealsize();
- //BA.debugLineNum = 401;BA.debugLine="Dim jo As JavaObject = Activity";
+ //BA.debugLineNum = 407;BA.debugLine="Dim jo As JavaObject = Activity";
 _jo = new anywheresoftware.b4j.object.JavaObject();
 _jo = (anywheresoftware.b4j.object.JavaObject) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.object.JavaObject(), (java.lang.Object)(mostCurrent._activity.getObject()));
- //BA.debugLineNum = 402;BA.debugLine="jo.RunMethod(\"setBottom\", Array(lv.Height))";
+ //BA.debugLineNum = 408;BA.debugLine="jo.RunMethod(\"setBottom\", Array(lv.Height))";
 _jo.RunMethod("setBottom",new Object[]{(Object)(_lv.Height)});
- //BA.debugLineNum = 403;BA.debugLine="jo.RunMethod(\"setRight\", Array(lv.Width))";
+ //BA.debugLineNum = 409;BA.debugLine="jo.RunMethod(\"setRight\", Array(lv.Width))";
 _jo.RunMethod("setRight",new Object[]{(Object)(_lv.Width)});
- //BA.debugLineNum = 404;BA.debugLine="Activity.Height = lv.Height";
+ //BA.debugLineNum = 410;BA.debugLine="Activity.Height = lv.Height";
 mostCurrent._activity.setHeight(_lv.Height);
- //BA.debugLineNum = 405;BA.debugLine="Activity.Width = lv.Width";
+ //BA.debugLineNum = 411;BA.debugLine="Activity.Width = lv.Width";
 mostCurrent._activity.setWidth(_lv.Width);
- //BA.debugLineNum = 408;BA.debugLine="Activity.LoadLayout(\"Main\")";
+ //BA.debugLineNum = 414;BA.debugLine="Activity.LoadLayout(\"Main\")";
 mostCurrent._activity.LoadLayout("Main",mostCurrent.activityBA);
- //BA.debugLineNum = 410;BA.debugLine="LineChart.GraphBackgroundColor = Colors.DarkGray";
+ //BA.debugLineNum = 416;BA.debugLine="LineChart.GraphBackgroundColor = Colors.DarkGray";
 mostCurrent._linechart.setGraphBackgroundColor(anywheresoftware.b4a.keywords.Common.Colors.DarkGray);
- //BA.debugLineNum = 411;BA.debugLine="LineChart.GraphFrameColor = Colors.Blue";
+ //BA.debugLineNum = 417;BA.debugLine="LineChart.GraphFrameColor = Colors.Blue";
 mostCurrent._linechart.setGraphFrameColor(anywheresoftware.b4a.keywords.Common.Colors.Blue);
- //BA.debugLineNum = 412;BA.debugLine="LineChart.GraphFrameWidth = 4.0";
+ //BA.debugLineNum = 418;BA.debugLine="LineChart.GraphFrameWidth = 4.0";
 mostCurrent._linechart.setGraphFrameWidth((float) (4.0));
- //BA.debugLineNum = 413;BA.debugLine="LineChart.GraphPlotAreaBackgroundColor = Colors.";
+ //BA.debugLineNum = 419;BA.debugLine="LineChart.GraphPlotAreaBackgroundColor = Colors.";
 mostCurrent._linechart.setGraphPlotAreaBackgroundColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (50),(int) (0),(int) (0),(int) (255)));
- //BA.debugLineNum = 414;BA.debugLine="LineChart.GraphTitleTextSize = 15";
+ //BA.debugLineNum = 420;BA.debugLine="LineChart.GraphTitleTextSize = 15";
 mostCurrent._linechart.setGraphTitleTextSize((int) (15));
- //BA.debugLineNum = 415;BA.debugLine="LineChart.GraphTitleColor = Colors.White";
+ //BA.debugLineNum = 421;BA.debugLine="LineChart.GraphTitleColor = Colors.White";
 mostCurrent._linechart.setGraphTitleColor(anywheresoftware.b4a.keywords.Common.Colors.White);
- //BA.debugLineNum = 416;BA.debugLine="LineChart.GraphTitleSkewX = -0.25";
+ //BA.debugLineNum = 422;BA.debugLine="LineChart.GraphTitleSkewX = -0.25";
 mostCurrent._linechart.setGraphTitleSkewX((float) (-0.25));
- //BA.debugLineNum = 417;BA.debugLine="LineChart.GraphTitleUnderline = True";
+ //BA.debugLineNum = 423;BA.debugLine="LineChart.GraphTitleUnderline = True";
 mostCurrent._linechart.setGraphTitleUnderline(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 418;BA.debugLine="LineChart.GraphTitleBold = True";
+ //BA.debugLineNum = 424;BA.debugLine="LineChart.GraphTitleBold = True";
 mostCurrent._linechart.setGraphTitleBold(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 419;BA.debugLine="LineChart.GraphTitle = \" HUMIDITY HOURLY  \"";
+ //BA.debugLineNum = 425;BA.debugLine="LineChart.GraphTitle = \" HUMIDITY HOURLY  \"";
 mostCurrent._linechart.setGraphTitle(" HUMIDITY HOURLY  ");
- //BA.debugLineNum = 421;BA.debugLine="LineChart.LegendBackgroundColor = Colors.White";
+ //BA.debugLineNum = 427;BA.debugLine="LineChart.LegendBackgroundColor = Colors.White";
 mostCurrent._linechart.setLegendBackgroundColor(anywheresoftware.b4a.keywords.Common.Colors.White);
- //BA.debugLineNum = 422;BA.debugLine="LineChart.LegendTextColor = Colors.Black";
+ //BA.debugLineNum = 428;BA.debugLine="LineChart.LegendTextColor = Colors.Black";
 mostCurrent._linechart.setLegendTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
- //BA.debugLineNum = 423;BA.debugLine="LineChart.LegendTextSize = 18.0";
+ //BA.debugLineNum = 429;BA.debugLine="LineChart.LegendTextSize = 18.0";
 mostCurrent._linechart.setLegendTextSize((float) (18.0));
- //BA.debugLineNum = 425;BA.debugLine="DateTime.TimeFormat = \"h:mm a\"";
+ //BA.debugLineNum = 431;BA.debugLine="DateTime.TimeFormat = \"h:mm a\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setTimeFormat("h:mm a");
- //BA.debugLineNum = 426;BA.debugLine="LineChart.DomianLabel = \"The time now is: \" & Da";
+ //BA.debugLineNum = 432;BA.debugLine="LineChart.DomianLabel = \"The time now is: \" & Da";
 mostCurrent._linechart.setDomianLabel("The time now is: "+anywheresoftware.b4a.keywords.Common.DateTime.Time(anywheresoftware.b4a.keywords.Common.DateTime.getNow()));
- //BA.debugLineNum = 427;BA.debugLine="LineChart.DomainLabelColor = Colors.Green";
+ //BA.debugLineNum = 433;BA.debugLine="LineChart.DomainLabelColor = Colors.Green";
 mostCurrent._linechart.setDomainLabelColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
- //BA.debugLineNum = 428;BA.debugLine="LineChart.DomainLabelTextSize = 25.0";
+ //BA.debugLineNum = 434;BA.debugLine="LineChart.DomainLabelTextSize = 25.0";
 mostCurrent._linechart.setDomainLabelTextSize((float) (25.0));
- //BA.debugLineNum = 430;BA.debugLine="LineChart.XaxisGridLineColor = Colors.ARGB(100,2";
+ //BA.debugLineNum = 436;BA.debugLine="LineChart.XaxisGridLineColor = Colors.ARGB(100,2";
 mostCurrent._linechart.setXaxisGridLineColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (100),(int) (255),(int) (255),(int) (255)));
- //BA.debugLineNum = 431;BA.debugLine="LineChart.XaxisGridLineWidth = 2.0";
+ //BA.debugLineNum = 437;BA.debugLine="LineChart.XaxisGridLineWidth = 2.0";
 mostCurrent._linechart.setXaxisGridLineWidth((float) (2.0));
- //BA.debugLineNum = 432;BA.debugLine="LineChart.XaxisLabelTicks = 1";
+ //BA.debugLineNum = 438;BA.debugLine="LineChart.XaxisLabelTicks = 1";
 mostCurrent._linechart.setXaxisLabelTicks((int) (1));
- //BA.debugLineNum = 433;BA.debugLine="LineChart.XaxisLabelOrientation = 0";
+ //BA.debugLineNum = 439;BA.debugLine="LineChart.XaxisLabelOrientation = 0";
 mostCurrent._linechart.setXaxisLabelOrientation((float) (0));
- //BA.debugLineNum = 434;BA.debugLine="LineChart.XaxisLabelTextColor = Colors.White";
+ //BA.debugLineNum = 440;BA.debugLine="LineChart.XaxisLabelTextColor = Colors.White";
 mostCurrent._linechart.setXaxisLabelTextColor(anywheresoftware.b4a.keywords.Common.Colors.White);
- //BA.debugLineNum = 435;BA.debugLine="LineChart.XaxisLabelTextSize = 32.0";
+ //BA.debugLineNum = 441;BA.debugLine="LineChart.XaxisLabelTextSize = 32.0";
 mostCurrent._linechart.setXaxisLabelTextSize((float) (32.0));
- //BA.debugLineNum = 439;BA.debugLine="timeRightNow = DateTime.Now";
+ //BA.debugLineNum = 445;BA.debugLine="timeRightNow = DateTime.Now";
 _timerightnow = anywheresoftware.b4a.keywords.Common.DateTime.getNow();
- //BA.debugLineNum = 441;BA.debugLine="For i = 23 To 0 Step -1";
+ //BA.debugLineNum = 447;BA.debugLine="For i = 23 To 0 Step -1";
 {
 final int step34 = -1;
 final int limit34 = (int) (0);
 _i = (int) (23) ;
 for (;_i >= limit34 ;_i = _i + step34 ) {
- //BA.debugLineNum = 442;BA.debugLine="Dim p As Period";
+ //BA.debugLineNum = 448;BA.debugLine="Dim p As Period";
 _p = new b4a.example.dateutils._period();
- //BA.debugLineNum = 443;BA.debugLine="p.Hours = 0";
+ //BA.debugLineNum = 449;BA.debugLine="p.Hours = 0";
 _p.Hours = (int) (0);
- //BA.debugLineNum = 444;BA.debugLine="p.Minutes = (i+1) * -5";
+ //BA.debugLineNum = 450;BA.debugLine="p.Minutes = (i+1) * -5";
 _p.Minutes = (int) ((_i+1)*-5);
- //BA.debugLineNum = 445;BA.debugLine="p.Seconds = 0";
+ //BA.debugLineNum = 451;BA.debugLine="p.Seconds = 0";
 _p.Seconds = (int) (0);
- //BA.debugLineNum = 446;BA.debugLine="Dim NextTime As Long";
+ //BA.debugLineNum = 452;BA.debugLine="Dim NextTime As Long";
 _nexttime = 0L;
- //BA.debugLineNum = 447;BA.debugLine="NextTime = DateUtils.AddPeriod(timeRightNow, p)";
+ //BA.debugLineNum = 453;BA.debugLine="NextTime = DateUtils.AddPeriod(timeRightNow, p)";
 _nexttime = mostCurrent._dateutils._addperiod(mostCurrent.activityBA,_timerightnow,_p);
- //BA.debugLineNum = 448;BA.debugLine="DateTime.TimeFormat = \"HH:mm\"";
+ //BA.debugLineNum = 454;BA.debugLine="DateTime.TimeFormat = \"HH:mm\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setTimeFormat("HH:mm");
- //BA.debugLineNum = 450;BA.debugLine="timeArray(23-i) = DateTime.Time(NextTime) 'Date";
+ //BA.debugLineNum = 456;BA.debugLine="timeArray(23-i) = DateTime.Time(NextTime) 'Date";
 mostCurrent._timearray[(int) (23-_i)] = anywheresoftware.b4a.keywords.Common.DateTime.Time(_nexttime);
  }
 };
- //BA.debugLineNum = 452;BA.debugLine="LineChart.XAxisLabels = timeArray 'Array As Stri";
+ //BA.debugLineNum = 458;BA.debugLine="LineChart.XAxisLabels = timeArray 'Array As Stri";
 mostCurrent._linechart.setXAxisLabels(mostCurrent._timearray);
- //BA.debugLineNum = 455;BA.debugLine="LineChart.YaxisDivisions = 10";
+ //BA.debugLineNum = 461;BA.debugLine="LineChart.YaxisDivisions = 10";
 mostCurrent._linechart.setYaxisDivisions((int) (10));
- //BA.debugLineNum = 457;BA.debugLine="LineChart.YaxisValueFormat = LineChart.ValueForm";
+ //BA.debugLineNum = 463;BA.debugLine="LineChart.YaxisValueFormat = LineChart.ValueForm";
 mostCurrent._linechart.setYaxisValueFormat(mostCurrent._linechart.ValueFormat_2);
- //BA.debugLineNum = 458;BA.debugLine="LineChart.YaxisGridLineColor = Colors.Black";
+ //BA.debugLineNum = 464;BA.debugLine="LineChart.YaxisGridLineColor = Colors.Black";
 mostCurrent._linechart.setYaxisGridLineColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
- //BA.debugLineNum = 459;BA.debugLine="LineChart.YaxisGridLineWidth = 2";
+ //BA.debugLineNum = 465;BA.debugLine="LineChart.YaxisGridLineWidth = 2";
 mostCurrent._linechart.setYaxisGridLineWidth((float) (2));
- //BA.debugLineNum = 460;BA.debugLine="LineChart.YaxisLabelTicks = 1";
+ //BA.debugLineNum = 466;BA.debugLine="LineChart.YaxisLabelTicks = 1";
 mostCurrent._linechart.setYaxisLabelTicks((int) (1));
- //BA.debugLineNum = 461;BA.debugLine="LineChart.YaxisLabelColor = Colors.Yellow";
+ //BA.debugLineNum = 467;BA.debugLine="LineChart.YaxisLabelColor = Colors.Yellow";
 mostCurrent._linechart.setYaxisLabelColor(anywheresoftware.b4a.keywords.Common.Colors.Yellow);
- //BA.debugLineNum = 462;BA.debugLine="LineChart.YaxisLabelOrientation = -30";
+ //BA.debugLineNum = 468;BA.debugLine="LineChart.YaxisLabelOrientation = -30";
 mostCurrent._linechart.setYaxisLabelOrientation((float) (-30));
- //BA.debugLineNum = 463;BA.debugLine="LineChart.YaxisLabelTextSize = 25.0";
+ //BA.debugLineNum = 469;BA.debugLine="LineChart.YaxisLabelTextSize = 25.0";
 mostCurrent._linechart.setYaxisLabelTextSize((float) (25.0));
- //BA.debugLineNum = 464;BA.debugLine="LineChart.YaxisTitleColor = Colors.Green";
+ //BA.debugLineNum = 470;BA.debugLine="LineChart.YaxisTitleColor = Colors.Green";
 mostCurrent._linechart.setYaxisTitleColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
- //BA.debugLineNum = 465;BA.debugLine="LineChart.YaxisTitleFakeBold = False";
+ //BA.debugLineNum = 471;BA.debugLine="LineChart.YaxisTitleFakeBold = False";
 mostCurrent._linechart.setYaxisTitleFakeBold(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 466;BA.debugLine="LineChart.YaxisTitleTextSize = 20.0";
+ //BA.debugLineNum = 472;BA.debugLine="LineChart.YaxisTitleTextSize = 20.0";
 mostCurrent._linechart.setYaxisTitleTextSize((float) (20.0));
- //BA.debugLineNum = 467;BA.debugLine="LineChart.YaxisTitleUnderline = True";
+ //BA.debugLineNum = 473;BA.debugLine="LineChart.YaxisTitleUnderline = True";
 mostCurrent._linechart.setYaxisTitleUnderline(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 468;BA.debugLine="LineChart.YaxisTitleTextSkewness = 0";
+ //BA.debugLineNum = 474;BA.debugLine="LineChart.YaxisTitleTextSkewness = 0";
 mostCurrent._linechart.setYaxisTitleTextSkewness((float) (0));
- //BA.debugLineNum = 469;BA.debugLine="LineChart.YaxisLabelAndTitleDistance = 60.0";
+ //BA.debugLineNum = 475;BA.debugLine="LineChart.YaxisLabelAndTitleDistance = 60.0";
 mostCurrent._linechart.setYaxisLabelAndTitleDistance((float) (60.0));
- //BA.debugLineNum = 470;BA.debugLine="LineChart.YaxisTitle = \"Humidity (Percentage)\"";
+ //BA.debugLineNum = 476;BA.debugLine="LineChart.YaxisTitle = \"Humidity (Percentage)\"";
 mostCurrent._linechart.setYaxisTitle("Humidity (Percentage)");
- //BA.debugLineNum = 472;BA.debugLine="LineChart.MaxNumberOfEntriesPerLineChart = 24";
+ //BA.debugLineNum = 478;BA.debugLine="LineChart.MaxNumberOfEntriesPerLineChart = 24";
 mostCurrent._linechart.setMaxNumberOfEntriesPerLineChart((int) (24));
- //BA.debugLineNum = 473;BA.debugLine="LineChart.GraphLegendVisibility = False";
+ //BA.debugLineNum = 479;BA.debugLine="LineChart.GraphLegendVisibility = False";
 mostCurrent._linechart.setGraphLegendVisibility(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 477;BA.debugLine="ReadHumidityHourly(\"Today\")";
+ //BA.debugLineNum = 483;BA.debugLine="ReadHumidityHourly(\"Today\")";
 _readhumidityhourly("Today");
- //BA.debugLineNum = 479;BA.debugLine="DateTime.DateFormat = \"MMM d, yyyy\"";
+ //BA.debugLineNum = 485;BA.debugLine="DateTime.DateFormat = \"MMM d, yyyy\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setDateFormat("MMM d, yyyy");
- //BA.debugLineNum = 480;BA.debugLine="LineChart.Line_1_LegendText = \"From \" & timeArra";
+ //BA.debugLineNum = 486;BA.debugLine="LineChart.Line_1_LegendText = \"From \" & timeArra";
 mostCurrent._linechart.setLine_1_LegendText("From "+mostCurrent._timearray[(int) (0)]+" to "+mostCurrent._timearray[(int) (23)]);
- //BA.debugLineNum = 482;BA.debugLine="CheckTempBoundaries";
+ //BA.debugLineNum = 488;BA.debugLine="CheckTempBoundaries";
 _checktempboundaries();
- //BA.debugLineNum = 484;BA.debugLine="If am12 <> tempZeroRange Then";
+ //BA.debugLineNum = 490;BA.debugLine="If am12 <> tempZeroRange Then";
 if ((mostCurrent._am12).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 485;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12)";
+ //BA.debugLineNum = 491;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12)";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12))});
  };
- //BA.debugLineNum = 487;BA.debugLine="If am1 <> tempZeroRange Then";
+ //BA.debugLineNum = 493;BA.debugLine="If am1 <> tempZeroRange Then";
 if ((mostCurrent._am1).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 488;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 494;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1))});
  };
- //BA.debugLineNum = 490;BA.debugLine="If am2 <> tempZeroRange Then";
+ //BA.debugLineNum = 496;BA.debugLine="If am2 <> tempZeroRange Then";
 if ((mostCurrent._am2).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 491;BA.debugLine="If am1 = tempZeroRange Then";
+ //BA.debugLineNum = 497;BA.debugLine="If am1 = tempZeroRange Then";
 if ((mostCurrent._am1).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 492;BA.debugLine="am1 = (am12 + am2)/2";
+ //BA.debugLineNum = 498;BA.debugLine="am1 = (am12 + am2)/2";
 mostCurrent._am1 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am12))+(double)(Double.parseDouble(mostCurrent._am2)))/(double)2);
  };
- //BA.debugLineNum = 494;BA.debugLine="If am12 = tempZeroRange Then";
+ //BA.debugLineNum = 500;BA.debugLine="If am12 = tempZeroRange Then";
 if ((mostCurrent._am12).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 495;BA.debugLine="am12 = am1";
+ //BA.debugLineNum = 501;BA.debugLine="am12 = am1";
 mostCurrent._am12 = mostCurrent._am1;
  };
- //BA.debugLineNum = 497;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 503;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2))});
  };
- //BA.debugLineNum = 499;BA.debugLine="If am3 <> tempZeroRange Then";
+ //BA.debugLineNum = 505;BA.debugLine="If am3 <> tempZeroRange Then";
 if ((mostCurrent._am3).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 500;BA.debugLine="If am2 = tempZeroRange Then";
+ //BA.debugLineNum = 506;BA.debugLine="If am2 = tempZeroRange Then";
 if ((mostCurrent._am2).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 501;BA.debugLine="am2 = (am1 + am3)/2";
+ //BA.debugLineNum = 507;BA.debugLine="am2 = (am1 + am3)/2";
 mostCurrent._am2 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am1))+(double)(Double.parseDouble(mostCurrent._am3)))/(double)2);
  };
- //BA.debugLineNum = 503;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 509;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3))});
  };
- //BA.debugLineNum = 505;BA.debugLine="If am4 <> tempZeroRange Then";
+ //BA.debugLineNum = 511;BA.debugLine="If am4 <> tempZeroRange Then";
 if ((mostCurrent._am4).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 506;BA.debugLine="If am3 = tempZeroRange Then";
+ //BA.debugLineNum = 512;BA.debugLine="If am3 = tempZeroRange Then";
 if ((mostCurrent._am3).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 507;BA.debugLine="am3 = (am2 + am4)/2";
+ //BA.debugLineNum = 513;BA.debugLine="am3 = (am2 + am4)/2";
 mostCurrent._am3 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am2))+(double)(Double.parseDouble(mostCurrent._am4)))/(double)2);
  };
- //BA.debugLineNum = 509;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 515;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4))});
  };
- //BA.debugLineNum = 511;BA.debugLine="If am5 <> tempZeroRange Then";
+ //BA.debugLineNum = 517;BA.debugLine="If am5 <> tempZeroRange Then";
 if ((mostCurrent._am5).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 512;BA.debugLine="If am4 = tempZeroRange Then";
+ //BA.debugLineNum = 518;BA.debugLine="If am4 = tempZeroRange Then";
 if ((mostCurrent._am4).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 513;BA.debugLine="am4 = (am3 + am5)/2";
+ //BA.debugLineNum = 519;BA.debugLine="am4 = (am3 + am5)/2";
 mostCurrent._am4 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am3))+(double)(Double.parseDouble(mostCurrent._am5)))/(double)2);
  };
- //BA.debugLineNum = 515;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 521;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5))});
  };
- //BA.debugLineNum = 517;BA.debugLine="If am6 <> tempZeroRange Then";
+ //BA.debugLineNum = 523;BA.debugLine="If am6 <> tempZeroRange Then";
 if ((mostCurrent._am6).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 518;BA.debugLine="If am5 = tempZeroRange Then";
+ //BA.debugLineNum = 524;BA.debugLine="If am5 = tempZeroRange Then";
 if ((mostCurrent._am5).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 519;BA.debugLine="am5 = (am4 + am6)/2";
+ //BA.debugLineNum = 525;BA.debugLine="am5 = (am4 + am6)/2";
 mostCurrent._am5 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am4))+(double)(Double.parseDouble(mostCurrent._am6)))/(double)2);
  };
- //BA.debugLineNum = 521;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 527;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6))});
  };
- //BA.debugLineNum = 523;BA.debugLine="If am7 <> tempZeroRange Then";
+ //BA.debugLineNum = 529;BA.debugLine="If am7 <> tempZeroRange Then";
 if ((mostCurrent._am7).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 524;BA.debugLine="If am6 = tempZeroRange Then";
+ //BA.debugLineNum = 530;BA.debugLine="If am6 = tempZeroRange Then";
 if ((mostCurrent._am6).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 525;BA.debugLine="am6 = (am5 + am7)/2";
+ //BA.debugLineNum = 531;BA.debugLine="am6 = (am5 + am7)/2";
 mostCurrent._am6 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am5))+(double)(Double.parseDouble(mostCurrent._am7)))/(double)2);
  };
- //BA.debugLineNum = 527;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 533;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7))});
  };
- //BA.debugLineNum = 529;BA.debugLine="If am8 <> tempZeroRange Then";
+ //BA.debugLineNum = 535;BA.debugLine="If am8 <> tempZeroRange Then";
 if ((mostCurrent._am8).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 530;BA.debugLine="If am7 = tempZeroRange Then";
+ //BA.debugLineNum = 536;BA.debugLine="If am7 = tempZeroRange Then";
 if ((mostCurrent._am7).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 531;BA.debugLine="am7 = (am6 + am8)/2";
+ //BA.debugLineNum = 537;BA.debugLine="am7 = (am6 + am8)/2";
 mostCurrent._am7 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am6))+(double)(Double.parseDouble(mostCurrent._am8)))/(double)2);
  };
- //BA.debugLineNum = 533;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 539;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8))});
  };
- //BA.debugLineNum = 535;BA.debugLine="If am9 <> tempZeroRange Then";
+ //BA.debugLineNum = 541;BA.debugLine="If am9 <> tempZeroRange Then";
 if ((mostCurrent._am9).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 536;BA.debugLine="If am8 = tempZeroRange Then";
+ //BA.debugLineNum = 542;BA.debugLine="If am8 = tempZeroRange Then";
 if ((mostCurrent._am8).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 537;BA.debugLine="am8 = (am7 + am9)/2";
+ //BA.debugLineNum = 543;BA.debugLine="am8 = (am7 + am9)/2";
 mostCurrent._am8 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am7))+(double)(Double.parseDouble(mostCurrent._am9)))/(double)2);
  };
- //BA.debugLineNum = 539;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 545;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9))});
  };
- //BA.debugLineNum = 541;BA.debugLine="If am10 <> tempZeroRange Then";
+ //BA.debugLineNum = 547;BA.debugLine="If am10 <> tempZeroRange Then";
 if ((mostCurrent._am10).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 542;BA.debugLine="If am9 = tempZeroRange Then";
+ //BA.debugLineNum = 548;BA.debugLine="If am9 = tempZeroRange Then";
 if ((mostCurrent._am9).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 543;BA.debugLine="am9 = (am8 + am10)/2";
+ //BA.debugLineNum = 549;BA.debugLine="am9 = (am8 + am10)/2";
 mostCurrent._am9 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am8))+(double)(Double.parseDouble(mostCurrent._am10)))/(double)2);
  };
- //BA.debugLineNum = 545;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 551;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10))});
  };
- //BA.debugLineNum = 547;BA.debugLine="If am11 <> tempZeroRange Then";
+ //BA.debugLineNum = 553;BA.debugLine="If am11 <> tempZeroRange Then";
 if ((mostCurrent._am11).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 548;BA.debugLine="If am10 = tempZeroRange Then";
+ //BA.debugLineNum = 554;BA.debugLine="If am10 = tempZeroRange Then";
 if ((mostCurrent._am10).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 549;BA.debugLine="am10 = (am9 + am11)/2";
+ //BA.debugLineNum = 555;BA.debugLine="am10 = (am9 + am11)/2";
 mostCurrent._am10 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am9))+(double)(Double.parseDouble(mostCurrent._am11)))/(double)2);
  };
- //BA.debugLineNum = 551;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 557;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11))});
  };
- //BA.debugLineNum = 553;BA.debugLine="If pm12 <> tempZeroRange Then";
+ //BA.debugLineNum = 559;BA.debugLine="If pm12 <> tempZeroRange Then";
 if ((mostCurrent._pm12).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 554;BA.debugLine="If am11 = tempZeroRange Then";
+ //BA.debugLineNum = 560;BA.debugLine="If am11 = tempZeroRange Then";
 if ((mostCurrent._am11).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 555;BA.debugLine="am11 = (am10 + pm12)/2";
+ //BA.debugLineNum = 561;BA.debugLine="am11 = (am10 + pm12)/2";
 mostCurrent._am11 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am10))+(double)(Double.parseDouble(mostCurrent._pm12)))/(double)2);
  };
- //BA.debugLineNum = 557;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 563;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12))});
  };
- //BA.debugLineNum = 559;BA.debugLine="If pm1 <> tempZeroRange Then";
+ //BA.debugLineNum = 565;BA.debugLine="If pm1 <> tempZeroRange Then";
 if ((mostCurrent._pm1).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 560;BA.debugLine="If pm12 = tempZeroRange Then";
+ //BA.debugLineNum = 566;BA.debugLine="If pm12 = tempZeroRange Then";
 if ((mostCurrent._pm12).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 561;BA.debugLine="pm12 = (am11 + pm1)/2";
+ //BA.debugLineNum = 567;BA.debugLine="pm12 = (am11 + pm1)/2";
 mostCurrent._pm12 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am11))+(double)(Double.parseDouble(mostCurrent._pm1)))/(double)2);
  };
- //BA.debugLineNum = 563;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 569;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1))});
  };
- //BA.debugLineNum = 565;BA.debugLine="If pm2 <> tempZeroRange Then";
+ //BA.debugLineNum = 571;BA.debugLine="If pm2 <> tempZeroRange Then";
 if ((mostCurrent._pm2).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 566;BA.debugLine="If pm1 = tempZeroRange Then";
+ //BA.debugLineNum = 572;BA.debugLine="If pm1 = tempZeroRange Then";
 if ((mostCurrent._pm1).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 567;BA.debugLine="pm1 = (pm12 + pm2)/2";
+ //BA.debugLineNum = 573;BA.debugLine="pm1 = (pm12 + pm2)/2";
 mostCurrent._pm1 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm12))+(double)(Double.parseDouble(mostCurrent._pm2)))/(double)2);
  };
- //BA.debugLineNum = 569;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 575;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2))});
  };
- //BA.debugLineNum = 571;BA.debugLine="If pm3 <> tempZeroRange Then";
+ //BA.debugLineNum = 577;BA.debugLine="If pm3 <> tempZeroRange Then";
 if ((mostCurrent._pm3).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 572;BA.debugLine="If pm2 = tempZeroRange Then";
+ //BA.debugLineNum = 578;BA.debugLine="If pm2 = tempZeroRange Then";
 if ((mostCurrent._pm2).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 573;BA.debugLine="pm2 = (pm1 + pm3)/2";
+ //BA.debugLineNum = 579;BA.debugLine="pm2 = (pm1 + pm3)/2";
 mostCurrent._pm2 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm1))+(double)(Double.parseDouble(mostCurrent._pm3)))/(double)2);
  };
- //BA.debugLineNum = 575;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 581;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3))});
  };
- //BA.debugLineNum = 577;BA.debugLine="If pm4 <> tempZeroRange Then";
+ //BA.debugLineNum = 583;BA.debugLine="If pm4 <> tempZeroRange Then";
 if ((mostCurrent._pm4).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 578;BA.debugLine="If pm3 = tempZeroRange Then";
+ //BA.debugLineNum = 584;BA.debugLine="If pm3 = tempZeroRange Then";
 if ((mostCurrent._pm3).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 579;BA.debugLine="pm3 = (pm2 + pm4)/2";
+ //BA.debugLineNum = 585;BA.debugLine="pm3 = (pm2 + pm4)/2";
 mostCurrent._pm3 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm2))+(double)(Double.parseDouble(mostCurrent._pm4)))/(double)2);
  };
- //BA.debugLineNum = 581;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 587;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4))});
  };
- //BA.debugLineNum = 583;BA.debugLine="If pm5 <> tempZeroRange Then";
+ //BA.debugLineNum = 589;BA.debugLine="If pm5 <> tempZeroRange Then";
 if ((mostCurrent._pm5).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 584;BA.debugLine="If pm4 = tempZeroRange Then";
+ //BA.debugLineNum = 590;BA.debugLine="If pm4 = tempZeroRange Then";
 if ((mostCurrent._pm4).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 585;BA.debugLine="pm4 = (pm3 + pm5)/2";
+ //BA.debugLineNum = 591;BA.debugLine="pm4 = (pm3 + pm5)/2";
 mostCurrent._pm4 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm3))+(double)(Double.parseDouble(mostCurrent._pm5)))/(double)2);
  };
- //BA.debugLineNum = 587;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 593;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5))});
  };
- //BA.debugLineNum = 589;BA.debugLine="If pm6 <> tempZeroRange Then";
+ //BA.debugLineNum = 595;BA.debugLine="If pm6 <> tempZeroRange Then";
 if ((mostCurrent._pm6).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 590;BA.debugLine="If pm5 = tempZeroRange Then";
+ //BA.debugLineNum = 596;BA.debugLine="If pm5 = tempZeroRange Then";
 if ((mostCurrent._pm5).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 591;BA.debugLine="pm5 = (pm4 + pm6)/2";
+ //BA.debugLineNum = 597;BA.debugLine="pm5 = (pm4 + pm6)/2";
 mostCurrent._pm5 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm4))+(double)(Double.parseDouble(mostCurrent._pm6)))/(double)2);
  };
- //BA.debugLineNum = 593;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 599;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6))});
  };
- //BA.debugLineNum = 595;BA.debugLine="If pm7 <> tempZeroRange Then";
+ //BA.debugLineNum = 601;BA.debugLine="If pm7 <> tempZeroRange Then";
 if ((mostCurrent._pm7).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 596;BA.debugLine="If pm6 = tempZeroRange Then";
+ //BA.debugLineNum = 602;BA.debugLine="If pm6 = tempZeroRange Then";
 if ((mostCurrent._pm6).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 597;BA.debugLine="pm6 = (pm5 + pm7)/2";
+ //BA.debugLineNum = 603;BA.debugLine="pm6 = (pm5 + pm7)/2";
 mostCurrent._pm6 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm5))+(double)(Double.parseDouble(mostCurrent._pm7)))/(double)2);
  };
- //BA.debugLineNum = 599;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 605;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7))});
  };
- //BA.debugLineNum = 601;BA.debugLine="If pm8 <> tempZeroRange Then";
+ //BA.debugLineNum = 607;BA.debugLine="If pm8 <> tempZeroRange Then";
 if ((mostCurrent._pm8).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 602;BA.debugLine="If pm7 = tempZeroRange Then";
+ //BA.debugLineNum = 608;BA.debugLine="If pm7 = tempZeroRange Then";
 if ((mostCurrent._pm7).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 603;BA.debugLine="pm7 = (pm6 + pm8)/2";
+ //BA.debugLineNum = 609;BA.debugLine="pm7 = (pm6 + pm8)/2";
 mostCurrent._pm7 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm6))+(double)(Double.parseDouble(mostCurrent._pm8)))/(double)2);
  };
- //BA.debugLineNum = 605;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 611;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8))});
  };
- //BA.debugLineNum = 607;BA.debugLine="If pm9 <> tempZeroRange Then";
+ //BA.debugLineNum = 613;BA.debugLine="If pm9 <> tempZeroRange Then";
 if ((mostCurrent._pm9).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 608;BA.debugLine="If pm8 = tempZeroRange Then";
+ //BA.debugLineNum = 614;BA.debugLine="If pm8 = tempZeroRange Then";
 if ((mostCurrent._pm8).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 609;BA.debugLine="pm8 = (pm7 + pm9)/2";
+ //BA.debugLineNum = 615;BA.debugLine="pm8 = (pm7 + pm9)/2";
 mostCurrent._pm8 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm7))+(double)(Double.parseDouble(mostCurrent._pm9)))/(double)2);
  };
- //BA.debugLineNum = 611;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 617;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8)),(float)(Double.parseDouble(mostCurrent._pm9))});
  };
- //BA.debugLineNum = 613;BA.debugLine="If pm10 <> tempZeroRange Then";
+ //BA.debugLineNum = 619;BA.debugLine="If pm10 <> tempZeroRange Then";
 if ((mostCurrent._pm10).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 614;BA.debugLine="If pm9 = tempZeroRange Then";
+ //BA.debugLineNum = 620;BA.debugLine="If pm9 = tempZeroRange Then";
 if ((mostCurrent._pm9).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 615;BA.debugLine="pm9 = (pm8 + pm10)/2";
+ //BA.debugLineNum = 621;BA.debugLine="pm9 = (pm8 + pm10)/2";
 mostCurrent._pm9 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm8))+(double)(Double.parseDouble(mostCurrent._pm10)))/(double)2);
  };
- //BA.debugLineNum = 617;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 623;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8)),(float)(Double.parseDouble(mostCurrent._pm9)),(float)(Double.parseDouble(mostCurrent._pm10))});
  };
- //BA.debugLineNum = 619;BA.debugLine="If pm11 <> tempZeroRange Then";
+ //BA.debugLineNum = 625;BA.debugLine="If pm11 <> tempZeroRange Then";
 if ((mostCurrent._pm11).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 620;BA.debugLine="If pm10 = tempZeroRange Then";
+ //BA.debugLineNum = 626;BA.debugLine="If pm10 = tempZeroRange Then";
 if ((mostCurrent._pm10).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 621;BA.debugLine="pm10 = (pm9 + pm11)/2";
+ //BA.debugLineNum = 627;BA.debugLine="pm10 = (pm9 + pm11)/2";
 mostCurrent._pm10 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm9))+(double)(Double.parseDouble(mostCurrent._pm11)))/(double)2);
  };
- //BA.debugLineNum = 623;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 629;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8)),(float)(Double.parseDouble(mostCurrent._pm9)),(float)(Double.parseDouble(mostCurrent._pm10)),(float)(Double.parseDouble(mostCurrent._pm11))});
  };
- //BA.debugLineNum = 626;BA.debugLine="LineChart.Line_1_PointLabelTextColor = Colors.Ye";
+ //BA.debugLineNum = 632;BA.debugLine="LineChart.Line_1_PointLabelTextColor = Colors.Ye";
 mostCurrent._linechart.setLine_1_PointLabelTextColor(anywheresoftware.b4a.keywords.Common.Colors.Yellow);
- //BA.debugLineNum = 627;BA.debugLine="LineChart.Line_1_PointLabelTextSize = 35.0";
+ //BA.debugLineNum = 633;BA.debugLine="LineChart.Line_1_PointLabelTextSize = 35.0";
 mostCurrent._linechart.setLine_1_PointLabelTextSize((float) (35.0));
- //BA.debugLineNum = 628;BA.debugLine="LineChart.Line_1_LineColor = Colors.Red";
+ //BA.debugLineNum = 634;BA.debugLine="LineChart.Line_1_LineColor = Colors.Red";
 mostCurrent._linechart.setLine_1_LineColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
- //BA.debugLineNum = 629;BA.debugLine="LineChart.Line_1_LineWidth = 11.0";
+ //BA.debugLineNum = 635;BA.debugLine="LineChart.Line_1_LineWidth = 11.0";
 mostCurrent._linechart.setLine_1_LineWidth((float) (11.0));
- //BA.debugLineNum = 630;BA.debugLine="LineChart.Line_1_PointColor = Colors.Black";
+ //BA.debugLineNum = 636;BA.debugLine="LineChart.Line_1_PointColor = Colors.Black";
 mostCurrent._linechart.setLine_1_PointColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
- //BA.debugLineNum = 631;BA.debugLine="LineChart.Line_1_PointSize = 25.0";
+ //BA.debugLineNum = 637;BA.debugLine="LineChart.Line_1_PointSize = 25.0";
 mostCurrent._linechart.setLine_1_PointSize((float) (25.0));
- //BA.debugLineNum = 632;BA.debugLine="LineChart.Line_1_PointShape = LineChart.SHAPE_RO";
+ //BA.debugLineNum = 638;BA.debugLine="LineChart.Line_1_PointShape = LineChart.SHAPE_RO";
 mostCurrent._linechart.setLine_1_PointShape(mostCurrent._linechart.SHAPE_ROUND);
- //BA.debugLineNum = 633;BA.debugLine="LineChart.Line_1_DrawDash = False";
+ //BA.debugLineNum = 639;BA.debugLine="LineChart.Line_1_DrawDash = False";
 mostCurrent._linechart.setLine_1_DrawDash(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 634;BA.debugLine="LineChart.Line_1_DrawCubic = False";
+ //BA.debugLineNum = 640;BA.debugLine="LineChart.Line_1_DrawCubic = False";
 mostCurrent._linechart.setLine_1_DrawCubic(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 641;BA.debugLine="LineChart.Line_2_Data = Array As Float (tempRigh";
+ //BA.debugLineNum = 647;BA.debugLine="LineChart.Line_2_Data = Array As Float (tempRigh";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow))});
- //BA.debugLineNum = 642;BA.debugLine="LineChart.Line_2_PointLabelTextColor = Colors.Gr";
+ //BA.debugLineNum = 648;BA.debugLine="LineChart.Line_2_PointLabelTextColor = Colors.Gr";
 mostCurrent._linechart.setLine_2_PointLabelTextColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
- //BA.debugLineNum = 643;BA.debugLine="LineChart.Line_2_PointLabelTextSize = 30.0";
+ //BA.debugLineNum = 649;BA.debugLine="LineChart.Line_2_PointLabelTextSize = 30.0";
 mostCurrent._linechart.setLine_2_PointLabelTextSize((float) (30.0));
- //BA.debugLineNum = 644;BA.debugLine="LineChart.Line_2_LineColor = Colors.Green";
+ //BA.debugLineNum = 650;BA.debugLine="LineChart.Line_2_LineColor = Colors.Green";
 mostCurrent._linechart.setLine_2_LineColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
- //BA.debugLineNum = 645;BA.debugLine="LineChart.Line_2_LineWidth = 5.0";
+ //BA.debugLineNum = 651;BA.debugLine="LineChart.Line_2_LineWidth = 5.0";
 mostCurrent._linechart.setLine_2_LineWidth((float) (5.0));
- //BA.debugLineNum = 646;BA.debugLine="LineChart.Line_2_PointColor = Colors.Green";
+ //BA.debugLineNum = 652;BA.debugLine="LineChart.Line_2_PointColor = Colors.Green";
 mostCurrent._linechart.setLine_2_PointColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
- //BA.debugLineNum = 647;BA.debugLine="LineChart.Line_2_PointSize = 1.0";
+ //BA.debugLineNum = 653;BA.debugLine="LineChart.Line_2_PointSize = 1.0";
 mostCurrent._linechart.setLine_2_PointSize((float) (1.0));
- //BA.debugLineNum = 648;BA.debugLine="LineChart.Line_2_PointShape = LineChart.SHAPE_RO";
+ //BA.debugLineNum = 654;BA.debugLine="LineChart.Line_2_PointShape = LineChart.SHAPE_RO";
 mostCurrent._linechart.setLine_2_PointShape(mostCurrent._linechart.SHAPE_ROUND);
- //BA.debugLineNum = 649;BA.debugLine="LineChart.Line_2_DrawDash = False";
+ //BA.debugLineNum = 655;BA.debugLine="LineChart.Line_2_DrawDash = False";
 mostCurrent._linechart.setLine_2_DrawDash(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 650;BA.debugLine="LineChart.Line_2_DrawCubic = False";
+ //BA.debugLineNum = 656;BA.debugLine="LineChart.Line_2_DrawCubic = False";
 mostCurrent._linechart.setLine_2_DrawCubic(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 654;BA.debugLine="LineChart.NumberOfLineCharts = 2";
+ //BA.debugLineNum = 660;BA.debugLine="LineChart.NumberOfLineCharts = 2";
 mostCurrent._linechart.setNumberOfLineCharts((int) (2));
- //BA.debugLineNum = 656;BA.debugLine="LineChart.DrawTheGraphs";
+ //BA.debugLineNum = 662;BA.debugLine="LineChart.DrawTheGraphs";
 mostCurrent._linechart.DrawTheGraphs();
- //BA.debugLineNum = 658;BA.debugLine="HumidityHourlyTimer.Initialize(\"HumidityHourlyTi";
-_humidityhourlytimer.Initialize(processBA,"HumidityHourlyTimer",(long) (1000));
- //BA.debugLineNum = 659;BA.debugLine="HumidityHourlyTimer.Enabled = True 'start timer";
-_humidityhourlytimer.setEnabled(anywheresoftware.b4a.keywords.Common.True);
  } 
-       catch (Exception e231) {
-			processBA.setLastException(e231); //BA.debugLineNum = 661;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("7524553",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
- //BA.debugLineNum = 662;BA.debugLine="ToastMessageShow (LastException,True)";
+       catch (Exception e229) {
+			processBA.setLastException(e229); //BA.debugLineNum = 665;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("6655623",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+ //BA.debugLineNum = 666;BA.debugLine="ToastMessageShow (LastException,True)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA).getObject()),anywheresoftware.b4a.keywords.Common.True);
  };
- //BA.debugLineNum = 664;BA.debugLine="End Sub";
+ //BA.debugLineNum = 668;BA.debugLine="End Sub";
 return "";
 }
 public static String  _humidityhourlytimer_tick() throws Exception{
@@ -2367,7 +2375,7 @@ _textreader1.Close();
  } 
        catch (Exception e115) {
 			processBA.setLastException(e115); //BA.debugLineNum = 1774;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("74980859",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("6983163",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 1776;BA.debugLine="End Sub";
 return "";
@@ -2633,7 +2641,7 @@ _textreader1.Close();
  } 
        catch (Exception e116) {
 			processBA.setLastException(e116); //BA.debugLineNum = 2034;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("7721022",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("61114238",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 2036;BA.debugLine="End Sub";
 return "";
@@ -2897,7 +2905,7 @@ _textreader1.Close();
  } 
        catch (Exception e115) {
 			processBA.setLastException(e115); //BA.debugLineNum = 1647;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("73473531",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("6917627",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 1649;BA.debugLine="End Sub";
 return "";
@@ -3163,7 +3171,7 @@ _textreader1.Close();
  } 
        catch (Exception e116) {
 			processBA.setLastException(e116); //BA.debugLineNum = 1904;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("7655486",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("61048702",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 1906;BA.debugLine="End Sub";
 return "";
@@ -3172,671 +3180,667 @@ public static String  _temperaturedailycreate() throws Exception{
 anywheresoftware.b4a.keywords.LayoutValues _lv = null;
 anywheresoftware.b4j.object.JavaObject _jo = null;
 long _yesterday = 0L;
- //BA.debugLineNum = 666;BA.debugLine="Private Sub TemperatureDailyCreate()";
- //BA.debugLineNum = 667;BA.debugLine="Try";
-try { //BA.debugLineNum = 669;BA.debugLine="Activity_WindowFocusChanged(True)";
+ //BA.debugLineNum = 670;BA.debugLine="Private Sub TemperatureDailyCreate()";
+ //BA.debugLineNum = 671;BA.debugLine="Try";
+try { //BA.debugLineNum = 673;BA.debugLine="Activity_WindowFocusChanged(True)";
 _activity_windowfocuschanged(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 670;BA.debugLine="Dim lv As LayoutValues = GetRealSize";
+ //BA.debugLineNum = 674;BA.debugLine="Dim lv As LayoutValues = GetRealSize";
 _lv = _getrealsize();
- //BA.debugLineNum = 671;BA.debugLine="Dim jo As JavaObject = Activity";
+ //BA.debugLineNum = 675;BA.debugLine="Dim jo As JavaObject = Activity";
 _jo = new anywheresoftware.b4j.object.JavaObject();
 _jo = (anywheresoftware.b4j.object.JavaObject) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.object.JavaObject(), (java.lang.Object)(mostCurrent._activity.getObject()));
- //BA.debugLineNum = 672;BA.debugLine="jo.RunMethod(\"setBottom\", Array(lv.Height))";
+ //BA.debugLineNum = 676;BA.debugLine="jo.RunMethod(\"setBottom\", Array(lv.Height))";
 _jo.RunMethod("setBottom",new Object[]{(Object)(_lv.Height)});
- //BA.debugLineNum = 673;BA.debugLine="jo.RunMethod(\"setRight\", Array(lv.Width))";
+ //BA.debugLineNum = 677;BA.debugLine="jo.RunMethod(\"setRight\", Array(lv.Width))";
 _jo.RunMethod("setRight",new Object[]{(Object)(_lv.Width)});
- //BA.debugLineNum = 674;BA.debugLine="Activity.Height = lv.Height";
+ //BA.debugLineNum = 678;BA.debugLine="Activity.Height = lv.Height";
 mostCurrent._activity.setHeight(_lv.Height);
- //BA.debugLineNum = 675;BA.debugLine="Activity.Width = lv.Width";
+ //BA.debugLineNum = 679;BA.debugLine="Activity.Width = lv.Width";
 mostCurrent._activity.setWidth(_lv.Width);
- //BA.debugLineNum = 678;BA.debugLine="Activity.LoadLayout(\"Main\")";
+ //BA.debugLineNum = 682;BA.debugLine="Activity.LoadLayout(\"Main\")";
 mostCurrent._activity.LoadLayout("Main",mostCurrent.activityBA);
- //BA.debugLineNum = 680;BA.debugLine="LineChart.GraphBackgroundColor = Colors.DarkGray";
+ //BA.debugLineNum = 684;BA.debugLine="LineChart.GraphBackgroundColor = Colors.DarkGray";
 mostCurrent._linechart.setGraphBackgroundColor(anywheresoftware.b4a.keywords.Common.Colors.DarkGray);
- //BA.debugLineNum = 681;BA.debugLine="LineChart.GraphFrameColor = Colors.Blue";
+ //BA.debugLineNum = 685;BA.debugLine="LineChart.GraphFrameColor = Colors.Blue";
 mostCurrent._linechart.setGraphFrameColor(anywheresoftware.b4a.keywords.Common.Colors.Blue);
- //BA.debugLineNum = 682;BA.debugLine="LineChart.GraphFrameWidth = 4.0";
+ //BA.debugLineNum = 686;BA.debugLine="LineChart.GraphFrameWidth = 4.0";
 mostCurrent._linechart.setGraphFrameWidth((float) (4.0));
- //BA.debugLineNum = 683;BA.debugLine="LineChart.GraphPlotAreaBackgroundColor = Colors.";
+ //BA.debugLineNum = 687;BA.debugLine="LineChart.GraphPlotAreaBackgroundColor = Colors.";
 mostCurrent._linechart.setGraphPlotAreaBackgroundColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (50),(int) (0),(int) (0),(int) (255)));
- //BA.debugLineNum = 684;BA.debugLine="LineChart.GraphTitleTextSize = 15";
+ //BA.debugLineNum = 688;BA.debugLine="LineChart.GraphTitleTextSize = 15";
 mostCurrent._linechart.setGraphTitleTextSize((int) (15));
- //BA.debugLineNum = 685;BA.debugLine="LineChart.GraphTitleColor = Colors.White";
+ //BA.debugLineNum = 689;BA.debugLine="LineChart.GraphTitleColor = Colors.White";
 mostCurrent._linechart.setGraphTitleColor(anywheresoftware.b4a.keywords.Common.Colors.White);
- //BA.debugLineNum = 686;BA.debugLine="LineChart.GraphTitleSkewX = -0.25";
+ //BA.debugLineNum = 690;BA.debugLine="LineChart.GraphTitleSkewX = -0.25";
 mostCurrent._linechart.setGraphTitleSkewX((float) (-0.25));
- //BA.debugLineNum = 687;BA.debugLine="LineChart.GraphTitleUnderline = True";
+ //BA.debugLineNum = 691;BA.debugLine="LineChart.GraphTitleUnderline = True";
 mostCurrent._linechart.setGraphTitleUnderline(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 688;BA.debugLine="LineChart.GraphTitleBold = True";
+ //BA.debugLineNum = 692;BA.debugLine="LineChart.GraphTitleBold = True";
 mostCurrent._linechart.setGraphTitleBold(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 689;BA.debugLine="LineChart.GraphTitle = \"TEMPERATURE DAILY  \"";
+ //BA.debugLineNum = 693;BA.debugLine="LineChart.GraphTitle = \"TEMPERATURE DAILY  \"";
 mostCurrent._linechart.setGraphTitle("TEMPERATURE DAILY  ");
- //BA.debugLineNum = 691;BA.debugLine="LineChart.LegendBackgroundColor = Colors.White";
+ //BA.debugLineNum = 695;BA.debugLine="LineChart.LegendBackgroundColor = Colors.White";
 mostCurrent._linechart.setLegendBackgroundColor(anywheresoftware.b4a.keywords.Common.Colors.White);
- //BA.debugLineNum = 692;BA.debugLine="LineChart.LegendTextColor = Colors.Black";
+ //BA.debugLineNum = 696;BA.debugLine="LineChart.LegendTextColor = Colors.Black";
 mostCurrent._linechart.setLegendTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
- //BA.debugLineNum = 693;BA.debugLine="LineChart.LegendTextSize = 18.0";
+ //BA.debugLineNum = 697;BA.debugLine="LineChart.LegendTextSize = 18.0";
 mostCurrent._linechart.setLegendTextSize((float) (18.0));
- //BA.debugLineNum = 695;BA.debugLine="DateTime.TimeFormat = \"h:mm a\"";
+ //BA.debugLineNum = 699;BA.debugLine="DateTime.TimeFormat = \"h:mm a\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setTimeFormat("h:mm a");
- //BA.debugLineNum = 696;BA.debugLine="LineChart.DomianLabel = \"The time now is: \" & Da";
+ //BA.debugLineNum = 700;BA.debugLine="LineChart.DomianLabel = \"The time now is: \" & Da";
 mostCurrent._linechart.setDomianLabel("The time now is: "+anywheresoftware.b4a.keywords.Common.DateTime.Time(anywheresoftware.b4a.keywords.Common.DateTime.getNow()));
- //BA.debugLineNum = 697;BA.debugLine="LineChart.DomainLabelColor = Colors.Green";
+ //BA.debugLineNum = 701;BA.debugLine="LineChart.DomainLabelColor = Colors.Green";
 mostCurrent._linechart.setDomainLabelColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
- //BA.debugLineNum = 698;BA.debugLine="LineChart.DomainLabelTextSize = 25.0";
+ //BA.debugLineNum = 702;BA.debugLine="LineChart.DomainLabelTextSize = 25.0";
 mostCurrent._linechart.setDomainLabelTextSize((float) (25.0));
- //BA.debugLineNum = 700;BA.debugLine="LineChart.XaxisGridLineColor = Colors.ARGB(100,2";
+ //BA.debugLineNum = 704;BA.debugLine="LineChart.XaxisGridLineColor = Colors.ARGB(100,2";
 mostCurrent._linechart.setXaxisGridLineColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (100),(int) (255),(int) (255),(int) (255)));
- //BA.debugLineNum = 701;BA.debugLine="LineChart.XaxisGridLineWidth = 2.0";
+ //BA.debugLineNum = 705;BA.debugLine="LineChart.XaxisGridLineWidth = 2.0";
 mostCurrent._linechart.setXaxisGridLineWidth((float) (2.0));
- //BA.debugLineNum = 702;BA.debugLine="LineChart.XaxisLabelTicks = 1";
+ //BA.debugLineNum = 706;BA.debugLine="LineChart.XaxisLabelTicks = 1";
 mostCurrent._linechart.setXaxisLabelTicks((int) (1));
- //BA.debugLineNum = 703;BA.debugLine="LineChart.XaxisLabelOrientation = 0";
+ //BA.debugLineNum = 707;BA.debugLine="LineChart.XaxisLabelOrientation = 0";
 mostCurrent._linechart.setXaxisLabelOrientation((float) (0));
- //BA.debugLineNum = 704;BA.debugLine="LineChart.XaxisLabelTextColor = Colors.White";
+ //BA.debugLineNum = 708;BA.debugLine="LineChart.XaxisLabelTextColor = Colors.White";
 mostCurrent._linechart.setXaxisLabelTextColor(anywheresoftware.b4a.keywords.Common.Colors.White);
- //BA.debugLineNum = 705;BA.debugLine="LineChart.XaxisLabelTextSize = 32.0";
+ //BA.debugLineNum = 709;BA.debugLine="LineChart.XaxisLabelTextSize = 32.0";
 mostCurrent._linechart.setXaxisLabelTextSize((float) (32.0));
- //BA.debugLineNum = 706;BA.debugLine="LineChart.XAxisLabels = Array As String(\"12 am\",";
+ //BA.debugLineNum = 710;BA.debugLine="LineChart.XAxisLabels = Array As String(\"12 am\",";
 mostCurrent._linechart.setXAxisLabels(new String[]{"12 am","1 am","2 am","3 am","4 am","5 am","6 am","7 am","8 am","9 am","10 am","11 am","12 pm","1 pm","2 pm","3 pm","4 pm","5 pm","6 pm","7 pm","8 pm","9 pm","10 pm","11 pm"});
- //BA.debugLineNum = 708;BA.debugLine="LineChart.YaxisDivisions = 10";
+ //BA.debugLineNum = 712;BA.debugLine="LineChart.YaxisDivisions = 10";
 mostCurrent._linechart.setYaxisDivisions((int) (10));
- //BA.debugLineNum = 710;BA.debugLine="LineChart.YaxisValueFormat = LineChart.ValueForm";
+ //BA.debugLineNum = 714;BA.debugLine="LineChart.YaxisValueFormat = LineChart.ValueForm";
 mostCurrent._linechart.setYaxisValueFormat(mostCurrent._linechart.ValueFormat_2);
- //BA.debugLineNum = 711;BA.debugLine="LineChart.YaxisGridLineColor = Colors.Black";
+ //BA.debugLineNum = 715;BA.debugLine="LineChart.YaxisGridLineColor = Colors.Black";
 mostCurrent._linechart.setYaxisGridLineColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
- //BA.debugLineNum = 712;BA.debugLine="LineChart.YaxisGridLineWidth = 2";
+ //BA.debugLineNum = 716;BA.debugLine="LineChart.YaxisGridLineWidth = 2";
 mostCurrent._linechart.setYaxisGridLineWidth((float) (2));
- //BA.debugLineNum = 713;BA.debugLine="LineChart.YaxisLabelTicks = 1";
+ //BA.debugLineNum = 717;BA.debugLine="LineChart.YaxisLabelTicks = 1";
 mostCurrent._linechart.setYaxisLabelTicks((int) (1));
- //BA.debugLineNum = 714;BA.debugLine="LineChart.YaxisLabelColor = Colors.Yellow";
+ //BA.debugLineNum = 718;BA.debugLine="LineChart.YaxisLabelColor = Colors.Yellow";
 mostCurrent._linechart.setYaxisLabelColor(anywheresoftware.b4a.keywords.Common.Colors.Yellow);
- //BA.debugLineNum = 715;BA.debugLine="LineChart.YaxisLabelOrientation = -30";
+ //BA.debugLineNum = 719;BA.debugLine="LineChart.YaxisLabelOrientation = -30";
 mostCurrent._linechart.setYaxisLabelOrientation((float) (-30));
- //BA.debugLineNum = 716;BA.debugLine="LineChart.YaxisLabelTextSize = 25.0";
+ //BA.debugLineNum = 720;BA.debugLine="LineChart.YaxisLabelTextSize = 25.0";
 mostCurrent._linechart.setYaxisLabelTextSize((float) (25.0));
- //BA.debugLineNum = 717;BA.debugLine="LineChart.YaxisTitleColor = Colors.Green";
+ //BA.debugLineNum = 721;BA.debugLine="LineChart.YaxisTitleColor = Colors.Green";
 mostCurrent._linechart.setYaxisTitleColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
- //BA.debugLineNum = 718;BA.debugLine="LineChart.YaxisTitleFakeBold = False";
+ //BA.debugLineNum = 722;BA.debugLine="LineChart.YaxisTitleFakeBold = False";
 mostCurrent._linechart.setYaxisTitleFakeBold(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 719;BA.debugLine="LineChart.YaxisTitleTextSize = 20.0";
+ //BA.debugLineNum = 723;BA.debugLine="LineChart.YaxisTitleTextSize = 20.0";
 mostCurrent._linechart.setYaxisTitleTextSize((float) (20.0));
- //BA.debugLineNum = 720;BA.debugLine="LineChart.YaxisTitleUnderline = True";
+ //BA.debugLineNum = 724;BA.debugLine="LineChart.YaxisTitleUnderline = True";
 mostCurrent._linechart.setYaxisTitleUnderline(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 721;BA.debugLine="LineChart.YaxisTitleTextSkewness = 0";
+ //BA.debugLineNum = 725;BA.debugLine="LineChart.YaxisTitleTextSkewness = 0";
 mostCurrent._linechart.setYaxisTitleTextSkewness((float) (0));
- //BA.debugLineNum = 722;BA.debugLine="LineChart.YaxisLabelAndTitleDistance = 60.0";
+ //BA.debugLineNum = 726;BA.debugLine="LineChart.YaxisLabelAndTitleDistance = 60.0";
 mostCurrent._linechart.setYaxisLabelAndTitleDistance((float) (60.0));
- //BA.debugLineNum = 723;BA.debugLine="LineChart.YaxisTitle = \"Temperature (Fahrenheit)";
+ //BA.debugLineNum = 727;BA.debugLine="LineChart.YaxisTitle = \"Temperature (Fahrenheit)";
 mostCurrent._linechart.setYaxisTitle("Temperature (Fahrenheit)");
- //BA.debugLineNum = 725;BA.debugLine="LineChart.MaxNumberOfEntriesPerLineChart = 24";
+ //BA.debugLineNum = 729;BA.debugLine="LineChart.MaxNumberOfEntriesPerLineChart = 24";
 mostCurrent._linechart.setMaxNumberOfEntriesPerLineChart((int) (24));
- //BA.debugLineNum = 726;BA.debugLine="LineChart.GraphLegendVisibility = False";
+ //BA.debugLineNum = 730;BA.debugLine="LineChart.GraphLegendVisibility = False";
 mostCurrent._linechart.setGraphLegendVisibility(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 730;BA.debugLine="ReadTemperatureDaily(\"Today\")";
+ //BA.debugLineNum = 734;BA.debugLine="ReadTemperatureDaily(\"Today\")";
 _readtemperaturedaily("Today");
- //BA.debugLineNum = 732;BA.debugLine="DateTime.DateFormat = \"MMM d, yyyy\"";
+ //BA.debugLineNum = 736;BA.debugLine="DateTime.DateFormat = \"MMM d, yyyy\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setDateFormat("MMM d, yyyy");
- //BA.debugLineNum = 733;BA.debugLine="LineChart.Line_1_LegendText = \"Today, \" & DateTi";
+ //BA.debugLineNum = 737;BA.debugLine="LineChart.Line_1_LegendText = \"Today, \" & DateTi";
 mostCurrent._linechart.setLine_1_LegendText("Today, "+anywheresoftware.b4a.keywords.Common.DateTime.Date(anywheresoftware.b4a.keywords.Common.DateTime.getNow()));
- //BA.debugLineNum = 735;BA.debugLine="CheckTempBoundaries";
+ //BA.debugLineNum = 739;BA.debugLine="CheckTempBoundaries";
 _checktempboundaries();
- //BA.debugLineNum = 737;BA.debugLine="If am12 <> tempZeroRange Then";
+ //BA.debugLineNum = 741;BA.debugLine="If am12 <> tempZeroRange Then";
 if ((mostCurrent._am12).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 738;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12)";
+ //BA.debugLineNum = 742;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12)";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12))});
  };
- //BA.debugLineNum = 740;BA.debugLine="If am1 <> tempZeroRange Then";
+ //BA.debugLineNum = 744;BA.debugLine="If am1 <> tempZeroRange Then";
 if ((mostCurrent._am1).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 741;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 745;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1))});
  };
- //BA.debugLineNum = 743;BA.debugLine="If am2 <> tempZeroRange Then";
+ //BA.debugLineNum = 747;BA.debugLine="If am2 <> tempZeroRange Then";
 if ((mostCurrent._am2).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 744;BA.debugLine="If am1 = tempZeroRange Then";
+ //BA.debugLineNum = 748;BA.debugLine="If am1 = tempZeroRange Then";
 if ((mostCurrent._am1).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 745;BA.debugLine="am1 = (am12 + am2)/2";
+ //BA.debugLineNum = 749;BA.debugLine="am1 = (am12 + am2)/2";
 mostCurrent._am1 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am12))+(double)(Double.parseDouble(mostCurrent._am2)))/(double)2);
  };
- //BA.debugLineNum = 747;BA.debugLine="If am12 = tempZeroRange Then";
+ //BA.debugLineNum = 751;BA.debugLine="If am12 = tempZeroRange Then";
 if ((mostCurrent._am12).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 748;BA.debugLine="am12 = am1";
+ //BA.debugLineNum = 752;BA.debugLine="am12 = am1";
 mostCurrent._am12 = mostCurrent._am1;
  };
- //BA.debugLineNum = 750;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 754;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2))});
  };
- //BA.debugLineNum = 752;BA.debugLine="If am3 <> tempZeroRange Then";
+ //BA.debugLineNum = 756;BA.debugLine="If am3 <> tempZeroRange Then";
 if ((mostCurrent._am3).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 753;BA.debugLine="If am2 = tempZeroRange Then";
+ //BA.debugLineNum = 757;BA.debugLine="If am2 = tempZeroRange Then";
 if ((mostCurrent._am2).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 754;BA.debugLine="am2 = (am1 + am3)/2";
+ //BA.debugLineNum = 758;BA.debugLine="am2 = (am1 + am3)/2";
 mostCurrent._am2 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am1))+(double)(Double.parseDouble(mostCurrent._am3)))/(double)2);
  };
- //BA.debugLineNum = 756;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 760;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3))});
  };
- //BA.debugLineNum = 758;BA.debugLine="If am4 <> tempZeroRange Then";
+ //BA.debugLineNum = 762;BA.debugLine="If am4 <> tempZeroRange Then";
 if ((mostCurrent._am4).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 759;BA.debugLine="If am3 = tempZeroRange Then";
+ //BA.debugLineNum = 763;BA.debugLine="If am3 = tempZeroRange Then";
 if ((mostCurrent._am3).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 760;BA.debugLine="am3 = (am2 + am4)/2";
+ //BA.debugLineNum = 764;BA.debugLine="am3 = (am2 + am4)/2";
 mostCurrent._am3 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am2))+(double)(Double.parseDouble(mostCurrent._am4)))/(double)2);
  };
- //BA.debugLineNum = 762;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 766;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4))});
  };
- //BA.debugLineNum = 764;BA.debugLine="If am5 <> tempZeroRange Then";
+ //BA.debugLineNum = 768;BA.debugLine="If am5 <> tempZeroRange Then";
 if ((mostCurrent._am5).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 765;BA.debugLine="If am4 = tempZeroRange Then";
+ //BA.debugLineNum = 769;BA.debugLine="If am4 = tempZeroRange Then";
 if ((mostCurrent._am4).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 766;BA.debugLine="am4 = (am3 + am5)/2";
+ //BA.debugLineNum = 770;BA.debugLine="am4 = (am3 + am5)/2";
 mostCurrent._am4 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am3))+(double)(Double.parseDouble(mostCurrent._am5)))/(double)2);
  };
- //BA.debugLineNum = 768;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 772;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5))});
  };
- //BA.debugLineNum = 770;BA.debugLine="If am6 <> tempZeroRange Then";
+ //BA.debugLineNum = 774;BA.debugLine="If am6 <> tempZeroRange Then";
 if ((mostCurrent._am6).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 771;BA.debugLine="If am5 = tempZeroRange Then";
+ //BA.debugLineNum = 775;BA.debugLine="If am5 = tempZeroRange Then";
 if ((mostCurrent._am5).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 772;BA.debugLine="am5 = (am4 + am6)/2";
+ //BA.debugLineNum = 776;BA.debugLine="am5 = (am4 + am6)/2";
 mostCurrent._am5 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am4))+(double)(Double.parseDouble(mostCurrent._am6)))/(double)2);
  };
- //BA.debugLineNum = 774;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 778;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6))});
  };
- //BA.debugLineNum = 776;BA.debugLine="If am7 <> tempZeroRange Then";
+ //BA.debugLineNum = 780;BA.debugLine="If am7 <> tempZeroRange Then";
 if ((mostCurrent._am7).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 777;BA.debugLine="If am6 = tempZeroRange Then";
+ //BA.debugLineNum = 781;BA.debugLine="If am6 = tempZeroRange Then";
 if ((mostCurrent._am6).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 778;BA.debugLine="am6 = (am5 + am7)/2";
+ //BA.debugLineNum = 782;BA.debugLine="am6 = (am5 + am7)/2";
 mostCurrent._am6 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am5))+(double)(Double.parseDouble(mostCurrent._am7)))/(double)2);
  };
- //BA.debugLineNum = 780;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 784;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7))});
  };
- //BA.debugLineNum = 782;BA.debugLine="If am8 <> tempZeroRange Then";
+ //BA.debugLineNum = 786;BA.debugLine="If am8 <> tempZeroRange Then";
 if ((mostCurrent._am8).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 783;BA.debugLine="If am7 = tempZeroRange Then";
+ //BA.debugLineNum = 787;BA.debugLine="If am7 = tempZeroRange Then";
 if ((mostCurrent._am7).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 784;BA.debugLine="am7 = (am6 + am8)/2";
+ //BA.debugLineNum = 788;BA.debugLine="am7 = (am6 + am8)/2";
 mostCurrent._am7 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am6))+(double)(Double.parseDouble(mostCurrent._am8)))/(double)2);
  };
- //BA.debugLineNum = 786;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 790;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8))});
  };
- //BA.debugLineNum = 788;BA.debugLine="If am9 <> tempZeroRange Then";
+ //BA.debugLineNum = 792;BA.debugLine="If am9 <> tempZeroRange Then";
 if ((mostCurrent._am9).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 789;BA.debugLine="If am8 = tempZeroRange Then";
+ //BA.debugLineNum = 793;BA.debugLine="If am8 = tempZeroRange Then";
 if ((mostCurrent._am8).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 790;BA.debugLine="am8 = (am7 + am9)/2";
+ //BA.debugLineNum = 794;BA.debugLine="am8 = (am7 + am9)/2";
 mostCurrent._am8 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am7))+(double)(Double.parseDouble(mostCurrent._am9)))/(double)2);
  };
- //BA.debugLineNum = 792;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 796;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9))});
  };
- //BA.debugLineNum = 794;BA.debugLine="If am10 <> tempZeroRange Then";
+ //BA.debugLineNum = 798;BA.debugLine="If am10 <> tempZeroRange Then";
 if ((mostCurrent._am10).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 795;BA.debugLine="If am9 = tempZeroRange Then";
+ //BA.debugLineNum = 799;BA.debugLine="If am9 = tempZeroRange Then";
 if ((mostCurrent._am9).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 796;BA.debugLine="am9 = (am8 + am10)/2";
+ //BA.debugLineNum = 800;BA.debugLine="am9 = (am8 + am10)/2";
 mostCurrent._am9 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am8))+(double)(Double.parseDouble(mostCurrent._am10)))/(double)2);
  };
- //BA.debugLineNum = 798;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 802;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10))});
  };
- //BA.debugLineNum = 800;BA.debugLine="If am11 <> tempZeroRange Then";
+ //BA.debugLineNum = 804;BA.debugLine="If am11 <> tempZeroRange Then";
 if ((mostCurrent._am11).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 801;BA.debugLine="If am10 = tempZeroRange Then";
+ //BA.debugLineNum = 805;BA.debugLine="If am10 = tempZeroRange Then";
 if ((mostCurrent._am10).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 802;BA.debugLine="am10 = (am9 + am11)/2";
+ //BA.debugLineNum = 806;BA.debugLine="am10 = (am9 + am11)/2";
 mostCurrent._am10 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am9))+(double)(Double.parseDouble(mostCurrent._am11)))/(double)2);
  };
- //BA.debugLineNum = 804;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 808;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11))});
  };
- //BA.debugLineNum = 806;BA.debugLine="If pm12 <> tempZeroRange Then";
+ //BA.debugLineNum = 810;BA.debugLine="If pm12 <> tempZeroRange Then";
 if ((mostCurrent._pm12).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 807;BA.debugLine="If am11 = tempZeroRange Then";
+ //BA.debugLineNum = 811;BA.debugLine="If am11 = tempZeroRange Then";
 if ((mostCurrent._am11).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 808;BA.debugLine="am11 = (am10 + pm12)/2";
+ //BA.debugLineNum = 812;BA.debugLine="am11 = (am10 + pm12)/2";
 mostCurrent._am11 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am10))+(double)(Double.parseDouble(mostCurrent._pm12)))/(double)2);
  };
- //BA.debugLineNum = 810;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 814;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12))});
  };
- //BA.debugLineNum = 812;BA.debugLine="If pm1 <> tempZeroRange Then";
+ //BA.debugLineNum = 816;BA.debugLine="If pm1 <> tempZeroRange Then";
 if ((mostCurrent._pm1).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 813;BA.debugLine="If pm12 = tempZeroRange Then";
+ //BA.debugLineNum = 817;BA.debugLine="If pm12 = tempZeroRange Then";
 if ((mostCurrent._pm12).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 814;BA.debugLine="pm12 = (am11 + pm1)/2";
+ //BA.debugLineNum = 818;BA.debugLine="pm12 = (am11 + pm1)/2";
 mostCurrent._pm12 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am11))+(double)(Double.parseDouble(mostCurrent._pm1)))/(double)2);
  };
- //BA.debugLineNum = 816;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 820;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1))});
  };
- //BA.debugLineNum = 818;BA.debugLine="If pm2 <> tempZeroRange Then";
+ //BA.debugLineNum = 822;BA.debugLine="If pm2 <> tempZeroRange Then";
 if ((mostCurrent._pm2).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 819;BA.debugLine="If pm1 = tempZeroRange Then";
+ //BA.debugLineNum = 823;BA.debugLine="If pm1 = tempZeroRange Then";
 if ((mostCurrent._pm1).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 820;BA.debugLine="pm1 = (pm12 + pm2)/2";
+ //BA.debugLineNum = 824;BA.debugLine="pm1 = (pm12 + pm2)/2";
 mostCurrent._pm1 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm12))+(double)(Double.parseDouble(mostCurrent._pm2)))/(double)2);
  };
- //BA.debugLineNum = 822;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 826;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2))});
  };
- //BA.debugLineNum = 824;BA.debugLine="If pm3 <> tempZeroRange Then";
+ //BA.debugLineNum = 828;BA.debugLine="If pm3 <> tempZeroRange Then";
 if ((mostCurrent._pm3).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 825;BA.debugLine="If pm2 = tempZeroRange Then";
+ //BA.debugLineNum = 829;BA.debugLine="If pm2 = tempZeroRange Then";
 if ((mostCurrent._pm2).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 826;BA.debugLine="pm2 = (pm1 + pm3)/2";
+ //BA.debugLineNum = 830;BA.debugLine="pm2 = (pm1 + pm3)/2";
 mostCurrent._pm2 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm1))+(double)(Double.parseDouble(mostCurrent._pm3)))/(double)2);
  };
- //BA.debugLineNum = 828;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 832;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3))});
  };
- //BA.debugLineNum = 830;BA.debugLine="If pm4 <> tempZeroRange Then";
+ //BA.debugLineNum = 834;BA.debugLine="If pm4 <> tempZeroRange Then";
 if ((mostCurrent._pm4).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 831;BA.debugLine="If pm3 = tempZeroRange Then";
+ //BA.debugLineNum = 835;BA.debugLine="If pm3 = tempZeroRange Then";
 if ((mostCurrent._pm3).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 832;BA.debugLine="pm3 = (pm2 + pm4)/2";
+ //BA.debugLineNum = 836;BA.debugLine="pm3 = (pm2 + pm4)/2";
 mostCurrent._pm3 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm2))+(double)(Double.parseDouble(mostCurrent._pm4)))/(double)2);
  };
- //BA.debugLineNum = 834;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 838;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4))});
  };
- //BA.debugLineNum = 836;BA.debugLine="If pm5 <> tempZeroRange Then";
+ //BA.debugLineNum = 840;BA.debugLine="If pm5 <> tempZeroRange Then";
 if ((mostCurrent._pm5).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 837;BA.debugLine="If pm4 = tempZeroRange Then";
+ //BA.debugLineNum = 841;BA.debugLine="If pm4 = tempZeroRange Then";
 if ((mostCurrent._pm4).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 838;BA.debugLine="pm4 = (pm3 + pm5)/2";
+ //BA.debugLineNum = 842;BA.debugLine="pm4 = (pm3 + pm5)/2";
 mostCurrent._pm4 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm3))+(double)(Double.parseDouble(mostCurrent._pm5)))/(double)2);
  };
- //BA.debugLineNum = 840;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 844;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5))});
  };
- //BA.debugLineNum = 842;BA.debugLine="If pm6 <> tempZeroRange Then";
+ //BA.debugLineNum = 846;BA.debugLine="If pm6 <> tempZeroRange Then";
 if ((mostCurrent._pm6).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 843;BA.debugLine="If pm5 = tempZeroRange Then";
+ //BA.debugLineNum = 847;BA.debugLine="If pm5 = tempZeroRange Then";
 if ((mostCurrent._pm5).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 844;BA.debugLine="pm5 = (pm4 + pm6)/2";
+ //BA.debugLineNum = 848;BA.debugLine="pm5 = (pm4 + pm6)/2";
 mostCurrent._pm5 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm4))+(double)(Double.parseDouble(mostCurrent._pm6)))/(double)2);
  };
- //BA.debugLineNum = 846;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 850;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6))});
  };
- //BA.debugLineNum = 848;BA.debugLine="If pm7 <> tempZeroRange Then";
+ //BA.debugLineNum = 852;BA.debugLine="If pm7 <> tempZeroRange Then";
 if ((mostCurrent._pm7).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 849;BA.debugLine="If pm6 = tempZeroRange Then";
+ //BA.debugLineNum = 853;BA.debugLine="If pm6 = tempZeroRange Then";
 if ((mostCurrent._pm6).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 850;BA.debugLine="pm6 = (pm5 + pm7)/2";
+ //BA.debugLineNum = 854;BA.debugLine="pm6 = (pm5 + pm7)/2";
 mostCurrent._pm6 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm5))+(double)(Double.parseDouble(mostCurrent._pm7)))/(double)2);
  };
- //BA.debugLineNum = 852;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 856;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7))});
  };
- //BA.debugLineNum = 854;BA.debugLine="If pm8 <> tempZeroRange Then";
+ //BA.debugLineNum = 858;BA.debugLine="If pm8 <> tempZeroRange Then";
 if ((mostCurrent._pm8).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 855;BA.debugLine="If pm7 = tempZeroRange Then";
+ //BA.debugLineNum = 859;BA.debugLine="If pm7 = tempZeroRange Then";
 if ((mostCurrent._pm7).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 856;BA.debugLine="pm7 = (pm6 + pm8)/2";
+ //BA.debugLineNum = 860;BA.debugLine="pm7 = (pm6 + pm8)/2";
 mostCurrent._pm7 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm6))+(double)(Double.parseDouble(mostCurrent._pm8)))/(double)2);
  };
- //BA.debugLineNum = 858;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 862;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8))});
  };
- //BA.debugLineNum = 860;BA.debugLine="If pm9 <> tempZeroRange Then";
+ //BA.debugLineNum = 864;BA.debugLine="If pm9 <> tempZeroRange Then";
 if ((mostCurrent._pm9).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 861;BA.debugLine="If pm8 = tempZeroRange Then";
+ //BA.debugLineNum = 865;BA.debugLine="If pm8 = tempZeroRange Then";
 if ((mostCurrent._pm8).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 862;BA.debugLine="pm8 = (pm7 + pm9)/2";
+ //BA.debugLineNum = 866;BA.debugLine="pm8 = (pm7 + pm9)/2";
 mostCurrent._pm8 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm7))+(double)(Double.parseDouble(mostCurrent._pm9)))/(double)2);
  };
- //BA.debugLineNum = 864;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 868;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8)),(float)(Double.parseDouble(mostCurrent._pm9))});
  };
- //BA.debugLineNum = 866;BA.debugLine="If pm10 <> tempZeroRange Then";
+ //BA.debugLineNum = 870;BA.debugLine="If pm10 <> tempZeroRange Then";
 if ((mostCurrent._pm10).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 867;BA.debugLine="If pm9 = tempZeroRange Then";
+ //BA.debugLineNum = 871;BA.debugLine="If pm9 = tempZeroRange Then";
 if ((mostCurrent._pm9).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 868;BA.debugLine="pm9 = (pm8 + pm10)/2";
+ //BA.debugLineNum = 872;BA.debugLine="pm9 = (pm8 + pm10)/2";
 mostCurrent._pm9 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm8))+(double)(Double.parseDouble(mostCurrent._pm10)))/(double)2);
  };
- //BA.debugLineNum = 870;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 874;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8)),(float)(Double.parseDouble(mostCurrent._pm9)),(float)(Double.parseDouble(mostCurrent._pm10))});
  };
- //BA.debugLineNum = 872;BA.debugLine="If pm11 <> tempZeroRange Then";
+ //BA.debugLineNum = 876;BA.debugLine="If pm11 <> tempZeroRange Then";
 if ((mostCurrent._pm11).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 873;BA.debugLine="If pm10 = tempZeroRange Then";
+ //BA.debugLineNum = 877;BA.debugLine="If pm10 = tempZeroRange Then";
 if ((mostCurrent._pm10).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 874;BA.debugLine="pm10 = (pm9 + pm11)/2";
+ //BA.debugLineNum = 878;BA.debugLine="pm10 = (pm9 + pm11)/2";
 mostCurrent._pm10 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm9))+(double)(Double.parseDouble(mostCurrent._pm11)))/(double)2);
  };
- //BA.debugLineNum = 876;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 880;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8)),(float)(Double.parseDouble(mostCurrent._pm9)),(float)(Double.parseDouble(mostCurrent._pm10)),(float)(Double.parseDouble(mostCurrent._pm11))});
  };
- //BA.debugLineNum = 879;BA.debugLine="LineChart.Line_1_PointLabelTextColor = Colors.Ye";
+ //BA.debugLineNum = 883;BA.debugLine="LineChart.Line_1_PointLabelTextColor = Colors.Ye";
 mostCurrent._linechart.setLine_1_PointLabelTextColor(anywheresoftware.b4a.keywords.Common.Colors.Yellow);
- //BA.debugLineNum = 880;BA.debugLine="LineChart.Line_1_PointLabelTextSize = 35.0";
+ //BA.debugLineNum = 884;BA.debugLine="LineChart.Line_1_PointLabelTextSize = 35.0";
 mostCurrent._linechart.setLine_1_PointLabelTextSize((float) (35.0));
- //BA.debugLineNum = 881;BA.debugLine="LineChart.Line_1_LineColor = Colors.Red";
+ //BA.debugLineNum = 885;BA.debugLine="LineChart.Line_1_LineColor = Colors.Red";
 mostCurrent._linechart.setLine_1_LineColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
- //BA.debugLineNum = 882;BA.debugLine="LineChart.Line_1_LineWidth = 11.0";
+ //BA.debugLineNum = 886;BA.debugLine="LineChart.Line_1_LineWidth = 11.0";
 mostCurrent._linechart.setLine_1_LineWidth((float) (11.0));
- //BA.debugLineNum = 883;BA.debugLine="LineChart.Line_1_PointColor = Colors.Black";
+ //BA.debugLineNum = 887;BA.debugLine="LineChart.Line_1_PointColor = Colors.Black";
 mostCurrent._linechart.setLine_1_PointColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
- //BA.debugLineNum = 884;BA.debugLine="LineChart.Line_1_PointSize = 25.0";
+ //BA.debugLineNum = 888;BA.debugLine="LineChart.Line_1_PointSize = 25.0";
 mostCurrent._linechart.setLine_1_PointSize((float) (25.0));
- //BA.debugLineNum = 885;BA.debugLine="LineChart.Line_1_PointShape = LineChart.SHAPE_RO";
+ //BA.debugLineNum = 889;BA.debugLine="LineChart.Line_1_PointShape = LineChart.SHAPE_RO";
 mostCurrent._linechart.setLine_1_PointShape(mostCurrent._linechart.SHAPE_ROUND);
- //BA.debugLineNum = 886;BA.debugLine="LineChart.Line_1_DrawDash = False";
+ //BA.debugLineNum = 890;BA.debugLine="LineChart.Line_1_DrawDash = False";
 mostCurrent._linechart.setLine_1_DrawDash(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 887;BA.debugLine="LineChart.Line_1_DrawCubic = False";
+ //BA.debugLineNum = 891;BA.debugLine="LineChart.Line_1_DrawCubic = False";
 mostCurrent._linechart.setLine_1_DrawCubic(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 893;BA.debugLine="ReadTemperatureDaily(\"Yesterday\")";
+ //BA.debugLineNum = 897;BA.debugLine="ReadTemperatureDaily(\"Yesterday\")";
 _readtemperaturedaily("Yesterday");
- //BA.debugLineNum = 895;BA.debugLine="Dim Yesterday As Long";
+ //BA.debugLineNum = 899;BA.debugLine="Dim Yesterday As Long";
 _yesterday = 0L;
- //BA.debugLineNum = 896;BA.debugLine="Yesterday = DateTime.add(DateTime.Now, 0, 0, -1)";
+ //BA.debugLineNum = 900;BA.debugLine="Yesterday = DateTime.add(DateTime.Now, 0, 0, -1)";
 _yesterday = anywheresoftware.b4a.keywords.Common.DateTime.Add(anywheresoftware.b4a.keywords.Common.DateTime.getNow(),(int) (0),(int) (0),(int) (-1));
- //BA.debugLineNum = 898;BA.debugLine="DateTime.DateFormat = \"MMM d, yyyy\"";
+ //BA.debugLineNum = 902;BA.debugLine="DateTime.DateFormat = \"MMM d, yyyy\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setDateFormat("MMM d, yyyy");
- //BA.debugLineNum = 899;BA.debugLine="LineChart.Line_2_LegendText = \"Yesterday, \" & Da";
+ //BA.debugLineNum = 903;BA.debugLine="LineChart.Line_2_LegendText = \"Yesterday, \" & Da";
 mostCurrent._linechart.setLine_2_LegendText("Yesterday, "+anywheresoftware.b4a.keywords.Common.DateTime.Date(_yesterday));
- //BA.debugLineNum = 901;BA.debugLine="CheckTempBoundariesDaily";
+ //BA.debugLineNum = 905;BA.debugLine="CheckTempBoundariesDaily";
 _checktempboundariesdaily();
- //BA.debugLineNum = 903;BA.debugLine="If am12 <> tempZeroRange Then";
+ //BA.debugLineNum = 907;BA.debugLine="If am12 <> tempZeroRange Then";
 if ((mostCurrent._am12).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 904;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12)";
+ //BA.debugLineNum = 908;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12)";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12))});
  };
- //BA.debugLineNum = 906;BA.debugLine="If am1 <> tempZeroRange Then";
+ //BA.debugLineNum = 910;BA.debugLine="If am1 <> tempZeroRange Then";
 if ((mostCurrent._am1).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 907;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 911;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1))});
  };
- //BA.debugLineNum = 909;BA.debugLine="If am2 <> tempZeroRange Then";
+ //BA.debugLineNum = 913;BA.debugLine="If am2 <> tempZeroRange Then";
 if ((mostCurrent._am2).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 910;BA.debugLine="If am1 = tempZeroRange Then";
+ //BA.debugLineNum = 914;BA.debugLine="If am1 = tempZeroRange Then";
 if ((mostCurrent._am1).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 911;BA.debugLine="am1 = (am12 + am2)/2";
+ //BA.debugLineNum = 915;BA.debugLine="am1 = (am12 + am2)/2";
 mostCurrent._am1 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am12))+(double)(Double.parseDouble(mostCurrent._am2)))/(double)2);
  };
- //BA.debugLineNum = 913;BA.debugLine="If am12 = tempZeroRange Then";
+ //BA.debugLineNum = 917;BA.debugLine="If am12 = tempZeroRange Then";
 if ((mostCurrent._am12).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 914;BA.debugLine="am12 = am1";
+ //BA.debugLineNum = 918;BA.debugLine="am12 = am1";
 mostCurrent._am12 = mostCurrent._am1;
  };
- //BA.debugLineNum = 916;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 920;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2))});
  };
- //BA.debugLineNum = 918;BA.debugLine="If am3 <> tempZeroRange Then";
+ //BA.debugLineNum = 922;BA.debugLine="If am3 <> tempZeroRange Then";
 if ((mostCurrent._am3).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 919;BA.debugLine="If am2 = tempZeroRange Then";
+ //BA.debugLineNum = 923;BA.debugLine="If am2 = tempZeroRange Then";
 if ((mostCurrent._am2).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 920;BA.debugLine="am2 = (am1 + am3)/2";
+ //BA.debugLineNum = 924;BA.debugLine="am2 = (am1 + am3)/2";
 mostCurrent._am2 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am1))+(double)(Double.parseDouble(mostCurrent._am3)))/(double)2);
  };
- //BA.debugLineNum = 922;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 926;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3))});
  };
- //BA.debugLineNum = 924;BA.debugLine="If am4 <> tempZeroRange Then";
+ //BA.debugLineNum = 928;BA.debugLine="If am4 <> tempZeroRange Then";
 if ((mostCurrent._am4).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 925;BA.debugLine="If am3 = tempZeroRange Then";
+ //BA.debugLineNum = 929;BA.debugLine="If am3 = tempZeroRange Then";
 if ((mostCurrent._am3).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 926;BA.debugLine="am3 = (am2 + am4)/2";
+ //BA.debugLineNum = 930;BA.debugLine="am3 = (am2 + am4)/2";
 mostCurrent._am3 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am2))+(double)(Double.parseDouble(mostCurrent._am4)))/(double)2);
  };
- //BA.debugLineNum = 928;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 932;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4))});
  };
- //BA.debugLineNum = 930;BA.debugLine="If am5 <> tempZeroRange Then";
+ //BA.debugLineNum = 934;BA.debugLine="If am5 <> tempZeroRange Then";
 if ((mostCurrent._am5).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 931;BA.debugLine="If am4 = tempZeroRange Then";
+ //BA.debugLineNum = 935;BA.debugLine="If am4 = tempZeroRange Then";
 if ((mostCurrent._am4).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 932;BA.debugLine="am4 = (am3 + am5)/2";
+ //BA.debugLineNum = 936;BA.debugLine="am4 = (am3 + am5)/2";
 mostCurrent._am4 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am3))+(double)(Double.parseDouble(mostCurrent._am5)))/(double)2);
  };
- //BA.debugLineNum = 934;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 938;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5))});
  };
- //BA.debugLineNum = 936;BA.debugLine="If am6 <> tempZeroRange Then";
+ //BA.debugLineNum = 940;BA.debugLine="If am6 <> tempZeroRange Then";
 if ((mostCurrent._am6).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 937;BA.debugLine="If am5 = tempZeroRange Then";
+ //BA.debugLineNum = 941;BA.debugLine="If am5 = tempZeroRange Then";
 if ((mostCurrent._am5).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 938;BA.debugLine="am5 = (am4 + am6)/2";
+ //BA.debugLineNum = 942;BA.debugLine="am5 = (am4 + am6)/2";
 mostCurrent._am5 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am4))+(double)(Double.parseDouble(mostCurrent._am6)))/(double)2);
  };
- //BA.debugLineNum = 940;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 944;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6))});
  };
- //BA.debugLineNum = 942;BA.debugLine="If am7 <> tempZeroRange Then";
+ //BA.debugLineNum = 946;BA.debugLine="If am7 <> tempZeroRange Then";
 if ((mostCurrent._am7).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 943;BA.debugLine="If am6 = tempZeroRange Then";
+ //BA.debugLineNum = 947;BA.debugLine="If am6 = tempZeroRange Then";
 if ((mostCurrent._am6).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 944;BA.debugLine="am6 = (am5 + am7)/2";
+ //BA.debugLineNum = 948;BA.debugLine="am6 = (am5 + am7)/2";
 mostCurrent._am6 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am5))+(double)(Double.parseDouble(mostCurrent._am7)))/(double)2);
  };
- //BA.debugLineNum = 946;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 950;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7))});
  };
- //BA.debugLineNum = 948;BA.debugLine="If am8 <> tempZeroRange Then";
+ //BA.debugLineNum = 952;BA.debugLine="If am8 <> tempZeroRange Then";
 if ((mostCurrent._am8).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 949;BA.debugLine="If am7 = tempZeroRange Then";
+ //BA.debugLineNum = 953;BA.debugLine="If am7 = tempZeroRange Then";
 if ((mostCurrent._am7).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 950;BA.debugLine="am7 = (am6 + am8)/2";
+ //BA.debugLineNum = 954;BA.debugLine="am7 = (am6 + am8)/2";
 mostCurrent._am7 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am6))+(double)(Double.parseDouble(mostCurrent._am8)))/(double)2);
  };
- //BA.debugLineNum = 952;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 956;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8))});
  };
- //BA.debugLineNum = 954;BA.debugLine="If am9 <> tempZeroRange Then";
+ //BA.debugLineNum = 958;BA.debugLine="If am9 <> tempZeroRange Then";
 if ((mostCurrent._am9).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 955;BA.debugLine="If am8 = tempZeroRange Then";
+ //BA.debugLineNum = 959;BA.debugLine="If am8 = tempZeroRange Then";
 if ((mostCurrent._am8).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 956;BA.debugLine="am8 = (am7 + am9)/2";
+ //BA.debugLineNum = 960;BA.debugLine="am8 = (am7 + am9)/2";
 mostCurrent._am8 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am7))+(double)(Double.parseDouble(mostCurrent._am9)))/(double)2);
  };
- //BA.debugLineNum = 958;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 962;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9))});
  };
- //BA.debugLineNum = 960;BA.debugLine="If am10 <> tempZeroRange Then";
+ //BA.debugLineNum = 964;BA.debugLine="If am10 <> tempZeroRange Then";
 if ((mostCurrent._am10).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 961;BA.debugLine="If am9 = tempZeroRange Then";
+ //BA.debugLineNum = 965;BA.debugLine="If am9 = tempZeroRange Then";
 if ((mostCurrent._am9).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 962;BA.debugLine="am9 = (am8 + am10)/2";
+ //BA.debugLineNum = 966;BA.debugLine="am9 = (am8 + am10)/2";
 mostCurrent._am9 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am8))+(double)(Double.parseDouble(mostCurrent._am10)))/(double)2);
  };
- //BA.debugLineNum = 964;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 968;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10))});
  };
- //BA.debugLineNum = 966;BA.debugLine="If am11 <> tempZeroRange Then";
+ //BA.debugLineNum = 970;BA.debugLine="If am11 <> tempZeroRange Then";
 if ((mostCurrent._am11).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 967;BA.debugLine="If am10 = tempZeroRange Then";
+ //BA.debugLineNum = 971;BA.debugLine="If am10 = tempZeroRange Then";
 if ((mostCurrent._am10).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 968;BA.debugLine="am10 = (am9 + am11)/2";
+ //BA.debugLineNum = 972;BA.debugLine="am10 = (am9 + am11)/2";
 mostCurrent._am10 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am9))+(double)(Double.parseDouble(mostCurrent._am11)))/(double)2);
  };
- //BA.debugLineNum = 970;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 974;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11))});
  };
- //BA.debugLineNum = 972;BA.debugLine="If pm12 <> tempZeroRange Then";
+ //BA.debugLineNum = 976;BA.debugLine="If pm12 <> tempZeroRange Then";
 if ((mostCurrent._pm12).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 973;BA.debugLine="If am11 = tempZeroRange Then";
+ //BA.debugLineNum = 977;BA.debugLine="If am11 = tempZeroRange Then";
 if ((mostCurrent._am11).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 974;BA.debugLine="am11 = (am10 + pm12)/2";
+ //BA.debugLineNum = 978;BA.debugLine="am11 = (am10 + pm12)/2";
 mostCurrent._am11 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am10))+(double)(Double.parseDouble(mostCurrent._pm12)))/(double)2);
  };
- //BA.debugLineNum = 976;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 980;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12))});
  };
- //BA.debugLineNum = 978;BA.debugLine="If pm1 <> tempZeroRange Then";
+ //BA.debugLineNum = 982;BA.debugLine="If pm1 <> tempZeroRange Then";
 if ((mostCurrent._pm1).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 979;BA.debugLine="If pm12 = tempZeroRange Then";
+ //BA.debugLineNum = 983;BA.debugLine="If pm12 = tempZeroRange Then";
 if ((mostCurrent._pm12).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 980;BA.debugLine="pm12 = (am11 + pm1)/2";
+ //BA.debugLineNum = 984;BA.debugLine="pm12 = (am11 + pm1)/2";
 mostCurrent._pm12 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am11))+(double)(Double.parseDouble(mostCurrent._pm1)))/(double)2);
  };
- //BA.debugLineNum = 982;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 986;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1))});
  };
- //BA.debugLineNum = 984;BA.debugLine="If pm2 <> tempZeroRange Then";
+ //BA.debugLineNum = 988;BA.debugLine="If pm2 <> tempZeroRange Then";
 if ((mostCurrent._pm2).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 985;BA.debugLine="If pm1 = tempZeroRange Then";
+ //BA.debugLineNum = 989;BA.debugLine="If pm1 = tempZeroRange Then";
 if ((mostCurrent._pm1).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 986;BA.debugLine="pm1 = (pm12 + pm2)/2";
+ //BA.debugLineNum = 990;BA.debugLine="pm1 = (pm12 + pm2)/2";
 mostCurrent._pm1 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm12))+(double)(Double.parseDouble(mostCurrent._pm2)))/(double)2);
  };
- //BA.debugLineNum = 988;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 992;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2))});
  };
- //BA.debugLineNum = 990;BA.debugLine="If pm3 <> tempZeroRange Then";
+ //BA.debugLineNum = 994;BA.debugLine="If pm3 <> tempZeroRange Then";
 if ((mostCurrent._pm3).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 991;BA.debugLine="If pm2 = tempZeroRange Then";
+ //BA.debugLineNum = 995;BA.debugLine="If pm2 = tempZeroRange Then";
 if ((mostCurrent._pm2).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 992;BA.debugLine="pm2 = (pm1 + pm3)/2";
+ //BA.debugLineNum = 996;BA.debugLine="pm2 = (pm1 + pm3)/2";
 mostCurrent._pm2 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm1))+(double)(Double.parseDouble(mostCurrent._pm3)))/(double)2);
  };
- //BA.debugLineNum = 994;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 998;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3))});
  };
- //BA.debugLineNum = 996;BA.debugLine="If pm4 <> tempZeroRange Then";
+ //BA.debugLineNum = 1000;BA.debugLine="If pm4 <> tempZeroRange Then";
 if ((mostCurrent._pm4).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 997;BA.debugLine="If pm3 = tempZeroRange Then";
+ //BA.debugLineNum = 1001;BA.debugLine="If pm3 = tempZeroRange Then";
 if ((mostCurrent._pm3).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 998;BA.debugLine="pm3 = (pm2 + pm4)/2";
+ //BA.debugLineNum = 1002;BA.debugLine="pm3 = (pm2 + pm4)/2";
 mostCurrent._pm3 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm2))+(double)(Double.parseDouble(mostCurrent._pm4)))/(double)2);
  };
- //BA.debugLineNum = 1000;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1004;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4))});
  };
- //BA.debugLineNum = 1002;BA.debugLine="If pm5 <> tempZeroRange Then";
+ //BA.debugLineNum = 1006;BA.debugLine="If pm5 <> tempZeroRange Then";
 if ((mostCurrent._pm5).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1003;BA.debugLine="If pm4 = tempZeroRange Then";
+ //BA.debugLineNum = 1007;BA.debugLine="If pm4 = tempZeroRange Then";
 if ((mostCurrent._pm4).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1004;BA.debugLine="pm4 = (pm3 + pm5)/2";
+ //BA.debugLineNum = 1008;BA.debugLine="pm4 = (pm3 + pm5)/2";
 mostCurrent._pm4 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm3))+(double)(Double.parseDouble(mostCurrent._pm5)))/(double)2);
  };
- //BA.debugLineNum = 1006;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1010;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5))});
  };
- //BA.debugLineNum = 1008;BA.debugLine="If pm6 <> tempZeroRange Then";
+ //BA.debugLineNum = 1012;BA.debugLine="If pm6 <> tempZeroRange Then";
 if ((mostCurrent._pm6).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1009;BA.debugLine="If pm5 = tempZeroRange Then";
+ //BA.debugLineNum = 1013;BA.debugLine="If pm5 = tempZeroRange Then";
 if ((mostCurrent._pm5).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1010;BA.debugLine="pm5 = (pm4 + pm6)/2";
+ //BA.debugLineNum = 1014;BA.debugLine="pm5 = (pm4 + pm6)/2";
 mostCurrent._pm5 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm4))+(double)(Double.parseDouble(mostCurrent._pm6)))/(double)2);
  };
- //BA.debugLineNum = 1012;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1016;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6))});
  };
- //BA.debugLineNum = 1014;BA.debugLine="If pm7 <> tempZeroRange Then";
+ //BA.debugLineNum = 1018;BA.debugLine="If pm7 <> tempZeroRange Then";
 if ((mostCurrent._pm7).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1015;BA.debugLine="If pm6 = tempZeroRange Then";
+ //BA.debugLineNum = 1019;BA.debugLine="If pm6 = tempZeroRange Then";
 if ((mostCurrent._pm6).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1016;BA.debugLine="pm6 = (pm5 + pm7)/2";
+ //BA.debugLineNum = 1020;BA.debugLine="pm6 = (pm5 + pm7)/2";
 mostCurrent._pm6 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm5))+(double)(Double.parseDouble(mostCurrent._pm7)))/(double)2);
  };
- //BA.debugLineNum = 1018;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1022;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7))});
  };
- //BA.debugLineNum = 1020;BA.debugLine="If pm8 <> tempZeroRange Then";
+ //BA.debugLineNum = 1024;BA.debugLine="If pm8 <> tempZeroRange Then";
 if ((mostCurrent._pm8).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1021;BA.debugLine="If pm7 = tempZeroRange Then";
+ //BA.debugLineNum = 1025;BA.debugLine="If pm7 = tempZeroRange Then";
 if ((mostCurrent._pm7).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1022;BA.debugLine="pm7 = (pm6 + pm8)/2";
+ //BA.debugLineNum = 1026;BA.debugLine="pm7 = (pm6 + pm8)/2";
 mostCurrent._pm7 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm6))+(double)(Double.parseDouble(mostCurrent._pm8)))/(double)2);
  };
- //BA.debugLineNum = 1024;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1028;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8))});
  };
- //BA.debugLineNum = 1026;BA.debugLine="If pm9 <> tempZeroRange Then";
+ //BA.debugLineNum = 1030;BA.debugLine="If pm9 <> tempZeroRange Then";
 if ((mostCurrent._pm9).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1027;BA.debugLine="If pm8 = tempZeroRange Then";
+ //BA.debugLineNum = 1031;BA.debugLine="If pm8 = tempZeroRange Then";
 if ((mostCurrent._pm8).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1028;BA.debugLine="pm8 = (pm7 + pm9)/2";
+ //BA.debugLineNum = 1032;BA.debugLine="pm8 = (pm7 + pm9)/2";
 mostCurrent._pm8 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm7))+(double)(Double.parseDouble(mostCurrent._pm9)))/(double)2);
  };
- //BA.debugLineNum = 1030;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1034;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8)),(float)(Double.parseDouble(mostCurrent._pm9))});
  };
- //BA.debugLineNum = 1032;BA.debugLine="If pm10 <> tempZeroRange Then";
+ //BA.debugLineNum = 1036;BA.debugLine="If pm10 <> tempZeroRange Then";
 if ((mostCurrent._pm10).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1033;BA.debugLine="If pm9 = tempZeroRange Then";
+ //BA.debugLineNum = 1037;BA.debugLine="If pm9 = tempZeroRange Then";
 if ((mostCurrent._pm9).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1034;BA.debugLine="pm9 = (pm8 + pm10)/2";
+ //BA.debugLineNum = 1038;BA.debugLine="pm9 = (pm8 + pm10)/2";
 mostCurrent._pm9 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm8))+(double)(Double.parseDouble(mostCurrent._pm10)))/(double)2);
  };
- //BA.debugLineNum = 1036;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1040;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8)),(float)(Double.parseDouble(mostCurrent._pm9)),(float)(Double.parseDouble(mostCurrent._pm10))});
  };
- //BA.debugLineNum = 1038;BA.debugLine="If pm11 <> tempZeroRange Then";
+ //BA.debugLineNum = 1042;BA.debugLine="If pm11 <> tempZeroRange Then";
 if ((mostCurrent._pm11).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 1039;BA.debugLine="If pm10 = tempZeroRange Then";
+ //BA.debugLineNum = 1043;BA.debugLine="If pm10 = tempZeroRange Then";
 if ((mostCurrent._pm10).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 1040;BA.debugLine="pm10 = (pm9 + pm11)/2";
+ //BA.debugLineNum = 1044;BA.debugLine="pm10 = (pm9 + pm11)/2";
 mostCurrent._pm10 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm9))+(double)(Double.parseDouble(mostCurrent._pm11)))/(double)2);
  };
- //BA.debugLineNum = 1042;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 1046;BA.debugLine="LineChart.Line_2_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8)),(float)(Double.parseDouble(mostCurrent._pm9)),(float)(Double.parseDouble(mostCurrent._pm10)),(float)(Double.parseDouble(mostCurrent._pm11))});
  };
- //BA.debugLineNum = 1045;BA.debugLine="LineChart.Line_2_PointLabelTextColor = Colors.Cy";
+ //BA.debugLineNum = 1049;BA.debugLine="LineChart.Line_2_PointLabelTextColor = Colors.Cy";
 mostCurrent._linechart.setLine_2_PointLabelTextColor(anywheresoftware.b4a.keywords.Common.Colors.Cyan);
- //BA.debugLineNum = 1046;BA.debugLine="LineChart.Line_2_PointLabelTextSize = 35.0";
+ //BA.debugLineNum = 1050;BA.debugLine="LineChart.Line_2_PointLabelTextSize = 35.0";
 mostCurrent._linechart.setLine_2_PointLabelTextSize((float) (35.0));
- //BA.debugLineNum = 1047;BA.debugLine="LineChart.Line_2_LineColor = Colors.White";
+ //BA.debugLineNum = 1051;BA.debugLine="LineChart.Line_2_LineColor = Colors.White";
 mostCurrent._linechart.setLine_2_LineColor(anywheresoftware.b4a.keywords.Common.Colors.White);
- //BA.debugLineNum = 1048;BA.debugLine="LineChart.Line_2_LineWidth = 7.0";
+ //BA.debugLineNum = 1052;BA.debugLine="LineChart.Line_2_LineWidth = 7.0";
 mostCurrent._linechart.setLine_2_LineWidth((float) (7.0));
- //BA.debugLineNum = 1049;BA.debugLine="LineChart.Line_2_PointColor = Colors.Cyan";
+ //BA.debugLineNum = 1053;BA.debugLine="LineChart.Line_2_PointColor = Colors.Cyan";
 mostCurrent._linechart.setLine_2_PointColor(anywheresoftware.b4a.keywords.Common.Colors.Cyan);
- //BA.debugLineNum = 1050;BA.debugLine="LineChart.Line_2_PointSize = 10.0";
+ //BA.debugLineNum = 1054;BA.debugLine="LineChart.Line_2_PointSize = 10.0";
 mostCurrent._linechart.setLine_2_PointSize((float) (10.0));
- //BA.debugLineNum = 1051;BA.debugLine="LineChart.Line_2_PointShape = LineChart.SHAPE_RO";
+ //BA.debugLineNum = 1055;BA.debugLine="LineChart.Line_2_PointShape = LineChart.SHAPE_RO";
 mostCurrent._linechart.setLine_2_PointShape(mostCurrent._linechart.SHAPE_ROUND);
- //BA.debugLineNum = 1052;BA.debugLine="LineChart.Line_2_DrawDash = False";
+ //BA.debugLineNum = 1056;BA.debugLine="LineChart.Line_2_DrawDash = False";
 mostCurrent._linechart.setLine_2_DrawDash(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 1053;BA.debugLine="LineChart.Line_2_DrawCubic = False";
+ //BA.debugLineNum = 1057;BA.debugLine="LineChart.Line_2_DrawCubic = False";
 mostCurrent._linechart.setLine_2_DrawCubic(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 1059;BA.debugLine="LineChart.Line_3_LegendText = \"Real time\"";
+ //BA.debugLineNum = 1063;BA.debugLine="LineChart.Line_3_LegendText = \"Real time\"";
 mostCurrent._linechart.setLine_3_LegendText("Real time");
- //BA.debugLineNum = 1060;BA.debugLine="LineChart.Line_3_Data = Array As Float (tempRigh";
+ //BA.debugLineNum = 1064;BA.debugLine="LineChart.Line_3_Data = Array As Float (tempRigh";
 mostCurrent._linechart.setLine_3_Data(new float[]{(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow))});
- //BA.debugLineNum = 1061;BA.debugLine="LineChart.Line_3_PointLabelTextColor = Colors.Gr";
+ //BA.debugLineNum = 1065;BA.debugLine="LineChart.Line_3_PointLabelTextColor = Colors.Gr";
 mostCurrent._linechart.setLine_3_PointLabelTextColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
- //BA.debugLineNum = 1062;BA.debugLine="LineChart.Line_3_PointLabelTextSize = 30.0";
+ //BA.debugLineNum = 1066;BA.debugLine="LineChart.Line_3_PointLabelTextSize = 30.0";
 mostCurrent._linechart.setLine_3_PointLabelTextSize((float) (30.0));
- //BA.debugLineNum = 1063;BA.debugLine="LineChart.Line_3_LineColor = Colors.Green";
+ //BA.debugLineNum = 1067;BA.debugLine="LineChart.Line_3_LineColor = Colors.Green";
 mostCurrent._linechart.setLine_3_LineColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
- //BA.debugLineNum = 1064;BA.debugLine="LineChart.Line_3_LineWidth = 5.0";
+ //BA.debugLineNum = 1068;BA.debugLine="LineChart.Line_3_LineWidth = 5.0";
 mostCurrent._linechart.setLine_3_LineWidth((float) (5.0));
- //BA.debugLineNum = 1065;BA.debugLine="LineChart.Line_3_PointColor = Colors.Green";
+ //BA.debugLineNum = 1069;BA.debugLine="LineChart.Line_3_PointColor = Colors.Green";
 mostCurrent._linechart.setLine_3_PointColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
- //BA.debugLineNum = 1066;BA.debugLine="LineChart.Line_3_PointSize = 1.0";
+ //BA.debugLineNum = 1070;BA.debugLine="LineChart.Line_3_PointSize = 1.0";
 mostCurrent._linechart.setLine_3_PointSize((float) (1.0));
- //BA.debugLineNum = 1067;BA.debugLine="LineChart.Line_3_PointShape = LineChart.SHAPE_RO";
+ //BA.debugLineNum = 1071;BA.debugLine="LineChart.Line_3_PointShape = LineChart.SHAPE_RO";
 mostCurrent._linechart.setLine_3_PointShape(mostCurrent._linechart.SHAPE_ROUND);
- //BA.debugLineNum = 1068;BA.debugLine="LineChart.Line_3_DrawDash = False";
+ //BA.debugLineNum = 1072;BA.debugLine="LineChart.Line_3_DrawDash = False";
 mostCurrent._linechart.setLine_3_DrawDash(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 1069;BA.debugLine="LineChart.Line_3_DrawCubic = False";
+ //BA.debugLineNum = 1073;BA.debugLine="LineChart.Line_3_DrawCubic = False";
 mostCurrent._linechart.setLine_3_DrawCubic(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 1073;BA.debugLine="LineChart.NumberOfLineCharts = 3";
+ //BA.debugLineNum = 1077;BA.debugLine="LineChart.NumberOfLineCharts = 3";
 mostCurrent._linechart.setNumberOfLineCharts((int) (3));
- //BA.debugLineNum = 1075;BA.debugLine="LineChart.DrawTheGraphs";
+ //BA.debugLineNum = 1079;BA.debugLine="LineChart.DrawTheGraphs";
 mostCurrent._linechart.DrawTheGraphs();
- //BA.debugLineNum = 1077;BA.debugLine="TemperatureDailyTimer.Initialize(\"TemperatureDai";
-_temperaturedailytimer.Initialize(processBA,"TemperatureDailyTimer",(long) (1000));
- //BA.debugLineNum = 1078;BA.debugLine="TemperatureDailyTimer.Enabled = True 'start time";
-_temperaturedailytimer.setEnabled(anywheresoftware.b4a.keywords.Common.True);
  } 
-       catch (Exception e377) {
-			processBA.setLastException(e377); //BA.debugLineNum = 1080;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("71900958",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
- //BA.debugLineNum = 1081;BA.debugLine="ToastMessageShow (LastException,True)";
+       catch (Exception e375) {
+			processBA.setLastException(e375); //BA.debugLineNum = 1082;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("6721308",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+ //BA.debugLineNum = 1083;BA.debugLine="ToastMessageShow (LastException,True)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA).getObject()),anywheresoftware.b4a.keywords.Common.True);
  };
- //BA.debugLineNum = 1083;BA.debugLine="End Sub";
+ //BA.debugLineNum = 1085;BA.debugLine="End Sub";
 return "";
 }
 public static String  _temperaturedailytimer_tick() throws Exception{
@@ -3868,428 +3872,424 @@ anywheresoftware.b4j.object.JavaObject _jo = null;
 int _i = 0;
 b4a.example.dateutils._period _p = null;
 long _nexttime = 0L;
- //BA.debugLineNum = 126;BA.debugLine="Private Sub TemperatureHourlyCreate()";
- //BA.debugLineNum = 127;BA.debugLine="Try";
-try { //BA.debugLineNum = 129;BA.debugLine="Dim lv As LayoutValues = GetRealSize";
+ //BA.debugLineNum = 134;BA.debugLine="Private Sub TemperatureHourlyCreate()";
+ //BA.debugLineNum = 135;BA.debugLine="Try";
+try { //BA.debugLineNum = 137;BA.debugLine="Dim lv As LayoutValues = GetRealSize";
 _lv = _getrealsize();
- //BA.debugLineNum = 130;BA.debugLine="Dim jo As JavaObject = Activity";
+ //BA.debugLineNum = 138;BA.debugLine="Dim jo As JavaObject = Activity";
 _jo = new anywheresoftware.b4j.object.JavaObject();
 _jo = (anywheresoftware.b4j.object.JavaObject) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.object.JavaObject(), (java.lang.Object)(mostCurrent._activity.getObject()));
- //BA.debugLineNum = 131;BA.debugLine="jo.RunMethod(\"setBottom\", Array(lv.Height))";
+ //BA.debugLineNum = 139;BA.debugLine="jo.RunMethod(\"setBottom\", Array(lv.Height))";
 _jo.RunMethod("setBottom",new Object[]{(Object)(_lv.Height)});
- //BA.debugLineNum = 132;BA.debugLine="jo.RunMethod(\"setRight\", Array(lv.Width))";
+ //BA.debugLineNum = 140;BA.debugLine="jo.RunMethod(\"setRight\", Array(lv.Width))";
 _jo.RunMethod("setRight",new Object[]{(Object)(_lv.Width)});
- //BA.debugLineNum = 133;BA.debugLine="Activity.Height = lv.Height";
+ //BA.debugLineNum = 141;BA.debugLine="Activity.Height = lv.Height";
 mostCurrent._activity.setHeight(_lv.Height);
- //BA.debugLineNum = 134;BA.debugLine="Activity.Width = lv.Width";
+ //BA.debugLineNum = 142;BA.debugLine="Activity.Width = lv.Width";
 mostCurrent._activity.setWidth(_lv.Width);
- //BA.debugLineNum = 137;BA.debugLine="Activity.LoadLayout(\"Main\")";
+ //BA.debugLineNum = 145;BA.debugLine="Activity.LoadLayout(\"Main\")";
 mostCurrent._activity.LoadLayout("Main",mostCurrent.activityBA);
- //BA.debugLineNum = 139;BA.debugLine="LineChart.GraphBackgroundColor = Colors.DarkGray";
+ //BA.debugLineNum = 147;BA.debugLine="LineChart.GraphBackgroundColor = Colors.DarkGray";
 mostCurrent._linechart.setGraphBackgroundColor(anywheresoftware.b4a.keywords.Common.Colors.DarkGray);
- //BA.debugLineNum = 140;BA.debugLine="LineChart.GraphFrameColor = Colors.Blue";
+ //BA.debugLineNum = 148;BA.debugLine="LineChart.GraphFrameColor = Colors.Blue";
 mostCurrent._linechart.setGraphFrameColor(anywheresoftware.b4a.keywords.Common.Colors.Blue);
- //BA.debugLineNum = 141;BA.debugLine="LineChart.GraphFrameWidth = 4.0";
+ //BA.debugLineNum = 149;BA.debugLine="LineChart.GraphFrameWidth = 4.0";
 mostCurrent._linechart.setGraphFrameWidth((float) (4.0));
- //BA.debugLineNum = 142;BA.debugLine="LineChart.GraphPlotAreaBackgroundColor = Colors.";
+ //BA.debugLineNum = 150;BA.debugLine="LineChart.GraphPlotAreaBackgroundColor = Colors.";
 mostCurrent._linechart.setGraphPlotAreaBackgroundColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (50),(int) (0),(int) (0),(int) (255)));
- //BA.debugLineNum = 143;BA.debugLine="LineChart.GraphTitleTextSize = 15";
+ //BA.debugLineNum = 151;BA.debugLine="LineChart.GraphTitleTextSize = 15";
 mostCurrent._linechart.setGraphTitleTextSize((int) (15));
- //BA.debugLineNum = 144;BA.debugLine="LineChart.GraphTitleColor = Colors.White";
+ //BA.debugLineNum = 152;BA.debugLine="LineChart.GraphTitleColor = Colors.White";
 mostCurrent._linechart.setGraphTitleColor(anywheresoftware.b4a.keywords.Common.Colors.White);
- //BA.debugLineNum = 145;BA.debugLine="LineChart.GraphTitleSkewX = -0.25";
+ //BA.debugLineNum = 153;BA.debugLine="LineChart.GraphTitleSkewX = -0.25";
 mostCurrent._linechart.setGraphTitleSkewX((float) (-0.25));
- //BA.debugLineNum = 146;BA.debugLine="LineChart.GraphTitleUnderline = True";
+ //BA.debugLineNum = 154;BA.debugLine="LineChart.GraphTitleUnderline = True";
 mostCurrent._linechart.setGraphTitleUnderline(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 147;BA.debugLine="LineChart.GraphTitleBold = True";
+ //BA.debugLineNum = 155;BA.debugLine="LineChart.GraphTitleBold = True";
 mostCurrent._linechart.setGraphTitleBold(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 148;BA.debugLine="LineChart.GraphTitle = \"TEMPERATURE HOURLY  \"";
+ //BA.debugLineNum = 156;BA.debugLine="LineChart.GraphTitle = \"TEMPERATURE HOURLY  \"";
 mostCurrent._linechart.setGraphTitle("TEMPERATURE HOURLY  ");
- //BA.debugLineNum = 150;BA.debugLine="LineChart.LegendBackgroundColor = Colors.White";
+ //BA.debugLineNum = 158;BA.debugLine="LineChart.LegendBackgroundColor = Colors.White";
 mostCurrent._linechart.setLegendBackgroundColor(anywheresoftware.b4a.keywords.Common.Colors.White);
- //BA.debugLineNum = 151;BA.debugLine="LineChart.LegendTextColor = Colors.Black";
+ //BA.debugLineNum = 159;BA.debugLine="LineChart.LegendTextColor = Colors.Black";
 mostCurrent._linechart.setLegendTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
- //BA.debugLineNum = 152;BA.debugLine="LineChart.LegendTextSize = 18.0";
+ //BA.debugLineNum = 160;BA.debugLine="LineChart.LegendTextSize = 18.0";
 mostCurrent._linechart.setLegendTextSize((float) (18.0));
- //BA.debugLineNum = 154;BA.debugLine="DateTime.TimeFormat = \"h:mm a\"";
+ //BA.debugLineNum = 162;BA.debugLine="DateTime.TimeFormat = \"h:mm a\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setTimeFormat("h:mm a");
- //BA.debugLineNum = 155;BA.debugLine="LineChart.DomianLabel = \"The time now is: \" & Da";
+ //BA.debugLineNum = 163;BA.debugLine="LineChart.DomianLabel = \"The time now is: \" & Da";
 mostCurrent._linechart.setDomianLabel("The time now is: "+anywheresoftware.b4a.keywords.Common.DateTime.Time(anywheresoftware.b4a.keywords.Common.DateTime.getNow()));
- //BA.debugLineNum = 156;BA.debugLine="LineChart.DomainLabelColor = Colors.Green";
+ //BA.debugLineNum = 164;BA.debugLine="LineChart.DomainLabelColor = Colors.Green";
 mostCurrent._linechart.setDomainLabelColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
- //BA.debugLineNum = 157;BA.debugLine="LineChart.DomainLabelTextSize = 25.0";
+ //BA.debugLineNum = 165;BA.debugLine="LineChart.DomainLabelTextSize = 25.0";
 mostCurrent._linechart.setDomainLabelTextSize((float) (25.0));
- //BA.debugLineNum = 159;BA.debugLine="LineChart.XaxisGridLineColor = Colors.ARGB(100,2";
+ //BA.debugLineNum = 167;BA.debugLine="LineChart.XaxisGridLineColor = Colors.ARGB(100,2";
 mostCurrent._linechart.setXaxisGridLineColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (100),(int) (255),(int) (255),(int) (255)));
- //BA.debugLineNum = 160;BA.debugLine="LineChart.XaxisGridLineWidth = 2.0";
+ //BA.debugLineNum = 168;BA.debugLine="LineChart.XaxisGridLineWidth = 2.0";
 mostCurrent._linechart.setXaxisGridLineWidth((float) (2.0));
- //BA.debugLineNum = 161;BA.debugLine="LineChart.XaxisLabelTicks = 1";
+ //BA.debugLineNum = 169;BA.debugLine="LineChart.XaxisLabelTicks = 1";
 mostCurrent._linechart.setXaxisLabelTicks((int) (1));
- //BA.debugLineNum = 162;BA.debugLine="LineChart.XaxisLabelOrientation = 0";
+ //BA.debugLineNum = 170;BA.debugLine="LineChart.XaxisLabelOrientation = 0";
 mostCurrent._linechart.setXaxisLabelOrientation((float) (0));
- //BA.debugLineNum = 163;BA.debugLine="LineChart.XaxisLabelTextColor = Colors.White";
+ //BA.debugLineNum = 171;BA.debugLine="LineChart.XaxisLabelTextColor = Colors.White";
 mostCurrent._linechart.setXaxisLabelTextColor(anywheresoftware.b4a.keywords.Common.Colors.White);
- //BA.debugLineNum = 164;BA.debugLine="LineChart.XaxisLabelTextSize = 32.0";
+ //BA.debugLineNum = 172;BA.debugLine="LineChart.XaxisLabelTextSize = 32.0";
 mostCurrent._linechart.setXaxisLabelTextSize((float) (32.0));
- //BA.debugLineNum = 168;BA.debugLine="timeRightNow = DateTime.Now";
+ //BA.debugLineNum = 176;BA.debugLine="timeRightNow = DateTime.Now";
 _timerightnow = anywheresoftware.b4a.keywords.Common.DateTime.getNow();
- //BA.debugLineNum = 170;BA.debugLine="For i = 23 To 0 Step -1";
+ //BA.debugLineNum = 178;BA.debugLine="For i = 23 To 0 Step -1";
 {
 final int step33 = -1;
 final int limit33 = (int) (0);
 _i = (int) (23) ;
 for (;_i >= limit33 ;_i = _i + step33 ) {
- //BA.debugLineNum = 171;BA.debugLine="Dim p As Period";
+ //BA.debugLineNum = 179;BA.debugLine="Dim p As Period";
 _p = new b4a.example.dateutils._period();
- //BA.debugLineNum = 172;BA.debugLine="p.Hours = 0";
+ //BA.debugLineNum = 180;BA.debugLine="p.Hours = 0";
 _p.Hours = (int) (0);
- //BA.debugLineNum = 173;BA.debugLine="p.Minutes = (i+1) * -5";
+ //BA.debugLineNum = 181;BA.debugLine="p.Minutes = (i+1) * -5";
 _p.Minutes = (int) ((_i+1)*-5);
- //BA.debugLineNum = 174;BA.debugLine="p.Seconds = 0";
+ //BA.debugLineNum = 182;BA.debugLine="p.Seconds = 0";
 _p.Seconds = (int) (0);
- //BA.debugLineNum = 175;BA.debugLine="Dim NextTime As Long";
+ //BA.debugLineNum = 183;BA.debugLine="Dim NextTime As Long";
 _nexttime = 0L;
- //BA.debugLineNum = 176;BA.debugLine="NextTime = DateUtils.AddPeriod(timeRightNow, p)";
+ //BA.debugLineNum = 184;BA.debugLine="NextTime = DateUtils.AddPeriod(timeRightNow, p)";
 _nexttime = mostCurrent._dateutils._addperiod(mostCurrent.activityBA,_timerightnow,_p);
- //BA.debugLineNum = 177;BA.debugLine="DateTime.TimeFormat = \"HH:mm\"";
+ //BA.debugLineNum = 185;BA.debugLine="DateTime.TimeFormat = \"HH:mm\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setTimeFormat("HH:mm");
- //BA.debugLineNum = 179;BA.debugLine="timeArray(23-i) = DateTime.Time(NextTime) 'Date";
+ //BA.debugLineNum = 187;BA.debugLine="timeArray(23-i) = DateTime.Time(NextTime) 'Date";
 mostCurrent._timearray[(int) (23-_i)] = anywheresoftware.b4a.keywords.Common.DateTime.Time(_nexttime);
  }
 };
- //BA.debugLineNum = 181;BA.debugLine="LineChart.XAxisLabels = timeArray 'Array As Stri";
+ //BA.debugLineNum = 189;BA.debugLine="LineChart.XAxisLabels = timeArray 'Array As Stri";
 mostCurrent._linechart.setXAxisLabels(mostCurrent._timearray);
- //BA.debugLineNum = 184;BA.debugLine="LineChart.YaxisDivisions = 10";
+ //BA.debugLineNum = 192;BA.debugLine="LineChart.YaxisDivisions = 10";
 mostCurrent._linechart.setYaxisDivisions((int) (10));
- //BA.debugLineNum = 186;BA.debugLine="LineChart.YaxisValueFormat = LineChart.ValueForm";
+ //BA.debugLineNum = 194;BA.debugLine="LineChart.YaxisValueFormat = LineChart.ValueForm";
 mostCurrent._linechart.setYaxisValueFormat(mostCurrent._linechart.ValueFormat_2);
- //BA.debugLineNum = 187;BA.debugLine="LineChart.YaxisGridLineColor = Colors.Black";
+ //BA.debugLineNum = 195;BA.debugLine="LineChart.YaxisGridLineColor = Colors.Black";
 mostCurrent._linechart.setYaxisGridLineColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
- //BA.debugLineNum = 188;BA.debugLine="LineChart.YaxisGridLineWidth = 2";
+ //BA.debugLineNum = 196;BA.debugLine="LineChart.YaxisGridLineWidth = 2";
 mostCurrent._linechart.setYaxisGridLineWidth((float) (2));
- //BA.debugLineNum = 189;BA.debugLine="LineChart.YaxisLabelTicks = 1";
+ //BA.debugLineNum = 197;BA.debugLine="LineChart.YaxisLabelTicks = 1";
 mostCurrent._linechart.setYaxisLabelTicks((int) (1));
- //BA.debugLineNum = 190;BA.debugLine="LineChart.YaxisLabelColor = Colors.Yellow";
+ //BA.debugLineNum = 198;BA.debugLine="LineChart.YaxisLabelColor = Colors.Yellow";
 mostCurrent._linechart.setYaxisLabelColor(anywheresoftware.b4a.keywords.Common.Colors.Yellow);
- //BA.debugLineNum = 191;BA.debugLine="LineChart.YaxisLabelOrientation = -30";
+ //BA.debugLineNum = 199;BA.debugLine="LineChart.YaxisLabelOrientation = -30";
 mostCurrent._linechart.setYaxisLabelOrientation((float) (-30));
- //BA.debugLineNum = 192;BA.debugLine="LineChart.YaxisLabelTextSize = 25.0";
+ //BA.debugLineNum = 200;BA.debugLine="LineChart.YaxisLabelTextSize = 25.0";
 mostCurrent._linechart.setYaxisLabelTextSize((float) (25.0));
- //BA.debugLineNum = 193;BA.debugLine="LineChart.YaxisTitleColor = Colors.Green";
+ //BA.debugLineNum = 201;BA.debugLine="LineChart.YaxisTitleColor = Colors.Green";
 mostCurrent._linechart.setYaxisTitleColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
- //BA.debugLineNum = 194;BA.debugLine="LineChart.YaxisTitleFakeBold = False";
+ //BA.debugLineNum = 202;BA.debugLine="LineChart.YaxisTitleFakeBold = False";
 mostCurrent._linechart.setYaxisTitleFakeBold(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 195;BA.debugLine="LineChart.YaxisTitleTextSize = 20.0";
+ //BA.debugLineNum = 203;BA.debugLine="LineChart.YaxisTitleTextSize = 20.0";
 mostCurrent._linechart.setYaxisTitleTextSize((float) (20.0));
- //BA.debugLineNum = 196;BA.debugLine="LineChart.YaxisTitleUnderline = True";
+ //BA.debugLineNum = 204;BA.debugLine="LineChart.YaxisTitleUnderline = True";
 mostCurrent._linechart.setYaxisTitleUnderline(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 197;BA.debugLine="LineChart.YaxisTitleTextSkewness = 0";
+ //BA.debugLineNum = 205;BA.debugLine="LineChart.YaxisTitleTextSkewness = 0";
 mostCurrent._linechart.setYaxisTitleTextSkewness((float) (0));
- //BA.debugLineNum = 198;BA.debugLine="LineChart.YaxisLabelAndTitleDistance = 60.0";
+ //BA.debugLineNum = 206;BA.debugLine="LineChart.YaxisLabelAndTitleDistance = 60.0";
 mostCurrent._linechart.setYaxisLabelAndTitleDistance((float) (60.0));
- //BA.debugLineNum = 199;BA.debugLine="LineChart.YaxisTitle = \"Temperature (Fahrenheit)";
+ //BA.debugLineNum = 207;BA.debugLine="LineChart.YaxisTitle = \"Temperature (Fahrenheit)";
 mostCurrent._linechart.setYaxisTitle("Temperature (Fahrenheit)");
- //BA.debugLineNum = 201;BA.debugLine="LineChart.MaxNumberOfEntriesPerLineChart = 24";
+ //BA.debugLineNum = 209;BA.debugLine="LineChart.MaxNumberOfEntriesPerLineChart = 24";
 mostCurrent._linechart.setMaxNumberOfEntriesPerLineChart((int) (24));
- //BA.debugLineNum = 202;BA.debugLine="LineChart.GraphLegendVisibility = False";
+ //BA.debugLineNum = 210;BA.debugLine="LineChart.GraphLegendVisibility = False";
 mostCurrent._linechart.setGraphLegendVisibility(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 206;BA.debugLine="ReadTemperatureHourly(\"Today\")";
+ //BA.debugLineNum = 214;BA.debugLine="ReadTemperatureHourly(\"Today\")";
 _readtemperaturehourly("Today");
- //BA.debugLineNum = 208;BA.debugLine="DateTime.DateFormat = \"MMM d, yyyy\"";
+ //BA.debugLineNum = 216;BA.debugLine="DateTime.DateFormat = \"MMM d, yyyy\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setDateFormat("MMM d, yyyy");
- //BA.debugLineNum = 209;BA.debugLine="LineChart.Line_1_LegendText = \"From \" & timeArra";
+ //BA.debugLineNum = 217;BA.debugLine="LineChart.Line_1_LegendText = \"From \" & timeArra";
 mostCurrent._linechart.setLine_1_LegendText("From "+mostCurrent._timearray[(int) (0)]+" to "+mostCurrent._timearray[(int) (23)]);
- //BA.debugLineNum = 211;BA.debugLine="CheckTempBoundaries";
+ //BA.debugLineNum = 219;BA.debugLine="CheckTempBoundaries";
 _checktempboundaries();
- //BA.debugLineNum = 213;BA.debugLine="If am12 <> tempZeroRange Then";
+ //BA.debugLineNum = 221;BA.debugLine="If am12 <> tempZeroRange Then";
 if ((mostCurrent._am12).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 214;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12)";
+ //BA.debugLineNum = 222;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12)";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12))});
  };
- //BA.debugLineNum = 216;BA.debugLine="If am1 <> tempZeroRange Then";
+ //BA.debugLineNum = 224;BA.debugLine="If am1 <> tempZeroRange Then";
 if ((mostCurrent._am1).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 217;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 225;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1))});
  };
- //BA.debugLineNum = 219;BA.debugLine="If am2 <> tempZeroRange Then";
+ //BA.debugLineNum = 227;BA.debugLine="If am2 <> tempZeroRange Then";
 if ((mostCurrent._am2).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 220;BA.debugLine="If am1 = tempZeroRange Then";
+ //BA.debugLineNum = 228;BA.debugLine="If am1 = tempZeroRange Then";
 if ((mostCurrent._am1).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 221;BA.debugLine="am1 = (am12 + am2)/2";
+ //BA.debugLineNum = 229;BA.debugLine="am1 = (am12 + am2)/2";
 mostCurrent._am1 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am12))+(double)(Double.parseDouble(mostCurrent._am2)))/(double)2);
  };
- //BA.debugLineNum = 223;BA.debugLine="If am12 = tempZeroRange Then";
+ //BA.debugLineNum = 231;BA.debugLine="If am12 = tempZeroRange Then";
 if ((mostCurrent._am12).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 224;BA.debugLine="am12 = am1";
+ //BA.debugLineNum = 232;BA.debugLine="am12 = am1";
 mostCurrent._am12 = mostCurrent._am1;
  };
- //BA.debugLineNum = 226;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 234;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2))});
  };
- //BA.debugLineNum = 228;BA.debugLine="If am3 <> tempZeroRange Then";
+ //BA.debugLineNum = 236;BA.debugLine="If am3 <> tempZeroRange Then";
 if ((mostCurrent._am3).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 229;BA.debugLine="If am2 = tempZeroRange Then";
+ //BA.debugLineNum = 237;BA.debugLine="If am2 = tempZeroRange Then";
 if ((mostCurrent._am2).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 230;BA.debugLine="am2 = (am1 + am3)/2";
+ //BA.debugLineNum = 238;BA.debugLine="am2 = (am1 + am3)/2";
 mostCurrent._am2 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am1))+(double)(Double.parseDouble(mostCurrent._am3)))/(double)2);
  };
- //BA.debugLineNum = 232;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 240;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3))});
  };
- //BA.debugLineNum = 234;BA.debugLine="If am4 <> tempZeroRange Then";
+ //BA.debugLineNum = 242;BA.debugLine="If am4 <> tempZeroRange Then";
 if ((mostCurrent._am4).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 235;BA.debugLine="If am3 = tempZeroRange Then";
+ //BA.debugLineNum = 243;BA.debugLine="If am3 = tempZeroRange Then";
 if ((mostCurrent._am3).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 236;BA.debugLine="am3 = (am2 + am4)/2";
+ //BA.debugLineNum = 244;BA.debugLine="am3 = (am2 + am4)/2";
 mostCurrent._am3 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am2))+(double)(Double.parseDouble(mostCurrent._am4)))/(double)2);
  };
- //BA.debugLineNum = 238;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 246;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4))});
  };
- //BA.debugLineNum = 240;BA.debugLine="If am5 <> tempZeroRange Then";
+ //BA.debugLineNum = 248;BA.debugLine="If am5 <> tempZeroRange Then";
 if ((mostCurrent._am5).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 241;BA.debugLine="If am4 = tempZeroRange Then";
+ //BA.debugLineNum = 249;BA.debugLine="If am4 = tempZeroRange Then";
 if ((mostCurrent._am4).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 242;BA.debugLine="am4 = (am3 + am5)/2";
+ //BA.debugLineNum = 250;BA.debugLine="am4 = (am3 + am5)/2";
 mostCurrent._am4 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am3))+(double)(Double.parseDouble(mostCurrent._am5)))/(double)2);
  };
- //BA.debugLineNum = 244;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 252;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5))});
  };
- //BA.debugLineNum = 246;BA.debugLine="If am6 <> tempZeroRange Then";
+ //BA.debugLineNum = 254;BA.debugLine="If am6 <> tempZeroRange Then";
 if ((mostCurrent._am6).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 247;BA.debugLine="If am5 = tempZeroRange Then";
+ //BA.debugLineNum = 255;BA.debugLine="If am5 = tempZeroRange Then";
 if ((mostCurrent._am5).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 248;BA.debugLine="am5 = (am4 + am6)/2";
+ //BA.debugLineNum = 256;BA.debugLine="am5 = (am4 + am6)/2";
 mostCurrent._am5 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am4))+(double)(Double.parseDouble(mostCurrent._am6)))/(double)2);
  };
- //BA.debugLineNum = 250;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 258;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6))});
  };
- //BA.debugLineNum = 252;BA.debugLine="If am7 <> tempZeroRange Then";
+ //BA.debugLineNum = 260;BA.debugLine="If am7 <> tempZeroRange Then";
 if ((mostCurrent._am7).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 253;BA.debugLine="If am6 = tempZeroRange Then";
+ //BA.debugLineNum = 261;BA.debugLine="If am6 = tempZeroRange Then";
 if ((mostCurrent._am6).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 254;BA.debugLine="am6 = (am5 + am7)/2";
+ //BA.debugLineNum = 262;BA.debugLine="am6 = (am5 + am7)/2";
 mostCurrent._am6 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am5))+(double)(Double.parseDouble(mostCurrent._am7)))/(double)2);
  };
- //BA.debugLineNum = 256;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 264;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7))});
  };
- //BA.debugLineNum = 258;BA.debugLine="If am8 <> tempZeroRange Then";
+ //BA.debugLineNum = 266;BA.debugLine="If am8 <> tempZeroRange Then";
 if ((mostCurrent._am8).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 259;BA.debugLine="If am7 = tempZeroRange Then";
+ //BA.debugLineNum = 267;BA.debugLine="If am7 = tempZeroRange Then";
 if ((mostCurrent._am7).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 260;BA.debugLine="am7 = (am6 + am8)/2";
+ //BA.debugLineNum = 268;BA.debugLine="am7 = (am6 + am8)/2";
 mostCurrent._am7 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am6))+(double)(Double.parseDouble(mostCurrent._am8)))/(double)2);
  };
- //BA.debugLineNum = 262;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 270;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8))});
  };
- //BA.debugLineNum = 264;BA.debugLine="If am9 <> tempZeroRange Then";
+ //BA.debugLineNum = 272;BA.debugLine="If am9 <> tempZeroRange Then";
 if ((mostCurrent._am9).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 265;BA.debugLine="If am8 = tempZeroRange Then";
+ //BA.debugLineNum = 273;BA.debugLine="If am8 = tempZeroRange Then";
 if ((mostCurrent._am8).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 266;BA.debugLine="am8 = (am7 + am9)/2";
+ //BA.debugLineNum = 274;BA.debugLine="am8 = (am7 + am9)/2";
 mostCurrent._am8 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am7))+(double)(Double.parseDouble(mostCurrent._am9)))/(double)2);
  };
- //BA.debugLineNum = 268;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 276;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9))});
  };
- //BA.debugLineNum = 270;BA.debugLine="If am10 <> tempZeroRange Then";
+ //BA.debugLineNum = 278;BA.debugLine="If am10 <> tempZeroRange Then";
 if ((mostCurrent._am10).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 271;BA.debugLine="If am9 = tempZeroRange Then";
+ //BA.debugLineNum = 279;BA.debugLine="If am9 = tempZeroRange Then";
 if ((mostCurrent._am9).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 272;BA.debugLine="am9 = (am8 + am10)/2";
+ //BA.debugLineNum = 280;BA.debugLine="am9 = (am8 + am10)/2";
 mostCurrent._am9 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am8))+(double)(Double.parseDouble(mostCurrent._am10)))/(double)2);
  };
- //BA.debugLineNum = 274;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 282;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10))});
  };
- //BA.debugLineNum = 276;BA.debugLine="If am11 <> tempZeroRange Then";
+ //BA.debugLineNum = 284;BA.debugLine="If am11 <> tempZeroRange Then";
 if ((mostCurrent._am11).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 277;BA.debugLine="If am10 = tempZeroRange Then";
+ //BA.debugLineNum = 285;BA.debugLine="If am10 = tempZeroRange Then";
 if ((mostCurrent._am10).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 278;BA.debugLine="am10 = (am9 + am11)/2";
+ //BA.debugLineNum = 286;BA.debugLine="am10 = (am9 + am11)/2";
 mostCurrent._am10 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am9))+(double)(Double.parseDouble(mostCurrent._am11)))/(double)2);
  };
- //BA.debugLineNum = 280;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 288;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11))});
  };
- //BA.debugLineNum = 282;BA.debugLine="If pm12 <> tempZeroRange Then";
+ //BA.debugLineNum = 290;BA.debugLine="If pm12 <> tempZeroRange Then";
 if ((mostCurrent._pm12).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 283;BA.debugLine="If am11 = tempZeroRange Then";
+ //BA.debugLineNum = 291;BA.debugLine="If am11 = tempZeroRange Then";
 if ((mostCurrent._am11).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 284;BA.debugLine="am11 = (am10 + pm12)/2";
+ //BA.debugLineNum = 292;BA.debugLine="am11 = (am10 + pm12)/2";
 mostCurrent._am11 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am10))+(double)(Double.parseDouble(mostCurrent._pm12)))/(double)2);
  };
- //BA.debugLineNum = 286;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 294;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12))});
  };
- //BA.debugLineNum = 288;BA.debugLine="If pm1 <> tempZeroRange Then";
+ //BA.debugLineNum = 296;BA.debugLine="If pm1 <> tempZeroRange Then";
 if ((mostCurrent._pm1).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 289;BA.debugLine="If pm12 = tempZeroRange Then";
+ //BA.debugLineNum = 297;BA.debugLine="If pm12 = tempZeroRange Then";
 if ((mostCurrent._pm12).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 290;BA.debugLine="pm12 = (am11 + pm1)/2";
+ //BA.debugLineNum = 298;BA.debugLine="pm12 = (am11 + pm1)/2";
 mostCurrent._pm12 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._am11))+(double)(Double.parseDouble(mostCurrent._pm1)))/(double)2);
  };
- //BA.debugLineNum = 292;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 300;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1))});
  };
- //BA.debugLineNum = 294;BA.debugLine="If pm2 <> tempZeroRange Then";
+ //BA.debugLineNum = 302;BA.debugLine="If pm2 <> tempZeroRange Then";
 if ((mostCurrent._pm2).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 295;BA.debugLine="If pm1 = tempZeroRange Then";
+ //BA.debugLineNum = 303;BA.debugLine="If pm1 = tempZeroRange Then";
 if ((mostCurrent._pm1).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 296;BA.debugLine="pm1 = (pm12 + pm2)/2";
+ //BA.debugLineNum = 304;BA.debugLine="pm1 = (pm12 + pm2)/2";
 mostCurrent._pm1 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm12))+(double)(Double.parseDouble(mostCurrent._pm2)))/(double)2);
  };
- //BA.debugLineNum = 298;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 306;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2))});
  };
- //BA.debugLineNum = 300;BA.debugLine="If pm3 <> tempZeroRange Then";
+ //BA.debugLineNum = 308;BA.debugLine="If pm3 <> tempZeroRange Then";
 if ((mostCurrent._pm3).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 301;BA.debugLine="If pm2 = tempZeroRange Then";
+ //BA.debugLineNum = 309;BA.debugLine="If pm2 = tempZeroRange Then";
 if ((mostCurrent._pm2).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 302;BA.debugLine="pm2 = (pm1 + pm3)/2";
+ //BA.debugLineNum = 310;BA.debugLine="pm2 = (pm1 + pm3)/2";
 mostCurrent._pm2 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm1))+(double)(Double.parseDouble(mostCurrent._pm3)))/(double)2);
  };
- //BA.debugLineNum = 304;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 312;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3))});
  };
- //BA.debugLineNum = 306;BA.debugLine="If pm4 <> tempZeroRange Then";
+ //BA.debugLineNum = 314;BA.debugLine="If pm4 <> tempZeroRange Then";
 if ((mostCurrent._pm4).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 307;BA.debugLine="If pm3 = tempZeroRange Then";
+ //BA.debugLineNum = 315;BA.debugLine="If pm3 = tempZeroRange Then";
 if ((mostCurrent._pm3).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 308;BA.debugLine="pm3 = (pm2 + pm4)/2";
+ //BA.debugLineNum = 316;BA.debugLine="pm3 = (pm2 + pm4)/2";
 mostCurrent._pm3 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm2))+(double)(Double.parseDouble(mostCurrent._pm4)))/(double)2);
  };
- //BA.debugLineNum = 310;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 318;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4))});
  };
- //BA.debugLineNum = 312;BA.debugLine="If pm5 <> tempZeroRange Then";
+ //BA.debugLineNum = 320;BA.debugLine="If pm5 <> tempZeroRange Then";
 if ((mostCurrent._pm5).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 313;BA.debugLine="If pm4 = tempZeroRange Then";
+ //BA.debugLineNum = 321;BA.debugLine="If pm4 = tempZeroRange Then";
 if ((mostCurrent._pm4).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 314;BA.debugLine="pm4 = (pm3 + pm5)/2";
+ //BA.debugLineNum = 322;BA.debugLine="pm4 = (pm3 + pm5)/2";
 mostCurrent._pm4 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm3))+(double)(Double.parseDouble(mostCurrent._pm5)))/(double)2);
  };
- //BA.debugLineNum = 316;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 324;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5))});
  };
- //BA.debugLineNum = 318;BA.debugLine="If pm6 <> tempZeroRange Then";
+ //BA.debugLineNum = 326;BA.debugLine="If pm6 <> tempZeroRange Then";
 if ((mostCurrent._pm6).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 319;BA.debugLine="If pm5 = tempZeroRange Then";
+ //BA.debugLineNum = 327;BA.debugLine="If pm5 = tempZeroRange Then";
 if ((mostCurrent._pm5).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 320;BA.debugLine="pm5 = (pm4 + pm6)/2";
+ //BA.debugLineNum = 328;BA.debugLine="pm5 = (pm4 + pm6)/2";
 mostCurrent._pm5 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm4))+(double)(Double.parseDouble(mostCurrent._pm6)))/(double)2);
  };
- //BA.debugLineNum = 322;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 330;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6))});
  };
- //BA.debugLineNum = 324;BA.debugLine="If pm7 <> tempZeroRange Then";
+ //BA.debugLineNum = 332;BA.debugLine="If pm7 <> tempZeroRange Then";
 if ((mostCurrent._pm7).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 325;BA.debugLine="If pm6 = tempZeroRange Then";
+ //BA.debugLineNum = 333;BA.debugLine="If pm6 = tempZeroRange Then";
 if ((mostCurrent._pm6).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 326;BA.debugLine="pm6 = (pm5 + pm7)/2";
+ //BA.debugLineNum = 334;BA.debugLine="pm6 = (pm5 + pm7)/2";
 mostCurrent._pm6 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm5))+(double)(Double.parseDouble(mostCurrent._pm7)))/(double)2);
  };
- //BA.debugLineNum = 328;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 336;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7))});
  };
- //BA.debugLineNum = 330;BA.debugLine="If pm8 <> tempZeroRange Then";
+ //BA.debugLineNum = 338;BA.debugLine="If pm8 <> tempZeroRange Then";
 if ((mostCurrent._pm8).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 331;BA.debugLine="If pm7 = tempZeroRange Then";
+ //BA.debugLineNum = 339;BA.debugLine="If pm7 = tempZeroRange Then";
 if ((mostCurrent._pm7).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 332;BA.debugLine="pm7 = (pm6 + pm8)/2";
+ //BA.debugLineNum = 340;BA.debugLine="pm7 = (pm6 + pm8)/2";
 mostCurrent._pm7 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm6))+(double)(Double.parseDouble(mostCurrent._pm8)))/(double)2);
  };
- //BA.debugLineNum = 334;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 342;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8))});
  };
- //BA.debugLineNum = 336;BA.debugLine="If pm9 <> tempZeroRange Then";
+ //BA.debugLineNum = 344;BA.debugLine="If pm9 <> tempZeroRange Then";
 if ((mostCurrent._pm9).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 337;BA.debugLine="If pm8 = tempZeroRange Then";
+ //BA.debugLineNum = 345;BA.debugLine="If pm8 = tempZeroRange Then";
 if ((mostCurrent._pm8).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 338;BA.debugLine="pm8 = (pm7 + pm9)/2";
+ //BA.debugLineNum = 346;BA.debugLine="pm8 = (pm7 + pm9)/2";
 mostCurrent._pm8 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm7))+(double)(Double.parseDouble(mostCurrent._pm9)))/(double)2);
  };
- //BA.debugLineNum = 340;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 348;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8)),(float)(Double.parseDouble(mostCurrent._pm9))});
  };
- //BA.debugLineNum = 342;BA.debugLine="If pm10 <> tempZeroRange Then";
+ //BA.debugLineNum = 350;BA.debugLine="If pm10 <> tempZeroRange Then";
 if ((mostCurrent._pm10).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 343;BA.debugLine="If pm9 = tempZeroRange Then";
+ //BA.debugLineNum = 351;BA.debugLine="If pm9 = tempZeroRange Then";
 if ((mostCurrent._pm9).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 344;BA.debugLine="pm9 = (pm8 + pm10)/2";
+ //BA.debugLineNum = 352;BA.debugLine="pm9 = (pm8 + pm10)/2";
 mostCurrent._pm9 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm8))+(double)(Double.parseDouble(mostCurrent._pm10)))/(double)2);
  };
- //BA.debugLineNum = 346;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 354;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8)),(float)(Double.parseDouble(mostCurrent._pm9)),(float)(Double.parseDouble(mostCurrent._pm10))});
  };
- //BA.debugLineNum = 348;BA.debugLine="If pm11 <> tempZeroRange Then";
+ //BA.debugLineNum = 356;BA.debugLine="If pm11 <> tempZeroRange Then";
 if ((mostCurrent._pm11).equals(BA.NumberToString(_tempzerorange)) == false) { 
- //BA.debugLineNum = 349;BA.debugLine="If pm10 = tempZeroRange Then";
+ //BA.debugLineNum = 357;BA.debugLine="If pm10 = tempZeroRange Then";
 if ((mostCurrent._pm10).equals(BA.NumberToString(_tempzerorange))) { 
- //BA.debugLineNum = 350;BA.debugLine="pm10 = (pm9 + pm11)/2";
+ //BA.debugLineNum = 358;BA.debugLine="pm10 = (pm9 + pm11)/2";
 mostCurrent._pm10 = BA.NumberToString(((double)(Double.parseDouble(mostCurrent._pm9))+(double)(Double.parseDouble(mostCurrent._pm11)))/(double)2);
  };
- //BA.debugLineNum = 352;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
+ //BA.debugLineNum = 360;BA.debugLine="LineChart.Line_1_Data = Array As Float (am12, a";
 mostCurrent._linechart.setLine_1_Data(new float[]{(float)(Double.parseDouble(mostCurrent._am12)),(float)(Double.parseDouble(mostCurrent._am1)),(float)(Double.parseDouble(mostCurrent._am2)),(float)(Double.parseDouble(mostCurrent._am3)),(float)(Double.parseDouble(mostCurrent._am4)),(float)(Double.parseDouble(mostCurrent._am5)),(float)(Double.parseDouble(mostCurrent._am6)),(float)(Double.parseDouble(mostCurrent._am7)),(float)(Double.parseDouble(mostCurrent._am8)),(float)(Double.parseDouble(mostCurrent._am9)),(float)(Double.parseDouble(mostCurrent._am10)),(float)(Double.parseDouble(mostCurrent._am11)),(float)(Double.parseDouble(mostCurrent._pm12)),(float)(Double.parseDouble(mostCurrent._pm1)),(float)(Double.parseDouble(mostCurrent._pm2)),(float)(Double.parseDouble(mostCurrent._pm3)),(float)(Double.parseDouble(mostCurrent._pm4)),(float)(Double.parseDouble(mostCurrent._pm5)),(float)(Double.parseDouble(mostCurrent._pm6)),(float)(Double.parseDouble(mostCurrent._pm7)),(float)(Double.parseDouble(mostCurrent._pm8)),(float)(Double.parseDouble(mostCurrent._pm9)),(float)(Double.parseDouble(mostCurrent._pm10)),(float)(Double.parseDouble(mostCurrent._pm11))});
  };
- //BA.debugLineNum = 355;BA.debugLine="LineChart.Line_1_PointLabelTextColor = Colors.Ye";
+ //BA.debugLineNum = 363;BA.debugLine="LineChart.Line_1_PointLabelTextColor = Colors.Ye";
 mostCurrent._linechart.setLine_1_PointLabelTextColor(anywheresoftware.b4a.keywords.Common.Colors.Yellow);
- //BA.debugLineNum = 356;BA.debugLine="LineChart.Line_1_PointLabelTextSize = 35.0";
+ //BA.debugLineNum = 364;BA.debugLine="LineChart.Line_1_PointLabelTextSize = 35.0";
 mostCurrent._linechart.setLine_1_PointLabelTextSize((float) (35.0));
- //BA.debugLineNum = 357;BA.debugLine="LineChart.Line_1_LineColor = Colors.Red";
+ //BA.debugLineNum = 365;BA.debugLine="LineChart.Line_1_LineColor = Colors.Red";
 mostCurrent._linechart.setLine_1_LineColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
- //BA.debugLineNum = 358;BA.debugLine="LineChart.Line_1_LineWidth = 11.0";
+ //BA.debugLineNum = 366;BA.debugLine="LineChart.Line_1_LineWidth = 11.0";
 mostCurrent._linechart.setLine_1_LineWidth((float) (11.0));
- //BA.debugLineNum = 359;BA.debugLine="LineChart.Line_1_PointColor = Colors.Black";
+ //BA.debugLineNum = 367;BA.debugLine="LineChart.Line_1_PointColor = Colors.Black";
 mostCurrent._linechart.setLine_1_PointColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
- //BA.debugLineNum = 360;BA.debugLine="LineChart.Line_1_PointSize = 25.0";
+ //BA.debugLineNum = 368;BA.debugLine="LineChart.Line_1_PointSize = 25.0";
 mostCurrent._linechart.setLine_1_PointSize((float) (25.0));
- //BA.debugLineNum = 361;BA.debugLine="LineChart.Line_1_PointShape = LineChart.SHAPE_RO";
+ //BA.debugLineNum = 369;BA.debugLine="LineChart.Line_1_PointShape = LineChart.SHAPE_RO";
 mostCurrent._linechart.setLine_1_PointShape(mostCurrent._linechart.SHAPE_ROUND);
- //BA.debugLineNum = 362;BA.debugLine="LineChart.Line_1_DrawDash = False";
+ //BA.debugLineNum = 370;BA.debugLine="LineChart.Line_1_DrawDash = False";
 mostCurrent._linechart.setLine_1_DrawDash(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 363;BA.debugLine="LineChart.Line_1_DrawCubic = False";
+ //BA.debugLineNum = 371;BA.debugLine="LineChart.Line_1_DrawCubic = False";
 mostCurrent._linechart.setLine_1_DrawCubic(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 370;BA.debugLine="LineChart.Line_2_Data = Array As Float (tempRigh";
+ //BA.debugLineNum = 378;BA.debugLine="LineChart.Line_2_Data = Array As Float (tempRigh";
 mostCurrent._linechart.setLine_2_Data(new float[]{(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow)),(float)(Double.parseDouble(mostCurrent._temprightnow))});
- //BA.debugLineNum = 371;BA.debugLine="LineChart.Line_2_PointLabelTextColor = Colors.Gr";
+ //BA.debugLineNum = 379;BA.debugLine="LineChart.Line_2_PointLabelTextColor = Colors.Gr";
 mostCurrent._linechart.setLine_2_PointLabelTextColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
- //BA.debugLineNum = 372;BA.debugLine="LineChart.Line_2_PointLabelTextSize = 30.0";
+ //BA.debugLineNum = 380;BA.debugLine="LineChart.Line_2_PointLabelTextSize = 30.0";
 mostCurrent._linechart.setLine_2_PointLabelTextSize((float) (30.0));
- //BA.debugLineNum = 373;BA.debugLine="LineChart.Line_2_LineColor = Colors.Green";
+ //BA.debugLineNum = 381;BA.debugLine="LineChart.Line_2_LineColor = Colors.Green";
 mostCurrent._linechart.setLine_2_LineColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
- //BA.debugLineNum = 374;BA.debugLine="LineChart.Line_2_LineWidth = 5.0";
+ //BA.debugLineNum = 382;BA.debugLine="LineChart.Line_2_LineWidth = 5.0";
 mostCurrent._linechart.setLine_2_LineWidth((float) (5.0));
- //BA.debugLineNum = 375;BA.debugLine="LineChart.Line_2_PointColor = Colors.Green";
+ //BA.debugLineNum = 383;BA.debugLine="LineChart.Line_2_PointColor = Colors.Green";
 mostCurrent._linechart.setLine_2_PointColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
- //BA.debugLineNum = 376;BA.debugLine="LineChart.Line_2_PointSize = 1.0";
+ //BA.debugLineNum = 384;BA.debugLine="LineChart.Line_2_PointSize = 1.0";
 mostCurrent._linechart.setLine_2_PointSize((float) (1.0));
- //BA.debugLineNum = 377;BA.debugLine="LineChart.Line_2_PointShape = LineChart.SHAPE_RO";
+ //BA.debugLineNum = 385;BA.debugLine="LineChart.Line_2_PointShape = LineChart.SHAPE_RO";
 mostCurrent._linechart.setLine_2_PointShape(mostCurrent._linechart.SHAPE_ROUND);
- //BA.debugLineNum = 378;BA.debugLine="LineChart.Line_2_DrawDash = False";
+ //BA.debugLineNum = 386;BA.debugLine="LineChart.Line_2_DrawDash = False";
 mostCurrent._linechart.setLine_2_DrawDash(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 379;BA.debugLine="LineChart.Line_2_DrawCubic = False";
+ //BA.debugLineNum = 387;BA.debugLine="LineChart.Line_2_DrawCubic = False";
 mostCurrent._linechart.setLine_2_DrawCubic(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 383;BA.debugLine="LineChart.NumberOfLineCharts = 2";
+ //BA.debugLineNum = 391;BA.debugLine="LineChart.NumberOfLineCharts = 2";
 mostCurrent._linechart.setNumberOfLineCharts((int) (2));
- //BA.debugLineNum = 385;BA.debugLine="LineChart.DrawTheGraphs";
+ //BA.debugLineNum = 393;BA.debugLine="LineChart.DrawTheGraphs";
 mostCurrent._linechart.DrawTheGraphs();
- //BA.debugLineNum = 387;BA.debugLine="TemperatureHourlyTimer.Initialize(\"TemperatureHo";
-_temperaturehourlytimer.Initialize(processBA,"TemperatureHourlyTimer",(long) (1000));
- //BA.debugLineNum = 388;BA.debugLine="TemperatureHourlyTimer.Enabled = True 'start tim";
-_temperaturehourlytimer.setEnabled(anywheresoftware.b4a.keywords.Common.True);
  } 
-       catch (Exception e230) {
-			processBA.setLastException(e230); //BA.debugLineNum = 390;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("7459016",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
- //BA.debugLineNum = 391;BA.debugLine="ToastMessageShow (LastException,True)";
+       catch (Exception e228) {
+			processBA.setLastException(e228); //BA.debugLineNum = 396;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("6590086",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+ //BA.debugLineNum = 397;BA.debugLine="ToastMessageShow (LastException,True)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA).getObject()),anywheresoftware.b4a.keywords.Common.True);
  };
- //BA.debugLineNum = 394;BA.debugLine="End Sub";
+ //BA.debugLineNum = 400;BA.debugLine="End Sub";
 return "";
 }
 public static String  _temperaturehourlytimer_tick() throws Exception{

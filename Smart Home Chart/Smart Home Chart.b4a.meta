@@ -4,6 +4,6 @@ ModuleBreakpoints0=
 ModuleBreakpoints1=
 ModuleClosedNodes0=
 ModuleClosedNodes1=1
-NavigationStack=Main,CheckTempBoundariesDaily,2092,0,Main,HumidityDailyCreate,1313,1,Main,Globals,59,0,Main,Activity_WindowFocusChanged,2238,0,Main,HumidityDailyTimer_Tick,2222,0,Main,TemperatureDailyTimer_Tick,2212,0,Main,btnTempDaily_Click,114,0,Main,btnHumidityDaily_Click,122,0,Main,btnTempHourly_Click,97,0,Main,btnHumidityHourly_Click,99,0,Main,Activity_Pause,83,0
+NavigationStack=Main,btnHumidityDaily_Click,128,0,Main,HumidityDailyCreate,1502,0,Main,btnTempDaily_Click,117,0,Main,TemperatureDailyCreate,1083,0,Main,btnHumidityHourly_Click,106,0,Main,TemperatureHourlyCreate,393,0,Main,HumidityHourlyCreate,663,0,Main,Activity_Create,71,0,Main,TemperatureHourlyTimer_Tick,2198,0,Main,btnTempHourly_Click,97,0
 SelectedBuild=0
 VisibleModules=1

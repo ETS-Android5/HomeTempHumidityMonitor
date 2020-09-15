@@ -86,7 +86,7 @@ End Sub
 Sub Activity_Create(FirstTime As Boolean)
 	Activity.LoadLayout("Main")
 	
-	TemperatureHourlyCreate
+	btnTempHourly_Click
 End Sub
 
 Sub Activity_Resume
@@ -113,6 +113,8 @@ Sub btnTempHourly_Click
 	HumidityHourlyTimer.Enabled = False
 	HumidityDailyTimer.Enabled = False
 	TemperatureHourlyCreate
+	TemperatureHourlyTimer.Initialize("TemperatureHourlyTimer",1000) 'check every second
+	TemperatureHourlyTimer.Enabled = True 'start timer
 End Sub
 
 Sub btnHumidityHourly_Click
@@ -120,6 +122,8 @@ Sub btnHumidityHourly_Click
 	TemperatureHourlyTimer.Enabled = False
 	HumidityDailyTimer.Enabled = False
 	HumidityHourlyCreate
+	HumidityHourlyTimer.Initialize("HumidityHourlyTimer",1000) 'check every second
+	HumidityHourlyTimer.Enabled = True 'start timer
 End Sub
 
 Sub btnTempDaily_Click
@@ -129,6 +133,8 @@ Sub btnTempDaily_Click
 	tempMaxRange=0
 	tempMinRange=0
 	TemperatureDailyCreate
+	TemperatureDailyTimer.Initialize("TemperatureDailyTimer",1000) 'check every second
+	TemperatureDailyTimer.Enabled = True 'start timer
 End Sub
 
 Sub btnHumidityDaily_Click
@@ -138,6 +144,8 @@ Sub btnHumidityDaily_Click
 	tempMaxRange=0
 	tempMinRange=0
 	HumidityDailyCreate
+	HumidityDailyTimer.Initialize("HumidityDailyTimer",1000) 'check every second
+	HumidityDailyTimer.Enabled = True 'start timer
 End Sub
 
 Private Sub TemperatureHourlyCreate()
@@ -400,9 +408,7 @@ Private Sub TemperatureHourlyCreate()
 		LineChart.NumberOfLineCharts = 2                              'set the number of graphs to draw from the 1 to 5 graph that has been set up above
 			 
 		LineChart.DrawTheGraphs
-		
-		TemperatureHourlyTimer.Initialize("TemperatureHourlyTimer",1000) 'check every second
-		TemperatureHourlyTimer.Enabled = True 'start timer
+
 	Catch
 		Log(LastException)
 		ToastMessageShow (LastException,True)
@@ -672,8 +678,6 @@ Private Sub HumidityHourlyCreate()
 			 
 		LineChart.DrawTheGraphs
 		
-		HumidityHourlyTimer.Initialize("HumidityHourlyTimer",1000) 'check every second
-		HumidityHourlyTimer.Enabled = True 'start timer
 	Catch
 		Log(LastException)
 		ToastMessageShow (LastException,True)
@@ -1090,9 +1094,7 @@ Private Sub TemperatureDailyCreate()
 		LineChart.NumberOfLineCharts = 3                              'set the number of graphs to draw from the 1 to 5 graph that has been set up above
 			 
 		LineChart.DrawTheGraphs
-		
-		TemperatureDailyTimer.Initialize("TemperatureDailyTimer",1000) 'check every second
-		TemperatureDailyTimer.Enabled = True 'start timer
+
 	Catch
 		Log(LastException)
 		ToastMessageShow (LastException,True)
@@ -1509,9 +1511,7 @@ Private Sub HumidityDailyCreate()
 		LineChart.NumberOfLineCharts = 3                              'set the number of graphs to draw from the 1 to 5 graph that has been set up above
 			 
 		LineChart.DrawTheGraphs
-		
-		HumidityDailyTimer.Initialize("HumidityDailyTimer",1000) 'check every second
-		HumidityDailyTimer.Enabled = True 'start timer
+
 	Catch
 		Log(LastException)
 		ToastMessageShow (LastException,True)
