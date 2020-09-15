@@ -1045,7 +1045,7 @@ _timer1.setEnabled(anywheresoftware.b4a.keywords.Common.True);
  } 
        catch (Exception e377) {
 			processBA.setLastException(e377); //BA.debugLineNum = 473;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("3131486",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("2131486",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 474;BA.debugLine="ToastMessageShow (LastException,True)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA).getObject()),anywheresoftware.b4a.keywords.Common.True);
  };
@@ -1753,7 +1753,7 @@ _textreader1.Close();
  } 
        catch (Exception e115) {
 			processBA.setLastException(e115); //BA.debugLineNum = 728;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("3393339",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("2393339",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 730;BA.debugLine="End Sub";
 return "";

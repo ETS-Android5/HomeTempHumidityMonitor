@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	package="com.cloyd.humidity.daily"
+	package="com.smarthome.chart"
 	android:versionCode="1"
 	android:versionName=""
 	android:installLocation="internalOnly">
@@ -17,13 +17,14 @@
 	<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 	<application
 		android:icon="@drawable/icon"
-		android:label="Humidity Daily"
-		android:theme="@style/DarkTheme">
+		android:label="Smart Home Chart"
+		android:theme="@style/DarkTheme"
+		android:requestLegacyExternalStorage="true">
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".main"
-			android:label="Humidity Daily"
+			android:label="Smart Home Chart"
 			android:screenOrientation="landscape">
 			<intent-filter>
 			   <action android:name="android.intent.action.MAIN" />

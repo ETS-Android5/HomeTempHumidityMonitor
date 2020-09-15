@@ -6,12 +6,12 @@ Library1=core
 Library2=androidplot_0_6_2
 Library3=javaobject
 Library4=phone
-ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: http://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="28"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'SetApplicationAttribute(android:theme, "@android:style/Theme.Holo")~\n~'End of default text.~\n~~\n~SetApplicationAttribute(android:theme, "@style/DarkTheme")~\n~CreateResource(values-v20, theme.xml,~\n~<resources>~\n~    <style~\n~        name="DarkTheme" parent="@android:style/Theme.Material.NoActionBar.Fullscreen">~\n~    </style>~\n~</resources>~\n~)~\n~CreateResource(values-v14, theme.xml,~\n~<resources>~\n~    <style~\n~        name="DarkTheme" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">~\n~    </style>~\n~</resources>~\n~)
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: http://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="29"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'SetApplicationAttribute(android:theme, "@android:style/Theme.Holo")~\n~'End of default text.~\n~~\n~SetApplicationAttribute(android:theme, "@style/DarkTheme")~\n~CreateResource(values-v20, theme.xml,~\n~<resources>~\n~    <style~\n~        name="DarkTheme" parent="@android:style/Theme.Material.NoActionBar.Fullscreen">~\n~    </style>~\n~</resources>~\n~)~\n~CreateResource(values-v14, theme.xml,~\n~<resources>~\n~    <style~\n~        name="DarkTheme" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">~\n~    </style>~\n~</resources>~\n~)
 Module1=Starter
 NumberOfFiles=1
 NumberOfLibraries=4
 NumberOfModules=1
-Version=10
+Version=10.2
 @EndOfDesignText@
 #Region  Project Attributes 
 	#ApplicationLabel: Humidity Daily
