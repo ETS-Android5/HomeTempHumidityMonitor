@@ -4,6 +4,6 @@ ModuleBreakpoints0=
 ModuleBreakpoints1=
 ModuleClosedNodes0=
 ModuleClosedNodes1=1
-NavigationStack=Main,btnHumidityDaily_Click,128,0,Main,HumidityDailyCreate,1502,0,Main,btnTempDaily_Click,117,0,Main,TemperatureDailyCreate,1083,0,Main,btnHumidityHourly_Click,106,0,Main,TemperatureHourlyCreate,393,0,Main,HumidityHourlyCreate,663,0,Main,Activity_Create,71,0,Main,TemperatureHourlyTimer_Tick,2198,0,Main,btnTempHourly_Click,97,0
+NavigationStack=Main,btnTempDaily_Click,117,0,Main,TemperatureDailyCreate,1083,0,Main,btnHumidityHourly_Click,106,0,Main,TemperatureHourlyCreate,393,0,Main,HumidityHourlyCreate,663,0,Main,Activity_Create,71,0,Main,TemperatureHourlyTimer_Tick,2198,0,Main,btnTempHourly_Click,97,0,Visual Designer,Main.bal,-100,1,Main,Globals,32,0,Main,Process_Globals,21,0
 SelectedBuild=0
 VisibleModules=1
