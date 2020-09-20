@@ -112,6 +112,8 @@ Sub btnTempHourly_Click
 	TemperatureDailyTimer.Enabled = False
 	HumidityHourlyTimer.Enabled = False
 	HumidityDailyTimer.Enabled = False
+	tempMaxRange=0
+	tempMinRange=0
 	TemperatureHourlyCreate
 	TemperatureHourlyTimer.Initialize("TemperatureHourlyTimer",1000) 'check every second
 	TemperatureHourlyTimer.Enabled = True 'start timer
@@ -121,6 +123,8 @@ Sub btnHumidityHourly_Click
 	TemperatureDailyTimer.Enabled = False
 	TemperatureHourlyTimer.Enabled = False
 	HumidityDailyTimer.Enabled = False
+	tempMaxRange=0
+	tempMinRange=0
 	HumidityHourlyCreate
 	HumidityHourlyTimer.Initialize("HumidityHourlyTimer",1000) 'check every second
 	HumidityHourlyTimer.Enabled = True 'start timer
@@ -753,7 +757,7 @@ Private Sub TemperatureDailyCreate()
 		DateTime.DateFormat = "MMM d, yyyy"
 		LineChart.Line_1_LegendText = "Today, " & DateTime.Date(DateTime.Now)
 		
-		CheckTempBoundaries
+		CheckTempBoundariesDaily
 		
 		If am12 <> tempZeroRange Then
 			LineChart.Line_1_Data = Array As Float (am12)
@@ -1170,7 +1174,7 @@ Private Sub HumidityDailyCreate()
 		DateTime.DateFormat = "MMM d, yyyy"
 		LineChart.Line_1_LegendText = "Today, " & DateTime.Date(DateTime.Now)
 		
-		CheckTempBoundaries
+		CheckTempBoundariesDaily
 		
 		If am12 <> tempZeroRange Then
 			LineChart.Line_1_Data = Array As Float (am12)
@@ -2213,6 +2217,8 @@ Sub TemperatureHourlyTimer_Tick
 	btnHumidityDaily.RemoveView
 	btnTempDaily.RemoveView
 	LineChart.RemoveView
+	tempMaxRange=0
+	tempMinRange=0
 	TemperatureHourlyCreate
 End Sub
 
@@ -2223,6 +2229,8 @@ Sub HumidityHourlyTimer_Tick
 	btnHumidityDaily.RemoveView
 	btnTempDaily.RemoveView
 	LineChart.RemoveView
+	tempMaxRange=0
+	tempMinRange=0
 	HumidityHourlyCreate
 End Sub
 

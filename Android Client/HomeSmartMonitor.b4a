@@ -12,10 +12,11 @@ File18=liveviewbuttontranparent.png
 File19=Main.bal
 File2=1.bal
 File20=ScrollViewBasement.bal
-File21=snapshotbutton.png
-File22=TempHumidityBasement.bal
-File23=video-camera.png
-File24=wyzeoutdoor.bal
+File21=scrollviewwyze.bal
+File22=snapshotbutton.png
+File23=TempHumidityBasement.bal
+File24=video-camera.png
+File25=wyzeoutdoor.bal
 File3=1ScrollView.bal
 File4=2.bal
 File5=AirQualityBasement.bal
@@ -40,6 +41,7 @@ FileGroup21=Default Group
 FileGroup22=Default Group
 FileGroup23=Default Group
 FileGroup24=Default Group
+FileGroup25=Default Group
 FileGroup3=Default Group
 FileGroup4=Default Group
 FileGroup5=Default Group
@@ -77,7 +79,7 @@ Library6=callsubutils
 Library7=byteconverter
 Library8=xui
 Library9=phone
-ManifestCode=AddManifestText(~\n~<uses-sdk android:minSdkVersion="7" android:targetSdkVersion="29"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~~\n~SetApplicationAttribute(android:theme, "@style/MyAppTheme")~\n~CreateResource(values, colors.xml,~\n~<resources>~\n~    <color name="actionbar">#90a4ae</color>~\n~   <color name="statusbar">#62757f</color>~\n~   <color name="textColorPrimary">#000000</color>~\n~   <color name="navigationBar">#90a4ae</color>~\n~</resources>~\n~)~\n~CreateResource(values, theme.xml,~\n~<resources>~\n~    <style name="MyAppTheme" parent="Theme.AppCompat.Light">~\n~        <item name="colorPrimary">@color/actionbar</item>~\n~        <item name="colorPrimaryDark">@color/statusbar</item>~\n~       <item name="android:textColorPrimary">@color/textColorPrimary</item>~\n~       <item name="android:navigationBarColor">@color/navigationBar</item>~\n~       <item name="windowNoTitle">true</item>~\n~       <item name="windowActionBar">false</item>~\n~       <item name="windowActionModeOverlay">true</item>~\n~    </style>~\n~	<style name="ToolbarMenu" parent="Base.ThemeOverlay.AppCompat.ActionBar">~\n~	    <item name="android:textColorPrimary">#000000</item>~\n~	    <item name="android:colorBackground">#B0BEC5</item>~\n~    </style>~\n~</resources>~\n~)~\n~~\n~AddApplicationText(~\n~<service android:name="anywheresoftware.b4a.objects.NotificationListenerWrapper"~\n~   android:label="Smart Home Monitor"~\n~  android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">~\n~  <intent-filter>~\n~  <action android:name="android.service.notification.NotificationListenerService" />~\n~  </intent-filter>~\n~</service>)~\n~~\n~AddApplicationText(~\n~<activity~\n~  android:name="de.amberhome.objects.preferenceactivity"~\n~  android:theme="@android:style/Theme.Material.Light">~\n~</activity>~\n~)~\n~~\n~AddManifestText(~\n~<uses-permission~\n~  android:name="android.permission.WRITE_EXTERNAL_STORAGE"~\n~  android:maxSdkVersion="18" />~\n~)~\n~~\n~AddManifestText(<uses-permission~\n~   android:name="android.permission.WRITE_EXTERNAL_STORAGE"~\n~   android:maxSdkVersion="18" />~\n~)~\n~~\n~AddApplicationText(~\n~  <provider~\n~  android:name="android.support.v4.content.FileProvider"~\n~  android:authorities="$PACKAGE$.provider"~\n~  android:exported="false"~\n~  android:grantUriPermissions="true">~\n~  <meta-data~\n~  android:name="android.support.FILE_PROVIDER_PATHS"~\n~  android:resource="@xml/provider_paths"/>~\n~  </provider>~\n~)~\n~CreateResource(xml, provider_paths,~\n~   <files-path name="name" path="shared" />~\n~)~\n~~\n~SetApplicationAttribute(android:largeHeap, "true")
+ManifestCode=AddManifestText(~\n~<uses-sdk android:minSdkVersion="7" android:targetSdkVersion="29"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~~\n~SetApplicationAttribute(android:theme, "@style/MyAppTheme")~\n~CreateResource(values, colors.xml,~\n~<resources>~\n~    <color name="actionbar">#90a4ae</color>~\n~   <color name="statusbar">#62757f</color>~\n~   <color name="textColorPrimary">#000000</color>~\n~   <color name="navigationBar">#90a4ae</color>~\n~</resources>~\n~)~\n~CreateResource(values, theme.xml,~\n~<resources>~\n~    <style name="MyAppTheme" parent="Theme.AppCompat.Light">~\n~        <item name="colorPrimary">@color/actionbar</item>~\n~        <item name="colorPrimaryDark">@color/statusbar</item>~\n~       <item name="android:textColorPrimary">@color/textColorPrimary</item>~\n~       <item name="android:navigationBarColor">@color/navigationBar</item>~\n~       <item name="windowNoTitle">true</item>~\n~       <item name="windowActionBar">false</item>~\n~       <item name="windowActionModeOverlay">true</item>~\n~    </style>~\n~	<style name="ToolbarMenu" parent="Base.ThemeOverlay.AppCompat.ActionBar">~\n~	    <item name="android:textColorPrimary">#000000</item>~\n~	    <item name="android:colorBackground">#B0BEC5</item>~\n~    </style>~\n~</resources>~\n~)~\n~~\n~AddApplicationText(~\n~<service android:name="anywheresoftware.b4a.objects.NotificationListenerWrapper"~\n~   android:label="Smart Home Monitor"~\n~  android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">~\n~  <intent-filter>~\n~  <action android:name="android.service.notification.NotificationListenerService" />~\n~  </intent-filter>~\n~</service>)~\n~~\n~AddApplicationText(~\n~<activity~\n~  android:name="de.amberhome.objects.preferenceactivity"~\n~  android:theme="@android:style/Theme.Material.Light">~\n~</activity>~\n~)~\n~~\n~AddManifestText(~\n~<uses-permission~\n~  android:name="android.permission.WRITE_EXTERNAL_STORAGE"~\n~  android:maxSdkVersion="18" />~\n~)~\n~~\n~AddManifestText(<uses-permission~\n~   android:name="android.permission.WRITE_EXTERNAL_STORAGE"~\n~   android:maxSdkVersion="18" />~\n~)~\n~~\n~AddApplicationText(~\n~  <provider~\n~  android:name="android.support.v4.content.FileProvider"~\n~  android:authorities="$PACKAGE$.provider"~\n~  android:exported="false"~\n~  android:grantUriPermissions="true">~\n~  <meta-data~\n~  android:name="android.support.FILE_PROVIDER_PATHS"~\n~  android:resource="@xml/provider_paths"/>~\n~  </provider>~\n~)~\n~CreateResource(xml, provider_paths,~\n~   <files-path name="name" path="shared" />~\n~)~\n~~\n~AddPermission(android.permission.ACCESS_WIFI_STATE)~\n~AddPermission(android.permission.ACCESS_FINE_LOCATION)~\n~~\n~SetApplicationAttribute(android:largeHeap, "true")
 Module1=B4XPageIndicator
 Module10=Starter
 Module11=StateManager
@@ -89,10 +91,10 @@ Module6=KeyValueStore
 Module7=MJPEG
 Module8=NotificationService
 Module9=SmartHomeMonitor
-NumberOfFiles=24
+NumberOfFiles=25
 NumberOfLibraries=29
 NumberOfModules=11
-Version=10.17
+Version=10.2
 @EndOfDesignText@
 #Region  Project Attributes 
 	#ApplicationLabel: Smart Home Monitor
@@ -155,8 +157,10 @@ Sub Process_Globals
 	Private effects As BitmapCreatorEffects
 	Private wyzeFrontYardURL As String 
 	Private wyzeBackyardURL As String 
+	Private wyzeSideYardURL As String
 	Private mjFrontYardOutdoorCounter As Int
 	Private mjBackyardOutdoorCounter As Int
+	Private mjSideYardOutdoorCounter As Int
 	Private compileTimeStamp As String
 End Sub
 
@@ -251,10 +255,19 @@ Sub Globals
 	Private btnBackyardOutdoorRefresh As ImageView
 	Private btnBackyardOutdoorLive As ImageView
 	Private btnFrontYardOutdoorLive As ImageView
+	Private panelWyze As Panel
+	Private ScrollViewWyze As ScrollView
+	Private mjSideYardOutdoor As MJPEG
+	Private B4XLoadingIndicatorSideYard As B4XLoadingIndicator
+	Private ivSideYardOutdoor As ImageView
+	Private btnSideYardOutdoorRefresh As ImageView
+	Private btnSideYardOutdoorLive As ImageView
+	Private lblSideYardOutdoor As Label
+	Private btnNewCaptureOutdoorCameras As SwiftButton
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
-	Try
+	Try	
 		nativeMe.InitializeContext
 		nativeMe.RunMethod("setDefaultUncaughtExceptionHandler", Null)
 		
@@ -299,7 +312,11 @@ Sub Activity_Create(FirstTime As Boolean)
 		ScrollViewBlink.panel.height = 910dip
 		panelBlink.Height = 910dip
 		TabStrip1.LoadLayout("blinkactivity", "BLINK CAMERAS" & CRLF & "Events  " & Chr(0xF03D))
-		TabStrip1.LoadLayout("wyzeoutdoor", "WYZE CAMERAS" & CRLF & "Live View  " & Chr(0xF030))
+		TabStrip1.LoadLayout("scrollviewwyze", "WYZE CAMERAS" & CRLF & "Live View  " & Chr(0xF030))
+		ScrollViewWyze.Panel.LoadLayout("wyzeoutdoor")
+		'https://www.b4x.com/android/forum/threads/how-to-create-a-scrollable-screen.102755/#post-644462
+		ScrollViewWyze.panel.height = 910dip
+		panelWyze.Height = 910dip
 		
 		For Each lbl As Label In GetAllTabLabels(TabStrip1)
 			' Two lines in a tab of TabStripViewPager
@@ -415,6 +432,9 @@ Sub Activity_Create(FirstTime As Boolean)
 		SetTextShadow(lblSideYardTimestamp)
 		SetTextShadow(lblSideYardWiFi)
 		SetTextShadow(lblDuration)
+		SetTextShadow(lblBackyardOutdoor)
+		SetTextShadow(lblFrontYardOutdoor)
+		SetTextShadow(lblSideYardOutdoor)
 		
 		badger1.Initialize
 		
@@ -445,7 +465,8 @@ Sub Activity_Create(FirstTime As Boolean)
 		
 		mjFrontYardOutdoor.Initialize(Me, "mjFrontYardOutdoor")
 		mjBackyardOutdoor.Initialize(Me, "mjBackyardOutdoor")
-
+		mjSideYardOutdoor.Initialize(Me, "mjSideYardOutdoor")
+		
 	Catch
 		ToastMessageShow(LastException,True)
 	End Try
@@ -537,22 +558,27 @@ Sub Activity_Pause (UserClosed As Boolean)
 
 	wvMedia.LoadUrl("")
 	
-	If mjFrontYardOutdoor.IsInitialized Then mjFrontYardOutdoor.Disconnect
-	If mjBackyardOutdoor.IsInitialized Then mjBackyardOutdoor.Disconnect
+'	If mjFrontYardOutdoor.IsInitialized Then mjFrontYardOutdoor.Disconnect
+'	If mjBackyardOutdoor.IsInitialized Then mjBackyardOutdoor.Disconnect
+'	If mjSideYardOutdoor.IsInitialized Then mjSideYardOutdoor.Disconnect
+'	
+'	mjFrontYardOutdoorCounter = 0
+'	mjBackyardOutdoorCounter = 0
+'	mjSideYardOutdoorCounter = 0
 	
-	mjFrontYardOutdoorCounter = 0
-	mjBackyardOutdoorCounter = 0
+'	ivDriveway.Bitmap = Null
+'	ivFrontDoor.Bitmap = Null
+'	ivSideYard.Bitmap = Null
+'	Dim Obj1 As Reflector
+'	Obj1.Target = bmp ' the unwanted Bitmap
+'	Obj1.RunMethod("recycle")
+'	bmp = Null
 	
-	ivDriveway.Bitmap = Null
-	ivFrontDoor.Bitmap = Null
-	ivSideYard.Bitmap = Null
-	ivBackyardOutdoor.Bitmap = Null
-	ivFrontYardOutdoor.Bitmap = Null
+'	ivBackyardOutdoor.Bitmap = Null
+'	ivFrontYardOutdoor.Bitmap = Null
+'	ivSideYardOutdoor.Bitmap = Null
 
-	Dim Obj1 As Reflector
-	Obj1.Target = bmp ' the unwanted Bitmap
-	Obj1.RunMethod("recycle")
-	bmp = Null
+
 	
 End Sub
 
@@ -891,12 +917,12 @@ Sub TabStrip1_PageSelected (Position As Int)
 		
 		B4XPageIndicator1.CurrentPage = Position
 		
-		If Position <> 6 Then
-			If mjFrontYardOutdoor.IsInitialized Then mjFrontYardOutdoor.Disconnect
-			If mjBackyardOutdoor.IsInitialized Then mjBackyardOutdoor.Disconnect
-			mjFrontYardOutdoorCounter = 0
-			mjBackyardOutdoorCounter = 0
-		End If
+'		If Position <> 6 Then
+'			If mjFrontYardOutdoor.IsInitialized Then mjFrontYardOutdoor.Disconnect
+'			If mjBackyardOutdoor.IsInitialized Then mjBackyardOutdoor.Disconnect
+'			mjFrontYardOutdoorCounter = 0
+'			mjBackyardOutdoorCounter = 0
+'		End If
 		
 		If Position = 0 Then
 			If MQTT.IsInitialized And MQTT.Connected  Then
@@ -1000,9 +1026,11 @@ Sub TabStrip1_PageSelected (Position As Int)
 		
 			CheckDataFile("wyzefrontyard.txt")
 			CheckDataFile("wyzebackyard.txt")
+			CheckDataFile("wyzesideyard.txt")
 			
 			lblFrontYardOutdoor.Text = ""
 			lblBackyardOutdoor.Text = ""
+			lblSideYardOutdoor.Text = ""
 			
 			Dim tempBitmap As B4XBitmap
 			If File.Exists(File.DirInternal, "FrontYardOutdoor.jpg") Then
@@ -1013,6 +1041,11 @@ Sub TabStrip1_PageSelected (Position As Int)
 			If File.Exists(File.DirInternal, "BackyardOutdoor.jpg") Then
 				tempBitmap = xui.LoadBitmapResize(File.DirInternal, "BackyardOutdoor.jpg", ivBackyardOutdoor.Width,ivBackyardOutdoor.Height, True)
 				ivBackyardOutdoor.Bitmap = tempBitmap
+			End If
+			
+			If File.Exists(File.DirInternal, "SideYardOutdoor.jpg") Then
+				tempBitmap = xui.LoadBitmapResize(File.DirInternal, "SideYardOutdoor.jpg", ivSideYardOutdoor.Width,ivSideYardOutdoor.Height, True)
+				ivSideYardOutdoor.Bitmap = tempBitmap
 			End If
 
 		End If
@@ -1027,7 +1060,7 @@ Sub mjFrontYardOutdoor_ConnectionError(error As String)
 		If TabStrip1.CurrentPage = 6 Then
 			Log("     Front Yard Outdoor camera connection error")
 			B4XLoadingIndicatorFrontYard.Show
-			lblFrontYardOutdoor.Text = error & " Reconnecting..."
+			lblFrontYardOutdoor.Text = error & " - Reconnecting..."
 			mjFrontYardOutdoorCounter = 0
 			mjFrontYardOutdoor.Connect(wyzeFrontYardURL, 8083)
 		End If
@@ -1041,9 +1074,23 @@ Sub mjBackyardOutdoor_ConnectionError(error As String)
 		If TabStrip1.CurrentPage = 6 Then
 			Log("     Backyard Outdoor camera connection error")
 			B4XLoadingIndicatorBackyard.Show
-			lblBackyardOutdoor.Text = error & " Reconnecting..."
+			lblBackyardOutdoor.Text = error & " - Reconnecting..."
 			mjBackyardOutdoorCounter = 0
 			mjBackyardOutdoor.Connect(wyzeBackyardURL, 8083)
+		End If
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub mjSideYardOutdoor_ConnectionError(error As String)
+	Try
+		If TabStrip1.CurrentPage = 6 Then
+			Log("     Side Yard Outdoor camera connection error")
+			B4XLoadingIndicatorSideYard.Show
+			lblSideYardOutdoor.Text = error & " - Reconnecting..."
+			mjSideYardOutdoorCounter = 0
+			mjSideYardOutdoor.Connect(wyzeSideYardURL, 8083)
 		End If
 	Catch
 		Log(LastException)
@@ -1070,6 +1117,16 @@ Sub mjBackyardOutdoor_StreamError(error As String)
 	End Try
 End Sub
 
+Sub mjSideYardOutdoor_StreamError(error As String)
+	Try
+		Log("Side Yard Outdoor stream error")
+		B4XLoadingIndicatorSideYard.Hide
+		lblSideYardOutdoor.Text = error
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
 Sub mjFrontYardOutdoor_Disconnected
 	Try
 		Log("Front Yard Outdoor Disconnected")
@@ -1090,6 +1147,16 @@ Sub mjBackyardOutdoor_Disconnected
 	End Try
 End Sub
 
+Sub mjSideYardOutdoor_Disconnected
+	Try
+		Log("Side Yard Outdoor Disconnected")
+		B4XLoadingIndicatorSideYard.Hide
+		lblSideYardOutdoor.Text = ""
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
 Sub mjFrontYardOutdoor_Terminated(error As String)
 	Try
 		Log("Front Yard Outdoor Terminated")
@@ -1105,6 +1172,16 @@ Sub mjBackyardOutdoor_Terminated(error As String)
 		Log("Backyard Outdoor Terminated")
 		B4XLoadingIndicatorBackyard.hide
 		lblBackyardOutdoor.Text = error
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub mjSideYardOutdoor_Terminated(error As String)
+	Try
+		Log("Side Yard Outdoor Terminated")
+		B4XLoadingIndicatorSideYard.Hide
+		lblSideYardOutdoor.Text = error
 	Catch
 		Log(LastException)
 	End Try
@@ -1165,6 +1242,36 @@ Sub mjBackyardOutdoor_Frame(btmp As Bitmap)
 		mjBackyardOutdoorCounter = mjBackyardOutdoorCounter + 1
 		Log("Backyard frame received")
 		lblBackyardOutdoor.Text = "Image received. Processing..."
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub mjSideYardOutdoor_Frame(btmp As Bitmap)
+	Try
+		If btmp.Width > 640 Or mjSideYardOutdoorCounter > 15 Then
+			lblSideYardOutdoor.Text = ""
+			mjSideYardOutdoor.Disconnect
+			
+			B4XLoadingIndicatorSideYard.Hide
+			mjSideYardOutdoorCounter = 0
+			Dim Out As OutputStream
+			Out = File.OpenOutput(File.DirInternal, "SideYardOutdoor.jpg", False)
+			btmp.WriteToStream(Out, 100, "JPEG")
+			Out.Close
+			
+			If File.Exists(File.DirInternal, "SideYardOutdoor.jpg") Then
+				Dim tempBmpt As B4XBitmap
+				tempBmpt = xui.LoadBitmapResize(File.DirInternal, "SideYardOutdoor.jpg", ivSideYardOutdoor.Width,ivSideYardOutdoor.Height, True)
+				ivSideYardOutdoor.Bitmap = tempBmpt
+			End If
+			
+			Return
+		End If
+
+		mjSideYardOutdoorCounter = mjSideYardOutdoorCounter + 1
+		Log("Side Yard frame received")
+		lblSideYardOutdoor.Text = "Image received. Processing..."
 	Catch
 		Log(LastException)
 	End Try
@@ -3872,13 +3979,11 @@ Sub CheckDataFile(filename As String)
 				End If
 			Next
 		Else If filename = "wyzefrontyard.txt" Then
-'			File.Delete(File.DirInternal, filename)
-'			File.Copy(File.DirRootExternal,filename,File.DirInternal, filename)
 			wyzeFrontYardURL = File.ReadString(File.DirInternal, filename)
 		Else If filename = "wyzebackyard.txt" Then
-'			File.Delete(File.DirInternal, filename)
-'			File.Copy(File.DirRootExternal,filename,File.DirInternal, filename)
 			wyzeBackyardURL = File.ReadString(File.DirInternal, filename)
+		Else If filename = "wyzesideyard.txt" Then
+			wyzeSideYardURL = File.ReadString(File.DirInternal, filename)
 		End If
 	Else If File.Exists(File.DirRootExternal,filename) Then
 		File.Copy(File.DirRootExternal,filename,File.DirInternal, filename)
@@ -3898,6 +4003,8 @@ Sub CheckDataFile(filename As String)
 				wyzeFrontYardURL = File.ReadString(File.DirInternal, filename)
 			Else If filename = "wyzebackyard.txt" Then
 				wyzeBackyardURL = File.ReadString(File.DirInternal, filename)
+			Else If filename = "wyzesideyard.txt" Then
+				wyzeSideYardURL = File.ReadString(File.DirInternal, filename)
 			End If
 		Else
 			Msgbox(filename & " not found","Smart Home Monitor") 'ignore
@@ -3907,6 +4014,21 @@ Sub CheckDataFile(filename As String)
 		Msgbox(filename & " not found","Smart Home Monitor") 'ignore
 		ExitApplication
 	End If
+
+	Try
+		Dim SSID As String
+		Wait For (GetWifiInfo) Complete (WifiInfo As JavaObject)
+		If WifiInfo.IsInitialized Then
+			SSID = WifiInfo.RunMethod("getSSID", Null)
+		End If
+		If SSID.Contains ("RiseAboveThis") Then
+			wyzeFrontYardURL = wyzeFrontYardURL.Replace("cloyd.mynetgear.com","192.168.0.33")
+			wyzeBackyardURL = wyzeBackyardURL.Replace("cloyd.mynetgear.com","192.168.0.33")
+			wyzeSideYardURL = wyzeSideYardURL.Replace("cloyd.mynetgear.com","192.168.0.33")
+		End If
+	Catch
+		Log(LastException)
+	End Try
 End Sub
 
 
@@ -3930,6 +4052,23 @@ End Sub
 Sub ivFrontYardOutdoor_Click
 	Try
 		Dim FileName As String = "FrontYardOutdoor.jpg"
+		If File.Exists(File.DirInternal, FileName) Then
+			File.Copy(File.DirInternal, FileName, Starter.Provider.SharedFolder, FileName)
+			Dim in As Intent
+			in.Initialize(in.ACTION_VIEW, "")
+			Starter.Provider.SetFileUriAsIntentData(in, FileName)
+			'Type must be set after calling SetFileUriAsIntentData
+			in.SetType("image/*")
+			StartActivity(in)
+		End If
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub ivSideYardOutdoor_Click
+	Try
+		Dim FileName As String = "SideYardOutdoor.jpg"
 		If File.Exists(File.DirInternal, FileName) Then
 			File.Copy(File.DirInternal, FileName, Starter.Provider.SharedFolder, FileName)
 			Dim in As Intent
@@ -3992,6 +4131,22 @@ Sub btnBackyardOutdoorRefresh_Click
 	End Try
 End Sub
 
+Sub btnSideYardOutdoorRefresh_Click
+	Try
+		If File.Exists(File.DirInternal, "SideYardOutdoor.jpg") Then
+			BlurIV("SideYardOutdoor.jpg",ivSideYardOutdoor)
+		End If
+			
+		B4XLoadingIndicatorSideYard.Show
+		lblSideYardOutdoor.Text = "Connecting..."
+		mjSideYardOutdoorCounter = 0
+		mjSideYardOutdoor.Initialize(Me, "mjSideYardOutdoor")
+		mjSideYardOutdoor.Connect(wyzeSideYardURL, 8083)
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
 Sub btnBackyardOutdoorLive_Click
 	Try
 		Dim bd As BitmapDrawable
@@ -4022,6 +4177,21 @@ Sub btnFrontYardOutdoorLive_Click
 	End Try
 End Sub
 
+Sub btnSideYardOutdoorLive_Click
+	Try
+		Dim bd As BitmapDrawable
+		bd.Initialize(LoadBitmapResize(File.DirAssets, "0.png", 32dip, 32dip, True))
+		If Msgbox2("View live Side Yard camera?", "Smart Home Monitor", "Yes", "", "No", bd.Bitmap) = DialogResponse.POSITIVE Then 'ignore
+'			Dim chrometab As ChromCustomTabs
+'			chrometab.Initialize("chrometab")
+'			chrometab.chromeCustomTab("http://" & wyzeFrontYardURL.Replace(".com",".com:8083"))
+			startCameraByTag("Side Yard Outdoor")
+		End If
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
 Sub startCameraByTag(camera As String)
 	'https://www.reddit.com/r/tinycam/comments/ies56t/_/
 
@@ -4045,5 +4215,31 @@ Catch
 	Log(LastException)
 End Try
 
-
 End Sub
+
+Sub btnNewCaptureOutdoorCameras_Click
+	Dim bd As BitmapDrawable
+	bd.Initialize(LoadBitmapResize(File.DirAssets, "0.png", 32dip, 32dip, True))
+	If Msgbox2("Capture new photos from Outdoor cameras?", "Smart Home Monitor", "Yes", "", "No", bd.Bitmap) = DialogResponse.POSITIVE Then 'ignore
+		ScrollViewWyze.ScrollToNow(ivFrontYardOutdoor.Top)
+		btnFrontYardOutdoorRefresh_Click
+		btnBackyardOutdoorRefresh_Click
+		btnSideYardOutdoorRefresh_Click
+	End If
+End Sub
+
+Sub GetWifiInfo As ResumableSub
+	Dim p As Phone
+	Dim WifiManager As JavaObject
+	Dim WifiInfo As JavaObject
+	WifiManager = WifiManager.InitializeContext.RunMethod("getSystemService", Array("wifi"))
+	If p.SdkVersion >= 27 Then
+		Dim rp As RuntimePermissions
+		rp.CheckAndRequest(rp.PERMISSION_ACCESS_FINE_LOCATION)
+		Wait For Activity_PermissionResult (Permission As String, Result As Boolean)
+		If Result = False Then Return WifiInfo
+	End If
+	WifiInfo = WifiManager.RunMethod("getConnectionInfo", Null)
+	Return WifiInfo
+End Sub
+

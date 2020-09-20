@@ -33,7 +33,14 @@ Public Sub Connect(url As String, Port As Int)
 		sock.Initialize("sock")
 		sock.Connect(mHost, Port, 10000)
 	Catch
-		Log(LastException)
+		Dim errorMessage As String = ""
+		If LastException.IsInitialized Then
+			errorMessage = "Connection error: " & LastException.Message
+		End If
+		If errorMessage.Trim.Length = 0 Then
+			errorMessage = "Connection error"
+		End If
+		CallSub2(mCallback, mEventName & "_ConnectionError", errorMessage)
 	End Try
 End Sub
 
@@ -52,6 +59,15 @@ Connection: keep-alive
 
 "$
 		Astream.Write(sTmp.Replace(Chr(10), Chr(13) & Chr(10)).GetBytes("UTF8"))
+	Else
+		Dim errorMessage As String = ""
+		If LastException.IsInitialized Then
+			errorMessage = "Connection error: " & LastException.Message
+		End If
+		If errorMessage.Trim.Length = 0 Then
+			errorMessage = "Connection error"
+		End If
+		CallSub2(mCallback, mEventName & "_ConnectionError", errorMessage)
 	End If
 End Sub
 
