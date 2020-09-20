@@ -4014,21 +4014,6 @@ Sub CheckDataFile(filename As String)
 		Msgbox(filename & " not found","Smart Home Monitor") 'ignore
 		ExitApplication
 	End If
-
-	Try
-		Dim SSID As String
-		Wait For (GetWifiInfo) Complete (WifiInfo As JavaObject)
-		If WifiInfo.IsInitialized Then
-			SSID = WifiInfo.RunMethod("getSSID", Null)
-		End If
-		If SSID.Contains ("RiseAboveThis") Then
-			wyzeFrontYardURL = wyzeFrontYardURL.Replace("cloyd.mynetgear.com","192.168.0.33")
-			wyzeBackyardURL = wyzeBackyardURL.Replace("cloyd.mynetgear.com","192.168.0.33")
-			wyzeSideYardURL = wyzeSideYardURL.Replace("cloyd.mynetgear.com","192.168.0.33")
-		End If
-	Catch
-		Log(LastException)
-	End Try
 End Sub
 
 
@@ -4152,9 +4137,6 @@ Sub btnBackyardOutdoorLive_Click
 		Dim bd As BitmapDrawable
 		bd.Initialize(LoadBitmapResize(File.DirAssets, "0.png", 32dip, 32dip, True))
 		If Msgbox2("View live Backyard camera?", "Smart Home Monitor", "Yes", "", "No", bd.Bitmap) = DialogResponse.POSITIVE Then 'ignore
-'			Dim chrometab As ChromCustomTabs
-'			chrometab.Initialize("chrometab")
-'			chrometab.chromeCustomTab("http://" & wyzeBackyardURL.Replace(".com",".com:8083"))
 			startCameraByTag("Backyard Outdoor")
 		End If
 	Catch
@@ -4167,9 +4149,6 @@ Sub btnFrontYardOutdoorLive_Click
 		Dim bd As BitmapDrawable
 		bd.Initialize(LoadBitmapResize(File.DirAssets, "0.png", 32dip, 32dip, True))
 		If Msgbox2("View live Front Yard camera?", "Smart Home Monitor", "Yes", "", "No", bd.Bitmap) = DialogResponse.POSITIVE Then 'ignore
-'			Dim chrometab As ChromCustomTabs
-'			chrometab.Initialize("chrometab")
-'			chrometab.chromeCustomTab("http://" & wyzeFrontYardURL.Replace(".com",".com:8083"))
 			startCameraByTag("Front Yard Outdoor")
 		End If
 	Catch
@@ -4182,9 +4161,6 @@ Sub btnSideYardOutdoorLive_Click
 		Dim bd As BitmapDrawable
 		bd.Initialize(LoadBitmapResize(File.DirAssets, "0.png", 32dip, 32dip, True))
 		If Msgbox2("View live Side Yard camera?", "Smart Home Monitor", "Yes", "", "No", bd.Bitmap) = DialogResponse.POSITIVE Then 'ignore
-'			Dim chrometab As ChromCustomTabs
-'			chrometab.Initialize("chrometab")
-'			chrometab.chromeCustomTab("http://" & wyzeFrontYardURL.Replace(".com",".com:8083"))
 			startCameraByTag("Side Yard Outdoor")
 		End If
 	Catch
@@ -4226,20 +4202,5 @@ Sub btnNewCaptureOutdoorCameras_Click
 		btnBackyardOutdoorRefresh_Click
 		btnSideYardOutdoorRefresh_Click
 	End If
-End Sub
-
-Sub GetWifiInfo As ResumableSub
-	Dim p As Phone
-	Dim WifiManager As JavaObject
-	Dim WifiInfo As JavaObject
-	WifiManager = WifiManager.InitializeContext.RunMethod("getSystemService", Array("wifi"))
-	If p.SdkVersion >= 27 Then
-		Dim rp As RuntimePermissions
-		rp.CheckAndRequest(rp.PERMISSION_ACCESS_FINE_LOCATION)
-		Wait For Activity_PermissionResult (Permission As String, Result As Boolean)
-		If Result = False Then Return WifiInfo
-	End If
-	WifiInfo = WifiManager.RunMethod("getConnectionInfo", Null)
-	Return WifiInfo
 End Sub
 
