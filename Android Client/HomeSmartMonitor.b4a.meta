@@ -34,6 +34,6 @@ ModuleClosedNodes6=
 ModuleClosedNodes7=
 ModuleClosedNodes8=
 ModuleClosedNodes9=
-NavigationStack=Main,Activity_Create,370,0,Main,btnNewCaptureOutdoorCameras_Click,4118,0,Main,startCameraByTag,4105,0,Main,btnBackyardOutdoorLive_Click,4042,0,Main,btnFrontYardOutdoorLive_Click,4054,0,Main,btnSideYardOutdoorLive_Click,4066,0,Main,CheckDataFile,3918,6,Main,Process_Globals,24,0,SmartHomeMonitor,MQTT_MessageArrived,134,0,Main,CheckAirQualitySetting,1286,0,Main,GetCameraInfo,2178,6
+NavigationStack=Main,ACToolBarLight1_MenuItemClick,690,6,Main,GetUnwatchedVideos,3246,0,NotificationService,GetAuthInfo,293,0,NotificationService,GetUnwatchedVideosService,150,6,NotificationService,Service_Create,18,0,Main,Activity_Resume,378,0,Main,Activity_Pause,462,0,Visual Designer,wyzeoutdoor.bal,-100,1,Main,Process_Globals,33,0,Main,GetVideos,2755,6
 SelectedBuild=0
 VisibleModules=5,9,8,11,1,3,2,4,10,6

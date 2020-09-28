@@ -23,8 +23,6 @@
 	<uses-permission android:name="android.permission.VIBRATE"/>
 	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 	<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
-	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 	<application
 		android:icon="@drawable/icon"
 		android:label="Smart Home Monitor"

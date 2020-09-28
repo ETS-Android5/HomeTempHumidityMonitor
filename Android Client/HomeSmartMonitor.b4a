@@ -79,7 +79,7 @@ Library6=callsubutils
 Library7=byteconverter
 Library8=xui
 Library9=phone
-ManifestCode=AddManifestText(~\n~<uses-sdk android:minSdkVersion="7" android:targetSdkVersion="29"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~~\n~SetApplicationAttribute(android:theme, "@style/MyAppTheme")~\n~CreateResource(values, colors.xml,~\n~<resources>~\n~    <color name="actionbar">#90a4ae</color>~\n~   <color name="statusbar">#62757f</color>~\n~   <color name="textColorPrimary">#000000</color>~\n~   <color name="navigationBar">#90a4ae</color>~\n~</resources>~\n~)~\n~CreateResource(values, theme.xml,~\n~<resources>~\n~    <style name="MyAppTheme" parent="Theme.AppCompat.Light">~\n~        <item name="colorPrimary">@color/actionbar</item>~\n~        <item name="colorPrimaryDark">@color/statusbar</item>~\n~       <item name="android:textColorPrimary">@color/textColorPrimary</item>~\n~       <item name="android:navigationBarColor">@color/navigationBar</item>~\n~       <item name="windowNoTitle">true</item>~\n~       <item name="windowActionBar">false</item>~\n~       <item name="windowActionModeOverlay">true</item>~\n~    </style>~\n~	<style name="ToolbarMenu" parent="Base.ThemeOverlay.AppCompat.ActionBar">~\n~	    <item name="android:textColorPrimary">#000000</item>~\n~	    <item name="android:colorBackground">#B0BEC5</item>~\n~    </style>~\n~</resources>~\n~)~\n~~\n~AddApplicationText(~\n~<service android:name="anywheresoftware.b4a.objects.NotificationListenerWrapper"~\n~   android:label="Smart Home Monitor"~\n~  android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">~\n~  <intent-filter>~\n~  <action android:name="android.service.notification.NotificationListenerService" />~\n~  </intent-filter>~\n~</service>)~\n~~\n~AddApplicationText(~\n~<activity~\n~  android:name="de.amberhome.objects.preferenceactivity"~\n~  android:theme="@android:style/Theme.Material.Light">~\n~</activity>~\n~)~\n~~\n~AddManifestText(~\n~<uses-permission~\n~  android:name="android.permission.WRITE_EXTERNAL_STORAGE"~\n~  android:maxSdkVersion="18" />~\n~)~\n~~\n~AddManifestText(<uses-permission~\n~   android:name="android.permission.WRITE_EXTERNAL_STORAGE"~\n~   android:maxSdkVersion="18" />~\n~)~\n~~\n~AddApplicationText(~\n~  <provider~\n~  android:name="android.support.v4.content.FileProvider"~\n~  android:authorities="$PACKAGE$.provider"~\n~  android:exported="false"~\n~  android:grantUriPermissions="true">~\n~  <meta-data~\n~  android:name="android.support.FILE_PROVIDER_PATHS"~\n~  android:resource="@xml/provider_paths"/>~\n~  </provider>~\n~)~\n~CreateResource(xml, provider_paths,~\n~   <files-path name="name" path="shared" />~\n~)~\n~~\n~AddPermission(android.permission.ACCESS_WIFI_STATE)~\n~AddPermission(android.permission.ACCESS_FINE_LOCATION)~\n~~\n~SetApplicationAttribute(android:largeHeap, "true")
+ManifestCode=AddManifestText(~\n~<uses-sdk android:minSdkVersion="7" android:targetSdkVersion="29"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~~\n~SetApplicationAttribute(android:theme, "@style/MyAppTheme")~\n~CreateResource(values, colors.xml,~\n~<resources>~\n~    <color name="actionbar">#90a4ae</color>~\n~   <color name="statusbar">#62757f</color>~\n~   <color name="textColorPrimary">#000000</color>~\n~   <color name="navigationBar">#90a4ae</color>~\n~</resources>~\n~)~\n~CreateResource(values, theme.xml,~\n~<resources>~\n~    <style name="MyAppTheme" parent="Theme.AppCompat.Light">~\n~        <item name="colorPrimary">@color/actionbar</item>~\n~        <item name="colorPrimaryDark">@color/statusbar</item>~\n~       <item name="android:textColorPrimary">@color/textColorPrimary</item>~\n~       <item name="android:navigationBarColor">@color/navigationBar</item>~\n~       <item name="windowNoTitle">true</item>~\n~       <item name="windowActionBar">false</item>~\n~       <item name="windowActionModeOverlay">true</item>~\n~    </style>~\n~	<style name="ToolbarMenu" parent="Base.ThemeOverlay.AppCompat.ActionBar">~\n~	    <item name="android:textColorPrimary">#000000</item>~\n~	    <item name="android:colorBackground">#B0BEC5</item>~\n~    </style>~\n~</resources>~\n~)~\n~~\n~AddApplicationText(~\n~<service android:name="anywheresoftware.b4a.objects.NotificationListenerWrapper"~\n~   android:label="Smart Home Monitor"~\n~  android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">~\n~  <intent-filter>~\n~  <action android:name="android.service.notification.NotificationListenerService" />~\n~  </intent-filter>~\n~</service>)~\n~~\n~AddApplicationText(~\n~<activity~\n~  android:name="de.amberhome.objects.preferenceactivity"~\n~  android:theme="@android:style/Theme.Material.Light">~\n~</activity>~\n~)~\n~~\n~AddManifestText(~\n~<uses-permission~\n~  android:name="android.permission.WRITE_EXTERNAL_STORAGE"~\n~  android:maxSdkVersion="18" />~\n~)~\n~~\n~AddManifestText(<uses-permission~\n~   android:name="android.permission.WRITE_EXTERNAL_STORAGE"~\n~   android:maxSdkVersion="18" />~\n~)~\n~~\n~AddApplicationText(~\n~  <provider~\n~  android:name="android.support.v4.content.FileProvider"~\n~  android:authorities="$PACKAGE$.provider"~\n~  android:exported="false"~\n~  android:grantUriPermissions="true">~\n~  <meta-data~\n~  android:name="android.support.FILE_PROVIDER_PATHS"~\n~  android:resource="@xml/provider_paths"/>~\n~  </provider>~\n~)~\n~CreateResource(xml, provider_paths,~\n~   <files-path name="name" path="shared" />~\n~)~\n~~\n~SetApplicationAttribute(android:largeHeap, "true")
 Module1=B4XPageIndicator
 Module10=Starter
 Module11=StateManager
@@ -267,7 +267,7 @@ Sub Globals
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
-	Try	
+	Try
 		nativeMe.InitializeContext
 		nativeMe.RunMethod("setDefaultUncaughtExceptionHandler", Null)
 		
@@ -457,10 +457,12 @@ Sub Activity_Create(FirstTime As Boolean)
 		Next
 		
 		CheckDataFile("account.txt")
-			
-		Dim rs As ResumableSub = RequestAuthToken
-		wait for (rs) complete (Result As Object)
 		
+		If FirstTime Or authToken = "" Then
+			Dim rs As ResumableSub = RequestAuthToken
+			wait for (rs) complete (Result As Object)
+		End If
+
 		Pages = Array(True, True, True, True, True, True, True) 'True = Enabled
 		
 		mjFrontYardOutdoor.Initialize(Me, "mjFrontYardOutdoor")
@@ -772,6 +774,17 @@ Sub ACToolBarLight1_MenuItemClick (Item As ACMenuItem)
 				wvMedia.LoadUrl("")
 				Starter.kvs.DeleteAll
 				clvActivity.Clear
+				
+				' Delete old videos
+				Dim countDeleteVideo As Int = 0
+				For Each f As String In File.ListFiles(File.DirInternal)
+					If f.ToLowerCase.EndsWith(".mp4") Then
+						If File.Delete(File.DirInternal, f) Then
+							countDeleteVideo = countDeleteVideo + 1
+						End If
+					End If
+				Next
+				ToastMessageShow(countDeleteVideo & " videos deleted",True)
 				
 				' https://www.b4x.com/android/forum/threads/b4x-resumable-subs-that-return-values-resumablesub.82670/
 				Dim rs As ResumableSub = GetUnwatchedVideos
@@ -1280,7 +1293,7 @@ End Sub
 Sub CreateTab4() As ResumableSub
 	Try
 		Pages = Array(False, False, False, False, True, False, False) 'True = Enabled
-		wvMedia.LoadUrl("")
+		'wvMedia.LoadUrl("")
 		If lblDrivewayBatt.Text = "" Or lblFrontDoorBatt.Text = "" Or lblSideYardBatt.Text = "" Or lblStatus.Text.Contains("REST endpoint URL not found") Then
 			'ProgressDialogShow2("Getting new camera information...",False)
 			btnDriveway.Enabled = False
@@ -2832,6 +2845,19 @@ Sub GetVideos(json As String) As ResumableSub
 			'Log("kvs.ListKeys " & i & " | " & videos.VideoID & " | " & videos.Watched)
 			
 			If i > 49 Then
+				Dim mytypes As Object = Starter.kvs.Get(list1.Get(i))
+				Dim videos = mytypes As VideoInfo
+				
+				Dim videoName As String
+				videoName = "https://rest-" & userRegion &".immedia-semi.com" & videos.ThumbnailPath
+				If videoName.ToLowerCase.EndsWith(".mp4") = False Then
+					videoName = videoName.Trim & ".mp4"
+				End If
+				videoName = videoName.SubString(videoName.LastIndexOf("/")+1)
+				
+				If File.Exists(File.DirInternal, videoName) Then
+					File.Delete(File.DirInternal, videoName)
+				End If
 				Starter.kvs.Remove(list1.Get(i))
 			Else
 				Dim mytypes As Object = Starter.kvs.Get(list1.Get(i))
@@ -3190,40 +3216,47 @@ End Sub
 
 Sub ShowVideo (Link As String) As ResumableSub
 	Try
-		Dim j As HttpJob
-		j.Initialize("", Me)
-		j.Download(Link)
-		j.GetRequest.SetHeader("TOKEN_AUTH", authToken)
-		Wait For (j) JobDone(j As HttpJob)
-		B4XLoadingIndicator4.hide
-		If j.Success Then
-			' Save to a JPG file
-			Dim out As OutputStream = File.OpenOutput(File.DirInternal, "media.mp4", False)
-			File.Copy2(j.GetInputStream, out)
-			out.Close '<------ very important
-			
-			Dim sb As StringBuilder
-			sb.Initialize
-			sb.Append("<video width='100%' height='100%' controls autoplay muted>")
-			sb.Append("<source src='" & File.Combine(File.DirInternal, "\media.mp4") & "' Type='video/mp4'/>")
-			sb.Append("</video>")
-			Dim WebViewSettings1 As WebViewSettings
-			WebViewSettings1.setMediaPlaybackRequiresUserGesture(wvMedia,False)
-			wvMedia.LoadHtml(sb.ToString)
-			
-			Dim r As Reflector
-			r.Target = wvMedia
-			r.Target = r.RunMethod("getSettings")
-			r.RunMethod2("setBuiltInZoomControls", True, "java.lang.boolean")
-			r.RunMethod2("setDisplayZoomControls", False, "java.lang.boolean")
-				
-			mediaMetaData.Initialize
-			mediaMetaData.ProcessMediaFile(File.DirInternal,"media.mp4")
-			Dim ticks As Long = (mediaMetaData.GetDuration/1000) * DateTime.TicksPerSecond
-			lblDuration.Text = ConvertTicksToTimeString(ticks)
-		Else
+		Dim videoName As String
+		videoName = Link.SubString(Link.LastIndexOf("/")+1)
 
+		If File.Exists(File.DirInternal, videoName) = False Then
+			Dim j As HttpJob
+			j.Initialize("", Me)
+			j.Download(Link)
+			j.GetRequest.SetHeader("TOKEN_AUTH", authToken)
+			Wait For (j) JobDone(j As HttpJob)
+			If j.Success Then
+				' Save to a JPG file
+				Dim out As OutputStream = File.OpenOutput(File.DirInternal, videoName, False)
+				File.Copy2(j.GetInputStream, out)
+				out.Close '<------ very important
+			Else
+
+			End If
 		End If
+		
+		B4XLoadingIndicator4.hide
+		
+		Dim sb As StringBuilder
+		sb.Initialize
+		sb.Append("<video width='100%' height='100%' controls autoplay muted>")
+		sb.Append("<source src='" & File.Combine(File.DirInternal, "\" & videoName) & "' Type='video/mp4'/>")
+		sb.Append("</video>")
+		Dim WebViewSettings1 As WebViewSettings
+		WebViewSettings1.setMediaPlaybackRequiresUserGesture(wvMedia,False)
+		wvMedia.LoadHtml(sb.ToString)
+			
+		Dim r As Reflector
+		r.Target = wvMedia
+		r.Target = r.RunMethod("getSettings")
+		r.RunMethod2("setBuiltInZoomControls", True, "java.lang.boolean")
+		r.RunMethod2("setDisplayZoomControls", False, "java.lang.boolean")
+				
+		mediaMetaData.Initialize
+		mediaMetaData.ProcessMediaFile(File.DirInternal,videoName)
+		Dim ticks As Long = (mediaMetaData.GetDuration/1000) * DateTime.TicksPerSecond
+		lblDuration.Text = ConvertTicksToTimeString(ticks)
+
 		If j.ErrorMessage.Contains("Media not found") Then
 			clvActivity.RemoveAt(previousSelectedIndex)
 			Dim list1 As List = Starter.kvs.ListKeys
@@ -3289,10 +3322,6 @@ End Sub
 
 Sub GetUnwatchedVideos() As ResumableSub
 	Try
-		'************************************************************************************************************************************************************
-		' ***** KEEP android:targetSdkVersion="26" IN THE THE MANIFEST INSTEAD OF 28 ELSE IT WILL CRASH WHEN CALLING THIS SUB FROM ANOTHER TAB OR DURING LAUNCH *****
-		'************************************************************************************************************************************************************
-		
 		Dim rs As ResumableSub = RESTGet("https://rest-" & userRegion &".immedia-semi.com/api/v1/accounts/88438/media/changed?since=-999999999-01-01T00:00:00+18:00&page=1")
 		wait for (rs) complete (Result As Object)
 		
@@ -3330,10 +3359,6 @@ End Sub
 
 Sub GetUnwatchedVideosPage2() As ResumableSub
 	Try
-		'************************************************************************************************************************************************************
-		' ***** KEEP android:targetSdkVersion="26" IN THE THE MANIFEST INSTEAD OF 28 ELSE IT WILL CRASH WHEN CALLING THIS SUB FROM ANOTHER TAB OR DURING LAUNCH *****
-		'************************************************************************************************************************************************************
-		
 		Dim rs As ResumableSub = RESTGet("https://rest-" & userRegion &".immedia-semi.com/api/v1/accounts/88438/media/changed?since=-999999999-01-01T00:00:00+18:00&page=2")
 		wait for (rs) complete (Result As Object)
 		
@@ -3729,7 +3754,9 @@ Sub ivPlay_Click
 		Dim rs As ResumableSub = ShowVideo(cd.mediaURL)
 		wait for (rs) complete (Result As Object)
 		
-		Dim FileName As String = "media.mp4"
+		Dim FileName As String
+		FileName = cd.mediaURL.SubString(cd.mediaURL.LastIndexOf("/")+1)
+				
 		If File.Exists(File.DirInternal, FileName) Then
 			File.Copy(File.DirInternal, FileName, Starter.Provider.SharedFolder, FileName)
 			Dim in As Intent
