@@ -240,17 +240,17 @@ return null;
 }
 public static String  _getairquality(int _number) throws Exception{
  //BA.debugLineNum = 659;BA.debugLine="Sub GetAirQuality(number As Int) As String";
- //BA.debugLineNum = 662;BA.debugLine="If number <= 100 Then";
-if (_number<=100) { 
+ //BA.debugLineNum = 662;BA.debugLine="If number <= 10 Then";
+if (_number<=10) { 
  //BA.debugLineNum = 663;BA.debugLine="Return(\"Carbon monoxide level is perfect\")";
 if (true) return ("Carbon monoxide level is perfect");
- }else if(((_number>100) && (_number<400)) || _number==400) { 
+ }else if(((_number>10) && (_number<40)) || _number==40) { 
  //BA.debugLineNum = 665;BA.debugLine="Return(\"Carbon monoxide level is normal\")";
 if (true) return ("Carbon monoxide level is normal");
- }else if(((_number>400) && (_number<900)) || _number==900) { 
+ }else if(((_number>40) && (_number<90)) || _number==90) { 
  //BA.debugLineNum = 667;BA.debugLine="Return(\"Carbon monoxide level is high\")";
 if (true) return ("Carbon monoxide level is high");
- }else if(_number>900) { 
+ }else if(_number>90) { 
  //BA.debugLineNum = 669;BA.debugLine="Return(\"ALARM Carbon monoxide level is very high";
 if (true) return ("ALARM Carbon monoxide level is very high");
  }else {
@@ -407,7 +407,7 @@ _fw1.Close();
  } 
        catch (Exception e20) {
 			processBA.setLastException(e20); //BA.debugLineNum = 540;BA.debugLine="Log(\"Error in Sub LogEvent: \" & LastException.Me";
-anywheresoftware.b4a.keywords.Common.LogImpl("88454170","Error in Sub LogEvent: "+anywheresoftware.b4a.keywords.Common.LastException(processBA).getMessage(),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("21900570","Error in Sub LogEvent: "+anywheresoftware.b4a.keywords.Common.LastException(processBA).getMessage(),0);
  //BA.debugLineNum = 541;BA.debugLine="ToastMessageShow(LastException,False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(processBA).getObject()),anywheresoftware.b4a.keywords.Common.False);
  };
@@ -432,7 +432,7 @@ _mqtt.Connect2((org.eclipse.paho.client.mqttv3.MqttConnectOptions)(_connopt.getO
  } 
        catch (Exception e8) {
 			processBA.setLastException(e8); //BA.debugLineNum = 67;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("88192009",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("21638409",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  };
  //BA.debugLineNum = 69;BA.debugLine="End Sub";
 return "";
@@ -443,7 +443,7 @@ public static String  _mqtt_connected(boolean _success) throws Exception{
 try { //BA.debugLineNum = 73;BA.debugLine="If Success = False Then";
 if (_success==anywheresoftware.b4a.keywords.Common.False) { 
  //BA.debugLineNum = 74;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("88257539",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("21703939",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  //BA.debugLineNum = 75;BA.debugLine="MQTT_Connect";
 _mqtt_connect();
  }else {
@@ -461,7 +461,7 @@ _mqtt.Subscribe("HumidityAddValue",(int) (0));
  } 
        catch (Exception e13) {
 			processBA.setLastException(e13); //BA.debugLineNum = 84;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("88257549",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("21703949",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  //BA.debugLineNum = 85;BA.debugLine="ToastMessageShow(LastException,False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(processBA).getObject()),anywheresoftware.b4a.keywords.Common.False);
  };
@@ -476,7 +476,7 @@ _mqtt_connect();
  } 
        catch (Exception e4) {
 			processBA.setLastException(e4); //BA.debugLineNum = 94;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("88323076",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("21769476",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  //BA.debugLineNum = 95;BA.debugLine="ToastMessageShow(LastException,False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(processBA).getObject()),anywheresoftware.b4a.keywords.Common.False);
  };
@@ -639,10 +639,10 @@ mostCurrent._statemanager._setsetting /*String*/ (processBA,"AirQuality",_status
 mostCurrent._statemanager._savesettings /*String*/ (processBA);
  //BA.debugLineNum = 183;BA.debugLine="Dim NotificationText As String";
 _notificationtext = "";
- //BA.debugLineNum = 184;BA.debugLine="NotificationText = GetAirQuality(a(0)) & \", a";
-_notificationtext = _getairquality((int)(Double.parseDouble(_a[(int) (0)])))+", at "+_a[(int) (0)]+" ppm";
- //BA.debugLineNum = 185;BA.debugLine="If a(0) > 400 Then";
-if ((double)(Double.parseDouble(_a[(int) (0)]))>400) { 
+ //BA.debugLineNum = 184;BA.debugLine="NotificationText = GetAirQuality((a(0)/10)) &";
+_notificationtext = _getairquality((int) (((double)(Double.parseDouble(_a[(int) (0)]))/(double)10)))+", at "+BA.NumberToString(((double)(Double.parseDouble(_a[(int) (0)]))/(double)10))+" ppm";
+ //BA.debugLineNum = 185;BA.debugLine="If (a(0)/10) > 40 Then";
+if (((double)(Double.parseDouble(_a[(int) (0)]))/(double)10)>40) { 
  //BA.debugLineNum = 186;BA.debugLine="If IsAirQualityNotificationOnGoing = False T";
 if (_isairqualitynotificationongoing==anywheresoftware.b4a.keywords.Common.False) { 
  //BA.debugLineNum = 187;BA.debugLine="CreateNotification(\"Living Area Air Quality";
@@ -680,10 +680,10 @@ mostCurrent._statemanager._setsetting /*String*/ (processBA,"AirQualityBasement"
 mostCurrent._statemanager._savesettings /*String*/ (processBA);
  //BA.debugLineNum = 208;BA.debugLine="Dim NotificationText As String";
 _notificationtext = "";
- //BA.debugLineNum = 209;BA.debugLine="NotificationText = GetAirQuality(a(0)) & \", a";
-_notificationtext = _getairquality((int)(Double.parseDouble(_a[(int) (0)])))+", at "+_a[(int) (0)]+" ppm";
- //BA.debugLineNum = 210;BA.debugLine="If a(0) > 400 Then";
-if ((double)(Double.parseDouble(_a[(int) (0)]))>400) { 
+ //BA.debugLineNum = 209;BA.debugLine="NotificationText = GetAirQuality((a(0)/10)) &";
+_notificationtext = _getairquality((int) (((double)(Double.parseDouble(_a[(int) (0)]))/(double)10)))+", at "+BA.NumberToString(((double)(Double.parseDouble(_a[(int) (0)]))/(double)10))+" ppm";
+ //BA.debugLineNum = 210;BA.debugLine="If (a(0)/10) > 40 Then";
+if (((double)(Double.parseDouble(_a[(int) (0)]))/(double)10)>40) { 
  //BA.debugLineNum = 211;BA.debugLine="If IsAirQualityNotificationOnGoingBasement =";
 if (_isairqualitynotificationongoingbasement==anywheresoftware.b4a.keywords.Common.False) { 
  //BA.debugLineNum = 212;BA.debugLine="CreateNotification(\"Basement Air Quality\",N";
@@ -1125,7 +1125,7 @@ _n.Cancel((int) (732));
  } 
        catch (Exception e345) {
 			processBA.setLastException(e345); //BA.debugLineNum = 486;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("88388995",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("21835395",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  //BA.debugLineNum = 488;BA.debugLine="Select sensorInTrouble";
 switch (BA.switchObjectToInt(_sensorintrouble,"TempHumidityBasement","TempHumidity","AirQuality","AirQualityBasement")) {
 case 0: {

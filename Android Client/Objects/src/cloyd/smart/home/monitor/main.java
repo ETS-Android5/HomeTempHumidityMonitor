@@ -646,9 +646,9 @@ _compiledata = new anywheresoftware.b4a.objects.collections.Map();
  //BA.debugLineNum = 185;BA.debugLine="compiledata = File.ReadMap(File.DirAssets, \"com";
 _compiledata = anywheresoftware.b4a.keywords.Common.File.ReadMap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"compiletime.txt");
  //BA.debugLineNum = 186;BA.debugLine="Log($\"autoversion: ${compiledata.Get(\"autoversi";
-anywheresoftware.b4a.keywords.Common.LogImpl("8131087",("autoversion: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",_compiledata.Get((Object)("autoversion")))+""),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("2131087",("autoversion: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",_compiledata.Get((Object)("autoversion")))+""),0);
  //BA.debugLineNum = 187;BA.debugLine="Log($\"compilation time: $DateTime{compiledata.G";
-anywheresoftware.b4a.keywords.Common.LogImpl("8131088",("compilation time: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("datetime",_compiledata.Get((Object)("time")))+""),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("2131088",("compilation time: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("datetime",_compiledata.Get((Object)("time")))+""),0);
  //BA.debugLineNum = 188;BA.debugLine="compileTimeStamp = compiledata.Get(\"time\")";
 parent._compiletimestamp = BA.ObjectToString(_compiledata.Get((Object)("time")));
  if (true) break;
@@ -681,7 +681,7 @@ case 16:
 //C
 this.state = 17;
  //BA.debugLineNum = 198;BA.debugLine="Log(\"After crash: \" & iCrash.GetExtra(\"Crash\"))";
-anywheresoftware.b4a.keywords.Common.LogImpl("8131099","After crash: "+BA.ObjectToString(_icrash.GetExtra("Crash")),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("2131099","After crash: "+BA.ObjectToString(_icrash.GetExtra("Crash")),0);
  if (true) break;
 
 case 17:
@@ -837,7 +837,7 @@ parent.mostCurrent._gaugeheatindex._setranges /*String*/ (anywheresoftware.b4a.k
  //BA.debugLineNum = 262;BA.debugLine="GaugeDewPoint.SetRanges(Array(GaugeDewPoint.Crea";
 parent.mostCurrent._gaugedewpoint._setranges /*String*/ (anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)(parent.mostCurrent._gaugedewpoint._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (0),(float) (60.8),parent.mostCurrent._xui.Color_RGB((int) (100),(int) (221),(int) (23)))),(Object)(parent.mostCurrent._gaugedewpoint._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (60.8),(float) (64.4),parent.mostCurrent._xui.Color_RGB((int) (100),(int) (240),(int) (23)))),(Object)(parent.mostCurrent._gaugedewpoint._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (64.4),(float) (78.8),parent.mostCurrent._xui.Color_Yellow)),(Object)(parent.mostCurrent._gaugedewpoint._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (78.8),(float) (100),parent.mostCurrent._xui.Color_Red))}));
  //BA.debugLineNum = 268;BA.debugLine="GaugeAirQuality.SetRanges(Array(GaugeAirQuality.";
-parent.mostCurrent._gaugeairquality._setranges /*String*/ (anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)(parent.mostCurrent._gaugeairquality._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (0),(float) (100),parent.mostCurrent._xui.Color_RGB((int) (100),(int) (221),(int) (23)))),(Object)(parent.mostCurrent._gaugeairquality._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (100),(float) (400),parent.mostCurrent._xui.Color_RGB((int) (100),(int) (240),(int) (23)))),(Object)(parent.mostCurrent._gaugeairquality._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (400),(float) (900),parent.mostCurrent._xui.Color_Yellow)),(Object)(parent.mostCurrent._gaugeairquality._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (900),(float) (1000),parent.mostCurrent._xui.Color_Red))}));
+parent.mostCurrent._gaugeairquality._setranges /*String*/ (anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)(parent.mostCurrent._gaugeairquality._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (0),(float) (10),parent.mostCurrent._xui.Color_RGB((int) (100),(int) (221),(int) (23)))),(Object)(parent.mostCurrent._gaugeairquality._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (10),(float) (40),parent.mostCurrent._xui.Color_RGB((int) (100),(int) (240),(int) (23)))),(Object)(parent.mostCurrent._gaugeairquality._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (40),(float) (90),parent.mostCurrent._xui.Color_Yellow)),(Object)(parent.mostCurrent._gaugeairquality._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (90),(float) (100),parent.mostCurrent._xui.Color_Red))}));
  //BA.debugLineNum = 272;BA.debugLine="GaugeAirQuality.CurrentValue=0";
 parent.mostCurrent._gaugeairquality._setcurrentvalue /*float*/ ((float) (0));
  //BA.debugLineNum = 274;BA.debugLine="GaugeHumidityBasement.SetRanges(Array(GaugeHumid";
@@ -849,7 +849,7 @@ parent.mostCurrent._gaugeheatindexbasement._setranges /*String*/ (anywheresoftwa
  //BA.debugLineNum = 285;BA.debugLine="GaugeDewPointBasement.SetRanges(Array(GaugeDewPo";
 parent.mostCurrent._gaugedewpointbasement._setranges /*String*/ (anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)(parent.mostCurrent._gaugedewpointbasement._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (0),(float) (60.8),parent.mostCurrent._xui.Color_RGB((int) (100),(int) (221),(int) (23)))),(Object)(parent.mostCurrent._gaugedewpointbasement._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (60.8),(float) (64.4),parent.mostCurrent._xui.Color_RGB((int) (100),(int) (240),(int) (23)))),(Object)(parent.mostCurrent._gaugedewpointbasement._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (64.4),(float) (78.8),parent.mostCurrent._xui.Color_Yellow)),(Object)(parent.mostCurrent._gaugedewpointbasement._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (78.8),(float) (100),parent.mostCurrent._xui.Color_Red))}));
  //BA.debugLineNum = 291;BA.debugLine="GaugeAirQualityBasement.SetRanges(Array(GaugeAir";
-parent.mostCurrent._gaugeairqualitybasement._setranges /*String*/ (anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)(parent.mostCurrent._gaugeairqualitybasement._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (0),(float) (100),parent.mostCurrent._xui.Color_RGB((int) (100),(int) (221),(int) (23)))),(Object)(parent.mostCurrent._gaugeairqualitybasement._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (100),(float) (400),parent.mostCurrent._xui.Color_RGB((int) (100),(int) (240),(int) (23)))),(Object)(parent.mostCurrent._gaugeairqualitybasement._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (400),(float) (900),parent.mostCurrent._xui.Color_Yellow)),(Object)(parent.mostCurrent._gaugeairqualitybasement._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (900),(float) (1000),parent.mostCurrent._xui.Color_Red))}));
+parent.mostCurrent._gaugeairqualitybasement._setranges /*String*/ (anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)(parent.mostCurrent._gaugeairqualitybasement._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (0),(float) (10),parent.mostCurrent._xui.Color_RGB((int) (100),(int) (221),(int) (23)))),(Object)(parent.mostCurrent._gaugeairqualitybasement._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (10),(float) (40),parent.mostCurrent._xui.Color_RGB((int) (100),(int) (240),(int) (23)))),(Object)(parent.mostCurrent._gaugeairqualitybasement._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (40),(float) (90),parent.mostCurrent._xui.Color_Yellow)),(Object)(parent.mostCurrent._gaugeairqualitybasement._createrange /*cloyd.smart.home.monitor.gauge._gaugerange*/ ((float) (90),(float) (100),parent.mostCurrent._xui.Color_Red))}));
  //BA.debugLineNum = 295;BA.debugLine="GaugeAirQualityBasement.CurrentValue=0";
 parent.mostCurrent._gaugeairqualitybasement._setcurrentvalue /*float*/ ((float) (0));
  //BA.debugLineNum = 297;BA.debugLine="Dim cs As CSBuilder";
@@ -1164,7 +1164,7 @@ _menu.Add((int) (0),(int) (0),BA.ObjectToCharSequence("About"),(android.graphics
  } 
        catch (Exception e10) {
 			processBA.setLastException(e10); //BA.debugLineNum = 787;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("81048586",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232112650",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 789;BA.debugLine="End Sub";
 return "";
@@ -1327,7 +1327,7 @@ _tabstrip1_pageselected((int) (6));
  } 
        catch (Exception e57) {
 			processBA.setLastException(e57); //BA.debugLineNum = 448;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("8196677",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("2196677",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 451;BA.debugLine="Try";
 try { //BA.debugLineNum = 452;BA.debugLine="If MQTT.IsInitialized = False Or MQTT.Connected";
@@ -1338,7 +1338,7 @@ _mqtt_connect();
  } 
        catch (Exception e64) {
 			processBA.setLastException(e64); //BA.debugLineNum = 456;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("8196685",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("2196685",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 458;BA.debugLine="End Sub";
 return "";
@@ -1886,7 +1886,7 @@ case 83:
 this.state = 84;
 this.catchState = 87;
  //BA.debugLineNum = 743;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("8852066",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("231916130",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -1908,7 +1908,7 @@ case 87:
 this.state = 88;
 this.catchState = 0;
  //BA.debugLineNum = 747;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("8852070",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("231916134",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -1943,7 +1943,7 @@ _iv.setBitmap((android.graphics.Bitmap)(_effects._blur /*anywheresoftware.b4a.ob
  } 
        catch (Exception e6) {
 			processBA.setLastException(e6); //BA.debugLineNum = 2647;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("84128774",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("235192838",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 2649;BA.debugLine="End Sub";
 return "";
@@ -1964,7 +1964,7 @@ _startcamerabytag("Backyard Outdoor");
  } 
        catch (Exception e8) {
 			processBA.setLastException(e8); //BA.debugLineNum = 4084;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("86553608",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("237617672",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 4086;BA.debugLine="End Sub";
 return "";
@@ -1990,7 +1990,7 @@ mostCurrent._mjbackyardoutdoor._connect /*String*/ (_wyzebackyardurl,(int) (8083
  } 
        catch (Exception e11) {
 			processBA.setLastException(e11); //BA.debugLineNum = 4056;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("86422540",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("237486604",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 4058;BA.debugLine="End Sub";
 return "";
@@ -2436,7 +2436,7 @@ case 22:
 this.state = 23;
 this.catchState = 0;
  //BA.debugLineNum = 3380;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("85308487",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("236372551",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -2882,7 +2882,7 @@ case 22:
 this.state = 23;
 this.catchState = 0;
  //BA.debugLineNum = 3469;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("85374023",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("236438087",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -3047,7 +3047,7 @@ _startcamerabytag("Front Yard Outdoor");
  } 
        catch (Exception e8) {
 			processBA.setLastException(e8); //BA.debugLineNum = 4096;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("86619144",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("237683208",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 4098;BA.debugLine="End Sub";
 return "";
@@ -3073,7 +3073,7 @@ mostCurrent._mjfrontyardoutdoor._connect /*String*/ (_wyzefrontyardurl,(int) (80
  } 
        catch (Exception e11) {
 			processBA.setLastException(e11); //BA.debugLineNum = 4040;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("86357004",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("237421068",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 4042;BA.debugLine="End Sub";
 return "";
@@ -3123,7 +3123,7 @@ _phone.SendBroadcastIntent((android.content.Intent)(_intent1.getObject()));
  } 
        catch (Exception e11) {
 			processBA.setLastException(e11); //BA.debugLineNum = 4024;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("86291468",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("237355532",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 4026;BA.debugLine="End Sub";
 return "";
@@ -3521,7 +3521,7 @@ case 22:
 this.state = 23;
 this.catchState = 0;
  //BA.debugLineNum = 3557;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("85439558",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("236503622",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -3592,7 +3592,7 @@ _startcamerabytag("Side Yard Outdoor");
  } 
        catch (Exception e8) {
 			processBA.setLastException(e8); //BA.debugLineNum = 4108;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("86684680",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("237748744",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 4110;BA.debugLine="End Sub";
 return "";
@@ -3618,7 +3618,7 @@ mostCurrent._mjsideyardoutdoor._connect /*String*/ (_wyzesideyardurl,(int) (8083
  } 
        catch (Exception e11) {
 			processBA.setLastException(e11); //BA.debugLineNum = 4072;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("86488076",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("237552140",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 4074;BA.debugLine="End Sub";
 return "";
@@ -3743,15 +3743,15 @@ _a = anywheresoftware.b4a.keywords.Common.Regex.Split("\\|",_status);
 if (_a.length==3) { 
  //BA.debugLineNum = 1302;BA.debugLine="If IsNumber(a(0)) And a(0) > 0 Then";
 if (anywheresoftware.b4a.keywords.Common.IsNumber(_a[(int) (0)]) && (double)(Double.parseDouble(_a[(int) (0)]))>0) { 
- //BA.debugLineNum = 1303;BA.debugLine="GaugeAirQuality.CurrentValue = a(0)";
-mostCurrent._gaugeairquality._setcurrentvalue /*float*/ ((float)(Double.parseDouble(_a[(int) (0)])));
- //BA.debugLineNum = 1304;BA.debugLine="If a(0) > 400 Then";
-if ((double)(Double.parseDouble(_a[(int) (0)]))>400) { 
+ //BA.debugLineNum = 1303;BA.debugLine="GaugeAirQuality.CurrentValue = (a(0)/10)";
+mostCurrent._gaugeairquality._setcurrentvalue /*float*/ ((float) (((double)(Double.parseDouble(_a[(int) (0)]))/(double)10)));
+ //BA.debugLineNum = 1304;BA.debugLine="If (a(0)/10) > 40 Then";
+if (((double)(Double.parseDouble(_a[(int) (0)]))/(double)10)>40) { 
  //BA.debugLineNum = 1305;BA.debugLine="lblAirQuality.Text = cs.Initialize.Bold.Appen";
-mostCurrent._lblairquality.setText(BA.ObjectToCharSequence(_cs.Initialize().Bold().Append(BA.ObjectToCharSequence("Air Quality: ")).Pop().Color(anywheresoftware.b4a.keywords.Common.Colors.Red).Append(BA.ObjectToCharSequence(_getairquality((int)(Double.parseDouble(_a[(int) (0)]))))).PopAll().getObject()));
+mostCurrent._lblairquality.setText(BA.ObjectToCharSequence(_cs.Initialize().Bold().Append(BA.ObjectToCharSequence("Air Quality: ")).Pop().Color(anywheresoftware.b4a.keywords.Common.Colors.Red).Append(BA.ObjectToCharSequence(_getairquality((int) (((double)(Double.parseDouble(_a[(int) (0)]))/(double)10))))).PopAll().getObject()));
  }else {
  //BA.debugLineNum = 1307;BA.debugLine="lblAirQuality.Text = cs.Initialize.Bold.Appen";
-mostCurrent._lblairquality.setText(BA.ObjectToCharSequence(_cs.Initialize().Bold().Append(BA.ObjectToCharSequence("Air Quality: ")).Pop().Append(BA.ObjectToCharSequence(_getairquality((int)(Double.parseDouble(_a[(int) (0)]))))).PopAll().getObject()));
+mostCurrent._lblairquality.setText(BA.ObjectToCharSequence(_cs.Initialize().Bold().Append(BA.ObjectToCharSequence("Air Quality: ")).Pop().Append(BA.ObjectToCharSequence(_getairquality((int) (((double)(Double.parseDouble(_a[(int) (0)]))/(double)10))))).PopAll().getObject()));
  };
  //BA.debugLineNum = 1309;BA.debugLine="If a(1) = \"\" Then";
 if ((_a[(int) (1)]).equals("")) { 
@@ -3803,7 +3803,7 @@ mostCurrent._lblairqualitylastupdate.setText(BA.ObjectToCharSequence(_cs.Initial
  } 
        catch (Exception e44) {
 			processBA.setLastException(e44); //BA.debugLineNum = 1338;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("82555949",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("233620013",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 1339;BA.debugLine="lblAirQualityLastUpdate.Text = cs.Initialize.Bol";
 mostCurrent._lblairqualitylastupdate.setText(BA.ObjectToCharSequence(_cs.Initialize().Bold().Append(BA.ObjectToCharSequence("Exception: ")).Pop().Color(anywheresoftware.b4a.keywords.Common.Colors.Red).Append(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA).getObject())).PopAll().getObject()));
  };
@@ -3836,15 +3836,15 @@ _a = anywheresoftware.b4a.keywords.Common.Regex.Split("\\|",_status);
 if (_a.length==3) { 
  //BA.debugLineNum = 1352;BA.debugLine="If IsNumber(a(0)) And a(0) > 0 Then";
 if (anywheresoftware.b4a.keywords.Common.IsNumber(_a[(int) (0)]) && (double)(Double.parseDouble(_a[(int) (0)]))>0) { 
- //BA.debugLineNum = 1353;BA.debugLine="GaugeAirQualityBasement.CurrentValue = a(0)";
-mostCurrent._gaugeairqualitybasement._setcurrentvalue /*float*/ ((float)(Double.parseDouble(_a[(int) (0)])));
- //BA.debugLineNum = 1354;BA.debugLine="If a(0) > 400 Then";
-if ((double)(Double.parseDouble(_a[(int) (0)]))>400) { 
+ //BA.debugLineNum = 1353;BA.debugLine="GaugeAirQualityBasement.CurrentValue = (a(0)/1";
+mostCurrent._gaugeairqualitybasement._setcurrentvalue /*float*/ ((float) (((double)(Double.parseDouble(_a[(int) (0)]))/(double)10)));
+ //BA.debugLineNum = 1354;BA.debugLine="If (a(0)/10) > 40 Then";
+if (((double)(Double.parseDouble(_a[(int) (0)]))/(double)10)>40) { 
  //BA.debugLineNum = 1355;BA.debugLine="lblAirQualityBasement.Text = cs.Initialize.Bo";
-mostCurrent._lblairqualitybasement.setText(BA.ObjectToCharSequence(_cs.Initialize().Bold().Append(BA.ObjectToCharSequence("Air Quality: ")).Pop().Color(anywheresoftware.b4a.keywords.Common.Colors.Red).Append(BA.ObjectToCharSequence(_getairquality((int)(Double.parseDouble(_a[(int) (0)]))))).PopAll().getObject()));
+mostCurrent._lblairqualitybasement.setText(BA.ObjectToCharSequence(_cs.Initialize().Bold().Append(BA.ObjectToCharSequence("Air Quality: ")).Pop().Color(anywheresoftware.b4a.keywords.Common.Colors.Red).Append(BA.ObjectToCharSequence(_getairquality((int) (((double)(Double.parseDouble(_a[(int) (0)]))/(double)10))))).PopAll().getObject()));
  }else {
  //BA.debugLineNum = 1357;BA.debugLine="lblAirQualityBasement.Text = cs.Initialize.Bo";
-mostCurrent._lblairqualitybasement.setText(BA.ObjectToCharSequence(_cs.Initialize().Bold().Append(BA.ObjectToCharSequence("Air Quality: ")).Pop().Append(BA.ObjectToCharSequence(_getairquality((int)(Double.parseDouble(_a[(int) (0)]))))).PopAll().getObject()));
+mostCurrent._lblairqualitybasement.setText(BA.ObjectToCharSequence(_cs.Initialize().Bold().Append(BA.ObjectToCharSequence("Air Quality: ")).Pop().Append(BA.ObjectToCharSequence(_getairquality((int) (((double)(Double.parseDouble(_a[(int) (0)]))/(double)10))))).PopAll().getObject()));
  };
  //BA.debugLineNum = 1359;BA.debugLine="If a(1) = \"\" Then";
 if ((_a[(int) (1)]).equals("")) { 
@@ -3896,7 +3896,7 @@ mostCurrent._lblairqualitylastupdatebasement.setText(BA.ObjectToCharSequence(_cs
  } 
        catch (Exception e44) {
 			processBA.setLastException(e44); //BA.debugLineNum = 1389;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("82621486",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("233685550",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 1390;BA.debugLine="lblAirQualityLastUpdateBasement.Text = cs.Initia";
 mostCurrent._lblairqualitylastupdatebasement.setText(BA.ObjectToCharSequence(_cs.Initialize().Bold().Append(BA.ObjectToCharSequence("Exception: ")).Pop().Color(anywheresoftware.b4a.keywords.Common.Colors.Red).Append(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA).getObject())).PopAll().getObject()));
  };
@@ -4020,7 +4020,7 @@ if (true) return "Unusable";
  } 
        catch (Exception e14) {
 			processBA.setLastException(e14); //BA.debugLineNum = 2557;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("83866639",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234930703",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 2558;BA.debugLine="lblStatus.Text = \"CheckLFRLevel LastException: \"";
 mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("CheckLFRLevel LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA))));
  //BA.debugLineNum = 2559;BA.debugLine="Return \"\"";
@@ -4130,7 +4130,7 @@ mostCurrent._lbllastupdate.setText(BA.ObjectToCharSequence(_cs.Initialize().Bold
  } 
        catch (Exception e52) {
 			processBA.setLastException(e52); //BA.debugLineNum = 1448;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("82687030",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("233751094",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 1449;BA.debugLine="lblLastUpdate.Text = cs.Initialize.Bold.Append(\"";
 mostCurrent._lbllastupdate.setText(BA.ObjectToCharSequence(_cs.Initialize().Bold().Append(BA.ObjectToCharSequence("Exception: ")).Pop().Color(anywheresoftware.b4a.keywords.Common.Colors.Red).Append(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA).getObject())).PopAll().getObject()));
  };
@@ -4238,7 +4238,7 @@ mostCurrent._lbllastupdatebasement.setText(BA.ObjectToCharSequence(_cs.Initializ
  } 
        catch (Exception e52) {
 			processBA.setLastException(e52); //BA.debugLineNum = 1506;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("82752565",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("233816629",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 1507;BA.debugLine="lblLastUpdateBasement.Text = cs.Initialize.Bold.";
 mostCurrent._lbllastupdatebasement.setText(BA.ObjectToCharSequence(_cs.Initialize().Bold().Append(BA.ObjectToCharSequence("Exception: ")).Pop().Color(anywheresoftware.b4a.keywords.Common.Colors.Red).Append(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA).getObject())).PopAll().getObject()));
  };
@@ -4436,7 +4436,7 @@ case 17:
 this.state = 18;
 this.catchState = 0;
  //BA.debugLineNum = 2953;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("84653093",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("235717157",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -4973,7 +4973,7 @@ case 21:
 this.state = 22;
 this.catchState = 0;
  //BA.debugLineNum = 1228;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("82293793",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("233357857",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -5167,7 +5167,7 @@ case 19:
 this.state = 20;
 this.catchState = 0;
  //BA.debugLineNum = 1990;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("83342369",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234406433",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -5339,7 +5339,7 @@ case 15:
 this.state = 16;
 this.catchState = 0;
  //BA.debugLineNum = 3638;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("85570590",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("236634654",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -5367,17 +5367,17 @@ processBA.setLastException(e0);}
 }
 public static String  _getairquality(int _number) throws Exception{
  //BA.debugLineNum = 557;BA.debugLine="Sub GetAirQuality(number As Int) As String";
- //BA.debugLineNum = 560;BA.debugLine="If number <= 100 Then";
-if (_number<=100) { 
+ //BA.debugLineNum = 560;BA.debugLine="If number <= 10 Then";
+if (_number<=10) { 
  //BA.debugLineNum = 561;BA.debugLine="Return(\"Carbon monoxide perfect\")";
 if (true) return ("Carbon monoxide perfect");
- }else if(((_number>100) && (_number<400)) || _number==400) { 
+ }else if(((_number>10) && (_number<40)) || _number==40) { 
  //BA.debugLineNum = 563;BA.debugLine="Return(\"Carbon monoxide normal\")";
 if (true) return ("Carbon monoxide normal");
- }else if(((_number>400) && (_number<900)) || _number==900) { 
+ }else if(((_number>40) && (_number<90)) || _number==90) { 
  //BA.debugLineNum = 565;BA.debugLine="Return(\"Carbon monoxide high\")";
 if (true) return ("Carbon monoxide high");
- }else if(_number>900) { 
+ }else if(_number>90) { 
  //BA.debugLineNum = 567;BA.debugLine="Return(\"ALARM Carbon monoxide very high\")";
 if (true) return ("ALARM Carbon monoxide very high");
  }else {
@@ -5539,7 +5539,7 @@ mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("ERROR: GetAuthInfo - "+B
  //BA.debugLineNum = 2036;BA.debugLine="response = \"ERROR: GetAuthInfo - \" & LastExcepti";
 _response = "ERROR: GetAuthInfo - "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA));
  //BA.debugLineNum = 2037;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("83407914",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234471978",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 2040;BA.debugLine="End Sub";
 return "";
@@ -5822,7 +5822,7 @@ case 44:
 this.state = 45;
 this.catchState = 0;
  //BA.debugLineNum = 2229;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("83670110",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234734174",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -5954,7 +5954,7 @@ _root = _parser.NextObject();
  //BA.debugLineNum = 2062;BA.debugLine="commandID = root.Get(\"id\")";
 parent._commandid = BA.ObjectToString(_root.Get((Object)("id")));
  //BA.debugLineNum = 2063;BA.debugLine="Log(\"commandID: \" & commandID)";
-anywheresoftware.b4a.keywords.Common.LogImpl("83473428","commandID: "+parent._commandid,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234537492","commandID: "+parent._commandid,0);
  if (true) break;
 
 case 5:
@@ -5962,7 +5962,7 @@ case 5:
 this.state = 6;
 this.catchState = 0;
  //BA.debugLineNum = 2085;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("83473450",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234537514",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -6120,7 +6120,7 @@ case 7:
 //C
 this.state = 18;
  //BA.debugLineNum = 1880;BA.debugLine="Log(\"**** ALRIGHT \" & attempts & \"/\" & attemptsA";
-anywheresoftware.b4a.keywords.Common.LogImpl("83145750","**** ALRIGHT "+_attempts+"/"+_attemptsallowed+" *****",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234209814","**** ALRIGHT "+_attempts+"/"+_attemptsallowed+" *****",0);
  //BA.debugLineNum = 1881;BA.debugLine="Dim rs As ResumableSub = RESTGet(\"https://rest-\"";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restget("https://rest-"+parent._userregion+".immedia-semi.com/network/"+parent._networkid+"/camera/"+_camera);
@@ -6272,7 +6272,7 @@ _root = _parser.NextObject();
  //BA.debugLineNum = 2096;BA.debugLine="commandComplete = root.Get(\"complete\")";
 parent._commandcomplete = BA.ObjectToBoolean(_root.Get((Object)("complete")));
  //BA.debugLineNum = 2097;BA.debugLine="Log(\"commandComplete: \" & commandComplete)";
-anywheresoftware.b4a.keywords.Common.LogImpl("83538950","commandComplete: "+BA.ObjectToString(parent._commandcomplete),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234603014","commandComplete: "+BA.ObjectToString(parent._commandcomplete),0);
  if (true) break;
 
 case 5:
@@ -6280,7 +6280,7 @@ case 5:
 this.state = 6;
 this.catchState = 0;
  //BA.debugLineNum = 2099;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("83538952",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234603016",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -7161,7 +7161,7 @@ case 99:
 this.state = 100;
 this.catchState = 0;
  //BA.debugLineNum = 2511;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("83801320",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234865384",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -7261,7 +7261,7 @@ _code = (int)(BA.ObjectToNumber(_root.Get((Object)("code"))));
  //BA.debugLineNum = 2121;BA.debugLine="Dim message As String = root.Get(\"message\")";
 _message = BA.ObjectToString(_root.Get((Object)("message")));
  //BA.debugLineNum = 2122;BA.debugLine="Log(\"Code: \" & code & \" Message: \" & message)";
-anywheresoftware.b4a.keywords.Common.LogImpl("83604497","Code: "+BA.NumberToString(_code)+" Message: "+_message,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234668561","Code: "+BA.NumberToString(_code)+" Message: "+_message,0);
  //BA.debugLineNum = 2123;BA.debugLine="Return \"Code: \" & code & \" Message: \" & messag";
 if (true) return "Code: "+BA.NumberToString(_code)+" Message: "+_message;
  }else {
@@ -7272,7 +7272,7 @@ if (true) return _json;
  } 
        catch (Exception e19) {
 			processBA.setLastException(e19); //BA.debugLineNum = 2129;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("83604504",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234668568",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 2131;BA.debugLine="Return json";
 if (true) return _json;
  };
@@ -7388,7 +7388,7 @@ case 11:
 this.state = 12;
 this.catchState = 0;
  //BA.debugLineNum = 2274;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("83735592",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234799656",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -7594,7 +7594,7 @@ case 19:
 this.state = 20;
 this.catchState = 0;
  //BA.debugLineNum = 3257;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("85177376",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("236241440",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -7800,7 +7800,7 @@ case 19:
 this.state = 20;
 this.catchState = 0;
  //BA.debugLineNum = 3294;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("85242912",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("236306976",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -7845,7 +7845,7 @@ _appversion = _pm.GetVersionName(_packagename);
  } 
        catch (Exception e8) {
 			processBA.setLastException(e8); //BA.debugLineNum = 772;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("8983048",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232047112",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 774;BA.debugLine="Return AppVersion";
 if (true) return _appversion;
@@ -8356,7 +8356,7 @@ case 45:
 this.state = 46;
 this.catchState = 0;
  //BA.debugLineNum = 2819;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("84456567",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("235520631",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -8639,7 +8639,7 @@ anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(_in.getObj
  } 
        catch (Exception e12) {
 			processBA.setLastException(e12); //BA.debugLineNum = 3974;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("86094861",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("237158925",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 3976;BA.debugLine="End Sub";
 return "";
@@ -8843,7 +8843,7 @@ anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(_in.getObj
  } 
        catch (Exception e12) {
 			processBA.setLastException(e12); //BA.debugLineNum = 3991;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("86160397",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("237224461",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 3993;BA.debugLine="End Sub";
 return "";
@@ -8976,7 +8976,7 @@ case 13:
 this.state = 14;
 this.catchState = 0;
  //BA.debugLineNum = 3672;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("85636125",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("236700189",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -9113,7 +9113,7 @@ anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(_in.getObj
  } 
        catch (Exception e12) {
 			processBA.setLastException(e12); //BA.debugLineNum = 4008;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("86225933",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("237289997",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 4010;BA.debugLine="End Sub";
 return "";
@@ -9124,7 +9124,7 @@ public static String  _mjbackyardoutdoor_connectionerror(String _error) throws E
 try { //BA.debugLineNum = 989;BA.debugLine="If TabStrip1.CurrentPage = 6 Then";
 if (mostCurrent._tabstrip1.getCurrentPage()==6) { 
  //BA.debugLineNum = 990;BA.debugLine="Log(\"     Backyard Outdoor camera connection er";
-anywheresoftware.b4a.keywords.Common.LogImpl("81376259","     Backyard Outdoor camera connection error",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232440323","     Backyard Outdoor camera connection error",0);
  //BA.debugLineNum = 991;BA.debugLine="B4XLoadingIndicatorBackyard.Show";
 mostCurrent._b4xloadingindicatorbackyard._show /*String*/ ();
  //BA.debugLineNum = 992;BA.debugLine="lblBackyardOutdoor.Text = error & \" - Reconnect";
@@ -9137,7 +9137,7 @@ mostCurrent._mjbackyardoutdoor._connect /*String*/ (_wyzebackyardurl,(int) (8083
  } 
        catch (Exception e10) {
 			processBA.setLastException(e10); //BA.debugLineNum = 997;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("81376266",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232440330",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 999;BA.debugLine="End Sub";
 return "";
@@ -9146,7 +9146,7 @@ public static String  _mjbackyardoutdoor_disconnected() throws Exception{
  //BA.debugLineNum = 1055;BA.debugLine="Sub mjBackyardOutdoor_Disconnected";
  //BA.debugLineNum = 1056;BA.debugLine="Try";
 try { //BA.debugLineNum = 1057;BA.debugLine="Log(\"Backyard Outdoor Disconnected\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("81769474","Backyard Outdoor Disconnected",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232833538","Backyard Outdoor Disconnected",0);
  //BA.debugLineNum = 1058;BA.debugLine="B4XLoadingIndicatorBackyard.hide";
 mostCurrent._b4xloadingindicatorbackyard._hide /*String*/ ();
  //BA.debugLineNum = 1059;BA.debugLine="lblBackyardOutdoor.Text = \"\"";
@@ -9154,7 +9154,7 @@ mostCurrent._lblbackyardoutdoor.setText(BA.ObjectToCharSequence(""));
  } 
        catch (Exception e6) {
 			processBA.setLastException(e6); //BA.debugLineNum = 1061;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("81769478",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232833542",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 1063;BA.debugLine="End Sub";
 return "";
@@ -9197,13 +9197,13 @@ if (true) return "";
  //BA.debugLineNum = 1157;BA.debugLine="mjBackyardOutdoorCounter = mjBackyardOutdoorCoun";
 _mjbackyardoutdoorcounter = (int) (_mjbackyardoutdoorcounter+1);
  //BA.debugLineNum = 1158;BA.debugLine="Log(\"Backyard frame received\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("82162711","Backyard frame received",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("233226775","Backyard frame received",0);
  //BA.debugLineNum = 1159;BA.debugLine="lblBackyardOutdoor.Text = \"Image received. Proce";
 mostCurrent._lblbackyardoutdoor.setText(BA.ObjectToCharSequence("Image received. Processing..."));
  } 
        catch (Exception e22) {
 			processBA.setLastException(e22); //BA.debugLineNum = 1161;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("82162714",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("233226778",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 1163;BA.debugLine="End Sub";
 return "";
@@ -9212,7 +9212,7 @@ public static String  _mjbackyardoutdoor_streamerror(String _error) throws Excep
  //BA.debugLineNum = 1025;BA.debugLine="Sub mjBackyardOutdoor_StreamError(error As String)";
  //BA.debugLineNum = 1026;BA.debugLine="Try";
 try { //BA.debugLineNum = 1027;BA.debugLine="Log(\"Backyard Outdoor stream error\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("81572866","Backyard Outdoor stream error",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232636930","Backyard Outdoor stream error",0);
  //BA.debugLineNum = 1028;BA.debugLine="B4XLoadingIndicatorBackyard.hide";
 mostCurrent._b4xloadingindicatorbackyard._hide /*String*/ ();
  //BA.debugLineNum = 1029;BA.debugLine="lblBackyardOutdoor.Text = error";
@@ -9220,7 +9220,7 @@ mostCurrent._lblbackyardoutdoor.setText(BA.ObjectToCharSequence(_error));
  } 
        catch (Exception e6) {
 			processBA.setLastException(e6); //BA.debugLineNum = 1031;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("81572870",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232636934",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 1033;BA.debugLine="End Sub";
 return "";
@@ -9229,7 +9229,7 @@ public static String  _mjbackyardoutdoor_terminated(String _error) throws Except
  //BA.debugLineNum = 1085;BA.debugLine="Sub mjBackyardOutdoor_Terminated(error As String)";
  //BA.debugLineNum = 1086;BA.debugLine="Try";
 try { //BA.debugLineNum = 1087;BA.debugLine="Log(\"Backyard Outdoor Terminated\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("81966082","Backyard Outdoor Terminated",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("233030146","Backyard Outdoor Terminated",0);
  //BA.debugLineNum = 1088;BA.debugLine="B4XLoadingIndicatorBackyard.hide";
 mostCurrent._b4xloadingindicatorbackyard._hide /*String*/ ();
  //BA.debugLineNum = 1089;BA.debugLine="lblBackyardOutdoor.Text = error";
@@ -9237,7 +9237,7 @@ mostCurrent._lblbackyardoutdoor.setText(BA.ObjectToCharSequence(_error));
  } 
        catch (Exception e6) {
 			processBA.setLastException(e6); //BA.debugLineNum = 1091;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("81966086",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("233030150",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 1093;BA.debugLine="End Sub";
 return "";
@@ -9248,7 +9248,7 @@ public static String  _mjfrontyardoutdoor_connectionerror(String _error) throws 
 try { //BA.debugLineNum = 975;BA.debugLine="If TabStrip1.CurrentPage = 6 Then";
 if (mostCurrent._tabstrip1.getCurrentPage()==6) { 
  //BA.debugLineNum = 976;BA.debugLine="Log(\"     Front Yard Outdoor camera connection";
-anywheresoftware.b4a.keywords.Common.LogImpl("81310723","     Front Yard Outdoor camera connection error",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232374787","     Front Yard Outdoor camera connection error",0);
  //BA.debugLineNum = 977;BA.debugLine="B4XLoadingIndicatorFrontYard.Show";
 mostCurrent._b4xloadingindicatorfrontyard._show /*String*/ ();
  //BA.debugLineNum = 978;BA.debugLine="lblFrontYardOutdoor.Text = error & \" - Reconnec";
@@ -9261,7 +9261,7 @@ mostCurrent._mjfrontyardoutdoor._connect /*String*/ (_wyzefrontyardurl,(int) (80
  } 
        catch (Exception e10) {
 			processBA.setLastException(e10); //BA.debugLineNum = 983;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("81310730",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232374794",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 985;BA.debugLine="End Sub";
 return "";
@@ -9270,7 +9270,7 @@ public static String  _mjfrontyardoutdoor_disconnected() throws Exception{
  //BA.debugLineNum = 1045;BA.debugLine="Sub mjFrontYardOutdoor_Disconnected";
  //BA.debugLineNum = 1046;BA.debugLine="Try";
 try { //BA.debugLineNum = 1047;BA.debugLine="Log(\"Front Yard Outdoor Disconnected\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("81703938","Front Yard Outdoor Disconnected",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232768002","Front Yard Outdoor Disconnected",0);
  //BA.debugLineNum = 1048;BA.debugLine="B4XLoadingIndicatorFrontYard.Hide";
 mostCurrent._b4xloadingindicatorfrontyard._hide /*String*/ ();
  //BA.debugLineNum = 1049;BA.debugLine="lblFrontYardOutdoor.Text = \"\"";
@@ -9278,7 +9278,7 @@ mostCurrent._lblfrontyardoutdoor.setText(BA.ObjectToCharSequence(""));
  } 
        catch (Exception e6) {
 			processBA.setLastException(e6); //BA.debugLineNum = 1051;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("81703942",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232768006",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 1053;BA.debugLine="End Sub";
 return "";
@@ -9321,13 +9321,13 @@ if (true) return "";
  //BA.debugLineNum = 1127;BA.debugLine="mjFrontYardOutdoorCounter = mjFrontYardOutdoorCo";
 _mjfrontyardoutdoorcounter = (int) (_mjfrontyardoutdoorcounter+1);
  //BA.debugLineNum = 1128;BA.debugLine="Log(\"Front Yard frame received\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("82097175","Front Yard frame received",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("233161239","Front Yard frame received",0);
  //BA.debugLineNum = 1129;BA.debugLine="lblFrontYardOutdoor.Text = \"Image received. Proc";
 mostCurrent._lblfrontyardoutdoor.setText(BA.ObjectToCharSequence("Image received. Processing..."));
  } 
        catch (Exception e22) {
 			processBA.setLastException(e22); //BA.debugLineNum = 1131;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("82097178",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("233161242",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 1133;BA.debugLine="End Sub";
 return "";
@@ -9336,7 +9336,7 @@ public static String  _mjfrontyardoutdoor_streamerror(String _error) throws Exce
  //BA.debugLineNum = 1015;BA.debugLine="Sub mjFrontYardOutdoor_StreamError(error As String";
  //BA.debugLineNum = 1016;BA.debugLine="Try";
 try { //BA.debugLineNum = 1017;BA.debugLine="Log(\"Front Yard Outdoor stream error\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("81507330","Front Yard Outdoor stream error",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232571394","Front Yard Outdoor stream error",0);
  //BA.debugLineNum = 1018;BA.debugLine="B4XLoadingIndicatorFrontYard.Hide";
 mostCurrent._b4xloadingindicatorfrontyard._hide /*String*/ ();
  //BA.debugLineNum = 1019;BA.debugLine="lblFrontYardOutdoor.Text = error";
@@ -9344,7 +9344,7 @@ mostCurrent._lblfrontyardoutdoor.setText(BA.ObjectToCharSequence(_error));
  } 
        catch (Exception e6) {
 			processBA.setLastException(e6); //BA.debugLineNum = 1021;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("81507334",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232571398",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 1023;BA.debugLine="End Sub";
 return "";
@@ -9353,7 +9353,7 @@ public static String  _mjfrontyardoutdoor_terminated(String _error) throws Excep
  //BA.debugLineNum = 1075;BA.debugLine="Sub mjFrontYardOutdoor_Terminated(error As String)";
  //BA.debugLineNum = 1076;BA.debugLine="Try";
 try { //BA.debugLineNum = 1077;BA.debugLine="Log(\"Front Yard Outdoor Terminated\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("81900546","Front Yard Outdoor Terminated",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232964610","Front Yard Outdoor Terminated",0);
  //BA.debugLineNum = 1078;BA.debugLine="B4XLoadingIndicatorFrontYard.Hide";
 mostCurrent._b4xloadingindicatorfrontyard._hide /*String*/ ();
  //BA.debugLineNum = 1079;BA.debugLine="lblFrontYardOutdoor.Text = error";
@@ -9361,7 +9361,7 @@ mostCurrent._lblfrontyardoutdoor.setText(BA.ObjectToCharSequence(_error));
  } 
        catch (Exception e6) {
 			processBA.setLastException(e6); //BA.debugLineNum = 1081;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("81900550",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232964614",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 1083;BA.debugLine="End Sub";
 return "";
@@ -9372,7 +9372,7 @@ public static String  _mjsideyardoutdoor_connectionerror(String _error) throws E
 try { //BA.debugLineNum = 1003;BA.debugLine="If TabStrip1.CurrentPage = 6 Then";
 if (mostCurrent._tabstrip1.getCurrentPage()==6) { 
  //BA.debugLineNum = 1004;BA.debugLine="Log(\"     Side Yard Outdoor camera connection e";
-anywheresoftware.b4a.keywords.Common.LogImpl("81441795","     Side Yard Outdoor camera connection error",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232505859","     Side Yard Outdoor camera connection error",0);
  //BA.debugLineNum = 1005;BA.debugLine="B4XLoadingIndicatorSideYard.Show";
 mostCurrent._b4xloadingindicatorsideyard._show /*String*/ ();
  //BA.debugLineNum = 1006;BA.debugLine="lblSideYardOutdoor.Text = error & \" - Reconnect";
@@ -9385,7 +9385,7 @@ mostCurrent._mjsideyardoutdoor._connect /*String*/ (_wyzesideyardurl,(int) (8083
  } 
        catch (Exception e10) {
 			processBA.setLastException(e10); //BA.debugLineNum = 1011;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("81441802",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232505866",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 1013;BA.debugLine="End Sub";
 return "";
@@ -9394,7 +9394,7 @@ public static String  _mjsideyardoutdoor_disconnected() throws Exception{
  //BA.debugLineNum = 1065;BA.debugLine="Sub mjSideYardOutdoor_Disconnected";
  //BA.debugLineNum = 1066;BA.debugLine="Try";
 try { //BA.debugLineNum = 1067;BA.debugLine="Log(\"Side Yard Outdoor Disconnected\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("81835010","Side Yard Outdoor Disconnected",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232899074","Side Yard Outdoor Disconnected",0);
  //BA.debugLineNum = 1068;BA.debugLine="B4XLoadingIndicatorSideYard.Hide";
 mostCurrent._b4xloadingindicatorsideyard._hide /*String*/ ();
  //BA.debugLineNum = 1069;BA.debugLine="lblSideYardOutdoor.Text = \"\"";
@@ -9402,7 +9402,7 @@ mostCurrent._lblsideyardoutdoor.setText(BA.ObjectToCharSequence(""));
  } 
        catch (Exception e6) {
 			processBA.setLastException(e6); //BA.debugLineNum = 1071;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("81835014",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232899078",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 1073;BA.debugLine="End Sub";
 return "";
@@ -9445,13 +9445,13 @@ if (true) return "";
  //BA.debugLineNum = 1187;BA.debugLine="mjSideYardOutdoorCounter = mjSideYardOutdoorCoun";
 _mjsideyardoutdoorcounter = (int) (_mjsideyardoutdoorcounter+1);
  //BA.debugLineNum = 1188;BA.debugLine="Log(\"Side Yard frame received\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("82228247","Side Yard frame received",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("233292311","Side Yard frame received",0);
  //BA.debugLineNum = 1189;BA.debugLine="lblSideYardOutdoor.Text = \"Image received. Proce";
 mostCurrent._lblsideyardoutdoor.setText(BA.ObjectToCharSequence("Image received. Processing..."));
  } 
        catch (Exception e22) {
 			processBA.setLastException(e22); //BA.debugLineNum = 1191;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("82228250",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("233292314",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 1193;BA.debugLine="End Sub";
 return "";
@@ -9460,7 +9460,7 @@ public static String  _mjsideyardoutdoor_streamerror(String _error) throws Excep
  //BA.debugLineNum = 1035;BA.debugLine="Sub mjSideYardOutdoor_StreamError(error As String)";
  //BA.debugLineNum = 1036;BA.debugLine="Try";
 try { //BA.debugLineNum = 1037;BA.debugLine="Log(\"Side Yard Outdoor stream error\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("81638402","Side Yard Outdoor stream error",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232702466","Side Yard Outdoor stream error",0);
  //BA.debugLineNum = 1038;BA.debugLine="B4XLoadingIndicatorSideYard.Hide";
 mostCurrent._b4xloadingindicatorsideyard._hide /*String*/ ();
  //BA.debugLineNum = 1039;BA.debugLine="lblSideYardOutdoor.Text = error";
@@ -9468,7 +9468,7 @@ mostCurrent._lblsideyardoutdoor.setText(BA.ObjectToCharSequence(_error));
  } 
        catch (Exception e6) {
 			processBA.setLastException(e6); //BA.debugLineNum = 1041;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("81638406",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232702470",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 1043;BA.debugLine="End Sub";
 return "";
@@ -9477,7 +9477,7 @@ public static String  _mjsideyardoutdoor_terminated(String _error) throws Except
  //BA.debugLineNum = 1095;BA.debugLine="Sub mjSideYardOutdoor_Terminated(error As String)";
  //BA.debugLineNum = 1096;BA.debugLine="Try";
 try { //BA.debugLineNum = 1097;BA.debugLine="Log(\"Side Yard Outdoor Terminated\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("82031618","Side Yard Outdoor Terminated",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("233095682","Side Yard Outdoor Terminated",0);
  //BA.debugLineNum = 1098;BA.debugLine="B4XLoadingIndicatorSideYard.Hide";
 mostCurrent._b4xloadingindicatorsideyard._hide /*String*/ ();
  //BA.debugLineNum = 1099;BA.debugLine="lblSideYardOutdoor.Text = error";
@@ -9485,7 +9485,7 @@ mostCurrent._lblsideyardoutdoor.setText(BA.ObjectToCharSequence(_error));
  } 
        catch (Exception e6) {
 			processBA.setLastException(e6); //BA.debugLineNum = 1101;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("82031622",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("233095686",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 1103;BA.debugLine="End Sub";
 return "";
@@ -9508,7 +9508,7 @@ _mqtt.Connect2((org.eclipse.paho.client.mqttv3.MqttConnectOptions)(_connopt.getO
  } 
        catch (Exception e8) {
 			processBA.setLastException(e8); //BA.debugLineNum = 499;BA.debugLine="Log(\"MQTT_Connect: \" & LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("8327689","MQTT_Connect: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("231391753","MQTT_Connect: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 501;BA.debugLine="End Sub";
 return "";
@@ -9519,12 +9519,12 @@ public static String  _mqtt_connected(boolean _success) throws Exception{
 try { //BA.debugLineNum = 505;BA.debugLine="If Success = False Then";
 if (_success==anywheresoftware.b4a.keywords.Common.False) { 
  //BA.debugLineNum = 506;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("8393219",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("231457283",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 507;BA.debugLine="MQTT_Connect";
 _mqtt_connect();
  }else {
  //BA.debugLineNum = 509;BA.debugLine="Log(\"Connected to MQTT broker\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("8393222","Connected to MQTT broker",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("231457286","Connected to MQTT broker",0);
  //BA.debugLineNum = 510;BA.debugLine="MQTT.Subscribe(\"TempHumid\", 0)";
 _mqtt.Subscribe("TempHumid",(int) (0));
  //BA.debugLineNum = 511;BA.debugLine="MQTT.Subscribe(\"MQ7\", 0)";
@@ -9539,7 +9539,7 @@ _mqtt.Subscribe("HumidityAddValue",(int) (0));
  } 
        catch (Exception e14) {
 			processBA.setLastException(e14); //BA.debugLineNum = 517;BA.debugLine="Log(\"MQTT_Connected: \" & LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("8393230","MQTT_Connected: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("231457294","MQTT_Connected: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 519;BA.debugLine="End Sub";
 return "";
@@ -9560,13 +9560,13 @@ mostCurrent._gblacmenu.Add((int) (0),(int) (0),BA.ObjectToCharSequence("Show fre
  //BA.debugLineNum = 528;BA.debugLine="gblACMenu.Add(0, 0, \"About\",Null)";
 mostCurrent._gblacmenu.Add((int) (0),(int) (0),BA.ObjectToCharSequence("About"),(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null));
  //BA.debugLineNum = 529;BA.debugLine="Log(\"Disconnected from MQTT broker\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("8458760","Disconnected from MQTT broker",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("231522824","Disconnected from MQTT broker",0);
  //BA.debugLineNum = 530;BA.debugLine="MQTT_Connect";
 _mqtt_connect();
  } 
        catch (Exception e11) {
 			processBA.setLastException(e11); //BA.debugLineNum = 532;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("8458763",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("231522827",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 534;BA.debugLine="End Sub";
 return "";
@@ -9599,7 +9599,7 @@ _checktemphumiditysettingbasement();
  } 
        catch (Exception e16) {
 			processBA.setLastException(e16); //BA.debugLineNum = 553;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("8524305",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("231588369",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 555;BA.debugLine="End Sub";
 return "";
@@ -10470,7 +10470,7 @@ this.state = 66;
  //BA.debugLineNum = 1778;BA.debugLine="reChecked = True";
 _rechecked = anywheresoftware.b4a.keywords.Common.True;
  //BA.debugLineNum = 1779;BA.debugLine="Log(\"*********** HERE *********** i = \" &";
-anywheresoftware.b4a.keywords.Common.LogImpl("83080352","*********** HERE *********** i = "+BA.NumberToString(_i),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234144416","*********** HERE *********** i = "+BA.NumberToString(_i),0);
  //BA.debugLineNum = 1780;BA.debugLine="Dim rs As ResumableSub = RESTPost(\"https:/";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _restpost("https://rest-"+parent._userregion+".immedia-semi.com/network/"+parent._networkid+"/camera/"+_camera+"/thumbnail");
@@ -10533,7 +10533,7 @@ case 71:
 this.state = 72;
 ;
  //BA.debugLineNum = 1797;BA.debugLine="Log(\"*********** HERE TWO ***********\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("83080370","*********** HERE TWO ***********",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234144434","*********** HERE TWO ***********",0);
  //BA.debugLineNum = 1798;BA.debugLine="Dim rs As ResumableSub = GetCommandID(resp";
 _rs = new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper();
 _rs = _getcommandid(parent._response);
@@ -10693,7 +10693,7 @@ case 94:
 this.state = 95;
 this.catchState = 0;
  //BA.debugLineNum = 1834;BA.debugLine="Log(\"RefreshCamera LastException: \" & LastExcept";
-anywheresoftware.b4a.keywords.Common.LogImpl("83080407","RefreshCamera LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234144471","RefreshCamera LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -10906,7 +10906,7 @@ this.state = 13;
  //BA.debugLineNum = 1577;BA.debugLine="Dim res As Int = input.Text 'no need to check";
 _res = (int)(Double.parseDouble(_input._text /*String*/ ));
  //BA.debugLineNum = 1578;BA.debugLine="Log(res)";
-anywheresoftware.b4a.keywords.Common.LogImpl("83014683",BA.NumberToString(_res),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234078747",BA.NumberToString(_res),0);
  //BA.debugLineNum = 1579;BA.debugLine="jobLogin.PostString(\"https://rest-u006.immedi";
 _joblogin._poststring /*String*/ ("https://rest-u006.immedia-semi.com/api/v4/account/88438/client/"+parent._twofaclientid+"/pin/verify/","pin="+BA.NumberToString(_res));
  //BA.debugLineNum = 1580;BA.debugLine="jobLogin.GetRequest.SetContentType(\"applicati";
@@ -10936,7 +10936,7 @@ this.state = 16;
  //BA.debugLineNum = 1583;BA.debugLine="lblStatus.Text = GetRESTError(jobLogin.Error";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence(_getresterror(_joblogin._errormessage /*String*/ )));
  //BA.debugLineNum = 1584;BA.debugLine="Log(\"2FA error: \" & jobLogin.ErrorMessage)";
-anywheresoftware.b4a.keywords.Common.LogImpl("83014689","2FA error: "+_joblogin._errormessage /*String*/ ,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234078753","2FA error: "+_joblogin._errormessage /*String*/ ,0);
  //BA.debugLineNum = 1585;BA.debugLine="jobLogin.Release";
 _joblogin._release /*String*/ ();
  //BA.debugLineNum = 1586;BA.debugLine="Return Null";
@@ -11014,7 +11014,7 @@ this.state = 26;
  //BA.debugLineNum = 1607;BA.debugLine="lblStatus.Text = GetRESTError(jobLogin.ErrorMes";
 parent.mostCurrent._lblstatus.setText(BA.ObjectToCharSequence(_getresterror(_joblogin._errormessage /*String*/ )));
  //BA.debugLineNum = 1608;BA.debugLine="Log(\"RequestAuthToken error: \" & jobLogin.Error";
-anywheresoftware.b4a.keywords.Common.LogImpl("83014713","RequestAuthToken error: "+_joblogin._errormessage /*String*/ ,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234078777","RequestAuthToken error: "+_joblogin._errormessage /*String*/ ,0);
  //BA.debugLineNum = 1609;BA.debugLine="jobLogin.Release";
 _joblogin._release /*String*/ ();
  //BA.debugLineNum = 1610;BA.debugLine="Return Null";
@@ -11035,7 +11035,7 @@ case 28:
 this.state = 29;
 this.catchState = 0;
  //BA.debugLineNum = 1614;BA.debugLine="Log(\"RequestAuthToken LastException: \" & LastExc";
-anywheresoftware.b4a.keywords.Common.LogImpl("83014719","RequestAuthToken LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234078783","RequestAuthToken LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -11180,7 +11180,7 @@ this.catchState = 0;
  //BA.debugLineNum = 1921;BA.debugLine="response = \"ERROR: \" & LastException";
 parent._response = "ERROR: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA));
  //BA.debugLineNum = 1922;BA.debugLine="Log(\"RESTDownload LastException: \" & LastExcepti";
-anywheresoftware.b4a.keywords.Common.LogImpl("83211284","RESTDownload LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234275348","RESTDownload LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -11190,9 +11190,9 @@ this.state = -1;
 this.catchState = 0;
 ;
  //BA.debugLineNum = 1924;BA.debugLine="Log(\"URL: \" & url)";
-anywheresoftware.b4a.keywords.Common.LogImpl("83211286","URL: "+_url,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234275350","URL: "+_url,0);
  //BA.debugLineNum = 1925;BA.debugLine="Log(\"Response: \" & response)";
-anywheresoftware.b4a.keywords.Common.LogImpl("83211287","Response: "+parent._response,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234275351","Response: "+parent._response,0);
  //BA.debugLineNum = 1926;BA.debugLine="Return(response)";
 if (true) {
 anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,(Object)((parent._response)));return;};
@@ -11331,7 +11331,7 @@ this.catchState = 0;
  //BA.debugLineNum = 1949;BA.debugLine="response = \"ERROR: \" & LastException";
 parent._response = "ERROR: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA));
  //BA.debugLineNum = 1950;BA.debugLine="Log(\"RESTPost LastException: \" & LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("83276821","RESTPost LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234340885","RESTPost LastException: "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -11341,9 +11341,9 @@ this.state = -1;
 this.catchState = 0;
 ;
  //BA.debugLineNum = 1952;BA.debugLine="Log(\"URL: \" & url)";
-anywheresoftware.b4a.keywords.Common.LogImpl("83276823","URL: "+_url,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234340887","URL: "+_url,0);
  //BA.debugLineNum = 1953;BA.debugLine="Log(\"Response: \" & response)";
-anywheresoftware.b4a.keywords.Common.LogImpl("83276824","Response: "+parent._response,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("234340888","Response: "+parent._response,0);
  //BA.debugLineNum = 1954;BA.debugLine="Return(response)";
 if (true) {
 anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,(Object)((parent._response)));return;};
@@ -11414,7 +11414,7 @@ anywheresoftware.b4a.keywords.Common.Msgbox2(BA.ObjectToCharSequence("Smart Home
  } 
        catch (Exception e9) {
 			processBA.setLastException(e9); //BA.debugLineNum = 760;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("8917513",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("231981577",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 762;BA.debugLine="End Sub";
 return "";
@@ -11691,7 +11691,7 @@ case 27:
 this.state = 28;
 this.catchState = 0;
  //BA.debugLineNum = 3183;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("84980800",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("236044864",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 ;
@@ -11778,7 +11778,7 @@ case 40:
 this.state = 41;
 this.catchState = 0;
  //BA.debugLineNum = 3208;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("84980825",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("236044889",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -11832,7 +11832,7 @@ anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(_i.getObje
  } 
        catch (Exception e12) {
 			processBA.setLastException(e12); //BA.debugLineNum = 4132;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("86750228",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("237814292",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 4135;BA.debugLine="End Sub";
 return "";
@@ -12226,7 +12226,7 @@ case 35:
 this.state = 36;
 this.catchState = 0;
  //BA.debugLineNum = 3896;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("85898337",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("236962401",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -12965,7 +12965,7 @@ case 104:
 this.state = 105;
 this.catchState = 0;
  //BA.debugLineNum = 969;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("81245341",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("232309405",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -13039,7 +13039,7 @@ _previousselectedindex = _index;
  } 
        catch (Exception e23) {
 			processBA.setLastException(e23); //BA.debugLineNum = 2986;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("84718620",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("235782684",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 2988;BA.debugLine="End Sub";
 return "";

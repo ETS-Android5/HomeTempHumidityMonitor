@@ -187,8 +187,8 @@ Private Sub MQTT_MessageArrived (Topic As String, Payload() As Byte)
 					StateManager.SaveSettings
 					
 					Dim NotificationText As String
-					NotificationText = GetAirQuality(a(0)) & ", at " & a(0) & " ppm"
-					If a(0) > 400 Then
+					NotificationText = GetAirQuality((a(0)/10)) & ", at " & (a(0)/10) & " ppm"
+					If (a(0)/10) > 40 Then
 						If IsAirQualityNotificationOnGoing = False Then
 							CreateNotification("Living Area Air Quality",NotificationText,"co",Main,False,False,False,"Living area carbon monoxide").Notify(726)
 						Else
@@ -212,8 +212,8 @@ Private Sub MQTT_MessageArrived (Topic As String, Payload() As Byte)
 					StateManager.SaveSettings
 					
 					Dim NotificationText As String
-					NotificationText = GetAirQuality(a(0)) & ", at " & a(0) & " ppm"
-					If a(0) > 400 Then
+					NotificationText = GetAirQuality((a(0)/10)) & ", at " & (a(0)/10) & " ppm"
+					If (a(0)/10) > 40 Then
 						If IsAirQualityNotificationOnGoingBasement = False Then
 							CreateNotification("Basement Air Quality",NotificationText,"cobasement",Main,False,False,False,"Basement carbon monoxide").Notify(727)
 						Else
@@ -665,13 +665,13 @@ End Sub
 Sub GetAirQuality(number As Int) As String
 	' Detecting range: 10ppm-1000ppm carbon monoxide
 	' Air quality-cases: < 100 perfect | 100 - 400 normal | > 400 - 900 high | > 900 abnormal
-	If number <= 100 Then
+	If number <= 10 Then
 		Return("Carbon monoxide level is perfect")
-	else if ((number > 100) And (number < 400)) Or number = 400 Then
+	else if ((number > 10) And (number < 40)) Or number = 40 Then
 		Return("Carbon monoxide level is normal")
-	else if ((number > 400) And (number < 900)) Or number = 900 Then
+	else if ((number > 40) And (number < 90)) Or number = 90 Then
 		Return("Carbon monoxide level is high")
-	else If number > 900 Then
+	else If number > 90 Then
 		Return("ALARM Carbon monoxide level is very high")
 	Else
 		Return("MQ-7 - cant read any value - check the sensor!")

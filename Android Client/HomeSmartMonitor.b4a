@@ -363,10 +363,10 @@ Sub Activity_Create(FirstTime As Boolean)
 	    GaugeDewPoint.CreateRange(78.8, 100, xui.Color_Red)))
 		' Dew Point
 		
-		GaugeAirQuality.SetRanges(Array(GaugeAirQuality.CreateRange(0, 100, xui.Color_RGB(100,221,23)), _
-		GaugeAirQuality.CreateRange(100, 400, xui.Color_RGB(100,240,23)), _
-	    GaugeAirQuality.CreateRange(400, 900, xui.Color_Yellow), _
-	    GaugeAirQuality.CreateRange(900, 1000, xui.Color_Red)))	
+		GaugeAirQuality.SetRanges(Array(GaugeAirQuality.CreateRange(0, 10, xui.Color_RGB(100,221,23)), _
+		GaugeAirQuality.CreateRange(10, 40, xui.Color_RGB(100,240,23)), _
+	    GaugeAirQuality.CreateRange(40, 90, xui.Color_Yellow), _
+	    GaugeAirQuality.CreateRange(90, 100, xui.Color_Red)))	
 		GaugeAirQuality.CurrentValue=0
 		
 		GaugeHumidityBasement.SetRanges(Array(GaugeHumidityBasement.CreateRange(0, 70, xui.Color_RGB(100,221,23)), _
@@ -386,10 +386,10 @@ Sub Activity_Create(FirstTime As Boolean)
 	    GaugeDewPointBasement.CreateRange(78.8, 100, xui.Color_Red)))
 		' Dew Point
 		
-		GaugeAirQualityBasement.SetRanges(Array(GaugeAirQualityBasement.CreateRange(0, 100, xui.Color_RGB(100,221,23)), _
-		GaugeAirQualityBasement.CreateRange(100, 400, xui.Color_RGB(100,240,23)), _
-	    GaugeAirQualityBasement.CreateRange(400, 900, xui.Color_Yellow), _
-	    GaugeAirQualityBasement.CreateRange(900, 1000, xui.Color_Red)))	
+		GaugeAirQualityBasement.SetRanges(Array(GaugeAirQualityBasement.CreateRange(0, 10, xui.Color_RGB(100,221,23)), _
+		GaugeAirQualityBasement.CreateRange(10, 40, xui.Color_RGB(100,240,23)), _
+	    GaugeAirQualityBasement.CreateRange(40, 90, xui.Color_Yellow), _
+	    GaugeAirQualityBasement.CreateRange(90, 100, xui.Color_Red)))	
 		GaugeAirQualityBasement.CurrentValue=0
 		
 		Dim cs As CSBuilder
@@ -655,13 +655,13 @@ End Sub
 Sub GetAirQuality(number As Int) As String
 	' Detecting range: 10ppm-1000ppm carbon monoxide
 	' Air quality-cases: < 100 perfect | 100 - 400 normal | > 400 - 900 high | > 900 abnormal
-	If number <= 100 Then
+	If number <= 10 Then
 		Return("Carbon monoxide perfect")
-	else if ((number > 100) And (number < 400)) Or number = 400 Then
+	else if ((number > 10) And (number < 40)) Or number = 40 Then
 		Return("Carbon monoxide normal")
-	else if ((number > 400) And (number < 900)) Or number = 900 Then
+	else if ((number > 40) And (number < 90)) Or number = 90 Then
 		Return("Carbon monoxide high")
-	else If number > 900 Then
+	else If number > 90 Then
 		Return("ALARM Carbon monoxide very high")
 	Else
 		Return("MQ-7 - cant read any value - check the sensor!")
@@ -1398,11 +1398,11 @@ Sub CheckAirQualitySetting
 		Dim a() As String = Regex.Split("\|",status)
 		If a.Length = 3 Then
 			If IsNumber(a(0)) And a(0) > 0 Then
-				GaugeAirQuality.CurrentValue = a(0)
-				If a(0) > 400 Then
-					lblAirQuality.Text = cs.Initialize.Bold.Append("Air Quality: ").Pop.Color(Colors.Red).Append(GetAirQuality(a(0))).PopAll
+				GaugeAirQuality.CurrentValue = (a(0)/10)
+				If (a(0)/10) > 40 Then
+					lblAirQuality.Text = cs.Initialize.Bold.Append("Air Quality: ").Pop.Color(Colors.Red).Append(GetAirQuality((a(0)/10))).PopAll
 				Else
-					lblAirQuality.Text = cs.Initialize.Bold.Append("Air Quality: ").Pop.Append(GetAirQuality(a(0))).PopAll
+					lblAirQuality.Text = cs.Initialize.Bold.Append("Air Quality: ").Pop.Append(GetAirQuality((a(0)/10))).PopAll
 				End If
 				If a(1) = "" Then
 					Dim Tomorrow As Long
@@ -1448,11 +1448,11 @@ Sub CheckAirQualitySettingBasement
 		Dim a() As String = Regex.Split("\|",status)
 		If a.Length = 3 Then
 			If IsNumber(a(0)) And a(0) > 0 Then
-				GaugeAirQualityBasement.CurrentValue = a(0)
-				If a(0) > 400 Then
-					lblAirQualityBasement.Text = cs.Initialize.Bold.Append("Air Quality: ").Pop.Color(Colors.Red).Append(GetAirQuality(a(0))).PopAll
+				GaugeAirQualityBasement.CurrentValue = (a(0)/10)
+				If (a(0)/10) > 40 Then
+					lblAirQualityBasement.Text = cs.Initialize.Bold.Append("Air Quality: ").Pop.Color(Colors.Red).Append(GetAirQuality((a(0)/10))).PopAll
 				Else
-					lblAirQualityBasement.Text = cs.Initialize.Bold.Append("Air Quality: ").Pop.Append(GetAirQuality(a(0))).PopAll
+					lblAirQualityBasement.Text = cs.Initialize.Bold.Append("Air Quality: ").Pop.Append(GetAirQuality((a(0)/10))).PopAll
 				End If
 				If a(1) = "" Then
 					Dim Tomorrow As Long
