@@ -171,7 +171,7 @@ Private Sub Astream_Terminated
 				errorMessage = "Terminated: " & LastException.Message
 			End If
 		End If
-		If errorMessage.Trim.Length = 0 Then
+		If errorMessage.Trim.Length = 0 Or errorMessage.Contains("to read from field") Then
 			errorMessage = "Terminated"
 		End If
 		CallSub2(mCallback, mEventName & "_Terminated", errorMessage)

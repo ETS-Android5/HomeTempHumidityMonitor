@@ -66,7 +66,7 @@ __c.CallSubNew2(ba,_mcallback,_meventname+"_ConnectionError",(Object)(_errormess
  } 
        catch (Exception e11) {
 			ba.setLastException(e11); //BA.debugLineNum = 156;BA.debugLine="Log(LastException)";
-__c.LogImpl("242008587",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("814549003",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  };
  //BA.debugLineNum = 158;BA.debugLine="End Sub";
 return "";
@@ -169,7 +169,7 @@ _trimarray(_b2);
  } 
        catch (Exception e49) {
 			ba.setLastException(e49); //BA.debugLineNum = 122;BA.debugLine="Log(LastException)";
-__c.LogImpl("241746486",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("814286902",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  };
  //BA.debugLineNum = 124;BA.debugLine="End Sub";
 return "";
@@ -188,8 +188,8 @@ if (__c.LastException(getActivityBA()).getMessage().contains("Object should firs
 _errormessage = "Terminated: "+__c.LastException(getActivityBA()).getMessage();
  };
  };
- //BA.debugLineNum = 168;BA.debugLine="If errorMessage.Trim.Length = 0 Then";
-if (_errormessage.trim().length()==0) { 
+ //BA.debugLineNum = 168;BA.debugLine="If errorMessage.Trim.Length = 0 Or errorMessage.";
+if (_errormessage.trim().length()==0 || _errormessage.contains("to read from field")) { 
  //BA.debugLineNum = 169;BA.debugLine="errorMessage = \"Terminated\"";
 _errormessage = "Terminated";
  };
@@ -198,7 +198,7 @@ __c.CallSubNew2(ba,_mcallback,_meventname+"_Terminated",(Object)(_errormessage))
  } 
        catch (Exception e13) {
 			ba.setLastException(e13); //BA.debugLineNum = 173;BA.debugLine="Log(LastException)";
-__c.LogImpl("242074125",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("814614541",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  };
  //BA.debugLineNum = 175;BA.debugLine="End Sub";
 return "";
