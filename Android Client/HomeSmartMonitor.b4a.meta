@@ -34,6 +34,6 @@ ModuleClosedNodes6=
 ModuleClosedNodes7=
 ModuleClosedNodes8=
 ModuleClosedNodes9=
-NavigationStack=Main,RefreshCameras,1503,0,Main,GetCommandResponse,1577,0,Main,GetCameraInfo,1888,0,Main,btnSideYardNewClip_Click,2999,0,Main,btnBackyardNewClip_Click,3190,0,Visual Designer,Main.bal,-100,1,Main,GetHomescreen,2129,0,Main,GetSyncModuleInfo,1938,0,Main,Process_Globals,24,0,Main,btnFrontYardNewClip_Click,3136,0,Main,UpdateItemColor,2683,0
+NavigationStack=Main,Process_Globals,31,0,Main,CheckAirQualitySetting,1009,0,StateManager,RestoreState,219,0,Main,ConvertDateTimePeriod,2709,0,Main,ShowVideo,2883,0,Main,clvActivity_VisibleRangeChanged,2534,0,Main,CheckTempHumiditySetting,1077,0,Badger,RemoveBadge,35,0,Main,ConvertFullDateTime,2811,1,Main,ConvertDayName,2778,6
 SelectedBuild=0
 VisibleModules=5,9,8,11,1,3,2,4,10,6

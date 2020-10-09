@@ -2847,47 +2847,62 @@ Sub ConvertDateTimePeriod(inputTime As String, dayname As String) As String
 End Sub
 
 Sub ConvertDayName(inputTime As String) As String
-	' https://www.b4x.com/android/forum/threads/convert-utc-to-ticks-and-vice-versa.36592/#content
-	Dim ticks As Long = ParseUTCstring(inputTime.Replace("+00:00","+0000"))
-	DateTime.DateFormat = "MMM d, yyyy h:mm:ss a"
-	Dim lngTicks As Long = ticks
+	Try
+		' https://www.b4x.com/android/forum/threads/convert-utc-to-ticks-and-vice-versa.36592/#content
+		Dim ticks As Long = ParseUTCstring(inputTime.Replace("+00:00","+0000"))
+		DateTime.DateFormat = "MMM d, yyyy h:mm:ss a"
+		Dim lngTicks As Long = ticks
 
-	Dim Yesterday As Long
-	Dim timestamp As Long
-	DateTime.DateFormat = "yyyyMMdd"
-	Yesterday = DateTime.Date(DateTime.add(DateTime.Now, 0, 0, -1))
-	timestamp = DateTime.Date(lngTicks)
+		Dim Yesterday As Long
+		Dim timestamp As Long
+		DateTime.DateFormat = "yyyyMMdd"
+		Yesterday = DateTime.Date(DateTime.add(DateTime.Now, 0, 0, -1))
+		timestamp = DateTime.Date(lngTicks)
 
-	DateTime.DateFormat = "h:mm:ss a"
-	If DateUtils.IsSameDay(lngTicks,DateTime.now) Then
-		Return "Today" '& DateTime.Date(lngTicks)
-	Else If Yesterday = timestamp Then
-		Return "Yesterday" '& DateTime.Date(lngTicks)
-	Else
-		Return DateUtils.GetDayOfWeekName(lngTicks) '& " " & DateTime.Date(lngTicks)
-	End If
+		Dim p As Period = DateUtils.PeriodBetween(lngTicks,DateTime.Now)
+		
+		DateTime.DateFormat = "h:mm:ss a"
+		If DateUtils.IsSameDay(lngTicks,DateTime.now) Then
+			Return "Today" 
+		Else If Yesterday = timestamp Then
+			Return "Yesterday" 
+		Else if p.Days < 7 Then
+			Return DateUtils.GetDayOfWeekName(lngTicks) 
+		Else
+			DateTime.DateFormat = "MMMM d, yyyy"
+			Return DateTime.Date(lngTicks) & " (" & DateUtils.GetDayOfWeekName(lngTicks) & ")"
+		End If
+	Catch
+		Return inputTime
+		Log(LastException)
+	End Try
 End Sub
 
 Sub ConvertFullDateTime(inputTime As String) As String
-	' https://www.b4x.com/android/forum/threads/convert-utc-to-ticks-and-vice-versa.36592/#content
-	Dim ticks As Long = ParseUTCstring(inputTime.Replace("+00:00","+0000"))
-	DateTime.DateFormat = "MMM d, yyyy h:mm:ss a"
-	Dim lngTicks As Long = ticks
+	Try
+		' https://www.b4x.com/android/forum/threads/convert-utc-to-ticks-and-vice-versa.36592/#content
+		Dim ticks As Long = ParseUTCstring(inputTime.Replace("+00:00","+0000"))
+		DateTime.DateFormat = "MMM d, yyyy h:mm:ss a"
+		Dim lngTicks As Long = ticks
 
-	Dim Yesterday As Long
-	Dim timestamp As Long
-	DateTime.DateFormat = "yyyyMMdd"
-	Yesterday = DateTime.Date(DateTime.add(DateTime.Now, 0, 0, -1))
-	timestamp = DateTime.Date(lngTicks)
+		Dim Yesterday As Long
+		Dim timestamp As Long
+		DateTime.DateFormat = "yyyyMMdd"
+		Yesterday = DateTime.Date(DateTime.add(DateTime.Now, 0, 0, -1))
+		timestamp = DateTime.Date(lngTicks)
 
-	DateTime.DateFormat = "h:mm:ss a"
-	If DateUtils.IsSameDay(lngTicks,DateTime.now) Then
-		Return DateTime.Date(lngTicks)
-	Else If Yesterday = timestamp Then
-		Return DateTime.Date(lngTicks)
-	Else
-		Return DateTime.Date(lngTicks)
-	End If
+		DateTime.DateFormat = "h:mm:ss a"
+		If DateUtils.IsSameDay(lngTicks,DateTime.now) Then
+			Return DateTime.Date(lngTicks)
+		Else If Yesterday = timestamp Then
+			Return DateTime.Date(lngTicks)
+		Else
+			Return DateTime.Date(lngTicks)
+		End If
+	Catch
+		Return inputTime
+		Log(LastException)
+	End Try
 End Sub
 
 Sub ShowVideo (Link As String) As ResumableSub
