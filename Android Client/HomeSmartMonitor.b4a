@@ -2859,14 +2859,18 @@ Sub ConvertDayName(inputTime As String) As String
 		Yesterday = DateTime.Date(DateTime.add(DateTime.Now, 0, 0, -1))
 		timestamp = DateTime.Date(lngTicks)
 
-		Dim p As Period = DateUtils.PeriodBetween(lngTicks,DateTime.Now)
+		Dim tempCurrentDate As Long
+		Dim tempPastDate As Long
 		
+		tempCurrentDate = DateTime.Date(DateTime.add(DateTime.Now, 0, 0, 0))
+		tempPastDate = DateTime.Date(DateTime.add(DateTime.Now, 0, 0, -7))
+
 		DateTime.DateFormat = "h:mm:ss a"
 		If DateUtils.IsSameDay(lngTicks,DateTime.now) Then
 			Return "Today" 
 		Else If Yesterday = timestamp Then
 			Return "Yesterday" 
-		Else if p.Days < 7 Then
+		Else if timestamp > tempPastDate And timestamp < tempCurrentDate  Then
 			Return DateUtils.GetDayOfWeekName(lngTicks) 
 		Else
 			DateTime.DateFormat = "MMMM d, yyyy"
