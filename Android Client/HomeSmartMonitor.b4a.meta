@@ -34,6 +34,6 @@ ModuleClosedNodes6=
 ModuleClosedNodes7=
 ModuleClosedNodes8=
 ModuleClosedNodes9=
-NavigationStack=Badger,RemoveBadge,35,0,Main,ConvertFullDateTime,2811,1,Main,CheckAirQualitySetting,1009,0,Main,CheckAirQualitySettingBasement,1060,0,Main,CheckTempHumiditySetting,1119,0,Main,CheckTempHumiditySettingBasement,1177,0,Main,ConvertDateTimePeriod,2714,0,Main,Process_Globals,24,0,SmartHomeMonitor,LogEvent,530,0,Main,ConvertDayName,2776,6
+NavigationStack=Main,CheckTempHumiditySetting,1119,0,Main,CheckTempHumiditySettingBasement,1177,0,Main,ConvertDateTimePeriod,2714,0,SmartHomeMonitor,LogEvent,530,0,Main,ConvertDayName,2776,6,Visual Designer,blink.bal,-100,2,Main,Process_Globals,27,0,Main,RefreshCameras,1420,0,Main,swArmed_ValueChanged,3497,0,Main,btnFrontYardRefresh_Click,3442,0,Main,GetHomescreen,2126,0
 SelectedBuild=0
 VisibleModules=5,9,8,11,1,3,2,4,10,6

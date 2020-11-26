@@ -2124,13 +2124,13 @@ Sub GetHomescreen(json As String) As ResumableSub
 					Intent1.Initialize("blink.noti.sideyard.armed", "")
 					Phone.SendBroadcastIntent(Intent1)
 				Else
-					SideYardArmedStatus = "CAMERA NOT ARMED!"
-					Dim jo As JavaObject = lblSideYard
-					Dim radius = 4dip, dx = 0dip, dy = 0dip As Float
-					jo.RunMethod("setShadowLayer", Array(radius, dx, dy, Colors.Red))
-					
-					Intent1.Initialize("blink.noti.sideyard.disarmed", "")
-					Phone.SendBroadcastIntent(Intent1)
+'					SideYardArmedStatus = "CAMERA NOT ARMED!"
+'					Dim jo As JavaObject = lblSideYard
+'					Dim radius = 4dip, dx = 0dip, dy = 0dip As Float
+'					jo.RunMethod("setShadowLayer", Array(radius, dx, dy, Colors.Red))
+'					
+'					Intent1.Initialize("blink.noti.sideyard.disarmed", "")
+'					Phone.SendBroadcastIntent(Intent1)
 				End If
 				If battery > 1 And battery_state = "ok" Then
 					SideYardBattStatus = "[Level " & battery & " - " & battery_state.ToUpperCase & "]"
@@ -2169,13 +2169,13 @@ Sub GetHomescreen(json As String) As ResumableSub
 					Intent1.Initialize("blink.noti.frontyard.armed", "")
 					Phone.SendBroadcastIntent(Intent1)
 				Else
-					FrontYardArmedStatus = "CAMERA NOT ARMED!"
-					Dim jo As JavaObject = lblFrontYard
-					Dim radius = 4dip, dx = 0dip, dy = 0dip As Float
-					jo.RunMethod("setShadowLayer", Array(radius, dx, dy, Colors.Red))
+'					FrontYardArmedStatus = "CAMERA NOT ARMED!"
+'					Dim jo As JavaObject = lblFrontYard
+'					Dim radius = 4dip, dx = 0dip, dy = 0dip As Float
+'					jo.RunMethod("setShadowLayer", Array(radius, dx, dy, Colors.Red))
 					
-					Intent1.Initialize("blink.noti.frontyard.disarmed", "")
-					Phone.SendBroadcastIntent(Intent1)
+'					Intent1.Initialize("blink.noti.frontyard.disarmed", "")
+'					Phone.SendBroadcastIntent(Intent1)
 				End If
 				If battery > 1 And battery_state = "ok" Then
 					FrontYardBattStatus = "[Level " & battery & " - " & battery_state.ToUpperCase & "]"
@@ -2214,13 +2214,13 @@ Sub GetHomescreen(json As String) As ResumableSub
 					Intent1.Initialize("blink.noti.backyard.armed", "")
 					Phone.SendBroadcastIntent(Intent1)
 				Else
-					BackyardArmedStatus = "CAMERA NOT ARMED!"
-					Dim jo As JavaObject = lblBackyard
-					Dim radius = 4dip, dx = 0dip, dy = 0dip As Float
-					jo.RunMethod("setShadowLayer", Array(radius, dx, dy, Colors.Red))
+'					BackyardArmedStatus = "CAMERA NOT ARMED!"
+'					Dim jo As JavaObject = lblBackyard
+'					Dim radius = 4dip, dx = 0dip, dy = 0dip As Float
+'					jo.RunMethod("setShadowLayer", Array(radius, dx, dy, Colors.Red))
 					
-					Intent1.Initialize("blink.noti.backyard.disarmed", "")
-					Phone.SendBroadcastIntent(Intent1)
+'					Intent1.Initialize("blink.noti.backyard.disarmed", "")
+'					Phone.SendBroadcastIntent(Intent1)
 				End If
 				If battery > 1 And battery_state = "ok" Then
 					BackyardBattStatus = "[Level " & battery & " - " & battery_state.ToUpperCase & "]"
