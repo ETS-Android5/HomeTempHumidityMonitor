@@ -352,8 +352,6 @@ public static String _authtoken = "";
 public static String _userregion = "";
 public static String _accountid = "";
 public static String _networkid = "";
-public static String _twoclientfaverificationrequired = "";
-public static String _twofaclientid = "";
 public static String _commandid = "";
 public static boolean _commandcomplete = false;
 public static String _camerathumbnail = "";
@@ -4443,8 +4441,8 @@ if (true) return mostCurrent._dateutils._getdayofweekname(mostCurrent.activityBA
  }else {
  //BA.debugLineNum = 2786;BA.debugLine="DateTime.DateFormat = \"MMMM d, yyyy\"";
 anywheresoftware.b4a.keywords.Common.DateTime.setDateFormat("MMMM d, yyyy");
- //BA.debugLineNum = 2787;BA.debugLine="Return DateTime.Date(lngTicks) & \" (\" & DateUti";
-if (true) return anywheresoftware.b4a.keywords.Common.DateTime.Date(_lngticks)+" ("+mostCurrent._dateutils._getdayofweekname(mostCurrent.activityBA,_lngticks)+")";
+ //BA.debugLineNum = 2787;BA.debugLine="Return DateTime.Date(lngTicks) '& \" (\" & DateUt";
+if (true) return anywheresoftware.b4a.keywords.Common.DateTime.Date(_lngticks);
  };
  } 
        catch (Exception e26) {
@@ -5257,7 +5255,6 @@ String _force_password_reset = "";
 int _lockout_time_remaining = 0;
 anywheresoftware.b4a.objects.collections.Map _authtokenmap = null;
 String _message = "";
-anywheresoftware.b4a.objects.collections.Map _client = null;
 int _allow_pin_resend_seconds = 0;
 anywheresoftware.b4a.objects.collections.Map _region = null;
 String _code = "";
@@ -5287,13 +5284,6 @@ _authtokenmap = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.
 _authtoken = BA.ObjectToString(_authtokenmap.Get((Object)("authtoken")));
  //BA.debugLineNum = 1706;BA.debugLine="Dim message As String = authtokenmap.Get(\"messag";
 _message = BA.ObjectToString(_authtokenmap.Get((Object)("message")));
- //BA.debugLineNum = 1707;BA.debugLine="Dim client As Map = root.Get(\"client\")";
-_client = new anywheresoftware.b4a.objects.collections.Map();
-_client = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (anywheresoftware.b4a.objects.collections.Map.MyMap)(_root.Get((Object)("client"))));
- //BA.debugLineNum = 1708;BA.debugLine="TwoClientFAVerificationRequired = client.Get(\"ve";
-_twoclientfaverificationrequired = BA.ObjectToString(_client.Get((Object)("verification_required")));
- //BA.debugLineNum = 1709;BA.debugLine="TwoFAClientID = client.Get(\"id\")";
-_twofaclientid = BA.ObjectToString(_client.Get((Object)("id")));
  //BA.debugLineNum = 1710;BA.debugLine="Dim allow_pin_resend_seconds As Int = root.Get(\"";
 _allow_pin_resend_seconds = (int)(BA.ObjectToNumber(_root.Get((Object)("allow_pin_resend_seconds"))));
  //BA.debugLineNum = 1711;BA.debugLine="Dim region As Map = root.Get(\"region\")";
@@ -5313,8 +5303,8 @@ _verification_required = BA.ObjectToString(_account.Get((Object)("verification_r
  //BA.debugLineNum = 1717;BA.debugLine="Dim id As Int = account.Get(\"id\") 'ignore";
 _id = (int)(BA.ObjectToNumber(_account.Get((Object)("id"))));
  } 
-       catch (Exception e23) {
-			processBA.setLastException(e23); //BA.debugLineNum = 1719;BA.debugLine="lblStatus.Text = \"ERROR: GetAuthInfo - \" & LastE";
+       catch (Exception e20) {
+			processBA.setLastException(e20); //BA.debugLineNum = 1719;BA.debugLine="lblStatus.Text = \"ERROR: GetAuthInfo - \" & LastE";
 mostCurrent._lblstatus.setText(BA.ObjectToCharSequence("ERROR: GetAuthInfo - "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA))));
  //BA.debugLineNum = 1720;BA.debugLine="response = \"ERROR: GetAuthInfo - \" & LastExcepti";
 _response = "ERROR: GetAuthInfo - "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA));
@@ -8919,10 +8909,6 @@ _userregion = "u006";
 _accountid = "88438";
  //BA.debugLineNum = 36;BA.debugLine="Private networkID As String = \"94896\"";
 _networkid = "94896";
- //BA.debugLineNum = 37;BA.debugLine="Private TwoClientFAVerificationRequired As String";
-_twoclientfaverificationrequired = "";
- //BA.debugLineNum = 38;BA.debugLine="Private TwoFAClientID As String";
-_twofaclientid = "";
  //BA.debugLineNum = 39;BA.debugLine="Private commandID As String";
 _commandid = "";
  //BA.debugLineNum = 40;BA.debugLine="Private commandComplete As Boolean";

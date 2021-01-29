@@ -17,7 +17,7 @@ Sub Process_Globals
 	Private userRegion As String = "u006"
 	Private emailAddress As String
 	Private password As String
-	Private TwoClientFAVerificationRequired As String
+	'Private TwoClientFAVerificationRequired As String
 End Sub
 
 Sub Service_Create
@@ -277,8 +277,8 @@ Sub GetAuthInfo(json As String)
 		Dim authtokenmap As Map = root.Get("authtoken")
 		authToken = authtokenmap.Get("authtoken")
 		Dim message As String = authtokenmap.Get("message") 'ignore
-		Dim client As Map = root.Get("client")
-		TwoClientFAVerificationRequired = client.Get("verification_required")
+		'Dim client As Map = root.Get("client")
+		'TwoClientFAVerificationRequired = client.Get("verification_required")
 		Dim allow_pin_resend_seconds As Int = root.Get("allow_pin_resend_seconds") 'ignore
 		Dim region As Map = root.Get("region")
 		Dim code As String = region.Get("code") 'ignore

@@ -132,7 +132,6 @@ public static String _authtoken = "";
 public static String _userregion = "";
 public static String _emailaddress = "";
 public static String _password = "";
-public static String _twoclientfaverificationrequired = "";
 public b4a.example.dateutils _dateutils = null;
 public cloyd.smart.home.monitor.main _main = null;
 public cloyd.smart.home.monitor.smarthomemonitor _smarthomemonitor = null;
@@ -148,7 +147,6 @@ String _force_password_reset = "";
 int _lockout_time_remaining = 0;
 anywheresoftware.b4a.objects.collections.Map _authtokenmap = null;
 String _message = "";
-anywheresoftware.b4a.objects.collections.Map _client = null;
 int _allow_pin_resend_seconds = 0;
 anywheresoftware.b4a.objects.collections.Map _region = null;
 String _code = "";
@@ -176,11 +174,6 @@ _authtokenmap = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.
 _authtoken = BA.ObjectToString(_authtokenmap.Get((Object)("authtoken")));
  //BA.debugLineNum = 273;BA.debugLine="Dim message As String = authtokenmap.Get(\"messag";
 _message = BA.ObjectToString(_authtokenmap.Get((Object)("message")));
- //BA.debugLineNum = 274;BA.debugLine="Dim client As Map = root.Get(\"client\")";
-_client = new anywheresoftware.b4a.objects.collections.Map();
-_client = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (anywheresoftware.b4a.objects.collections.Map.MyMap)(_root.Get((Object)("client"))));
- //BA.debugLineNum = 275;BA.debugLine="TwoClientFAVerificationRequired = client.Get(\"ve";
-_twoclientfaverificationrequired = BA.ObjectToString(_client.Get((Object)("verification_required")));
  //BA.debugLineNum = 276;BA.debugLine="Dim allow_pin_resend_seconds As Int = root.Get(\"";
 _allow_pin_resend_seconds = (int)(BA.ObjectToNumber(_root.Get((Object)("allow_pin_resend_seconds"))));
  //BA.debugLineNum = 277;BA.debugLine="Dim region As Map = root.Get(\"region\")";
@@ -200,8 +193,8 @@ _verification_required = BA.ObjectToString(_account.Get((Object)("verification_r
  //BA.debugLineNum = 283;BA.debugLine="Dim id As Int = account.Get(\"id\") 'ignore";
 _id = (int)(BA.ObjectToNumber(_account.Get((Object)("id"))));
  } 
-       catch (Exception e21) {
-			processBA.setLastException(e21); //BA.debugLineNum = 285;BA.debugLine="response = \"ERROR: GetAuthInfo - \" & LastExcepti";
+       catch (Exception e19) {
+			processBA.setLastException(e19); //BA.debugLineNum = 285;BA.debugLine="response = \"ERROR: GetAuthInfo - \" & LastExcepti";
 _response = "ERROR: GetAuthInfo - "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA));
  //BA.debugLineNum = 286;BA.debugLine="Log(LastException)";
 anywheresoftware.b4a.keywords.Common.LogImpl("77798806",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
@@ -982,8 +975,6 @@ _userregion = "u006";
 _emailaddress = "";
  //BA.debugLineNum = 13;BA.debugLine="Private password As String";
 _password = "";
- //BA.debugLineNum = 14;BA.debugLine="Private TwoClientFAVerificationRequired As String";
-_twoclientfaverificationrequired = "";
  //BA.debugLineNum = 15;BA.debugLine="End Sub";
 return "";
 }

@@ -124,8 +124,8 @@ Sub Process_Globals
 	Private userRegion As String = "u006"
 	Private accountID As String = "88438" 'ignore
 	Private networkID As String = "94896"
-	Private TwoClientFAVerificationRequired As String
-	Private TwoFAClientID As String
+	'Private TwoClientFAVerificationRequired As String
+	'Private TwoFAClientID As String
 	Private commandID As String
 	Private commandComplete As Boolean
 	Private cameraThumbnail As String
@@ -1794,9 +1794,9 @@ Sub GetAuthInfo(json As String)
 		Dim authtokenmap As Map = root.Get("authtoken")
 		authToken = authtokenmap.Get("authtoken")
 		Dim message As String = authtokenmap.Get("message") 'ignore
-		Dim client As Map = root.Get("client")
-		TwoClientFAVerificationRequired = client.Get("verification_required")
-		TwoFAClientID = client.Get("id")
+		'Dim client As Map = root.Get("client")
+		'TwoClientFAVerificationRequired = client.Get("verification_required")
+		'TwoFAClientID = client.Get("id")
 		Dim allow_pin_resend_seconds As Int = root.Get("allow_pin_resend_seconds") 'ignore
 		Dim region As Map = root.Get("region")
 		Dim code As String = region.Get("code") 'ignore
@@ -2874,7 +2874,7 @@ Sub ConvertDayName(inputTime As String) As String
 			Return DateUtils.GetDayOfWeekName(lngTicks) 
 		Else
 			DateTime.DateFormat = "MMMM d, yyyy"
-			Return DateTime.Date(lngTicks) & " (" & DateUtils.GetDayOfWeekName(lngTicks) & ")"
+			Return DateTime.Date(lngTicks) '& " (" & DateUtils.GetDayOfWeekName(lngTicks) & ")"
 		End If
 	Catch
 		Return inputTime
