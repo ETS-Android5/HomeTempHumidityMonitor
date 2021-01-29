@@ -235,10 +235,10 @@ Sub RequestAuthToken As ResumableSub
 		If jobLogin.Success Then
 			GetAuthInfo(jobLogin.GetString)
 			
-			If TwoClientFAVerificationRequired Then
-				response = "ERROR TwoClientFAVerificationRequired"
-				Return Null
-			End If
+'			If TwoClientFAVerificationRequired Then
+'				response = "ERROR TwoClientFAVerificationRequired"
+'				Return Null
+'			End If
 
 			If response.StartsWith("ERROR: ") Or response.Contains("System is busy, please wait") Then
 				jobLogin.Release
