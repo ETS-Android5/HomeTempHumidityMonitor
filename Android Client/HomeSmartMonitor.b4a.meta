@@ -34,6 +34,6 @@ ModuleClosedNodes6=
 ModuleClosedNodes7=
 ModuleClosedNodes8=
 ModuleClosedNodes9=
-NavigationStack=Main,GetHomescreen,2126,0,NotificationService,RequestAuthToken,231,0,Main,RequestAuthToken,1254,0,Main,Process_Globals,37,0,NotificationService,Process_Globals,12,0,NotificationService,GetAuthInfo,264,0,Main,GetAuthInfo,1702,0,Main,ParseUTCstring,2257,0,Main,ConvertDateTime,2248,0,Main,ConvertDateTimePeriod,2711,0,Main,ConvertDayName,2778,1
+NavigationStack=Main,ConvertDayName,2778,1,Main,Process_Globals,24,0,Main,DownloadImage,1678,0,NotificationService,GetAuthInfo,263,0,NotificationService,RandomString,282,0,Main,GetAuthInfo,1739,0,Main,RequestAuthToken,1245,0,NotificationService,RequestAuthToken,239,0,SmartHomeMonitor,Service_Start,49,0,SmartHomeMonitor,Service_Create,42,0
 SelectedBuild=0
 VisibleModules=5,9,8,11,1,3,2,4,10,6

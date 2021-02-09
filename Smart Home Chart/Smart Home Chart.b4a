@@ -13,7 +13,7 @@ Module1=Starter
 NumberOfFiles=1
 NumberOfLibraries=6
 NumberOfModules=1
-Version=10.2
+Version=10.5
 @EndOfDesignText@
 #Region  Project Attributes 
 	#ApplicationLabel: Smart Home Chart
@@ -95,17 +95,17 @@ End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
 	Awake.ReleaseKeepAlive
-	If UserClosed Then
-		TemperatureHourlyTimer.Enabled = False
-		HumidityHourlyTimer.Enabled = False
-		TemperatureDailyTimer.Enabled = False
-		HumidityDailyTimer.Enabled = False
-		btnHumidityHourly.RemoveView
-		btnTempHourly.RemoveView
-		btnHumidityDaily.RemoveView
-		btnTempDaily.RemoveView
-		LineChart.RemoveView
-	End If
+'	If UserClosed Then
+'		TemperatureHourlyTimer.Enabled = False
+'		HumidityHourlyTimer.Enabled = False
+'		TemperatureDailyTimer.Enabled = False
+'		HumidityDailyTimer.Enabled = False
+'		btnHumidityHourly.RemoveView
+'		btnTempHourly.RemoveView
+'		btnHumidityDaily.RemoveView
+'		btnTempDaily.RemoveView
+'		LineChart.RemoveView
+'	End If
 End Sub
 
 Sub btnTempHourly_Click

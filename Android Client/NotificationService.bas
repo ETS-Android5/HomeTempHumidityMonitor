@@ -228,7 +228,11 @@ Sub RequestAuthToken As ResumableSub
 	Try
 		Dim jobLogin As HttpJob
 		jobLogin.Initialize("", Me)
-		jobLogin.PostString("https://rest-prod.immedia-semi.com/api/v4/account/login","email=" &  emailAddress & "&password=" & password)
+		jobLogin.PostString("https://rest-prod.immedia-semi.com/api/v5/account/login","email=" &  emailAddress & "&password=" & password & "&reauth=true")
+'		**email** - Account userid/email
+'		- **password** - Account password
+'		- **unique_id** - (optional) UUID generated And identifying the client.  Pass a consistent value here To avoid repeated client verification PIN requests.
+'		- **reauth** - (optional) Should be set To *True* To, If the client Is already [verified](verifyPin.md). Otherwise blink keeps sending verification PINs.		
 		jobLogin.GetRequest.SetContentType("application/x-www-form-urlencoded")
 		jobLogin.GetRequest.SetHeader("User-Agent",RandomString(12)) '"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0")
 		Wait For (jobLogin) JobDone(jobLogin As HttpJob)
@@ -267,26 +271,66 @@ Sub RandomString(length As Int) As String
 	Return randomstr
 End Sub
 
+'Sub GetAuthInfo(json As String)
+'	Try
+'		Dim parser As JSONParser
+'		parser.Initialize(json)
+'		Dim root As Map = parser.NextObject
+'		Dim force_password_reset As String = root.Get("force_password_reset") 'ignore
+'		Dim lockout_time_remaining As Int = root.Get("lockout_time_remaining") 'ignore
+'		Dim authtokenmap As Map = root.Get("authtoken")
+'		authToken = authtokenmap.Get("authtoken")
+'		Dim message As String = authtokenmap.Get("message") 'ignore
+'		'Dim client As Map = root.Get("client")
+'		'TwoClientFAVerificationRequired = client.Get("verification_required")
+'		Dim allow_pin_resend_seconds As Int = root.Get("allow_pin_resend_seconds") 'ignore
+'		Dim region As Map = root.Get("region")
+'		Dim code As String = region.Get("code") 'ignore
+'		userRegion = region.Get("tier")
+'		Dim description As String = region.Get("description") 'ignore
+'		Dim account As Map = root.Get("account")
+'		Dim verification_required As String = account.Get("verification_required") 'ignore
+'		Dim id As Int = account.Get("id") 'ignore
+'	Catch
+'		response = "ERROR: GetAuthInfo - " & LastException
+'		Log(LastException)
+'	End Try
+'
+'End Sub
+
 Sub GetAuthInfo(json As String)
 	Try
 		Dim parser As JSONParser
 		parser.Initialize(json)
 		Dim root As Map = parser.NextObject
+		Dim auth As Map = root.Get("auth")
+		Dim authtokenmap As Map = root.Get("authtoken") 'ignore
+		authToken = auth.Get("token")
+		Dim phone As Map = root.Get("phone")
+		Dim valid As String = phone.Get("valid") 'ignore
+		Dim number As String = phone.Get("number") 'ignore
+		Dim last_4_digits As String = phone.Get("last_4_digits") 'ignore
+		Dim country_calling_code As String = phone.Get("country_calling_code") 'ignore
 		Dim force_password_reset As String = root.Get("force_password_reset") 'ignore
 		Dim lockout_time_remaining As Int = root.Get("lockout_time_remaining") 'ignore
-		Dim authtokenmap As Map = root.Get("authtoken")
-		authToken = authtokenmap.Get("authtoken")
-		Dim message As String = authtokenmap.Get("message") 'ignore
-		'Dim client As Map = root.Get("client")
-		'TwoClientFAVerificationRequired = client.Get("verification_required")
 		Dim allow_pin_resend_seconds As Int = root.Get("allow_pin_resend_seconds") 'ignore
-		Dim region As Map = root.Get("region")
-		Dim code As String = region.Get("code") 'ignore
-		userRegion = region.Get("tier")
-		Dim description As String = region.Get("description") 'ignore
 		Dim account As Map = root.Get("account")
-		Dim verification_required As String = account.Get("verification_required") 'ignore
-		Dim id As Int = account.Get("id") 'ignore
+		'TwoClientFAVerificationRequired = account.Get("client_verification_required")
+		Dim account_id As Int = account.Get("account_id") 'ignore
+		userRegion = account.Get("tier")
+		Dim user_id As Int = account.Get("user_id") 'ignore
+		Dim account_verification_required As String = account.Get("account_verification_required") 'ignore
+		Dim region As String = account.Get("region") 'ignore
+		Dim phone_verification_required As String = account.Get("phone_verification_required") 'ignore
+		Dim verification_channel As String = account.Get("verification_channel") 'ignore
+		'TwoFAClientID = account.Get("client_id")
+		Dim new_account As String = account.Get("new_account") 'ignore
+		Dim verification As Map = root.Get("verification")
+		Dim phone As Map = verification.Get("phone")
+		Dim channel As String = phone.Get("channel") 'ignore
+		Dim required As String = phone.Get("required")
+		Dim email As Map = verification.Get("email")
+		Dim required As String = email.Get("required") 'ignore
 	Catch
 		response = "ERROR: GetAuthInfo - " & LastException
 		Log(LastException)
