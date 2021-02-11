@@ -86,7 +86,7 @@ Module9=SmartHomeMonitor
 NumberOfFiles=21
 NumberOfLibraries=29
 NumberOfModules=11
-Version=10.5
+Version=10.6
 @EndOfDesignText@
 #Region  Project Attributes 
 	#ApplicationLabel: Smart Home Monitor
@@ -417,11 +417,14 @@ Sub Activity_Create(FirstTime As Boolean)
 		
 		CheckDataFile("account.txt")
 		
-		If FirstTime Or authToken = "" Then
+		authToken = StateManager.GetSetting("authToken")
+		Log("authToken: " & authToken)
+		
+		If authToken = "" Then
 			Dim rs As ResumableSub = RequestAuthToken
 			wait for (rs) complete (Result As Object)
 		End If
-
+		
 		Pages = Array(True, True, True, True, True, True) 'True = Enabled
 		
 	Catch
@@ -1701,6 +1704,12 @@ Sub RESTGet(url As String) As ResumableSub
 	End Try
 	Log("URL: " & url)
 	Log("Response: " & response)
+	
+	If response.Contains("Unauthorized") Then
+		Dim rs As ResumableSub = RequestAuthToken
+		wait for (rs) complete (Result As Object)
+	End If
+	
 	Return(response)
 End Sub
 
@@ -1729,6 +1738,12 @@ Sub RESTPost(url As String) As ResumableSub
 	End Try
 	Log("URL: " & url)
 	Log("Response: " & response)
+	
+	If response.Contains("Unauthorized") Then
+		Dim rs As ResumableSub = RequestAuthToken
+		wait for (rs) complete (Result As Object)
+	End If
+	
 	Return(response)
 End Sub
 
@@ -1811,6 +1826,8 @@ Sub GetAuthInfo(json As String)
 		Dim auth As Map = root.Get("auth")
 		Dim authtokenmap As Map = root.Get("authtoken") 'ignore
 		authToken = auth.Get("token")
+		StateManager.SetSetting("authToken",authToken)
+		StateManager.SaveSettings
 		Dim phone As Map = root.Get("phone")
 		Dim valid As String = phone.Get("valid") 'ignore
 		Dim number As String = phone.Get("number") 'ignore

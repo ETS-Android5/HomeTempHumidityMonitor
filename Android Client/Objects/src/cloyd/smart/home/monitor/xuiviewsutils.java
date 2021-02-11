@@ -53,6 +53,38 @@ _customlistview1._sv.setScrollViewContentHeight((int) (_customlistview1._sv.getS
  //BA.debugLineNum = 47;BA.debugLine="End Sub";
 return "";
 }
+public static cloyd.smart.home.monitor.b4ximageview  _createb4ximageview(anywheresoftware.b4a.BA _ba) throws Exception{
+cloyd.smart.home.monitor.b4ximageview _iv = null;
+anywheresoftware.b4a.objects.B4XViewWrapper _base = null;
+ //BA.debugLineNum = 85;BA.debugLine="Public Sub CreateB4XImageView As B4XImageView";
+ //BA.debugLineNum = 86;BA.debugLine="Dim iv As B4XImageView";
+_iv = new cloyd.smart.home.monitor.b4ximageview();
+ //BA.debugLineNum = 87;BA.debugLine="iv.Initialize(Null, \"\")";
+_iv._initialize /*String*/ (_ba,anywheresoftware.b4a.keywords.Common.Null,"");
+ //BA.debugLineNum = 88;BA.debugLine="Dim base As B4XView = xui.CreatePanel(\"\")";
+_base = new anywheresoftware.b4a.objects.B4XViewWrapper();
+_base = _xui.CreatePanel((_ba.processBA == null ? _ba : _ba.processBA),"");
+ //BA.debugLineNum = 89;BA.debugLine="base.SetLayoutAnimated(0, 0, 0, 100dip, 100dip)";
+_base.SetLayoutAnimated((int) (0),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)));
+ //BA.debugLineNum = 90;BA.debugLine="iv.DesignerCreateView(base, Null, CreateMap(\"Roun";
+_iv._designercreateview /*String*/ ((Object)(_base.getObject()),(anywheresoftware.b4a.objects.LabelWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.LabelWrapper(), (android.widget.TextView)(anywheresoftware.b4a.keywords.Common.Null)),anywheresoftware.b4a.keywords.Common.createMap(new Object[] {(Object)("Round"),(Object)(anywheresoftware.b4a.keywords.Common.False),(Object)("ResizeMode"),(Object)("FIT"),(Object)("BackgroundColor"),(Object)(0xffaaaaaa),(Object)("CornersRadius"),(Object)(0)}));
+ //BA.debugLineNum = 91;BA.debugLine="Return iv";
+if (true) return _iv;
+ //BA.debugLineNum = 92;BA.debugLine="End Sub";
+return null;
+}
+public static anywheresoftware.b4a.objects.B4XViewWrapper  _createlabel(anywheresoftware.b4a.BA _ba) throws Exception{
+anywheresoftware.b4a.objects.LabelWrapper _lbl = null;
+ //BA.debugLineNum = 78;BA.debugLine="Public Sub CreateLabel As B4XView";
+ //BA.debugLineNum = 79;BA.debugLine="Dim lbl As Label";
+_lbl = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 80;BA.debugLine="lbl.Initialize(\"\")";
+_lbl.Initialize(_ba,"");
+ //BA.debugLineNum = 81;BA.debugLine="Return lbl";
+if (true) return (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_lbl.getObject()));
+ //BA.debugLineNum = 82;BA.debugLine="End Sub";
+return null;
+}
 public static String  _initialize(anywheresoftware.b4a.BA _ba) throws Exception{
  //BA.debugLineNum = 10;BA.debugLine="Private Sub Initialize";
  //BA.debugLineNum = 11;BA.debugLine="If UtilsInitialized Then Return";
