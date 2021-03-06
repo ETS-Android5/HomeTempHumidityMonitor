@@ -135,8 +135,9 @@ public cloyd.smart.home.monitor.smarthomemonitor _smarthomemonitor = null;
 public cloyd.smart.home.monitor.notificationservice _notificationservice = null;
 public cloyd.smart.home.monitor.statemanager _statemanager = null;
 public cloyd.smart.home.monitor.starter _starter = null;
-public cloyd.smart.home.monitor.xuiviewsutils _xuiviewsutils = null;
+public cloyd.smart.home.monitor.chart _chart = null;
 public cloyd.smart.home.monitor.b4xcollections _b4xcollections = null;
+public cloyd.smart.home.monitor.xuiviewsutils _xuiviewsutils = null;
 public static String  _completejob(int _taskid,boolean _success,String _errormessage) throws Exception{
 cloyd.smart.home.monitor.httpjob _job = null;
  //BA.debugLineNum = 134;BA.debugLine="Sub CompleteJob(TaskId As Int, success As Boolean,";

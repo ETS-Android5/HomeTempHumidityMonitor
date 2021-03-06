@@ -13,10 +13,7 @@
 	    android:anyDensity="true"/>
 	<uses-permission
 	  android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-	  android:maxSdkVersion="18" />
-	<uses-permission
-	   android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-	   android:maxSdkVersion="18" />
+	  android:maxSdkVersion="19" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 	<uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="android.permission.WAKE_LOCK"/>
@@ -79,6 +76,13 @@
 		</service>
 		<receiver android:name=".starter$starter_BR">
 		</receiver>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".chart"
+			android:label="Smart Home Monitor"
+			android:screenOrientation="portrait">
+		</activity>
 		<service android:name=".httputils2service">
 		</service>
 		<receiver android:name=".httputils2service$httputils2service_BR">

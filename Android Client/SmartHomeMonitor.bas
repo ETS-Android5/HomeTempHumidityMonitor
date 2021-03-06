@@ -29,6 +29,8 @@ Sub Process_Globals
 	Public lngTicksTempHumid As Long
 	Public lngTicksTempHumidBasement As Long
 	Private bc As ByteConverter
+	Private rp As RuntimePermissions
+	Private shared As String
 End Sub
 
 Sub Service_Create
@@ -252,13 +254,14 @@ Private Sub MQTT_MessageArrived (Topic As String, Payload() As Byte)
 			FileNameToday = "LivingRoomTempHumid_" & Year & "-" & NumberFormat(Month,2,0) & "-" & NumberFormat(Day,2,0) & ".log"
 			FileNameYesterday = "LivingRoomTempHumid_" & YearYesterday & "-" & NumberFormat(MonthYesterday,2,0) & "-" & NumberFormat(DayYesterday,2,0) & ".log"
 			
-			Dim flist As List = WildCardFilesList2(File.DirRootExternal,"LivingRoomTempHumid_*.log",True, True)
+			shared = rp.GetSafeDirDefaultExternal("")
+			Dim flist As List = WildCardFilesList2(shared,"LivingRoomTempHumid_*.log",True, True)
 			
 			For i = 0 To flist.Size -1
 				Dim FileName As String = flist.Get(i)
 				If FileName <> FileNameToday Then
 					If FileName <> FileNameYesterday Then
-						File.Delete(File.DirRootExternal,FileName)
+						File.Delete(File.DirInternal,FileName)
 					End If
 				End If
 			Next
@@ -535,8 +538,8 @@ Sub LogEvent(TextToLog As String)
 
 		FileName = "LivingRoomTempHumid_" & Year & "-" & NumberFormat(Month,2,0) & "-" & NumberFormat(Day,2,0) & ".log"
 
-'		, DateTime.Date(DateTime.Now) & " " & DateTime.Time(DateTime.Now)
-		FW1.Initialize(File.OpenOutput (File.DirRootExternal, FileName, True))
+		shared = rp.GetSafeDirDefaultExternal("")
+		FW1.Initialize(File.OpenOutput (shared, FileName, True))
 		LogEntry = NumberFormat(DateTime.GetHour(Now),2,0) & ":" & NumberFormat(DateTime.GetMinute(Now),2,0)& ":" & NumberFormat(DateTime.GetSecond (Now),2,0)
 		LogEntry =LogEntry & " " & TextToLog
 		FW1.WriteLine(LogEntry)

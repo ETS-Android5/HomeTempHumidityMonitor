@@ -2,17 +2,18 @@
 File1=0.png
 File10=blinkscrollview.bal
 File11=camera-icon.png
-File12=cloyd.png
-File13=compiletime.txt
-File14=crysta.ttf
-File15=exo_controls_fullscreen_enter.png
-File16=ic_play.png
-File17=liveviewbuttontranparent.png
-File18=Main.bal
-File19=ScrollViewBasement.bal
+File12=chart.bal
+File13=cloyd.png
+File14=compiletime.txt
+File15=crysta.ttf
+File16=exo_controls_fullscreen_enter.png
+File17=ic_play.png
+File18=liveviewbuttontranparent.png
+File19=Main.bal
 File2=1.bal
-File20=snapshotbutton.png
-File21=TempHumidityBasement.bal
+File20=ScrollViewBasement.bal
+File21=snapshotbutton.png
+File22=TempHumidityBasement.bal
 File3=1ScrollView.bal
 File4=2.bal
 File5=AirQualityBasement.bal
@@ -34,6 +35,7 @@ FileGroup19=Default Group
 FileGroup2=Default Group
 FileGroup20=Default Group
 FileGroup21=Default Group
+FileGroup22=Default Group
 FileGroup3=Default Group
 FileGroup4=Default Group
 FileGroup5=Default Group
@@ -42,50 +44,52 @@ FileGroup7=Default Group
 FileGroup8=Default Group
 FileGroup9=Default Group
 Group=Default Group
-Library1=core
-Library10=tabstripviewpager
-Library11=reflection
-Library12=notificationbuilder
-Library13=notificationlistener
-Library14=randomaccessfile
-Library15=dateutils
-Library16=ahpreferenceactivity
+Library1=ahpreferenceactivity
+Library10=dateutils
+Library11=javaobject
+Library12=jmqtt
+Library13=json
+Library14=network
+Library15=notificationbuilder
+Library16=notificationlistener
 Library17=okhttputils2
-Library18=xcustomlistview
-Library19=json
+Library18=phone
+Library19=randomaccessfile
 Library2=appcompat
-Library20=bitmapcreator
-Library21=xui views
-Library22=runtimepermissions
-Library23=webviewsettings
-Library24=sql
-Library25=b4xencryption
-Library26=b4xbitmapeffects
-Library27=b4xcollections
-Library28=zoomimageview
-Library29=network
-Library3=javaobject
-Library4=xmllayoutbuilder
-Library5=jmqtt
-Library6=callsubutils
+Library20=reflection
+Library21=runtimepermissions
+Library22=sql
+Library23=tabstripviewpager
+Library24=webviewsettings
+Library25=xcustomlistview
+Library26=xmllayoutbuilder
+Library27=xui
+Library28=xui views
+Library29=zoomimageview
+Library3=b4xbitmapeffects
+Library30=androidplot_0_6_2
+Library4=b4xcollections
+Library5=b4xencryption
+Library6=bitmapcreator
 Library7=byteconverter
-Library8=xui
-Library9=phone
-ManifestCode=AddManifestText(~\n~<uses-sdk android:minSdkVersion="7" android:targetSdkVersion="29"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~~\n~SetApplicationAttribute(android:theme, "@style/MyAppTheme")~\n~CreateResource(values, colors.xml,~\n~<resources>~\n~    <color name="actionbar">#90a4ae</color>~\n~   <color name="statusbar">#62757f</color>~\n~   <color name="textColorPrimary">#000000</color>~\n~   <color name="navigationBar">#90a4ae</color>~\n~</resources>~\n~)~\n~CreateResource(values, theme.xml,~\n~<resources>~\n~    <style name="MyAppTheme" parent="Theme.AppCompat.Light">~\n~        <item name="colorPrimary">@color/actionbar</item>~\n~        <item name="colorPrimaryDark">@color/statusbar</item>~\n~       <item name="android:textColorPrimary">@color/textColorPrimary</item>~\n~       <item name="android:navigationBarColor">@color/navigationBar</item>~\n~       <item name="windowNoTitle">true</item>~\n~       <item name="windowActionBar">false</item>~\n~       <item name="windowActionModeOverlay">true</item>~\n~    </style>~\n~	<style name="ToolbarMenu" parent="Base.ThemeOverlay.AppCompat.ActionBar">~\n~	    <item name="android:textColorPrimary">#000000</item>~\n~	    <item name="android:colorBackground">#B0BEC5</item>~\n~    </style>~\n~</resources>~\n~)~\n~~\n~AddApplicationText(~\n~<service android:name="anywheresoftware.b4a.objects.NotificationListenerWrapper"~\n~   android:label="Smart Home Monitor"~\n~  android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">~\n~  <intent-filter>~\n~  <action android:name="android.service.notification.NotificationListenerService" />~\n~  </intent-filter>~\n~</service>)~\n~~\n~AddApplicationText(~\n~<activity~\n~  android:name="de.amberhome.objects.preferenceactivity"~\n~  android:theme="@android:style/Theme.Material.Light">~\n~</activity>~\n~)~\n~~\n~AddManifestText(~\n~<uses-permission~\n~  android:name="android.permission.WRITE_EXTERNAL_STORAGE"~\n~  android:maxSdkVersion="18" />~\n~)~\n~~\n~AddManifestText(<uses-permission~\n~   android:name="android.permission.WRITE_EXTERNAL_STORAGE"~\n~   android:maxSdkVersion="18" />~\n~)~\n~~\n~AddApplicationText(~\n~  <provider~\n~  android:name="android.support.v4.content.FileProvider"~\n~  android:authorities="$PACKAGE$.provider"~\n~  android:exported="false"~\n~  android:grantUriPermissions="true">~\n~  <meta-data~\n~  android:name="android.support.FILE_PROVIDER_PATHS"~\n~  android:resource="@xml/provider_paths"/>~\n~  </provider>~\n~)~\n~CreateResource(xml, provider_paths,~\n~   <files-path name="name" path="shared" />~\n~)~\n~~\n~SetApplicationAttribute(android:largeHeap, "true")
+Library8=callsubutils
+Library9=core
+ManifestCode=AddManifestText(~\n~<uses-sdk android:minSdkVersion="7" android:targetSdkVersion="29"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~~\n~SetApplicationAttribute(android:theme, "@style/MyAppTheme")~\n~CreateResource(values, colors.xml,~\n~<resources>~\n~    <color name="actionbar">#90a4ae</color>~\n~   <color name="statusbar">#62757f</color>~\n~   <color name="textColorPrimary">#000000</color>~\n~   <color name="navigationBar">#90a4ae</color>~\n~</resources>~\n~)~\n~CreateResource(values, theme.xml,~\n~<resources>~\n~    <style name="MyAppTheme" parent="Theme.AppCompat.Light">~\n~        <item name="colorPrimary">@color/actionbar</item>~\n~        <item name="colorPrimaryDark">@color/statusbar</item>~\n~       <item name="android:textColorPrimary">@color/textColorPrimary</item>~\n~       <item name="android:navigationBarColor">@color/navigationBar</item>~\n~       <item name="windowNoTitle">true</item>~\n~       <item name="windowActionBar">false</item>~\n~       <item name="windowActionModeOverlay">true</item>~\n~    </style>~\n~	<style name="ToolbarMenu" parent="Base.ThemeOverlay.AppCompat.ActionBar">~\n~	    <item name="android:textColorPrimary">#000000</item>~\n~	    <item name="android:colorBackground">#B0BEC5</item>~\n~    </style>~\n~</resources>~\n~)~\n~~\n~AddApplicationText(~\n~<service android:name="anywheresoftware.b4a.objects.NotificationListenerWrapper"~\n~   android:label="Smart Home Monitor"~\n~  android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">~\n~  <intent-filter>~\n~  <action android:name="android.service.notification.NotificationListenerService" />~\n~  </intent-filter>~\n~</service>)~\n~~\n~AddApplicationText(~\n~<activity~\n~  android:name="de.amberhome.objects.preferenceactivity"~\n~  android:theme="@android:style/Theme.Material.Light">~\n~</activity>~\n~)~\n~~\n~AddManifestText(~\n~<uses-permission~\n~  android:name="android.permission.WRITE_EXTERNAL_STORAGE"~\n~  android:maxSdkVersion="19" />~\n~)~\n~~\n~AddApplicationText(~\n~  <provider~\n~  android:name="android.support.v4.content.FileProvider"~\n~  android:authorities="$PACKAGE$.provider"~\n~  android:exported="false"~\n~  android:grantUriPermissions="true">~\n~  <meta-data~\n~  android:name="android.support.FILE_PROVIDER_PATHS"~\n~  android:resource="@xml/provider_paths"/>~\n~  </provider>~\n~)~\n~CreateResource(xml, provider_paths,~\n~   <files-path name="name" path="shared" />~\n~)~\n~~\n~SetApplicationAttribute(android:largeHeap, "true")
 Module1=B4XPageIndicator
-Module10=Starter
-Module11=StateManager
+Module10=SmartHomeMonitor
+Module11=Starter
+Module12=StateManager
 Module2=Badger
-Module3=cMediaData
-Module4=FileProvider
-Module5=Gauge
-Module6=KeyValueStore
-Module7=MJPEG
-Module8=NotificationService
-Module9=SmartHomeMonitor
-NumberOfFiles=21
-NumberOfLibraries=29
-NumberOfModules=11
+Module3=Chart
+Module4=cMediaData
+Module5=FileProvider
+Module6=Gauge
+Module7=KeyValueStore
+Module8=MJPEG
+Module9=NotificationService
+NumberOfFiles=22
+NumberOfLibraries=30
+NumberOfModules=12
 Version=10.6
 @EndOfDesignText@
 #Region  Project Attributes 
@@ -228,6 +232,7 @@ Sub Globals
 	Private btnSideYardRefresh As ImageView
 	Private swArmed As B4XSwitch
 	Private dialog As B4XDialog
+	Private btnChart As Button
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -559,6 +564,7 @@ Private Sub MQTT_Disconnected
 		gblACMenu.Add(0, 0, "Refresh video list",Null)
 		gblACMenu.Add(0, 0, "Restart application",Null)
 		gblACMenu.Add(0, 0, "Show free memory",Null)
+		gblACMenu.Add(0, 0, "Show chart",Null)
 		gblACMenu.Add(0, 0, "About",Null)
 		Log("Disconnected from MQTT broker")
 		MQTT_Connect
@@ -700,6 +706,8 @@ Sub ACToolBarLight1_MenuItemClick (Item As ACMenuItem)
 			info = info & "Available memory: " & NumberFormat2(((r.RunMethod("maxMemory") - r.RunMethod("totalMemory"))/(1024*1024)),0,2,2,False) & " MB" & CRLF
 			info = info & "Free memory: " & NumberFormat2(GetFreeMem/1000,0,2,2,False) & " MB"
 			Msgbox(info,"Smart Home Monitor") 'ignore
+		Else If Item.Title = "Show chart" Then
+			StartActivity("Chart")
 		else if Item.Title = "Refresh video list" Then
 			Dim bd As BitmapDrawable
 			bd.Initialize(LoadBitmapResize(File.DirAssets, "0.png", 32dip, 32dip, True))
@@ -816,6 +824,7 @@ Sub Activity_Createmenu(Menu As ACMenu)
 		Menu.Add(0, 0, "Refresh video list",Null)
 		Menu.Add(0, 0, "Restart Application",Null)
 		Menu.Add(0, 0, "Show free memory",Null)
+		Menu.Add(0, 0, "Show chart",Null)
 		Menu.Add(0, 0, "About",Null)
 	Catch
 		Log(LastException)
@@ -865,6 +874,12 @@ Sub TabStrip1_PageSelected (Position As Int)
 		If CurrentPage <> Position Then Return
 		
 		B4XPageIndicator1.CurrentPage = Position
+		
+		If Position > 3 Then
+			btnChart.Visible = False
+		Else
+			btnChart.Visible = True
+		End If
 		
 		If Position = 0 Then
 			If MQTT.IsInitialized And MQTT.Connected  Then
@@ -3782,6 +3797,9 @@ Sub CheckDataFile(filename As String)
 	End If
 End Sub
 
+Private Sub btnChart_Click
+	StartActivity("Chart")
+End Sub
 
 'Sub btnNoteWyzeReset_Click
 '	Try
@@ -3835,6 +3853,7 @@ End Sub
 'End Try
 '
 'End Sub
+
 
 
 
