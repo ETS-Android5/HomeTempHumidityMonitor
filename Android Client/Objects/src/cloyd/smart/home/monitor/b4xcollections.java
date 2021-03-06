@@ -13,11 +13,11 @@ public static Object getObject() {
  public anywheresoftware.b4a.keywords.Common __c = null;
 public b4a.example.dateutils _dateutils = null;
 public cloyd.smart.home.monitor.main _main = null;
+public cloyd.smart.home.monitor.chart _chart = null;
 public cloyd.smart.home.monitor.smarthomemonitor _smarthomemonitor = null;
 public cloyd.smart.home.monitor.notificationservice _notificationservice = null;
 public cloyd.smart.home.monitor.statemanager _statemanager = null;
 public cloyd.smart.home.monitor.starter _starter = null;
-public cloyd.smart.home.monitor.chart _chart = null;
 public cloyd.smart.home.monitor.httputils2service _httputils2service = null;
 public cloyd.smart.home.monitor.xuiviewsutils _xuiviewsutils = null;
 public static cloyd.smart.home.monitor.b4xbitset  _createbitset(anywheresoftware.b4a.BA _ba,int _size) throws Exception{

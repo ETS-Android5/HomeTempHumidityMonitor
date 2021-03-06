@@ -38,11 +38,11 @@ public boolean _iserror = false;
 public String _streamerror = "";
 public b4a.example.dateutils _dateutils = null;
 public cloyd.smart.home.monitor.main _main = null;
+public cloyd.smart.home.monitor.chart _chart = null;
 public cloyd.smart.home.monitor.smarthomemonitor _smarthomemonitor = null;
 public cloyd.smart.home.monitor.notificationservice _notificationservice = null;
 public cloyd.smart.home.monitor.statemanager _statemanager = null;
 public cloyd.smart.home.monitor.starter _starter = null;
-public cloyd.smart.home.monitor.chart _chart = null;
 public cloyd.smart.home.monitor.b4xcollections _b4xcollections = null;
 public cloyd.smart.home.monitor.httputils2service _httputils2service = null;
 public cloyd.smart.home.monitor.xuiviewsutils _xuiviewsutils = null;
@@ -67,7 +67,7 @@ __c.CallSubNew2(ba,_mcallback,_meventname+"_ConnectionError",(Object)(_errormess
  } 
        catch (Exception e11) {
 			ba.setLastException(e11); //BA.debugLineNum = 156;BA.debugLine="Log(LastException)";
-__c.LogImpl("812386315",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("341943051",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  };
  //BA.debugLineNum = 158;BA.debugLine="End Sub";
 return "";
@@ -170,7 +170,7 @@ _trimarray(_b2);
  } 
        catch (Exception e49) {
 			ba.setLastException(e49); //BA.debugLineNum = 122;BA.debugLine="Log(LastException)";
-__c.LogImpl("812124214",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("341680950",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  };
  //BA.debugLineNum = 124;BA.debugLine="End Sub";
 return "";
@@ -199,7 +199,7 @@ __c.CallSubNew2(ba,_mcallback,_meventname+"_Terminated",(Object)(_errormessage))
  } 
        catch (Exception e13) {
 			ba.setLastException(e13); //BA.debugLineNum = 173;BA.debugLine="Log(LastException)";
-__c.LogImpl("812451853",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("342008589",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  };
  //BA.debugLineNum = 175;BA.debugLine="End Sub";
 return "";

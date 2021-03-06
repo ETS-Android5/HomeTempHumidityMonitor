@@ -28,11 +28,11 @@ public anywheresoftware.b4a.sql.SQL _sql1 = null;
 public anywheresoftware.b4a.randomaccessfile.B4XSerializator _ser = null;
 public b4a.example.dateutils _dateutils = null;
 public cloyd.smart.home.monitor.main _main = null;
+public cloyd.smart.home.monitor.chart _chart = null;
 public cloyd.smart.home.monitor.smarthomemonitor _smarthomemonitor = null;
 public cloyd.smart.home.monitor.notificationservice _notificationservice = null;
 public cloyd.smart.home.monitor.statemanager _statemanager = null;
 public cloyd.smart.home.monitor.starter _starter = null;
-public cloyd.smart.home.monitor.chart _chart = null;
 public cloyd.smart.home.monitor.b4xcollections _b4xcollections = null;
 public cloyd.smart.home.monitor.httputils2service _httputils2service = null;
 public cloyd.smart.home.monitor.xuiviewsutils _xuiviewsutils = null;
@@ -341,7 +341,7 @@ case 23:
 //C
 this.state = 24;
  //BA.debugLineNum = 60;BA.debugLine="Log(LastException)";
-parent.__c.LogImpl("810944535",BA.ObjectToString(parent.__c.LastException(parent.getActivityBA())),0);
+parent.__c.LogImpl("340501271",BA.ObjectToString(parent.__c.LastException(parent.getActivityBA())),0);
  if (true) break;
 
 case 24:
@@ -530,7 +530,7 @@ case 8:
 //C
 this.state = 9;
  //BA.debugLineNum = 76;BA.debugLine="Log(\"Failed to serialize object: \" & Map.Get(ke";
-parent.__c.LogImpl("811010056","Failed to serialize object: "+BA.ObjectToString(_map.Get((Object)(_key))),0);
+parent.__c.LogImpl("340566792","Failed to serialize object: "+BA.ObjectToString(_map.Get((Object)(_key))),0);
  if (true) break;
 
 case 9:

@@ -128,10 +128,10 @@ public class notificationservice extends  android.app.Service{
 public static anywheresoftware.b4a.objects.NotificationListenerWrapper.NotificationListener _listener = null;
 public b4a.example.dateutils _dateutils = null;
 public cloyd.smart.home.monitor.main _main = null;
+public cloyd.smart.home.monitor.chart _chart = null;
 public cloyd.smart.home.monitor.smarthomemonitor _smarthomemonitor = null;
 public cloyd.smart.home.monitor.statemanager _statemanager = null;
 public cloyd.smart.home.monitor.starter _starter = null;
-public cloyd.smart.home.monitor.chart _chart = null;
 public cloyd.smart.home.monitor.b4xcollections _b4xcollections = null;
 public cloyd.smart.home.monitor.httputils2service _httputils2service = null;
 public cloyd.smart.home.monitor.xuiviewsutils _xuiviewsutils = null;
@@ -186,7 +186,7 @@ mostCurrent._smarthomemonitor._isoldairqualitynotificationongoingbasement /*bool
  } 
        catch (Exception e28) {
 			processBA.setLastException(e28); //BA.debugLineNum = 47;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("87274525",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("34128797",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  };
  //BA.debugLineNum = 50;BA.debugLine="End Sub";
 return "";
@@ -232,7 +232,7 @@ mostCurrent._smarthomemonitor._isoldairqualitynotificationongoingbasement /*bool
  } 
        catch (Exception e25) {
 			processBA.setLastException(e25); //BA.debugLineNum = 78;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("87340058",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("34194330",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  };
  //BA.debugLineNum = 81;BA.debugLine="End Sub";
 return "";

@@ -131,11 +131,11 @@ public static String _tempfolder = "";
 public static int _taskcounter = 0;
 public b4a.example.dateutils _dateutils = null;
 public cloyd.smart.home.monitor.main _main = null;
+public cloyd.smart.home.monitor.chart _chart = null;
 public cloyd.smart.home.monitor.smarthomemonitor _smarthomemonitor = null;
 public cloyd.smart.home.monitor.notificationservice _notificationservice = null;
 public cloyd.smart.home.monitor.statemanager _statemanager = null;
 public cloyd.smart.home.monitor.starter _starter = null;
-public cloyd.smart.home.monitor.chart _chart = null;
 public cloyd.smart.home.monitor.b4xcollections _b4xcollections = null;
 public cloyd.smart.home.monitor.xuiviewsutils _xuiviewsutils = null;
 public static String  _completejob(int _taskid,boolean _success,String _errormessage) throws Exception{
@@ -146,7 +146,7 @@ _job = (cloyd.smart.home.monitor.httpjob)(_taskidtojob.Get((Object)(_taskid)));
  //BA.debugLineNum = 139;BA.debugLine="If job = Null Then";
 if (_job== null) { 
  //BA.debugLineNum = 140;BA.debugLine="Log(\"HttpUtils2Service: job completed multiple t";
-anywheresoftware.b4a.keywords.Common.LogImpl("813041670","HttpUtils2Service: job completed multiple times - "+BA.NumberToString(_taskid),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("311927558","HttpUtils2Service: job completed multiple times - "+BA.NumberToString(_taskid),0);
  //BA.debugLineNum = 141;BA.debugLine="Return";
 if (true) return "";
  };
@@ -165,7 +165,7 @@ public static String  _hc_responseerror(anywheresoftware.b4h.okhttp.OkHttpClient
 cloyd.smart.home.monitor.httpjob _job = null;
  //BA.debugLineNum = 105;BA.debugLine="Sub hc_ResponseError (Response As OkHttpResponse,";
  //BA.debugLineNum = 106;BA.debugLine="Log($\"ResponseError. Reason: ${Reason}, Response:";
-anywheresoftware.b4a.keywords.Common.LogImpl("812976129",("ResponseError. Reason: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_reason))+", Response: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_response.getErrorResponse()))+""),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("311862017",("ResponseError. Reason: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_reason))+", Response: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_response.getErrorResponse()))+""),0);
  //BA.debugLineNum = 107;BA.debugLine="Response.Release";
 _response.Release();
  //BA.debugLineNum = 108;BA.debugLine="Dim job As HttpJob = TaskIdToJob.Get(TaskId)";
@@ -237,9 +237,9 @@ anywheresoftware.b4a.keywords.Common.File.Delete(_tempfolder,"~test.test");
  } 
        catch (Exception e6) {
 			processBA.setLastException(e6); //BA.debugLineNum = 34;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("812582919",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("311468807",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  //BA.debugLineNum = 35;BA.debugLine="Log(\"Switching to File.DirInternal\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("812582920","Switching to File.DirInternal",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("311468808","Switching to File.DirInternal",0);
  //BA.debugLineNum = 36;BA.debugLine="TempFolder = File.DirInternal";
 _tempfolder = anywheresoftware.b4a.keywords.Common.File.getDirInternal();
  };

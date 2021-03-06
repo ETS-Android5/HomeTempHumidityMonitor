@@ -13,7 +13,7 @@ Sub Process_Globals
 	'These global variables will be declared once when the application starts.
 	'These variables can be accessed from all modules.
 	Private xui As XUI
-	'Private Awake As PhoneWakeState
+	Private Awake As PhoneWakeState
 	Private TemperatureHourlyTimer As Timer
 	Private HumidityHourlyTimer As Timer
 	Private TemperatureDailyTimer As Timer
@@ -74,11 +74,11 @@ Sub Activity_Create(FirstTime As Boolean)
 End Sub
 
 Sub Activity_Resume
-	'Awake.KeepAlive(True)
+	Awake.KeepAlive(True)
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
-	'Awake.ReleaseKeepAlive
+	Awake.ReleaseKeepAlive
 	If UserClosed Then
 		phone1.SetScreenOrientation(1) 'portrait
 	End If

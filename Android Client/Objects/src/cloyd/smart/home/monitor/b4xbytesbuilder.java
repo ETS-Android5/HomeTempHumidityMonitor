@@ -28,11 +28,11 @@ public byte[] _mbuffer = null;
 public int _mlength = 0;
 public b4a.example.dateutils _dateutils = null;
 public cloyd.smart.home.monitor.main _main = null;
+public cloyd.smart.home.monitor.chart _chart = null;
 public cloyd.smart.home.monitor.smarthomemonitor _smarthomemonitor = null;
 public cloyd.smart.home.monitor.notificationservice _notificationservice = null;
 public cloyd.smart.home.monitor.statemanager _statemanager = null;
 public cloyd.smart.home.monitor.starter _starter = null;
-public cloyd.smart.home.monitor.chart _chart = null;
 public cloyd.smart.home.monitor.b4xcollections _b4xcollections = null;
 public cloyd.smart.home.monitor.httputils2service _httputils2service = null;
 public cloyd.smart.home.monitor.xuiviewsutils _xuiviewsutils = null;
@@ -174,7 +174,7 @@ byte[] _afterindex = null;
 if (_index>=_mlength) { 
  //BA.debugLineNum = 47;BA.debugLine="If Index > mLength Then Log(\"Index too large\")";
 if (_index>_mlength) { 
-__c.LogImpl("937224450","Index too large",0);};
+__c.LogImpl("98978434","Index too large",0);};
  //BA.debugLineNum = 48;BA.debugLine="Append(Data)";
 _append(_data);
  }else {
@@ -216,7 +216,7 @@ public String  _set(int _index,byte[] _data) throws Exception{
 if (_index>=_mlength) { 
  //BA.debugLineNum = 60;BA.debugLine="If Index > mLength Then Log(\"Index too large\")";
 if (_index>_mlength) { 
-__c.LogImpl("937289986","Index too large",0);};
+__c.LogImpl("99043970","Index too large",0);};
  //BA.debugLineNum = 61;BA.debugLine="Append(Data)";
 _append(_data);
  }else {
