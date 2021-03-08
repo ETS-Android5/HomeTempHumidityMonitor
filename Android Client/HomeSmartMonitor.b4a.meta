@@ -37,6 +37,6 @@ ModuleClosedNodes6=
 ModuleClosedNodes7=
 ModuleClosedNodes8=
 ModuleClosedNodes9=
-NavigationStack=Chart,Activity_Pause,74,0,Visual Designer,chart.bal,-100,5,Chart,Process_Globals,7,0,Chart,TemperatureHourlyCreate,137,0,SmartHomeMonitor,LogEvent,532,0,Chart,ReadTemperatureDaily,1560,0,Chart,ReadHumidityDaily,1688,0,Chart,ReadTemperatureHourly,1816,0,Chart,ReadHumidityHourly,1947,0,SmartHomeMonitor,MQTT_MessageArrived,267,0
+NavigationStack=Visual Designer,blinkscrollview.bal,-100,1,Visual Designer,blinkcellitem.bal,-100,2,Visual Designer,blink.bal,-100,1,Visual Designer,chart.bal,-100,1,SmartHomeMonitor,MQTT_MessageArrived,271,0,SmartHomeMonitor,Process_Globals,22,0,Main,Process_Globals,25,0,Main,Globals,124,0,Visual Designer,Main.bal,-100,4,Main,TabStrip1_PageSelected,790,3
 SelectedBuild=0
 VisibleModules=3,6,10,9,12,1,4,2,5,11

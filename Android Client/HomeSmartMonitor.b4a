@@ -232,7 +232,7 @@ Sub Globals
 	Private btnSideYardRefresh As ImageView
 	Private swArmed As B4XSwitch
 	Private dialog As B4XDialog
-	Private btnChart As Button
+	Private btnChart As SwiftButton
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -876,9 +876,9 @@ Sub TabStrip1_PageSelected (Position As Int)
 		B4XPageIndicator1.CurrentPage = Position
 		
 		If Position > 3 Then
-			btnChart.Visible = False
+			btnChart.mBase.Visible = False
 		Else
-			btnChart.Visible = True
+			btnChart.mBase.Visible = True
 		End If
 		
 		If Position = 0 Then
