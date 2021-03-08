@@ -261,7 +261,7 @@ Private Sub MQTT_MessageArrived (Topic As String, Payload() As Byte)
 				Dim FileName As String = flist.Get(i)
 				If FileName <> FileNameToday Then
 					If FileName <> FileNameYesterday Then
-						File.Delete(File.DirInternal,FileName)
+						File.Delete(shared,FileName)
 					End If
 				End If
 			Next
