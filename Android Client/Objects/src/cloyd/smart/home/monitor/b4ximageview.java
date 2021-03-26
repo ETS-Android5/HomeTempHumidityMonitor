@@ -267,7 +267,7 @@ _imageviewheight = (float) (_mbitmap.getHeight());
  break; }
 default: {
  //BA.debugLineNum = 105;BA.debugLine="Log(\"Invalid resize mode: \"  & mResizeMode)";
-__c.LogImpl("930408731","Invalid resize mode: "+_mresizemode,0);
+__c.LogImpl("927263003","Invalid resize mode: "+_mresizemode,0);
  break; }
 }
 ;
