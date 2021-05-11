@@ -17,7 +17,7 @@ typedef unsigned int B4R_VAARGS_UINT;
 #if !defined(_NEW) && !defined(SKIP_B4RNEW)
 extern void *operator new( size_t size, void *ptr );
 #endif
-//~version: 2.01
+//~version: 3.70
 namespace B4R {
 	//numeric types < 20
 	#define BR_BYTE 1

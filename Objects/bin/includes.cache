@@ -2,205 +2,220 @@
   {
     "Sourcefile": null,
     "Include": "",
-    "Includepath": "C:\\Users\\Cloyd\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.6.3\\cores\\esp8266"
+    "Includepath": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\cores\\esp8266"
   },
   {
     "Sourcefile": null,
     "Include": "",
-    "Includepath": "C:\\Users\\Cloyd\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.6.3\\variants\\nodemcu"
+    "Includepath": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\variants\\nodemcu"
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Desktop\\HOMEAU~1\\LIVING~3\\Objects\\bin\\sketch\\src.ino.cpp",
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\src.ino.cpp",
     "Include": "ESP8266WiFi.h",
-    "Includepath": "C:\\Users\\Cloyd\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.6.3\\libraries\\ESP8266WiFi\\src"
+    "Includepath": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\ESP8266WiFi\\src"
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Desktop\\HOMEAU~1\\LIVING~3\\Objects\\bin\\sketch\\src.ino.cpp",
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\src.ino.cpp",
     "Include": "TimeLib.h",
-    "Includepath": "C:\\Users\\Cloyd\\Documents\\Arduino\\libraries\\TimeLib"
+    "Includepath": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\Time-master"
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Desktop\\HOMEAU~1\\LIVING~3\\Objects\\bin\\sketch\\src.ino.cpp",
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\src.ino.cpp",
+    "Include": "EasyNTPClient.h",
+    "Includepath": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\EasyNTPClient-1.1.0\\src"
+  },
+  {
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\src.ino.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Desktop\\HOMEAU~1\\LIVING~3\\Objects\\bin\\sketch\\AsyncStreams.cpp",
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\AsyncStreams.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Desktop\\HOMEAU~1\\LIVING~3\\Objects\\bin\\sketch\\B4RArduino.cpp",
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\B4RArduino.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Desktop\\HOMEAU~1\\LIVING~3\\Objects\\bin\\sketch\\B4RCore.cpp",
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\B4RCore.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Desktop\\HOMEAU~1\\LIVING~3\\Objects\\bin\\sketch\\B4RSerializator.cpp",
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\B4RSerializator.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Desktop\\HOMEAU~1\\LIVING~3\\Objects\\bin\\sketch\\B4RStream.cpp",
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\B4RStream.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Desktop\\HOMEAU~1\\LIVING~3\\Objects\\bin\\sketch\\BufferedWiFiClient.cpp",
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\BufferedWiFiClient.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Desktop\\HOMEAU~1\\LIVING~3\\Objects\\bin\\sketch\\ByteConverter.cpp",
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\ByteConverter.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Desktop\\HOMEAU~1\\LIVING~3\\Objects\\bin\\sketch\\PubSubClient.cpp",
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\DateStrings.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Desktop\\HOMEAU~1\\LIVING~3\\Objects\\bin\\sketch\\RandomAccessFile.cpp",
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\PubSubClient.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Desktop\\HOMEAU~1\\LIVING~3\\Objects\\bin\\sketch\\Scheduler.cpp",
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\RandomAccessFile.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Desktop\\HOMEAU~1\\LIVING~3\\Objects\\bin\\sketch\\b4r_main.cpp",
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\Scheduler.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\Time.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\b4r_main.cpp",
     "Include": "DHTesp.h",
-    "Includepath": "C:\\Users\\Cloyd\\Documents\\Arduino\\libraries\\DHT_sensor_library_for_ESPx"
+    "Includepath": "C:\\Users\\ccatanaoan\\Documents\\Arduino\\libraries\\DHTesp-master"
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Desktop\\HOMEAU~1\\LIVING~3\\Objects\\bin\\sketch\\b4r_main.cpp",
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\b4r_main.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Desktop\\HOMEAU~1\\LIVING~3\\Objects\\bin\\sketch\\rESP8266.cpp",
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\rESP8266.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Desktop\\HOMEAU~1\\LIVING~3\\Objects\\bin\\sketch\\rESP8266TimeTools.cpp",
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\rESP8266TimeTools.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Desktop\\HOMEAU~1\\LIVING~3\\Objects\\bin\\sketch\\rESP8266WiFi.cpp",
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\rESP8266WiFi.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Desktop\\HOMEAU~1\\LIVING~3\\Objects\\bin\\sketch\\rMQTT.cpp",
+    "Sourcefile": "C:\\Users\\CCATAN~1\\Desktop\\IoT\\HOMETE~1\\Objects\\bin\\sketch\\rMQTT.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.6.3\\libraries\\ESP8266WiFi\\src\\BearSSLHelpers.cpp",
+    "Sourcefile": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\ESP8266WiFi\\src\\BearSSLHelpers.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.6.3\\libraries\\ESP8266WiFi\\src\\CertStoreBearSSL.cpp",
+    "Sourcefile": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\ESP8266WiFi\\src\\CertStoreBearSSL.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.6.3\\libraries\\ESP8266WiFi\\src\\ESP8266WiFi.cpp",
+    "Sourcefile": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\ESP8266WiFi\\src\\ESP8266WiFi.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.6.3\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiAP.cpp",
+    "Sourcefile": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiAP.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.6.3\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiGeneric.cpp",
+    "Sourcefile": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiGeneric.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.6.3\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiMulti.cpp",
+    "Sourcefile": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiMulti.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.6.3\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiSTA-WPS.cpp",
+    "Sourcefile": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiSTA-WPS.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.6.3\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiSTA.cpp",
+    "Sourcefile": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiSTA.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.6.3\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiScan.cpp",
+    "Sourcefile": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiScan.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.6.3\\libraries\\ESP8266WiFi\\src\\WiFiClient.cpp",
+    "Sourcefile": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\ESP8266WiFi\\src\\WiFiClient.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.6.3\\libraries\\ESP8266WiFi\\src\\WiFiClientSecureAxTLS.cpp",
+    "Sourcefile": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\ESP8266WiFi\\src\\WiFiClientSecureAxTLS.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.6.3\\libraries\\ESP8266WiFi\\src\\WiFiClientSecureBearSSL.cpp",
+    "Sourcefile": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\ESP8266WiFi\\src\\WiFiClientSecureBearSSL.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.6.3\\libraries\\ESP8266WiFi\\src\\WiFiServer.cpp",
+    "Sourcefile": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\ESP8266WiFi\\src\\WiFiServer.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.6.3\\libraries\\ESP8266WiFi\\src\\WiFiServerSecureAxTLS.cpp",
+    "Sourcefile": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\ESP8266WiFi\\src\\WiFiServerSecureAxTLS.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.6.3\\libraries\\ESP8266WiFi\\src\\WiFiServerSecureBearSSL.cpp",
+    "Sourcefile": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\ESP8266WiFi\\src\\WiFiServerSecureBearSSL.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.6.3\\libraries\\ESP8266WiFi\\src\\WiFiUdp.cpp",
+    "Sourcefile": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\ESP8266WiFi\\src\\WiFiUdp.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Documents\\Arduino\\libraries\\TimeLib\\DateStrings.cpp",
+    "Sourcefile": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\Time-master\\DateStrings.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Documents\\Arduino\\libraries\\TimeLib\\EasyNTPClient.cpp",
+    "Sourcefile": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\Time-master\\Time.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Documents\\Arduino\\libraries\\TimeLib\\Time.cpp",
+    "Sourcefile": "C:\\Users\\ccatanaoan\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\libraries\\EasyNTPClient-1.1.0\\src\\EasyNTPClient.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\Cloyd\\Documents\\Arduino\\libraries\\DHT_sensor_library_for_ESPx\\DHTesp.cpp",
+    "Sourcefile": "C:\\Users\\ccatanaoan\\Documents\\Arduino\\libraries\\DHTesp-master\\DHTesp.cpp",
     "Include": "",
     "Includepath": null
   }

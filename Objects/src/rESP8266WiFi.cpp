@@ -85,6 +85,13 @@ namespace B4R {
 		#endif
 		client.stop();
 	}
+	B4RString* WiFiSocket::getRemoteIp() {
+		IPAddress ip = ((WiFiClient*)client.wrappedClient)->remoteIP();
+		return B4RString::PrintableToString(&ip);
+	}
+	UInt WiFiSocket::getRemotePort(){
+		return ((WiFiClient*)client.wrappedClient)->remotePort();
+	}
 	
 	WiFiSSLSocket::WiFiSSLSocket()  {
 		client.setClient(&wifiClient);
