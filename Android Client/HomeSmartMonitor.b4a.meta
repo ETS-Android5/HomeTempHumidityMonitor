@@ -37,6 +37,6 @@ ModuleClosedNodes6=
 ModuleClosedNodes7=
 ModuleClosedNodes8=
 ModuleClosedNodes9=
-NavigationStack=Main,Globals,71,0,Main,SetDefaults,963,0,Main,CreatePreferenceScreen,939,0,Main,btnChart_Click,1010,0,Main,HandleSettings,1001,0,Main,MQTT_Disconnected,354,0,Main,ACToolBarLight1_MenuItemClick,500,0,Main,Activity_Createmenu,578,0,Visual Designer,Main.bal,-100,1,Main,Process_Globals,21,0
+NavigationStack=Main,MQTT_Disconnected,354,0,Main,ACToolBarLight1_MenuItemClick,500,0,Main,Activity_Createmenu,578,0,Visual Designer,Main.bal,-100,1,Main,Process_Globals,21,0,Main,Activity_Create,210,0,Main,CheckAirQualitySetting,742,0,Main,CheckAirQualitySettingBasement,793,0,Main,CheckTempHumiditySetting,851,0,Main,CheckTempHumiditySettingBasement,898,0
 SelectedBuild=0
 VisibleModules=3,6,10,9,12,1,4,2,5,11
