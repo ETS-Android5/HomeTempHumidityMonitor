@@ -37,6 +37,6 @@ ModuleClosedNodes6=
 ModuleClosedNodes7=
 ModuleClosedNodes8=
 ModuleClosedNodes9=
-NavigationStack=Main,MQTT_Disconnected,354,0,Main,ACToolBarLight1_MenuItemClick,500,0,Main,Activity_Createmenu,578,0,Visual Designer,Main.bal,-100,1,Main,Process_Globals,21,0,Main,Activity_Create,210,0,Main,CheckAirQualitySetting,742,0,Main,CheckAirQualitySettingBasement,793,0,Main,CheckTempHumiditySetting,851,0,Main,CheckTempHumiditySettingBasement,898,0
+NavigationStack=Visual Designer,Main.bal,-100,1,Main,Activity_Create,210,0,Main,CheckAirQualitySetting,742,0,Main,CheckAirQualitySettingBasement,793,0,Main,CheckTempHumiditySetting,851,0,Main,CheckTempHumiditySettingBasement,898,0,Main,Process_Globals,24,0,SmartHomeMonitor,Service_Start,50,0,SmartHomeMonitor,MQTT_Connect,60,0,SmartHomeMonitor,Service_Create,46,0,SmartHomeMonitor,Service_Destroy,55,0
 SelectedBuild=0
 VisibleModules=3,6,10,9,12,1,4,2,5,11

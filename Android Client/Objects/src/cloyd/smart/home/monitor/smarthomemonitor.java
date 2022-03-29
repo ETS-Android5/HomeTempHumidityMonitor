@@ -412,7 +412,7 @@ _fw1.Close();
  } 
        catch (Exception e21) {
 			processBA.setLastException(e21); //BA.debugLineNum = 544;BA.debugLine="Log(\"Error in Sub LogEvent: \" & LastException.Me";
-anywheresoftware.b4a.keywords.Common.LogImpl("35242906","Error in Sub LogEvent: "+anywheresoftware.b4a.keywords.Common.LastException(processBA).getMessage(),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("85242906","Error in Sub LogEvent: "+anywheresoftware.b4a.keywords.Common.LastException(processBA).getMessage(),0);
  //BA.debugLineNum = 545;BA.debugLine="ToastMessageShow(LastException,False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(processBA).getObject()),anywheresoftware.b4a.keywords.Common.False);
  };
@@ -437,7 +437,7 @@ _mqtt.Connect2((org.eclipse.paho.client.mqttv3.MqttConnectOptions)(_connopt.getO
  } 
        catch (Exception e8) {
 			processBA.setLastException(e8); //BA.debugLineNum = 70;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("34980745",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("84980745",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  };
  //BA.debugLineNum = 72;BA.debugLine="End Sub";
 return "";
@@ -448,7 +448,7 @@ public static String  _mqtt_connected(boolean _success) throws Exception{
 try { //BA.debugLineNum = 76;BA.debugLine="If Success = False Then";
 if (_success==anywheresoftware.b4a.keywords.Common.False) { 
  //BA.debugLineNum = 77;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("35046275",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("85046275",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  //BA.debugLineNum = 78;BA.debugLine="MQTT_Connect";
 _mqtt_connect();
  }else {
@@ -466,7 +466,7 @@ _mqtt.Subscribe("HumidityAddValue",(int) (0));
  } 
        catch (Exception e13) {
 			processBA.setLastException(e13); //BA.debugLineNum = 87;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("35046285",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("85046285",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  //BA.debugLineNum = 88;BA.debugLine="ToastMessageShow(LastException,False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(processBA).getObject()),anywheresoftware.b4a.keywords.Common.False);
  };
@@ -481,7 +481,7 @@ _mqtt_connect();
  } 
        catch (Exception e4) {
 			processBA.setLastException(e4); //BA.debugLineNum = 97;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("35111812",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("85111812",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  //BA.debugLineNum = 98;BA.debugLine="ToastMessageShow(LastException,False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.LastException(processBA).getObject()),anywheresoftware.b4a.keywords.Common.False);
  };
@@ -1132,7 +1132,7 @@ _n.Cancel((int) (732));
  } 
        catch (Exception e346) {
 			processBA.setLastException(e346); //BA.debugLineNum = 490;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("35177732",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("85177732",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  //BA.debugLineNum = 492;BA.debugLine="Select sensorInTrouble";
 switch (BA.switchObjectToInt(_sensorintrouble,"TempHumidityBasement","TempHumidity","AirQuality","AirQualityBasement")) {
 case 0: {
@@ -1266,8 +1266,6 @@ public static String  _service_start(anywheresoftware.b4a.objects.IntentWrapper 
  //BA.debugLineNum = 50;BA.debugLine="Sub Service_Start (StartingIntent As Intent)";
  //BA.debugLineNum = 51;BA.debugLine="MQTT_Connect";
 _mqtt_connect();
- //BA.debugLineNum = 53;BA.debugLine="StartActivity(Main)";
-anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._main.getObject()));
  //BA.debugLineNum = 54;BA.debugLine="End Sub";
 return "";
 }

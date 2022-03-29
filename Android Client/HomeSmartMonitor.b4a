@@ -87,7 +87,7 @@ Version=10.6
 	#AdditionalRes: "..\resource"
 	#Extends: android.support.v7.app.AppCompatActivity
 	#AdditionalJar: com.android.support:support-v4
-	#CustomBuildAction: 2, C:\Program Files (x86)\Java\jdk1.8.0_202\bin\java.exe, -jar "C:\Users\ccatanaoan\Desktop\IoT\HomeTempHumidityMonitor\Android Client\compiletime.jar"
+	#CustomBuildAction: 2, C:\java\jdk-14.0.1\bin\java.exe, -jar "C:\Users\ccatanaoan\Desktop\IoT\HomeTempHumidityMonitor\Android Client\compiletime.jar"
 	
 Sub Process_Globals
 	Private MQTT As MqttClient

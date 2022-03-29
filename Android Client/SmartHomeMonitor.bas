@@ -56,7 +56,7 @@ End Sub
 Sub Service_Start (StartingIntent As Intent)
 	MQTT_Connect
 	'Service.StopAutomaticForeground 'Call this when the background task completes (if there is one)
-	StartActivity(Main)
+	'StartActivity(Main)
 End Sub
 
 Sub Service_Destroy
